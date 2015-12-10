@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HttpBasicAuthAgent - eZ Platform JavaScript REST client</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="http://ez.no/extension/ez_ezno/design/ezno_2014/images/ez-logo.png" title="eZ Platform JavaScript REST client"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.1.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/CAPI.html">CAPI</a></li>
+                                <li><a href="../classes/CAPIError.html">CAPIError</a></li>
+                                <li><a href="../classes/ConnectionFeatureFactory.html">ConnectionFeatureFactory</a></li>
+                                <li><a href="../classes/ConnectionManager.html">ConnectionManager</a></li>
+                                <li><a href="../classes/ContentCreateStruct.html">ContentCreateStruct</a></li>
+                                <li><a href="../classes/ContentMetadataUpdateStruct.html">ContentMetadataUpdateStruct</a></li>
+                                <li><a href="../classes/ContentService.html">ContentService</a></li>
+                                <li><a href="../classes/ContentTypeCreateStruct.html">ContentTypeCreateStruct</a></li>
+                                <li><a href="../classes/ContentTypeGroupInputStruct.html">ContentTypeGroupInputStruct</a></li>
+                                <li><a href="../classes/ContentTypeService.html">ContentTypeService</a></li>
+                                <li><a href="../classes/ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a></li>
+                                <li><a href="../classes/ContentUpdateStruct.html">ContentUpdateStruct</a></li>
+                                <li><a href="../classes/DiscoveryService.html">DiscoveryService</a></li>
+                                <li><a href="../classes/extend.html">extend</a></li>
+                                <li><a href="../classes/FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a></li>
+                                <li><a href="../classes/FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a></li>
+                                <li><a href="../classes/HttpBasicAuthAgent.html">HttpBasicAuthAgent</a></li>
+                                <li><a href="../classes/InMemoryStorage.html">InMemoryStorage</a></li>
+                                <li><a href="../classes/LocalStorage.html">LocalStorage</a></li>
+                                <li><a href="../classes/LocationCreateStruct.html">LocationCreateStruct</a></li>
+                                <li><a href="../classes/LocationUpdateStruct.html">LocationUpdateStruct</a></li>
+                                <li><a href="../classes/MicrosoftXmlHttpRequestConnection.html">MicrosoftXmlHttpRequestConnection</a></li>
+                                <li><a href="../classes/ObjectStateCreateStruct.html">ObjectStateCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupCreateStruct.html">ObjectStateGroupCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupUpdateStruct.html">ObjectStateGroupUpdateStruct</a></li>
+                                <li><a href="../classes/ObjectStateUpdateStruct.html">ObjectStateUpdateStruct</a></li>
+                                <li><a href="../classes/parseUriTemplate.html">parseUriTemplate</a></li>
+                                <li><a href="../classes/PolicyCreateStruct.html">PolicyCreateStruct</a></li>
+                                <li><a href="../classes/PolicyUpdateStruct.html">PolicyUpdateStruct</a></li>
+                                <li><a href="../classes/PromiseCAPI.html">PromiseCAPI</a></li>
+                                <li><a href="../classes/PromiseService.html">PromiseService</a></li>
+                                <li><a href="../classes/RelationCreateStruct.html">RelationCreateStruct</a></li>
+                                <li><a href="../classes/Request.html">Request</a></li>
+                                <li><a href="../classes/Response.html">Response</a></li>
+                                <li><a href="../classes/RoleAssignInputStruct.html">RoleAssignInputStruct</a></li>
+                                <li><a href="../classes/RoleInputStruct.html">RoleInputStruct</a></li>
+                                <li><a href="../classes/SectionInputStruct.html">SectionInputStruct</a></li>
+                                <li><a href="../classes/SessionAuthAgent.html">SessionAuthAgent</a></li>
+                                <li><a href="../classes/SessionCreateStruct.html">SessionCreateStruct</a></li>
+                                <li><a href="../classes/UrlAliasCreateStruct.html">UrlAliasCreateStruct</a></li>
+                                <li><a href="../classes/UrlWildcardCreateStruct.html">UrlWildcardCreateStruct</a></li>
+                                <li><a href="../classes/UserCreateStruct.html">UserCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupCreateStruct.html">UserGroupCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupUpdateStruct.html">UserGroupUpdateStruct</a></li>
+                                <li><a href="../classes/UserService.html">UserService</a></li>
+                                <li><a href="../classes/UserUpdateStruct.html">UserUpdateStruct</a></li>
+                                <li><a href="../classes/ViewCreateStruct.html">ViewCreateStruct</a></li>
+                                <li><a href="../classes/XmlHttpRequestConnection.html">XmlHttpRequestConnection</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>HttpBasicAuthAgent Class</h1>
+<div class="box meta">
+
+
+        <div class="foundat">
+            Defined in: <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l5"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:5</code></a>
+        </div>
+
+
+</div>
+
+
+<div class="box intro">
+    <p>Creates an instance of HttpBasicAuthAgent object
+Auth agent handles low level implementation of authorization workflow</p>
+
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_HttpBasicAuthAgent" class="method item">
+    <h3 class="name"><code>HttpBasicAuthAgent</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code class="optional">[credentials]</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l5"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:5</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name optional">[credentials]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>object literal containg credentials for the REST service access</p>
+
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">login</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>user login</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">password</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>user password</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_authenticateRequest">authenticateRequest</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_ensureAuthentication">ensureAuthentication</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_isLoggedIn">isLoggedIn</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_logIn">logIn</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_logOut">logOut</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setCAPI">setCAPI</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setCredentials">setCredentials</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property protected">
+                                <a href="#property__login">_login</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property__password">_password</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_authenticateRequest" class="method item">
+    <h3 class="name"><code>authenticateRequest</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>request</code>
+                </li>
+                <li class="arg">
+                        <code>done</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l56"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:56</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Hook to allow the modification of any request, for authentication purposes, before
+sending it out to the backend</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">request</code>
+                        <span class="type"><a href="../classes/Request.html" class="crosslink">Request</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">done</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_ensureAuthentication" class="method item">
+    <h3 class="name"><code>ensureAuthentication</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>done</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l41"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:41</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Called every time a new request cycle is started,
+to ensure those requests are correctly authenticated.</p>
+<p>A cycle may contain one or more queued up requests</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">done</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>Callback function, which is to be called by the implementation
+to signal the authentication has been completed.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_isLoggedIn" class="method item">
+    <h3 class="name"><code>isLoggedIn</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>done</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l83"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:83</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Checks whether the user is logged in. For HttpBasicAuthAgent, it actually
+tries to load the root resource with the provided credentials.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">done</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_logIn" class="method item">
+    <h3 class="name"><code>logIn</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>done</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l98"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:98</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Logs in the user by trying to load the root resource, it is the same as
+<a href="../classes/HttpBasicAuthAgent.html#method_isLoggedIn" class="crosslink">HttpBasicAuthAgent.isLoggedIn</a></p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">done</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_logOut" class="method item">
+    <h3 class="name"><code>logOut</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>done</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l72"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:72</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Log out
+No actual logic for HTTP Basic Auth</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">done</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setCAPI" class="method item">
+    <h3 class="name"><code>setCAPI</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>CAPI</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l110"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:110</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Set the instance of the CAPI to be used by the agent</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">CAPI</code>
+                        <span class="type"><a href="../classes/CAPI.html" class="crosslink">CAPI</a></span>
+
+
+                    <div class="param-description">
+                        <p>current instance of the CAPI object</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setCredentials" class="method item">
+    <h3 class="name"><code>setCredentials</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>credentials</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l120"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:120</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Set the credentials</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">credentials</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">login</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">password</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property__login" class="property item protected">
+    <h3 class="name"><code>_login</code></h3>
+    <span class="type">String</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l16"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:16</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The login</p>
+
+    </div>
+
+        <p><strong>Default:</strong> &quot;&quot;</p>
+
+
+</div>
+<div id="property__password" class="property item protected">
+    <h3 class="name"><code>_password</code></h3>
+    <span class="type">String</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_authAgents_HttpBasicAuthAgent.js.html#l26"><code>src&#x2F;authAgents&#x2F;HttpBasicAuthAgent.js:26</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The password</p>
+
+    </div>
+
+        <p><strong>Default:</strong> &quot;&quot;</p>
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

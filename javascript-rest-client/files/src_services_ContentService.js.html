@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/services/ContentService.js - eZ Platform JavaScript REST client</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="http://ez.no/extension/ez_ezno/design/ezno_2014/images/ez-logo.png" title="eZ Platform JavaScript REST client"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.1.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/CAPI.html">CAPI</a></li>
+                                <li><a href="../classes/CAPIError.html">CAPIError</a></li>
+                                <li><a href="../classes/ConnectionFeatureFactory.html">ConnectionFeatureFactory</a></li>
+                                <li><a href="../classes/ConnectionManager.html">ConnectionManager</a></li>
+                                <li><a href="../classes/ContentCreateStruct.html">ContentCreateStruct</a></li>
+                                <li><a href="../classes/ContentMetadataUpdateStruct.html">ContentMetadataUpdateStruct</a></li>
+                                <li><a href="../classes/ContentService.html">ContentService</a></li>
+                                <li><a href="../classes/ContentTypeCreateStruct.html">ContentTypeCreateStruct</a></li>
+                                <li><a href="../classes/ContentTypeGroupInputStruct.html">ContentTypeGroupInputStruct</a></li>
+                                <li><a href="../classes/ContentTypeService.html">ContentTypeService</a></li>
+                                <li><a href="../classes/ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a></li>
+                                <li><a href="../classes/ContentUpdateStruct.html">ContentUpdateStruct</a></li>
+                                <li><a href="../classes/DiscoveryService.html">DiscoveryService</a></li>
+                                <li><a href="../classes/extend.html">extend</a></li>
+                                <li><a href="../classes/FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a></li>
+                                <li><a href="../classes/FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a></li>
+                                <li><a href="../classes/HttpBasicAuthAgent.html">HttpBasicAuthAgent</a></li>
+                                <li><a href="../classes/InMemoryStorage.html">InMemoryStorage</a></li>
+                                <li><a href="../classes/LocalStorage.html">LocalStorage</a></li>
+                                <li><a href="../classes/LocationCreateStruct.html">LocationCreateStruct</a></li>
+                                <li><a href="../classes/LocationUpdateStruct.html">LocationUpdateStruct</a></li>
+                                <li><a href="../classes/MicrosoftXmlHttpRequestConnection.html">MicrosoftXmlHttpRequestConnection</a></li>
+                                <li><a href="../classes/ObjectStateCreateStruct.html">ObjectStateCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupCreateStruct.html">ObjectStateGroupCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupUpdateStruct.html">ObjectStateGroupUpdateStruct</a></li>
+                                <li><a href="../classes/ObjectStateUpdateStruct.html">ObjectStateUpdateStruct</a></li>
+                                <li><a href="../classes/parseUriTemplate.html">parseUriTemplate</a></li>
+                                <li><a href="../classes/PolicyCreateStruct.html">PolicyCreateStruct</a></li>
+                                <li><a href="../classes/PolicyUpdateStruct.html">PolicyUpdateStruct</a></li>
+                                <li><a href="../classes/PromiseCAPI.html">PromiseCAPI</a></li>
+                                <li><a href="../classes/PromiseService.html">PromiseService</a></li>
+                                <li><a href="../classes/RelationCreateStruct.html">RelationCreateStruct</a></li>
+                                <li><a href="../classes/Request.html">Request</a></li>
+                                <li><a href="../classes/Response.html">Response</a></li>
+                                <li><a href="../classes/RoleAssignInputStruct.html">RoleAssignInputStruct</a></li>
+                                <li><a href="../classes/RoleInputStruct.html">RoleInputStruct</a></li>
+                                <li><a href="../classes/SectionInputStruct.html">SectionInputStruct</a></li>
+                                <li><a href="../classes/SessionAuthAgent.html">SessionAuthAgent</a></li>
+                                <li><a href="../classes/SessionCreateStruct.html">SessionCreateStruct</a></li>
+                                <li><a href="../classes/UrlAliasCreateStruct.html">UrlAliasCreateStruct</a></li>
+                                <li><a href="../classes/UrlWildcardCreateStruct.html">UrlWildcardCreateStruct</a></li>
+                                <li><a href="../classes/UserCreateStruct.html">UserCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupCreateStruct.html">UserGroupCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupUpdateStruct.html">UserGroupUpdateStruct</a></li>
+                                <li><a href="../classes/UserService.html">UserService</a></li>
+                                <li><a href="../classes/UserUpdateStruct.html">UserUpdateStruct</a></li>
+                                <li><a href="../classes/ViewCreateStruct.html">ViewCreateStruct</a></li>
+                                <li><a href="../classes/XmlHttpRequestConnection.html">XmlHttpRequestConnection</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/services/ContentService.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/* global define */
+define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpdateStruct&quot;, &quot;structures/SectionInputStruct&quot;,
+        &quot;structures/LocationCreateStruct&quot;, &quot;structures/LocationUpdateStruct&quot;, &quot;structures/ContentMetadataUpdateStruct&quot;,
+        &quot;structures/ObjectStateGroupCreateStruct&quot;, &quot;structures/ObjectStateGroupUpdateStruct&quot;, &quot;structures/ObjectStateCreateStruct&quot;,
+        &quot;structures/ObjectStateUpdateStruct&quot;, &quot;structures/ViewCreateStruct&quot;, &quot;structures/UrlAliasCreateStruct&quot;,
+        &quot;structures/UrlWildcardCreateStruct&quot;, &quot;structures/RelationCreateStruct&quot;, &quot;utils/uriparse&quot;],
+    function (ContentCreateStruct, ContentUpdateStruct, SectionInputStruct,
+              LocationCreateStruct, LocationUpdateStruct, ContentMetadataUpdateStruct,
+              ObjectStateGroupCreateStruct, ObjectStateGroupUpdateStruct, ObjectStateCreateStruct,
+              ObjectStateUpdateStruct, ViewCreateStruct, UrlAliasCreateStruct,
+              UrlWildcardCreateStruct, RelationCreateStruct, parseUriTemplate) {
+    &quot;use strict&quot;;
+
+    /**
+     * Creates an instance of Content Service object. Use ContentService to retrieve information and execute operations related to Content.
+     *
+     * ## Note on the *callbacks* usage
+     *
+     * The **callback** argument of the service methods always take 2 arguments:
+     *
+     *    *     **error** either &#x60;false&#x60; or {{#crossLink &quot;CAPIError&quot;}}CAPIError{{/crossLink}} object when an error occurred
+     *
+     *    *     **response** the {{#crossLink &quot;Response&quot;}}Response{{/crossLink}} object
+     *
+     * Example:
+     *
+     *     contentService.loadRoot(function (error, response) {
+     *            if (error) {
+     *                console.log(&#x27;An error occurred&#x27;, error);
+     *            } else {
+     *                console.log(&#x27;Success!&#x27;, response);
+     *            }
+     *     });
+     *
+     * @class ContentService
+     * @constructor
+     * @param connectionManager {ConnectionManager} connection manager that will be used to send requests to REST service
+     * @param discoveryService {DiscoveryService} is handling REST paths auto-discovery
+     * @param rootPath {String} path to Root resource
+     * @example
+     *     var contentService = jsCAPI.getContentService();
+     */
+    var ContentService = function (connectionManager, discoveryService, rootPath) {
+        this._connectionManager = connectionManager;
+        this._discoveryService = discoveryService;
+        this._rootPath = rootPath;
+    };
+
+    /**
+     * List the root resources of the eZ Publish installation. Root resources contain many paths and references to other parts of the REST interface.
+     * This call is used by DiscoveryService automatically, whenever needed.
+     *
+     * @method loadRoot
+     * @param callback {Function} callback executed after performing the request (see
+     * {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadRoot = function (callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            this._rootPath,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.Root+json&quot;},
+            callback
+        );
+    };
+
+// ******************************
+// Structures
+// ******************************
+
+    /**
+     * Returns update structure for Content object
+     *
+     * @method newContentUpdateStruct
+     * @param language {String} The language code (eng-GB, fre-FR, ...)
+     * @return {ContentUpdateStruct}
+     *
+     */
+    ContentService.prototype.newContentUpdateStruct = function (language) {
+        return new ContentUpdateStruct(language);
+    };
+
+    /**
+     * Returns update structure for Content object metadata
+     *
+     * @method newContentMetadataUpdateStruct
+     * @return ContentMetadataUpdateStruct
+     */
+    ContentService.prototype.newContentMetadataUpdateStruct = function () {
+        return new ContentMetadataUpdateStruct();
+    };
+
+    /**
+     * Returns create structure for Content object
+     *
+     * @method newContentCreateStruct
+     * @param contentTypeId {String} Content Type for new Content object (e.g.: /api/v2/ezp/content/type/1)
+     * @param locationCreateStruct {LocationCreateStruct} create structure for a Location object, where the new Content object will be situated
+     * @param language {String} The language code (eng-GB, fre-FR, ...)
+     * @return {ContentCreateStruct}
+     */
+    ContentService.prototype.newContentCreateStruct = function (contentTypeId, locationCreateStruct, language, alwaysAvailable) {
+        return new ContentCreateStruct(contentTypeId, locationCreateStruct, language, alwaysAvailable);
+    };
+
+    /**
+     * Returns input structure for Section object. Input structure is needed while creating and updating the object.
+     *
+     * @method newSectionInputStruct
+     * @param identifier {String} unique section identifier (e.g. &quot;media&quot;)
+     * @param name {String} section name (e.g. &quot;Media&quot;)
+     * @return {SectionInputStruct}
+     */
+    ContentService.prototype.newSectionInputStruct = function (identifier, name) {
+        return new SectionInputStruct(identifier, name);
+    };
+
+    /**
+     * Returns create structure for Location object
+     *
+     * @method newLocationCreateStruct
+     * @param parentLocationId {String} Reference to the parent location of the new Location. (e.g. &quot;/api/ezp/v2/content/locations/1/2/118&quot;)
+     * @return {LocationCreateStruct}
+     */
+    ContentService.prototype.newLocationCreateStruct = function (parentLocationId) {
+        return new LocationCreateStruct(parentLocationId);
+    };
+
+    /**
+     * Returns update structure for Location object
+     *
+     * @method newLocationUpdateStruct
+     * @return {LocationUpdateStruct}
+     */
+    ContentService.prototype.newLocationUpdateStruct = function () {
+        return new LocationUpdateStruct();
+    };
+
+    /**
+     * Returns create structure for View object
+     *
+     * @method newViewCreateStruct
+     * @param identifier {String} unique view identifier (e.g. &quot;my-new-view&quot;)
+     * @param [type=&quot;ContentQuery&quot;] {String} the view type to create
+     * @return {ViewCreateStruct}
+     */
+    ContentService.prototype.newViewCreateStruct = function (identifier, type) {
+        return new ViewCreateStruct(identifier, type);
+    };
+
+    /**
+     * Returns create structure for Relation
+     *
+     * @method newRelationCreateStruct
+     * @param destination {String} reference to the resource we want to make related
+     * @return {RelationCreateStruct}
+     */
+    ContentService.prototype.newRelationCreateStruct = function (destination) {
+        return new RelationCreateStruct(destination);
+    };
+
+    /**
+     * Returns create structure for ObjectStateGroup
+     *
+     * @method newObjectStateGroupCreateStruct
+     * @param identifier {String} unique ObjectStateGroup identifier (e.g. &quot;some-new-group&quot;)
+     * @param languageCode {String} The language code (eng-GB, fre-FR, ...)
+     * @param names {Array} Multi language value (see example)
+     * @return {ObjectStateGroupCreateStruct}
+     * @example
+     *      var objectStateGroupCreateStruct = contentService.newObjectStateGroupCreateStruct(
+     *          &quot;some-id&quot;, &quot;eng-US&quot;, [{
+     *              &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *              &quot;#text&quot;:&quot;Some Name&quot;
+     *          }]
+     *      );
+     */
+    ContentService.prototype.newObjectStateGroupCreateStruct = function (identifier, languageCode, names) {
+        return new ObjectStateGroupCreateStruct(identifier, languageCode, names);
+    };
+
+    /**
+     * Returns update structure for ObjectStateGroup
+     *
+     * @method newObjectStateGroupUpdateStruct
+     * @return ObjectStateGroupUpdateStruct
+     */
+    ContentService.prototype.newObjectStateGroupUpdateStruct = function () {
+        return new ObjectStateGroupUpdateStruct();
+    };
+
+    /**
+     * Returns create structure for ObjectState
+     *
+     * @method newObjectStateCreateStruct
+     * @param identifier {String} unique ObjectState identifier (e.g. &quot;some-new-state&quot;)
+     * @param languageCode {String} The language code (eng-GB, fre-FR, ...)
+     * @param priority {Number}
+     * @param names {Array} Multi language value (see example)
+     * @param descriptions {Array} Multi language value (see example)
+     * @return {ObjectStateCreateStruct}
+     * @example
+     *      var objectStateCreateStruct = contentService.newObjectStateCreateStruct(
+     *          &quot;some-id&quot;, &quot;eng-US&quot;, 0, [{
+     *              &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *              &quot;#text&quot;:&quot;Some Name&quot;
+     *          }], [{
+     *              &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *              &quot;#text&quot;:&quot;Some Description&quot;
+     *          }]
+     *      );
+     */
+    ContentService.prototype.newObjectStateCreateStruct = function (identifier, languageCode, priority, names, descriptions) {
+        return new ObjectStateCreateStruct(identifier, languageCode, priority, names, descriptions);
+    };
+
+    /**
+     * Returns update structure for ObjectState
+     *
+     * @method newObjectStateUpdateStruct
+     * @return {ObjectStateUpdateStruct}
+     */
+    ContentService.prototype.newObjectStateUpdateStruct = function () {
+        return new ObjectStateUpdateStruct();
+    };
+
+    /**
+     * Returns create structure for UrlAlias
+     *
+     * @method newUrlAliasCreateStruct
+     * @param languageCode {String} The language code (eng-GB, fre-FR, ...)
+     * @param resource {String} eZ Publish resource you want to create alias for
+     * @param path {String} the new alias itself
+     * @return {UrlAliasCreateStruct}
+     * @example
+     *     var urlAliasCreateStruct = contentService.newUrlAliasCreateStruct(
+     *         &quot;eng-US&quot;,
+     *         &quot;content/search&quot;,
+     *         &quot;findme-alias&quot;
+     *     );
+     */
+    ContentService.prototype.newUrlAliasCreateStruct = function (languageCode, resource, path) {
+        return new UrlAliasCreateStruct(languageCode, resource, path);
+    };
+
+    /**
+     * Returns create structure for UrlWildcard
+     *
+     * @method newUrlWildcardCreateStruct
+     * @param sourceUrl {String} new url wildcard
+     * @param destinationUrl {String} existing resource where wildcard should point
+     * @param forward {Boolean} weather or not the wildcard should redirect to the resource
+     * @example
+     *     var urlWildcardCreateStruct = contentService.newUrlWildcardCreateStruct(
+     *         &quot;some-new-wildcard&quot;,
+     *         &quot;/api/ezp/v2/content/locations/1/2/113&quot;,
+     *         &quot;false&quot;
+     *     );
+     */
+    ContentService.prototype.newUrlWildcardCreateStruct = function (sourceUrl, destinationUrl, forward) {
+        return new UrlWildcardCreateStruct(sourceUrl, destinationUrl, forward);
+    };
+
+// ******************************
+// Sections management
+// ******************************
+
+    /**
+     * Create a new section
+     *
+     * @method createSection
+     * @param sectionInputStruct {SectionInputStruct} object describing section to be created
+     * @param callback {Function} callback executed after performing the request (see
+     * {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createSection = function (sectionInputStruct, callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;sections&quot;,
+            function (error, sections) {
+                if (error) {
+                    callback(error, sections);
+                    return;
+                }
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    sections._href,
+                    JSON.stringify(sectionInputStruct.body),
+                    sectionInputStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Update target section
+     *
+     * @method updateSection
+     * @param sectionId {String} target section identifier (e.g. &quot;/api/ezp/v2/content/sections/2&quot;)
+     * @param sectionInputStruct {SectionInputStruct} object describing updates to the section
+     * @param callback {Function} callback executed after performing the request (see
+     * {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.updateSection = function (sectionId, sectionInputStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            sectionId,
+            JSON.stringify(sectionInputStruct.body),
+            sectionInputStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * List all available sections of eZ Publish instance
+     *
+     * @method loadSections
+     * @param callback {Function} callback executed after performing the request (see
+     * {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadSections = function (callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;sections&quot;,
+            function (error, sections) {
+                if (error) {
+                    callback(error, sections);
+                    return;
+                }
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    sections._href,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: sections[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Load single section
+     *
+     * @method loadSection
+     * @param sectionId {String} target section identifier (e.g. &quot;/api/ezp/v2/content/sections/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadSection = function (sectionId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            sectionId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.Section+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Delete target section
+     *
+     * @method deleteSection
+     * @param sectionId {String} target section identifier (e.g. &quot;/api/ezp/v2/content/sections/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteSection = function (sectionId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            sectionId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// Content management
+// ******************************
+
+    /**
+     * Creates a new content draft assigned to the authenticated user.
+     *
+     * @method createContent
+     * @param contentCreateStruct {ContentCreateStruct} object describing content to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createContent = function (contentCreateStruct, callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;content&quot;,
+            function (error, contentObjects) {
+                if (error) {
+                    callback(error, contentObjects);
+                    return;
+                }
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    contentObjects._href,
+                    JSON.stringify(contentCreateStruct.body),
+                    contentCreateStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Update target content metadata.
+     *
+     * @method updateContentMetadata
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param contentMetadataUpdateStruct {ContentMetadataUpdateStruct} object describing update of the content metadata
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      var updateStruct = contentService.newContentMetadataUpdateStruct(&quot;eng-US&quot;);
+     *
+     *      updateStruct.body.ContentUpdate.Section = &quot;/api/ezp/v2/content/sections/2&quot;;
+     *      updateStruct.body.ContentUpdate.remoteId = &quot;new-remote-id&quot;;
+     *
+     *      contentService.updateContentMetadata(
+     *          &quot;/api/ezp/v2/content/objects/180&quot;,
+     *          updateStruct,
+     *          callback
+     *      );
+     */
+    ContentService.prototype.updateContentMetadata = function (contentId, contentMetadataUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            contentId,
+            JSON.stringify(contentMetadataUpdateStruct.body),
+            contentMetadataUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Load single content by remoteId
+     *
+     * @method loadContentByRemoteId
+     * @param remoteId {String} remote id of target content object (e.g. &quot;30847bec12a8a398777493a4bdb10398&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadContentByRemoteId = function (remoteId, callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;contentByRemoteId&quot;,
+            function (error, contentByRemoteId) {
+                if (error) {
+                    callback(error, contentByRemoteId);
+                    return;
+                }
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    parseUriTemplate(contentByRemoteId._href, {remoteId: remoteId}),
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentInfo+json&quot;},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Load single content info
+     *
+     * @method loadContentInfo
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadContentInfo = function (contentId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentInfo+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Load single content info with embedded current version
+     *
+     * @method loadContentInfoAndCurrentVersion
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param [languageCodes=false] {String} comma separated list of language codes
+     * (ie &quot;fre-FR,eng-GB&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadContentInfoAndCurrentVersion = function (contentId, languageCodes, callback) {
+        if ( typeof languageCodes === &quot;function&quot; ) {
+            callback = languageCodes;
+            languageCodes = false;
+        }
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentId + (languageCodes ? &#x27;?languages=&#x27; + languageCodes : &#x27;&#x27;),
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.Content+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Delete target content
+     *
+     * @method deleteContent
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      contentService.deleteContent(
+     *          &quot;/api/ezp/v2/content/objects/116&quot;,
+     *          callback
+     *      );
+     */
+    ContentService.prototype.deleteContent = function (contentId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            contentId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Copy content to determined location
+     *
+     * @method copyContent
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param destinationId {String} A location resource to which the content object should be copied (e.g. &quot;/api/ezp/v2/content/locations/1/2/119&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.copyContent = function (contentId, destinationId, callback) {
+        this._connectionManager.request(
+            &quot;COPY&quot;,
+            contentId,
+            &quot;&quot;,
+            {&quot;Destination&quot;: destinationId},
+            callback
+        );
+    };
+
+// ******************************
+// Versions management
+// ******************************
+
+    /**
+     * Load current version for target content
+     *
+     * @method loadCurrentVersion
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadCurrentVersion = function (contentId, callback) {
+        var that = this;
+
+        this.loadContentInfo(
+            contentId,
+            function (error, contentResponse) {
+                if (error) {
+                    callback(error, contentResponse);
+                    return;
+                }
+
+                var currentVersion = contentResponse.document.Content.CurrentVersion;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    currentVersion._href,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: currentVersion[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Loads a specific version of target content. This method returns fields and relations
+     *
+     * @method loadContent
+     * @param versionedContentId {String} target version identifier (e.g. &quot;/api/ezp/v2/content/objects/108/versions/2&quot;)
+     * @param [languages=&#x27;&#x27;] {String} (comma separated list) restricts the output of translatable fields to the given languages.
+     * @param [fields=&#x27;&#x27;] {String} comma separated list of fields which should be returned in the response (see Content).
+     * @param [responseGroups=&#x27;&#x27;] {String}  alternative: comma separated lists of predefined field groups (see REST API Spec v1).
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *     contentService.loadContent(
+     *          &#x27;/api/ezp/v2/content/objects/180/versions/1&#x27;,
+     *          &#x27;eng-US&#x27;,
+     *          &#x27;&#x27;,
+     *          &#x27;&#x27;,
+     *          callback
+     *     );
+     */
+    ContentService.prototype.loadContent = function (versionedContentId, languages, responseGroups, fields, callback) {
+        var query;
+
+        if ( !callback &amp;&amp; !fields &amp;&amp; !responseGroups ) {
+            callback = languages;
+            languages = &#x27;&#x27;;
+        } else if ( !callback &amp;&amp; !fields ) {
+            callback = responseGroups;
+            responseGroups = &#x27;&#x27;;
+        } else if ( !callback ) {
+            callback = fields;
+            fields = &#x27;&#x27;;
+        }
+
+        query = languages ? &#x27;?languages=&#x27; + languages : &#x27;&#x27;;
+
+        if ( responseGroups ) {
+            query += query ? &#x27;&amp;&#x27; : &#x27;?&#x27;;
+            query += &#x27;responseGroups=&#x27; + responseGroups;
+        }
+        if ( fields ) {
+            query += query ? &#x27;&amp;&#x27; : &#x27;?&#x27;;
+            query += &#x27;fields=&#x27; + fields;
+        }
+
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            versionedContentId + query,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.Version+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Loads all versions for the target content
+     *
+     * @method loadVersions
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadVersions = function (contentId, callback) {
+        var that = this;
+
+        this.loadContentInfo(
+            contentId,
+            function (error, contentResponse) {
+                if (error) {
+                    callback(error, contentResponse);
+                    return;
+                }
+
+                var contentVersions = contentResponse.document.Content.Versions;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    contentVersions._href,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: contentVersions[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Updates the fields of a target draft
+     *
+     * @method updateContent
+     * @param versionedContentId {String} target version identifier (e.g. &quot;/api/ezp/v2/content/objects/108/versions/2&quot;)
+     * @param contentUpdateStruct {ContentUpdateStruct} object describing update to the draft
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.updateContent = function (versionedContentId, contentUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            versionedContentId,
+            JSON.stringify(contentUpdateStruct.body),
+            contentUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Creates a draft from a published or archived version.
+     *
+     * @method createContentDraft
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param [versionId] {Number} numerical id of the base version for the new draft.
+     * If not provided the current version of the content will be used.
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      // Create draft from current version
+     *      contentService.createContentDraft(
+     *          &quot;/api/ezp/v2/content/objects/107&quot;,
+     *          null,
+     *          callback
+     *      );
+     *
+     *      // Create draft from version #2
+     *      contentService.createContentDraft(
+     *          &quot;/api/ezp/v2/content/objects/107&quot;,
+     *          2,
+     *          callback
+     *      );
+     */
+    ContentService.prototype.createContentDraft = function (contentId, versionId, callback) {
+        var that = this;
+
+        if ( !callback ) {
+            callback = versionId;
+            versionId = false;
+        }
+        this.loadContentInfo(
+            contentId,
+            function (error, contentResponse) {
+                var url = &#x27;&#x27;;
+
+                if (error) {
+                    callback(error, contentResponse);
+                    return;
+                }
+
+                if ( versionId ) {
+                    url = contentResponse.document.Content.Versions._href + &quot;/&quot; + versionId;
+                } else {
+                    url = contentResponse.document.Content.CurrentVersion._href;
+                }
+
+                that._connectionManager.request(
+                    &quot;COPY&quot;, url, &quot;&quot;,
+                    {&quot;Accept&quot;: &quot;application/vnd.ez.api.Version+json&quot;},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Deletes target version of the content.
+     *
+     * @method deleteVersion
+     * @param versionedContentId {String} target version identifier (e.g. &quot;/api/ezp/v2/content/objects/108/versions/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteVersion = function (versionedContentId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            versionedContentId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Publishes target version of the content.
+     *
+     * @method publishVersion
+     * @param versionedContentId {String} target version identifier (e.g. &quot;/api/ezp/v2/content/objects/108/versions/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.publishVersion = function (versionedContentId, callback) {
+        this._connectionManager.request(
+            &quot;PUBLISH&quot;,
+            versionedContentId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// Locations management
+// ******************************
+
+    /**
+     * Creates a new location for target content object
+     *
+     * @method createLocation
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param locationCreateStruct {LocationCreateStruct} object describing new location to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createLocation = function (contentId, locationCreateStruct, callback) {
+        var that = this;
+
+        this.loadContentInfo(
+            contentId,
+            function (error, contentResponse) {
+                if (error) {
+                    callback(error, contentResponse);
+                    return;
+                }
+
+                var locations = contentResponse.document.Content.Locations;
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    locations._href,
+                    JSON.stringify(locationCreateStruct.body),
+                    locationCreateStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Loads all locations for target content object
+     *
+     * @method loadLocations
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/108&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadLocations = function (contentId, callback) {
+        var that = this;
+
+        this.loadContentInfo(
+            contentId,
+            function (error, contentResponse) {
+                if (error) {
+                    callback(error, contentResponse);
+                    return;
+                }
+
+                var locations = contentResponse.document.Content.Locations;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    locations._href,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: &quot;application/vnd.ez.api.LocationList+json&quot;},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Loads target location
+     *
+     * @method loadLocation
+     * @param locationId {String} target location identifier (e.g. &quot;/api/ezp/v2/content/locations/1/2/102&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadLocation = function (locationId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            locationId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.Location+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Loads target location by remote Id
+     *
+     * @method loadLocationByRemoteId
+     * @param remoteId {String} remote id of target location (e.g. &quot;0bae96bd419e141ff3200ccbf2822e4f&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadLocationByRemoteId = function (remoteId, callback) {
+        var that = this;
+        this._discoveryService.getInfoObject(
+            &quot;locationByRemoteId&quot;,
+            function (error, locationByRemoteId) {
+                if (error) {
+                    callback(error, locationByRemoteId);
+                    return;
+                }
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    parseUriTemplate(locationByRemoteId._href, {remoteId: remoteId}),
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: &quot;application/vnd.ez.api.Location+json&quot;},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Updates target location
+     *
+     * @method updateLocation
+     * @param locationId {String} target location identifier (e.g. &quot;/api/ezp/v2/content/locations/1/2/102&quot;)
+     * @param locationUpdateStruct {LocationUpdateStruct} object describing changes to target location
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.updateLocation = function (locationId, locationUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            locationId,
+            JSON.stringify(locationUpdateStruct.body),
+            locationUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Loads children for the target location
+     *
+     * @method loadLocationChildren
+     * @param locationId {String} target location identifier (e.g. &quot;/api/ezp/v2/content/locations/1/2/102&quot;)
+     * @param [limit=-1] {Number} the number of results returned
+     * @param [offset=0] {Number} the offset of the result set
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      contentService.loadLocationChildren(
+     *          &quot;/api/ezp/v2/content/locations/1/2/102&quot;,
+     *          5,
+     *          5,
+     *          callback
+     *      );
+     */
+    ContentService.prototype.loadLocationChildren = function (locationId, limit, offset, callback) {
+
+        var that = this,
+            defaultLimit = -1,
+            defaultOffset = 0;
+
+        // default values for omitted parameters (if any)
+        if (arguments.length &lt; 4) {
+            if (typeof limit == &quot;function&quot;) {
+                // no optional params are passed
+                callback = limit;
+                limit = defaultLimit;
+                offset = defaultOffset;
+            } else {
+                // only limit is passed
+                callback = offset;
+                offset = defaultOffset;
+            }
+        }
+
+        this.loadLocation(
+            locationId,
+            function (error, locationResponse) {
+                if (error) {
+                    callback(error, locationResponse);
+                    return;
+                }
+
+                var location = locationResponse.document.Location;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    location.Children._href + &#x27;?offset=&#x27; + offset + &#x27;&amp;limit=&#x27; + limit,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: location.Children[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Copies the subtree starting from &quot;subtree&quot; as a new subtree of &quot;targetLocation&quot;
+     *
+     * @method copySubtree
+     * @param subtree {String} source subtree location
+     * @param targetLocation {String} location where source subtree should be copied
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.copySubtree = function (subtree, targetLocation, callback) {
+        this._connectionManager.request(
+            &quot;COPY&quot;,
+            subtree,
+            &quot;&quot;,
+            {&quot;Destination&quot;: targetLocation},
+            callback
+        );
+    };
+
+    /**
+     *  Moves the subtree to a new subtree of &quot;targetLocation&quot;
+     *  The targetLocation can also be /content/trash, in that case the location is put into the trash.
+     *
+     * @method moveSubtree
+     * @param subtree {String} source subtree location
+     * @param targetLocation {String} location where source subtree should be moved
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.moveSubtree = function (subtree, targetLocation, callback) {
+        this._connectionManager.request(
+            &quot;MOVE&quot;,
+            subtree,
+            &quot;&quot;,
+            {&quot;Destination&quot;: targetLocation},
+            callback
+        );
+    };
+
+    /**
+     *  Swaps the location of the &quot;subtree&quot; with &quot;targetLocation&quot;
+     *
+     * @method swapLocation
+     * @param subtree {String} source subtree location
+     * @param targetLocation {String} location with which subtree location should be swapped
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.swapLocation = function (subtree, targetLocation, callback) {
+        this._connectionManager.request(
+            &quot;SWAP&quot;,
+            subtree,
+            &quot;&quot;,
+            {&quot;Destination&quot;: targetLocation},
+            callback
+        );
+    };
+
+    /**
+     *  Deletes the location and all it&#x27;s subtrees
+     *  Every content object is deleted which does not have any other location.
+     *  Otherwise the deleted location is removed from the content object.
+     *  The children are recursively deleted.
+     *
+     * @method deleteLocation
+     * @param locationId {String} target location identifier (e.g. &quot;/api/ezp/v2/content/locations/1/2/102&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteLocation = function (locationId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            locationId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// Views management
+// ******************************
+
+    /**
+     * Creates a new view. Views are used to perform content queries by certain criteria.
+     *
+     * @method createView
+     * @param viewCreateStruct {ViewCreateStruct} object describing new view to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *     var viewCreateStruct = contentService.newViewCreateStruct(&#x27;some-test-id&#x27;);
+     *     viewCreateStruct.body.ViewInput.Query.Criteria = {
+     *         FullTextCriterion : &quot;title&quot;
+     *     };
+     *     contentService.createView(
+     *         viewCreateStruct,
+     *         callback
+     *     );
+     */
+    ContentService.prototype.createView = function (viewCreateStruct, callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;views&quot;,
+            function (error, views) {
+                if (error) {
+                    callback(error, views);
+                    return;
+                }
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    views._href,
+                    JSON.stringify(viewCreateStruct.body),
+                    viewCreateStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+// ******************************
+// Relations management
+// ******************************
+
+    /**
+     *  Loads the relations of the target version.
+     *
+     * @method loadRelations
+     * @param versionedContentId {String} target version identifier (e.g. &quot;/api/ezp/v2/content/objects/108/versions/2&quot;)
+     * @param [limit=-1] {Number} the number of results returned
+     * @param [offset=0] {Number} the offset of the result set
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      //See loadLocationChildren for example of &quot;offset&quot; and &quot;limit&quot; arguments usage
+     */
+    ContentService.prototype.loadRelations = function (versionedContentId, limit, offset, callback) {
+
+        var that = this,
+            defaultLimit = -1,
+            defaultOffset = 0;
+
+        // default values for omitted parameters (if any)
+        if (arguments.length &lt; 4) {
+            if (typeof limit == &quot;function&quot;) {
+                // no optional params are passed
+                callback = limit;
+                limit = defaultLimit;
+                offset = defaultOffset;
+            } else {
+                // only limit is passed
+                callback = offset;
+                offset = defaultOffset;
+            }
+        }
+
+        this.loadContent(
+            versionedContentId,
+            {},
+            function (error, versionResponse) {
+                if (error) {
+                    callback(error, versionResponse);
+                    return;
+                }
+
+                var version = versionResponse.document.Version;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    version.Relations._href + &#x27;?offset=&#x27; + offset + &#x27;&amp;limit=&#x27; + limit,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: version.Relations[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Loads the relations of the target content&#x27;s current version
+     *
+     * @method loadCurrentRelations
+     * @param contentId {String} target content identifier (e.g. &quot;/api/ezp/v2/content/objects/102&quot;)
+     * @param [limit=-1] {Number} the number of results returned
+     * @param [offset=0] {Number} the offset of the result set
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      //See loadLocationChildren for example of &quot;offset&quot; and &quot;limit&quot; arguments usage
+     */
+    ContentService.prototype.loadCurrentRelations = function (contentId, limit, offset, callback) {
+
+        var that = this,
+            defaultLimit = -1,
+            defaultOffset = 0;
+
+        // default values for omitted parameters (if any)
+        if (arguments.length &lt; 4) {
+            if (typeof limit == &quot;function&quot;) {
+                // no optional params are passed
+                callback = limit;
+                limit = defaultLimit;
+                offset = defaultOffset;
+            } else {
+                // only limit is passed
+                callback = offset;
+                offset = defaultOffset;
+            }
+        }
+
+        this.loadCurrentVersion(
+            contentId,
+            function (error, currentVersionResponse) {
+                if (error) {
+                    callback(error, currentVersionResponse);
+                    return;
+                }
+
+                var currentVersion = currentVersionResponse.document.Version;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    currentVersion.Relations._href + &#x27;?offset=&#x27; + offset + &#x27;&amp;limit=&#x27; + limit,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: currentVersion.Relations[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Loads target relation
+     *
+     * @method loadRelation
+     * @param relationId {String} target relation identifier (e.g. &quot;/api/ezp/v2/content/objects/102/versions/5/relations/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadRelation = function (relationId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            relationId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.Relation+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Creates a new relation of type COMMON for the given draft.
+     *
+     * @method addRelation
+     * @param versionedContentId {String} target version identifier (e.g. &quot;/api/ezp/v2/content/objects/102/versions/5&quot;)
+     * @param relationCreateStruct {RelationCreateStruct} object describing new relation to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      var relationCreateStruct = contentService.newRelationCreateStruct(&quot;/api/ezp/v2/content/objects/132&quot;);
+     *      contentService.addRelation(
+     *          &quot;/api/ezp/v2/content/objects/102/versions/5&quot;,
+     *          relationCreateStruct,
+     *          callback
+     *      );
+     */
+    ContentService.prototype.addRelation = function (versionedContentId, relationCreateStruct, callback) {
+        var that = this;
+
+        this.loadContent(
+            versionedContentId,
+            {},
+            function (error, versionResponse) {
+                if (error) {
+                    callback(error, versionResponse);
+                    return;
+                }
+
+                var version = versionResponse.document.Version;
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    version.Relations._href,
+                    JSON.stringify(relationCreateStruct.body),
+                    relationCreateStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Delete target relation
+     *
+     * @method deleteRelation
+     * @param relationId {String} target relation identifier (e.g. &quot;/api/ezp/v2/content/objects/102/versions/5/relations/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteRelation = function (relationId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            relationId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// Thrash management
+// ******************************
+
+    /**
+     *  Loads all the thrash can items
+     *
+     * @method loadTrashItems
+     * @param [limit=-1] {Number} the number of results returned
+     * @param [offset=0] {Number} the offset of the result set
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      //See loadLocationChildren for example of &quot;offset&quot; and &quot;limit&quot; arguments usage
+     */
+    ContentService.prototype.loadTrashItems = function (limit, offset, callback) {
+
+        var that = this,
+            defaultLimit = -1,
+            defaultOffset = 0;
+
+        // default values for omitted parameters (if any)
+        if (arguments.length &lt; 3) {
+            if (typeof limit == &quot;function&quot;) {
+                // no optional params are passed
+                callback = limit;
+                limit = defaultLimit;
+                offset = defaultOffset;
+            } else {
+                // only limit is passed
+                callback = offset;
+                offset = defaultOffset;
+            }
+        }
+
+        this._discoveryService.getInfoObject(
+            &quot;trash&quot;,
+            function (error, trash) {
+                if (error) {
+                    callback(error, trash);
+                    return;
+                }
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    trash._href + &#x27;?offset=&#x27; + offset + &#x27;&amp;limit=&#x27; + limit,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: trash[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     *  Loads target thrash can item
+     *
+     * @method loadTrashItem
+     * @param trashItemId {String} target trash item identifier (e.g. &quot;/api/ezp/v2/content/trash/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadTrashItem = function (trashItemId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            trashItemId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.TrashItem+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Restores target trashItem
+     *
+     * @method recover
+     * @param trashItemId {String} target trash item identifier (e.g. &quot;/api/ezp/v2/content/trash/1&quot;)
+     * @param [destination] {String} if given the trash item is restored under this location otherwise under its original parent location
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.recover = function (trashItemId, destination, callback) {
+
+        var headers = {&quot;Accept&quot;: &quot;application/vnd.ez.api.TrashItem+json&quot;};
+
+        if ((typeof destination != &quot;function&quot;)) {
+            headers.Destination = destination;
+        } else {
+            callback = destination;
+        }
+
+        this._connectionManager.request(
+            &quot;MOVE&quot;,
+            trashItemId,
+            &quot;&quot;,
+            headers,
+            callback
+        );
+    };
+
+    /**
+     *  Delete target trashItem
+     *
+     * @method deleteTrashItem
+     * @param trashItemId {String} target trash item identifier (e.g. &quot;/api/ezp/v2/content/trash/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteTrashItem = function (trashItemId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            trashItemId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     *  Empty the trash can
+     *
+     * @method emptyThrash
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.emptyThrash = function (callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;trash&quot;,
+            function (error, trash) {
+                if (error) {
+                    callback(error, trash);
+                    return;
+                }
+
+                that._connectionManager.request(
+                    &quot;DELETE&quot;,
+                    trash._href,
+                    &quot;&quot;,
+                    {},
+                    callback
+                );
+            }
+        );
+    };
+
+// ******************************
+// ObjectStates management
+// ******************************
+
+    /**
+     *  Loads all the ObjectState groups
+     *
+     * @method loadObjectStateGroups
+     * @param objectStateGroups {String} path to root objectStateGroups (will be replaced by auto-discovered soon)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadObjectStateGroups = function (objectStateGroups, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            objectStateGroups,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ObjectStateGroupList+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Loads target ObjectState group
+     *
+     * @method loadObjectStateGroup
+     * @param objectStateGroupId {String} target object state group identifier (e.g. &quot;/api/ezp/v2/content/objectstategroups/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadObjectStateGroup = function (objectStateGroupId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            objectStateGroupId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ObjectStateGroup+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Create a new ObjectState group
+     *
+     * @method createObjectStateGroup
+     * @param objectStateGroups {String} path to root objectStateGroups (will be replaced by auto-discovered soon)
+     * @param objectStateGroupCreateStruct {ObjectStateGroupCreateStruct} object describing new ObjectState group to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createObjectStateGroup = function (objectStateGroups, objectStateGroupCreateStruct, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            objectStateGroups,
+            JSON.stringify(objectStateGroupCreateStruct.body),
+            objectStateGroupCreateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Update target ObjectState group
+     *
+     * @method updateObjectStateGroup
+     * @param objectStateGroupId {String} target object state group identifier (e.g. &quot;/api/ezp/v2/content/objectstategroups/2&quot;)
+     * @param objectStateGroupUpdateStruct {ObjectStateGroupUpdateStruct} object describing changes to target ObjectState group
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.updateObjectStateGroup = function (objectStateGroupId, objectStateGroupUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            objectStateGroupId,
+            JSON.stringify(objectStateGroupUpdateStruct.body),
+            objectStateGroupUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Delete target ObjectState group
+     *
+     * @method deleteObjectStateGroup
+     * @param objectStateGroupId {String} target object state group identifier (e.g. &quot;/api/ezp/v2/content/objectstategroups/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteObjectStateGroup = function (objectStateGroupId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            objectStateGroupId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     *  Creates a new ObjectState in target group
+     *
+     * @method createObjectState
+     * @param objectStateGroupId {String} target group, where new object state should be created (e.g. &quot;/api/ezp/v2/content/objectstategroups/2&quot;)
+     * @param objectStateCreateStruct {ObjectStateCreateStruct} object describing new ObjectState to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createObjectState = function (objectStateGroupId, objectStateCreateStruct, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            objectStateGroupId + &quot;/objectstates&quot;,
+            JSON.stringify(objectStateCreateStruct.body),
+            objectStateCreateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Load target ObjectState
+     *
+     * @method loadObjectState
+     * @param objectStateId {String} target object state identifier (e.g. &quot;/api/ezp/v2/content/objectstategroups/7/objectstates/5&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadObjectState = function (objectStateId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            objectStateId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ObjectState+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Update target ObjectState
+     *
+     * @method updateObjectState
+     * @param objectStateId {String} target object state identifier (e.g. &quot;/api/ezp/v2/content/objectstategroups/7/objectstates/5&quot;)
+     * @param objectStateUpdateStruct {ObjectStateUpdateStruct} object describing changes to target ObjectState
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.updateObjectState = function (objectStateId, objectStateUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            objectStateId,
+            JSON.stringify(objectStateUpdateStruct.body),
+            objectStateUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Delete target ObjectState
+     *
+     * @method deleteObjectState
+     * @param objectStateId {String} target object state identifier (e.g. &quot;/api/ezp/v2/content/objectstategroups/7/objectstates/5&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteObjectState = function (objectStateId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            objectStateId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     *  Get ObjectStates of target content
+     *
+     * @method getContentState
+     * @param contentStatesId {String} link to target content&#x27;s object states (should be auto-discovered from contentId)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.getContentState = function (contentStatesId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentStatesId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentObjectStates+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Set ObjectStates of a content
+     *
+     * @method setContentState
+     * @param contentStatesId {String} link to target content&#x27;s object states (should be auto-discovered from contentId)
+     * @param objectStates {Array}
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *     contentService.loadObjectState(
+     *          &quot;/api/ezp/v2/content/objectstategroups/4/objectstates/3&quot;,
+     *          function (error, objectStateResponse) {
+     *              // possible error should be handled...
+     *
+     *              var objectStates = {};
+     *              // Extra odd structure, but it works!
+     *              objectStates.ObjectState = {};
+     *              objectStates.ObjectState.ObjectState = {};
+     *              objectStates.ObjectState.ObjectState = JSON.parse(objectStateResponse.body);
+     *
+     *              contentService.setContentState(
+     *                  &quot;/api/ezp/v2/content/objects/17/objectstates&quot;,
+     *                  objectStates,
+     *                  callback
+     *              );
+     *          }
+     *     );
+     */
+    ContentService.prototype.setContentState = function (contentStatesId, objectStates, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            contentStatesId,
+            JSON.stringify(objectStates),
+            {
+                &quot;Accept&quot;: &quot;application/vnd.ez.api.ContentObjectStates+json&quot;,
+                &quot;Content-Type&quot;: &quot;application/vnd.ez.api.ContentObjectStates+json&quot;
+            },
+            callback
+        );
+    };
+
+// ******************************
+// URL Aliases management
+// ******************************
+
+    /**
+     *  Creates a new UrlAlias
+     *
+     * @method createUrlAlias
+     * @param urlAliases {String} link to root UrlAliases resource (should be auto-discovered)
+     * @param urlAliasCreateStruct {UrlAliasCreateStruct} object describing new UrlAlias to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createUrlAlias = function (urlAliases, urlAliasCreateStruct, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            urlAliases,
+            JSON.stringify(urlAliasCreateStruct.body),
+            urlAliasCreateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Loads all the global UrlAliases
+     *
+     * @method loadUrlAliases
+     * @param urlAliases {String} link to root UrlAliases resource (should be auto-discovered)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.listGlobalAliases = function (urlAliases, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            urlAliases,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.UrlAliasRefList+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Loads all the UrlAliases for a location
+     *
+     * @method listLocationAliases
+     * @param locationUrlAliases {String} link to target location&#x27;s UrlAliases (should be auto-discovered from locationId)
+     * @param [custom=true] {Boolean} this flag indicates weather autogenerated (false) or manual url aliases (true) should be returned
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.listLocationAliases = function (locationUrlAliases, custom, callback) {
+
+        var parameters;
+
+        // default values for omitted parameters (if any)
+        if (arguments.length &lt; 3) {
+            callback = custom;
+            custom = true;
+        }
+
+        parameters = (custom === true) ? &quot;&quot; : &quot;?custom=false&quot;;
+
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            locationUrlAliases + &#x27;/urlaliases&#x27; + parameters,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.UrlAliasRefList+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Load target URL Alias
+     *
+     * @method loadUrlAlias
+     * @param urlAliasId {String} target url alias identifier (e.g. &quot;/api/ezp/v2/content/urlaliases/0-a903c03b86eb2987889afa5fe17004eb&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadUrlAlias = function (urlAliasId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            urlAliasId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.UrlAlias+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Delete target URL Alias
+     *
+     * @method deleteUrlAlias
+     * @param urlAliasId {String} target url alias identifier (e.g. &quot;/api/ezp/v2/content/urlaliases/0-a903c03b86eb2987889afa5fe17004eb&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteUrlAlias = function (urlAliasId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            urlAliasId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// URL Wildcards management
+// ******************************
+
+    /**
+     *  Creates a new UrlWildcard
+     *
+     * @method createUrlWildcard
+     * @param urlWildcards {String} link to root UrlWildcards resource (should be auto-discovered)
+     * @param urlWildcardCreateStruct {UrlWildcardCreateStruct} object describing new UrlWildcard to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.createUrlWildcard = function (urlWildcards, urlWildcardCreateStruct, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            urlWildcards,
+            JSON.stringify(urlWildcardCreateStruct.body),
+            urlWildcardCreateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     *  Loads all UrlWildcards
+     *
+     * @method loadUrlWildcards
+     * @param urlWildcards {String} link to root UrlWildcards resource (should be auto-discovered)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadUrlWildcards = function (urlWildcards, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            urlWildcards,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.UrlWildcardList+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Loads target UrlWildcard
+     *
+     * @method loadUrlWildcard
+     * @param urlWildcardId {String} target url wildcard identifier (e.g. &quot;/api/ezp/v2/content/urlwildcards/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadUrlWildcard = function (urlWildcardId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            urlWildcardId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.UrlWildcard+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     *  Deletes target UrlWildcard
+     *
+     * @method deleteUrlWildcard
+     * @param urlWildcardId {String} target url wildcard identifier (e.g. &quot;/api/ezp/v2/content/urlwildcards/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.deleteUrlWildcard = function (urlWildcardId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            urlWildcardId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Loads an image variation
+     *
+     * @method loadImageVariation
+     * @param variation {String} The variation REST id
+     * @param callback {Function} Callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.loadImageVariation = function (variation, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            variation,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application\/vnd.ez.api.ContentImageVariation+json&quot;},
+            callback
+        );
+    };
+
+    return ContentService;
+
+});
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

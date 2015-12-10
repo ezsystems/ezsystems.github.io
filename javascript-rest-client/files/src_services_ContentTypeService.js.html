@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/services/ContentTypeService.js - eZ Platform JavaScript REST client</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="http://ez.no/extension/ez_ezno/design/ezno_2014/images/ez-logo.png" title="eZ Platform JavaScript REST client"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.1.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/CAPI.html">CAPI</a></li>
+                                <li><a href="../classes/CAPIError.html">CAPIError</a></li>
+                                <li><a href="../classes/ConnectionFeatureFactory.html">ConnectionFeatureFactory</a></li>
+                                <li><a href="../classes/ConnectionManager.html">ConnectionManager</a></li>
+                                <li><a href="../classes/ContentCreateStruct.html">ContentCreateStruct</a></li>
+                                <li><a href="../classes/ContentMetadataUpdateStruct.html">ContentMetadataUpdateStruct</a></li>
+                                <li><a href="../classes/ContentService.html">ContentService</a></li>
+                                <li><a href="../classes/ContentTypeCreateStruct.html">ContentTypeCreateStruct</a></li>
+                                <li><a href="../classes/ContentTypeGroupInputStruct.html">ContentTypeGroupInputStruct</a></li>
+                                <li><a href="../classes/ContentTypeService.html">ContentTypeService</a></li>
+                                <li><a href="../classes/ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a></li>
+                                <li><a href="../classes/ContentUpdateStruct.html">ContentUpdateStruct</a></li>
+                                <li><a href="../classes/DiscoveryService.html">DiscoveryService</a></li>
+                                <li><a href="../classes/extend.html">extend</a></li>
+                                <li><a href="../classes/FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a></li>
+                                <li><a href="../classes/FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a></li>
+                                <li><a href="../classes/HttpBasicAuthAgent.html">HttpBasicAuthAgent</a></li>
+                                <li><a href="../classes/InMemoryStorage.html">InMemoryStorage</a></li>
+                                <li><a href="../classes/LocalStorage.html">LocalStorage</a></li>
+                                <li><a href="../classes/LocationCreateStruct.html">LocationCreateStruct</a></li>
+                                <li><a href="../classes/LocationUpdateStruct.html">LocationUpdateStruct</a></li>
+                                <li><a href="../classes/MicrosoftXmlHttpRequestConnection.html">MicrosoftXmlHttpRequestConnection</a></li>
+                                <li><a href="../classes/ObjectStateCreateStruct.html">ObjectStateCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupCreateStruct.html">ObjectStateGroupCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupUpdateStruct.html">ObjectStateGroupUpdateStruct</a></li>
+                                <li><a href="../classes/ObjectStateUpdateStruct.html">ObjectStateUpdateStruct</a></li>
+                                <li><a href="../classes/parseUriTemplate.html">parseUriTemplate</a></li>
+                                <li><a href="../classes/PolicyCreateStruct.html">PolicyCreateStruct</a></li>
+                                <li><a href="../classes/PolicyUpdateStruct.html">PolicyUpdateStruct</a></li>
+                                <li><a href="../classes/PromiseCAPI.html">PromiseCAPI</a></li>
+                                <li><a href="../classes/PromiseService.html">PromiseService</a></li>
+                                <li><a href="../classes/RelationCreateStruct.html">RelationCreateStruct</a></li>
+                                <li><a href="../classes/Request.html">Request</a></li>
+                                <li><a href="../classes/Response.html">Response</a></li>
+                                <li><a href="../classes/RoleAssignInputStruct.html">RoleAssignInputStruct</a></li>
+                                <li><a href="../classes/RoleInputStruct.html">RoleInputStruct</a></li>
+                                <li><a href="../classes/SectionInputStruct.html">SectionInputStruct</a></li>
+                                <li><a href="../classes/SessionAuthAgent.html">SessionAuthAgent</a></li>
+                                <li><a href="../classes/SessionCreateStruct.html">SessionCreateStruct</a></li>
+                                <li><a href="../classes/UrlAliasCreateStruct.html">UrlAliasCreateStruct</a></li>
+                                <li><a href="../classes/UrlWildcardCreateStruct.html">UrlWildcardCreateStruct</a></li>
+                                <li><a href="../classes/UserCreateStruct.html">UserCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupCreateStruct.html">UserGroupCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupUpdateStruct.html">UserGroupUpdateStruct</a></li>
+                                <li><a href="../classes/UserService.html">UserService</a></li>
+                                <li><a href="../classes/UserUpdateStruct.html">UserUpdateStruct</a></li>
+                                <li><a href="../classes/ViewCreateStruct.html">ViewCreateStruct</a></li>
+                                <li><a href="../classes/XmlHttpRequestConnection.html">XmlHttpRequestConnection</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/services/ContentTypeService.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/* global define */
+define([&quot;structures/ContentTypeGroupInputStruct&quot;, &quot;structures/ContentTypeCreateStruct&quot;, &quot;structures/ContentTypeUpdateStruct&quot;,
+        &quot;structures/FieldDefinitionCreateStruct&quot;, &quot;structures/FieldDefinitionUpdateStruct&quot;, &quot;utils/uriparse&quot;],
+    function (ContentTypeGroupInputStruct, ContentTypeCreateStruct, ContentTypeUpdateStruct,
+              FieldDefinitionCreateStruct, FieldDefinitionUpdateStruct, parseUriTemplate) {
+    &quot;use strict&quot;;
+
+    /**
+     * Creates an instance of content type service object. Should be retrieved from CAPI instance (see example).
+     *
+     * ## Note on the *callbacks* usage
+     *
+     * The **callback** argument of the service methods always take 2 arguments:
+     *
+     *    *     **error** either &#x60;false&#x60; or {{#crossLink &quot;CAPIError&quot;}}CAPIError{{/crossLink}} object when an error occurred
+     *
+     *    *     **response** the {{#crossLink &quot;Response&quot;}}Response{{/crossLink}} object
+     *
+     * Example:
+     *
+     *     var contentTypeGroupCreateStruct = contentTypeService.newContentTypeGroupInputStruct(
+     *         &quot;new-group-id&quot;
+     *     );
+     *
+     *     contentTypeService..createContentTypeGroup(
+     *         &quot;/api/ezp/v2/content/typegroups&quot;,
+     *         contentTypeGroupCreateStruct,
+     *         function (error, response) {
+     *            if (error) {
+     *                console.log(&#x27;An error occurred&#x27;, error);
+     *            } else {
+     *                console.log(&#x27;Success!&#x27;, response);
+     *            }
+     *     });
+     *
+     * @class ContentTypeService
+     * @constructor
+     * @param connectionManager {ConnectionManager} connection manager that will be used to send requests to REST service
+     * @param discoveryService {DiscoveryService} discovery service is used for urls auto-discovery automation
+     * @example
+     *     var contentTypeService = jsCAPI.getContentTypeService();
+     */
+    var ContentTypeService = function (connectionManager, discoveryService) {
+        this._connectionManager = connectionManager;
+        this._discoveryService = discoveryService;
+    };
+
+// ******************************
+// Structures
+// ******************************
+
+    /**
+     * Returns content type group create structure
+     *
+     * @method newContentTypeGroupInputStruct
+     * @param identifier {String} unique content type group identifer (e.g. &quot;my-group&quot;)
+     * @return {ContentTypeGroupInputStruct}
+     */
+    ContentTypeService.prototype.newContentTypeGroupInputStruct = function (identifier) {
+        return new ContentTypeGroupInputStruct(identifier);
+    };
+
+    /**
+     * @method newContentTypeCreateStruct
+     * @param identifier {String} unique content type identifer (e.g. &quot;my-type&quot;)
+     * @param languageCode {String} The language code (eng-GB, fre-FR, ...)
+     * @param names {Array} Multi language value (see example)
+     * @return {ContentTypeCreateStruct}
+     * @example
+     *      var contentTypeCreateStruct = contentTypeService.newContentTypeCreateStruct(
+     *          &quot;some-id&quot;, &quot;eng-US&quot;, [{
+     *              &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *              &quot;#text&quot;:&quot;Some Name&quot;
+     *          }]
+     *      );
+     */
+    ContentTypeService.prototype.newContentTypeCreateStruct = function (identifier, languageCode, names) {
+        return new ContentTypeCreateStruct(identifier, languageCode, names);
+    };
+
+    /**
+     * @method newContentTypeUpdateStruct
+     * @return {ContentTypeUpdateStruct}
+     */
+    ContentTypeService.prototype.newContentTypeUpdateStruct = function () {
+        return new ContentTypeUpdateStruct();
+    };
+
+    /**
+     * @method newFieldDefinitionCreateStruct
+     * @param identifier {String} unique field definiton identifer (e.g. &quot;my-field&quot;)
+     * @param fieldType {String} identifier of existing field type (e.g. &quot;ezstring&quot;, &quot;ezdate&quot;)
+     * @param fieldGroup {String} identifier of existing field group (e.g. &quot;content&quot;, &quot;meta&quot;)
+     * @param names {Array} Multi language value (see example)
+     * @return {FieldDefinitionCreateStruct}
+     * @example
+     *     var fieldDefinition = contentTypeService.newFieldDefinitionCreateStruct(
+     *         &quot;my-new-field&quot;, &quot;ezstring&quot;, &quot;content&quot;, [{
+     *             &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *             &quot;#text&quot;:&quot;Subtitle&quot;
+     *         }]
+     *     );
+     */
+    ContentTypeService.prototype.newFieldDefinitionCreateStruct = function (identifier, fieldType, fieldGroup, names) {
+        return new FieldDefinitionCreateStruct(identifier, fieldType, fieldGroup, names);
+    };
+
+    /**
+     * @method newFieldDefinitionUpdateStruct
+     * @return {FieldDefinitionUpdateStruct}
+     */
+    ContentTypeService.prototype.newFieldDefinitionUpdateStruct = function () {
+        return new FieldDefinitionUpdateStruct();
+    };
+
+// ******************************
+// Content Types Groups management
+// ******************************
+
+    /**
+     * Create a content type group
+     *
+     * @method createContentTypeGroup
+     * @param contentTypeGroups {String} link to root ContentTypeGroups resource (should be auto-discovered)
+     * @param contentTypeGroupCreateStruct {ContentTypeGroupInputStruct} object describing the new group to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *
+     *
+     *     var contentTypeGroupCreateStruct = contentTypeService.newContentTypeGroupInputStruct(
+     *         &quot;new-group-id&quot;
+     *     );
+     *
+     *     contentTypeService.createContentTypeGroup(
+     *         &quot;/api/ezp/v2/content/typegroups&quot;,
+     *         contentTypeGroupCreateStruct,
+     *         callback
+     *     );
+     */
+    ContentTypeService.prototype.createContentTypeGroup = function (contentTypeGroups, contentTypeGroupCreateStruct, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            contentTypeGroups,
+            JSON.stringify(contentTypeGroupCreateStruct.body),
+            contentTypeGroupCreateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Load all content type groups
+     *
+     * @method loadContentTypeGroups
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentTypeGroups = function (callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(&#x27;contentTypeGroups&#x27;, function (error, xhr) {
+            if (error) {
+                callback(error);
+                return;
+            }
+
+            that._connectionManager.request(
+                &quot;GET&quot;,
+                xhr._href,
+                &quot;&quot;,
+                {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentTypeGroupList+json&quot;},
+                callback
+            );
+        });
+    };
+
+    /**
+     * Load single content type group
+     *
+     * @method loadContentTypeGroup
+     * @param contentTypeGroupId {String} target content type group identifier (e.g. &quot;/api/ezp/v2/content/types/100&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentTypeGroup = function (contentTypeGroupId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentTypeGroupId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentTypeGroup+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Update a content type group
+     *
+     * @method updateContentTypeGroup
+     * @param contentTypeGroupId {String} target content type group identifier (e.g. &quot;/api/ezp/v2/content/types/100&quot;)
+     * @param contentTypeGroupUpdateStruct {ContentTypeGroupInputStruct} object describing changes to the content type group
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.updateContentTypeGroup = function (contentTypeGroupId, contentTypeGroupUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            contentTypeGroupId,
+            JSON.stringify(contentTypeGroupUpdateStruct.body),
+            contentTypeGroupUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Delete content type group
+     *
+     * @method deleteContentTypeGroup
+     * @param contentTypeGroupId {String}
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.deleteContentTypeGroup = function (contentTypeGroupId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            contentTypeGroupId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * List content for a content type group
+     *
+     * @method loadContentTypes
+     * @param contentTypeGroupId {String} target content type group identifier (e.g. &quot;/api/ezp/v2/content/typegroups/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentTypes = function (contentTypeGroupId, callback) {
+        var that = this;
+
+        this.loadContentTypeGroup(
+            contentTypeGroupId,
+            function (error, contentTypeGroupResponse) {
+                if (error) {
+                    callback(error, contentTypeGroupResponse);
+                    return;
+                }
+
+                var contentTypeGroup = contentTypeGroupResponse.document.ContentTypeGroup;
+
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                     contentTypeGroup.ContentTypes._href,
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: contentTypeGroup.ContentTypes[&quot;_media-type&quot;]},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * @method loadContentTypeGroupByIdentifier
+     * @param contentTypeGroups {String} link to root ContentTypeGroups resource (should be auto-discovered)
+     * @param identifier {String} target content type group identifier (e.g. &quot;content&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentTypeGroupByIdentifier = function (contentTypeGroups, identifier, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentTypeGroups + &quot;?identifier=&quot; + identifier,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentTypeGroup+json&quot;},
+            callback
+        );
+    };
+
+// ******************************
+// Content Types management
+// ******************************
+
+    /**
+     * Create a content type
+     *
+     * @method createContentType
+     * @param contentTypeGroupId {String} target content type group identifier (e.g. &quot;/api/ezp/v2/content/typegroups/1&quot;)
+     * @param contentTypeCreateStruct {ContentTypeCreateStruct} object describing the new content type to be created
+     * @param publish {Boolean} weather the content type should be immediately published or not
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *
+     *     var contentTypeCreateStruct, fieldDefinition;
+     *
+     *     contentTypeCreateStruct = contentTypeService.newContentTypeCreateStruct(
+     *          &quot;some-id&quot;, &quot;eng-US&quot;, [{
+     *              &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *              &quot;#text&quot;:&quot;Some Name&quot;
+     *          }]
+     *     );
+     *
+     *     fieldDefinition = contentTypeService.newFieldDefinitionCreateStruct(
+     *         &quot;my-new-field&quot;, &quot;ezstring&quot;, &quot;content&quot;, [{
+     *             &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *             &quot;#text&quot;:&quot;Subtitle&quot;
+     *         }]
+     *     );
+     *
+     *     contentTypeCreateStruct.body.ContentTypeCreate.FieldDefinitions.FieldDefinition.push(fieldDefinition.body.FieldDefinitionCreate);
+     *
+     *     contentTypeService.createContentType(
+     *         &quot;/api/ezp/v2/content/typegroups/1&quot;,
+     *         contentTypeCreateStruct,
+     *         true,
+     *         callback
+     *     );
+     */
+    ContentTypeService.prototype.createContentType = function (contentTypeGroupId, contentTypeCreateStruct, publish, callback) {
+        var that = this;
+
+        this.loadContentTypeGroup(
+            contentTypeGroupId,
+            function (error, contentTypeGroupResponse) {
+                if (error) {
+                    callback(error, contentTypeGroupResponse);
+                    return;
+                }
+
+                var contentTypeGroup = contentTypeGroupResponse.document.ContentTypeGroup,
+                    parameters = (publish === true) ? &quot;?publish=true&quot;: &quot;&quot;;
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    contentTypeGroup.ContentTypes._href + parameters,
+                    JSON.stringify(contentTypeCreateStruct.body),
+                    contentTypeCreateStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Make a copy of the target content type
+     *
+     * @method copyContentType
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.copyContentType = function (contentTypeId, callback) {
+        this._connectionManager.request(
+            &quot;COPY&quot;,
+            contentTypeId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Load the target content type
+     *
+     * @method loadContentType
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentType = function (contentTypeId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentTypeId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentType+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Load content type by the string identifier
+     *
+     * @method loadContentTypeByIdentifier
+     * @param identifier {String} target content type string identifier (e.g. &quot;blog&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentTypeByIdentifier = function (identifier, callback) {
+        var that = this;
+
+        this._discoveryService.getInfoObject(
+            &quot;contentTypeByIdentifier&quot;,
+            function (error, contentTypeByIdentifier) {
+                if (error) {
+                    callback(error, contentTypeByIdentifier);
+                    return;
+                }
+                that._connectionManager.request(
+                    &quot;GET&quot;,
+                    parseUriTemplate(contentTypeByIdentifier._href, {identifier: identifier}),
+                    &quot;&quot;,
+                    {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentTypeInfoList+json&quot;},
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Delete the target content type
+     *
+     * @method deleteContentType
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.deleteContentType = function (contentTypeId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            contentTypeId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Load content type groups of the target content type
+     *
+     * @method loadGroupsOfContentType
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadGroupsOfContentType = function (contentTypeId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentTypeId + &#x27;/groups&#x27;,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentTypeGroupRefList+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Assign the target content type to the target content type group
+     *
+     * @method assignContentTypeGroup
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param groupId{String} target content type group identifier (e.g. &quot;/api/ezp/v2/content/typegroups/2&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.assignContentTypeGroup = function (contentTypeId, groupId, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            contentTypeId + &quot;/groups&quot; + &quot;?group=&quot; + groupId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Remove content type assignment to the target content type group
+     *
+     * @method unassignContentTypeGroup
+     * @param contentTypeAssignedGroupId {String} target content type group assignment  (e.g. &quot;/api/ezp/v2/content/types/18/groups/1&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.unassignContentTypeGroup = function (contentTypeAssignedGroupId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            contentTypeAssignedGroupId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// Drafts management
+// ******************************
+
+    /**
+     * Create a new content type draft based on the target content type
+     *
+     * @method createContentTypeDraft
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param contentTypeUpdateStruct {ContentTypeUpdateStruct} object describing changes to the content type
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *     var contentTypeUpdateStruct = contentTypeService.newContentTypeUpdateStruct();
+     *
+     *     contentTypeUpdateStruct.names = {};
+     *     contentTypeUpdateStruct.names.value = [{
+     *         &quot;_languageCode&quot;:&quot;eng-US&quot;,
+     *         &quot;#text&quot;:&quot;My changed content type&quot;
+     *     }]
+     *
+     *     contentTypeService.createContentTypeDraft(
+     *         &quot;/api/ezp/v2/content/types/18&quot;,
+     *         contentTypeUpdateStruct,
+     *         callback
+     *     );
+     */
+    ContentTypeService.prototype.createContentTypeDraft = function (contentTypeId, contentTypeUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;POST&quot;,
+            contentTypeId,
+            JSON.stringify(contentTypeUpdateStruct.body),
+            contentTypeUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Load draft of the target content type
+     *
+     * @method loadContentTypeDraft
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadContentTypeDraft = function (contentTypeId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            contentTypeId + &quot;/draft&quot;,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.ContentType+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Update the target content type draft metadata. This method does not handle field definitions
+     *
+     * @method updateContentTypeDraftMetadata
+     * @param contentTypeDraftId {String} target content type draft identifier (e.g. &quot;/api/ezp/v2/content/types/18/draft&quot;)
+     * @param contentTypeUpdateStruct {ContentTypeUpdateStruct} object describing changes to the draft
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.updateContentTypeDraftMetadata = function (contentTypeDraftId, contentTypeUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            contentTypeDraftId,
+            JSON.stringify(contentTypeUpdateStruct.body),
+            contentTypeUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Publish the target content type draft
+     *
+     * @method publishContentTypeDraft
+     * @param contentTypeDraftId {String} target content type draft identifier (e.g. &quot;/api/ezp/v2/content/types/18/draft&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.publishContentTypeDraft = function (contentTypeDraftId, callback) {
+        this._connectionManager.request(
+            &quot;PUBLISH&quot;,
+            contentTypeDraftId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    /**
+     * Delete the target content type draft
+     *
+     * @method deleteContentTypeDraft
+     * @param contentTypeDraftId {String} target content type draft identifier (e.g. &quot;/api/ezp/v2/content/types/18/draft&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.deleteContentTypeDraft = function (contentTypeDraftId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            contentTypeDraftId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+// ******************************
+// Field Definitions management
+// ******************************
+
+    /**
+     * Add a new field definition to the target Content Type draft
+     *
+     * @method addFieldDefinition
+     * @param contentTypeId {String} target content type identifier (e.g. &quot;/api/ezp/v2/content/types/18&quot;)
+     * @param fieldDefinitionCreateStruct {FieldDefinitionCreateStruct} object describing the new field definition to be created
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.addFieldDefinition = function (contentTypeId, fieldDefinitionCreateStruct, callback) {
+        var that = this;
+
+        this.loadContentTypeDraft(
+            contentTypeId,
+            function (error, contentTypeDraftResponse) {
+                if (error) {
+                    callback(error, contentTypeDraftResponse);
+                    return;
+                }
+
+                var contentTypeDraftFieldDefinitions = contentTypeDraftResponse.document.ContentType.FieldDefinitions;
+
+                that._connectionManager.request(
+                    &quot;POST&quot;,
+                    contentTypeDraftFieldDefinitions._href,
+                    JSON.stringify(fieldDefinitionCreateStruct.body),
+                    fieldDefinitionCreateStruct.headers,
+                    callback
+                );
+            }
+        );
+    };
+
+    /**
+     * Load the target field definition
+     *
+     * @method loadFieldDefinition
+     * @param fieldDefinitionId {String} target field definition identifier (e.g. &quot;/api/ezp/v2/content/types/42/fieldDefinitions/311&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.loadFieldDefinition = function (fieldDefinitionId, callback) {
+        this._connectionManager.request(
+            &quot;GET&quot;,
+            fieldDefinitionId,
+            &quot;&quot;,
+            {&quot;Accept&quot;: &quot;application/vnd.ez.api.FieldDefinition+json&quot;},
+            callback
+        );
+    };
+
+    /**
+     * Update the target (existing) field definition
+     *
+     * @method updateFieldDefinition
+     * @param fieldDefinitionId {String} target field definition identifier (e.g. &quot;/api/ezp/v2/content/types/42/fieldDefinitions/311&quot;)
+     * @param fieldDefinitionUpdateStruct {FieldDefinitionUpdateStruct} object describing changes to the target field definition
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.updateFieldDefinition = function (fieldDefinitionId, fieldDefinitionUpdateStruct, callback) {
+        this._connectionManager.request(
+            &quot;PATCH&quot;,
+            fieldDefinitionId,
+            JSON.stringify(fieldDefinitionUpdateStruct.body),
+            fieldDefinitionUpdateStruct.headers,
+            callback
+        );
+    };
+
+    /**
+     * Delete existing field definition
+     *
+     * @method deleteFieldDefinition
+     * @param fieldDefinitionId {String} target field definition identifier (e.g. &quot;/api/ezp/v2/content/types/42/fieldDefinitions/311&quot;)
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentTypeService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentTypeService.prototype.deleteFieldDefinition = function (fieldDefinitionId, callback) {
+        this._connectionManager.request(
+            &quot;DELETE&quot;,
+            fieldDefinitionId,
+            &quot;&quot;,
+            {},
+            callback
+        );
+    };
+
+    return ContentTypeService;
+
+});
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

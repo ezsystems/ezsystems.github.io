@@ -1,0 +1,4220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UserService - eZ Platform JavaScript REST client</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="http://ez.no/extension/ez_ezno/design/ezno_2014/images/ez-logo.png" title="eZ Platform JavaScript REST client"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.1.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/CAPI.html">CAPI</a></li>
+                                <li><a href="../classes/CAPIError.html">CAPIError</a></li>
+                                <li><a href="../classes/ConnectionFeatureFactory.html">ConnectionFeatureFactory</a></li>
+                                <li><a href="../classes/ConnectionManager.html">ConnectionManager</a></li>
+                                <li><a href="../classes/ContentCreateStruct.html">ContentCreateStruct</a></li>
+                                <li><a href="../classes/ContentMetadataUpdateStruct.html">ContentMetadataUpdateStruct</a></li>
+                                <li><a href="../classes/ContentService.html">ContentService</a></li>
+                                <li><a href="../classes/ContentTypeCreateStruct.html">ContentTypeCreateStruct</a></li>
+                                <li><a href="../classes/ContentTypeGroupInputStruct.html">ContentTypeGroupInputStruct</a></li>
+                                <li><a href="../classes/ContentTypeService.html">ContentTypeService</a></li>
+                                <li><a href="../classes/ContentTypeUpdateStruct.html">ContentTypeUpdateStruct</a></li>
+                                <li><a href="../classes/ContentUpdateStruct.html">ContentUpdateStruct</a></li>
+                                <li><a href="../classes/DiscoveryService.html">DiscoveryService</a></li>
+                                <li><a href="../classes/extend.html">extend</a></li>
+                                <li><a href="../classes/FieldDefinitionCreateStruct.html">FieldDefinitionCreateStruct</a></li>
+                                <li><a href="../classes/FieldDefinitionUpdateStruct.html">FieldDefinitionUpdateStruct</a></li>
+                                <li><a href="../classes/HttpBasicAuthAgent.html">HttpBasicAuthAgent</a></li>
+                                <li><a href="../classes/InMemoryStorage.html">InMemoryStorage</a></li>
+                                <li><a href="../classes/LocalStorage.html">LocalStorage</a></li>
+                                <li><a href="../classes/LocationCreateStruct.html">LocationCreateStruct</a></li>
+                                <li><a href="../classes/LocationUpdateStruct.html">LocationUpdateStruct</a></li>
+                                <li><a href="../classes/MicrosoftXmlHttpRequestConnection.html">MicrosoftXmlHttpRequestConnection</a></li>
+                                <li><a href="../classes/ObjectStateCreateStruct.html">ObjectStateCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupCreateStruct.html">ObjectStateGroupCreateStruct</a></li>
+                                <li><a href="../classes/ObjectStateGroupUpdateStruct.html">ObjectStateGroupUpdateStruct</a></li>
+                                <li><a href="../classes/ObjectStateUpdateStruct.html">ObjectStateUpdateStruct</a></li>
+                                <li><a href="../classes/parseUriTemplate.html">parseUriTemplate</a></li>
+                                <li><a href="../classes/PolicyCreateStruct.html">PolicyCreateStruct</a></li>
+                                <li><a href="../classes/PolicyUpdateStruct.html">PolicyUpdateStruct</a></li>
+                                <li><a href="../classes/PromiseCAPI.html">PromiseCAPI</a></li>
+                                <li><a href="../classes/PromiseService.html">PromiseService</a></li>
+                                <li><a href="../classes/RelationCreateStruct.html">RelationCreateStruct</a></li>
+                                <li><a href="../classes/Request.html">Request</a></li>
+                                <li><a href="../classes/Response.html">Response</a></li>
+                                <li><a href="../classes/RoleAssignInputStruct.html">RoleAssignInputStruct</a></li>
+                                <li><a href="../classes/RoleInputStruct.html">RoleInputStruct</a></li>
+                                <li><a href="../classes/SectionInputStruct.html">SectionInputStruct</a></li>
+                                <li><a href="../classes/SessionAuthAgent.html">SessionAuthAgent</a></li>
+                                <li><a href="../classes/SessionCreateStruct.html">SessionCreateStruct</a></li>
+                                <li><a href="../classes/UrlAliasCreateStruct.html">UrlAliasCreateStruct</a></li>
+                                <li><a href="../classes/UrlWildcardCreateStruct.html">UrlWildcardCreateStruct</a></li>
+                                <li><a href="../classes/UserCreateStruct.html">UserCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupCreateStruct.html">UserGroupCreateStruct</a></li>
+                                <li><a href="../classes/UserGroupUpdateStruct.html">UserGroupUpdateStruct</a></li>
+                                <li><a href="../classes/UserService.html">UserService</a></li>
+                                <li><a href="../classes/UserUpdateStruct.html">UserUpdateStruct</a></li>
+                                <li><a href="../classes/ViewCreateStruct.html">ViewCreateStruct</a></li>
+                                <li><a href="../classes/XmlHttpRequestConnection.html">XmlHttpRequestConnection</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>UserService Class</h1>
+<div class="box meta">
+
+
+        <div class="foundat">
+            Defined in: <a href="../files/src_services_UserService.js.html#l12"><code>src&#x2F;services&#x2F;UserService.js:12</code></a>
+        </div>
+
+
+</div>
+
+
+<div class="box intro">
+    <p>Creates an instance of user service object. Should be retrieved from CAPI instance (see example).</p>
+<h2>Note on the <em>callbacks</em> usage</h2>
+<p>The <strong>callback</strong> argument of the service methods always take 2 arguments:</p>
+<ul>
+<li>
+<pre class="code prettyprint"><code>**error** either <code>false</code> or <a href="../classes/CAPIError.html" class="crosslink">CAPIError</a> object when an error occurred
+</code></pre>
+</li>
+<li>
+<pre class="code prettyprint"><code>**response** the <a href="../classes/Response.html" class="crosslink">Response</a> object
+</code></pre>
+</li>
+</ul>
+<p>Example:</p>
+<pre class="code prettyprint"><code>userService.loadRootUserGroup(function (error, response) {
+       if (error) {
+           console.log('An error occurred', error);
+       } else {
+           console.log('Success!', response);
+       }
+});</code></pre>
+
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_UserService" class="method item">
+    <h3 class="name"><code>UserService</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>connectionManager</code>
+                </li>
+                <li class="arg">
+                        <code>discoveryService</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l12"><code>src&#x2F;services&#x2F;UserService.js:12</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">connectionManager</code>
+                        <span class="type"><a href="../classes/ConnectionManager.html" class="crosslink">ConnectionManager</a></span>
+
+
+                    <div class="param-description">
+                        <p>connection manager that will be used to send requests to REST service</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">discoveryService</code>
+                        <span class="type"><a href="../classes/DiscoveryService.html" class="crosslink">DiscoveryService</a></span>
+
+
+                    <div class="param-description">
+                        <p>discovery service is used for urls auto-discovery automation</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var userService = jsCAPI.getUserService();</code></pre>
+
+            </div>
+        </div>
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_addPolicy">addPolicy</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_assignRoleToUser">assignRoleToUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_assignRoleToUserGroup">assignRoleToUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_createRole">createRole</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_createSession">createSession</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_createUser">createUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_createUserGroup">createUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_deletePolicy">deletePolicy</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_deleteRole">deleteRole</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_deleteSession">deleteSession</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_deleteUser">deleteUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_deleteUserGroup">deleteUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getRoleAssignments">getRoleAssignments</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getRoleAssignmentsForUser">getRoleAssignmentsForUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getRoleAssignmentsForUserGroup">getRoleAssignmentsForUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getUserAssignmentObject">getUserAssignmentObject</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getUserGroupAssignmentObject">getUserGroupAssignmentObject</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_isLoginAvailable">isLoginAvailable</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadPolicies">loadPolicies</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadPoliciesByUserId">loadPoliciesByUserId</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadPolicy">loadPolicy</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadRole">loadRole</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadRoles">loadRoles</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadRootUserGroup">loadRootUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadSubUserGroups">loadSubUserGroups</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadUser">loadUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadUser">loadUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadUserGroup">loadUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadUserGroupByRemoteId">loadUserGroupByRemoteId</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadUserGroupsOfUser">loadUserGroupsOfUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadUsersOfUserGroup">loadUsersOfUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_moveUserGroup">moveUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newPolicyCreateStruct">newPolicyCreateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newPolicyUpdateStruct">newPolicyUpdateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newRoleAssignInputStruct">newRoleAssignInputStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newRoleInputStruct">newRoleInputStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newSessionCreateStruct">newSessionCreateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newUserCreateStruct">newUserCreateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newUserGroupCreateStruct">newUserGroupCreateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newUserGroupUpdateStruct">newUserGroupUpdateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_newUserUpdateStruct">newUserUpdateStruct</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_refreshSession">refreshSession</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_unassignRoleFromUser">unassignRoleFromUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_unassignRoleFromUserGroup">unassignRoleFromUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_unassignUserFromUserGroup">unassignUserFromUserGroup</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_updatePolicy">updatePolicy</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_updateRole">updateRole</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_updateUser">updateUser</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_updateUserGroup">updateUserGroup</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_addPolicy" class="method item">
+    <h3 class="name"><code>addPolicy</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleId</code>
+                </li>
+                <li class="arg">
+                        <code>policyCreateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1014"><code>src&#x2F;services&#x2F;UserService.js:1014</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Add the new policy to the target role</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role identifier (e.g. &quot;/api/ezp/v2/user/roles/7&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">policyCreateStruct</code>
+                        <span class="type"><a href="../classes/PolicyCreateStruct.html" class="crosslink">PolicyCreateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing new policy to be created</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var policyCreateStruct = userService.newPolicyCreateStruct(
+&quot;content&quot;,
+&quot;create&quot;,
+[{  _identifier: &quot;Class&quot;,
+    values: {
+        ref: [{
+            _href: &quot;18&quot;
+        }]
+    }
+}]);
+
+userService.addPolicy(
+&quot;/api/ezp/v2/user/roles/7&quot;,
+policyCreateStruct,
+callback);</code></pre>
+
+            </div>
+        </div>
+</div>
+<div id="method_assignRoleToUser" class="method item">
+    <h3 class="name"><code>assignRoleToUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>roleAssignInputStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l907"><code>src&#x2F;services&#x2F;UserService.js:907</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Assign a role to user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/8&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">roleAssignInputStruct</code>
+                        <span class="type"><a href="../classes/RoleAssignInputStruct.html" class="crosslink">RoleAssignInputStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing the new role assignment (see &quot;newRoleAssignInputStruct&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_assignRoleToUserGroup" class="method item">
+    <h3 class="name"><code>assignRoleToUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>roleAssignInputStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l941"><code>src&#x2F;services&#x2F;UserService.js:941</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Assign a role to user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/2&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">roleAssignInputStruct</code>
+                        <span class="type"><a href="../classes/RoleAssignInputStruct.html" class="crosslink">RoleAssignInputStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing the new role assignment (see &quot;newRoleAssignInputStruct&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_createRole" class="method item">
+    <h3 class="name"><code>createRole</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleCreateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l661"><code>src&#x2F;services&#x2F;UserService.js:661</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Create a new role</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleCreateStruct</code>
+                        <span class="type">RoleCreateStruct</span>
+
+
+                    <div class="param-description">
+                        <p>object describing new role to be created</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_createSession" class="method item">
+    <h3 class="name"><code>createSession</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sessionCreateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1173"><code>src&#x2F;services&#x2F;UserService.js:1173</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Creates a session. This method <strong>only</strong> creates a session, for a complete
+and correct authentication from CAPI point of view, you need to use
+<a href="../classes/CAPI.html#method_logIn" class="crosslink">the <code>logIn</code> method of the CAPI
+object</a></p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sessionCreateStruct</code>
+                        <span class="type"><a href="../classes/SessionCreateStruct.html" class="crosslink">SessionCreateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing new session to be created (see &quot;newSessionCreateStruct&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_createUser" class="method item">
+    <h3 class="name"><code>createUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>userCreateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l446"><code>src&#x2F;services&#x2F;UserService.js:446</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Create a new user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">userCreateStruct</code>
+                        <span class="type"><a href="../classes/UserCreateStruct.html" class="crosslink">UserCreateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing new user to be created</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_createUserGroup" class="method item">
+    <h3 class="name"><code>createUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>parentGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>userGroupCreateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l308"><code>src&#x2F;services&#x2F;UserService.js:308</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Create a new user group in the provided parent user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">parentGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target parent user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">userGroupCreateStruct</code>
+                        <span class="type"><a href="../classes/UserGroupCreateStruct.html" class="crosslink">UserGroupCreateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing new user group to be created</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_deletePolicy" class="method item">
+    <h3 class="name"><code>deletePolicy</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>policyId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1132"><code>src&#x2F;services&#x2F;UserService.js:1132</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Delete the target policy</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">policyId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target policy identifier (e.g. &quot;/api/ezp/v2/user/roles/7/policies/1&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_deleteRole" class="method item">
+    <h3 class="name"><code>deleteRole</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l789"><code>src&#x2F;services&#x2F;UserService.js:789</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Delete the target role</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role identifier (e.g. &quot;/api/ezp/v2/user/roles/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_deleteSession" class="method item">
+    <h3 class="name"><code>deleteSession</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sessionId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1238"><code>src&#x2F;services&#x2F;UserService.js:1238</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Delete the target session. For a complete and correct de-authentifcation,
+you need to use <a href="../classes/CAPI.html#method_logOut" class="crosslink">the <code>logOut</code> method of
+the CAPI object</a></p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sessionId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target session identifier (e.g. &quot;/api/ezp/v2/user/sessions/o7i8r1sapfc9r84ae53bgq8gp4&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_deleteUser" class="method item">
+    <h3 class="name"><code>deleteUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l584"><code>src&#x2F;services&#x2F;UserService.js:584</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Delete the target user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/144&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_deleteUserGroup" class="method item">
+    <h3 class="name"><code>deleteUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l271"><code>src&#x2F;services&#x2F;UserService.js:271</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Delete the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_getRoleAssignments" class="method item">
+    <h3 class="name"><code>getRoleAssignments</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l479"><code>src&#x2F;services&#x2F;UserService.js:479</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load users and usergroups for the target roleId</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role identifier (e.g. &quot;/api/ezp/v2/user/roles/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_getRoleAssignmentsForUser" class="method item">
+    <h3 class="name"><code>getRoleAssignmentsForUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l807"><code>src&#x2F;services&#x2F;UserService.js:807</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Get role assignments for the target user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/8&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_getRoleAssignmentsForUserGroup" class="method item">
+    <h3 class="name"><code>getRoleAssignmentsForUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l839"><code>src&#x2F;services&#x2F;UserService.js:839</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Get role assignments for the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/2&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_getUserAssignmentObject" class="method item">
+    <h3 class="name"><code>getUserAssignmentObject</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userAssignmentId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l871"><code>src&#x2F;services&#x2F;UserService.js:871</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Get RoleAssignment object for the target assignment (of a user to a role)</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userAssignmentId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role assignment identifier (e.g. &quot;/api/ezp/v2/user/13/roles/7&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_getUserGroupAssignmentObject" class="method item">
+    <h3 class="name"><code>getUserGroupAssignmentObject</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupAssignmentId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l889"><code>src&#x2F;services&#x2F;UserService.js:889</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Get RoleAssignment object for the target assignment (of a user group to a role)</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupAssignmentId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role assignment identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5/110/roles/7&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_isLoginAvailable" class="method item">
+    <h3 class="name"><code>isLoginAvailable</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>login</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l525"><code>src&#x2F;services&#x2F;UserService.js:525</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Checks if the given login is available.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">login</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">available</code>
+                                    <span class="type"><a href="../classes/CAPIError.html" class="crosslink">CAPIError</a> | Boolean</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadPolicies" class="method item">
+    <h3 class="name"><code>loadPolicies</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1063"><code>src&#x2F;services&#x2F;UserService.js:1063</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load policies of the target role</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role identifier (e.g. &quot;/api/ezp/v2/user/roles/7&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadPoliciesByUserId" class="method item">
+    <h3 class="name"><code>loadPoliciesByUserId</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userPolicies</code>
+                </li>
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1150"><code>src&#x2F;services&#x2F;UserService.js:1150</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load policies for the target user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userPolicies</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>link to root UserPolicies resource (should be auto-discovered)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user numerical identifier (e.g. 110)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadPolicy" class="method item">
+    <h3 class="name"><code>loadPolicy</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>policyId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1095"><code>src&#x2F;services&#x2F;UserService.js:1095</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load the target policy</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">policyId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target policy identifier (e.g. &quot;/api/ezp/v2/user/roles/7/policies/1&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadRole" class="method item">
+    <h3 class="name"><code>loadRole</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l691"><code>src&#x2F;services&#x2F;UserService.js:691</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load the target role</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role identifier (e.g. &quot;/api/ezp/v2/user/roles/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadRoles" class="method item">
+    <h3 class="name"><code>loadRoles</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code class="optional">[identifier]</code>
+                </li>
+                <li class="arg">
+                        <code class="optional">[limit=-1]</code>
+                </li>
+                <li class="arg">
+                        <code class="optional">[offset=0]</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l709"><code>src&#x2F;services&#x2F;UserService.js:709</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Search roles by string identifier and apply certain limit and offset on the result set</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name optional">[identifier]</code>
+                        <span class="type">String</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>string identifier of the roles to search (e.g. &quot;admin&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name optional">[limit=-1]</code>
+                        <span class="type">Number</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>the limit of the result set</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name optional">[offset=0]</code>
+                        <span class="type">Number</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>the offset of the result set</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>userService.loadRoles(&quot;admin&quot;, 5, 5, callback);</code></pre>
+
+            </div>
+        </div>
+</div>
+<div id="method_loadRootUserGroup" class="method item">
+    <h3 class="name"><code>loadRootUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l206"><code>src&#x2F;services&#x2F;UserService.js:206</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load the root user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadSubUserGroups" class="method item">
+    <h3 class="name"><code>loadSubUserGroups</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l360"><code>src&#x2F;services&#x2F;UserService.js:360</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load subgroups of the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadUser" class="method item">
+    <h3 class="name"><code>loadUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l606"><code>src&#x2F;services&#x2F;UserService.js:606</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Assign the target user to the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/144&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/2&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadUser" class="method item">
+    <h3 class="name"><code>loadUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l507"><code>src&#x2F;services&#x2F;UserService.js:507</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load the target user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/144&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadUserGroup" class="method item">
+    <h3 class="name"><code>loadUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l234"><code>src&#x2F;services&#x2F;UserService.js:234</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadUserGroupByRemoteId" class="method item">
+    <h3 class="name"><code>loadUserGroupByRemoteId</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroups</code>
+                </li>
+                <li class="arg">
+                        <code>remoteId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l252"><code>src&#x2F;services&#x2F;UserService.js:252</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load the target user group by remoteId</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroups</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>link to root UserGroups resource (should be auto-discovered)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">remoteId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group remote identifier (e.g. &quot;f5c88a2209584891056f987fd965b0ba&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadUserGroupsOfUser" class="method item">
+    <h3 class="name"><code>loadUserGroupsOfUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l424"><code>src&#x2F;services&#x2F;UserService.js:424</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load user groups for the target user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/14&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadUsersOfUserGroup" class="method item">
+    <h3 class="name"><code>loadUsersOfUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l392"><code>src&#x2F;services&#x2F;UserService.js:392</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Load users of the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_moveUserGroup" class="method item">
+    <h3 class="name"><code>moveUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>destination</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l289"><code>src&#x2F;services&#x2F;UserService.js:289</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Move the target user group to the destination</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">destination</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>destination identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5/110&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_newPolicyCreateStruct" class="method item">
+    <h3 class="name"><code>newPolicyCreateStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>module</code>
+                </li>
+                <li class="arg">
+                        <code>theFunction</code>
+                </li>
+                <li class="arg">
+                        <code>limitations</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/PolicyCreateStruct.html" class="crosslink">PolicyCreateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l163"><code>src&#x2F;services&#x2F;UserService.js:163</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns policy create structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">module</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>name of the module for which new policy should be active</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">theFunction</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>name of the function for which the new policy should be active</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">limitations</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>object describing limitations for new policy</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/PolicyCreateStruct.html" class="crosslink">PolicyCreateStruct</a></span>:
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var policyCreateStruct = userService.newPolicyCreateStruct(
+    &quot;content&quot;, &quot;publish&quot;, [{
+        limitation: [{
+            &quot;_identifier&quot;: &quot;Section&quot;,
+            &quot;values&quot;: {
+                &quot;ref&quot;: [{
+                    &quot;_href&quot;: &quot;5&quot;
+                }, {
+                    &quot;_href&quot;: &quot;4&quot;
+                }]
+            }
+        }]
+    }]
+);</code></pre>
+
+            </div>
+        </div>
+</div>
+<div id="method_newPolicyUpdateStruct" class="method item">
+    <h3 class="name"><code>newPolicyUpdateStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>limitations</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/PolicyUpdateStruct.html" class="crosslink">PolicyUpdateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l191"><code>src&#x2F;services&#x2F;UserService.js:191</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Policy update structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">limitations</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>object describing limitations change for the policy (see &quot;newPolicyCreateStruct&quot; example)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/PolicyUpdateStruct.html" class="crosslink">PolicyUpdateStruct</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_newRoleAssignInputStruct" class="method item">
+    <h3 class="name"><code>newRoleAssignInputStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>role</code>
+                </li>
+                <li class="arg">
+                        <code>limitation</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/RoleAssignInputStruct.html" class="crosslink">RoleAssignInputStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l133"><code>src&#x2F;services&#x2F;UserService.js:133</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns target role assignment input structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">role</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>object representing the target role (see example)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">limitation</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>object representing limitations for assignment (see example)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/RoleAssignInputStruct.html" class="crosslink">RoleAssignInputStruct</a></span>:
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var roleAssignCreateStruct = userService.newRoleAssignInputStruct(
+    {
+        &quot;_href&quot;: &quot;/api/ezp/v2/user/roles/7&quot;,
+        &quot;_media-type&quot;: &quot;application/vnd.ez.api.RoleAssignInput+json&quot;
+    }, {
+        &quot;_identifier&quot;: &quot;Section&quot;,
+        &quot;values&quot;: {
+            &quot;ref&quot;: [{
+                &quot;_href&quot;: &quot;/api/ezp/v2/content/sections/1&quot;,
+                &quot;_media-type&quot;: &quot;application/vnd.ez.api.Section+json&quot;
+            }, {
+                &quot;_href&quot;: &quot;/api/ezp/v2/content/sections/4&quot;,
+                &quot;_media-type&quot;: &quot;application/vnd.ez.api.Section+json&quot;
+            }]
+        }
+    });
+</code></pre>
+
+            </div>
+        </div>
+</div>
+<div id="method_newRoleInputStruct" class="method item">
+    <h3 class="name"><code>newRoleInputStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>identifier</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/RoleInputStruct.html" class="crosslink">RoleInputStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l122"><code>src&#x2F;services&#x2F;UserService.js:122</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns role input structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">identifier</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>unique identifier for the new role (e.g. &quot;editor&quot;)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/RoleInputStruct.html" class="crosslink">RoleInputStruct</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_newSessionCreateStruct" class="method item">
+    <h3 class="name"><code>newSessionCreateStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>login</code>
+                </li>
+                <li class="arg">
+                        <code>password</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/SessionCreateStruct.html" class="crosslink">SessionCreateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l50"><code>src&#x2F;services&#x2F;UserService.js:50</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns session create structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">login</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>user's login</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">password</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>user's password</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/SessionCreateStruct.html" class="crosslink">SessionCreateStruct</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_newUserCreateStruct" class="method item">
+    <h3 class="name"><code>newUserCreateStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>languageCode</code>
+                </li>
+                <li class="arg">
+                        <code>login</code>
+                </li>
+                <li class="arg">
+                        <code>email</code>
+                </li>
+                <li class="arg">
+                        <code>password</code>
+                </li>
+                <li class="arg">
+                        <code>fields</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/UserCreateStruct.html" class="crosslink">UserCreateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l96"><code>src&#x2F;services&#x2F;UserService.js:96</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>User create structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">languageCode</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The language code (eng-GB, fre-FR, ...)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">login</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>login for a new user</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">email</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>email for a new user</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">password</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>password for a new user</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">fields</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>fields array (see example for
+<a href="../classes/UserService.html#method_newUserGroupCreateStruct" class="crosslink">UserService.newUserGroupCreateStruct</a>)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/UserCreateStruct.html" class="crosslink">UserCreateStruct</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_newUserGroupCreateStruct" class="method item">
+    <h3 class="name"><code>newUserGroupCreateStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>language</code>
+                </li>
+                <li class="arg">
+                        <code>fields</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/UserGroupCreateStruct.html" class="crosslink">UserGroupCreateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l62"><code>src&#x2F;services&#x2F;UserService.js:62</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns user group create structure</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">language</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The language code (eng-GB, fre-FR, ...)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">fields</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>fields array (see example)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/UserGroupCreateStruct.html" class="crosslink">UserGroupCreateStruct</a></span>:
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var userGroupCreateStruct = userService.newUserGroupCreateStruct(
+    &quot;eng-US&quot;,[{
+        fieldDefinitionIdentifier: &quot;name&quot;,
+        languageCode: &quot;eng-US&quot;,
+        fieldValue: &quot;UserGroup&quot;
+    }, {
+        fieldDefinitionIdentifier: &quot;description&quot;,
+        languageCode: &quot;eng-US&quot;,
+        fieldValue: &quot;This is the description of the user group&quot;
+    }]
+);</code></pre>
+
+            </div>
+        </div>
+</div>
+<div id="method_newUserGroupUpdateStruct" class="method item">
+    <h3 class="name"><code>newUserGroupUpdateStruct</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/UserGroupCreateStruct.html" class="crosslink">UserGroupCreateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l86"><code>src&#x2F;services&#x2F;UserService.js:86</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>User group update structure</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/UserGroupCreateStruct.html" class="crosslink">UserGroupCreateStruct</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_newUserUpdateStruct" class="method item">
+    <h3 class="name"><code>newUserUpdateStruct</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/UserUpdateStruct.html" class="crosslink">UserUpdateStruct</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l112"><code>src&#x2F;services&#x2F;UserService.js:112</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns user update structure</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/UserUpdateStruct.html" class="crosslink">UserUpdateStruct</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_refreshSession" class="method item">
+    <h3 class="name"><code>refreshSession</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sessionId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1208"><code>src&#x2F;services&#x2F;UserService.js:1208</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Calls the refresh session resource to check whether the current session
+is valid. For a complete and correct <em>is logged in</em> check, you need to
+use <a href="../classes/CAPI.html#method_isLoggedIn" class="crosslink">CAPI.isLoggedIn</a></p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sessionId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>the session identifier (e.g. &quot;o7i8r1sapfc9r84ae53bgq8gp4&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_unassignRoleFromUser" class="method item">
+    <h3 class="name"><code>unassignRoleFromUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userRoleId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l974"><code>src&#x2F;services&#x2F;UserService.js:974</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove target assignment (of a user to a role)</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userRoleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role assignment identifier (e.g. &quot;/api/ezp/v2/user/users/110/roles/7&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_unassignRoleFromUserGroup" class="method item">
+    <h3 class="name"><code>unassignRoleFromUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupRoleId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l992"><code>src&#x2F;services&#x2F;UserService.js:992</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove target assignment (of a user group to a role)</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupRoleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role assignment identifier (e.g. &quot;/api/ezp/v2/user/groups/2/roles/7&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_unassignUserFromUserGroup" class="method item">
+    <h3 class="name"><code>unassignUserFromUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userAssignedGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l639"><code>src&#x2F;services&#x2F;UserService.js:639</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove target assignment (of a user to a user group)</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userAssignedGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target assignment identifier (e.g. &quot;/api/ezp/v2/user/users/146/groups/1&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_updatePolicy" class="method item">
+    <h3 class="name"><code>updatePolicy</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>policyId</code>
+                </li>
+                <li class="arg">
+                        <code>policyUpdateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l1113"><code>src&#x2F;services&#x2F;UserService.js:1113</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the target policy</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">policyId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target policy identifier (e.g. &quot;/api/ezp/v2/user/roles/7/policies/1&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">policyUpdateStruct</code>
+                        <span class="type"><a href="../classes/PolicyUpdateStruct.html" class="crosslink">PolicyUpdateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing changes to the policy</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_updateRole" class="method item">
+    <h3 class="name"><code>updateRole</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>roleId</code>
+                </li>
+                <li class="arg">
+                        <code>roleUpdateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l770"><code>src&#x2F;services&#x2F;UserService.js:770</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the target role</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">roleId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target role identifier (e.g. &quot;/api/ezp/v2/user/roles/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">roleUpdateStruct</code>
+                        <span class="type">RoleUpdateStruct</span>
+
+
+                    <div class="param-description">
+                        <p>object describing changes to the role</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_updateUser" class="method item">
+    <h3 class="name"><code>updateUser</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userId</code>
+                </li>
+                <li class="arg">
+                        <code>userUpdateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l557"><code>src&#x2F;services&#x2F;UserService.js:557</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the target user</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user identifier (e.g. &quot;/api/ezp/v2/user/users/144&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">userUpdateStruct</code>
+                        <span class="type"><a href="../classes/UserUpdateStruct.html" class="crosslink">UserUpdateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing changes to the user</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var userUpdateStruct = userService.newUserUpdateStruct();
+userUpdateStruct.body.UserUpdate.email = &quot;somenewemail@nowhere.no&quot;;
+userService.updateUser(
+    &quot;/api/ezp/v2/user/users/144&quot;,
+    userUpdateStruct,
+    callback
+);</code></pre>
+
+            </div>
+        </div>
+</div>
+<div id="method_updateUserGroup" class="method item">
+    <h3 class="name"><code>updateUserGroup</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>userGroupId</code>
+                </li>
+                <li class="arg">
+                        <code>userGroupUpdateStruct</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_services_UserService.js.html#l341"><code>src&#x2F;services&#x2F;UserService.js:341</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the target user group</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">userGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>target user group identifier (e.g. &quot;/api/ezp/v2/user/groups/1/5&quot;)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">userGroupUpdateStruct</code>
+                        <span class="type"><a href="../classes/UserGroupUpdateStruct.html" class="crosslink">UserGroupUpdateStruct</a></span>
+
+
+                    <div class="param-description">
+                        <p>object describing changes to the target user group</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>callback executed after performing the request (see
+<a href="../classes/UserService.html" class="crosslink">Note on the callbacks usage</a> for more info)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
