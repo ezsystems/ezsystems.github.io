@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Resources/public/js/alloyeditor/buttons/embed.js - eZ Platform UI Bundle JavaScript API</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="http://ez.no/extension/ez_ezno/design/ezno_2014/images/ez-logo.png" title="eZ Platform UI Bundle JavaScript API"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Author.html">Author</a></li>
+                                <li><a href="../classes/AuthorList.html">AuthorList</a></li>
+                                <li><a href="../classes/eZ.AccordionElement.html">eZ.AccordionElement</a></li>
+                                <li><a href="../classes/eZ.ActionBarView.html">eZ.ActionBarView</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockRemove.html">eZ.AlloyEditorButton.ButtonBlockRemove</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockTextAlign.html">eZ.AlloyEditorButton.ButtonBlockTextAlign</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockTextAlignCenter.html">eZ.AlloyEditorButton.ButtonBlockTextAlignCenter</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockTextAlignJustify.html">eZ.AlloyEditorButton.ButtonBlockTextAlignJustify</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockTextAlignLeft.html">eZ.AlloyEditorButton.ButtonBlockTextAlignLeft</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockTextAlignRight.html">eZ.AlloyEditorButton.ButtonBlockTextAlignRight</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedDiscoverContent.html">eZ.AlloyEditorButton.ButtonEmbedDiscoverContent</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedHref.html">eZ.AlloyEditorButton.ButtonEmbedHref</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedImage.html">eZ.AlloyEditorButton.ButtonEmbedImage</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezaddcontent.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezaddcontent</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezembed.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezembed</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezfocusblock.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezfocusblock</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezremoveblock.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezremoveblock</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Table.html">eZ.AlloyEditorToolbarConfig.Table</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Text.html">eZ.AlloyEditorToolbarConfig.Text</a></li>
+                                <li><a href="../classes/eZ.AsynchronousView.html">eZ.AsynchronousView</a></li>
+                                <li><a href="../classes/eZ.AuthorEditView.html">eZ.AuthorEditView</a></li>
+                                <li><a href="../classes/eZ.AuthorInputView.html">eZ.AuthorInputView</a></li>
+                                <li><a href="../classes/eZ.AuthorView.html">eZ.AuthorView</a></li>
+                                <li><a href="../classes/eZ.BarView.html">eZ.BarView</a></li>
+                                <li><a href="../classes/eZ.BinaryBaseEditView.html">eZ.BinaryBaseEditView</a></li>
+                                <li><a href="../classes/eZ.BinaryFileEditView.html">eZ.BinaryFileEditView</a></li>
+                                <li><a href="../classes/eZ.BinaryFileView.html">eZ.BinaryFileView</a></li>
+                                <li><a href="../classes/eZ.ButtonActionView.html">eZ.ButtonActionView</a></li>
+                                <li><a href="../classes/eZ.CAPI.html">eZ.CAPI</a></li>
+                                <li><a href="../classes/eZ.CheckboxEditView.html">eZ.CheckboxEditView</a></li>
+                                <li><a href="../classes/eZ.CheckboxView.html">eZ.CheckboxView</a></li>
+                                <li><a href="../classes/eZ.ConfirmBoxView.html">eZ.ConfirmBoxView</a></li>
+                                <li><a href="../classes/eZ.ConfirmBoxViewService.html">eZ.ConfirmBoxViewService</a></li>
+                                <li><a href="../classes/eZ.Content.html">eZ.Content</a></li>
+                                <li><a href="../classes/eZ.ContentCreateViewService.html">eZ.ContentCreateViewService</a></li>
+                                <li><a href="../classes/eZ.ContentEditFormView.html">eZ.ContentEditFormView</a></li>
+                                <li><a href="../classes/eZ.ContentEditView.html">eZ.ContentEditView</a></li>
+                                <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
+                                <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
+                                <li><a href="../classes/eZ.ContentInfoAttributes.html">eZ.ContentInfoAttributes</a></li>
+                                <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
+                                <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
+                                <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
+                                <li><a href="../classes/eZ.ContentTypeGroup.html">eZ.ContentTypeGroup</a></li>
+                                <li><a href="../classes/eZ.ContentTypeSelectorView.html">eZ.ContentTypeSelectorView</a></li>
+                                <li><a href="../classes/eZ.CountryEditView.html">eZ.CountryEditView</a></li>
+                                <li><a href="../classes/eZ.CountryView.html">eZ.CountryView</a></li>
+                                <li><a href="../classes/eZ.CreateContentActionView.html">eZ.CreateContentActionView</a></li>
+                                <li><a href="../classes/eZ.DashboardView.html">eZ.DashboardView</a></li>
+                                <li><a href="../classes/eZ.DateAndTimeEditView.html">eZ.DateAndTimeEditView</a></li>
+                                <li><a href="../classes/eZ.DateAndTimeView.html">eZ.DateAndTimeView</a></li>
+                                <li><a href="../classes/eZ.DateEditView.html">eZ.DateEditView</a></li>
+                                <li><a href="../classes/eZ.DiscoveryBarView.html">eZ.DiscoveryBarView</a></li>
+                                <li><a href="../classes/eZ.DiscoveryBarViewService.html">eZ.DiscoveryBarViewService</a></li>
+                                <li><a href="../classes/eZ.EditActionBarView.html">eZ.EditActionBarView</a></li>
+                                <li><a href="../classes/eZ.EditorContentProcessorBase.html">eZ.EditorContentProcessorBase</a></li>
+                                <li><a href="../classes/eZ.EditorContentProcessorRemoveIds.html">eZ.EditorContentProcessorRemoveIds</a></li>
+                                <li><a href="../classes/eZ.EditorContentProcessorXHTML5Edit.html">eZ.EditorContentProcessorXHTML5Edit</a></li>
+                                <li><a href="../classes/eZ.EditPreviewView.html">eZ.EditPreviewView</a></li>
+                                <li><a href="../classes/eZ.EmailAddressEditView.html">eZ.EmailAddressEditView</a></li>
+                                <li><a href="../classes/eZ.Expandable.html">eZ.Expandable</a></li>
+                                <li><a href="../classes/eZ.FieldEditView.html">eZ.FieldEditView</a></li>
+                                <li><a href="../classes/eZ.FieldView.html">eZ.FieldView</a></li>
+                                <li><a href="../classes/eZ.FloatEditView.html">eZ.FloatEditView</a></li>
+                                <li><a href="../classes/eZ.FloatView.html">eZ.FloatView</a></li>
+                                <li><a href="../classes/eZ.GoogleMapAPILoader.html">eZ.GoogleMapAPILoader</a></li>
+                                <li><a href="../classes/eZ.HeightChange.html">eZ.HeightChange</a></li>
+                                <li><a href="../classes/eZ.HeightFit.html">eZ.HeightFit</a></li>
+                                <li><a href="../classes/eZ.ImageEditView.html">eZ.ImageEditView</a></li>
+                                <li><a href="../classes/eZ.ImageView.html">eZ.ImageView</a></li>
+                                <li><a href="../classes/eZ.IntegerEditView.html">eZ.IntegerEditView</a></li>
+                                <li><a href="../classes/eZ.IntegerView.html">eZ.IntegerView</a></li>
+                                <li><a href="../classes/eZ.ISBNEditView.html">eZ.ISBNEditView</a></li>
+                                <li><a href="../classes/eZ.KeywordEditView.html">eZ.KeywordEditView</a></li>
+                                <li><a href="../classes/eZ.KeywordView.html">eZ.KeywordView</a></li>
+                                <li><a href="../classes/eZ.LanguageSelectionBoxView.html">eZ.LanguageSelectionBoxView</a></li>
+                                <li><a href="../classes/eZ.LanguageSelectionBoxViewService.html">eZ.LanguageSelectionBoxViewService</a></li>
+                                <li><a href="../classes/eZ.LanguageSwitcherView.html">eZ.LanguageSwitcherView</a></li>
+                                <li><a href="../classes/eZ.Location.html">eZ.Location</a></li>
+                                <li><a href="../classes/eZ.LocationViewDetailsTabView.html">eZ.LocationViewDetailsTabView</a></li>
+                                <li><a href="../classes/eZ.LocationViewLocationsTabView.html">eZ.LocationViewLocationsTabView</a></li>
+                                <li><a href="../classes/eZ.LocationViewRelationsTabView.html">eZ.LocationViewRelationsTabView</a></li>
+                                <li><a href="../classes/eZ.LocationViewTabView.html">eZ.LocationViewTabView</a></li>
+                                <li><a href="../classes/eZ.LocationViewView.html">eZ.LocationViewView</a></li>
+                                <li><a href="../classes/eZ.LocationViewViewService.html">eZ.LocationViewViewService</a></li>
+                                <li><a href="../classes/eZ.LocationViewViewTabView.html">eZ.LocationViewViewTabView</a></li>
+                                <li><a href="../classes/eZ.LoginFormView.html">eZ.LoginFormView</a></li>
+                                <li><a href="../classes/eZ.LoginFormViewService.html">eZ.LoginFormViewService</a></li>
+                                <li><a href="../classes/eZ.MapLocationEditView.html">eZ.MapLocationEditView</a></li>
+                                <li><a href="../classes/eZ.MediaEditView.html">eZ.MediaEditView</a></li>
+                                <li><a href="../classes/eZ.MediaView.html">eZ.MediaView</a></li>
+                                <li><a href="../classes/eZ.NavigationHubView.html">eZ.NavigationHubView</a></li>
+                                <li><a href="../classes/eZ.NavigationHubViewService.html">eZ.NavigationHubViewService</a></li>
+                                <li><a href="../classes/eZ.NavigationItemParameterView.html">eZ.NavigationItemParameterView</a></li>
+                                <li><a href="../classes/eZ.NavigationItemSubtreeView.html">eZ.NavigationItemSubtreeView</a></li>
+                                <li><a href="../classes/eZ.NavigationItemView.html">eZ.NavigationItemView</a></li>
+                                <li><a href="../classes/eZ.Notification.html">eZ.Notification</a></li>
+                                <li><a href="../classes/eZ.NotificationHubView.html">eZ.NotificationHubView</a></li>
+                                <li><a href="../classes/eZ.NotificationHubViewService.html">eZ.NotificationHubViewService</a></li>
+                                <li><a href="../classes/eZ.NotificationList.html">eZ.NotificationList</a></li>
+                                <li><a href="../classes/eZ.NotificationView.html">eZ.NotificationView</a></li>
+                                <li><a href="../classes/eZ.PlatformUIApp.html">eZ.PlatformUIApp</a></li>
+                                <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
+                                <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
+                                <li><a href="../classes/eZ.Plugin.DiscardDraft.html">eZ.Plugin.DiscardDraft</a></li>
+                                <li><a href="../classes/eZ.Plugin.DiscoveryBarContentTree.html">eZ.Plugin.DiscoveryBarContentTree</a></li>
+                                <li><a href="../classes/eZ.Plugin.DiscoveryWidget.html">eZ.Plugin.DiscoveryWidget</a></li>
+                                <li><a href="../classes/eZ.Plugin.DomState.html">eZ.Plugin.DomState</a></li>
+                                <li><a href="../classes/eZ.Plugin.ImageVariationLoad.html">eZ.Plugin.ImageVariationLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.LanguageSelectionBox.html">eZ.Plugin.LanguageSelectionBox</a></li>
+                                <li><a href="../classes/eZ.Plugin.LocationCreate.html">eZ.Plugin.LocationCreate</a></li>
+                                <li><a href="../classes/eZ.Plugin.LocationRemove.html">eZ.Plugin.LocationRemove</a></li>
+                                <li><a href="../classes/eZ.Plugin.LocationSearch.html">eZ.Plugin.LocationSearch</a></li>
+                                <li><a href="../classes/eZ.Plugin.LocationsLoad.html">eZ.Plugin.LocationsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.LoginAvailable.html">eZ.Plugin.LoginAvailable</a></li>
+                                <li><a href="../classes/eZ.Plugin.NotificationHub.html">eZ.Plugin.NotificationHub</a></li>
+                                <li><a href="../classes/eZ.Plugin.ObjectRelationLoad.html">eZ.Plugin.ObjectRelationLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.ObjectRelationsLoad.html">eZ.Plugin.ObjectRelationsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.Position.html">eZ.Plugin.Position</a></li>
+                                <li><a href="../classes/eZ.Plugin.PublishDraft.html">eZ.Plugin.PublishDraft</a></li>
+                                <li><a href="../classes/eZ.Plugin.RegisterLanguageHelpers.html">eZ.Plugin.RegisterLanguageHelpers</a></li>
+                                <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
+                                <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
+                                <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
+                                <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
+                                <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.ViewServiceBase.html">eZ.Plugin.ViewServiceBase</a></li>
+                                <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
+                                <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
+                                <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
+                                <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
+                                <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
+                                <li><a href="../classes/eZ.RelationListView.html">eZ.RelationListView</a></li>
+                                <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
+                                <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
+                                <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
+                                <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
+                                <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
+                                <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
+                                <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
+                                <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
+                                <li><a href="../classes/eZ.SelectionFilterView.html">eZ.SelectionFilterView</a></li>
+                                <li><a href="../classes/eZ.SelectionTable.html">eZ.SelectionTable</a></li>
+                                <li><a href="../classes/eZ.SelectionView.html">eZ.SelectionView</a></li>
+                                <li><a href="../classes/eZ.ServerSideView.html">eZ.ServerSideView</a></li>
+                                <li><a href="../classes/eZ.ServerSideViewService.html">eZ.ServerSideViewService</a></li>
+                                <li><a href="../classes/eZ.SessionAuthAgent.html">eZ.SessionAuthAgent</a></li>
+                                <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
+                                <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
+                                <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
+                                <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
+                                <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
+                                <li><a href="../classes/eZ.TextBlockEditView.html">eZ.TextBlockEditView</a></li>
+                                <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
+                                <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
+                                <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.TreeActionView.html">eZ.TreeActionView</a></li>
+                                <li><a href="../classes/eZ.TreeView.html">eZ.TreeView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryBrowseView.html">eZ.UniversalDiscoveryBrowseView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryConfirmedListView.html">eZ.UniversalDiscoveryConfirmedListView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryMethodBaseView.html">eZ.UniversalDiscoveryMethodBaseView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoverySearchView.html">eZ.UniversalDiscoverySearchView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoverySelectedView.html">eZ.UniversalDiscoverySelectedView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryView.html">eZ.UniversalDiscoveryView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryViewService.html">eZ.UniversalDiscoveryViewService</a></li>
+                                <li><a href="../classes/eZ.UrlEditView.html">eZ.UrlEditView</a></li>
+                                <li><a href="../classes/eZ.UrlView.html">eZ.UrlView</a></li>
+                                <li><a href="../classes/eZ.User.html">eZ.User</a></li>
+                                <li><a href="../classes/eZ.UserEditView.html">eZ.UserEditView</a></li>
+                                <li><a href="../classes/eZ.UserView.html">eZ.UserView</a></li>
+                                <li><a href="../classes/eZ.Version.html">eZ.Version</a></li>
+                                <li><a href="../classes/eZ.View.html">eZ.View</a></li>
+                                <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
+                                <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
+                                <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/ez-accordion-element.html">ez-accordion-element</a></li>
+                                <li><a href="../modules/ez-actionbarview.html">ez-actionbarview</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-blocktextaligncenter.html">ez-alloyeditor-button-blocktextaligncenter</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-blocktextalignjustify.html">ez-alloyeditor-button-blocktextalignjustify</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-blocktextalignleft.html">ez-alloyeditor-button-blocktextalignleft</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-blocktextalignright.html">ez-alloyeditor-button-blocktextalignright</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-remove.html">ez-alloyeditor-button-remove</a></li>
+                                <li><a href="../modules/ez-alloyeditor-toolbar-config-block-base.html">ez-alloyeditor-toolbar-config-block-base</a></li>
+                                <li><a href="../modules/ez-alloyeditor-toolbar-config-embed.html">ez-alloyeditor-toolbar-config-embed</a></li>
+                                <li><a href="../modules/ez-alloyeditor-toolbar-config-heading.html">ez-alloyeditor-toolbar-config-heading</a></li>
+                                <li><a href="../modules/ez-alloyeditor-toolbar-config-image.html">ez-alloyeditor-toolbar-config-image</a></li>
+                                <li><a href="../modules/ez-alloyeditor-toolbar-config-paragraph.html">ez-alloyeditor-toolbar-config-paragraph</a></li>
+                                <li><a href="../modules/ez-author-editview.html">ez-author-editview</a></li>
+                                <li><a href="../modules/ez-author-view.html">ez-author-view</a></li>
+                                <li><a href="../modules/ez-barview.html">ez-barview</a></li>
+                                <li><a href="../modules/ez-binarybase-editview.html">ez-binarybase-editview</a></li>
+                                <li><a href="../modules/ez-binaryfile-editview.html">ez-binaryfile-editview</a></li>
+                                <li><a href="../modules/ez-binaryfile-view.html">ez-binaryfile-view</a></li>
+                                <li><a href="../modules/ez-buttonactionview.html">ez-buttonactionview</a></li>
+                                <li><a href="../modules/ez-checkbox-editview.html">ez-checkbox-editview</a></li>
+                                <li><a href="../modules/ez-checkbox-view.html">ez-checkbox-view</a></li>
+                                <li><a href="../modules/ez-confirmboxplugin.html">ez-confirmboxplugin</a></li>
+                                <li><a href="../modules/ez-contentcreateplugin.html">ez-contentcreateplugin</a></li>
+                                <li><a href="../modules/ez-contenteditformview.html">ez-contenteditformview</a></li>
+                                <li><a href="../modules/ez-contenteditview.html">ez-contenteditview</a></li>
+                                <li><a href="../modules/ez-contenteditviewservice.html">ez-contenteditviewservice</a></li>
+                                <li><a href="../modules/ez-contentinfo-attributes.html">ez-contentinfo-attributes</a></li>
+                                <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
+                                <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
+                                <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
+                                <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
+                                <li><a href="../modules/ez-contenttypeeditserversideview.html">ez-contenttypeeditserversideview</a></li>
+                                <li><a href="../modules/ez-contenttypegroupmodel.html">ez-contenttypegroupmodel</a></li>
+                                <li><a href="../modules/ez-contenttypemodel.html">ez-contenttypemodel</a></li>
+                                <li><a href="../modules/ez-contenttypeselector.html">ez-contenttypeselector</a></li>
+                                <li><a href="../modules/ez-copycontentplugin.html">ez-copycontentplugin</a></li>
+                                <li><a href="../modules/ez-country-editview.html">ez-country-editview</a></li>
+                                <li><a href="../modules/ez-country-view.html">ez-country-view</a></li>
+                                <li><a href="../modules/ez-createcontentactionview.html">ez-createcontentactionview</a></li>
+                                <li><a href="../modules/ez-dashboardview.html">ez-dashboardview</a></li>
+                                <li><a href="../modules/ez-date-editview.html">ez-date-editview</a></li>
+                                <li><a href="../modules/ez-dateandtime-editview.html">ez-dateandtime-editview</a></li>
+                                <li><a href="../modules/ez-dateandtime-view.html">ez-dateandtime-view</a></li>
+                                <li><a href="../modules/ez-discarddraftplugin.html">ez-discarddraftplugin</a></li>
+                                <li><a href="../modules/ez-discoverybarcontenttreeplugin.html">ez-discoverybarcontenttreeplugin</a></li>
+                                <li><a href="../modules/ez-discoverybarview.html">ez-discoverybarview</a></li>
+                                <li><a href="../modules/ez-discoverybarviewservice.html">ez-discoverybarviewservice</a></li>
+                                <li><a href="../modules/ez-domstateplugin.html">ez-domstateplugin</a></li>
+                                <li><a href="../modules/ez-editactionbarview.html">ez-editactionbarview</a></li>
+                                <li><a href="../modules/ez-editorcontentprocessorbase.html">ez-editorcontentprocessorbase</a></li>
+                                <li><a href="../modules/ez-editorcontentprocessorremoveids.html">ez-editorcontentprocessorremoveids</a></li>
+                                <li><a href="../modules/ez-editorcontentprocessorxhtml5edit.html">ez-editorcontentprocessorxhtml5edit</a></li>
+                                <li><a href="../modules/ez-editpreviewview.html">ez-editpreviewview</a></li>
+                                <li><a href="../modules/ez-emailaddress-editview.html">ez-emailaddress-editview</a></li>
+                                <li><a href="../modules/ez-expandable.html">ez-expandable</a></li>
+                                <li><a href="../modules/ez-fieldeditview.html">ez-fieldeditview</a></li>
+                                <li><a href="../modules/ez-fieldview.html">ez-fieldview</a></li>
+                                <li><a href="../modules/ez-float-editview.html">ez-float-editview</a></li>
+                                <li><a href="../modules/ez-float-view.html">ez-float-view</a></li>
+                                <li><a href="../modules/ez-googlemapapiloader.html">ez-googlemapapiloader</a></li>
+                                <li><a href="../modules/ez-height-change.html">ez-height-change</a></li>
+                                <li><a href="../modules/ez-height-fit.html">ez-height-fit</a></li>
+                                <li><a href="../modules/ez-image-editview.html">ez-image-editview</a></li>
+                                <li><a href="../modules/ez-image-view.html">ez-image-view</a></li>
+                                <li><a href="../modules/ez-imagevariationloadplugin.html">ez-imagevariationloadplugin</a></li>
+                                <li><a href="../modules/ez-integer-editview.html">ez-integer-editview</a></li>
+                                <li><a href="../modules/ez-integer-view.html">ez-integer-view</a></li>
+                                <li><a href="../modules/ez-isbn-editview.html">ez-isbn-editview</a></li>
+                                <li><a href="../modules/ez-keyword-editview.html">ez-keyword-editview</a></li>
+                                <li><a href="../modules/ez-keyword-view.html">ez-keyword-view</a></li>
+                                <li><a href="../modules/ez-languageselectionboxplugin.html">ez-languageselectionboxplugin</a></li>
+                                <li><a href="../modules/ez-languageselectionboxview.html">ez-languageselectionboxview</a></li>
+                                <li><a href="../modules/ez-languageselectionboxviewservice.html">ez-languageselectionboxviewservice</a></li>
+                                <li><a href="../modules/ez-languageswitcherview.html">ez-languageswitcherview</a></li>
+                                <li><a href="../modules/ez-locationcreateplugin.html">ez-locationcreateplugin</a></li>
+                                <li><a href="../modules/ez-locationmodel.html">ez-locationmodel</a></li>
+                                <li><a href="../modules/ez-locationremoveplugin.html">ez-locationremoveplugin</a></li>
+                                <li><a href="../modules/ez-locationsearchplugin.html">ez-locationsearchplugin</a></li>
+                                <li><a href="../modules/ez-locationsloadplugin.html">ez-locationsloadplugin</a></li>
+                                <li><a href="../modules/ez-locationviewdetailstabview.html">ez-locationviewdetailstabview</a></li>
+                                <li><a href="../modules/ez-locationviewlocationstabview.html">ez-locationviewlocationstabview</a></li>
+                                <li><a href="../modules/ez-locationviewrelationstabview.html">ez-locationviewrelationstabview</a></li>
+                                <li><a href="../modules/ez-locationviewview.html">ez-locationviewview</a></li>
+                                <li><a href="../modules/ez-locationviewviewservice.html">ez-locationviewviewservice</a></li>
+                                <li><a href="../modules/ez-locationviewviewtabview.html">ez-locationviewviewtabview</a></li>
+                                <li><a href="../modules/ez-loginavailableplugin.html">ez-loginavailableplugin</a></li>
+                                <li><a href="../modules/ez-loginformview.html">ez-loginformview</a></li>
+                                <li><a href="../modules/ez-loginformviewservice.html">ez-loginformviewservice</a></li>
+                                <li><a href="../modules/ez-maplocation-editview.html">ez-maplocation-editview</a></li>
+                                <li><a href="../modules/ez-maplocation-view.html">ez-maplocation-view</a></li>
+                                <li><a href="../modules/ez-media-editview.html">ez-media-editview</a></li>
+                                <li><a href="../modules/ez-media-view.html">ez-media-view</a></li>
+                                <li><a href="../modules/ez-navigationhubview.html">ez-navigationhubview</a></li>
+                                <li><a href="../modules/ez-navigationhubviewservice.html">ez-navigationhubviewservice</a></li>
+                                <li><a href="../modules/ez-navigationitemparameterview.html">ez-navigationitemparameterview</a></li>
+                                <li><a href="../modules/ez-navigationitemsubtreeview.html">ez-navigationitemsubtreeview</a></li>
+                                <li><a href="../modules/ez-navigationitemview.html">ez-navigationitemview</a></li>
+                                <li><a href="../modules/ez-notificationhubplugin.html">ez-notificationhubplugin</a></li>
+                                <li><a href="../modules/ez-objectrelationloadplugin.html">ez-objectrelationloadplugin</a></li>
+                                <li><a href="../modules/ez-objectrelationsloadplugin.html">ez-objectrelationsloadplugin</a></li>
+                                <li><a href="../modules/ez-platformuiapp.html">ez-platformuiapp</a></li>
+                                <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
+                                <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
+                                <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
+                                <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
+                                <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
+                                <li><a href="../modules/ez-relation-editview.html">ez-relation-editview</a></li>
+                                <li><a href="../modules/ez-relation-view.html">ez-relation-view</a></li>
+                                <li><a href="../modules/ez-relationlist-editview.html">ez-relationlist-editview</a></li>
+                                <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
+                                <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
+                                <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
+                                <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
+                                <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
+                                <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
+                                <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
+                                <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
+                                <li><a href="../modules/ez-selection-view.html">ez-selection-view</a></li>
+                                <li><a href="../modules/ez-selectionfilterview.html">ez-selectionfilterview</a></li>
+                                <li><a href="../modules/ez-serversideview.html">ez-serversideview</a></li>
+                                <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
+                                <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
+                                <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
+                                <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
+                                <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
+                                <li><a href="../modules/ez-textblock-editview.html">ez-textblock-editview</a></li>
+                                <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
+                                <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
+                                <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-universaldiscoverybrowseview.html">ez-universaldiscoverybrowseview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryconfirmedlistview.html">ez-universaldiscoveryconfirmedlistview</a></li>
+                                <li><a href="../modules/ez-universaldiscoverycontenttreeplugin.html">ez-universaldiscoverycontenttreeplugin</a></li>
+                                <li><a href="../modules/ez-universaldiscoverymethodbaseview.html">ez-universaldiscoverymethodbaseview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryplugin.html">ez-universaldiscoveryplugin</a></li>
+                                <li><a href="../modules/ez-universaldiscoverysearchview.html">ez-universaldiscoverysearchview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryselectedview.html">ez-universaldiscoveryselectedview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryview.html">ez-universaldiscoveryview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryviewservice.html">ez-universaldiscoveryviewservice</a></li>
+                                <li><a href="../modules/ez-updatetreeplugin.html">ez-updatetreeplugin</a></li>
+                                <li><a href="../modules/ez-url-editview.html">ez-url-editview</a></li>
+                                <li><a href="../modules/ez-url-view.html">ez-url-view</a></li>
+                                <li><a href="../modules/ez-user-editview.html">ez-user-editview</a></li>
+                                <li><a href="../modules/ez-user-view.html">ez-user-view</a></li>
+                                <li><a href="../modules/ez-userloadplugin.html">ez-userloadplugin</a></li>
+                                <li><a href="../modules/ez-usermodel.html">ez-usermodel</a></li>
+                                <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
+                                <li><a href="../modules/ez-view.html">ez-view</a></li>
+                                <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
+                                <li><a href="../modules/ez-viewservicebaseplugin.html">ez-viewservicebaseplugin</a></li>
+                                <li><a href="../modules/ez-visibilityswitcherplugin.html">ez-visibilityswitcherplugin</a></li>
+                                <li><a href="../modules/ez-xmltext-editview.html">ez-xmltext-editview</a></li>
+                                <li><a href="../modules/ez-xmltext-view.html">ez-xmltext-view</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: Resources/public/js/alloyeditor/buttons/embed.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/*
+ * Copyright (C) eZ Systems AS. All rights reserved.
+ * For full copyright and license information view LICENSE file distributed with this source code.
+ */
+// **NOTICE:**
+// THIS IS AN AUTO-GENERATED FILE
+// DO YOUR MODIFICATIONS IN THE CORRESPONDING .jsx FILE
+// AND REGENERATE IT WITH: grunt jsx
+// END OF NOTICE
+YUI.add(&#x27;ez-alloyeditor-button-embed&#x27;, function (Y) {
+    &quot;use strict&quot;;
+
+    var AlloyEditor = Y.eZ.AlloyEditor,
+        React = Y.eZ.React,
+        ButtonEmbed;
+
+    /**
+     * The ButtonEmbed component represents a button to add an embed element.
+     *
+     * @uses AlloyEditor.ButtonCommand
+     * @uses AlloyEditor.ButtonStateClasses
+     * @uses eZ.AlloyEditorToolbarConfig.ButtonEmbedDiscoverContent
+     *
+     * @class eZ.AlloyEditor.ButtonEmbed
+     */
+    ButtonEmbed = React.createClass({displayName: &quot;ButtonEmbed&quot;,
+        mixins: [
+            AlloyEditor.ButtonCommand,
+            AlloyEditor.ButtonStateClasses,
+            Y.eZ.AlloyEditorButton.ButtonEmbedDiscoverContent,
+        ],
+
+        statics: {
+            key: &#x27;ezembed&#x27;
+        },
+
+        getDefaultProps: function () {
+            return {
+                command: &#x27;ezembed&#x27;,
+                modifiesSelection: true,
+                udwTitle: &quot;Select a content to embed&quot;,
+                udwContentDiscoveredMethod: &#x27;_addEmbed&#x27;,
+            };
+        },
+
+        /**
+         * Executes the command generated by the ezembed plugin and set the
+         * correct value based on the choosen content.
+         *
+         * @method _addEmbed
+         * @param {EventFacade} e the result of the choice in the UDW
+         * @protected
+         */
+        _addEmbed: function (e) {
+            var contentInfo = e.selection.contentInfo;
+
+            this.execCommand();
+            this._setContentInfo(contentInfo);
+            this._getWidget().setWidgetContent(contentInfo.get(&#x27;name&#x27;));
+        },
+
+        render: function () {
+            var css = &quot;ae-button ez-ae-labeled-button&quot; + this.getStateClasses();
+
+            return (
+                React.createElement(&quot;button&quot;, {className: css, onClick: this._chooseContent, tabIndex: this.props.tabIndex}, 
+                    React.createElement(&quot;span&quot;, {className: &quot;ez-ae-icon ez-ae-icon-embed ez-font-icon&quot;}), 
+                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, &quot;Embed&quot;)
+                )
+            );
+        },
+    });
+
+    AlloyEditor.Buttons[ButtonEmbed.key] = AlloyEditor.ButtonEmbed = ButtonEmbed;
+});
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
