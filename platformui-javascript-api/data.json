@@ -161,6 +161,19 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/actions/ez-movecontentactionview.js": {
+            "name": "Resources/public/js/views/actions/ez-movecontentactionview.js",
+            "modules": {
+                "ez-movecontentactionview": 1
+            },
+            "classes": {
+                "eZ.MoveContentActionView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/actions/ez-previewactionview.js": {
             "name": "Resources/public/js/views/actions/ez-previewactionview.js",
             "modules": {
@@ -2594,6 +2607,22 @@
             "file": "Resources/public/js/views/actions/ez-createcontentactionview.js",
             "line": 16,
             "description": "Provides the create content action view class"
+        },
+        "ez-movecontentactionview": {
+            "name": "ez-movecontentactionview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.MoveContentActionView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/actions/ez-movecontentactionview.js",
+            "line": 14,
+            "description": "Provides the move content action view class"
         },
         "ez-previewactionview": {
             "name": "ez-previewactionview",
@@ -5213,6 +5242,22 @@
             "file": "Resources/public/js/views/actions/ez-createcontentactionview.js",
             "line": 16,
             "description": "Create Content Action View",
+            "is_constructor": 1,
+            "extends": "eZ.ButtonActionView"
+        },
+        "eZ.MoveContentActionView": {
+            "name": "eZ.MoveContentActionView",
+            "shortname": "eZ.MoveContentActionView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-movecontentactionview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/actions/ez-movecontentactionview.js",
+            "line": 14,
+            "description": "Move Content Action View",
             "is_constructor": 1,
             "extends": "eZ.ButtonActionView"
         },
@@ -9098,6 +9143,19 @@
             "writeonce": "",
             "class": "eZ.CreateContentActionView",
             "module": "ez-createcontentactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/actions/ez-movecontentactionview.js",
+            "line": 27,
+            "description": "Renders the action",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "Y.eZ.MoveContentActionView the view itself"
+            },
+            "class": "eZ.MoveContentActionView",
+            "module": "ez-movecontentactionview",
             "namespace": "eZ"
         },
         {

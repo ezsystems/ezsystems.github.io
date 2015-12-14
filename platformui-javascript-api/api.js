@@ -102,6 +102,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.MapLocationEditView",
         "eZ.MediaEditView",
         "eZ.MediaView",
+        "eZ.MoveContentActionView",
         "eZ.NavigationHubView",
         "eZ.NavigationHubViewService",
         "eZ.NavigationItemParameterView",
@@ -291,6 +292,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-maplocation-view",
         "ez-media-editview",
         "ez-media-view",
+        "ez-movecontentactionview",
         "ez-navigationhubview",
         "ez-navigationhubviewservice",
         "ez-navigationitemparameterview",
@@ -841,6 +843,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-media-view",
             "name": "ez-media-view",
             "description": "Provides the Media field view"
+        },
+        {
+            "displayName": "ez-movecontentactionview",
+            "name": "ez-movecontentactionview",
+            "description": "Provides the move content action view class"
         },
         {
             "displayName": "ez-navigationhubview",
