@@ -3,6 +3,10 @@ YUI.add("yuidoc-meta", function(Y) {
     "classes": [
         "Author",
         "AuthorList",
+        "CKEDITOR.plugins.ezaddcontent",
+        "CKEDITOR.plugins.ezembed",
+        "CKEDITOR.plugins.ezfocusblock",
+        "CKEDITOR.plugins.ezremoveblock",
         "eZ.AccordionElement",
         "eZ.ActionBarView",
         "eZ.AlloyEditorButton.ButtonBlockRemove",
@@ -15,10 +19,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonEmbedHref",
         "eZ.AlloyEditorButton.ButtonEmbedImage",
         "eZ.AlloyEditorButton.ButtonImageHref",
-        "eZ.AlloyEditorButton.CKEDITOR.plugins.ezaddcontent",
-        "eZ.AlloyEditorButton.CKEDITOR.plugins.ezembed",
-        "eZ.AlloyEditorButton.CKEDITOR.plugins.ezfocusblock",
-        "eZ.AlloyEditorButton.CKEDITOR.plugins.ezremoveblock",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage",
@@ -297,6 +297,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-navigationitemsubtreeview",
         "ez-navigationitemview",
         "ez-notificationhubplugin",
+        "ez-notificationhubview",
         "ez-objectrelationloadplugin",
         "ez-objectrelationsloadplugin",
         "ez-platformuiapp",
@@ -870,6 +871,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-notificationhubplugin",
             "name": "ez-notificationhubplugin",
             "description": "Provides the notification hub plugin"
+        },
+        {
+            "displayName": "ez-notificationhubview",
+            "name": "ez-notificationhubview",
+            "description": "Provides the notification hub view class"
         },
         {
             "displayName": "ez-objectrelationloadplugin",

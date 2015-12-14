@@ -40,6 +40,10 @@
                             <ul id="api-classes" class="apis classes">
                                 <li><a href="../classes/Author.html">Author</a></li>
                                 <li><a href="../classes/AuthorList.html">AuthorList</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.ezaddcontent.html">CKEDITOR.plugins.ezaddcontent</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.ezembed.html">CKEDITOR.plugins.ezembed</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.ezfocusblock.html">CKEDITOR.plugins.ezfocusblock</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.ezremoveblock.html">CKEDITOR.plugins.ezremoveblock</a></li>
                                 <li><a href="../classes/eZ.AccordionElement.html">eZ.AccordionElement</a></li>
                                 <li><a href="../classes/eZ.ActionBarView.html">eZ.ActionBarView</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockRemove.html">eZ.AlloyEditorButton.ButtonBlockRemove</a></li>
@@ -52,10 +56,6 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedHref.html">eZ.AlloyEditorButton.ButtonEmbedHref</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedImage.html">eZ.AlloyEditorButton.ButtonEmbedImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezaddcontent.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezaddcontent</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezembed.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezembed</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezfocusblock.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezfocusblock</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorButton.CKEDITOR.plugins.ezremoveblock.html">eZ.AlloyEditorButton.CKEDITOR.plugins.ezremoveblock</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
@@ -336,6 +336,7 @@
                                 <li><a href="../modules/ez-navigationitemsubtreeview.html">ez-navigationitemsubtreeview</a></li>
                                 <li><a href="../modules/ez-navigationitemview.html">ez-navigationitemview</a></li>
                                 <li><a href="../modules/ez-notificationhubplugin.html">ez-notificationhubplugin</a></li>
+                                <li><a href="../modules/ez-notificationhubview.html">ez-notificationhubview</a></li>
                                 <li><a href="../modules/ez-objectrelationloadplugin.html">ez-objectrelationloadplugin</a></li>
                                 <li><a href="../modules/ez-objectrelationsloadplugin.html">ez-objectrelationsloadplugin</a></li>
                                 <li><a href="../modules/ez-platformuiapp.html">ez-platformuiapp</a></li>
@@ -692,6 +693,10 @@
 
                             </li>
                             <li class="index-item method protected">
+                                <a href="#method__navigateToZone">_navigateToZone</a>
+
+                            </li>
+                            <li class="index-item method protected">
                                 <a href="#method__navigationOverflowed">_navigationOverflowed</a>
 
                             </li>
@@ -892,10 +897,6 @@
                                 <a href="#method_parseType">parseType</a>
 
                             </li>
-                            <li class="index-item method">
-                                <a href="#method_protected">protected</a>
-
-                            </li>
                             <li class="index-item method inherited">
                                 <a href="#method_publish">publish</a>
 
@@ -954,11 +955,11 @@
                     <h3>Properties</h3>
 
                     <ul class="index-list properties extends">
-                            <li class="index-item property">
+                            <li class="index-item property protected">
                                 <a href="#property__navigationY">_navigationY</a>
 
                             </li>
-                            <li class="index-item property">
+                            <li class="index-item property protected">
                                 <a href="#property_"></a>
 
                             </li>
@@ -966,7 +967,7 @@
                                 <a href="#property__allowAdHocAttrs">_allowAdHocAttrs</a>
 
                             </li>
-                            <li class="index-item property">
+                            <li class="index-item property protected">
                                 <a href="#property__resizeSubscription">_resizeSubscription</a>
 
                             </li>
@@ -1518,7 +1519,7 @@ this class for iteration performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l563"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:563</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l568"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:568</code></a>
         </p>
 
 
@@ -1581,7 +1582,7 @@ attributes description)</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l250"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:250</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l255"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:255</code></a>
         </p>
 
 
@@ -2804,7 +2805,7 @@ correct template
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l98"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:98</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l102"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:102</code></a>
         </p>
 
 
@@ -2846,7 +2847,7 @@ correct template
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l456"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:456</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l461"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:461</code></a>
         </p>
 
 
@@ -2895,7 +2896,7 @@ correct template
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l285"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:285</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l290"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:290</code></a>
         </p>
 
 
@@ -2962,7 +2963,7 @@ zone key.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l551"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:551</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l556"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:556</code></a>
         </p>
 
 
@@ -3136,7 +3137,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l381"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:381</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l386"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:386</code></a>
         </p>
 
 
@@ -3185,7 +3186,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l109"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:109</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l113"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:113</code></a>
         </p>
 
 
@@ -3227,7 +3228,7 @@ navigation item is selected and the zone in which it is, is active.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l270"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:270</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l275"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:275</code></a>
         </p>
 
 
@@ -3758,7 +3759,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l520"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:520</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l525"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:525</code></a>
         </p>
 
 
@@ -3878,6 +3879,61 @@ it published) by setting the events 'monitor' config.
 
 
 </div>
+<div id="method__navigateToZone" class="method item protected">
+    <h3 class="name"><code>_navigateToZone</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>zone</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l137"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:137</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Fires the event to navigate to the given zone. The navigation happens
+only if the zone has exactly one navigation items.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">zone</code>
+                        <span class="type">String | Null</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__navigationOverflowed" class="method item protected">
     <h3 class="name"><code>_navigationOverflowed</code></h3>
 
@@ -3897,7 +3953,7 @@ it published) by setting the events 'monitor' config.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l433"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:433</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l438"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:438</code></a>
         </p>
 
 
@@ -3941,7 +3997,7 @@ current viewport size</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l445"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:445</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l450"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:450</code></a>
         </p>
 
 
@@ -4299,7 +4355,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l298"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:298</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l303"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:303</code></a>
         </p>
 
 
@@ -4762,7 +4818,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l369"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:369</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l374"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:374</code></a>
         </p>
 
 
@@ -4818,7 +4874,7 @@ activeNavigation attribute to the corresponding value</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l337"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:337</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l342"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:342</code></a>
         </p>
 
 
@@ -4875,7 +4931,7 @@ activeNavigation attribute to the corresponding value</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l534"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:534</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l539"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:539</code></a>
         </p>
 
 
@@ -5039,7 +5095,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l169"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:169</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l174"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:174</code></a>
         </p>
 
 
@@ -5094,7 +5150,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l492"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:492</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l497"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:497</code></a>
         </p>
 
 
@@ -5144,7 +5200,7 @@ the corresponding sub menu</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l398"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:398</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l403"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:403</code></a>
         </p>
 
 
@@ -5184,7 +5240,7 @@ If there's too much items, the overflowed elements are put in the
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l156"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:156</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l161"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:161</code></a>
         </p>
 
 
@@ -5233,7 +5289,7 @@ If there's too much items, the overflowed elements are put in the
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l214"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:214</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:219</code></a>
         </p>
 
 
@@ -5271,7 +5327,7 @@ If there's too much items, the overflowed elements are put in the
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l352"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:352</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l357"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:357</code></a>
         </p>
 
 
@@ -5327,7 +5383,7 @@ is shown if needed</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l467"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:467</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l472"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:472</code></a>
         </p>
 
 
@@ -5383,7 +5439,7 @@ the corresponding sub menu</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l505"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:505</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l510"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:510</code></a>
         </p>
 
 
@@ -7387,60 +7443,6 @@ is configured with a default prefix.
 
 
 </div>
-<div id="method_protected" class="method item">
-    <h3 class="name"><code>protected</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>zone</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l133"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:133</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Fires the event to navigate to the given zone. The navigation happens
-only if the zone has exactly one navigation items.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">zone</code>
-                        <span class="type">String | Null</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
 <div id="method_publish" class="method item inherited">
     <h3 class="name"><code>publish</code></h3>
 
@@ -7850,7 +7852,7 @@ but doesn't destroy it or any event listeners attached to it.
                 View
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l232"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:232</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l237"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:237</code></a>
         </p>
 
 
@@ -8293,18 +8295,19 @@ be removed.
             <div id="properties" class="api-class-tabpanel">
                 <h2 class="off-left">Properties</h2>
 
-<div id="property__navigationY" class="property item">
+<div id="property__navigationY" class="property item protected">
     <h3 class="name"><code>_navigationY</code></h3>
     <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
 
 
+        <span class="flag protected">protected</span>
 
 
 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l54"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:54</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l55"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:55</code></a>
         </p>
 
 
@@ -8319,18 +8322,19 @@ be removed.
 
 
 </div>
-<div id="property_" class="property item">
+<div id="property_" class="property item protected">
     <h3 class="name"><code></code></h3>
     <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventHandle.html" class="crosslink external" target="_blank">EventHandle</a></span>
 
 
+        <span class="flag protected">protected</span>
 
 
 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l63"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:63</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l65"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:65</code></a>
         </p>
 
 
@@ -8378,18 +8382,19 @@ instantiate a view and set a bunch of attributes without having to subclass
 
 
 </div>
-<div id="property__resizeSubscription" class="property item">
+<div id="property__resizeSubscription" class="property item protected">
     <h3 class="name"><code>_resizeSubscription</code></h3>
     <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventHandle.html" class="crosslink external" target="_blank">EventHandle</a></span>
 
 
+        <span class="flag protected">protected</span>
 
 
 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l72"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:72</code></a>
+        <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:75</code></a>
         </p>
 
 
@@ -8573,7 +8578,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l675"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:675</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l680"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:680</code></a>
                             </p>
                     
                     
@@ -8718,7 +8723,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l710"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:710</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l715"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:715</code></a>
                             </p>
                     
                     
@@ -8749,7 +8754,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l690"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:690</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l695"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:695</code></a>
                             </p>
                     
                     
@@ -8779,7 +8784,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l611"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:611</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l616"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:616</code></a>
                             </p>
                     
                     
@@ -8812,7 +8817,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l627"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:627</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l632"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:632</code></a>
                             </p>
                     
                     
@@ -8845,7 +8850,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l659"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:659</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l664"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:664</code></a>
                             </p>
                     
                     
@@ -8878,7 +8883,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l643"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:643</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l648"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:648</code></a>
                             </p>
                     
                     
@@ -8912,7 +8917,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l701"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:701</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l706"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:706</code></a>
                             </p>
                     
                     
@@ -8942,7 +8947,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l593"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:593</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l598"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:598</code></a>
                             </p>
                     
                     
@@ -9073,7 +9078,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l195"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:195</code></a>
+                            <a href="../files/Resources_public_js_views_ez-navigationhubview.js.html#l200"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-navigationhubview.js:200</code></a>
                             </p>
                     
                     
