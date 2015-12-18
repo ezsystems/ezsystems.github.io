@@ -655,7 +655,11 @@ YUI.add(&#x27;ez-treeview&#x27;, function (Y) {
                 nodeJson = this._nodeToJson(node);
 
             if ( node.isRoot() ) {
-                this._getTreeContentNode().append(template(nodeJson));
+                if (node.children.length === 0) {
+                    this._getTreeContentNode().append(&#x27;&lt;p class=&quot;ez-tree-empty-info ez-font-icon&quot;&gt;The Content Tree is empty&lt;/p&gt;&#x27;);
+                } else {
+                    this._getTreeContentNode().append(template(nodeJson));
+                }
             } else {
                 this._getElementYNode(node).append(template(nodeJson));
             }

@@ -26454,7 +26454,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-treeview.js",
-            "line": 229,
+            "line": 233,
             "description": "'jsonifies' the node and its data to be used in the tree level\ntemplate",
             "itemtype": "method",
             "name": "_nodeToJson",
@@ -26477,7 +26477,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-treeview.js",
-            "line": 256,
+            "line": 260,
             "description": "Tap event handler on the `tree-node-toggle` link. It fires the\n`toggleNode` event",
             "itemtype": "method",
             "name": "_toggleNode",
@@ -26496,7 +26496,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-treeview.js",
-            "line": 266,
+            "line": 270,
             "description": "Fired when the tree node open state has to change",
             "itemtype": "event",
             "name": "toggleNode",
@@ -26513,7 +26513,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-treeview.js",
-            "line": 277,
+            "line": 281,
             "description": "Returns the Y.Node which renders the given `node`",
             "itemtype": "method",
             "name": "_getElementYNode",
@@ -26536,7 +26536,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-treeview.js",
-            "line": 290,
+            "line": 294,
             "description": "Holds the tree being displayed",
             "itemtype": "attribute",
             "name": "tree",
