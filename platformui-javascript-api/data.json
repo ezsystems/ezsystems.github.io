@@ -8279,7 +8279,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 125,
+            "line": 126,
             "description": "Stores the initial title of the page so it can be used when\ngenerating the title depending on the active view",
             "itemtype": "property",
             "name": "_initialTitle",
@@ -8292,7 +8292,19 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 152,
+            "line": 153,
+            "description": "Destroy properly every side view.",
+            "itemtype": "method",
+            "name": "_destroySideViews",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.PlatformUIApp",
+            "module": "ez-platformuiapp",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/apps/ez-platformuiapp.js",
+            "line": 172,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -8304,7 +8316,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 195,
+            "line": 215,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -8331,7 +8343,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 227,
+            "line": 247,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -8354,7 +8366,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 238,
+            "line": 258,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -8388,7 +8400,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 278,
+            "line": 298,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -8417,7 +8429,17 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 296,
+            "line": 309,
+            "description": "Fired when the user logs out.",
+            "itemtype": "event",
+            "name": "logOut",
+            "class": "eZ.PlatformUIApp",
+            "module": "ez-platformuiapp",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/apps/ez-platformuiapp.js",
+            "line": 322,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -8447,7 +8469,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 326,
+            "line": 352,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -8474,7 +8496,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 343,
+            "line": 369,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitely\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -8501,7 +8523,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 370,
+            "line": 396,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -8528,7 +8550,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 392,
+            "line": 418,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -8545,7 +8567,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 402,
+            "line": 428,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -8584,7 +8606,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 467,
+            "line": 493,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -8603,7 +8625,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 485,
+            "line": 511,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -8627,7 +8649,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 507,
+            "line": 533,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -8654,7 +8676,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 543,
+            "line": 569,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -8681,7 +8703,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 609,
+            "line": 635,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -8700,7 +8722,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 625,
+            "line": 651,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -8719,7 +8741,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 669,
+            "line": 695,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -8738,7 +8760,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 687,
+            "line": 713,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -8748,7 +8770,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 852,
+            "line": 878,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -8760,7 +8782,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 864,
+            "line": 890,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -8773,7 +8795,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 877,
+            "line": 903,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -8786,7 +8808,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 890,
+            "line": 916,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -8798,7 +8820,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 903,
+            "line": 929,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -8812,7 +8834,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 917,
+            "line": 943,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -8824,7 +8846,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 931,
+            "line": 957,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -8836,7 +8858,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 942,
+            "line": 968,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -8848,7 +8870,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 954,
+            "line": 980,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",

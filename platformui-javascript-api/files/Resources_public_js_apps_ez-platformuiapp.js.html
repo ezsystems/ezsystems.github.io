@@ -556,6 +556,7 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
          * @method initializer
          */
         initializer: function () {
+            this.on(&quot;logOut&quot;, this._destroySideViews);
             this._dispatchConfig();
             /**
              * Stores the initial title of the page so it can be used when
@@ -580,6 +581,25 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
 
                 if (oldService &amp;&amp; newService) {
                     oldService.setNextViewServiceParameters(newService);
+                }
+            });
+        },
+
+        /**
+         * Destroy properly every side view.
+         *
+         * @method _destroySideViews
+         * @protected
+         */
+        _destroySideViews: function () {
+            Y.Object.each(this.sideViews, function (viewInfo, key) {
+                if (viewInfo.instance) {
+                    viewInfo.instance.destroy({remove: true});
+                    delete viewInfo.instance;
+                }
+                if (viewInfo.serviceInstance) {
+                    viewInfo.serviceInstance.destroy();
+                    delete viewInfo.serviceInstance;
                 }
             });
         },
@@ -721,6 +741,12 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
         logOut: function (callback) {
             var user = this.get(&#x27;user&#x27;);
 
+            /**
+             * Fired when the user logs out.
+             *
+             * @event logOut
+             */
+            this.fire(&#x27;logOut&#x27;);
             this.get(&#x27;capi&#x27;).logOut(function (error, response) {
                 user.reset();
                 user.set(&#x27;id&#x27;, undefined);
