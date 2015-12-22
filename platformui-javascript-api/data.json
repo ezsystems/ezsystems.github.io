@@ -27625,7 +27625,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 273,
+            "line": 280,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -27659,7 +27659,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 290,
+            "line": 297,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -27693,7 +27693,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 322,
+            "line": 329,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -27705,7 +27705,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 334,
+            "line": 341,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -27717,7 +27717,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 345,
+            "line": 352,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
