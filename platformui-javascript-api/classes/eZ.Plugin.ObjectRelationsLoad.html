@@ -631,6 +631,18 @@
 
                             </li>
                             <li class="index-item method protected">
+                                <a href="#method__loadContent">_loadContent</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__loadContentStruct">_loadContentStruct</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__loadLocationToContentStruct">_loadLocationToContentStruct</a>
+
+                            </li>
+                            <li class="index-item method protected">
                                 <a href="#method__loadObjectRelations">_loadObjectRelations</a>
 
                             </li>
@@ -900,6 +912,9 @@
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_initialized">initialized</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_locationModelConstructor">locationModelConstructor</a>
                             </li>
                     </ul>
                 </div>
@@ -2882,6 +2897,365 @@ added lazily and still requires initialization.
 
 
 </div>
+<div id="method__loadContent" class="method item protected">
+    <h3 class="name"><code>_loadContent</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>contentId</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-objectrelationsloadplugin.js.html#l81"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-objectrelationsloadplugin.js:81</code></a>
+        </p>
+
+
+
+            <p>Available since 1.1</p>
+    </div>
+
+    <div class="description">
+        <p>Loads content for given content id.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">contentId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">error</code>
+                                    <span class="type">Bool</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">content</code>
+                                    <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__loadContentStruct" class="method item protected">
+    <h3 class="name"><code>_loadContentStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>contentId</code>
+                </li>
+                <li class="arg">
+                        <code>loadLocation</code>
+                </li>
+                <li class="arg">
+                        <code>loadLocationPath</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-objectrelationsloadplugin.js.html#l107"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-objectrelationsloadplugin.js:107</code></a>
+        </p>
+
+
+
+            <p>Available since 1.1</p>
+    </div>
+
+    <div class="description">
+        <p>Loads content struct containing content and main location for given content id.
+The contentStruct is being passed to the callback function.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">contentId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">loadLocation</code>
+                        <span class="type">Bool</span>
+
+
+                    <div class="param-description">
+                        <p>flag indicating whether to load the Location</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">loadLocationPath</code>
+                        <span class="type">Bool</span>
+
+
+                    <div class="param-description">
+                        <p>flag indicating whether to load the Location's path. If it is TRUE it
+forces to <code>loadLocation</code> be also TRUE</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">error</code>
+                                    <span class="type">Bool</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">contentStruct</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    <p>content struct with loaded content and location</p>
+
+                                </div>
+
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">content</code>
+                                                <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+
+                                            <div class="param-description">
+                                                
+                                            </div>
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">location</code>
+                                                <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a></span>
+
+                                            <div class="param-description">
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__loadLocationToContentStruct" class="method item protected">
+    <h3 class="name"><code>_loadLocationToContentStruct</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>contentStruct</code>
+                </li>
+                <li class="arg">
+                        <code>loadLocationPath</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-objectrelationsloadplugin.js.html#l142"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-objectrelationsloadplugin.js:142</code></a>
+        </p>
+
+
+
+            <p>Available since 1.1</p>
+    </div>
+
+    <div class="description">
+        <p>Loads location for content given in contentStruct and injects it to the contentStruct object.
+Location contains fully loaded path. The contentStruct is being passed to the callback function.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">contentStruct</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">content</code>
+                                    <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+
+                                <div class="param-description">
+                                    <p>eZ.Content object</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name">loadLocationPath</code>
+                        <span class="type">Bool</span>
+
+
+                    <div class="param-description">
+                        <p>flag indicating whether to load the Location's path</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">error</code>
+                                    <span class="type">Bool</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">contentStruct</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    <p>content struct with loaded content and location</p>
+
+                                </div>
+
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">content</code>
+                                                <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+
+                                            <div class="param-description">
+                                                
+                                            </div>
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">location</code>
+                                                <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a></span>
+
+                                            <div class="param-description">
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__loadObjectRelations" class="method item protected">
     <h3 class="name"><code>_loadObjectRelations</code></h3>
 
@@ -2909,11 +3283,16 @@ added lazily and still requires initialization.
 
 
 
+            <p>Available since 1.1</p>
     </div>
 
     <div class="description">
         <p>Loads the related contents. Once this is done, it sets the contents in
 the <code>relatedContents</code> attribute of the event target.</p>
+<p>Since version 1.1, the <code>loadLocation</code> and <code>loadLocationPath</code> are taken into account
+to provide the Location with optionally its path. If <code>loadLocation</code> or <code>loadLocationPath</code>
+is TRUE, then array of content structs is being set in the <code>relatedContents</code> attribute of the event target.
+Content struct contains <code>content</code> (eZ.Content) and <code>location</code> (eZ.Location) attributes.</p>
 
     </div>
 
@@ -2931,6 +3310,29 @@ the <code>relatedContents</code> attribute of the event target.</p>
 
                     </div>
 
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">loadLocation</code>
+                                    <span class="type">Bool</span>
+
+                                <div class="param-description">
+                                    <p>flag indicating whether to load the Location</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">loadLocationPath</code>
+                                    <span class="type">Bool</span>
+
+                                <div class="param-description">
+                                    <p>flag indicating whether to load the Location's path. If it is TRUE it
+forces to e.loadLocation be also TRUE</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
                 </li>
             </ul>
         </div>
@@ -7485,7 +7887,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-objectrelationsloadplugin.js.html#l76"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-objectrelationsloadplugin.js:76</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-objectrelationsloadplugin.js.html#l188"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-objectrelationsloadplugin.js:188</code></a>
                             </p>
                     
                     
@@ -7586,6 +7988,36 @@ applied by the plugin to the host object.
                         </div>
                     
                             <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="attr_locationModelConstructor" class="attr item">
+                        <a name="config_locationModelConstructor"></a> 
+                        <h3 class="name"><code>locationModelConstructor</code></h3>
+                        <span class="type">Y.eZ.Location</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-objectrelationsloadplugin.js.html#l198"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-objectrelationsloadplugin.js:198</code></a>
+                            </p>
+                    
+                    
+                                <p>Available since 1.1</p>
+                        </div>
+                    
+                        <div class="description">
+                            <p>Location constructor</p>
+                    
+                        </div>
+                    
                     
                     
                     </div>

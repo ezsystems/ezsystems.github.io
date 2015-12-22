@@ -16294,7 +16294,7 @@
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
             "line": 27,
-            "description": "Loads the related contents. Once this is done, it sets the contents in\nthe `relatedContents` attribute of the event target.",
+            "description": "Loads the related contents. Once this is done, it sets the contents in\nthe `relatedContents` attribute of the event target.\n\nSince version 1.1, the `loadLocation` and `loadLocationPath` are taken into account\nto provide the Location with optionally its path. If `loadLocation` or `loadLocationPath`\nis TRUE, then array of content structs is being set in the `relatedContents` attribute of the event target.\nContent struct contains `content` (eZ.Content) and `location` (eZ.Location) attributes.",
             "access": "protected",
             "tagname": "",
             "itemtype": "method",
@@ -16303,20 +16303,202 @@
                 {
                     "name": "e",
                     "description": "ObjectRelations event facade",
-                    "type": "Object"
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "loadLocation",
+                            "description": "flag indicating whether to load the Location",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "loadLocationPath",
+                            "description": "flag indicating whether to load the Location's path. If it is TRUE it\nforces to e.loadLocation be also TRUE",
+                            "type": "Bool"
+                        }
+                    ]
                 }
             ],
+            "since": "1.1",
             "class": "eZ.Plugin.ObjectRelationsLoad",
             "module": "ez-objectrelationsloadplugin",
             "namespace": "eZ.Plugin"
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
-            "line": 76,
+            "line": 81,
+            "description": "Loads content for given content id.",
+            "itemtype": "method",
+            "name": "_loadContent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "contentId",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "content",
+                            "description": "",
+                            "type": "eZ.Content"
+                        }
+                    ]
+                }
+            ],
+            "since": "1.1",
+            "class": "eZ.Plugin.ObjectRelationsLoad",
+            "module": "ez-objectrelationsloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
+            "line": 107,
+            "description": "Loads content struct containing content and main location for given content id.\nThe contentStruct is being passed to the callback function.",
+            "itemtype": "method",
+            "name": "_loadContentStruct",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "contentId",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "loadLocation",
+                    "description": "flag indicating whether to load the Location",
+                    "type": "Bool"
+                },
+                {
+                    "name": "loadLocationPath",
+                    "description": "flag indicating whether to load the Location's path. If it is TRUE it\nforces to `loadLocation` be also TRUE",
+                    "type": "Bool"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "contentStruct",
+                            "description": "content struct with loaded content and location",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "content",
+                                    "description": "",
+                                    "type": "eZ.Content"
+                                },
+                                {
+                                    "name": "location",
+                                    "description": "",
+                                    "type": "eZ.Location"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "since": "1.1",
+            "class": "eZ.Plugin.ObjectRelationsLoad",
+            "module": "ez-objectrelationsloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
+            "line": 142,
+            "description": "Loads location for content given in contentStruct and injects it to the contentStruct object.\nLocation contains fully loaded path. The contentStruct is being passed to the callback function.",
+            "itemtype": "method",
+            "name": "_loadLocationToContentStruct",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "contentStruct",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "content",
+                            "description": "eZ.Content object",
+                            "type": "eZ.Content"
+                        }
+                    ]
+                },
+                {
+                    "name": "loadLocationPath",
+                    "description": "flag indicating whether to load the Location's path",
+                    "type": "Bool"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "props": [
+                        {
+                            "name": "error",
+                            "description": "",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "contentStruct",
+                            "description": "content struct with loaded content and location",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "content",
+                                    "description": "",
+                                    "type": "eZ.Content"
+                                },
+                                {
+                                    "name": "location",
+                                    "description": "",
+                                    "type": "eZ.Location"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "since": "1.1",
+            "class": "eZ.Plugin.ObjectRelationsLoad",
+            "module": "ez-objectrelationsloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
+            "line": 188,
             "description": "Content constructor",
             "itemtype": "attribute",
             "name": "contentModelConstructor",
             "type": "Y.eZ.Content",
+            "class": "eZ.Plugin.ObjectRelationsLoad",
+            "module": "ez-objectrelationsloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
+            "line": 198,
+            "description": "Location constructor",
+            "itemtype": "attribute",
+            "name": "locationModelConstructor",
+            "type": "Y.eZ.Location",
+            "since": "1.1",
             "class": "eZ.Plugin.ObjectRelationsLoad",
             "module": "ez-objectrelationsloadplugin",
             "namespace": "eZ.Plugin"
@@ -19729,12 +19911,12 @@
             "params": [
                 {
                     "name": "relationList",
-                    "description": "List of related content",
-                    "type": "ez.Content[]"
+                    "description": "List of related content structs",
+                    "type": "Array"
                 }
             ],
             "return": {
-                "description": "of RelationsListItems struct:\n             struct.content: JSONified related content\n             struct.mainLocationId: main location Id of the content\n             struct.relationInfo.relationTypeName: Ready to be displayed name of the relation type\n             struct.relationInfo.fieldDefinitionName: Name of the field definition if any (\"\" if none)",
+                "description": "of RelationsListItems struct:\n             struct.content: JSONified related content\n             struct.location: JSONified main location of the related content\n             struct.relationInfo.relationTypeName: Ready to be displayed name of the relation type\n             struct.relationInfo.fieldDefinitionName: Name of the field definition if any (\"\" if none)",
                 "type": "Array"
             },
             "class": "eZ.LocationViewRelationsTabView",
@@ -19743,7 +19925,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 120,
+            "line": 123,
             "description": "Fire the `loadObjectRelations` event to retrieve the related contents",
             "itemtype": "method",
             "name": "_fireLoadObjectRelations",
@@ -19755,7 +19937,24 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 131,
+            "line": 130,
+            "description": "Fired when object relations are going to be loaded",
+            "itemtype": "event",
+            "name": "loadObjectRelations",
+            "params": [
+                {
+                    "name": "loadLocationPath",
+                    "description": "flag indicating whether the locations' paths should be loaded",
+                    "type": "Bool"
+                }
+            ],
+            "class": "eZ.LocationViewRelationsTabView",
+            "module": "ez-locationviewrelationstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
+            "line": 140,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -19768,7 +19967,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 144,
+            "line": 153,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -19781,8 +19980,8 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 157,
-            "description": "The related contents of the content",
+            "line": 166,
+            "description": "The related content structs of the content",
             "itemtype": "attribute",
             "name": "relatedContents",
             "type": "Array",
@@ -19792,7 +19991,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 167,
+            "line": 176,
             "description": "The content type of the content being displayed",
             "itemtype": "attribute",
             "name": "contentType",
@@ -19804,7 +20003,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 178,
+            "line": 187,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -19816,7 +20015,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 189,
+            "line": 198,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",

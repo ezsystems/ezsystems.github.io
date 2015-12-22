@@ -949,6 +949,10 @@
                                 <a href="#event_init">init</a>
 
                             </li>
+                            <li class="index-item event">
+                                <a href="#event_loadObjectRelations">loadObjectRelations</a>
+
+                            </li>
                     </ul>
                 </div>
         </div>
@@ -1899,7 +1903,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l120"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:120</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l123"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:123</code></a>
         </p>
 
 
@@ -3298,11 +3302,11 @@ struct.fieldDefinitionName: Name of the field definition if any (undefined if no
             <ul class="params-list">
                 <li class="param">
                         <code class="param-name">relationList</code>
-                        <span class="type">ez.Content</span>
+                        <span class="type">Array</span>
 
 
                     <div class="param-description">
-                        <p>List of related content</p>
+                        <p>List of related content structs</p>
 
                     </div>
 
@@ -3317,7 +3321,7 @@ struct.fieldDefinitionName: Name of the field definition if any (undefined if no
                         <span class="type">Array</span>:
                     <p>of RelationsListItems struct:
 struct.content: JSONified related content
-struct.mainLocationId: main location Id of the content
+struct.location: JSONified main location of the related content
 struct.relationInfo.relationTypeName: Ready to be displayed name of the relation type
 struct.relationInfo.fieldDefinitionName: Name of the field definition if any (&quot;&quot; if none)</p>
 
@@ -7344,7 +7348,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l189"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:189</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l198"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:198</code></a>
                             </p>
                     
                     
@@ -7424,7 +7428,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l178"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:178</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l187"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:187</code></a>
                             </p>
                     
                     
@@ -7453,7 +7457,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l167"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:167</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l176"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:176</code></a>
                             </p>
                     
                     
@@ -7517,7 +7521,7 @@ How this template gets used is entirely up to you and your custom
                                     eZ.LocationViewTabView
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l144"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:144</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l153"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:153</code></a>
                             </p>
                     
                     
@@ -7607,14 +7611,14 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l157"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:157</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l166"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:166</code></a>
                             </p>
                     
                     
                         </div>
                     
                         <div class="description">
-                            <p>The related contents of the content</p>
+                            <p>The related content structs of the content</p>
                     
                         </div>
                     
@@ -7670,7 +7674,7 @@ How this template gets used is entirely up to you and your custom
                                     eZ.LocationViewTabView
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l131"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:131</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l140"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:140</code></a>
                             </p>
                     
                     
@@ -7782,6 +7786,48 @@ How this template gets used is entirely up to you and your custom
                                         <div class="param-description">
                                             Event object, with a cfg property which
                     refers to the configuration object passed to the constructor.
+                                        </div>
+                    
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                    
+                    </div>
+                    <div id="event_loadObjectRelations" class="events item">
+                        <h3 class="name"><code>loadObjectRelations</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewrelationstabview.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewrelationstabview.js:130</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Fired when object relations are going to be loaded</p>
+                    
+                        </div>
+                    
+                            <div class="params">
+                                <h4>Event Payload:</h4>
+                    
+                                <ul class="params-list">
+                                    <li class="param">
+                                            <code class="param-name">loadLocationPath</code>
+                                            <span class="type">Bool</span>
+                    
+                    
+                                        <div class="param-description">
+                                            <p>flag indicating whether the locations' paths should be loaded</p>
+                    
                                         </div>
                     
                                     </li>
