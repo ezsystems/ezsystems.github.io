@@ -505,6 +505,7 @@ YUI.add(&#x27;ez-locationviewview&#x27;, function (Y) {
             container.setHTML(this.template({
                 location: this.get(&#x27;location&#x27;).toJSON(),
                 content: this.get(&#x27;content&#x27;).toJSON(),
+                contentType: this.get(&#x27;contentType&#x27;).toJSON(),
                 tabs: this._getTabsList(),
                 path: this._pathToJSON()
             }));

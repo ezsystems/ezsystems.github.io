@@ -24012,7 +24012,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 91,
+            "line": 92,
             "description": "Renders the tab views in their container.",
             "itemtype": "method",
             "name": "_renderTabViews",
@@ -24024,7 +24024,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 107,
+            "line": 108,
             "description": "Returns the tabs list suitable for the template. Each element in the\nreturned array is an object containing the title, the identifier and\nwhether the tab is selected.",
             "itemtype": "method",
             "name": "_getTabsList",
@@ -24040,7 +24040,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 129,
+            "line": 130,
             "description": "`changeTab` event handler. It synchronizes the `selectedTab`\nattribute.",
             "itemtype": "method",
             "name": "_syncSelectedTab",
@@ -24059,7 +24059,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 141,
+            "line": 142,
             "description": "`selectedTabChange` event handler. It makes sure the the `selectedTab`\nattribute and the tab view's `selected` attribute are in sync.",
             "itemtype": "method",
             "name": "_syncTabSelectedAttr",
@@ -24071,7 +24071,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 154,
+            "line": 155,
             "description": "Returns the title of the page when the location view is the active\nview.",
             "itemtype": "method",
             "name": "getTitle",
@@ -24084,7 +24084,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 169,
+            "line": 170,
             "description": "Sets the minimum height of the view",
             "access": "private",
             "tagname": "",
@@ -24096,7 +24096,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 183,
+            "line": 184,
             "description": "Adds a tabView to the list of tabs.",
             "itemtype": "method",
             "name": "addTabView",
@@ -24113,7 +24113,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 199,
+            "line": 200,
             "description": "Removes a tab from its identifier. When found, the location view is\nremoved from the bubble targets list of the tabView.",
             "itemtype": "method",
             "name": "removeTabView",
@@ -24134,7 +24134,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 237,
+            "line": 238,
             "description": "The location being rendered",
             "itemtype": "attribute",
             "name": "location",
@@ -24146,7 +24146,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 248,
+            "line": 249,
             "description": "The content associated the current location",
             "itemtype": "attribute",
             "name": "content",
@@ -24158,7 +24158,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 259,
+            "line": 260,
             "description": "The content type of the content at the current location",
             "itemtype": "attribute",
             "name": "contentType",
@@ -24170,7 +24170,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 270,
+            "line": 271,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location.",
             "itemtype": "attribute",
             "name": "path",
@@ -24182,7 +24182,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 282,
+            "line": 283,
             "description": "Language code of language currently active for the current location",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -24193,7 +24193,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 290,
+            "line": 291,
             "description": "The action bar instance, by default an instance {{#crossLink\n\"eZ.ActionBarView\"}}eZ.ActionBarView{{/crossLink}}",
             "itemtype": "attribute",
             "name": "actionBar",
@@ -24204,7 +24204,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 308,
+            "line": 309,
             "description": "The list of the Location View tab Views.\nDo NOT change this attribute directly, use addTabView or\nremoveTabView to handle the tabs list.",
             "itemtype": "attribute",
             "name": "tabs",
@@ -24216,7 +24216,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 359,
+            "line": 360,
             "description": "The subitem list view or null if the content (type) is not\nconfigured to be a container.",
             "itemtype": "attribute",
             "name": "subitemList",
@@ -24228,7 +24228,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 383,
+            "line": 384,
             "description": "Stores the identifier of the selected tab.",
             "itemtype": "attribute",
             "name": "selectedTab",
