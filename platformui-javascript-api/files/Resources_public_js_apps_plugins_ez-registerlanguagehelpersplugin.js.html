@@ -473,14 +473,9 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
          * @protected
          */
         _registerLanguageName: function () {
-            var systemLanguageList = this.get(&#x27;host&#x27;).get(&#x27;systemLanguageList&#x27;);
+            var app = this.get(&#x27;host&#x27;);
 
-            Y.Handlebars.registerHelper(&#x27;language_name&#x27;, function (languageCode) {
-                if (systemLanguageList[languageCode]) {
-                    return systemLanguageList[languageCode].name;
-                }
-                return languageCode;
-            });
+            Y.Handlebars.registerHelper(&#x27;language_name&#x27;, Y.bind(app.getLanguageName, app));
         },
     }, {
         NS: &#x27;registerLanguageHelpers&#x27;,

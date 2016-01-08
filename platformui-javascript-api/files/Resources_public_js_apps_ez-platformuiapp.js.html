@@ -648,6 +648,25 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
         },
 
         /**
+         * Returns the language name of the language with the given
+         * &#x60;languageCode&#x60;. If no language is found with this code, the language
+         * code is returned.
+         *
+         * @method getLanguageName
+         * @since 1.1
+         * @param {String} languageCode
+         * @return {String}
+         */
+        getLanguageName: function (languageCode) {
+            var systemLanguageList = this.get(&#x27;systemLanguageList&#x27;);
+
+            if ( systemLanguageList[languageCode] ) {
+                return systemLanguageList[languageCode].name;
+            }
+            return languageCode;
+        },
+
+        /**
          * Generates the URI for a route identified by its name. All
          * placeholders are replaced by the value found in the &#x60;params&#x60;
          * parameters, if a value is not found in this object, the placeholder

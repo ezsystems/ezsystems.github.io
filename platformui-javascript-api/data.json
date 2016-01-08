@@ -8317,6 +8317,28 @@
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
             "line": 215,
+            "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
+            "itemtype": "method",
+            "name": "getLanguageName",
+            "since": "1.1",
+            "params": [
+                {
+                    "name": "languageCode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.PlatformUIApp",
+            "module": "ez-platformuiapp",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/apps/ez-platformuiapp.js",
+            "line": 234,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -8343,7 +8365,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 247,
+            "line": 266,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -8366,7 +8388,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 258,
+            "line": 277,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -8400,7 +8422,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 298,
+            "line": 317,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -8429,7 +8451,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 309,
+            "line": 328,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -8439,7 +8461,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 322,
+            "line": 341,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -8469,7 +8491,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 352,
+            "line": 371,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -8496,7 +8518,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 369,
+            "line": 388,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitely\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -8523,7 +8545,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 396,
+            "line": 415,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -8550,7 +8572,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 418,
+            "line": 437,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -8567,7 +8589,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 428,
+            "line": 447,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -8606,7 +8628,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 493,
+            "line": 512,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -8625,7 +8647,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 511,
+            "line": 530,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -8649,7 +8671,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 533,
+            "line": 552,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -8676,7 +8698,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 569,
+            "line": 588,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -8703,7 +8725,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 635,
+            "line": 654,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -8722,7 +8744,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 651,
+            "line": 670,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -8741,7 +8763,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 695,
+            "line": 714,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -8760,7 +8782,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 713,
+            "line": 732,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -8770,7 +8792,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 878,
+            "line": 897,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -8782,7 +8804,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 890,
+            "line": 909,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -8795,7 +8817,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 903,
+            "line": 922,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -8808,7 +8830,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 916,
+            "line": 935,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -8820,7 +8842,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 929,
+            "line": 948,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -8834,7 +8856,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 943,
+            "line": 962,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -8846,7 +8868,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 957,
+            "line": 976,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -8858,7 +8880,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 968,
+            "line": 987,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -8870,7 +8892,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 980,
+            "line": 999,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -14502,7 +14524,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 58,
+            "line": 62,
             "description": "`loginAvailabilityStatusChange` event handler.",
             "itemtype": "method",
             "name": "_uiLoginAvailability",
@@ -14514,7 +14536,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 78,
+            "line": 82,
             "description": "Set the login availability status to available",
             "itemtype": "method",
             "name": "setLoginAvailable",
@@ -14524,7 +14546,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 87,
+            "line": 91,
             "description": "Set the login availability status to unavailable",
             "itemtype": "method",
             "name": "setLoginUnavailable",
@@ -14534,7 +14556,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 96,
+            "line": 100,
             "description": "Set the login availability status to checking",
             "itemtype": "method",
             "name": "setCheckingLogin",
@@ -14544,7 +14566,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 105,
+            "line": 109,
             "description": "Set the login availability status to error",
             "itemtype": "method",
             "name": "setUnableToCheckLogin",
@@ -14554,7 +14576,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 114,
+            "line": 118,
             "description": "`*ErrorStatusChange` event handler, it sets or removes the error in\nthe correct place depending on the `*ErrorStatus` attribute changed.",
             "itemtype": "method",
             "name": "_uiUserError",
@@ -14573,7 +14595,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 135,
+            "line": 139,
             "description": "Returns the structured filled value. Note that for the User field,\nthis can not be directly used in an update or create struct as the\nUsers have a special API.",
             "access": "protected",
             "tagname": "",
@@ -14589,7 +14611,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 158,
+            "line": 162,
             "description": "Validates the current input of the user.",
             "itemtype": "method",
             "name": "validate",
@@ -14599,7 +14621,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 169,
+            "line": 173,
             "description": "Validates the login input. There's no syntax validation but the\nlogin is required if the field is required or if the email has\nbeen filled by the editor.",
             "itemtype": "method",
             "name": "_validateLogin",
@@ -14618,7 +14640,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 192,
+            "line": 196,
             "description": "Fires the `isLoginAvailable` to get the availability status of the\ngiven login.",
             "itemtype": "method",
             "name": "_checkLoginAvailability",
@@ -14637,7 +14659,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 207,
+            "line": 211,
             "description": "Validates the email input. The email should be a valid email and is\nrequired if the field is required or if the login has been filled\nby the editor.",
             "itemtype": "method",
             "name": "_validateEmail",
@@ -14649,7 +14671,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 228,
+            "line": 232,
             "description": "Validates the password inputs. Both values should be the same.",
             "itemtype": "method",
             "name": "_validatePassword",
@@ -14661,7 +14683,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 257,
+            "line": 261,
             "description": "Checks whether the field is set as required.",
             "itemtype": "method",
             "name": "_isFieldRequired",
@@ -14677,7 +14699,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 268,
+            "line": 272,
             "description": "Checks whether the login is required. It's required when the field\nis required and if a login is not already stored.",
             "itemtype": "method",
             "name": "_isLoginRequired",
@@ -14693,7 +14715,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 280,
+            "line": 284,
             "description": "Checks whether the password is required. It's required when the field\nis required and if a password is not already stored.",
             "itemtype": "method",
             "name": "_isPasswordRequired",
@@ -14709,7 +14731,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 292,
+            "line": 296,
             "description": "Checks whether the field already has stored a login. This is useful\nto detect if the login or the password is required.",
             "itemtype": "method",
             "name": "_hasStoredLogin",
@@ -14725,7 +14747,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 306,
+            "line": 310,
             "description": "Returns the input field value for the given property.",
             "itemtype": "method",
             "name": "_getInputFieldValue",
@@ -14748,7 +14770,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 320,
+            "line": 324,
             "description": "Returns the email input validity object.\nSee https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
             "itemtype": "method",
             "name": "_getEmailInputValidity",
@@ -14764,7 +14786,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 332,
+            "line": 336,
             "description": "Returns the DOM Node where to display an error for the given\nerror status attribute.",
             "itemtype": "method",
             "name": "_getErrorDOMNode",
@@ -14787,7 +14809,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 347,
+            "line": 351,
             "description": "Returns the *sub-container* from the given attribute name ie the part\nof the DOM dedicated to one of the property (login, email,\npassword).",
             "itemtype": "method",
             "name": "_getSubContainer",
@@ -14810,7 +14832,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 363,
+            "line": 367,
             "description": "Converts the attribute error status identifier to its corresponding\nezuser property (login, email, password, confirmpassword)",
             "access": "private",
             "tagname": "",
@@ -14833,7 +14855,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 377,
+            "line": 381,
             "description": "Overrides the default errorStatus attribute to compute it based\non `loginErrorStatus`, `emailErrorStatus` and\n`passwordErrorStatus`.",
             "itemtype": "attribute",
             "name": "errorStatus",
@@ -14845,7 +14867,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 397,
+            "line": 401,
             "description": "`loginErrorStatus` error status",
             "itemtype": "attribute",
             "name": "loginErrorStatus",
@@ -14856,7 +14878,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 407,
+            "line": 411,
             "description": "Flag indicating whether the login availability status.\nUse `setLoginAvailable`, `setLoginUnavailable`,\n`setCheckingLogin` or `setUnableToCheckLogin` to set it to the\ncorrect value.",
             "itemtype": "attribute",
             "name": "loginAvailabilityStatus",
@@ -14868,7 +14890,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 421,
+            "line": 425,
             "description": "`emailErrorStatus` error status",
             "itemtype": "attribute",
             "name": "emailErrorStatus",
@@ -14879,7 +14901,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-user-editview.js",
-            "line": 431,
+            "line": 435,
             "description": "`passwordErrorStatus` error status",
             "itemtype": "attribute",
             "name": "passwordErrorStatus",
@@ -17034,7 +17056,27 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 76,
+            "line": 77,
+            "description": "Sets fields on given content and version.",
+            "itemtype": "method",
+            "name": "_setFields",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "fields",
+                    "description": "object containing fields that will be set on given content and version",
+                    "type": "Object"
+                }
+            ],
+            "since": "1.1",
+            "class": "eZ.ContentCreateViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
+            "line": 90,
             "description": "Sets the redirection URLs attributes",
             "itemtype": "method",
             "name": "_setRedirectionUrls",
@@ -17046,7 +17088,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 101,
+            "line": 115,
             "description": "changeLanguage event handler. It opens languageSelectionBox for selecting\nlanguage of created content",
             "itemtype": "method",
             "name": "_selectLanguage",
@@ -17065,7 +17107,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 123,
+            "line": 137,
             "description": "Sets language of created content to one given in event facade. After that notification is fired.",
             "itemtype": "method",
             "name": "_setLanguage",
@@ -17076,6 +17118,11 @@
                     "name": "view",
                     "description": "the view which triggered language selection box",
                     "type": "Y.eZ.View"
+                },
+                {
+                    "name": "fields",
+                    "description": "",
+                    "type": "Object"
                 },
                 {
                     "name": "e",
@@ -17096,7 +17143,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 156,
+            "line": 186,
             "description": "The parent location of the new content",
             "itemtype": "attribute",
             "name": "parentLocation",
@@ -17108,7 +17155,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 165,
+            "line": 195,
             "description": "The parent content of the new content",
             "itemtype": "attribute",
             "name": "parentContent",
@@ -21859,6 +21906,26 @@
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
             "line": 101,
+            "description": "Sets the `version` and `field` attributes on field edit view instances. The `field`\nis taken from the version.",
+            "itemtype": "method",
+            "name": "_updateFieldEditViews",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "version",
+                    "description": "",
+                    "type": "eZ.Version"
+                }
+            ],
+            "since": "1.1",
+            "class": "eZ.ContentEditFormView",
+            "module": "ez-contenteditformview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contenteditformview.js",
+            "line": 120,
             "description": "Renders the form view",
             "itemtype": "method",
             "name": "render",
@@ -21872,7 +21939,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 115,
+            "line": 134,
             "description": "Checks whether the form is valid or not",
             "itemtype": "method",
             "name": "isValid",
@@ -21885,7 +21952,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 131,
+            "line": 150,
             "description": "Returns an array containing the field updated with the user input.\nAny undefined field is ignored.",
             "itemtype": "method",
             "name": "getFields",
@@ -21898,7 +21965,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 151,
+            "line": 170,
             "description": "Makes sure the field edit views are correctly destroyed",
             "itemtype": "method",
             "name": "destructor",
@@ -21908,7 +21975,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 163,
+            "line": 182,
             "description": "Renders the field edit views in the correct fieldset (field group)",
             "access": "protected",
             "tagname": "",
@@ -21920,7 +21987,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 181,
+            "line": 200,
             "description": "Toggles collapsing for parent fieldSet with \"SlideUp/Down\" effect.",
             "itemtype": "method",
             "name": "_toggleFieldsetCollapse",
@@ -21932,7 +21999,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 199,
+            "line": 218,
             "description": "Form submit event handler to halt the form submission.",
             "itemtype": "method",
             "name": "_haltSubmit",
@@ -21949,7 +22016,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 210,
+            "line": 229,
             "description": "The content type instance, which we use to build correct Field Groups",
             "itemtype": "attribute",
             "name": "contentType",
@@ -21962,7 +22029,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 222,
+            "line": 241,
             "description": "The content instance",
             "itemtype": "attribute",
             "name": "content",
@@ -21975,7 +22042,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 234,
+            "line": 253,
             "description": "The version handled in the form view",
             "itemtype": "attribute",
             "name": "version",
@@ -21988,7 +22055,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 246,
+            "line": 268,
             "description": "The language code in which the content is edited",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -22000,7 +22067,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditformview.js",
-            "line": 257,
+            "line": 277,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -22022,7 +22089,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 66,
+            "line": 70,
             "description": "`previewAction` event handler. It fires the `saveAction` draft so\nthat the draft is saved before trying to preview the version.",
             "itemtype": "method",
             "name": "_saveAndPreview",
@@ -22041,7 +22108,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 89,
+            "line": 93,
             "description": "Event handler for the saveAction and publishAction events. It\nenriches the event facade with the updated fields and the form\nvalidity",
             "itemtype": "method",
             "name": "_handleSavePublish",
@@ -22060,7 +22127,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 105,
+            "line": 109,
             "description": "Destructor is called upon view's destruction\nDestroying and cleaning up child views",
             "itemtype": "method",
             "name": "destructor",
@@ -22070,7 +22137,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 116,
+            "line": 120,
             "description": "Renders the content edit view",
             "itemtype": "method",
             "name": "render",
@@ -22084,7 +22151,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 147,
+            "line": 151,
             "description": "Sets the minimum height of the view",
             "access": "private",
             "tagname": "",
@@ -22096,7 +22163,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 159,
+            "line": 163,
             "description": "Returns the title of the page when the content edit view is the\nactive view",
             "itemtype": "method",
             "name": "getTitle",
@@ -22109,7 +22176,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 170,
+            "line": 174,
             "description": "Set current input focus on the view",
             "itemtype": "method",
             "name": "setFocus",
@@ -22121,7 +22188,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 180,
+            "line": 184,
             "description": "Shows the technical infos of the content.",
             "itemtype": "method",
             "name": "_showDetails",
@@ -22133,7 +22200,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 190,
+            "line": 194,
             "description": "Hides the technical infos of the content.         *",
             "itemtype": "method",
             "name": "_hideDetails",
@@ -22145,7 +22212,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 200,
+            "line": 204,
             "description": "Event event handler for the close link in the content edit view",
             "itemtype": "method",
             "name": "_closeView",
@@ -22164,7 +22231,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 208,
+            "line": 212,
             "description": "Fired when the close link is clicked",
             "itemtype": "event",
             "name": "closeView",
@@ -22174,7 +22241,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 217,
+            "line": 221,
             "description": "Event event handler for any key pressed within the content edit view",
             "itemtype": "method",
             "name": "_handleKeyboard",
@@ -22193,7 +22260,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 231,
+            "line": 235,
             "description": "Returns whether the current browser is a touch device or not",
             "itemtype": "method",
             "name": "_isTouch",
@@ -22209,7 +22276,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 242,
+            "line": 246,
             "description": "Tap event handler on change language button. It fires `changeLanguage` event.",
             "itemtype": "method",
             "name": "_changeLanguage",
@@ -22228,27 +22295,15 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 252,
+            "line": 256,
             "description": "Fired when the change language link was tapped",
             "itemtype": "event",
             "name": "changeLanguage",
-            "class": "eZ.ContentEditView",
-            "module": "ez-contenteditview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 260,
-            "description": "Sets language indicator",
-            "itemtype": "method",
-            "name": "setLanguageIndicator",
-            "access": "private",
-            "tagname": "",
             "params": [
                 {
-                    "name": "languageCode",
-                    "description": "",
-                    "type": "String"
+                    "name": "fields",
+                    "description": "fields that will be used after changing the language - they are passed here\nto persist field values after the language is changed",
+                    "type": "Array"
                 }
             ],
             "class": "eZ.ContentEditView",
@@ -22257,11 +22312,12 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 275,
+            "line": 267,
             "description": "The content being edited",
             "itemtype": "attribute",
             "name": "content",
             "default": "{}",
+            "type": "{eZ.Content}",
             "required": 1,
             "class": "eZ.ContentEditView",
             "module": "ez-contenteditview",
@@ -22269,11 +22325,12 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 286,
+            "line": 277,
             "description": "The version being edited",
             "itemtype": "attribute",
             "name": "content",
             "default": "{}",
+            "type": "{eZ.Version}",
             "required": 1,
             "class": "eZ.ContentEditView",
             "module": "ez-contenteditview",
@@ -22281,7 +22338,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 297,
+            "line": 287,
             "description": "The content type of the content being edited",
             "itemtype": "attribute",
             "name": "contentType",
@@ -22293,7 +22350,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 308,
+            "line": 298,
             "description": "The main location of the content being edited",
             "itemtype": "attribute",
             "name": "mainLocation",
@@ -22305,7 +22362,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 319,
+            "line": 309,
             "description": "The owner of the content being edited",
             "itemtype": "attribute",
             "name": "owner",
@@ -22317,7 +22374,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 330,
+            "line": 320,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -22329,7 +22386,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 339,
+            "line": 329,
             "description": "The ContentEditFormView (by default) instance which will be used to render form",
             "itemtype": "attribute",
             "name": "formView",
@@ -22342,7 +22399,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 361,
+            "line": 351,
             "description": "The EditActionBarView (by default) instance",
             "itemtype": "attribute",
             "name": "actionBar",
@@ -22355,10 +22412,11 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 381,
+            "line": 371,
             "description": "The language code in which the content is edited.",
             "itemtype": "attribute",
             "name": "languageCode",
+            "default": "''",
             "type": "{String}",
             "required": 1,
             "class": "eZ.ContentEditView",

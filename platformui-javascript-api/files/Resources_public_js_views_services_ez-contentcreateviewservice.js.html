@@ -500,12 +500,26 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
                     fieldValue: fieldDef.defaultValue,
                 };
             });
-            content.set(&#x27;fields&#x27;, defaultFields);
-            version.set(&#x27;fields&#x27;, defaultFields);
-            this.set(&#x27;owner&#x27;, this.get(&#x27;app&#x27;).get(&#x27;user&#x27;));
+
             this.set(&#x27;content&#x27;, content);
             this.set(&#x27;version&#x27;, version);
+            this._setFields(defaultFields);
+
+            this.set(&#x27;owner&#x27;, this.get(&#x27;app&#x27;).get(&#x27;user&#x27;));
             callback(this);
+        },
+
+        /**
+         * Sets fields on given content and version.
+         *
+         * @method _setFields
+         * @protected
+         * @param {Object} fields object containing fields that will be set on given content and version
+         * @since 1.1
+         */
+        _setFields: function (fields) {
+            this.get(&#x27;content&#x27;).set(&#x27;fields&#x27;, fields);
+            this.get(&#x27;version&#x27;).set(&#x27;fields&#x27;, fields);
         },
 
         /**
@@ -546,7 +560,7 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
             this.fire(&#x27;languageSelect&#x27;, {
                 config: {
                     title: &quot;Change language to:&quot;,
-                    languageSelectedHandler: Y.bind(this._setLanguage, this, e.target),
+                    languageSelectedHandler: Y.bind(this._setLanguage, this, e.target, e.fields),
                     cancelLanguageSelectionHandler: null,
                     canBaseTranslation: false,
                     translationMode: true,
@@ -561,26 +575,42 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
          * @method _setLanguage
          * @private
          * @param {Y.eZ.View} view the view which triggered language selection box
+         * @param {Object} fields
          * @param {EventFacade} e
          * @param {String} e.selectedLanguageCode language code to which created content will be switched
          */
-        _setLanguage: function (view, e) {
-            var version = this.get(&#x27;version&#x27;);
+        _setLanguage: function (view, fields, e) {
+            var version = this.get(&#x27;version&#x27;),
+                selectedLanguageCode = e.selectedLanguageCode,
+                newVersion = new Y.eZ.Version(),
+                formFields = {};
 
             version.destroy({api: this.get(&#x27;capi&#x27;), remove: true}, function (error) {
                 if ( error ) {
                     console.warn(&#x27;Failed to remove the version &#x27; + version.get(&#x27;versionId&#x27;));
                 }
             });
+            this.set(&#x27;version&#x27;, newVersion);
 
-            this.set(&#x27;version&#x27;, new Y.eZ.Version());
-            this.set(&#x27;languageCode&#x27;,e.selectedLanguageCode);
-            view.set(&#x27;languageCode&#x27;, e.selectedLanguageCode);
+            Y.Object.each(fields, function (field) {
+                formFields[field.fieldDefinitionIdentifier] = {
+                    fieldDefinitionIdentifier: field.fieldDefinitionIdentifier,
+                    fieldValue: field.fieldValue,
+                };
+            });
+
+            this._setFields(formFields);
+            this.set(&#x27;languageCode&#x27;, selectedLanguageCode);
+
+            view.setAttrs({
+                version: newVersion,
+                languageCode: selectedLanguageCode,
+            });
 
             this.fire(&#x27;notify&#x27;, {
                 notification: {
-                    text: &#x27;Language has been changed to &#x27; + e.selectedLanguageCode,
-                    identifier: &#x27;create-content-change-language-to-&#x27; + e.selectedLanguageCode,
+                    text: &#x27;Language has been changed to &#x27; + this.get(&#x27;app&#x27;).getLanguageName(selectedLanguageCode),
+                    identifier: &#x27;create-content-change-language-to-&#x27; + selectedLanguageCode,
                     state: &#x27;done&#x27;,
                     timeout: 5,
                 }
