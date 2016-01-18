@@ -16089,7 +16089,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 100,
+            "line": 101,
             "description": "Parses the search result to create the Location model and return the array of location structs.",
             "itemtype": "method",
             "name": "_parseSearchResult",
@@ -16112,7 +16112,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 119,
+            "line": 120,
             "description": "Creates a Location for the searchHit",
             "itemtype": "method",
             "name": "_createLocation",
@@ -16135,7 +16135,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 137,
+            "line": 138,
             "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadResources",
@@ -16169,7 +16169,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 180,
+            "line": 181,
             "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentTypeForLocations",
@@ -16193,7 +16193,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 216,
+            "line": 217,
             "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentForLocations",
@@ -16217,12 +16217,24 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 255,
+            "line": 257,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
             "type": "{Function}",
             "default": "Y.eZ.Location",
+            "class": "eZ.Plugin.LocationSearch",
+            "module": "ez-locationsearchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
+            "line": 268,
+            "description": "Holds the eZ.Content constructor function",
+            "itemtype": "attribute",
+            "name": "contentModelConstructor",
+            "type": "{Function}",
+            "default": "Y.eZ.Content",
             "class": "eZ.Plugin.LocationSearch",
             "module": "ez-locationsearchplugin",
             "namespace": "eZ.Plugin"
