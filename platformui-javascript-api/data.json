@@ -1271,6 +1271,19 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/services/ez-trashviewservice.js": {
+            "name": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "modules": {
+                "ez-trashviewservice": 1
+            },
+            "classes": {
+                "eZ.TrashViewService": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js": {
             "name": "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js",
             "modules": {
@@ -1759,6 +1772,19 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/ez-trashview.js": {
+            "name": "Resources/public/js/views/ez-trashview.js",
+            "modules": {
+                "ez-trashview": 1
+            },
+            "classes": {
+                "eZ.TrashView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/ez-treeview.js": {
             "name": "Resources/public/js/views/ez-treeview.js",
             "modules": {},
@@ -1916,6 +1942,19 @@
             },
             "classes": {
                 "eZ.RestModel": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/models/ez-trashitemmodel.js": {
+            "name": "Resources/public/js/models/ez-trashitemmodel.js",
+            "modules": {
+                "ez-trashitemmodel": 1
+            },
+            "classes": {
+                "eZ.TrashItem": 1
             },
             "fors": {},
             "namespaces": {
@@ -3865,6 +3904,22 @@
             "line": 18,
             "description": "Provides the view service component for the navigation hub"
         },
+        "ez-trashviewservice": {
+            "name": "ez-trashviewservice",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.TrashViewService": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 14,
+            "description": "Provides the view service component for the trash view"
+        },
         "ez-universaldiscoveryviewservice": {
             "name": "ez-universaldiscoveryviewservice",
             "submodules": {},
@@ -4433,7 +4488,23 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.TemplateBasedView": 1,
+                "eZ.TemplateBasedView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-templatebasedview.js",
+            "line": 16,
+            "description": "Provides the Template Based view"
+        },
+        "ez-trashview": {
+            "name": "ez-trashview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.TrashView": 1,
                 "eZ.TreeView": 1
             },
             "fors": {},
@@ -4443,7 +4514,7 @@
             "tag": "module",
             "file": "Resources/public/js/views/ez-treeview.js",
             "line": 22,
-            "description": "Provides the Template Based view"
+            "description": "Provides the Trash View class"
         },
         "ez-view": {
             "name": "ez-view",
@@ -4590,6 +4661,22 @@
             "file": "Resources/public/js/models/ez-restmodel.js",
             "line": 18,
             "description": "Provides the RestModel abstract class"
+        },
+        "ez-trashitemmodel": {
+            "name": "ez-trashitemmodel",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.TrashItem": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 15,
+            "description": "Provides the Trash Item model cass"
         },
         "ez-usermodel": {
             "name": "ez-usermodel",
@@ -6646,6 +6733,22 @@
             "is_constructor": 1,
             "extends": "eZ.ViewService"
         },
+        "eZ.TrashViewService": {
+            "name": "eZ.TrashViewService",
+            "shortname": "eZ.TrashViewService",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-trashviewservice",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 14,
+            "description": "Trash view service.\n\nLoads the trash items needed by the trash view",
+            "is_constructor": 1,
+            "extends": "eZ.ViewService"
+        },
         "eZ.UniversalDiscoveryViewService": {
             "name": "eZ.UniversalDiscoveryViewService",
             "shortname": "eZ.UniversalDiscoveryViewService",
@@ -7252,6 +7355,22 @@
             "description": "Template based view. An abstract class that provides helpers to deal with\nview rendered with templates.",
             "extends": "View"
         },
+        "eZ.TrashView": {
+            "name": "eZ.TrashView",
+            "shortname": "eZ.TrashView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-trashview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 14,
+            "description": "The Trash view",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
         "eZ.TreeView": {
             "name": "eZ.TreeView",
             "shortname": "eZ.TreeView",
@@ -7260,7 +7379,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/ez-treeview.js",
             "line": 22,
@@ -7455,6 +7574,22 @@
             "file": "Resources/public/js/models/ez-restmodel.js",
             "line": 18,
             "description": "Abstract class for the model objects loaded from the\neZ Publish REST API. It provides some helper methods to deal with type\nconversions and generic mapping system to map the JSON structure the\nattributes.",
+            "is_constructor": 1,
+            "extends": "Model"
+        },
+        "eZ.TrashItem": {
+            "name": "eZ.TrashItem",
+            "shortname": "eZ.TrashItem",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ",
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 15,
+            "description": "TrashItem model",
             "is_constructor": 1,
             "extends": "Model"
         },
@@ -8269,7 +8404,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 118,
+            "line": 122,
             "description": "Initializes the application.",
             "itemtype": "method",
             "name": "initializer",
@@ -8279,7 +8414,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 126,
+            "line": 130,
             "description": "Stores the initial title of the page so it can be used when\ngenerating the title depending on the active view",
             "itemtype": "property",
             "name": "_initialTitle",
@@ -8292,7 +8427,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 153,
+            "line": 157,
             "description": "Destroy properly every side view.",
             "itemtype": "method",
             "name": "_destroySideViews",
@@ -8304,7 +8439,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 172,
+            "line": 176,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -8316,7 +8451,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 215,
+            "line": 219,
             "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
             "itemtype": "method",
             "name": "getLanguageName",
@@ -8338,7 +8473,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 234,
+            "line": 238,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -8365,7 +8500,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 266,
+            "line": 270,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -8388,7 +8523,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 277,
+            "line": 281,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -8422,7 +8557,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 317,
+            "line": 321,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -8451,7 +8586,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 328,
+            "line": 332,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -8461,7 +8596,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 341,
+            "line": 345,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -8491,7 +8626,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 371,
+            "line": 375,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -8518,7 +8653,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 388,
+            "line": 392,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitely\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -8545,7 +8680,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 415,
+            "line": 419,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -8572,7 +8707,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 437,
+            "line": 441,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -8589,7 +8724,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 447,
+            "line": 451,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -8628,7 +8763,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 512,
+            "line": 516,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -8647,7 +8782,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 530,
+            "line": 534,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -8671,7 +8806,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 552,
+            "line": 556,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -8698,7 +8833,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 588,
+            "line": 592,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -8725,7 +8860,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 654,
+            "line": 658,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -8744,7 +8879,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 670,
+            "line": 674,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -8763,7 +8898,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 714,
+            "line": 718,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -8782,7 +8917,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 732,
+            "line": 736,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -8792,7 +8927,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 897,
+            "line": 908,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -8804,7 +8939,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 909,
+            "line": 920,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -8817,7 +8952,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 922,
+            "line": 933,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -8830,7 +8965,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 935,
+            "line": 946,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -8842,7 +8977,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 948,
+            "line": 959,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -8856,7 +8991,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 962,
+            "line": 973,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -8868,7 +9003,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 976,
+            "line": 987,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -8880,7 +9015,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 987,
+            "line": 998,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -8892,7 +9027,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 999,
+            "line": 1010,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -17747,6 +17882,18 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/services/ez-discoverybarviewservice.js",
+            "line": 28,
+            "description": "Redirects to the Trash",
+            "itemtype": "method",
+            "name": "_redirectToTrashView",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DiscoveryBarViewService",
+            "module": "ez-discoverybarviewservice",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
             "line": 35,
             "description": "editAction event handler, makes the application navigate to edit the\ncontent available in the event facade",
@@ -19291,6 +19438,175 @@
             "type": "String",
             "class": "eZ.ServerSideViewService",
             "module": "ez-navigationhubviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 26,
+            "description": "Loads the list of Trash Items in the `trashItems` attribute and calls `callback` once it's done.",
+            "itemtype": "method",
+            "name": "_load",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 58,
+            "description": "Loads a single item based on `itemHash` and adds it to `trashItems` in the format expected by the `trashItems`\nattribute.",
+            "itemtype": "method",
+            "name": "_loadTrashItem",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "itemHash",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "inTrashList",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "trashItems",
+                    "description": "where results are stored",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 116,
+            "description": "Builds a HashMap with trashItem's pathString as key",
+            "itemtype": "method",
+            "name": "_buildInTrashList",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "trashItemHash",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 134,
+            "description": "Returns true if parentLocationId is in inTrashList.",
+            "itemtype": "method",
+            "name": "_isParentInTrash",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "parentLocationId",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "inTrashList",
+                    "description": "list of object with pathString as key",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 156,
+            "description": "Returns the view parameters of the trash view",
+            "itemtype": "method",
+            "name": "_getViewParameters",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 171,
+            "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
+            "itemtype": "attribute",
+            "name": "trashItems",
+            "required": 1,
+            "default": "[]",
+            "type": "Array",
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 186,
+            "description": "Holds the eZ.ContentType constructor function",
+            "itemtype": "attribute",
+            "name": "contentTypeModelConstructor",
+            "type": "{Function}",
+            "default": "Y.eZ.ContentType",
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 197,
+            "description": "Holds the eZ.Location constructor function",
+            "itemtype": "attribute",
+            "name": "locationModelConstructor",
+            "type": "{Function}",
+            "default": "Y.eZ.Location",
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 208,
+            "description": "Holds the eZ.TrashItem constructor function",
+            "itemtype": "attribute",
+            "name": "trashItemModelConstructor",
+            "type": "{Function}",
+            "default": "Y.eZ.TrashItem",
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
             "namespace": "eZ"
         },
         {
@@ -26508,13 +26824,56 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 24,
+            "description": "Renders the trash view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.TrashView"
+            },
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 40,
+            "description": "Converts the content of the `trashItems` attribute into JSON",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_convertTrashItemsToJSON",
+            "return": {
+                "description": "of JSONified `trashItems`",
+                "type": "Array"
+            },
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 59,
+            "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
+            "itemtype": "attribute",
+            "name": "trashItems",
+            "required": 1,
+            "default": "[]",
+            "type": "Array",
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/ez-treeview.js",
             "line": 7,
             "description": "Provides the tree view",
             "itemtype": "method",
             "name": "ez-treeview",
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26541,7 +26900,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26560,7 +26919,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26572,7 +26931,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26591,7 +26950,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26610,7 +26969,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26629,7 +26988,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26648,7 +27007,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26667,7 +27026,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26686,7 +27045,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26705,7 +27064,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26721,7 +27080,7 @@
                 "type": "Y.Node"
             },
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26740,7 +27099,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26763,7 +27122,7 @@
                 "type": "Object"
             },
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26782,7 +27141,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26799,7 +27158,7 @@
                 }
             ],
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26822,7 +27181,7 @@
                 "type": "Y.Node"
             },
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -26834,7 +27193,7 @@
             "type": "eZ.ContentTree",
             "writeonce": "",
             "class": "eZ.TreeView",
-            "module": "ez-templatebasedview",
+            "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
@@ -29069,6 +29428,160 @@
             "default": "{}",
             "class": "eZ.RestModel",
             "module": "ez-restmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 24,
+            "description": "Override of the eZ.RestModel _parseStruct method to also read the content info",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_parseStruct",
+            "params": [
+                {
+                    "name": "struct",
+                    "description": "the struct to transform",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 50,
+            "description": "The trash item's number of child",
+            "itemtype": "attribute",
+            "name": "childCount",
+            "default": "0",
+            "type": "integer",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 61,
+            "description": "The trash item's depth",
+            "itemtype": "attribute",
+            "name": "depth",
+            "default": "1",
+            "type": "integer",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 72,
+            "description": "The trash item's hidden flag",
+            "itemtype": "attribute",
+            "name": "hidden",
+            "default": "false",
+            "type": "boolean",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 83,
+            "description": "The trash item's invisible flag",
+            "itemtype": "attribute",
+            "name": "invisible",
+            "default": "false",
+            "type": "boolean",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 94,
+            "description": "The trash item's id in the eZ Publish content repository",
+            "itemtype": "attribute",
+            "name": "locationId",
+            "default": "''",
+            "type": "string",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 105,
+            "description": "The trash item's path string",
+            "itemtype": "attribute",
+            "name": "pathString",
+            "default": "''",
+            "type": "string",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 116,
+            "description": "The trash item's priority",
+            "itemtype": "attribute",
+            "name": "priority",
+            "default": "0",
+            "type": "integer",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 127,
+            "description": "The trash item's remote id",
+            "itemtype": "attribute",
+            "name": "remoteId",
+            "default": "''",
+            "type": "string",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 138,
+            "description": "The trash item's sort field",
+            "itemtype": "attribute",
+            "name": "sortField",
+            "default": "\"PATH\"",
+            "type": "string",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 149,
+            "description": "The trash item's sort order",
+            "itemtype": "attribute",
+            "name": "sortOrder",
+            "default": "\"ASC\"",
+            "type": "string",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 160,
+            "description": "The content info",
+            "itemtype": "attribute",
+            "name": "contentInfo",
+            "type": "eZ.ContentInfo",
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
             "namespace": "eZ"
         },
         {

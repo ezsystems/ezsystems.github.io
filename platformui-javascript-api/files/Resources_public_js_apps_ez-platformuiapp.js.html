@@ -211,6 +211,9 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
+                                <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
+                                <li><a href="../classes/eZ.TrashViewService.html">eZ.TrashViewService</a></li>
                                 <li><a href="../classes/eZ.TreeActionView.html">eZ.TreeActionView</a></li>
                                 <li><a href="../classes/eZ.TreeView.html">eZ.TreeView</a></li>
                                 <li><a href="../classes/eZ.UniversalDiscoveryBrowseView.html">eZ.UniversalDiscoveryBrowseView</a></li>
@@ -373,6 +376,9 @@
                                 <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
                                 <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
                                 <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-trashitemmodel.html">ez-trashitemmodel</a></li>
+                                <li><a href="../modules/ez-trashview.html">ez-trashview</a></li>
+                                <li><a href="../modules/ez-trashviewservice.html">ez-trashviewservice</a></li>
                                 <li><a href="../modules/ez-universaldiscoverybrowseview.html">ez-universaldiscoverybrowseview</a></li>
                                 <li><a href="../modules/ez-universaldiscoveryconfirmedlistview.html">ez-universaldiscoveryconfirmedlistview</a></li>
                                 <li><a href="../modules/ez-universaldiscoverycontenttreeplugin.html">ez-universaldiscoverycontenttreeplugin</a></li>
@@ -535,6 +541,10 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
             locationViewView: {
                 type: Y.eZ.LocationViewView,
                 parent: &#x27;dashboardView&#x27;
+            },
+            trashView: {
+                type: Y.eZ.TrashView,
+                parent: &#x27;locationViewView&#x27;
             },
             serverSideView: {
                 type: Y.eZ.ServerSideView,
@@ -1257,6 +1267,13 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
                     service: Y.eZ.LocationViewViewService,
                     sideViews: {&#x27;discoveryBar&#x27;: true, &#x27;navigationHub&#x27;: true},
                     view: &#x27;locationViewView&#x27;,
+                    callbacks: [&#x27;open&#x27;, &#x27;checkUser&#x27;, &#x27;handleSideViews&#x27;, &#x27;handleMainView&#x27;]
+                }, {
+                    name: &quot;viewTrash&quot;,
+                    path: &#x27;/trash&#x27;,
+                    service: Y.eZ.TrashViewService,
+                    sideViews: {&#x27;navigationHub&#x27;: true, &#x27;discoveryBar&#x27;: true},
+                    view: &#x27;trashView&#x27;,
                     callbacks: [&#x27;open&#x27;, &#x27;checkUser&#x27;, &#x27;handleSideViews&#x27;, &#x27;handleMainView&#x27;]
                 }, {
                     name: &quot;adminSection&quot;,

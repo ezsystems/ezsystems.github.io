@@ -173,6 +173,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TextBlockEditView",
         "eZ.TextLineEditView",
         "eZ.TranslateActionView",
+        "eZ.TrashItem",
+        "eZ.TrashView",
+        "eZ.TrashViewService",
         "eZ.TreeActionView",
         "eZ.TreeView",
         "eZ.UniversalDiscoveryBrowseView",
@@ -334,6 +337,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-textline-editview",
         "ez-time-editview",
         "ez-translateactionview",
+        "ez-trashitemmodel",
+        "ez-trashview",
+        "ez-trashviewservice",
         "ez-universaldiscoverybrowseview",
         "ez-universaldiscoveryconfirmedlistview",
         "ez-universaldiscoverycontenttreeplugin",
@@ -1053,6 +1059,21 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-translateactionview",
             "name": "ez-translateactionview",
             "description": "Provides the translate action view class"
+        },
+        {
+            "displayName": "ez-trashitemmodel",
+            "name": "ez-trashitemmodel",
+            "description": "Provides the Trash Item model cass"
+        },
+        {
+            "displayName": "ez-trashview",
+            "name": "ez-trashview",
+            "description": "Provides the Trash View class"
+        },
+        {
+            "displayName": "ez-trashviewservice",
+            "name": "ez-trashviewservice",
+            "description": "Provides the view service component for the trash view"
         },
         {
             "displayName": "ez-universaldiscoverybrowseview",
