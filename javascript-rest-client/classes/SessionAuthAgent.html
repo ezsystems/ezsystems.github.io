@@ -164,7 +164,7 @@ that it needs to receive an object with the session info:</p>
                         <code>authInfo</code>
                 </li>
                 <li class="arg">
-                        <code>storage</code>
+                        <code class="optional">[storage=LocalStorage]</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -270,8 +270,9 @@ and <code>password</code>) or the session info of an already existing one (<code
                         </ul>
                 </li>
                 <li class="param">
-                        <code class="param-name">storage</code>
-                        <span class="type">StorageAbstraction?</span>
+                        <code class="param-name optional">[storage=LocalStorage]</code>
+                        <span class="type">StorageAbstraction</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
 
 
                     <div class="param-description">

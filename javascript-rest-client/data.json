@@ -528,7 +528,9 @@
                 {
                     "name": "storage",
                     "description": "storage to be used. By default a LocalStorage will be utilized",
-                    "type": "StorageAbstraction?"
+                    "type": "StorageAbstraction",
+                    "optional": true,
+                    "optdefault": "LocalStorage"
                 }
             ]
         },
