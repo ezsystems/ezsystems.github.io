@@ -19,6 +19,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonEmbedHref",
         "eZ.AlloyEditorButton.ButtonEmbedImage",
         "eZ.AlloyEditorButton.ButtonImageHref",
+        "eZ.AlloyEditorButton.ButtonImageVariation",
+        "eZ.AlloyEditorButton.WidgetButton",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage",
@@ -127,7 +129,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.LanguageSelectionBox",
         "eZ.Plugin.LocationCreate",
         "eZ.Plugin.LocationRemove",
-        "eZ.Plugin.LocationSearch",
         "eZ.Plugin.LocationsLoad",
         "eZ.Plugin.LoginAvailable",
         "eZ.Plugin.NotificationHub",
@@ -138,6 +139,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.RegisterLanguageHelpers",
         "eZ.Plugin.RegisterUrlHelpers",
         "eZ.Plugin.SaveDraft",
+        "eZ.Plugin.Search",
         "eZ.Plugin.UniversalDiscoveryContentTree",
         "eZ.Plugin.UpdateTree",
         "eZ.Plugin.UserLoad",
@@ -208,6 +210,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-mixin-blocktextalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
         "ez-alloyeditor-button-mixin-embedimage",
+        "ez-alloyeditor-button-mixin-widgetbutton",
         "ez-alloyeditor-button-remove",
         "ez-alloyeditor-toolbar-config-block-base",
         "ez-alloyeditor-toolbar-config-embed",
@@ -321,6 +324,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-richtext-view",
         "ez-roleserversideview",
         "ez-savedraftplugin",
+        "ez-searchplugin",
         "ez-sectionserversideview",
         "ez-selection-editview",
         "ez-selection-table",
@@ -416,9 +420,14 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the ButtonEmbedImage mixin"
         },
         {
+            "displayName": "ez-alloyeditor-button-mixin-widgetbutton",
+            "name": "ez-alloyeditor-button-mixin-widgetbutton",
+            "description": "Provides the WidgetButton mixin"
+        },
+        {
             "displayName": "ez-alloyeditor-button-remove",
             "name": "ez-alloyeditor-button-remove",
-            "description": "Provides the embedhref href button"
+            "description": "Provides the image variation drop down"
         },
         {
             "displayName": "ez-alloyeditor-toolbar-config-block-base",
@@ -778,7 +787,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-locationsearchplugin",
             "name": "ez-locationsearchplugin",
-            "description": "Provides the location search plugin"
+            "description": "Provides the location search plugin. As of 1.2, this module is\ndeprecated."
         },
         {
             "displayName": "ez-locationsloadplugin",
@@ -979,6 +988,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-savedraftplugin",
             "name": "ez-savedraftplugin",
             "description": "Provides the save draft plugin."
+        },
+        {
+            "displayName": "ez-searchplugin",
+            "name": "ez-searchplugin",
+            "description": "Provides the search plugin"
         },
         {
             "displayName": "ez-sectionserversideview",

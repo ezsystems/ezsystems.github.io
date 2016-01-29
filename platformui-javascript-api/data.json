@@ -989,13 +989,9 @@
             "modules": {
                 "ez-locationsearchplugin": 1
             },
-            "classes": {
-                "eZ.Plugin.LocationSearch": 1
-            },
+            "classes": {},
             "fors": {},
-            "namespaces": {
-                "eZ.Plugin": 1
-            }
+            "namespaces": {}
         },
         "Resources/public/js/views/services/plugins/ez-locationsloadplugin.js": {
             "name": "Resources/public/js/views/services/plugins/ez-locationsloadplugin.js",
@@ -1069,6 +1065,19 @@
             },
             "classes": {
                 "eZ.Plugin.SaveDraft": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
+        "Resources/public/js/views/services/plugins/ez-searchplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "modules": {
+                "ez-searchplugin": 1
+            },
+            "classes": {
+                "eZ.Plugin.Search": 1
             },
             "fors": {},
             "namespaces": {
@@ -2166,6 +2175,19 @@
                 "eZ.AlloyEditorButton": 1
             }
         },
+        "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js",
+            "modules": {
+                "ez-alloyeditor-button-mixin-widgetbutton": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.WidgetButton": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/blockremove.js": {
             "name": "Resources/public/js/alloyeditor/buttons/blockremove.js",
             "modules": {},
@@ -2240,9 +2262,7 @@
         },
         "Resources/public/js/alloyeditor/buttons/embedhref.js": {
             "name": "Resources/public/js/alloyeditor/buttons/embedhref.js",
-            "modules": {
-                "ez-alloyeditor-button-remove": 1
-            },
+            "modules": {},
             "classes": {
                 "eZ.AlloyEditorButton.ButtonEmbedHref": 1
             },
@@ -2276,6 +2296,19 @@
             },
             "classes": {
                 "eZ.AlloyEditorButton.ButtonImageHref": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/buttons/imagevariation.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "modules": {
+                "ez-alloyeditor-button-remove": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonImageVariation": 1
             },
             "fors": {},
             "namespaces": {
@@ -3629,17 +3662,15 @@
             "name": "ez-locationsearchplugin",
             "submodules": {},
             "elements": {},
-            "classes": {
-                "eZ.Plugin.LocationSearch": 1
-            },
+            "classes": {},
             "fors": {},
-            "namespaces": {
-                "eZ.Plugin": 1
-            },
+            "namespaces": {},
             "tag": "module",
             "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 14,
-            "description": "Provides the location search plugin"
+            "line": 7,
+            "description": "Provides the location search plugin. As of 1.2, this module is\ndeprecated.",
+            "deprecated": true,
+            "deprecationMessage": "Use ez-searchplugin instead."
         },
         "ez-locationsloadplugin": {
             "name": "ez-locationsloadplugin",
@@ -3736,6 +3767,22 @@
             "file": "Resources/public/js/views/services/plugins/ez-savedraftplugin.js",
             "line": 14,
             "description": "Provides the save draft plugin."
+        },
+        "ez-searchplugin": {
+            "name": "ez-searchplugin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Plugin.Search": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 14,
+            "description": "Provides the search plugin"
         },
         "ez-universaldiscoverycontenttreeplugin": {
             "name": "ez-universaldiscoverycontenttreeplugin",
@@ -4905,6 +4952,22 @@
             "line": 16,
             "description": "Provides the ButtonEmbedImage mixin"
         },
+        "ez-alloyeditor-button-mixin-widgetbutton": {
+            "name": "ez-alloyeditor-button-mixin-widgetbutton",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.WidgetButton": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js",
+            "line": 17,
+            "description": "Provides the WidgetButton mixin"
+        },
         "ez-alloyeditor-button-remove": {
             "name": "ez-alloyeditor-button-remove",
             "submodules": {},
@@ -4913,16 +4976,23 @@
                 "eZ.AlloyEditorButton.ButtonBlockRemove": 1,
                 "eZ.AlloyEditorButton.ButtonEmbedHref": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage": 1
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage": 1,
+                "eZ.AlloyEditorButton.ButtonImageVariation": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
+                "CKEDITOR.plugins.ezaddcontent": 1,
+                "CKEDITOR.plugins.ezembed": 1,
+                "CKEDITOR.plugins.ezfocusblock": 1,
+                "CKEDITOR.plugins.ezremoveblock": 1
             },
             "fors": {},
             "namespaces": {
-                "eZ.AlloyEditorButton": 1
+                "eZ.AlloyEditorButton": 1,
+                "CKEDITOR.plugins": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/alloyeditor/buttons/image.js",
-            "line": 17,
-            "description": "Provides the embedhref href button"
+            "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
+            "line": 90,
+            "description": "Provides the image variation drop down"
         },
         "ez-alloyeditor-button-blocktextaligncenter": {
             "name": "ez-alloyeditor-button-blocktextaligncenter",
@@ -4994,21 +5064,15 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.AlloyEditorButton.ButtonImageHref": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
-                "CKEDITOR.plugins.ezaddcontent": 1,
-                "CKEDITOR.plugins.ezembed": 1,
-                "CKEDITOR.plugins.ezfocusblock": 1,
-                "CKEDITOR.plugins.ezremoveblock": 1
+                "eZ.AlloyEditorButton.ButtonImageHref": 1
             },
             "fors": {},
             "namespaces": {
-                "eZ.AlloyEditorButton": 1,
-                "CKEDITOR.plugins": 1
+                "eZ.AlloyEditorButton": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 90,
+            "file": "Resources/public/js/alloyeditor/buttons/imagehref.js",
+            "line": 23,
             "description": "Provides the ezimagehref button"
         },
         "ez-editorcontentprocessorbase": {
@@ -6362,22 +6426,6 @@
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
-        "eZ.Plugin.LocationSearch": {
-            "name": "eZ.Plugin.LocationSearch",
-            "shortname": "eZ.Plugin.LocationSearch",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin",
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 14,
-            "description": "Location search plugin. It listens to the `locationSearch` event and\nexecute the corresponding location search.",
-            "is_constructor": 1,
-            "extends": "eZ.Plugin.ViewServiceBase"
-        },
         "eZ.Plugin.LocationsLoad": {
             "name": "eZ.Plugin.LocationsLoad",
             "shortname": "eZ.Plugin.LocationsLoad",
@@ -6473,6 +6521,23 @@
             "description": "Save draft plugin. It saves the draft when the `saveAction` event is\ntriggered.",
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
+        },
+        "eZ.Plugin.Search": {
+            "name": "eZ.Plugin.Search",
+            "shortname": "eZ.Plugin.Search",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 14,
+            "description": "Search plugin. It listens to `locationSearch` and `contentSearch` events\nand execute the corresponding search.",
+            "is_constructor": 1,
+            "extends": "eZ.Plugin.ViewServiceBase",
+            "since": "1.2"
         },
         "eZ.Plugin.UniversalDiscoveryContentTree": {
             "name": "eZ.Plugin.UniversalDiscoveryContentTree",
@@ -7870,6 +7935,20 @@
             "line": 16,
             "description": "ButtonEmbedImage is a mixing providing the necessary code to\ntrigger UDW and use the content choosen by the user to correctly set the\nproperties of an embed element that represents an image."
         },
+        "eZ.AlloyEditorButton.WidgetButton": {
+            "name": "eZ.AlloyEditorButton.WidgetButton",
+            "shortname": "eZ.AlloyEditorButton.WidgetButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-mixin-widgetbutton",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js",
+            "line": 17,
+            "description": "WidgetButton is a mixin to represent a button related to a CKEditor\nwidget."
+        },
         "eZ.AlloyEditorButton.ButtonBlockRemove": {
             "name": "eZ.AlloyEditorButton.ButtonBlockRemove",
             "shortname": "eZ.AlloyEditorButton.ButtonBlockRemove",
@@ -8046,6 +8125,23 @@
                 "Y.eZ.AlloyEditorButton.ButtonEmbedImage"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonImageVariation": {
+            "name": "eZ.AlloyEditorButton.ButtonImageVariation",
+            "shortname": "eZ.AlloyEditorButton.ButtonImageVariation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "line": 23,
+            "description": "The ButtonImageVariation components represents a drop down to choose\nthe image variation to use.",
+            "uses": [
+                "Y.eZ.AlloyEditorButton.WidgetButton"
+            ]
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
             "shortname": "eZ.AlloyEditor.ButtonParagraph",
@@ -8054,7 +8150,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 17,
@@ -8072,7 +8168,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
             "line": 64,
@@ -8087,7 +8183,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 15,
@@ -8102,7 +8198,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/focusblock.js",
             "line": 64,
@@ -8117,7 +8213,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
             "line": 90,
@@ -13573,6 +13669,19 @@
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
             "line": 99,
+            "description": "Returns an objects (`name` and `identifier`) representing the image\nvariations configured in Platform sorted by name.",
+            "itemtype": "method",
+            "name": "_getImageVariations",
+            "return": {
+                "description": "Array"
+            },
+            "class": "eZ.RichTextEditView",
+            "module": "ez-richtext-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
+            "line": 124,
             "description": "Registers the plugin which name is given in the given plugin dir.",
             "itemtype": "method",
             "name": "_registerExternalCKEditorPlugin",
@@ -13584,7 +13693,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 109,
+            "line": 134,
             "description": "Initializes the editor",
             "access": "protected",
             "tagname": "",
@@ -13596,7 +13705,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 146,
+            "line": 172,
             "description": "Forwards the given event to the YUI stack",
             "itemtype": "method",
             "name": "_forwardEditorEvent",
@@ -13615,7 +13724,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 157,
+            "line": 183,
             "description": "Adds or removes the editor focused class on the view container.",
             "itemtype": "method",
             "name": "_uiHandleEditorFocus",
@@ -13632,7 +13741,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 185,
+            "line": 211,
             "description": "Checks whether the field is empty. The field is considered empty if:\n  * there's no section element\n  * or the section element has no child\n  * or the section element has only child without content",
             "itemtype": "method",
             "name": "_isEmpty",
@@ -13648,7 +13757,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 217,
+            "line": 243,
             "description": "Returns a DocumentFragment object or null if the parser failed to\nload the xhtml5edit version of the rich text field. The document\nfragment only contains the content of the root <section> element.",
             "itemtype": "method",
             "name": "_getHTMLDocumentFragment",
@@ -13662,7 +13771,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 245,
+            "line": 271,
             "description": "Serializes the Document to a string",
             "itemtype": "method",
             "name": "_serializeFieldValue",
@@ -13678,7 +13787,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 268,
+            "line": 294,
             "description": "Returns the field value suitable for the REST API based on the\ncurrent input.",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -13693,7 +13802,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 280,
+            "line": 306,
             "description": "Returns the content of the editor in the XHTML5Edit format. The\nactual editor's content is passed through a set of\nEditorContentProcessors.",
             "itemtype": "method",
             "name": "_getXHTML5EditValue",
@@ -13709,7 +13818,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 299,
+            "line": 325,
             "description": "Stores the focus mode state. When true, the rich text UI is\nsupposed to be fullscreen with an action bar on the right.",
             "itemtype": "attribute",
             "name": "focusMode",
@@ -13721,7 +13830,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 312,
+            "line": 338,
             "description": "The AlloyEditor",
             "itemtype": "attribute",
             "name": "editor",
@@ -13732,7 +13841,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 323,
+            "line": 349,
             "description": "AlloyEditor toolbar configuration",
             "itemtype": "attribute",
             "name": "toolbarsConfig",
@@ -13743,7 +13852,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 350,
+            "line": 376,
             "description": "The path to use to load the CKEditor plugins",
             "itemtype": "attribute",
             "name": "ckeditorPluginPath",
@@ -13756,20 +13865,20 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 363,
+            "line": 389,
             "description": "Editor events to forward to the YUI stack",
             "itemtype": "attribute",
             "name": "forwardEvents",
             "readonly": "",
             "type": "{Array}",
-            "default": "['contentDiscover', 'loadImageVariation']",
+            "default": "['contentDiscover', 'loadImageVariation', 'contentSearch']",
             "class": "eZ.RichTextEditView",
             "module": "ez-richtext-editview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 376,
+            "line": 402,
             "description": "Hold the list of editor content processors. Those components\nshould have a `process` method and are there to clean up the\neditor content before using it through REST.",
             "itemtype": "attribute",
             "name": "editorContentProcessors",
@@ -16160,221 +16269,6 @@
             "namespace": "eZ.Plugin"
         },
         {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 28,
-            "description": "`locationSearch` event handler. It executes the location search and\nset the result on the target of the event.",
-            "itemtype": "method",
-            "name": "_doLocationSearch",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "EventFacade",
-                    "props": [
-                        {
-                            "name": "search",
-                            "description": "",
-                            "type": "Object",
-                            "props": [
-                                {
-                                    "name": "criteria",
-                                    "description": "the search criteria used as Criteria in LocationQuery",
-                                    "type": "Object"
-                                },
-                                {
-                                    "name": "offset",
-                                    "description": "the offset for the search result",
-                                    "type": "Integer"
-                                },
-                                {
-                                    "name": "limit",
-                                    "description": "number of records returned",
-                                    "type": "Integer"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "resultAttribute",
-                            "description": "the name of attribute that will by updated with search results",
-                            "type": "String"
-                        },
-                        {
-                            "name": "resultTotalCountAttribute",
-                            "description": "the name of attribute that will be updated with total\nnumber of records matching search criteria",
-                            "type": "String"
-                        },
-                        {
-                            "name": "loadContent",
-                            "description": "the flag indicating whether the eZ.Content should be loaded for all\nof the locations searched. If it is set to *TRUE* then `content` field will be present inside\nevery search result (locationStruct)",
-                            "type": "Bool"
-                        },
-                        {
-                            "name": "loadContentType",
-                            "description": "the flag indicating whether the eZ.ContentType should be loaded for all\nof the locations searched. If it is set to *TRUE* then `contentType` field will be present inside\nevery search result (locationStruct)",
-                            "type": "Bool"
-                        }
-                    ]
-                }
-            ],
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 101,
-            "description": "Parses the search result to create the Location model and return the array of location structs.",
-            "itemtype": "method",
-            "name": "_parseSearchResult",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "result",
-                    "description": "the CAPI Response",
-                    "type": "Response"
-                }
-            ],
-            "return": {
-                "description": "ret.location",
-                "type": "eZ.Location"
-            },
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 120,
-            "description": "Creates a Location for the searchHit",
-            "itemtype": "method",
-            "name": "_createLocation",
-            "params": [
-                {
-                    "name": "searchHit",
-                    "description": "",
-                    "type": "Object"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "return": {
-                "description": "",
-                "type": "eZ.Location"
-            },
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 138,
-            "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
-            "itemtype": "method",
-            "name": "_loadResources",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "loadContentType",
-                    "description": "",
-                    "type": "Bool|undefined"
-                },
-                {
-                    "name": "loadContent",
-                    "description": "",
-                    "type": "Bool|undefined"
-                },
-                {
-                    "name": "locationStructArr",
-                    "description": "",
-                    "type": "Array"
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 181,
-            "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
-            "itemtype": "method",
-            "name": "_loadContentTypeForLocations",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "locationStructArr",
-                    "description": "",
-                    "type": "Array|Null"
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 217,
-            "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
-            "itemtype": "method",
-            "name": "_loadContentForLocations",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "locationStructArr",
-                    "description": "",
-                    "type": "Array|Null"
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 257,
-            "description": "Holds the eZ.Location constructor function",
-            "itemtype": "attribute",
-            "name": "locationModelConstructor",
-            "type": "{Function}",
-            "default": "Y.eZ.Location",
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-locationsearchplugin.js",
-            "line": 268,
-            "description": "Holds the eZ.Content constructor function",
-            "itemtype": "attribute",
-            "name": "contentModelConstructor",
-            "type": "{Function}",
-            "default": "Y.eZ.Content",
-            "class": "eZ.Plugin.LocationSearch",
-            "module": "ez-locationsearchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
             "file": "Resources/public/js/views/services/plugins/ez-locationsloadplugin.js",
             "line": 32,
             "description": "Loads locations list for content given in event facade. When loading of locations\nis finished, then it is set in `locations` attribute of the event target.",
@@ -16999,6 +16893,390 @@
             "type": "{String}",
             "class": "eZ.Plugin.SaveDraft",
             "module": "ez-savedraftplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 30,
+            "description": "Returns the content service",
+            "itemtype": "method",
+            "name": "_getContentService",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "Object"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 41,
+            "description": "Returns a ViewCreateStruct",
+            "itemtype": "method",
+            "name": "_createNewCreateViewStruct",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "search",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "criteria",
+                            "description": "",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "offset",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 72,
+            "description": "`contentSearch` event handler. It executes a content search and calls\nthe callback provided in the event parameters when done.",
+            "itemtype": "method",
+            "name": "_doContentSearch",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade",
+                    "props": [
+                        {
+                            "name": "search",
+                            "description": "",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "criteria",
+                                    "description": "the search criteria used as Criteria in ContentQuery",
+                                    "type": "Object"
+                                },
+                                {
+                                    "name": "offset",
+                                    "description": "the offset for the search result",
+                                    "type": "Integer"
+                                },
+                                {
+                                    "name": "limit",
+                                    "description": "number of records returned",
+                                    "type": "Integer"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "loadContentType",
+                            "description": "the flag indicating whether the eZ.ContentType should be loaded for all\nof the locations searched. If it is set to *TRUE* then `contentType` field will be present inside\nevery search result (struct)",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "callback",
+                            "description": "the callback to execute when the search\nis done",
+                            "type": "Function",
+                            "props": [
+                                {
+                                    "name": "error",
+                                    "description": "",
+                                    "type": "False|Error"
+                                },
+                                {
+                                    "name": "results",
+                                    "description": "array of struct objects containing a `content` property\nand optionally a `contentType` (depending on `loadContentType`)",
+                                    "type": "Array"
+                                },
+                                {
+                                    "name": "count",
+                                    "description": "the total number of search result",
+                                    "type": "Number"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 119,
+            "description": "`locationSearch` event handler. It executes the location search and\nset the result on the target of the event.",
+            "itemtype": "method",
+            "name": "_doLocationSearch",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade",
+                    "props": [
+                        {
+                            "name": "search",
+                            "description": "",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "criteria",
+                                    "description": "the search criteria used as Criteria in LocationQuery",
+                                    "type": "Object"
+                                },
+                                {
+                                    "name": "offset",
+                                    "description": "the offset for the search result",
+                                    "type": "Integer"
+                                },
+                                {
+                                    "name": "limit",
+                                    "description": "number of records returned",
+                                    "type": "Integer"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "resultAttribute",
+                            "description": "the name of attribute that will by updated with search results",
+                            "type": "String"
+                        },
+                        {
+                            "name": "resultTotalCountAttribute",
+                            "description": "the name of attribute that will be updated with total\nnumber of records matching search criteria",
+                            "type": "String"
+                        },
+                        {
+                            "name": "loadContent",
+                            "description": "the flag indicating whether the eZ.Content should be loaded for all\nof the locations searched. If it is set to *TRUE* then `content` field will be present inside\nevery search result (locationStruct)",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "loadContentType",
+                            "description": "the flag indicating whether the eZ.ContentType should be loaded for all\nof the locations searched. If it is set to *TRUE* then `contentType` field will be present inside\nevery search result (locationStruct)",
+                            "type": "Bool"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 181,
+            "description": "Parses the search result to create a model and return the array of struct",
+            "itemtype": "method",
+            "name": "_parseSearchResult",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "the CAPI Response",
+                    "type": "Response"
+                },
+                {
+                    "name": "property",
+                    "description": "the property to fill in the struct",
+                    "type": "String"
+                },
+                {
+                    "name": "methodName",
+                    "description": "the name of the method to get the model",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "ret array of stuct",
+                "type": "Array"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 204,
+            "description": "Creates a Location for the searchHit",
+            "itemtype": "method",
+            "name": "_createLocation",
+            "params": [
+                {
+                    "name": "searchHit",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "eZ.Location"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 222,
+            "itemtype": "method",
+            "name": "_createContent",
+            "params": [
+                {
+                    "name": "searchHit",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "eZ.Location"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 240,
+            "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
+            "itemtype": "method",
+            "name": "_loadResources",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "loadContentType",
+                    "description": "",
+                    "type": "Bool|undefined"
+                },
+                {
+                    "name": "loadContent",
+                    "description": "",
+                    "type": "Bool|undefined"
+                },
+                {
+                    "name": "locationStructArr",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 285,
+            "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
+            "itemtype": "method",
+            "name": "_loadContentTypeForLocations",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "locationStructArr",
+                    "description": "",
+                    "type": "Array|Null"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 321,
+            "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
+            "itemtype": "method",
+            "name": "_loadContentForLocations",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "locationStructArr",
+                    "description": "",
+                    "type": "Array|Null"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 360,
+            "description": "Holds the eZ.Location constructor function",
+            "itemtype": "attribute",
+            "name": "locationModelConstructor",
+            "type": "{Function}",
+            "default": "Y.eZ.Location",
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 371,
+            "description": "Holds the eZ.Content constructor function",
+            "itemtype": "attribute",
+            "name": "contentModelConstructor",
+            "type": "{Function}",
+            "default": "Y.eZ.Content",
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
             "namespace": "eZ.Plugin"
         },
         {
@@ -30893,19 +31171,6 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
             "line": 83,
-            "description": "Returns the ezembed widget instance for the current selection.",
-            "itemtype": "method",
-            "name": "_getWidget",
-            "return": {
-                "description": "CKEDITOR.plugins.widget"
-            },
-            "class": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
-            "module": "ez-alloyeditor-button-mixin-embeddiscovercontent",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 97,
             "description": "Sets the href of the ezembed widget based on the given content info",
             "itemtype": "method",
             "name": "_setContentInfo",
@@ -31000,14 +31265,21 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
             "line": 80,
-            "description": "Loads the 'medium' variation of the embed image by firing the\n`loadImageVariation`event.",
+            "description": "Loads the variation of the embed image by firing the\n`loadImageVariation`event.",
             "itemtype": "method",
             "name": "_loadEmbedImage",
             "params": [
                 {
-                    "name": "selection",
+                    "name": "struct",
                     "description": "",
                     "type": "Object"
+                },
+                {
+                    "name": "variation",
+                    "description": "the optional image variation to use",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "'medium'"
                 }
             ],
             "access": "protected",
@@ -31017,8 +31289,32 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js",
+            "line": 26,
+            "description": "The editor instance where the component is being used.",
+            "itemtype": "property",
+            "name": "editor",
+            "type": "Object",
+            "class": "eZ.AlloyEditorButton.WidgetButton",
+            "module": "ez-alloyeditor-button-mixin-widgetbutton",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js",
+            "line": 34,
+            "description": "Returns the ezembed widget instance for the current selection.",
+            "itemtype": "method",
+            "name": "_getWidget",
+            "return": {
+                "description": "CKEDITOR.plugins.widget"
+            },
+            "class": "eZ.AlloyEditorButton.WidgetButton",
+            "module": "ez-alloyeditor-button-mixin-widgetbutton",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/embed.js",
-            "line": 46,
+            "line": 47,
             "description": "Executes the command generated by the ezembed plugin and set the\ncorrect value based on the choosen content.",
             "itemtype": "method",
             "name": "_addEmbed",
@@ -31037,7 +31333,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/embedhref.js",
-            "line": 48,
+            "line": 49,
             "description": "Updates the emebed element with the selected content in UDW.",
             "itemtype": "method",
             "name": "_updateEmbed",
@@ -31068,7 +31364,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/image.js",
-            "line": 50,
+            "line": 51,
             "description": "Executes the command generated by the ezembed plugin and set the\ncorrect value based on the choosen image.",
             "itemtype": "method",
             "name": "_addImage",
@@ -31087,7 +31383,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/imagehref.js",
-            "line": 52,
+            "line": 53,
             "description": "Updates the image element with the selected content in UDW.",
             "itemtype": "method",
             "name": "_updateEmbed",
@@ -31105,6 +31401,87 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "line": 42,
+            "description": "Change event handler. It updates the image in the editor so that the\nnewly choosen variation is used.",
+            "itemtype": "method",
+            "name": "_updateImage",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonImageVariation",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "line": 55,
+            "description": "Fired to load the embedded Content and the corresponding Content\nType. See {{#crossLink \"eZ.Plugin.Search/_doContentSearch:method\"}}eZ.Plugin.Search#_doContentSearch{{/crossLink}}",
+            "itemtype": "event",
+            "name": "contentSearch",
+            "params": [
+                {
+                    "name": "viewName",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "search",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "criteria",
+                            "description": "",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "offset",
+                            "description": "",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "limit",
+                            "description": "",
+                            "type": "Number"
+                        }
+                    ]
+                },
+                {
+                    "name": "loadContentType",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonImageVariation",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "line": 83,
+            "description": "Returns the options to add to the drop down list.",
+            "itemtype": "method",
+            "name": "_getImageVariationOptions",
+            "return": {
+                "description": "Array"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonImageVariation",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 42,
             "description": "Executes the eZAppendContent to add a paragraph element in the editor.",
@@ -31113,7 +31490,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -31125,7 +31502,7 @@
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -31139,7 +31516,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -31153,7 +31530,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -31174,12 +31551,26 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 82,
+            "description": "Returns the `href`of the embed.",
+            "itemtype": "method",
+            "name": "getHref",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 92,
             "description": "Sets the widget content. It makes sure the config element is\nnot overwritten.",
             "itemtype": "method",
             "name": "setWidgetContent",
@@ -31195,12 +31586,12 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 108,
+            "line": 118,
             "description": "Sets a config value under the `key` for the embed.",
             "itemtype": "method",
             "name": "setConfig",
@@ -31221,12 +31612,47 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 128,
+            "line": 139,
+            "description": "Returns the config value for the `key` or undefined if the\nconfig key is not found.",
+            "itemtype": "method",
+            "name": "getConfig",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 152,
+            "description": "Returns the Element holding the config under `key`",
+            "itemtype": "method",
+            "name": "_getValueElement",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "CKEDITOR.dom.element"
+            },
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 163,
             "description": "Returns the element used as a container the config values. if\nit does not exist, it is created.",
             "itemtype": "method",
             "name": "_getEzConfigElement",
@@ -31237,12 +31663,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 147,
+            "line": 182,
             "description": "Fires the editorInteraction event so that AlloyEditor editor\nUI remains visible and is updated.",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -31256,7 +31682,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -31280,7 +31706,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -31309,7 +31735,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -31333,7 +31759,7 @@
             "itemtype": "method",
             "name": "_changeFocus",
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagehref",
+            "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -31564,7 +31990,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/image.js",
-            "line": 32,
+            "line": 33,
             "description": "Tests whether the `image` toolbar should be visible, it is visible\nwhen an ezembed widget containing an <img> is visible.",
             "itemtype": "method",
             "name": "test",

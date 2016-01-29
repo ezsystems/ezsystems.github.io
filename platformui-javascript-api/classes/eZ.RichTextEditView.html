@@ -56,10 +56,12 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedHref.html">eZ.AlloyEditorButton.ButtonEmbedHref</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedImage.html">eZ.AlloyEditorButton.ButtonEmbedImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageVariation.html">eZ.AlloyEditorButton.ButtonImageVariation</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
@@ -164,7 +166,6 @@
                                 <li><a href="../classes/eZ.Plugin.LanguageSelectionBox.html">eZ.Plugin.LanguageSelectionBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationCreate.html">eZ.Plugin.LocationCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationRemove.html">eZ.Plugin.LocationRemove</a></li>
-                                <li><a href="../classes/eZ.Plugin.LocationSearch.html">eZ.Plugin.LocationSearch</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationsLoad.html">eZ.Plugin.LocationsLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.LoginAvailable.html">eZ.Plugin.LoginAvailable</a></li>
                                 <li><a href="../classes/eZ.Plugin.NotificationHub.html">eZ.Plugin.NotificationHub</a></li>
@@ -175,6 +176,7 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterLanguageHelpers.html">eZ.Plugin.RegisterLanguageHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
+                                <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
@@ -247,6 +249,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-mixin-widgetbutton.html">ez-alloyeditor-button-mixin-widgetbutton</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-remove.html">ez-alloyeditor-button-remove</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-block-base.html">ez-alloyeditor-toolbar-config-block-base</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-embed.html">ez-alloyeditor-toolbar-config-embed</a></li>
@@ -360,6 +363,7 @@
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
+                                <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -626,6 +630,10 @@
                             </li>
                             <li class="index-item method">
                                 <a href="#method__getHTMLDocumentFragment">_getHTMLDocumentFragment</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method__getImageVariations">_getImageVariations</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -2113,7 +2121,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l146"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:146</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l172"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:172</code></a>
         </p>
 
 
@@ -2678,7 +2686,7 @@ cached value.
                 eZ.FieldEditView
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l268"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:268</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l294"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:294</code></a>
         </p>
 
 
@@ -2790,7 +2798,7 @@ implementations which need to fast-track publish for performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l217"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:217</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l243"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:243</code></a>
         </p>
 
 
@@ -2810,6 +2818,49 @@ fragment only contains the content of the root <section> element.</p>
 
             <div class="returns-description">
                         <span class="type">DocumentFragment</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getImageVariations" class="method item">
+    <h3 class="name"><code>_getImageVariations</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l99"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:99</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns an objects (<code>name</code> and <code>identifier</code>) representing the image
+variations configured in Platform sorted by name.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>Array</p>
+
             </div>
         </div>
 
@@ -3058,7 +3109,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l280"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:280</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l306"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:306</code></a>
         </p>
 
 
@@ -3445,7 +3496,7 @@ either through the constructor.ATTRS property, or explicitly passed in.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l109"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:109</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l134"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:134</code></a>
         </p>
 
 
@@ -3569,7 +3620,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l185"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:185</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l211"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:211</code></a>
         </p>
 
 
@@ -4124,7 +4175,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l99"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:99</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:124</code></a>
         </p>
 
 
@@ -4159,7 +4210,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l245"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:245</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l271"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:271</code></a>
         </p>
 
 
@@ -4932,7 +4983,7 @@ class on the view container.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l157"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:157</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l183"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:183</code></a>
         </p>
 
 
@@ -8360,7 +8411,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l350"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:350</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l376"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:376</code></a>
                             </p>
                     
                     
@@ -8530,7 +8581,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l312"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:312</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l338"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:338</code></a>
                             </p>
                     
                     
@@ -8559,7 +8610,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l376"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:376</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l402"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:402</code></a>
                             </p>
                     
                     
@@ -8680,7 +8731,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l299"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:299</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l325"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:325</code></a>
                             </p>
                     
                     
@@ -8711,7 +8762,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l363"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:363</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l389"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:389</code></a>
                             </p>
                     
                     
@@ -8722,7 +8773,7 @@ How this template gets used is entirely up to you and your custom
                     
                         </div>
                     
-                            <p><strong>Default:</strong> [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;]</p>
+                            <p><strong>Default:</strong> [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;]</p>
                     
                     
                     </div>
@@ -8801,7 +8852,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l323"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:323</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l349"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:349</code></a>
                             </p>
                     
                     

@@ -56,10 +56,12 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedHref.html">eZ.AlloyEditorButton.ButtonEmbedHref</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedImage.html">eZ.AlloyEditorButton.ButtonEmbedImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageVariation.html">eZ.AlloyEditorButton.ButtonImageVariation</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
@@ -164,7 +166,6 @@
                                 <li><a href="../classes/eZ.Plugin.LanguageSelectionBox.html">eZ.Plugin.LanguageSelectionBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationCreate.html">eZ.Plugin.LocationCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationRemove.html">eZ.Plugin.LocationRemove</a></li>
-                                <li><a href="../classes/eZ.Plugin.LocationSearch.html">eZ.Plugin.LocationSearch</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationsLoad.html">eZ.Plugin.LocationsLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.LoginAvailable.html">eZ.Plugin.LoginAvailable</a></li>
                                 <li><a href="../classes/eZ.Plugin.NotificationHub.html">eZ.Plugin.NotificationHub</a></li>
@@ -175,6 +176,7 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterLanguageHelpers.html">eZ.Plugin.RegisterLanguageHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
+                                <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
@@ -247,6 +249,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-mixin-widgetbutton.html">ez-alloyeditor-button-mixin-widgetbutton</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-remove.html">ez-alloyeditor-button-remove</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-block-base.html">ez-alloyeditor-toolbar-config-block-base</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-embed.html">ez-alloyeditor-toolbar-config-embed</a></li>
@@ -360,6 +363,7 @@
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
+                                <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -446,282 +450,20 @@
 YUI.add(&#x27;ez-locationsearchplugin&#x27;, function (Y) {
     &quot;use strict&quot;;
     /**
-     * Provides the location search plugin
+     * Provides the location search plugin. As of 1.2, this module is
+     * deprecated.
      *
      * @module ez-locationsearchplugin
+     * @deprecated Use ez-searchplugin instead.
      */
     Y.namespace(&#x27;eZ.Plugin&#x27;);
 
-    /**
-     * Location search plugin. It listens to the &#x60;locationSearch&#x60; event and
-     * execute the corresponding location search.
-     *
-     * @namespace eZ.Plugin
-     * @class LocationSearch
-     * @constructor
-     * @extends eZ.Plugin.ViewServiceBase
-     */
-    Y.eZ.Plugin.LocationSearch = Y.Base.create(&#x27;locationSearchPlugin&#x27;, Y.eZ.Plugin.ViewServiceBase, [], {
-        initializer: function () {
-            this.onHostEvent(&#x27;*:locationSearch&#x27;, this._doLocationSearch);
-        },
+    console.warn(&#x27;[DEPRECATED] ez-locationsearchplugin module and Y.eZ.Plugin.LocationSearch are deprecated&#x27;);
+    console.warn(&#x27;[DEPRECATED] ez-locationsearchplugin module and Y.eZ.Plugin.LocationSearch will be removed in PlatformUI 2.0&#x27;);
+    console.warn(&#x27;[DEPRECATED] use ez-searchplugin and Y.eZ.Plugin.Search instead&#x27;);
 
-        /**
-         * &#x60;locationSearch&#x60; event handler. It executes the location search and
-         * set the result on the target of the event.
-         *
-         * @method _doLocationSearch
-         * @protected
-         * @param {EventFacade} e
-         * @param {Object} e.search
-         * @param {Object} e.search.criteria the search criteria used as Criteria in LocationQuery
-         * @param {Integer} e.search.offset the offset for the search result
-         * @param {Integer} e.search.limit number of records returned
-         * @param {String} e.resultAttribute the name of attribute that will by updated with search results
-         * @param {String} e.resultTotalCountAttribute the name of attribute that will be updated with total
-         * number of records matching search criteria
-         * @param {Bool} e.loadContent the flag indicating whether the eZ.Content should be loaded for all
-         * of the locations searched. If it is set to *TRUE* then &#x60;content&#x60; field will be present inside
-         * every search result (locationStruct)
-         * @param {Bool} e.loadContentType the flag indicating whether the eZ.ContentType should be loaded for all
-         * of the locations searched. If it is set to *TRUE* then &#x60;contentType&#x60; field will be present inside
-         * every search result (locationStruct)
-         */
-        _doLocationSearch: function (e) {
-            var service = this.get(&#x27;host&#x27;),
-                listView = e.target,
-                contentService = service.get(&#x27;capi&#x27;).getContentService(),
-                query;
-
-            query = contentService.newViewCreateStruct(e.viewName, &#x27;LocationQuery&#x27;);
-            // TODO ViewCreateStruct should expose an API
-            // see https://jira.ez.no/browse/EZP-24808
-            query.body.ViewInput.LocationQuery.Criteria = e.search.criteria;
-            query.body.ViewInput.LocationQuery.offset = e.search.offset;
-            query.body.ViewInput.LocationQuery.limit = e.search.limit;
-
-            // not yet supported by the REST API
-            // see eZ.SubItemListView and https://jira.ez.no/browse/EZP-24315
-            // query.body.ViewInput.LocationQuery.SortClauses = e.search.sortClauses;
-
-            contentService.createView(query, Y.bind(function (error, result) {
-                var attrs = {&#x27;loadingError&#x27;: true};
-
-                if ( !error ) {
-                    var parsedResult = this._parseSearchResult(result);
-
-                    attrs.loadingError = false;
-                    if (e.resultTotalCountAttribute) {
-                        attrs[e.resultTotalCountAttribute] = result.document.View.Result.count;
-                    }
-                    attrs[e.resultAttribute] = parsedResult;
-                }
-
-                if (e.loadContentType || e.loadContent) {
-                    this._loadResources(
-                        e.viewName,
-                        e.loadContentType,
-                        e.loadContent,
-                        attrs[e.resultAttribute],
-                        function (error, locationStructArr){
-                            if (error) {
-                                attrs = {&#x27;loadingError&#x27;: true};
-                            }
-
-                            attrs[e.resultAttribute] = locationStructArr;
-
-                            listView.setAttrs(attrs);
-                        }
-                    );
-                } else {
-                    listView.setAttrs(attrs);
-                }
-            }, this));
-        },
-
-        /**
-         * Parses the search result to create the Location model and return the array of location structs.
-         *
-         * @method _parseSearchResult
-         * @protected
-         * @param {Response} result the CAPI Response
-         * @return {Array} ret array of location structs
-         * @return {eZ.Location} ret.location
-         */
-        _parseSearchResult: function (result) {
-            var ret = [];
-
-            Y.Array.each(result.document.View.Result.searchHits.searchHit, function (hit) {
-                ret.push({location: this._createLocation(hit)});
-            }, this);
-
-            return ret;
-        },
-
-        /**
-         * Creates a Location for the searchHit
-         *
-         * @method _createLocation
-         * @param {Object} searchHit
-         * @protected
-         * @return {eZ.Location}
-         */
-        _createLocation: function (searchHit) {
-            var Location = this.get(&#x27;locationModelConstructor&#x27;),
-                location;
-
-            location = new Location();
-            location.loadFromHash(searchHit.value.Location);
-
-            return location;
-        },
-
-        /**
-         * Loads resources for the given array of location structs. Depending on given
-         * &#x60;loadContentType&#x60; and &#x60;loadContent&#x60; bool parameters it loads Content and ContentType
-         * and includes them into the location structs.
-         *
-         * @method _loadResources
-         * @protected
-         * @param {Bool|undefined} loadContentType
-         * @param {Bool|undefined} loadContent
-         * @param {Array} locationStructArr
-         * @param {Function} callback
-         */
-        _loadResources: function (viewName, loadContentType, loadContent, locationStructArr, callback) {
-            var tasks = new Y.Parallel(),
-                loadResourcesError = false;
-
-            if (loadContentType) {
-                var endContentTypeLoad = tasks.add(function (error, response) {
-                        if (error) {
-                            loadResourcesError = true;
-                            return;
-                        }
-                    });
-
-                this._loadContentTypeForLocations(locationStructArr, endContentTypeLoad);
-            }
-
-            if (loadContent) {
-                var endContentLoad = tasks.add(function (error, response) {
-                        if (error) {
-                            loadResourcesError = true;
-                            return;
-                        }
-                    });
-
-                this._loadContentForLocations(viewName, locationStructArr, endContentLoad);
-            }
-
-            tasks.done(function () {
-                callback(loadResourcesError, locationStructArr);
-            });
-        },
-
-        /**
-         * Loads ContentType for each location struct in given array and puts it in the new &#x60;contentType&#x60;
-         * field for the location struct.
-         *
-         * @method _loadContentTypeForLocations
-         * @protected
-         * @param {Array|Null} locationStructArr
-         * @param {Function} callback
-         */
-        _loadContentTypeForLocations: function (locationStructArr, callback) {
-            var tasks = new Y.Parallel(),
-                loadContentTypeError = false;
-
-            Y.Array.each(locationStructArr, function (locationStruct, i) {
-                var contentType = new Y.eZ.ContentType(
-                        {id: locationStruct.location.get(&#x27;contentInfo&#x27;).get(&#x27;resources&#x27;).ContentType}
-                    ),
-                    capi = this.get(&#x27;host&#x27;).get(&#x27;capi&#x27;),
-                    options = {api: capi},
-                    endContentTypeLoad = tasks.add(function (error, response) {
-                        if (error) {
-                            loadContentTypeError = true;
-                            return;
-                        }
-
-                        locationStructArr[i].contentType = contentType;
-                    });
-
-                contentType.load(options, endContentTypeLoad);
-            }, this);
-
-            tasks.done(function () {
-                callback(loadContentTypeError, locationStructArr);
-            });
-        },
-
-        /**
-         * Loads Content for each location struct in given array and puts it in the new &#x60;content&#x60;
-         * field for the location struct.
-         *
-         * @method _loadContentForLocations
-         * @protected
-         * @param {Array|Null} locationStructArr
-         * @param {Function} callback
-         */
-        _loadContentForLocations: function (viewName, locationStructArr, callback) {
-            var contentService = this.get(&#x27;host&#x27;).get(&#x27;capi&#x27;).getContentService(),
-                contentIds,
-                Content = this.get(&#x27;contentModelConstructor&#x27;),
-                query;
-
-            contentIds = Y.Array.reduce(locationStructArr, &#x27;&#x27;, function (previousId, struct) {
-                return previousId + &quot;,&quot; + struct.location.get(&#x27;contentInfo&#x27;).get(&#x27;contentId&#x27;);
-            });
-
-            query = contentService.newViewCreateStruct(&#x27;contents-loading-&#x27; + viewName, &#x27;ContentQuery&#x27;);
-            query.body.ViewInput.ContentQuery.Criteria = {
-                &quot;ContentIdCriterion&quot;: contentIds
-            };
-
-            contentService.createView(query, function (err, response) {
-                if (err) {
-                    callback(err, locationStructArr);
-                    return;
-                }
-                Y.Array.each(response.document.View.Result.searchHits.searchHit, function (hit, i) {
-                    locationStructArr[i].content = new Content();
-                    locationStructArr[i].content.loadFromHash(hit.value.Content);
-                });
-                callback(err, locationStructArr);
-            });
-        },
-    }, {
-        NS: &#x27;locationSearch&#x27;,
-
-        ATTRS: {
-            /**
-             * Holds the eZ.Location constructor function
-             *
-             * @attribute locationModelConstructor
-             * @type {Function}
-             * @default Y.eZ.Location
-             */
-            locationModelConstructor: {
-                value: Y.eZ.Location
-            },
-
-            /**
-             * Holds the eZ.Content constructor function
-             *
-             * @attribute contentModelConstructor
-             * @type {Function}
-             * @default Y.eZ.Content
-             */
-            contentModelConstructor: {
-                value: Y.eZ.Content
-            }
-        },
-    });
-
-    Y.eZ.PluginRegistry.registerPlugin(
-        Y.eZ.Plugin.LocationSearch, [&#x27;locationViewViewService&#x27;, &#x27;universalDiscoveryViewService&#x27;]
-    );
+    Y.eZ.Plugin.LocationSearch = Y.eZ.Plugin.Search;
+    Y.eZ.Plugin.LocationSearch.NS = &#x27;locationSearch&#x27;;
 });
 
     </pre>

@@ -56,10 +56,12 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedHref.html">eZ.AlloyEditorButton.ButtonEmbedHref</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedImage.html">eZ.AlloyEditorButton.ButtonEmbedImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageVariation.html">eZ.AlloyEditorButton.ButtonImageVariation</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
@@ -164,7 +166,6 @@
                                 <li><a href="../classes/eZ.Plugin.LanguageSelectionBox.html">eZ.Plugin.LanguageSelectionBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationCreate.html">eZ.Plugin.LocationCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationRemove.html">eZ.Plugin.LocationRemove</a></li>
-                                <li><a href="../classes/eZ.Plugin.LocationSearch.html">eZ.Plugin.LocationSearch</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationsLoad.html">eZ.Plugin.LocationsLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.LoginAvailable.html">eZ.Plugin.LoginAvailable</a></li>
                                 <li><a href="../classes/eZ.Plugin.NotificationHub.html">eZ.Plugin.NotificationHub</a></li>
@@ -175,6 +176,7 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterLanguageHelpers.html">eZ.Plugin.RegisterLanguageHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
+                                <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
@@ -247,6 +249,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-mixin-widgetbutton.html">ez-alloyeditor-button-mixin-widgetbutton</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-remove.html">ez-alloyeditor-button-remove</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-block-base.html">ez-alloyeditor-toolbar-config-block-base</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-embed.html">ez-alloyeditor-toolbar-config-embed</a></li>
@@ -360,6 +363,7 @@
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
+                                <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -521,6 +525,16 @@ YUI.add(&#x27;ez-alloyeditor-plugin-embed&#x27;, function (Y) {
                 },
 
                 /**
+                 * Returns the &#x60;href&#x60;of the embed.
+                 *
+                 * @method getHref
+                 * @return {String}
+                 */
+                getHref: function () {
+                    return this.element.data(&#x27;href&#x27;);
+                },
+
+                /**
                  * Sets the widget content. It makes sure the config element is
                  * not overwritten.
                  *
@@ -555,7 +569,8 @@ YUI.add(&#x27;ez-alloyeditor-plugin-embed&#x27;, function (Y) {
                  * @return {CKEDITOR.plugins.widget}
                  */
                 setConfig: function (key, value) {
-                    var valueElement = this.element.findOne(&#x27;[data-ezelement=&quot;ezvalue&quot;][data-ezvalue-key=&quot;&#x27; + key + &#x27;&quot;]&#x27;);
+                    var valueElement = this._getValueElement(key);
+
                     if ( !valueElement ) {
                         valueElement = new CKEDITOR.dom.element(&#x27;span&#x27;);
                         valueElement.data(&#x27;ezelement&#x27;, &#x27;ezvalue&#x27;);
@@ -564,6 +579,30 @@ YUI.add(&#x27;ez-alloyeditor-plugin-embed&#x27;, function (Y) {
                     }
                     valueElement.setText(value);
                     return this;
+                },
+
+                /**
+                 * Returns the config value for the &#x60;key&#x60; or undefined if the
+                 * config key is not found.
+                 *
+                 * @method getConfig
+                 * @return {String}
+                 */
+                getConfig: function (key) {
+                    var valueElement = this._getValueElement(key);
+
+                    return valueElement ? valueElement.getText() : undefined;
+                },
+
+                /**
+                 * Returns the Element holding the config under &#x60;key&#x60;
+                 *
+                 * @method _getValueElement
+                 * @param {String} key
+                 * @return {CKEDITOR.dom.element}
+                 */
+                _getValueElement: function (key) {
+                    return this.element.findOne(&#x27;[data-ezelement=&quot;ezvalue&quot;][data-ezvalue-key=&quot;&#x27; + key + &#x27;&quot;]&#x27;);
                 },
 
                 /**
