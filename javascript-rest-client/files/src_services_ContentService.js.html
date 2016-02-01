@@ -1420,11 +1420,11 @@ define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpda
     };
 
 // ******************************
-// Thrash management
+// Trash management
 // ******************************
 
     /**
-     *  Loads all the thrash can items
+     *  Loads all the trash can items
      *
      * @method loadTrashItems
      * @param [limit=-1] {Number} the number of results returned
@@ -1474,7 +1474,7 @@ define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpda
     };
 
     /**
-     *  Loads target thrash can item
+     *  Loads target trash can item
      *
      * @method loadTrashItem
      * @param trashItemId {String} target trash item identifier (e.g. &quot;/api/ezp/v2/content/trash/1&quot;)
@@ -1543,8 +1543,25 @@ define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpda
      * @method emptyThrash
      * @param callback {Function} callback executed after performing the request (see
      *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @deprecated since 1.1 and will be removed in 2.0. Is replaced &#x60;emptyTrash&#x60; which has the same behavior
+     *
      */
     ContentService.prototype.emptyThrash = function (callback) {
+        console.warn(&#x27;[DEPRECATED] ContentService.emptyThrash is deprecated&#x27;);
+        console.warn(&#x27;[DEPRECATED] ContentService.emptyThrash is deprecated will be removed in eZ JS REST client 2.0&#x27;);
+        console.warn(&#x27;[DEPRECATED] use ContentService.emptyTrash instead&#x27;);
+
+        this.emptyTrash(callback);
+    };
+
+    /**
+     *  Empty the trash can
+     *
+     * @method emptyTrash
+     * @param callback {Function} callback executed after performing the request (see
+     *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     */
+    ContentService.prototype.emptyTrash = function (callback) {
         var that = this;
 
         this._discoveryService.getInfoObject(
