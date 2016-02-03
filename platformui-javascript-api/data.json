@@ -2315,6 +2315,15 @@
                 "eZ.AlloyEditorButton": 1
             }
         },
+        "Resources/public/js/alloyeditor/buttons/list.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/list.js",
+            "modules": {},
+            "classes": {
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "Resources/public/js/alloyeditor/buttons/paragraph.js": {
             "name": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "modules": {},
@@ -4978,6 +4987,7 @@
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage": 1,
                 "eZ.AlloyEditorButton.ButtonImageVariation": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
                 "CKEDITOR.plugins.ezaddcontent": 1,
                 "CKEDITOR.plugins.ezembed": 1,
@@ -8142,6 +8152,24 @@
                 "Y.eZ.AlloyEditorButton.WidgetButton"
             ]
         },
+        "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": {
+            "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
+            "shortname": "eZ.AlloyEditor.ButtonList",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/list.js",
+            "line": 17,
+            "description": "The ButtonList component represents a button to add an unordered list (ul).",
+            "uses": [
+                "AlloyEditor.ButtonCommand",
+                "AlloyEditor.ButtonStateClasses"
+            ]
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
             "shortname": "eZ.AlloyEditor.ButtonParagraph",
@@ -8171,7 +8199,7 @@
             "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 64,
+            "line": 68,
             "description": "CKEditor plugin providing the eZAddContent command. This command\nallows to add content  to the editor content in the editable region\npointed by the selector available under `eZ.editableRegion` in the\nconfiguration.",
             "is_constructor": 1
         },
@@ -31478,6 +31506,18 @@
                 "description": "Array"
             },
             "class": "eZ.AlloyEditorButton.ButtonImageVariation",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/list.js",
+            "line": 42,
+            "description": "Executes the eZAppendContent command to add an unordered list containing\nan empty list item.",
+            "itemtype": "method",
+            "name": "_addList",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
             "module": "ez-alloyeditor-button-remove",
             "namespace": "eZ.AlloyEditorButton"
         },
