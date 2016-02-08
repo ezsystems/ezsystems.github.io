@@ -214,6 +214,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
                                 <li><a href="../classes/eZ.TrashViewService.html">eZ.TrashViewService</a></li>
@@ -381,6 +382,7 @@
                                 <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
                                 <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
                                 <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-trashbarview.html">ez-trashbarview</a></li>
                                 <li><a href="../modules/ez-trashitemmodel.html">ez-trashitemmodel</a></li>
                                 <li><a href="../modules/ez-trashview.html">ez-trashview</a></li>
                                 <li><a href="../modules/ez-trashviewservice.html">ez-trashviewservice</a></li>
@@ -448,7 +450,7 @@
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_views_ez-trashview.js.html#l14"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:14</code></a>
+            Defined in: <a href="../files/Resources_public_js_views_ez-trashview.js.html#l16"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:16</code></a>
         </div>
 
             Module: <a href="../modules/ez-trashview.html">ez-trashview</a>
@@ -478,7 +480,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l14"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:14</code></a>
+        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l16"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:16</code></a>
         </p>
 
 
@@ -633,6 +635,10 @@
                                 <a href="#method__getType">_getType</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__handleMinimizeTrashBar">_handleMinimizeTrashBar</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__hasPotentialSubscribers">_hasPotentialSubscribers</a>
 
@@ -712,6 +718,10 @@
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__setTemplate">_setTemplate</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method__uiSetMinHeight">_uiSetMinHeight</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -908,6 +918,9 @@
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_initialized">initialized</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_trashBar">trashBar</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_trashItems">trashItems</a>
@@ -1444,7 +1457,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l40"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:40</code></a>
+        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:74</code></a>
         </p>
 
 
@@ -2704,6 +2717,38 @@ where the calling method has already obtained the config from state.
         If the instance has a prefix attribute and the
 event type is not prefixed, the instance prefix is
 applied to the supplied type.
+    </div>
+
+
+
+
+</div>
+<div id="method__handleMinimizeTrashBar" class="method item protected">
+    <h3 class="name"><code>_handleMinimizeTrashBar</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l29"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:29</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Event handler for the minimizeTrashBarAction event</p>
+
     </div>
 
 
@@ -4104,6 +4149,38 @@ internal state object, or the state proxy if it exits
 searched in the template registry and then in the DOM. The id of the
 template (both in the registry and in the DOM) is the name of the
 view in lowercase with the suffix <code>-ez-template</code>.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method__uiSetMinHeight" class="method item private">
+    <h3 class="name"><code>_uiSetMinHeight</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:60</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets the minimum height of the view</p>
 
     </div>
 
@@ -6496,7 +6573,7 @@ but doesn't destroy it or any event listeners attached to it.
                 View
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l24"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:24</code></a>
+        <a href="../files/Resources_public_js_views_ez-trashview.js.html#l39"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:39</code></a>
         </p>
 
 
@@ -7237,6 +7314,35 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
+                    <div id="attr_trashBar" class="attr item">
+                        <a name="config_trashBar"></a> 
+                        <h3 class="name"><code>trashBar</code></h3>
+                        <span class="type"><a href="../classes/eZ.BarView.html" class="crosslink">eZ.BarView</a></span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_ez-trashview.js.html#l115"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:115</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The trash bar instance, by default an instance <a href="../classes/eZ.TrashBarView.html" class="crosslink">eZ.TrashBarView</a></p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
                     <div id="attr_trashItems" class="attr item">
                         <a name="config_trashItems"></a> 
                         <h3 class="name"><code>trashItems</code></h3>
@@ -7253,7 +7359,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-trashview.js.html#l59"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:59</code></a>
+                            <a href="../files/Resources_public_js_views_ez-trashview.js.html#l100"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-trashview.js:100</code></a>
                             </p>
                     
                     

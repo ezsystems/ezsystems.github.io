@@ -214,6 +214,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
                                 <li><a href="../classes/eZ.TrashViewService.html">eZ.TrashViewService</a></li>
@@ -381,6 +382,7 @@
                                 <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
                                 <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
                                 <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-trashbarview.html">ez-trashbarview</a></li>
                                 <li><a href="../modules/ez-trashitemmodel.html">ez-trashitemmodel</a></li>
                                 <li><a href="../modules/ez-trashview.html">ez-trashview</a></li>
                                 <li><a href="../modules/ez-trashviewservice.html">ez-trashviewservice</a></li>
@@ -572,6 +574,7 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
          */
         initializer: function () {
             this.on(&quot;logOut&quot;, this._destroySideViews);
+            this.on(&quot;*:refreshView&quot;, this._refreshView);
             this._dispatchConfig();
             /**
              * Stores the initial title of the page so it can be used when
@@ -617,6 +620,16 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
                     delete viewInfo.serviceInstance;
                 }
             });
+        },
+
+        /**
+         * Refreshes the current view
+         *
+         * @method _refreshView
+         * @protected
+         */
+        _refreshView: function () {
+            this.navigate(window.location.href);
         },
 
         /**
@@ -838,7 +851,7 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
         /**
          * Middleware to handle the *side views* configured for the given route.
          * Depending on the configuration, it will apply the CSS class to
-         * show/hide the side views. If a side view is not explicitely
+         * show/hide the side views. If a side view is not explicitly
          * configured to be displayed, it is hidden.
          *
          * @method handleSideViews
@@ -985,7 +998,7 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
          * @protected
          * @method _attachView
          * @param {View} view
-         * @param {Boolean} preprend
+         * @param {Boolean} prepend
          */
         _attachView: function (view, prepend) {
             var viewInfo = this.getViewInfo(view);
@@ -1168,7 +1181,7 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
          *
          * @method _setTitle
          * @protected
-         * @param {View} the active view
+         * @param {View} view the active view
          */
         _setTitle: function (view) {
             if ( typeof view.getTitle === &#x27;function&#x27; ) {

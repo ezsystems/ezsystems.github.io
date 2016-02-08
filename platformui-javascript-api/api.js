@@ -176,6 +176,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TextBlockEditView",
         "eZ.TextLineEditView",
         "eZ.TranslateActionView",
+        "eZ.TrashBarView",
         "eZ.TrashItem",
         "eZ.TrashView",
         "eZ.TrashViewService",
@@ -342,6 +343,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-textline-editview",
         "ez-time-editview",
         "ez-translateactionview",
+        "ez-trashbarview",
         "ez-trashitemmodel",
         "ez-trashview",
         "ez-trashviewservice",
@@ -1074,6 +1076,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-translateactionview",
             "name": "ez-translateactionview",
             "description": "Provides the translate action view class"
+        },
+        {
+            "displayName": "ez-trashbarview",
+            "name": "ez-trashbarview",
+            "description": "Provides the Trash Bar class"
         },
         {
             "displayName": "ez-trashitemmodel",

@@ -214,6 +214,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
                                 <li><a href="../classes/eZ.TrashViewService.html">eZ.TrashViewService</a></li>
@@ -381,6 +382,7 @@
                                 <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
                                 <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
                                 <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-trashbarview.html">ez-trashbarview</a></li>
                                 <li><a href="../modules/ez-trashitemmodel.html">ez-trashitemmodel</a></li>
                                 <li><a href="../modules/ez-trashview.html">ez-trashview</a></li>
                                 <li><a href="../modules/ez-trashviewservice.html">ez-trashviewservice</a></li>
@@ -844,6 +846,10 @@
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__queue">_queue</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__refreshView">_refreshView</a>
 
                             </li>
                             <li class="index-item method protected inherited">
@@ -1659,7 +1665,7 @@ For example, if:
                 App.Base
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l674"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:674</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l685"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:685</code></a>
         </p>
 
 
@@ -1864,7 +1870,7 @@ attribute configuration has cloneDefaultValue set to shallow or deep).
                         <code>view</code>
                 </li>
                 <li class="arg">
-                        <code>preprend</code>
+                        <code>prepend</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -1883,7 +1889,7 @@ attribute configuration has cloneDefaultValue set to shallow or deep).
                 App.Base
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l534"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:534</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l545"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:545</code></a>
         </p>
 
 
@@ -1912,7 +1918,7 @@ service.</p>
 
                 </li>
                 <li class="param">
-                        <code class="param-name">preprend</code>
+                        <code class="param-name">prepend</code>
                         <span class="type">Boolean</span>
 
 
@@ -2622,7 +2628,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l157"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:157</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:158</code></a>
         </p>
 
 
@@ -2782,7 +2788,7 @@ event on every pageview) and other browsers (which do not).
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l176"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:176</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l187"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:187</code></a>
         </p>
 
 
@@ -4589,7 +4595,7 @@ is first prefixed with the current scheme before being evaluated.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l516"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:516</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l527"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:527</code></a>
         </p>
 
 
@@ -5415,7 +5421,7 @@ router._joinURL('/bar'); // =&gt; '/foo/bar'</code></pre>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l658"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:658</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l669"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:669</code></a>
         </p>
 
 
@@ -6477,6 +6483,38 @@ queued function is executed.
 
 
 </div>
+<div id="method__refreshView" class="method item protected">
+    <h3 class="name"><code>_refreshView</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l177"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:177</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Refreshes the current view</p>
+
+    </div>
+
+
+
+
+</div>
 <div id="method__resolvePath" class="method item protected inherited">
     <h3 class="name"><code>_resolvePath</code></h3>
 
@@ -7318,7 +7356,7 @@ internal state object, or the state proxy if it exits
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>the</code>
+                        <code>view</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -7334,7 +7372,7 @@ internal state object, or the state proxy if it exits
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l718"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:718</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l729"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:729</code></a>
         </p>
 
 
@@ -7353,12 +7391,12 @@ title.</p>
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">the</code>
+                        <code class="param-name">view</code>
                         <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/View.html" class="crosslink external" target="_blank">View</a></span>
 
 
                     <div class="param-description">
-                        <p>active view</p>
+                        <p>the active view</p>
 
                     </div>
 
@@ -7471,7 +7509,7 @@ When specified as <code>true</code>, the defaults will be use as specified by th
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l451"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:451</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l462"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:462</code></a>
         </p>
 
 
@@ -8488,7 +8526,7 @@ callback, object (method host), methodName, context, 0-n arguments
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l556"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:556</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l567"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:567</code></a>
         </p>
 
 
@@ -9393,7 +9431,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:219</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l230"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:230</code></a>
         </p>
 
 
@@ -9610,7 +9648,7 @@ the <code>views</code> object.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l592"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:592</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l603"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:603</code></a>
         </p>
 
 
@@ -9690,7 +9728,7 @@ metadata</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l392"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:392</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l403"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:403</code></a>
         </p>
 
 
@@ -9700,7 +9738,7 @@ metadata</p>
     <div class="description">
         <p>Middleware to handle the <em>side views</em> configured for the given route.
 Depending on the configuration, it will apply the CSS class to
-show/hide the side views. If a side view is not explicitely
+show/hide the side views. If a side view is not explicitly
 configured to be displayed, it is hidden.</p>
 
     </div>
@@ -9836,7 +9874,7 @@ always return <code>false</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l441"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:441</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l452"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:452</code></a>
         </p>
 
 
@@ -9988,7 +10026,7 @@ and invokes initializers for the class hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l345"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:345</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l356"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:356</code></a>
         </p>
 
 
@@ -10178,7 +10216,7 @@ response objects:
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l281"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:281</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l292"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:292</code></a>
         </p>
 
 
@@ -10267,7 +10305,7 @@ entries</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l321"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:321</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l332"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:332</code></a>
         </p>
 
 
@@ -10636,7 +10674,7 @@ should occur even in browsers without HTML5 history. Will default to
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l270"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:270</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l281"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:281</code></a>
         </p>
 
 
@@ -11053,7 +11091,7 @@ listener is immediatelly detached when it is executed.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l375"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:375</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l386"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:386</code></a>
         </p>
 
 
@@ -12363,7 +12401,7 @@ router.route('/users/:user', 'findUser', function (req, res, next) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l238"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:238</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l249"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:249</code></a>
         </p>
 
 
@@ -12852,7 +12890,7 @@ app's <code>views</code>, or an object with the following properties:</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l419"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:419</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l430"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:430</code></a>
         </p>
 
 
@@ -13500,7 +13538,7 @@ subscription.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:130</code></a>
+        <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l131"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:131</code></a>
         </p>
 
 
@@ -14130,7 +14168,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l987"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:987</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l998"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:998</code></a>
                             </p>
                     
                     
@@ -14231,7 +14269,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l998"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:998</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l1009"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:1009</code></a>
                             </p>
                     
                     
@@ -14261,7 +14299,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l920"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:920</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l931"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:931</code></a>
                             </p>
                     
                     
@@ -14292,7 +14330,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l933"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:933</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l944"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:944</code></a>
                             </p>
                     
                     
@@ -14324,7 +14362,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l959"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:959</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l970"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:970</code></a>
                             </p>
                     
                     
@@ -14354,7 +14392,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l908"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:908</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l919"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:919</code></a>
                             </p>
                     
                     
@@ -14615,7 +14653,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l946"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:946</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l957"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:957</code></a>
                             </p>
                     
                     
@@ -14775,7 +14813,7 @@ var app = new Y.App({
                                     Router
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l736"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:736</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l747"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:747</code></a>
                             </p>
                     
                     
@@ -14956,7 +14994,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l1010"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:1010</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l1021"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:1021</code></a>
                             </p>
                     
                     
@@ -15089,7 +15127,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l973"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:973</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l984"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:984</code></a>
                             </p>
                     
                     
@@ -15266,7 +15304,7 @@ var app = new Y.App({
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l332"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:332</code></a>
+                            <a href="../files/Resources_public_js_apps_ez-platformuiapp.js.html#l343"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;ez-platformuiapp.js:343</code></a>
                             </p>
                     
                     
