@@ -463,6 +463,9 @@ YUI.add(&#x27;ez-roleserversideview&#x27;, function (Y) {
             &#x27;.ez-role-assign-button&#x27;: {
                 &#x27;tap&#x27;: &#x27;_pickSubtree&#x27;
             },
+            &#x27;.ez-pick-location-limitation-button&#x27;: {
+                &#x27;tap&#x27;: &#x27;_pickLocationLimitation&#x27;
+            },
         };
 
     /**
@@ -489,10 +492,10 @@ YUI.add(&#x27;ez-roleserversideview&#x27;, function (Y) {
          */
         _pickSubtree: function (e) {
             var button = e.target,
-                unsetLoading = Y.bind(this._uiUnsetAssignRoleLoading, this, button);
+                unsetLoading = Y.bind(this._uiUnsetUDWButtonLoading, this, button);
 
             e.preventDefault();
-            this._uiSetAssignRoleLoading(button);
+            this._uiSetUDWButtonLoading(button);
             this.fire(&#x27;contentDiscover&#x27;, {
                 config: {
                     title: button.getAttribute(&#x27;data-universaldiscovery-title&#x27;),
@@ -508,26 +511,131 @@ YUI.add(&#x27;ez-roleserversideview&#x27;, function (Y) {
         },
 
         /**
-         * Changes the state of the provided assign button to be *loading* and
-         * to be disabled
+         * tap event handler for policy limitation on location (&quot;Node&quot;). It launches the
+         * universal discovery widget so that the user can pick a location.
          *
-         * @method _uiSetAssignRoleLoading
+         * @method _pickLocationLimitation
+         * @protected
+         * @param {EventFacade} e
+         */
+        _pickLocationLimitation: function (e) {
+            var button = e.target,
+                unsetLoading = Y.bind(this._uiUnsetUDWButtonLoading, this, button);
+
+            e.preventDefault();
+            this._uiSetUDWButtonLoading(button);
+            this.fire(&#x27;contentDiscover&#x27;, {
+                config: {
+                    title: button.getAttribute(&#x27;data-universaldiscovery-title&#x27;),
+                    cancelDiscoverHandler: unsetLoading,
+                    multiple: true,
+                    contentDiscoveredHandler: Y.bind(this._setLocationLimitation, this, button),
+                },
+            });
+        },
+
+        /**
+         * Puts picked location id into location limitation input. Input is selected by the selector
+         * provided in the &#x60;data-location-input-selector&#x60; attribute of the button, for example
+         * &lt;button data-location-input-selector=&quot;#id_of_input&quot;&gt;&lt;/button&gt;
+         *
+         * @method _setLocationLimitation
+         * @protected
+         * @param {Y.Node} button
+         * @param {EventFacade} e
+         */
+        _setLocationLimitation: function (button, e) {
+            this._emptyLocationList(button);
+            this._emptyLocationIdHiddenInput(button);
+
+            Y.Array.each(e.selection, function (struct) {
+                this._addLocationToDisplayList(button, struct.contentInfo);
+                this._addLocationIdToHiddenInput(button, struct.location.get(&#x27;locationId&#x27;));
+            }, this);
+
+            this._uiUnsetUDWButtonLoading(button);
+        },
+
+        /**
+         * Empties the existing list of selected locations.
+         *
+         * @method _emptyLocationList
          * @protected
          * @param {Y.Node} button
          */
-        _uiSetAssignRoleLoading: function (button) {
+        _emptyLocationList: function (button) {
+            var selectedLocationList = this.get(&#x27;container&#x27;).one(button.getAttribute(&#x27;data-selected-location-list-selector&#x27;));
+
+            selectedLocationList.empty();
+        },
+
+        /**
+         * Empties the content of the hidden input field for selected locations.
+         *
+         * @method _emptyLocationIdHiddenInput
+         * @protected
+         * @param {Y.Node} button
+         */
+        _emptyLocationIdHiddenInput: function (button) {
+            var locationInput = this.get(&#x27;container&#x27;).one(button.getAttribute(&#x27;data-location-input-selector&#x27;));
+
+            locationInput.setAttribute(&#x27;value&#x27;, &#x27;&#x27;);
+        },
+
+        /**
+         * Adds a location to the list of selected locations.
+         *
+         * @method _addLocationToDisplayList
+         * @protected
+         * @param {Y.Node} button
+         * @param {eZ.ContentInfo} contentInfo
+         */
+        _addLocationToDisplayList: function (button, contentInfo) {
+            var selectedLocationList = this.get(&#x27;container&#x27;).one(button.getAttribute(&#x27;data-selected-location-list-selector&#x27;));
+
+            selectedLocationList.appendChild(Y.Node.create(&#x27;&lt;li&gt;&#x27; + Y.Escape.html(contentInfo.get(&#x27;name&#x27;)) + &#x27;&lt;/li&gt;&#x27;));
+        },
+
+        /**
+         * Adds a location to the hidden input field for selected locations.
+         *
+         * @method _addLocationIdToHiddenInput
+         * @protected
+         * @param {Y.Node} button
+         * @param {String} locationId
+         */
+        _addLocationIdToHiddenInput: function (button, locationId) {
+            var locationInput = this.get(&#x27;container&#x27;).one(button.getAttribute(&#x27;data-location-input-selector&#x27;)),
+                existingLocationsStr = locationInput.getAttribute(&#x27;value&#x27;);
+
+            if (existingLocationsStr.length &gt; 0) {
+                locationInput.setAttribute(&#x27;value&#x27;, existingLocationsStr.concat(&#x27;,&#x27;, locationId));
+            } else {
+                locationInput.setAttribute(&#x27;value&#x27;, locationId);
+            }
+        },
+
+        /**
+         * Changes the state of the provided UDW button to be *loading* and
+         * to be disabled
+         *
+         * @method _uiSetUDWButtonLoading
+         * @protected
+         * @param {Y.Node} button
+         */
+        _uiSetUDWButtonLoading: function (button) {
             button.addClass(&#x27;is-loading&#x27;).set(&#x27;disabled&#x27;, true);
         },
 
         /**
-         * Changes the state of the provided assign button to not be *loading*
+         * Changes the state of the provided UDW button to not be *loading*
          * and to be enabled.
          *
-         * @method _uiUnsetAssignRoleLoading
+         * @method _uiUnsetUDWButtonLoading
          * @protected
          * @param {Y.Node} button
          */
-        _uiUnsetAssignRoleLoading: function (button) {
+        _uiUnsetUDWButtonLoading: function (button) {
             button.removeClass(&#x27;is-loading&#x27;).set(&#x27;disabled&#x27;, false);
         },
     });

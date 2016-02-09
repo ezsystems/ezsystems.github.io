@@ -470,8 +470,24 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
     Y.eZ.RoleServerSideViewService = Y.Base.create(&#x27;roleServerSideViewService&#x27;, Y.eZ.ServerSideViewService, [], {
         initializer: function () {
             this.on(&#x27;*:contentDiscover&#x27;, function (e) {
-                e.config.contentDiscoveredHandler = Y.bind(this._assignRole, this);
+                // If we&#x27;re not discovering for a role assignment, the contentDiscoveredHandler is already set
+                if (this._isDiscoveringForAssigningRole(e)) {
+                    e.config.contentDiscoveredHandler = Y.bind(this._assignRole, this);
+                }
             });
+        },
+
+        /**
+         * Return true if we are in the process of assigning a role.
+         *
+         * @method _isDiscoveringForAssigningRole
+         * @protected
+         * @param {EventFacade} e
+         */
+        _isDiscoveringForAssigningRole: function (e) {
+            var data = e.config.data;
+
+            return data !== undefined &amp;&amp; data.roleId !== undefined;
         },
 
         /**

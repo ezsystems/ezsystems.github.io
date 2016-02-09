@@ -3517,7 +3517,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
-            "line": 20,
+            "line": 23,
             "description": "Provides the role server side view"
         },
         "ez-sectionserversideview": {
@@ -6300,7 +6300,7 @@
             "module": "ez-roleserversideview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
-            "line": 20,
+            "line": 23,
             "description": "The role server side view. It adds the handling of the role assign\nbutton.",
             "is_constructor": 1,
             "extends": "eZ.ServerSideView"
@@ -15550,7 +15550,7 @@
         },
         {
             "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
-            "line": 34,
+            "line": 37,
             "description": "tap event handler on the role assign buttons. It launches the\nuniversal discovery widget so that the user can pick some contents.",
             "itemtype": "method",
             "name": "_pickSubtree",
@@ -15569,10 +15569,53 @@
         },
         {
             "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
-            "line": 62,
-            "description": "Changes the state of the provided assign button to be *loading* and\nto be disabled",
+            "line": 65,
+            "description": "tap event handler for policy limitation on location (\"Node\"). It launches the\nuniversal discovery widget so that the user can pick a location.",
             "itemtype": "method",
-            "name": "_uiSetAssignRoleLoading",
+            "name": "_pickLocationLimitation",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.RoleServerSideView",
+            "module": "ez-roleserversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
+            "line": 89,
+            "description": "Puts picked location id into location limitation input. Input is selected by the selector\nprovided in the `data-location-input-selector` attribute of the button, for example\n<button data-location-input-selector=\"#id_of_input\"></button>",
+            "itemtype": "method",
+            "name": "_setLocationLimitation",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "button",
+                    "description": "",
+                    "type": "Y.Node"
+                },
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.RoleServerSideView",
+            "module": "ez-roleserversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
+            "line": 111,
+            "description": "Empties the existing list of selected locations.",
+            "itemtype": "method",
+            "name": "_emptyLocationList",
             "access": "protected",
             "tagname": "",
             "params": [
@@ -15588,10 +15631,96 @@
         },
         {
             "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
-            "line": 74,
-            "description": "Changes the state of the provided assign button to not be *loading*\nand to be enabled.",
+            "line": 124,
+            "description": "Empties the content of the hidden input field for selected locations.",
             "itemtype": "method",
-            "name": "_uiUnsetAssignRoleLoading",
+            "name": "_emptyLocationIdHiddenInput",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "button",
+                    "description": "",
+                    "type": "Y.Node"
+                }
+            ],
+            "class": "eZ.RoleServerSideView",
+            "module": "ez-roleserversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
+            "line": 137,
+            "description": "Adds a location to the list of selected locations.",
+            "itemtype": "method",
+            "name": "_addLocationToDisplayList",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "button",
+                    "description": "",
+                    "type": "Y.Node"
+                },
+                {
+                    "name": "contentInfo",
+                    "description": "",
+                    "type": "eZ.ContentInfo"
+                }
+            ],
+            "class": "eZ.RoleServerSideView",
+            "module": "ez-roleserversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
+            "line": 151,
+            "description": "Adds a location to the hidden input field for selected locations.",
+            "itemtype": "method",
+            "name": "_addLocationIdToHiddenInput",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "button",
+                    "description": "",
+                    "type": "Y.Node"
+                },
+                {
+                    "name": "locationId",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "eZ.RoleServerSideView",
+            "module": "ez-roleserversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
+            "line": 170,
+            "description": "Changes the state of the provided UDW button to be *loading* and\nto be disabled",
+            "itemtype": "method",
+            "name": "_uiSetUDWButtonLoading",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "button",
+                    "description": "",
+                    "type": "Y.Node"
+                }
+            ],
+            "class": "eZ.RoleServerSideView",
+            "module": "ez-roleserversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/serverside/ez-roleserversideview.js",
+            "line": 182,
+            "description": "Changes the state of the provided UDW button to not be *loading*\nand to be enabled.",
+            "itemtype": "method",
+            "name": "_uiUnsetUDWButtonLoading",
             "access": "protected",
             "tagname": "",
             "params": [
@@ -19052,7 +19181,26 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 29,
+            "line": 32,
+            "description": "Return true if we are in the process of assigning a role.",
+            "itemtype": "method",
+            "name": "_isDiscoveringForAssigningRole",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.RoleServerSideViewService",
+            "module": "ez-navigationhubviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
+            "line": 45,
             "description": "Assign the role to the users/groups after the user has chosen them in\nthe universal discovery widget",
             "itemtype": "method",
             "name": "_assignRole",
@@ -19071,7 +19219,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 86,
+            "line": 102,
             "description": "Assign the role to selected content",
             "itemtype": "method",
             "name": "_assignRoleToAssignee",
@@ -19100,7 +19248,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 111,
+            "line": 127,
             "description": "Assign the role to a user",
             "itemtype": "method",
             "name": "_assignRoleToUser",
@@ -19134,7 +19282,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 143,
+            "line": 159,
             "description": "Assign the role to a user group",
             "itemtype": "method",
             "name": "_assignRoleToUserGroup",
@@ -19173,7 +19321,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 179,
+            "line": 195,
             "description": "Assign role callback triggering notification and calling given callback",
             "itemtype": "method",
             "name": "_assignRoleCallback",
@@ -19212,7 +19360,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 214,
+            "line": 230,
             "description": "Notification changed to *started* before assigning role to users/groups",
             "itemtype": "method",
             "name": "_assignRoleNotificationStarted",
@@ -19241,7 +19389,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 236,
+            "line": 252,
             "description": "Notification with *error* state when loadRole fails",
             "itemtype": "method",
             "name": "_loadRoleErrorNotification",
@@ -19270,7 +19418,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 258,
+            "line": 274,
             "description": "Generates identifier for notifications which is unique based on\nrole ID and IDs of users/groups which role is being assigned to.",
             "itemtype": "method",
             "name": "_getAssignRoleNotificationIdentifier",
@@ -19303,7 +19451,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 278,
+            "line": 294,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
