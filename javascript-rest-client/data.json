@@ -6139,6 +6139,21 @@
             "class": "CAPI"
         },
         {
+            "file": "src/CAPI.js",
+            "line": 187,
+            "description": "Gets the connection manager",
+            "itemtype": "method",
+            "name": "getConnectionManager",
+            "return": {
+                "description": "",
+                "type": "ConnectionManager"
+            },
+            "example": [
+                "\n     var connectionManager = jsCAPI.getConnectionManager();\n     connectionManager.request(\n         \"GET\",\n         \"/endpoint\",\n         \"\",\n         {\"Accept\": \"application/json\"},\n         callback\n     );"
+            ],
+            "class": "CAPI"
+        },
+        {
             "file": "src/ConnectionFeatureFactory.js",
             "line": 20,
             "description": "Returns instance of the very first compatible connection from the list",

@@ -263,6 +263,10 @@ Could be created only in one instance. Handles connections, authorization and RE
 
                     <ul class="index-list methods">
                             <li class="index-item method">
+                                <a href="#method_getConnectionManager">getConnectionManager</a>
+
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_getContentService">getContentService</a>
 
                             </li>
@@ -300,6 +304,62 @@ Could be created only in one instance. Handles connections, authorization and RE
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
+<div id="method_getConnectionManager" class="method item">
+    <h3 class="name"><code>getConnectionManager</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/ConnectionManager.html" class="crosslink">ConnectionManager</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_CAPI.js.html#l187"><code>src&#x2F;CAPI.js:187</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Gets the connection manager</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/ConnectionManager.html" class="crosslink">ConnectionManager</a></span>:
+            </div>
+        </div>
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code> var connectionManager = jsCAPI.getConnectionManager();
+ connectionManager.request(
+     &quot;GET&quot;,
+     &quot;/endpoint&quot;,
+     &quot;&quot;,
+     {&quot;Accept&quot;: &quot;application/json&quot;},
+     callback
+ );</code></pre>
+
+            </div>
+        </div>
+</div>
 <div id="method_getContentService" class="method item">
     <h3 class="name"><code>getContentService</code></h3>
 

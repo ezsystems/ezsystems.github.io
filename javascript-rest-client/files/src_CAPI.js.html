@@ -312,6 +312,25 @@ define([&#x27;authAgents/SessionAuthAgent&#x27;, &#x27;authAgents/HttpBasicAuthA
         this.getDiscoveryService = function () {
             return discoveryService;
         };
+
+        /**
+         * Gets the connection manager
+         *
+         * @method getConnectionManager
+         * @return {ConnectionManager}
+         * @example
+         *      var connectionManager = jsCAPI.getConnectionManager();
+         *      connectionManager.request(
+         *          &quot;GET&quot;,
+         *          &quot;/endpoint&quot;,
+         *          &quot;&quot;,
+         *          {&quot;Accept&quot;: &quot;application/json&quot;},
+         *          callback
+         *      );
+         */
+        this.getConnectionManager = function () {
+            return connectionManager;
+        };
     };
 
     return CAPI;
