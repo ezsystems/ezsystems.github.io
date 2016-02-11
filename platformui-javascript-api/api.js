@@ -15,9 +15,13 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonBlockTextAlignJustify",
         "eZ.AlloyEditorButton.ButtonBlockTextAlignLeft",
         "eZ.AlloyEditorButton.ButtonBlockTextAlignRight",
+        "eZ.AlloyEditorButton.ButtonEmbedAlign",
+        "eZ.AlloyEditorButton.ButtonEmbedCenter",
         "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
         "eZ.AlloyEditorButton.ButtonEmbedHref",
         "eZ.AlloyEditorButton.ButtonEmbedImage",
+        "eZ.AlloyEditorButton.ButtonEmbedLeft",
+        "eZ.AlloyEditorButton.ButtonEmbedRight",
         "eZ.AlloyEditorButton.ButtonImageHref",
         "eZ.AlloyEditorButton.ButtonImageVariation",
         "eZ.AlloyEditorButton.WidgetButton",
@@ -208,8 +212,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-blocktextalignjustify",
         "ez-alloyeditor-button-blocktextalignleft",
         "ez-alloyeditor-button-blocktextalignright",
+        "ez-alloyeditor-button-embedcenter",
+        "ez-alloyeditor-button-embedleft",
         "ez-alloyeditor-button-imagehref",
         "ez-alloyeditor-button-mixin-blocktextalign",
+        "ez-alloyeditor-button-mixin-embedalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
         "ez-alloyeditor-button-mixin-embedimage",
         "ez-alloyeditor-button-mixin-widgetbutton",
@@ -403,6 +410,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the block text align right button"
         },
         {
+            "displayName": "ez-alloyeditor-button-embedcenter",
+            "name": "ez-alloyeditor-button-embedcenter",
+            "description": "Provides the embed right align button"
+        },
+        {
+            "displayName": "ez-alloyeditor-button-embedleft",
+            "name": "ez-alloyeditor-button-embedleft",
+            "description": "Provides the embed left align button"
+        },
+        {
             "displayName": "ez-alloyeditor-button-imagehref",
             "name": "ez-alloyeditor-button-imagehref",
             "description": "Provides the ezimagehref button"
@@ -411,6 +428,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-button-mixin-blocktextalign",
             "name": "ez-alloyeditor-button-mixin-blocktextalign",
             "description": "Provides the BlockTextAlign mixin"
+        },
+        {
+            "displayName": "ez-alloyeditor-button-mixin-embedalign",
+            "name": "ez-alloyeditor-button-mixin-embedalign",
+            "description": "Provides the EmbedAlign mixin"
         },
         {
             "displayName": "ez-alloyeditor-button-mixin-embeddiscovercontent",

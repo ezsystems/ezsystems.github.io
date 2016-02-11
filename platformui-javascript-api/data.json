@@ -2162,6 +2162,19 @@
                 "eZ.AlloyEditorButton": 1
             }
         },
+        "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "modules": {
+                "ez-alloyeditor-button-mixin-embedalign": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedAlign": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js": {
             "name": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
             "modules": {
@@ -2273,11 +2286,48 @@
             "fors": {},
             "namespaces": {}
         },
+        "Resources/public/js/alloyeditor/buttons/embedcenter.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/embedcenter.js",
+            "modules": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedCenter": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/embedhref.js": {
             "name": "Resources/public/js/alloyeditor/buttons/embedhref.js",
             "modules": {},
             "classes": {
                 "eZ.AlloyEditorButton.ButtonEmbedHref": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/buttons/embedleft.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/embedleft.js",
+            "modules": {
+                "ez-alloyeditor-button-embedleft": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedLeft": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/buttons/embedright.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/embedright.js",
+            "modules": {
+                "ez-alloyeditor-button-embedcenter": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedRight": 1
             },
             "fors": {},
             "namespaces": {
@@ -4958,6 +5008,22 @@
             "line": 18,
             "description": "Provides the BlockTextAlign mixin"
         },
+        "ez-alloyeditor-button-mixin-embedalign": {
+            "name": "ez-alloyeditor-button-mixin-embedalign",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedAlign": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 18,
+            "description": "Provides the EmbedAlign mixin"
+        },
         "ez-alloyeditor-button-mixin-embeddiscovercontent": {
             "name": "ez-alloyeditor-button-mixin-embeddiscovercontent",
             "submodules": {},
@@ -5013,8 +5079,6 @@
             "classes": {
                 "eZ.AlloyEditorButton.ButtonBlockRemove": 1,
                 "eZ.AlloyEditorButton.ButtonEmbedHref": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage": 1,
                 "eZ.AlloyEditorButton.ButtonImageVariation": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
@@ -5097,6 +5161,41 @@
             "file": "Resources/public/js/alloyeditor/buttons/embed.js",
             "line": 17,
             "description": "Provides the block text align right button"
+        },
+        "ez-alloyeditor-button-embedcenter": {
+            "name": "ez-alloyeditor-button-embedcenter",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedCenter": 1,
+                "eZ.AlloyEditorButton.ButtonEmbedRight": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/image.js",
+            "line": 17,
+            "description": "Provides the embed right align button"
+        },
+        "ez-alloyeditor-button-embedleft": {
+            "name": "ez-alloyeditor-button-embedleft",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonEmbedLeft": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/embedleft.js",
+            "line": 23,
+            "description": "Provides the embed left align button"
         },
         "ez-alloyeditor-button-imagehref": {
             "name": "ez-alloyeditor-button-imagehref",
@@ -7962,6 +8061,28 @@
                 "ButtonStateClasses"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonEmbedAlign": {
+            "name": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "shortname": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "eZ.AlloyEditorButton.ButtonEmbedCenter",
+                "eZ.AlloyEditorButton.ButtonEmbedLeft",
+                "eZ.AlloyEditorButton.ButtonEmbedRight"
+            ],
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 18,
+            "description": "Mixin providing the base to implement the embed align buttons.",
+            "uses": [
+                "ButtonStateClasses",
+                "eZ.AlloyEditorButton.WidgetButton"
+            ]
+        },
         "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent": {
             "name": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
             "shortname": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
@@ -7997,7 +8118,9 @@
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
-            "extension_for": [],
+            "extension_for": [
+                "eZ.AlloyEditorButton.ButtonEmbedAlign"
+            ],
             "module": "ez-alloyeditor-button-mixin-widgetbutton",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/mixins/widgetbutton.js",
@@ -8108,6 +8231,23 @@
                 "eZ.AlloyEditorToolbarConfig.ButtonEmbedDiscoverContent"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonEmbedCenter": {
+            "name": "eZ.AlloyEditorButton.ButtonEmbedCenter",
+            "shortname": "eZ.AlloyEditorButton.ButtonEmbedCenter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-embedcenter",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/embedcenter.js",
+            "line": 23,
+            "description": "The ButtonEmbedCenter class provides functionality for centering\nan embed element",
+            "uses": [
+                "eZ.AlloyEditorButton.ButtonEmbedAlign"
+            ]
+        },
         "eZ.AlloyEditorButton.ButtonEmbedHref": {
             "name": "eZ.AlloyEditorButton.ButtonEmbedHref",
             "shortname": "eZ.AlloyEditorButton.ButtonEmbedHref",
@@ -8125,6 +8265,40 @@
                 "Y.eZ.AlloyEditorButton.ButtonEmbedDiscoverContent"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonEmbedLeft": {
+            "name": "eZ.AlloyEditorButton.ButtonEmbedLeft",
+            "shortname": "eZ.AlloyEditorButton.ButtonEmbedLeft",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-embedleft",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/embedleft.js",
+            "line": 23,
+            "description": "The ButtonEmbedLeft class provides functionality for aligning an embed\nelement on the left",
+            "uses": [
+                "eZ.AlloyEditorButton.ButtonEmbedAlign"
+            ]
+        },
+        "eZ.AlloyEditorButton.ButtonEmbedRight": {
+            "name": "eZ.AlloyEditorButton.ButtonEmbedRight",
+            "shortname": "eZ.AlloyEditorButton.ButtonEmbedRight",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-embedcenter",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/embedright.js",
+            "line": 23,
+            "description": "The ButtonEmbedRight class provides functionality for aligning an embed\nelement to the right",
+            "uses": [
+                "eZ.AlloyEditorButton.ButtonEmbedAlign"
+            ]
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
             "shortname": "eZ.AlloyEditor.ButtonHeading",
@@ -8133,7 +8307,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-embedcenter",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/heading.js",
             "line": 17,
@@ -8151,7 +8325,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-embedcenter",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/image.js",
             "line": 17,
@@ -8259,7 +8433,7 @@
             "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 15,
+            "line": 16,
             "description": "CKEditor plugin to configure the widget plugin so that it recognizes the\n`div[data-ezelement=\"embed\"]` elements as widget.",
             "is_constructor": 1
         },
@@ -31456,6 +31630,75 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 34,
+            "description": "The label that should be used for accessibility purposes.",
+            "itemtype": "property",
+            "name": "label",
+            "type": "String",
+            "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 41,
+            "description": "The tabIndex of the button in its toolbar current state. A value other than -1\nmeans that the button has focus and is the active element.",
+            "itemtype": "property",
+            "name": "tabIndex",
+            "type": "Number",
+            "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 49,
+            "description": "The alignment to apply ('center', 'left' or 'right')",
+            "required": 1,
+            "itemtype": "property",
+            "name": "alignment",
+            "type": "String",
+            "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 57,
+            "description": "The suffix of the class to use icon to set the button icon",
+            "itemtype": "property",
+            "name": "classIcon",
+            "type": "String",
+            "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 65,
+            "description": "Checks if the configured alignment is active on the focused embed\nelement.",
+            "itemtype": "method",
+            "name": "isActive",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
+            "line": 76,
+            "description": "Applies or un-applies the alignment on the currently focused embed\nelement.",
+            "itemtype": "method",
+            "name": "applyStyle",
+            "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
+            "module": "ez-alloyeditor-button-mixin-embedalign",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
             "line": 27,
             "description": "The editor instance where the component is being used.",
@@ -31713,7 +31956,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-embedcenter",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -31732,7 +31975,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-embedcenter",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -31873,7 +32116,67 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 48,
+            "line": 50,
+            "description": "Initializes the alignment on the widget wrapper if the widget\nis aligned.",
+            "itemtype": "method",
+            "name": "_syncAlignment",
+            "access": "protected",
+            "tagname": "",
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 67,
+            "description": "Sets the alignment of the embed widget to `type`. The\nalignment is set by adding the `data-ezalign` attribute\non the widget wrapper and the widget element.",
+            "itemtype": "method",
+            "name": "setAlignment",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 80,
+            "description": "Removes the alignment of the widget.",
+            "itemtype": "method",
+            "name": "unsetAlignment",
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 90,
+            "description": "Checks whether the embed is aligned with `type` alignment.",
+            "itemtype": "method",
+            "name": "isAligned",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 101,
             "description": "Set the embed as an embed representing an image",
             "itemtype": "method",
             "name": "setImageType",
@@ -31887,7 +32190,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 59,
+            "line": 112,
             "description": "Check whether the embed widget represents an image or not.",
             "itemtype": "method",
             "name": "isImage",
@@ -31901,7 +32204,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 69,
+            "line": 122,
             "description": "Sets the `href` of the embed is URI to the embed content or\nlocation. (ezcontent://32 for instance).",
             "itemtype": "method",
             "name": "setHref",
@@ -31922,7 +32225,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 82,
+            "line": 135,
             "description": "Returns the `href`of the embed.",
             "itemtype": "method",
             "name": "getHref",
@@ -31936,7 +32239,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 92,
+            "line": 145,
             "description": "Sets the widget content. It makes sure the config element is\nnot overwritten.",
             "itemtype": "method",
             "name": "setWidgetContent",
@@ -31957,7 +32260,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 118,
+            "line": 171,
             "description": "Sets a config value under the `key` for the embed.",
             "itemtype": "method",
             "name": "setConfig",
@@ -31983,7 +32286,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 139,
+            "line": 192,
             "description": "Returns the config value for the `key` or undefined if the\nconfig key is not found.",
             "itemtype": "method",
             "name": "getConfig",
@@ -31997,7 +32300,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 152,
+            "line": 205,
             "description": "Returns the Element holding the config under `key`",
             "itemtype": "method",
             "name": "_getValueElement",
@@ -32018,7 +32321,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 163,
+            "line": 216,
             "description": "Returns the element used as a container the config values. if\nit does not exist, it is created.",
             "itemtype": "method",
             "name": "_getEzConfigElement",
@@ -32034,7 +32337,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 182,
+            "line": 235,
             "description": "Fires the editorInteraction event so that AlloyEditor editor\nUI remains visible and is updated.",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -32216,7 +32519,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/block-base.js",
-            "line": 48,
+            "line": 70,
             "description": "Returns the arrow box classes for the toolbar. The toolbar is\nalways positioned above its related block and has a special class to\nmove its tail on the left.",
             "itemtype": "method",
             "name": "getArrowBoxClasses",
@@ -32229,7 +32532,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/block-base.js",
-            "line": 60,
+            "line": 82,
             "description": "Sets the position of the toolbar. It overrides the default styles\ntoolbar positioning to position the toolbar just above its related\nblock element. The related block element is the block indicated in\nCKEditor's path or the target of the editorEvent event.",
             "itemtype": "method",
             "name": "setPosition",
@@ -32266,7 +32569,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/embed.js",
-            "line": 32,
+            "line": 35,
             "description": "Tests whether the `embed` toolbar should be visible, it is visible\nwhen an ezembed widget gets the focus.",
             "itemtype": "method",
             "name": "test",
@@ -32356,7 +32659,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/image.js",
-            "line": 33,
+            "line": 36,
             "description": "Tests whether the `image` toolbar should be visible, it is visible\nwhen an ezembed widget containing an <img> is visible.",
             "itemtype": "method",
             "name": "test",
