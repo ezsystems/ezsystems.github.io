@@ -151,7 +151,9 @@ define([&quot;structures/Response&quot;, &quot;structures/CAPIError&quot;], func
      */
     XmlHttpRequestConnection.prototype.execute = function (request, callback) {
         var XHR = this._xhr,
-            headerType;
+            headerType,
+            method = request.method,
+            standardMethods = {&quot;OPTIONS&quot;: 1, &quot;GET&quot;: 1, &quot;HEAD&quot;: 1, &quot;POST&quot;: 1, &quot;PUT&quot;: 1, &quot;DELETE&quot;: 1, &quot;TRACE&quot;: 1};
 
         // Create the state change handler:
         XHR.onreadystatechange = function () {
@@ -175,10 +177,20 @@ define([&quot;structures/Response&quot;, &quot;structures/CAPIError&quot;], func
             callback(false, response);
         };
 
+        // Send non-standard HTTP methods as headers using POST.
+        // Avoids problems with conservative proxies, HTTP security tools and limited web servers.
+        if (standardMethods[method.toUpperCase()] !== 1) {
+            method = &quot;POST&quot;;
+        }
+
         if (request.httpBasicAuth) {
-            XHR.open(request.method, request.url, true, request.login, request.password);
+            XHR.open(method, request.url, true, request.login, request.password);
         } else {
-            XHR.open(request.method, request.url, true);
+            XHR.open(method, request.url, true);
+        }
+
+        if (method !== request.method) {
+            XHR.setRequestHeader(&quot;X-HTTP-Method-Override&quot;, request.method);
         }
 
         for (headerType in request.headers) {

@@ -138,8 +138,10 @@ define([&quot;structures/Response&quot;, &quot;structures/CAPIError&quot;], func
      *
      * @class MicrosoftXmlHttpRequestConnection
      * @constructor
+     * @deprecated since 1.2
      */
     var MicrosoftXmlHttpRequestConnection = function () {
+        console.warn(&#x27;[DEPRECATED] MicrosoftXmlHttpRequestConnection is deprecated and will be removed in eZ JS REST client 2.0&#x27;);
         this._xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
     };
 

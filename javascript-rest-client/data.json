@@ -545,7 +545,9 @@
             "file": "src/connections/MicrosoftXmlHttpRequestConnection.js",
             "line": 6,
             "description": "Creates an instance of MicrosoftXmlHttpRequestConnection object\nThis connection class handles low-level implementation of XHR connection for Microsoft browsers",
-            "is_constructor": 1
+            "is_constructor": 1,
+            "deprecated": true,
+            "deprecationMessage": "since 1.2"
         },
         "XmlHttpRequestConnection": {
             "name": "XmlHttpRequestConnection",
@@ -1995,7 +1997,7 @@
         },
         {
             "file": "src/connections/MicrosoftXmlHttpRequestConnection.js",
-            "line": 17,
+            "line": 19,
             "description": "Basic request implemented via XHR technique",
             "itemtype": "method",
             "name": "execute",
@@ -2015,7 +2017,7 @@
         },
         {
             "file": "src/connections/MicrosoftXmlHttpRequestConnection.js",
-            "line": 68,
+            "line": 70,
             "description": "Connection checks itself for compatibility with running environment",
             "itemtype": "method",
             "name": "isCompatible",
@@ -2048,7 +2050,7 @@
         },
         {
             "file": "src/connections/XmlHttpRequestConnection.js",
-            "line": 66,
+            "line": 78,
             "description": "Connection checks itself for compatibility with running environment",
             "itemtype": "method",
             "name": "isCompatible",
