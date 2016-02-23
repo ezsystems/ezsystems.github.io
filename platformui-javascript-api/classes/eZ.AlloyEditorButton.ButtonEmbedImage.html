@@ -189,6 +189,7 @@
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
                                 <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.Processable.html">eZ.Processable</a></li>
                                 <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
                                 <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
                                 <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
@@ -196,6 +197,9 @@
                                 <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
@@ -360,6 +364,7 @@
                                 <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
                                 <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
                                 <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-processable.html">ez-processable</a></li>
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
@@ -369,6 +374,9 @@
                                 <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
+                                <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
@@ -454,7 +462,7 @@
 
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l16"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:16</code></a>
+            Defined in: <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l15"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:15</code></a>
         </div>
 
             Module: <a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a>
@@ -490,15 +498,7 @@ properties of an embed element that represents an image.</p>
 
                             </li>
                             <li class="index-item method protected">
-                                <a href="#method__insertImage">_insertImage</a>
-
-                            </li>
-                            <li class="index-item method protected">
                                 <a href="#method__isImage">_isImage</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__loadEmbedImage">_loadEmbedImage</a>
 
                             </li>
                     </ul>
@@ -539,7 +539,7 @@ properties of an embed element that represents an image.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:46</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l45"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:45</code></a>
         </p>
 
 
@@ -588,73 +588,6 @@ properties of an embed element that represents an image.</p>
 
 
 </div>
-<div id="method__insertImage" class="method item protected">
-    <h3 class="name"><code>_insertImage</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>imgVariation</code>
-                </li>
-                <li class="arg">
-                        <code>imgVariation</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l61"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:61</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Creates the <img> element with the provided image variation.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">imgVariation</code>
-                        <span class="type">False | CAPIError</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">imgVariation</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
 <div id="method__isImage" class="method item protected">
     <h3 class="name"><code>_isImage</code></h3>
 
@@ -680,7 +613,7 @@ properties of an embed element that represents an image.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l25"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:25</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l24"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:24</code></a>
         </p>
 
 
@@ -720,76 +653,6 @@ be used as a <code>isSelectable</code> function implementation for the UDW.</p>
                         <span class="type">Boolean</span>:
             </div>
         </div>
-
-
-</div>
-<div id="method__loadEmbedImage" class="method item protected">
-    <h3 class="name"><code>_loadEmbedImage</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>struct</code>
-                </li>
-                <li class="arg">
-                        <code class="optional">[variation=&#x27;medium&#x27;]</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedimage.js.html#l80"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedimage.js:80</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Loads the variation of the embed image by firing the
-<code>loadImageVariation</code>event.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">struct</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name optional">[variation=&#x27;medium&#x27;]</code>
-                        <span class="type">String</span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
-
-
-                    <div class="param-description">
-                        <p>the optional image variation to use</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
 
 
 </div>

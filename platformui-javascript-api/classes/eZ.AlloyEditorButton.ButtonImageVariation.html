@@ -189,6 +189,7 @@
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
                                 <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.Processable.html">eZ.Processable</a></li>
                                 <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
                                 <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
                                 <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
@@ -196,6 +197,9 @@
                                 <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
@@ -360,6 +364,7 @@
                                 <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
                                 <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
                                 <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-processable.html">ez-processable</a></li>
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
@@ -369,6 +374,9 @@
                                 <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
+                                <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
@@ -480,7 +488,6 @@ the image variation to use.</p>
         <li class="api-class-tab index"><a href="#index">Index</a></li>
 
             <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
-            <li class="api-class-tab events"><a href="#events">Events</a></li>
     </ul>
 
     <div>
@@ -504,16 +511,6 @@ the image variation to use.</p>
 
 
 
-                <div class="index-section events">
-                    <h3>Events</h3>
-
-                    <ul class="index-list events">
-                            <li class="index-item event">
-                                <a href="#event_contentSearch">contentSearch</a>
-
-                            </li>
-                    </ul>
-                </div>
         </div>
 
             <div id="methods" class="api-class-tabpanel">
@@ -537,7 +534,7 @@ the image variation to use.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_imagevariation.js.html#l83"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;imagevariation.js:83</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_imagevariation.js.html#l59"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;imagevariation.js:59</code></a>
         </p>
 
 
@@ -620,111 +617,6 @@ newly choosen variation is used.</p>
 
 
 
-            <div id="events" class="api-class-tabpanel">
-                <h2 class="off-left">Events</h2>
-
-                    <div id="event_contentSearch" class="events item">
-                        <h3 class="name"><code>contentSearch</code></h3>
-                        <span class="type"></span>
-                    
-                    
-                    
-                    
-                    
-                        <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/Resources_public_js_alloyeditor_buttons_imagevariation.js.html#l55"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;imagevariation.js:55</code></a>
-                            </p>
-                    
-                    
-                        </div>
-                    
-                        <div class="description">
-                            <p>Fired to load the embedded Content and the corresponding Content
-                    Type. See <a href="../classes/eZ.Plugin.Search.html#method__doContentSearch" class="crosslink">eZ.Plugin.Search#_doContentSearch</a></p>
-                    
-                        </div>
-                    
-                            <div class="params">
-                                <h4>Event Payload:</h4>
-                    
-                                <ul class="params-list">
-                                    <li class="param">
-                                            <code class="param-name">viewName</code>
-                                            <span class="type">String</span>
-                    
-                    
-                                        <div class="param-description">
-                                             
-                                        </div>
-                    
-                                    </li>
-                                    <li class="param">
-                                            <code class="param-name">search</code>
-                                            <span class="type">Object</span>
-                    
-                    
-                                        <div class="param-description">
-                                             
-                                        </div>
-                    
-                                            <ul class="params-list">
-                                                <li class="param">
-                                                        <code class="param-name">criteria</code>
-                                                        <span class="type">Object</span>
-                    
-                                                    <div class="param-description">
-                                                        
-                                                    </div>
-                    
-                                                </li>
-                                                <li class="param">
-                                                        <code class="param-name">offset</code>
-                                                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
-                    
-                                                    <div class="param-description">
-                                                        
-                                                    </div>
-                    
-                                                </li>
-                                                <li class="param">
-                                                        <code class="param-name">limit</code>
-                                                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
-                    
-                                                    <div class="param-description">
-                                                        
-                                                    </div>
-                    
-                                                </li>
-                                            </ul>
-                                    </li>
-                                    <li class="param">
-                                            <code class="param-name">loadContentType</code>
-                                            <span class="type">Boolean</span>
-                    
-                    
-                                        <div class="param-description">
-                                             
-                                        </div>
-                    
-                                    </li>
-                                    <li class="param">
-                                            <code class="param-name">callback</code>
-                                            <span class="type">Function</span>
-                    
-                    
-                                        <div class="param-description">
-                                             
-                                        </div>
-                    
-                                    </li>
-                                </ul>
-                            </div>
-                    
-                    
-                    </div>
-            </div>
     </div>
 </div>
                     </div>

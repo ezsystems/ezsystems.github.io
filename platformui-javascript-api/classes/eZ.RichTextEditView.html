@@ -189,6 +189,7 @@
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
                                 <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.Processable.html">eZ.Processable</a></li>
                                 <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
                                 <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
                                 <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
@@ -196,6 +197,9 @@
                                 <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
@@ -360,6 +364,7 @@
                                 <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
                                 <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
                                 <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-processable.html">ez-processable</a></li>
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
@@ -369,6 +374,9 @@
                                 <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
+                                <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
@@ -451,6 +459,12 @@
                     <div class="content">
 <h1>eZ.RichTextEditView Class</h1>
 <div class="box meta">
+        <div class="uses">
+            Uses
+            <ul class="inline commas">
+                    <li><a href="eZ.Processable.html">eZ.Processable</a></li>
+            </ul>
+        </div>
 
         <div class="extends">
             Extends <a href="../classes/eZ.FieldEditView.html" class="crosslink">eZ.FieldEditView</a>
@@ -730,6 +744,10 @@
                                 <a href="#method__preInitEventCfg">_preInitEventCfg</a>
 
                             </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__process">_process</a>
+
+                            </li>
                             <li class="index-item method protected deprecated inherited">
                                 <a href="#method__protectAttrs">_protectAttrs</a>
 
@@ -809,6 +827,10 @@
                             </li>
                             <li class="index-item method inherited">
                                 <a href="#method_addAttrs">addAttrs</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_addProcessor">addProcessor</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -924,6 +946,10 @@
 
                             </li>
                             <li class="index-item method inherited">
+                                <a href="#method_removeProcessor">removeProcessor</a>
+
+                            </li>
+                            <li class="index-item method inherited">
                                 <a href="#method_removeTarget">removeTarget</a>
 
                             </li>
@@ -973,10 +999,6 @@
                     <h3>Properties</h3>
 
                     <ul class="index-list properties extends">
-                            <li class="index-item property private inherited">
-                                <a href="#property_"></a>
-
-                            </li>
                             <li class="index-item property protected inherited inherited">
                                 <a href="#property__allowAdHocAttrs">_allowAdHocAttrs</a>
 
@@ -991,6 +1013,14 @@
                             </li>
                             <li class="index-item property protected inherited">
                                 <a href="#property__handleFieldDescriptionVisibility">_handleFieldDescriptionVisibility</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property__processEvent">_processEvent</a>
+
+                            </li>
+                            <li class="index-item property private inherited">
+                                <a href="#property_"></a>
 
                             </li>
                             <li class="index-item property protected inherited">
@@ -1066,6 +1096,9 @@
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_languageCode">languageCode</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_priority">priority</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_toolbarsConfig">toolbarsConfig</a>
@@ -2131,7 +2164,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l172"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:172</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l174"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:174</code></a>
         </p>
 
 
@@ -2696,7 +2729,7 @@ cached value.
                 eZ.FieldEditView
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l294"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:294</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l296"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:296</code></a>
         </p>
 
 
@@ -2808,7 +2841,7 @@ implementations which need to fast-track publish for performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l243"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:243</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l245"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:245</code></a>
         </p>
 
 
@@ -2851,7 +2884,7 @@ fragment only contains the content of the root <section> element.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l99"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:99</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:101</code></a>
         </p>
 
 
@@ -3119,7 +3152,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l306"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:306</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l308"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:308</code></a>
         </p>
 
 
@@ -3506,7 +3539,7 @@ either through the constructor.ATTRS property, or explicitly passed in.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l134"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:134</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l136"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:136</code></a>
         </p>
 
 
@@ -3630,7 +3663,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l211"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:211</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l213"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:213</code></a>
         </p>
 
 
@@ -4006,6 +4039,37 @@ construction, prior to init.
 
 
 </div>
+<div id="method__process" class="method item protected inherited">
+    <h3 class="name"><code>_process</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.Processable.html#method__process">eZ.Processable</a>:
+        <a href="../files/Resources_public_js_extensions_ez-processable.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-processable.js:75</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Loops through the processors to run them on the view.
+    </div>
+
+
+
+
+</div>
 <div id="method__protectAttrs" class="method item protected deprecated inherited">
     <h3 class="name"><code>_protectAttrs</code></h3>
 
@@ -4185,7 +4249,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:124</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l126"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:126</code></a>
         </p>
 
 
@@ -4220,7 +4284,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l271"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:271</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l273"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:273</code></a>
         </p>
 
 
@@ -4743,7 +4807,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:75</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l77"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:77</code></a>
         </p>
 
 
@@ -4955,7 +5019,7 @@ The tooltip position is modified by it's height and is relative to the field inp
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l58"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:58</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:60</code></a>
         </p>
 
 
@@ -4993,7 +5057,7 @@ class on the view container.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l183"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:183</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l185"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:185</code></a>
         </p>
 
 
@@ -5047,7 +5111,7 @@ class on the view container.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l87"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:87</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l89"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:89</code></a>
         </p>
 
 
@@ -5394,6 +5458,73 @@ See <a href="#method_addAttr">addAttr</a>.
                     A reference to the host object.
             </div>
         </div>
+
+
+</div>
+<div id="method_addProcessor" class="method item inherited">
+    <h3 class="name"><code>addProcessor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>processor</code>
+                </li>
+                <li class="arg">
+                        <code>priority</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.Processable.html#method_addProcessor">eZ.Processable</a>:
+        <a href="../files/Resources_public_js_extensions_ez-processable.js.html#l34"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-processable.js:34</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Adds a processor to the list with the given priority. A processor is
+an object that should have a <code>process</code> method. When run, the
+processor will receive the view being processed.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">processor</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">priority</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
 
 
 </div>
@@ -7510,6 +7641,61 @@ but doesn't destroy it or any event listeners attached to it.
 
 
 </div>
+<div id="method_removeProcessor" class="method item inherited">
+    <h3 class="name"><code>removeProcessor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>matchingFn</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.Processable.html#method_removeProcessor">eZ.Processable</a>:
+        <a href="../files/Resources_public_js_extensions_ez-processable.js.html#l58"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-processable.js:58</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Removes one or several processors matching the given <code>matchingFn</code>
+function.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">matchingFn</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        it receives the processor and if it
+returns a truthy value, the corresponding processor is excluded from
+the list.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method_removeTarget" class="method item inherited">
     <h3 class="name"><code>removeTarget</code></h3>
 
@@ -8060,33 +8246,6 @@ The default implementation does nothing.
             <div id="properties" class="api-class-tabpanel">
                 <h2 class="off-left">Properties</h2>
 
-<div id="property_" class="property item private inherited">
-    <h3 class="name"><code></code></h3>
-    <span class="type">Object</span>
-
-
-        <span class="flag private">private</span>
-
-
-
-    <div class="meta">
-                <p>Inherited from
-                <a href="../classes/eZ.FieldEditView.html#property_">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l431"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:431</code></a>
-        </p>
-
-
-    </div>
-
-    <div class="description">
-        Registry of all registered field edit views indexed by field type
-identifier
-    </div>
-
-        <p><strong>Default:</strong> {}</p>
-
-
-</div>
 <div id="property__allowAdHocAttrs" class="property item protected inherited">
     <h3 class="name"><code>_allowAdHocAttrs</code></h3>
     <span class="type">Boolean</span>
@@ -8197,6 +8356,57 @@ from the error state to the normal state.
     </div>
 
         <p><strong>Default:</strong> true</p>
+
+
+</div>
+<div id="property__processEvent" class="property item inherited">
+    <h3 class="name"><code>_processEvent</code></h3>
+    <span class="type">String | Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.Processable.html#property__processEvent">eZ.Processable</a>:
+        <a href="../files/Resources_public_js_extensions_ez-processable.js.html#l24"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-processable.js:24</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Holds the event(s) after which the processing should be triggered.
+    </div>
+
+
+
+</div>
+<div id="property_" class="property item private inherited">
+    <h3 class="name"><code></code></h3>
+    <span class="type">Object</span>
+
+
+        <span class="flag private">private</span>
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.FieldEditView.html#property_">eZ.FieldEditView</a>:
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l431"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:431</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Registry of all registered field edit views indexed by field type
+identifier
+    </div>
+
+        <p><strong>Default:</strong> {}</p>
 
 
 </div>
@@ -8421,7 +8631,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l376"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:376</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l391"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:391</code></a>
                             </p>
                     
                     
@@ -8591,7 +8801,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l338"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:338</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l353"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:353</code></a>
                             </p>
                     
                     
@@ -8620,7 +8830,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l402"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:402</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l417"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:417</code></a>
                             </p>
                     
                     
@@ -8741,7 +8951,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l325"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:325</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l340"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:340</code></a>
                             </p>
                     
                     
@@ -8772,7 +8982,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l389"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:389</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l404"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:404</code></a>
                             </p>
                     
                     
@@ -8783,7 +8993,7 @@ How this template gets used is entirely up to you and your custom
                     
                         </div>
                     
-                            <p><strong>Default:</strong> [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;]</p>
+                            <p><strong>Default:</strong> [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;, &#x27;instanceReady&#x27;, &#x27;updatedEmbed&#x27;]</p>
                     
                     
                     </div>
@@ -8847,6 +9057,38 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
+                    <div id="attr_priority" class="attr item inherited">
+                        <a name="config_priority"></a> 
+                        <h3 class="name"><code>priority</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag readonly">readonly</span>
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.Processable.html#attr_priority">eZ.Processable</a>:
+                            <a href="../files/Resources_public_js_extensions_ez-processable.js.html#l88"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-processable.js:88</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            Holds the processors. Each entry is an object containing 2
+                    properties:
+                    - <code>processor</code> the processor
+                    - <code>priority</code> its priority
+                        </div>
+                    
+                    
+                    
+                    </div>
                     <div id="attr_toolbarsConfig" class="attr item">
                         <a name="config_toolbarsConfig"></a> 
                         <h3 class="name"><code>toolbarsConfig</code></h3>
@@ -8862,7 +9104,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l349"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:349</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l364"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:364</code></a>
                             </p>
                     
                     

@@ -152,6 +152,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.VisibilitySwitcherPlugin",
         "eZ.PluginRegistry",
         "eZ.PreviewActionView",
+        "eZ.Processable",
         "eZ.RawContentView",
         "eZ.RelationEditView",
         "eZ.RelationListEditView",
@@ -159,6 +160,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.RelationView",
         "eZ.RestModel",
         "eZ.RichTextEditView",
+        "eZ.RichTextEmbedContainer",
+        "eZ.RichTextResolveEmbed",
+        "eZ.RichTextResolveImage",
         "eZ.RichTextView",
         "eZ.RoleServerSideView",
         "eZ.RoleServerSideViewService",
@@ -321,6 +325,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-pluginregistry",
         "ez-positionplugin",
         "ez-previewactionview",
+        "ez-processable",
         "ez-publishdraftplugin",
         "ez-rawcontentview",
         "ez-registerhelpersplugin",
@@ -330,6 +335,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-relationlist-view",
         "ez-restmodel",
         "ez-richtext-editview",
+        "ez-richtext-embedcontainer",
+        "ez-richtext-resolveembed",
+        "ez-richtext-resolveimage",
         "ez-richtext-view",
         "ez-roleserversideview",
         "ez-savedraftplugin",
@@ -955,6 +963,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the Preview Action View class"
         },
         {
+            "displayName": "ez-processable",
+            "name": "ez-processable",
+            "description": "The processable extension"
+        },
+        {
             "displayName": "ez-publishdraftplugin",
             "name": "ez-publishdraftplugin",
             "description": "Provides the publish draft plugin"
@@ -998,6 +1011,21 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-richtext-editview",
             "name": "ez-richtext-editview",
             "description": "Provides the field edit view for the RichText (ezrichtext) fields"
+        },
+        {
+            "displayName": "ez-richtext-embedcontainer",
+            "name": "ez-richtext-embedcontainer",
+            "description": "Provides the embedcontainer richtext processor"
+        },
+        {
+            "displayName": "ez-richtext-resolveembed",
+            "name": "ez-richtext-resolveembed",
+            "description": "Provides the resolve embed richtext processor"
+        },
+        {
+            "displayName": "ez-richtext-resolveimage",
+            "name": "ez-richtext-resolveimage",
+            "description": "Provides the resolve image richtext processor"
         },
         {
             "displayName": "ez-richtext-view",

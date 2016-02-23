@@ -211,6 +211,45 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js": {
+            "name": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
+            "modules": {
+                "ez-richtext-embedcontainer": 1
+            },
+            "classes": {
+                "eZ.RichTextEmbedContainer": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js": {
+            "name": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "modules": {
+                "ez-richtext-resolveembed": 1
+            },
+            "classes": {
+                "eZ.RichTextResolveEmbed": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js": {
+            "name": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
+            "modules": {
+                "ez-richtext-resolveimage": 1
+            },
+            "classes": {
+                "eZ.RichTextResolveImage": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/fields/ez-author-editview.js": {
             "name": "Resources/public/js/views/fields/ez-author-editview.js",
             "modules": {
@@ -2072,6 +2111,19 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/extensions/ez-processable.js": {
+            "name": "Resources/public/js/extensions/ez-processable.js",
+            "modules": {
+                "ez-processable": 1
+            },
+            "classes": {
+                "eZ.Processable": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/extensions/ez-selection-table.js": {
             "name": "Resources/public/js/extensions/ez-selection-table.js",
             "modules": {
@@ -2453,6 +2505,15 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/alloyeditor/processors/emptyembed.js": {
+            "name": "Resources/public/js/alloyeditor/processors/emptyembed.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/alloyeditor/processors/removeids.js": {
             "name": "Resources/public/js/alloyeditor/processors/removeids.js",
             "modules": {
@@ -2800,6 +2861,54 @@
             "file": "Resources/public/js/views/actions/ez-treeactionview.js",
             "line": 16,
             "description": "Provides the translate action view class"
+        },
+        "ez-richtext-embedcontainer": {
+            "name": "ez-richtext-embedcontainer",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.RichTextEmbedContainer": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
+            "line": 14,
+            "description": "Provides the embedcontainer richtext processor"
+        },
+        "ez-richtext-resolveembed": {
+            "name": "ez-richtext-resolveembed",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.RichTextResolveEmbed": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 14,
+            "description": "Provides the resolve embed richtext processor"
+        },
+        "ez-richtext-resolveimage": {
+            "name": "ez-richtext-resolveimage",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.RichTextResolveImage": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
+            "line": 14,
+            "description": "Provides the resolve image richtext processor"
         },
         "ez-author-editview": {
             "name": "ez-author-editview",
@@ -4910,6 +5019,22 @@
             "line": 14,
             "description": "The height fit extension"
         },
+        "ez-processable": {
+            "name": "ez-processable",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Processable": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 14,
+            "description": "The processable extension"
+        },
         "ez-selection-table": {
             "name": "ez-selection-table",
             "submodules": {},
@@ -5053,7 +5178,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
-            "line": 16,
+            "line": 15,
             "description": "Provides the ButtonEmbedImage mixin"
         },
         "ez-alloyeditor-button-mixin-widgetbutton": {
@@ -5229,22 +5354,6 @@
             "line": 15,
             "description": "Provides the base EditorContentProcessor"
         },
-        "ez-editorcontentprocessorremoveids": {
-            "name": "ez-editorcontentprocessorremoveids",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.EditorContentProcessorRemoveIds": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/alloyeditor/processors/removeids.js",
-            "line": 15,
-            "description": "Provides the removeids EditorContentProcessor"
-        },
         "ez-editorcontentprocessorxhtml5edit": {
             "name": "ez-editorcontentprocessorxhtml5edit",
             "submodules": {},
@@ -5260,6 +5369,22 @@
             "file": "Resources/public/js/alloyeditor/processors/xhtml5edit.js",
             "line": 19,
             "description": "Provides the xhtml5edit EditorContentProcessor"
+        },
+        "ez-editorcontentprocessorremoveids": {
+            "name": "ez-editorcontentprocessorremoveids",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.EditorContentProcessorRemoveIds": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/processors/removeids.js",
+            "line": 15,
+            "description": "Provides the removeids EditorContentProcessor"
         },
         "ez-alloyeditor-toolbar-config-block-base": {
             "name": "ez-alloyeditor-toolbar-config-block-base",
@@ -5597,6 +5722,52 @@
             "description": "Tree action view",
             "is_constructor": 1,
             "extends": "eZ.ButtonActionView"
+        },
+        "eZ.RichTextEmbedContainer": {
+            "name": "eZ.RichTextEmbedContainer",
+            "shortname": "eZ.RichTextEmbedContainer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-richtext-embedcontainer",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
+            "line": 14,
+            "description": "The Richtext embed container processor",
+            "is_constructor": 1
+        },
+        "eZ.RichTextResolveEmbed": {
+            "name": "eZ.RichTextResolveEmbed",
+            "shortname": "eZ.RichTextResolveEmbed",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 14,
+            "description": "The Richtext resolve embed processor",
+            "is_constructor": 1
+        },
+        "eZ.RichTextResolveImage": {
+            "name": "eZ.RichTextResolveImage",
+            "shortname": "eZ.RichTextResolveImage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-richtext-resolveimage",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
+            "line": 14,
+            "description": "The Richtext resolve image processor",
+            "extends": "eZ.RichTextResolveEmbed",
+            "is_constructor": 1
         },
         "Author": {
             "name": "Author",
@@ -6130,7 +6301,10 @@
             "line": 23,
             "description": "Rich Text edit view",
             "is_constructor": 1,
-            "extends": "eZ.FieldEditView"
+            "extends": "eZ.FieldEditView",
+            "uses": [
+                "eZ.Processable"
+            ]
         },
         "eZ.RichTextView": {
             "name": "eZ.RichTextView",
@@ -6146,7 +6320,10 @@
             "line": 14,
             "description": "The field view to display RichText fields",
             "is_constructor": 1,
-            "extends": "eZ.FieldView"
+            "extends": "eZ.FieldView",
+            "uses": [
+                "eZ.Processable"
+            ]
         },
         "eZ.SelectionEditView": {
             "name": "eZ.SelectionEditView",
@@ -7924,6 +8101,24 @@
             "line": 14,
             "description": "Views extension providing the content of height fit . When, `fitted to height`, the view\ncontainer scales to match the viewport's height new dimension."
         },
+        "eZ.Processable": {
+            "name": "eZ.Processable",
+            "shortname": "eZ.Processable",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Y.View",
+                "eZ.RichTextEditView",
+                "eZ.RichTextView"
+            ],
+            "module": "ez-processable",
+            "namespace": "eZ",
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 14,
+            "description": "View extension providing the concept of processor. The processors are\nrun after the event indicated by the `_processEvent` property."
+        },
         "eZ.SelectionTable": {
             "name": "eZ.SelectionTable",
             "shortname": "eZ.SelectionTable",
@@ -8108,7 +8303,7 @@
             "module": "ez-alloyeditor-button-mixin-embedimage",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
-            "line": 16,
+            "line": 15,
             "description": "ButtonEmbedImage is a mixing providing the necessary code to\ntrigger UDW and use the content choosen by the user to correctly set the\nproperties of an embed element that represents an image."
         },
         "eZ.AlloyEditorButton.WidgetButton": {
@@ -8482,22 +8677,6 @@
             "description": "The base EditorContentProcessor.",
             "is_constructor": 1
         },
-        "eZ.EditorContentProcessorRemoveIds": {
-            "name": "eZ.EditorContentProcessorRemoveIds",
-            "shortname": "eZ.EditorContentProcessorRemoveIds",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-editorcontentprocessorremoveids",
-            "namespace": "eZ",
-            "file": "Resources/public/js/alloyeditor/processors/removeids.js",
-            "line": 15,
-            "description": "removeids EditorContentProcessor.",
-            "is_constructor": 1,
-            "extends": "eZ.EditorContentProcessorBase"
-        },
         "eZ.EditorContentProcessorXHTML5Edit": {
             "name": "eZ.EditorContentProcessorXHTML5Edit",
             "shortname": "eZ.EditorContentProcessorXHTML5Edit",
@@ -8511,6 +8690,22 @@
             "file": "Resources/public/js/alloyeditor/processors/xhtml5edit.js",
             "line": 19,
             "description": "xhtml5edit EditorContentProcessor.",
+            "is_constructor": 1,
+            "extends": "eZ.EditorContentProcessorBase"
+        },
+        "eZ.EditorContentProcessorRemoveIds": {
+            "name": "eZ.EditorContentProcessorRemoveIds",
+            "shortname": "eZ.EditorContentProcessorRemoveIds",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-editorcontentprocessorremoveids",
+            "namespace": "eZ",
+            "file": "Resources/public/js/alloyeditor/processors/removeids.js",
+            "line": 15,
+            "description": "removeids EditorContentProcessor.",
             "is_constructor": 1,
             "extends": "eZ.EditorContentProcessorBase"
         },
@@ -10136,6 +10331,317 @@
             "type": "eZ.TreeView",
             "class": "eZ.TreeActionView",
             "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
+            "line": 23,
+            "description": "Adds an element container to the element representing an embed element",
+            "itemtype": "method",
+            "name": "process",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "Y.View"
+                }
+            ],
+            "class": "eZ.RichTextEmbedContainer",
+            "module": "ez-richtext-embedcontainer",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 23,
+            "description": "Resolves the embed by search for the corresponding content by content id.",
+            "itemtype": "method",
+            "name": "process",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 37,
+            "description": "Returns a node list of nodes representing an embed that are not yet been\nrendered.",
+            "itemtype": "method",
+            "name": "_getEmbedList",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 58,
+            "description": "Renders the embed as in *loading mode*.",
+            "itemtype": "method",
+            "name": "_renderLoadingEmbeds",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embeds",
+                    "description": "",
+                    "type": "NodeList"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 72,
+            "description": "Search for the content that are embed",
+            "itemtype": "method",
+            "name": "_loadEmbeds",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "mapNode",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 91,
+            "description": "Renders the embed with the search results",
+            "itemtype": "method",
+            "name": "_renderEmbed",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "mapNode",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "error",
+                    "description": "",
+                    "type": "Error|false"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 111,
+            "description": "Builds a map between the content id and the embed nodes embedding it.",
+            "itemtype": "method",
+            "name": "_buildEmbedMapNodes",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embeds",
+                    "description": "",
+                    "type": "NodeList"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 131,
+            "description": "Returns the content id of an embed node",
+            "itemtype": "method",
+            "name": "_getEmbedContentId",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 143,
+            "description": "Adds the loading class on the embed node",
+            "itemtype": "method",
+            "name": "_setLoading",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "return": {
+                "description": "the embedNode",
+                "type": "Node"
+            },
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 155,
+            "description": "Appends the embed content element when in loading mode.",
+            "itemtype": "method",
+            "name": "_appendLoadingNode",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 166,
+            "description": "Unsets the loading mode by remove the loading class.",
+            "itemtype": "method",
+            "name": "_unsetLoading",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "return": {
+                "description": "embedNode",
+                "type": "Node"
+            },
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 178,
+            "description": "Returns the node representing the embed content.",
+            "itemtype": "method",
+            "name": "_getEmbedContent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Node"
+            },
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
+            "line": 72,
+            "description": "Renders the image inside the embed node.",
+            "itemtype": "method",
+            "name": "_renderImage",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "eZ.Content"
+                },
+                {
+                    "name": "variation",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.RichTextResolveImage",
+            "module": "ez-richtext-resolveimage",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
+            "line": 89,
+            "description": "Returns the image variation for the embedNode.",
+            "itemtype": "method",
+            "name": "_getEmbedVariation",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.RichTextResolveImage",
+            "module": "ez-richtext-resolveimage",
             "namespace": "eZ"
         },
         {
@@ -13893,7 +14399,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 58,
+            "line": 60,
             "description": "`focusModeChange` event handler, it adds or removes the focused\nclass on the view container.",
             "itemtype": "method",
             "name": "_uiFocusMode",
@@ -13905,7 +14411,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 75,
+            "line": 77,
             "description": "tap event handler on the focus button.",
             "itemtype": "method",
             "name": "_setFocusMode",
@@ -13924,7 +14430,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 87,
+            "line": 89,
             "description": "tap event handler on the save and return button.",
             "itemtype": "method",
             "name": "_unsetFocusMode",
@@ -13943,7 +14449,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 99,
+            "line": 101,
             "description": "Returns an objects (`name` and `identifier`) representing the image\nvariations configured in Platform sorted by name.",
             "itemtype": "method",
             "name": "_getImageVariations",
@@ -13956,7 +14462,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 124,
+            "line": 126,
             "description": "Registers the plugin which name is given in the given plugin dir.",
             "itemtype": "method",
             "name": "_registerExternalCKEditorPlugin",
@@ -13968,7 +14474,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 134,
+            "line": 136,
             "description": "Initializes the editor",
             "access": "protected",
             "tagname": "",
@@ -13980,7 +14486,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 172,
+            "line": 174,
             "description": "Forwards the given event to the YUI stack",
             "itemtype": "method",
             "name": "_forwardEditorEvent",
@@ -13999,7 +14505,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 183,
+            "line": 185,
             "description": "Adds or removes the editor focused class on the view container.",
             "itemtype": "method",
             "name": "_uiHandleEditorFocus",
@@ -14016,7 +14522,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 211,
+            "line": 213,
             "description": "Checks whether the field is empty. The field is considered empty if:\n  * there's no section element\n  * or the section element has no child\n  * or the section element has only child without content",
             "itemtype": "method",
             "name": "_isEmpty",
@@ -14032,7 +14538,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 243,
+            "line": 245,
             "description": "Returns a DocumentFragment object or null if the parser failed to\nload the xhtml5edit version of the rich text field. The document\nfragment only contains the content of the root <section> element.",
             "itemtype": "method",
             "name": "_getHTMLDocumentFragment",
@@ -14046,7 +14552,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 271,
+            "line": 273,
             "description": "Serializes the Document to a string",
             "itemtype": "method",
             "name": "_serializeFieldValue",
@@ -14062,7 +14568,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 294,
+            "line": 296,
             "description": "Returns the field value suitable for the REST API based on the\ncurrent input.",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -14077,7 +14583,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 306,
+            "line": 308,
             "description": "Returns the content of the editor in the XHTML5Edit format. The\nactual editor's content is passed through a set of\nEditorContentProcessors.",
             "itemtype": "method",
             "name": "_getXHTML5EditValue",
@@ -14093,7 +14599,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 325,
+            "line": 340,
             "description": "Stores the focus mode state. When true, the rich text UI is\nsupposed to be fullscreen with an action bar on the right.",
             "itemtype": "attribute",
             "name": "focusMode",
@@ -14105,7 +14611,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 338,
+            "line": 353,
             "description": "The AlloyEditor",
             "itemtype": "attribute",
             "name": "editor",
@@ -14116,7 +14622,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 349,
+            "line": 364,
             "description": "AlloyEditor toolbar configuration",
             "itemtype": "attribute",
             "name": "toolbarsConfig",
@@ -14127,7 +14633,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 376,
+            "line": 391,
             "description": "The path to use to load the CKEditor plugins",
             "itemtype": "attribute",
             "name": "ckeditorPluginPath",
@@ -14140,20 +14646,20 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 389,
+            "line": 404,
             "description": "Editor events to forward to the YUI stack",
             "itemtype": "attribute",
             "name": "forwardEvents",
             "readonly": "",
             "type": "{Array}",
-            "default": "['contentDiscover', 'loadImageVariation', 'contentSearch']",
+            "default": "['contentDiscover', 'loadImageVariation', 'contentSearch', 'instanceReady', 'updatedEmbed']",
             "class": "eZ.RichTextEditView",
             "module": "ez-richtext-editview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 402,
+            "line": 417,
             "description": "Hold the list of editor content processors. Those components\nshould have a `process` method and are there to clean up the\neditor content before using it through REST.",
             "itemtype": "attribute",
             "name": "editorContentProcessors",
@@ -14164,7 +14670,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 24,
+            "line": 25,
             "description": "Stores the parsed document from the xhtml5edit version of the\nrich text field. `null` means the document is invalid.",
             "itemtype": "property",
             "name": "_document",
@@ -14177,7 +14683,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 42,
+            "line": 54,
             "description": "Checks whether the field value is empty. A RichText field is\nconsidered empty if its content was successfully parsed and if the\n*root* `section` element has no child.",
             "itemtype": "method",
             "name": "_isFieldEmpty",
@@ -14193,7 +14699,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 55,
+            "line": 67,
             "description": "Returns an additional `parseError` variable indicating whether the\nxhtml5edit version of the rich text field was successfully parsed.",
             "itemtype": "method",
             "name": "_variables",
@@ -14209,7 +14715,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 69,
+            "line": 81,
             "description": "Returns a Document object or null is the parser failed to load the\nxhtml5edit version of the rich text field.",
             "itemtype": "method",
             "name": "_getDOMDocument",
@@ -31218,6 +31724,81 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 24,
+            "description": "Holds the event(s) after which the processing should be triggered.",
+            "itemtype": "property",
+            "name": "_processEvent",
+            "type": "{String|Array}",
+            "required": 1,
+            "class": "eZ.Processable",
+            "module": "ez-processable",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 34,
+            "description": "Adds a processor to the list with the given priority. A processor is\nan object that should have a `process` method. When run, the\nprocessor will receive the view being processed.",
+            "itemtype": "method",
+            "name": "addProcessor",
+            "params": [
+                {
+                    "name": "processor",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "priority",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "eZ.Processable",
+            "module": "ez-processable",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 58,
+            "description": "Removes one or several processors matching the given `matchingFn`\nfunction.",
+            "itemtype": "method",
+            "name": "removeProcessor",
+            "params": [
+                {
+                    "name": "matchingFn",
+                    "description": "it receives the processor and if it\nreturns a truthy value, the corresponding processor is excluded from\nthe list.",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Processable",
+            "module": "ez-processable",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 75,
+            "description": "Loops through the processors to run them on the view.",
+            "itemtype": "method",
+            "name": "_process",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.Processable",
+            "module": "ez-processable",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/extensions/ez-processable.js",
+            "line": 88,
+            "description": "Holds the processors. Each entry is an object containing 2\nproperties:\n- `processor` the processor\n- `priority` its priority",
+            "itemtype": "attribute",
+            "name": "priority",
+            "type": "{Array}",
+            "readonly": "",
+            "class": "eZ.Processable",
+            "module": "ez-processable",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/extensions/ez-selection-table.js",
             "line": 52,
             "description": "Change event handler for the ez-selection-table-checkbox checkboxes",
@@ -31818,7 +32399,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
-            "line": 25,
+            "line": 24,
             "description": "Checks whether the current selection can be considered as an image.\nThis is the case if the content type has an ezimage field definition\nand if the corresponding field is not empty. This method is meant to\nbe used as a `isSelectable` function implementation for the UDW.",
             "itemtype": "method",
             "name": "_isImage",
@@ -31841,7 +32422,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
-            "line": 46,
+            "line": 45,
             "description": "Returns the image field object of the given content.",
             "itemtype": "method",
             "name": "_getImageField",
@@ -31863,56 +32444,6 @@
                 "description": "",
                 "type": "Object"
             },
-            "class": "eZ.AlloyEditorButton.ButtonEmbedImage",
-            "module": "ez-alloyeditor-button-mixin-embedimage",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
-            "line": 61,
-            "description": "Creates the <img> element with the provided image variation.",
-            "itemtype": "method",
-            "name": "_insertImage",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "imgVariation",
-                    "description": "",
-                    "type": "False|CAPIError"
-                },
-                {
-                    "name": "imgVariation",
-                    "description": "",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.AlloyEditorButton.ButtonEmbedImage",
-            "module": "ez-alloyeditor-button-mixin-embedimage",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/mixins/embedimage.js",
-            "line": 80,
-            "description": "Loads the variation of the embed image by firing the\n`loadImageVariation`event.",
-            "itemtype": "method",
-            "name": "_loadEmbedImage",
-            "params": [
-                {
-                    "name": "struct",
-                    "description": "",
-                    "type": "Object"
-                },
-                {
-                    "name": "variation",
-                    "description": "the optional image variation to use",
-                    "type": "String",
-                    "optional": true,
-                    "optdefault": "'medium'"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
             "class": "eZ.AlloyEditorButton.ButtonEmbedImage",
             "module": "ez-alloyeditor-button-mixin-embedimage",
             "namespace": "eZ.AlloyEditorButton"
@@ -32050,56 +32581,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
-            "line": 55,
-            "description": "Fired to load the embedded Content and the corresponding Content\nType. See {{#crossLink \"eZ.Plugin.Search/_doContentSearch:method\"}}eZ.Plugin.Search#_doContentSearch{{/crossLink}}",
-            "itemtype": "event",
-            "name": "contentSearch",
-            "params": [
-                {
-                    "name": "viewName",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "search",
-                    "description": "",
-                    "type": "Object",
-                    "props": [
-                        {
-                            "name": "criteria",
-                            "description": "",
-                            "type": "Object"
-                        },
-                        {
-                            "name": "offset",
-                            "description": "",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "limit",
-                            "description": "",
-                            "type": "Number"
-                        }
-                    ]
-                },
-                {
-                    "name": "loadContentType",
-                    "description": "",
-                    "type": "Boolean"
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.AlloyEditorButton.ButtonImageVariation",
-            "module": "ez-alloyeditor-button-remove",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
-            "line": 83,
+            "line": 59,
             "description": "Returns the options to add to the drop down list.",
             "itemtype": "method",
             "name": "_getImageVariationOptions",
@@ -32148,7 +32630,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 50,
+            "line": 52,
             "description": "Initializes the alignment on the widget wrapper if the widget\nis aligned.",
             "itemtype": "method",
             "name": "_syncAlignment",
@@ -32160,7 +32642,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 67,
+            "line": 69,
             "description": "Sets the alignment of the embed widget to `type`. The\nalignment is set by adding the `data-ezalign` attribute\non the widget wrapper and the widget element.",
             "itemtype": "method",
             "name": "setAlignment",
@@ -32177,7 +32659,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 80,
+            "line": 82,
             "description": "Removes the alignment of the widget.",
             "itemtype": "method",
             "name": "unsetAlignment",
@@ -32187,7 +32669,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 90,
+            "line": 92,
             "description": "Checks whether the embed is aligned with `type` alignment.",
             "itemtype": "method",
             "name": "isAligned",
@@ -32208,7 +32690,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 101,
+            "line": 103,
             "description": "Set the embed as an embed representing an image",
             "itemtype": "method",
             "name": "setImageType",
@@ -32222,7 +32704,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 112,
+            "line": 114,
             "description": "Check whether the embed widget represents an image or not.",
             "itemtype": "method",
             "name": "isImage",
@@ -32236,7 +32718,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 122,
+            "line": 124,
             "description": "Sets the `href` of the embed is URI to the embed content or\nlocation. (ezcontent://32 for instance).",
             "itemtype": "method",
             "name": "setHref",
@@ -32257,7 +32739,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 135,
+            "line": 137,
             "description": "Returns the `href`of the embed.",
             "itemtype": "method",
             "name": "getHref",
@@ -32271,7 +32753,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 145,
+            "line": 147,
             "description": "Sets the widget content. It makes sure the config element is\nnot overwritten.",
             "itemtype": "method",
             "name": "setWidgetContent",
@@ -32292,7 +32774,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 171,
+            "line": 173,
             "description": "Sets a config value under the `key` for the embed.",
             "itemtype": "method",
             "name": "setConfig",
@@ -32318,7 +32800,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 192,
+            "line": 194,
             "description": "Returns the config value for the `key` or undefined if the\nconfig key is not found.",
             "itemtype": "method",
             "name": "getConfig",
@@ -32332,7 +32814,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 205,
+            "line": 207,
             "description": "Returns the Element holding the config under `key`",
             "itemtype": "method",
             "name": "_getValueElement",
@@ -32353,7 +32835,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 216,
+            "line": 218,
             "description": "Returns the element used as a container the config values. if\nit does not exist, it is created.",
             "itemtype": "method",
             "name": "_getEzConfigElement",
@@ -32369,7 +32851,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 235,
+            "line": 237,
             "description": "Fires the editorInteraction event so that AlloyEditor editor\nUI remains visible and is updated.",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -32482,6 +32964,46 @@
             },
             "class": "eZ.EditorContentProcessorBase",
             "module": "ez-editorcontentprocessorbase",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/processors/emptyembed.js",
+            "line": 27,
+            "description": "Empty the embed node while keeping the embed config if any",
+            "itemtype": "method",
+            "name": "_emptyEmbed",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "DOMNode"
+                }
+            ],
+            "class": "eZ.EditorContentProcessorXHTML5Edit",
+            "module": "ez-editorcontentprocessorxhtml5edit",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/processors/emptyembed.js",
+            "line": 46,
+            "description": "Make sure the embed node are empty.",
+            "itemtype": "method",
+            "name": "process",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.EditorContentProcessorXHTML5Edit",
+            "module": "ez-editorcontentprocessorxhtml5edit",
             "namespace": "eZ"
         },
         {

@@ -189,6 +189,7 @@
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
                                 <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.Processable.html">eZ.Processable</a></li>
                                 <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
                                 <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
                                 <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
@@ -196,6 +197,9 @@
                                 <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
@@ -360,6 +364,7 @@
                                 <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
                                 <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
                                 <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-processable.html">ez-processable</a></li>
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
@@ -369,6 +374,9 @@
                                 <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
+                                <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
@@ -482,8 +490,9 @@ YUI.add(&#x27;ez-richtext-editview&#x27;, function (Y) {
      * @class RichTextEditView
      * @constructor
      * @extends eZ.FieldEditView
+     * @uses eZ.Processable
      */
-    Y.eZ.RichTextEditView = Y.Base.create(&#x27;richTextEditView&#x27;, Y.eZ.FieldEditView, [], {
+    Y.eZ.RichTextEditView = Y.Base.create(&#x27;richTextEditView&#x27;, Y.eZ.FieldEditView, [Y.eZ.Processable], {
         events: {
             &#x27;.ez-richtext-switch-focus&#x27;: {
                 &#x27;tap&#x27;: &#x27;_setFocusMode&#x27;,
@@ -508,6 +517,7 @@ YUI.add(&#x27;ez-richtext-editview&#x27;, function (Y) {
                 }
             });
             this.after(&#x27;focusModeChange&#x27;, this._uiFocusMode);
+            this._processEvent = [&#x27;instanceReady&#x27;, &#x27;updatedEmbed&#x27;];
         },
 
         /**
@@ -777,6 +787,19 @@ YUI.add(&#x27;ez-richtext-editview&#x27;, function (Y) {
         },
     }, {
         ATTRS: {
+            processors: {
+                writeOnce: &#x27;initOnly&#x27;,
+                valueFn: function () {
+                    return [{
+                        processor: new Y.eZ.RichTextResolveImage(),
+                        priority: 100,
+                    }, {
+                        processor: new Y.eZ.RichTextResolveEmbed(),
+                        priority: 50,
+                    }];
+                },
+            },
+
             /**
              * Stores the focus mode state. When true, the rich text UI is
              * supposed to be fullscreen with an action bar on the right.
@@ -847,10 +870,10 @@ YUI.add(&#x27;ez-richtext-editview&#x27;, function (Y) {
              * @attribute forwardEvents
              * @readOnly
              * @type {Array}
-             * @default [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;]
+             * @default [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;, &#x27;instanceReady&#x27;, &#x27;updatedEmbed&#x27;]
              */
             forwardEvents: {
-                value: [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;],
+                value: [&#x27;contentDiscover&#x27;, &#x27;loadImageVariation&#x27;, &#x27;contentSearch&#x27;, &#x27;instanceReady&#x27;, &#x27;updatedEmbed&#x27;],
                 readOnly: true,
             },
 
@@ -866,6 +889,7 @@ YUI.add(&#x27;ez-richtext-editview&#x27;, function (Y) {
                 valueFn: function () {
                     return [
                         new Y.eZ.EditorContentProcessorRemoveIds(),
+                        new Y.eZ.EditorContentProcessorEmptyEmbed(),
                         new Y.eZ.EditorContentProcessorXHTML5Edit(),
                     ];
                 },

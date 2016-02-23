@@ -189,6 +189,7 @@
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
                                 <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.Processable.html">eZ.Processable</a></li>
                                 <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
                                 <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
                                 <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
@@ -196,6 +197,9 @@
                                 <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
@@ -360,6 +364,7 @@
                                 <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
                                 <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
                                 <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-processable.html">ez-processable</a></li>
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
@@ -369,6 +374,9 @@
                                 <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
+                                <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
@@ -520,10 +528,18 @@
 
                     <ul class="index-list methods extends">
                             <li class="index-item method protected">
+                                <a href="#method__emptyEmbed">_emptyEmbed</a>
+
+                            </li>
+                            <li class="index-item method protected">
                                 <a href="#method__xhtmlify">_xhtmlify</a>
 
                             </li>
                             <li class="index-item method inherited">
+                                <a href="#method_process">process</a>
+
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_process">process</a>
 
                             </li>
@@ -537,6 +553,60 @@
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
+<div id="method__emptyEmbed" class="method item protected">
+    <h3 class="name"><code>_emptyEmbed</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>embedNode</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_alloyeditor_processors_emptyembed.js.html#l27"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;processors&#x2F;emptyembed.js:27</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Empty the embed node while keeping the embed config if any</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">embedNode</code>
+                        <span class="type">DOMNode</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__xhtmlify" class="method item protected">
     <h3 class="name"><code>_xhtmlify</code></h3>
 
@@ -628,6 +698,69 @@
                 eZ.EditorContentProcessorBase
             </a>
             but overwritten in
+        <a href="../files/Resources_public_js_alloyeditor_processors_emptyembed.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;processors&#x2F;emptyembed.js:46</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Make sure the embed node are empty.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_process" class="method item">
+    <h3 class="name"><code>process</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
         <a href="../files/Resources_public_js_alloyeditor_processors_xhtml5edit.js.html#l53"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;processors&#x2F;xhtml5edit.js:53</code></a>
         </p>
 

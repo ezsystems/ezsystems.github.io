@@ -189,6 +189,7 @@
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
                                 <li><a href="../classes/eZ.PreviewActionView.html">eZ.PreviewActionView</a></li>
+                                <li><a href="../classes/eZ.Processable.html">eZ.Processable</a></li>
                                 <li><a href="../classes/eZ.RawContentView.html">eZ.RawContentView</a></li>
                                 <li><a href="../classes/eZ.RelationEditView.html">eZ.RelationEditView</a></li>
                                 <li><a href="../classes/eZ.RelationListEditView.html">eZ.RelationListEditView</a></li>
@@ -196,6 +197,9 @@
                                 <li><a href="../classes/eZ.RelationView.html">eZ.RelationView</a></li>
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
+                                <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
+                                <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
@@ -360,6 +364,7 @@
                                 <li><a href="../modules/ez-pluginregistry.html">ez-pluginregistry</a></li>
                                 <li><a href="../modules/ez-positionplugin.html">ez-positionplugin</a></li>
                                 <li><a href="../modules/ez-previewactionview.html">ez-previewactionview</a></li>
+                                <li><a href="../modules/ez-processable.html">ez-processable</a></li>
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
@@ -369,6 +374,9 @@
                                 <li><a href="../modules/ez-relationlist-view.html">ez-relationlist-view</a></li>
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
+                                <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
+                                <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
@@ -457,7 +465,6 @@
  * Copyright (C) eZ Systems AS. All rights reserved.
  * For full copyright and license information view LICENSE file distributed with this source code.
  */
-/* global CKEDITOR */
 YUI.add(&#x27;ez-alloyeditor-button-mixin-embedimage&#x27;, function (Y) {
     &quot;use strict&quot;;
 
@@ -511,51 +518,6 @@ YUI.add(&#x27;ez-alloyeditor-button-mixin-embedimage&#x27;, function (Y) {
             var imageIdentifier = contentType.getFieldDefinitionIdentifiers(&#x27;ezimage&#x27;);
 
             return content.get(&#x27;fields&#x27;)[imageIdentifier[0]];
-        },
-
-        /**
-         * Creates the &lt;img&gt; element with the provided image variation.
-         *
-         * @method _insertImage
-         * @protected
-         * @param {false|CAPIError} imgVariation
-         * @param {Object} imgVariation
-         */
-        _insertImage: function (error, imgVariation) {
-            var img = new CKEDITOR.dom.element(&#x27;img&#x27;);
-
-            // TODO error handling, this is also related to the improvement
-            // of the transitions between the loading state and the state where
-            // we display the image
-            // see https://jira.ez.no/browse/EZP-25138
-            img.setAttribute(&#x27;src&#x27;, imgVariation.uri);
-            this._getWidget().setWidgetContent(img);
-        },
-
-        /**
-         * Loads the variation of the embed image by firing the
-         * &#x60;loadImageVariation&#x60;event.
-         *
-         * @method _loadEmbedImage
-         * @param {Object} struct
-         * @param {String} [variation=&#x27;medium&#x27;] the optional image variation to use
-         * @protected
-         */
-        _loadEmbedImage: function (struct, variation) {
-            var editor = this.props.editor.get(&#x27;nativeEditor&#x27;);
-
-            if ( !variation ) {
-                // TODO make the default variation configurable
-                // see https://jira.ez.no/browse/EZP-25139
-                variation = &#x27;medium&#x27;;
-            }
-
-            this._getWidget().setConfig(&#x27;size&#x27;, variation);
-            editor.fire(&#x27;loadImageVariation&#x27;, {
-                variation: variation,
-                field: this._getImageField(struct.contentType, struct.content),
-                callback: this._insertImage,
-            });
         },
     };
 });
