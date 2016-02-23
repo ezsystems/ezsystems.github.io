@@ -571,7 +571,7 @@ YUI.add(&#x27;ez-time-editview&#x27;, function (Y) {
                 field = this.get(&#x27;field&#x27;),
                 time = &#x27;&#x27;;
 
-            if ( field &amp;&amp; field.fieldValue ) {
+            if (!this._isFieldEmpty()) {
                 if (!this.get(&#x27;supportsTimeInput&#x27;) &amp;&amp; !def.fieldSettings.useSeconds) {
                     time = Y.Date.format(new Date(this._getUtcTimeStamp(field.fieldValue * 1000)), {format:&quot;%R&quot;});
                 } else {
@@ -617,16 +617,18 @@ YUI.add(&#x27;ez-time-editview&#x27;, function (Y) {
          *
          * @protected
          * @method _supportedTimeInputGetFieldValue
-         * @return {Number}
+         * @return {Number|null}
          */
         _supportedTimeInputGetFieldValue: function () {
             var valueOfInput;
 
             valueOfInput = this._getInputNode().get(&#x27;valueAsNumber&#x27;);
-            if (valueOfInput) {
-                return valueOfInput/1000;
+
+            if (isNaN(valueOfInput)) {
+                return null;
             }
-            return null;
+
+            return valueOfInput/1000;
         },
 
         /**
@@ -668,6 +670,19 @@ YUI.add(&#x27;ez-time-editview&#x27;, function (Y) {
             } else {
                 return this._unsupportedTimeInputGetFieldValue();
             }
+        },
+
+        /**
+         * Whether the field is empty or not
+         *
+         * @protected
+         * @method _isFieldEmpty
+         * @return {Boolean}
+         */
+        _isFieldEmpty: function () {
+            var field = this.get(&#x27;field&#x27;);
+
+            return (!field || isNaN(field.fieldValue));
         },
     },{
         ATTRS: {

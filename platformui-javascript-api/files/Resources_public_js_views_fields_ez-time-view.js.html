@@ -544,12 +544,18 @@ YUI.add(&#x27;ez-time-view&#x27;, function (Y) {
          * @return {Date}
          */
         _getDateObject: function () {
+            if (this._isFieldEmpty()) {
+                return undefined;
+            } else {
+                return new Date(this.get(&#x27;field&#x27;).fieldValue * 1000);
+            }
+        },
+
+        _isFieldEmpty: function () {
             var field = this.get(&#x27;field&#x27;);
 
-            if ( field &amp;&amp; field.fieldValue ) {
-                return new Date(field.fieldValue * 1000);
-            }
-            return undefined;
+            return (!field || field.fieldValue === null || isNaN(field.fieldValue) );
+
         },
     });
 

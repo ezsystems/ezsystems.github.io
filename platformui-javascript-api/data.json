@@ -11914,6 +11914,22 @@
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
             "line": 302,
+            "description": "Whether the field is empty or not",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_isFieldEmpty",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.DateAndTimeEditView",
+            "module": "ez-dateandtime-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
+            "line": 316,
             "description": "The number of the validate error",
             "itemtype": "attribute",
             "name": "validateError",
@@ -11989,7 +12005,7 @@
             "name": "_getDateObject",
             "return": {
                 "description": "",
-                "type": "Date"
+                "type": "Date|undefined"
             },
             "class": "eZ.DateAndTimeView",
             "module": "ez-dateandtime-view",
@@ -14817,7 +14833,7 @@
             "name": "_supportedTimeInputGetFieldValue",
             "return": {
                 "description": "",
-                "type": "Number"
+                "type": "Number|null"
             },
             "class": "eZ.timeEditView",
             "module": "ez-time-editview",
@@ -14825,7 +14841,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-editview.js",
-            "line": 177,
+            "line": 179,
             "description": "Returns the currently filled time value for browsers which DO NOT support Time input",
             "access": "protected",
             "tagname": "",
@@ -14841,7 +14857,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-editview.js",
-            "line": 203,
+            "line": 205,
             "description": "Returns the currently filled time value",
             "access": "protected",
             "tagname": "",
@@ -14857,7 +14873,23 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-editview.js",
-            "line": 219,
+            "line": 220,
+            "description": "Whether the field is empty or not",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_isFieldEmpty",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.timeEditView",
+            "module": "ez-time-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-time-editview.js",
+            "line": 234,
             "description": "Checks if browser supports HTML5 time input",
             "itemtype": "attribute",
             "name": "supportsTimeInput",
