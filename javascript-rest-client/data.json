@@ -1505,9 +1505,32 @@
                 },
                 {
                     "name": "options",
-                    "description": "Object containing different options for the CAPI (see example)",
+                    "description": "Object containing different options for the CAPI",
                     "type": "Object",
-                    "optional": true
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "rootPath",
+                            "description": "the API root path",
+                            "type": "String",
+                            "optional": true,
+                            "optdefault": "'/api/ezp/v2/'"
+                        },
+                        {
+                            "name": "logRequests",
+                            "description": "whether to log requests",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "siteAccess",
+                            "description": "siteaccess in which requests should be executed",
+                            "type": "String|null",
+                            "optional": true,
+                            "optdefault": "null"
+                        }
+                    ]
                 }
             ],
             "example": [
@@ -1561,6 +1584,12 @@
                     "name": "connectionFactory",
                     "description": "the factory which is choosing compatible connection from connections list",
                     "type": "ConnectionFeatureFactory"
+                },
+                {
+                    "name": "siteAccess",
+                    "description": "SiteAccess to use for requests",
+                    "type": "String",
+                    "optional": true
                 }
             ]
         },
@@ -6019,7 +6048,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 66,
+            "line": 70,
             "description": "Checks that the CAPI instance is logged in",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -6034,7 +6063,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 76,
+            "line": 80,
             "description": "Logs in the user",
             "itemtype": "method",
             "name": "logIn",
@@ -6067,7 +6096,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 94,
+            "line": 98,
             "description": "Logs out the current user.",
             "itemtype": "method",
             "name": "logOut",
@@ -6082,7 +6111,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 104,
+            "line": 108,
             "description": "Get instance of Content Service. Use ContentService to retrieve information and execute operations related to Content.",
             "itemtype": "method",
             "name": "getContentService",
@@ -6097,7 +6126,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 126,
+            "line": 130,
             "description": "Get instance of Content Type Service. Use ContentTypeService to retrieve information and execute operations related to ContentTypes.",
             "itemtype": "method",
             "name": "getContentTypeService",
@@ -6112,7 +6141,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 148,
+            "line": 152,
             "description": "Get instance of User Service. Use UserService to retrieve information and execute operations related to Users.",
             "itemtype": "method",
             "name": "getUserService",
@@ -6127,7 +6156,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 170,
+            "line": 174,
             "description": "Get instance of Discovery Service. Use DiscoveryService to internally to discover\nresources URI and media type provided in the root resource.",
             "itemtype": "method",
             "name": "getDiscoveryService",
@@ -6142,7 +6171,7 @@
         },
         {
             "file": "src/CAPI.js",
-            "line": 187,
+            "line": 191,
             "description": "Gets the connection manager",
             "itemtype": "method",
             "name": "getConnectionManager",
@@ -6169,7 +6198,7 @@
         },
         {
             "file": "src/ConnectionManager.js",
-            "line": 26,
+            "line": 28,
             "description": "Basic request function",
             "itemtype": "method",
             "name": "request",
@@ -6210,7 +6239,7 @@
         },
         {
             "file": "src/ConnectionManager.js",
-            "line": 132,
+            "line": 138,
             "description": "Not authorized request function\nUsed mainly for initial requests (e.g. createSession)",
             "itemtype": "method",
             "name": "notAuthorizedRequest",
