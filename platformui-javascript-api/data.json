@@ -4873,7 +4873,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 14,
+            "line": 16,
             "description": "Provides the User Profile View class"
         },
         "ez-view": {
@@ -7973,7 +7973,7 @@
             "module": "ez-userprofileview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 14,
+            "line": 16,
             "description": "The User Profile View",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
@@ -29492,11 +29492,10 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 30,
+            "line": 32,
             "description": "The click outside user menu event handler",
             "itemtype": "property",
             "name": "_clickOutsideUserMenuHandler",
-            "default": "null",
             "access": "protected",
             "tagname": "",
             "class": "eZ.UserProfileView",
@@ -29505,7 +29504,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 40,
+            "line": 51,
             "description": "Renders the user profile view",
             "itemtype": "method",
             "name": "render",
@@ -29519,10 +29518,10 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 61,
-            "description": "Set the click outside event listener",
+            "line": 76,
+            "description": "Hides the user menu",
             "itemtype": "method",
-            "name": "_setClickOutsideUserMenuHandler",
+            "name": "_hideMenu",
             "access": "protected",
             "tagname": "",
             "class": "eZ.UserProfileView",
@@ -29531,19 +29530,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 78,
-            "description": "Hides the user menu when clicked outside the user profile.",
-            "itemtype": "method",
-            "name": "_hideMenuOnClickOutside",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UserProfileView",
-            "module": "ez-userprofileview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 90,
+            "line": 86,
             "description": "Renders the user menu view",
             "itemtype": "method",
             "name": "_renderUserMenu",
@@ -29553,7 +29540,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 101,
+            "line": 97,
             "description": "Toggle the user menu.",
             "itemtype": "method",
             "name": "_toggleUserMenu",
@@ -29565,7 +29552,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 114,
+            "line": 108,
             "description": "Contains data about current user",
             "itemtype": "attribute",
             "name": "user",
@@ -29576,7 +29563,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 122,
+            "line": 116,
             "description": "Contains the alternative text for the user's avatar",
             "itemtype": "attribute",
             "name": "avatarAltText",
@@ -29588,7 +29575,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 133,
+            "line": 127,
             "description": "Contains the default users avatar image",
             "itemtype": "attribute",
             "name": "defaultAvatarImage",
@@ -29599,7 +29586,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-userprofileview.js",
-            "line": 163,
+            "line": 157,
             "description": "The user menu view",
             "itemtype": "attribute",
             "name": "userMenuView",

@@ -482,6 +482,8 @@ YUI.add(&#x27;ez-userprofileview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
+    var MENU_DISPLAYED = &#x27;is-menu-displayed&#x27;;
+
     /**
      * The User Profile View
      *
@@ -502,10 +504,19 @@ YUI.add(&#x27;ez-userprofileview&#x27;, function (Y) {
              * The click outside user menu event handler
              *
              * @property _clickOutsideUserMenuHandler
-             * @default null
              * @protected
              */
-            this._clickOutsideUserMenuHandler = null;
+            this._clickOutsideUserMenuHandler = this.get(&#x27;container&#x27;).on(&#x27;clickoutside&#x27;, this._hideMenu, this);
+
+            this.after(&#x27;userMenuView:displayedChange&#x27;, function (e) {
+                var container = this.get(&#x27;container&#x27;);
+
+                if ( e.newVal ) {
+                    container.addClass(MENU_DISPLAYED);
+                } else {
+                    container.removeClass(MENU_DISPLAYED);
+                }
+            });
         },
 
         /**
@@ -529,33 +540,18 @@ YUI.add(&#x27;ez-userprofileview&#x27;, function (Y) {
             return this;
         },
 
-        /**
-         * Set the click outside event listener
-         *
-         * @method _setClickOutsideUserMenuHandler
-         * @protected
-         */
-        _setClickOutsideUserMenuHandler: function () {
-            if (this._clickOutsideUserMenuHandler) {
-                this._clickOutsideUserMenuHandler.detach();
-                this._clickOutsideUserMenuHandler = null;
-            } else {
-                this._clickOutsideUserMenuHandler = this.get(&#x27;container&#x27;).on(&#x27;clickoutside&#x27;, this._hideMenuOnClickOutside, this);
-            }
-
-            return this;
+        destructor: function () {
+            this._clickOutsideUserMenuHandler.detach();
         },
 
         /**
-         * Hides the user menu when clicked outside the user profile.
+         * Hides the user menu
          *
-         * @method _hideMenuOnClickOutside
+         * @method _hideMenu
          * @protected
          */
-        _hideMenuOnClickOutside: function () {
+        _hideMenu: function () {
             this.get(&#x27;userMenuView&#x27;).hide();
-
-            this._setClickOutsideUserMenuHandler();
         },
 
         /**
@@ -577,8 +573,6 @@ YUI.add(&#x27;ez-userprofileview&#x27;, function (Y) {
          */
         _toggleUserMenu: function () {
             this.get(&#x27;userMenuView&#x27;).toggleDisplayed();
-
-            this._setClickOutsideUserMenuHandler();
         }
     }, {
         ATTRS: {
