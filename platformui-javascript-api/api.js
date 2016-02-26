@@ -201,6 +201,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.UrlView",
         "eZ.User",
         "eZ.UserEditView",
+        "eZ.UserMenuItemFireEventView",
+        "eZ.UserMenuItemView",
+        "eZ.UserMenuView",
+        "eZ.UserProfileView",
         "eZ.UserView",
         "eZ.Version",
         "eZ.View",
@@ -377,7 +381,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-user-editview",
         "ez-user-view",
         "ez-userloadplugin",
+        "ez-usermenuitemfire event view",
+        "ez-usermenuitemview",
+        "ez-usermenuview",
         "ez-usermodel",
+        "ez-userprofileview",
         "ez-versionmodel",
         "ez-view",
         "ez-viewservice",
@@ -1223,9 +1231,29 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the user load plugin"
         },
         {
+            "displayName": "ez-usermenuitemfire event view",
+            "name": "ez-usermenuitemfire event view",
+            "description": "Provides the user menu item fire event view"
+        },
+        {
+            "displayName": "ez-usermenuitemview",
+            "name": "ez-usermenuitemview",
+            "description": "Provides the user menu item view"
+        },
+        {
+            "displayName": "ez-usermenuview",
+            "name": "ez-usermenuview",
+            "description": "Provides the User Menu View class"
+        },
+        {
             "displayName": "ez-usermodel",
             "name": "ez-usermodel",
             "description": "Provides the User model class"
+        },
+        {
+            "displayName": "ez-userprofileview",
+            "name": "ez-userprofileview",
+            "description": "Provides the User Profile View class"
         },
         {
             "displayName": "ez-versionmodel",

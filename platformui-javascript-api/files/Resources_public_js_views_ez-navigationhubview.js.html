@@ -239,6 +239,10 @@
                                 <li><a href="../classes/eZ.UrlView.html">eZ.UrlView</a></li>
                                 <li><a href="../classes/eZ.User.html">eZ.User</a></li>
                                 <li><a href="../classes/eZ.UserEditView.html">eZ.UserEditView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemFireEventView.html">eZ.UserMenuItemFireEventView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemView.html">eZ.UserMenuItemView</a></li>
+                                <li><a href="../classes/eZ.UserMenuView.html">eZ.UserMenuView</a></li>
+                                <li><a href="../classes/eZ.UserProfileView.html">eZ.UserProfileView</a></li>
                                 <li><a href="../classes/eZ.UserView.html">eZ.UserView</a></li>
                                 <li><a href="../classes/eZ.Version.html">eZ.Version</a></li>
                                 <li><a href="../classes/eZ.View.html">eZ.View</a></li>
@@ -416,7 +420,11 @@
                                 <li><a href="../modules/ez-user-editview.html">ez-user-editview</a></li>
                                 <li><a href="../modules/ez-user-view.html">ez-user-view</a></li>
                                 <li><a href="../modules/ez-userloadplugin.html">ez-userloadplugin</a></li>
+                                <li><a href="../modules/ez-usermenuitemfire event view.html">ez-usermenuitemfire event view</a></li>
+                                <li><a href="../modules/ez-usermenuitemview.html">ez-usermenuitemview</a></li>
+                                <li><a href="../modules/ez-usermenuview.html">ez-usermenuview</a></li>
                                 <li><a href="../modules/ez-usermodel.html">ez-usermodel</a></li>
+                                <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
@@ -500,9 +508,6 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
                 &#x27;mouseout&#x27;: &#x27;_uiHideSubMenu&#x27;,
                 &#x27;tap&#x27;: &#x27;_uiToggleSubMenu&#x27;,
             },
-            &#x27;.ez-logout&#x27;: {
-                &#x27;tap&#x27;: &#x27;_logOut&#x27;,
-            }
         },
 
         /*
@@ -560,6 +565,8 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
             this.after(&#x27;navigationFixedChange&#x27;, this._uiHandleFixedNavigation);
             this.after(&#x27;activeChange&#x27;, this._onActiveUpdate);
             this.after(&#x27;matchedRouteChange&#x27;, this._handleSelectedItem);
+            this.after(&#x27;userChange&#x27;, this._setUserData);
+            this.after(&#x27;userAvatarChange&#x27;, this._setUserAvatar);
         },
 
         /**
@@ -707,12 +714,42 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
             var container = this.get(&#x27;container&#x27;);
 
             container.setHTML(this.template({
-                user: this.get(&#x27;user&#x27;).toJSON(),
                 zones: this._buildZones(),
             }));
             this._renderNavigationItems();
             this._uiSetActiveNavigation();
+            this._renderUserProfile();
             return this;
+        },
+
+        /**
+         * Sets user data to the view
+         *
+         * @method _setUserData
+         * @protected
+         */
+        _setUserData: function () {
+            this.get(&#x27;userProfileView&#x27;).set(&#x27;user&#x27;, this.get(&#x27;user&#x27;));
+        },
+
+        /**
+         * Sets user avatar to the view
+         *
+         * @method _setUserAvatar
+         * @protected
+         */
+        _setUserAvatar: function () {
+            this.get(&#x27;userProfileView&#x27;).set(&#x27;userAvatar&#x27;, this.get(&#x27;userAvatar&#x27;));
+        },
+
+        /**
+         * Renders user profile to the view
+         *
+         * @method _renderUserProfile
+         * @protected
+         */
+        _renderUserProfile: function () {
+            this.get(&#x27;container&#x27;).append(this.get(&#x27;userProfileView&#x27;).render().get(&#x27;container&#x27;));
         },
 
         /**
@@ -986,20 +1023,6 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
         },
 
         /**
-         * Tap event handler on the logout link
-         *
-         * @method _logOut
-         * @protected
-         * @param e {Object} tap event facade
-         */
-        _logOut: function (e) {
-            e.preventDefault();
-            this.fire(&#x27;logOut&#x27;, {
-                originalEvent: e
-            });
-        },
-
-        /**
          * Sets the _navigationMenu property depending on the val parameter.
          *
          * @method _setNavigationMenu
@@ -1184,6 +1207,31 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
              * @type {Object}
              */
             matchedRoute: {},
+            
+            /**
+             * The user profile view
+             *
+             * @attribute userProfileView
+             * @type {eZ.UserProfileView}
+             */
+            userProfileView: {
+                valueFn: function () {
+                    return new Y.eZ.UserProfileView({
+                        bubbleTargets: this
+                    });
+                }
+            },
+
+            /**
+             * Stores the user&#x27;s avatar image
+             *
+             * @attribute userAvatar
+             * @type {String}
+             * @default null
+             */
+            userAvatar: {
+                value: null
+            }
         }
     });
 });

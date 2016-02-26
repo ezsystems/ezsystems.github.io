@@ -239,6 +239,10 @@
                                 <li><a href="../classes/eZ.UrlView.html">eZ.UrlView</a></li>
                                 <li><a href="../classes/eZ.User.html">eZ.User</a></li>
                                 <li><a href="../classes/eZ.UserEditView.html">eZ.UserEditView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemFireEventView.html">eZ.UserMenuItemFireEventView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemView.html">eZ.UserMenuItemView</a></li>
+                                <li><a href="../classes/eZ.UserMenuView.html">eZ.UserMenuView</a></li>
+                                <li><a href="../classes/eZ.UserProfileView.html">eZ.UserProfileView</a></li>
                                 <li><a href="../classes/eZ.UserView.html">eZ.UserView</a></li>
                                 <li><a href="../classes/eZ.Version.html">eZ.Version</a></li>
                                 <li><a href="../classes/eZ.View.html">eZ.View</a></li>
@@ -416,7 +420,11 @@
                                 <li><a href="../modules/ez-user-editview.html">ez-user-editview</a></li>
                                 <li><a href="../modules/ez-user-view.html">ez-user-view</a></li>
                                 <li><a href="../modules/ez-userloadplugin.html">ez-userloadplugin</a></li>
+                                <li><a href="../modules/ez-usermenuitemfire event view.html">ez-usermenuitemfire event view</a></li>
+                                <li><a href="../modules/ez-usermenuitemview.html">ez-usermenuitemview</a></li>
+                                <li><a href="../modules/ez-usermenuview.html">ez-usermenuview</a></li>
                                 <li><a href="../modules/ez-usermodel.html">ez-usermodel</a></li>
+                                <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
@@ -949,6 +957,9 @@
                     <h3>Attributes</h3>
 
                     <ul class="index-list attrs extends">
+                            <li class="index-item attr">
+                                <a href="#attr_avatar">avatar</a>
+                            </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_clientId">clientId</a>
                             </li>
@@ -3199,23 +3210,20 @@ before calling the <code>parse()</code> method.
 
 
 </div>
-<div id="method__parseStruct" class="method item protected inherited">
+<div id="method__parseStruct" class="method item protected">
     <h3 class="name"><code>_parseStruct</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>struct</code>
+                        <code>the</code>
                 </li>
                 <li class="arg">
-                        <code>doc</code>
+                        <code>the</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
 
-        <span class="returns-inline">
-            <span class="type">Object</span>
-        </span>
 
 
         <span class="flag protected">protected</span>
@@ -3225,9 +3233,12 @@ before calling the <code>parse()</code> method.
 
 
     <div class="meta">
-                <p>Inherited from
-                <a href="../classes/eZ.RestModel.html#method__parseStruct">eZ.RestModel</a>:
-        <a href="../files/Resources_public_js_models_ez-restmodel.js.html#l110"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-restmodel.js:110</code></a>
+            <p>Inherited from
+            <a href="../classes/eZ.RestModel.html#method__parseStruct">
+                eZ.RestModel
+            </a>
+            but overwritten in
+        <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l57"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:57</code></a>
         </p>
 
 
@@ -3235,8 +3246,7 @@ before calling the <code>parse()</code> method.
     </div>
 
     <div class="description">
-        <p>Parses the hash returned by the eZ Publish REST API
-based on ATTRS_REST_MAP and LINKS_MAP properties</p>
+        <p>Override the default implementation to find the avatar (if any) in the user Content item.</p>
 
     </div>
 
@@ -3245,23 +3255,23 @@ based on ATTRS_REST_MAP and LINKS_MAP properties</p>
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">struct</code>
+                        <code class="param-name">the</code>
                         <span class="type">Object</span>
 
 
                     <div class="param-description">
-                        <p>the struct to transform</p>
+                        <p>user item</p>
 
                     </div>
 
                 </li>
                 <li class="param">
-                        <code class="param-name">doc</code>
+                        <code class="param-name">the</code>
                         <span class="type">Object</span>
 
 
                     <div class="param-description">
-                        <p>The complete object</p>
+                        <p>response document</p>
 
                     </div>
 
@@ -3269,13 +3279,6 @@ based on ATTRS_REST_MAP and LINKS_MAP properties</p>
             </ul>
         </div>
 
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Object</span>:
-            </div>
-        </div>
 
 
 </div>
@@ -8065,6 +8068,36 @@ list.on('*:change', function (e) {
             <div id="attrs" class="api-class-tabpanel">
                 <h2 class="off-left">Attributes</h2>
 
+                    <div id="attr_avatar" class="attr item">
+                        <a name="config_avatar"></a> 
+                        <h3 class="name"><code>avatar</code></h3>
+                        <span class="type">Object</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l139"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:139</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The user's avatar</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> null</p>
+                    
+                    
+                    </div>
                     <div id="attr_clientId" class="attr item inherited">
                         <a name="config_clientId"></a> 
                         <h3 class="name"><code>clientId</code></h3>
@@ -8145,7 +8178,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l53"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:53</code></a>
+                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l83"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:83</code></a>
                             </p>
                     
                     
@@ -8175,7 +8208,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:75</code></a>
+                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l105"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:105</code></a>
                             </p>
                     
                     
@@ -8275,7 +8308,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:64</code></a>
+                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l94"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:94</code></a>
                             </p>
                     
                     
@@ -8305,7 +8338,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l87"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:87</code></a>
+                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l117"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:117</code></a>
                             </p>
                     
                     
@@ -8335,7 +8368,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l98"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:98</code></a>
+                            <a href="../files/Resources_public_js_models_ez-usermodel.js.html#l128"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-usermodel.js:128</code></a>
                             </p>
                     
                     

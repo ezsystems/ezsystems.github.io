@@ -239,6 +239,10 @@
                                 <li><a href="../classes/eZ.UrlView.html">eZ.UrlView</a></li>
                                 <li><a href="../classes/eZ.User.html">eZ.User</a></li>
                                 <li><a href="../classes/eZ.UserEditView.html">eZ.UserEditView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemFireEventView.html">eZ.UserMenuItemFireEventView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemView.html">eZ.UserMenuItemView</a></li>
+                                <li><a href="../classes/eZ.UserMenuView.html">eZ.UserMenuView</a></li>
+                                <li><a href="../classes/eZ.UserProfileView.html">eZ.UserProfileView</a></li>
                                 <li><a href="../classes/eZ.UserView.html">eZ.UserView</a></li>
                                 <li><a href="../classes/eZ.Version.html">eZ.Version</a></li>
                                 <li><a href="../classes/eZ.View.html">eZ.View</a></li>
@@ -416,7 +420,11 @@
                                 <li><a href="../modules/ez-user-editview.html">ez-user-editview</a></li>
                                 <li><a href="../modules/ez-user-view.html">ez-user-view</a></li>
                                 <li><a href="../modules/ez-userloadplugin.html">ez-userloadplugin</a></li>
+                                <li><a href="../modules/ez-usermenuitemfire event view.html">ez-usermenuitemfire event view</a></li>
+                                <li><a href="../modules/ez-usermenuitemview.html">ez-usermenuitemview</a></li>
+                                <li><a href="../modules/ez-usermenuview.html">ez-usermenuview</a></li>
                                 <li><a href="../modules/ez-usermodel.html">ez-usermodel</a></li>
+                                <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
@@ -521,7 +529,20 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
                 loadError = false,
                 service = this,
                 discoveryService = api.getDiscoveryService(),
+                contentService = api.getContentService(),
+                user = this.get(&#x27;app&#x27;).get(&#x27;user&#x27;),
                 tasks = new Y.Parallel();
+
+            if (user.get(&#x27;avatar&#x27;)) {
+                contentService.loadImageVariation(user.get(&#x27;avatar&#x27;).variations.platformui_profileview.href, tasks.add(function (error, response) { //jshint ignore:line
+                    if ( error ) {
+                        loadError = true;
+                        return;
+                    }
+
+                    service.set(&#x27;userAvatar&#x27;, response.document.ContentImageVariation);
+                }));
+            }
 
             discoveryService.getInfoObject(&#x27;rootLocation&#x27;, function (error, response){
                 var rootLocationId;
@@ -714,6 +735,7 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
         _getViewParameters: function () {
             return {
                 user: this.get(&#x27;app&#x27;).get(&#x27;user&#x27;),
+                userAvatar: this.get(&#x27;userAvatar&#x27;),
                 platformNavigationItems: this.get(&#x27;platformNavigationItems&#x27;),
                 studioNavigationItems: this.get(&#x27;studioNavigationItems&#x27;),
                 studioplusNavigationItems: this.get(&#x27;studioplusNavigationItems&#x27;),
@@ -1000,6 +1022,17 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
                 },
                 readOnly: true,
             },
+
+            /**
+             * Stores the user&#x27;s avatar image
+             *
+             * @attribute userAvatar
+             * @type {String}
+             * @default null
+             */
+            userAvatar: {
+                value: null
+            }
         },
     });
 });

@@ -1870,6 +1870,58 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/ez-usermenuitemfireeventview.js": {
+            "name": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
+            "modules": {
+                "ez-usermenuitemfire event view": 1
+            },
+            "classes": {
+                "eZ.UserMenuItemFireEventView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/ez-usermenuitemview.js": {
+            "name": "Resources/public/js/views/ez-usermenuitemview.js",
+            "modules": {
+                "ez-usermenuitemview": 1
+            },
+            "classes": {
+                "eZ.UserMenuItemView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/ez-usermenuview.js": {
+            "name": "Resources/public/js/views/ez-usermenuview.js",
+            "modules": {
+                "ez-usermenuview": 1
+            },
+            "classes": {
+                "eZ.UserMenuView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/ez-userprofileview.js": {
+            "name": "Resources/public/js/views/ez-userprofileview.js",
+            "modules": {
+                "ez-userprofileview": 1
+            },
+            "classes": {
+                "eZ.UserProfileView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/ez-view.js": {
             "name": "Resources/public/js/views/ez-view.js",
             "modules": {
@@ -4759,6 +4811,70 @@
             "file": "Resources/public/js/views/ez-treeview.js",
             "line": 22,
             "description": "Provides the Trash View class"
+        },
+        "ez-usermenuitemfire event view": {
+            "name": "ez-usermenuitemfire event view",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.UserMenuItemFireEventView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
+            "line": 14,
+            "description": "Provides the user menu item fire event view"
+        },
+        "ez-usermenuitemview": {
+            "name": "ez-usermenuitemview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.UserMenuItemView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-usermenuitemview.js",
+            "line": 14,
+            "description": "Provides the user menu item view"
+        },
+        "ez-usermenuview": {
+            "name": "ez-usermenuview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.UserMenuView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 16,
+            "description": "Provides the User Menu View class"
+        },
+        "ez-userprofileview": {
+            "name": "ez-userprofileview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.UserProfileView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 14,
+            "description": "Provides the User Profile View class"
         },
         "ez-view": {
             "name": "ez-view",
@@ -7795,6 +7911,70 @@
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
             "line": 18,
             "description": "The universal discovery view is a widget to allow the user to pick one or\nseveral contents in the repository.",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
+        "eZ.UserMenuItemFireEventView": {
+            "name": "eZ.UserMenuItemFireEventView",
+            "shortname": "eZ.UserMenuItemFireEventView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-usermenuitemfire event view",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
+            "line": 14,
+            "description": "The user menu item fire event view.",
+            "is_constructor": 1,
+            "extends": "eZ.UserMenuItemView"
+        },
+        "eZ.UserMenuItemView": {
+            "name": "eZ.UserMenuItemView",
+            "shortname": "eZ.UserMenuItemView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-usermenuitemview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-usermenuitemview.js",
+            "line": 14,
+            "description": "The user menu item view.",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
+        "eZ.UserMenuView": {
+            "name": "eZ.UserMenuView",
+            "shortname": "eZ.UserMenuView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-usermenuview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 16,
+            "description": "The User Menu view",
+            "is_constructor": 1,
+            "extends": "eZ.View"
+        },
+        "eZ.UserProfileView": {
+            "name": "eZ.UserProfileView",
+            "shortname": "eZ.UserProfileView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-userprofileview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 14,
+            "description": "The User Profile View",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
@@ -19485,7 +19665,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 129,
+            "line": 142,
             "description": "Loads the given `locationId`",
             "access": "protected",
             "tagname": "",
@@ -19526,7 +19706,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 151,
+            "line": 164,
             "description": "Returns a navigation item object. See the *NavigationItems attribute.",
             "access": "private",
             "tagname": "",
@@ -19554,7 +19734,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 167,
+            "line": 180,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemView\"}}eZ.NavigationItemView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -19592,7 +19772,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 192,
+            "line": 205,
             "description": "Returns the navigation item object describing a {{#crossLink\n\"eZ.NavigationItemSubtreeView\"}}eZ.NavigationItemSubtreeView{{/crossLink}}.",
             "itemtype": "method",
             "name": "_getSubtreeItem",
@@ -19630,7 +19810,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 218,
+            "line": 231,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemParameterView\"}}eZ.NavigationItemParameterView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -19673,7 +19853,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 245,
+            "line": 258,
             "description": "Returns the parameters for the navigation hub view",
             "itemtype": "method",
             "name": "getViewParameters",
@@ -19687,7 +19867,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 262,
+            "line": 276,
             "description": "A matched route object from the request. This object will be used by\nthe navigation hub view to check which navigation item view is\nselected. A matched route object is a clone of the application active\nroute without the service, serviceInstance and callbacks entries and\nwith an additionnal `parameters` property holding the route\nparameters and their values.",
             "itemtype": "method",
             "name": "_matchedRoute",
@@ -19703,7 +19883,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 287,
+            "line": 301,
             "description": "Adds a navigation item for the given zone.\nNote: adding a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "addNavigationItem",
@@ -19725,7 +19905,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 303,
+            "line": 317,
             "description": "Removes a navigation item for the given zone.\nNote: removing a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "removeNavigationItem",
@@ -19747,7 +19927,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 327,
+            "line": 341,
             "description": "Retrieves a navigation item",
             "itemtype": "method",
             "name": "getNavigationItem",
@@ -19768,7 +19948,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 353,
+            "line": 367,
             "description": "Stores the root `location`",
             "itemtype": "attribute",
             "name": "rootLocation",
@@ -19779,7 +19959,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 365,
+            "line": 379,
             "description": "Stores the root media `location`",
             "itemtype": "attribute",
             "name": "rootMediaLocation",
@@ -19790,7 +19970,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 377,
+            "line": 391,
             "description": "Stores the navigation item objects for the 'platform' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -19803,7 +19983,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 418,
+            "line": 432,
             "description": "Stores the navigation item objects for the 'studioplus' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -19816,7 +19996,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 450,
+            "line": 464,
             "description": "Stores the navigation item objects for the 'studio' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -19829,13 +20009,25 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 482,
+            "line": 496,
             "description": "Stores the navigation item objects for the 'admin' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
             "type": "Array",
             "default": "array containing the items for the admin",
             "readonly": "",
+            "class": "eZ.NavigationHubViewService",
+            "module": "ez-navigationhubviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
+            "line": 555,
+            "description": "Stores the user's avatar image",
+            "itemtype": "attribute",
+            "name": "userAvatar",
+            "type": "{String}",
+            "default": "null",
             "class": "eZ.NavigationHubViewService",
             "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
@@ -26071,7 +26263,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 55,
+            "line": 52,
             "description": "The y coordinate of the active menu when the navigation is not fixed.",
             "itemtype": "property",
             "name": "_navigationY",
@@ -26085,7 +26277,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 65,
+            "line": 62,
             "description": "The scroll event subscription set to manage the fixed navigation",
             "itemtype": "property",
             "name": "",
@@ -26099,7 +26291,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 75,
+            "line": 72,
             "description": "The resize event subscription set to manage the width of the\nnavigation",
             "itemtype": "property",
             "name": "_resizeSubscription",
@@ -26113,7 +26305,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 102,
+            "line": 101,
             "description": "Returns the height of the navigation menu",
             "access": "protected",
             "tagname": "",
@@ -26129,7 +26321,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 113,
+            "line": 112,
             "description": "matchedRouteChange event handler. It makes sure the corresponding\nnavigation item is selected and the zone in which it is, is active.",
             "itemtype": "method",
             "name": "_handleSelectedItem",
@@ -26141,7 +26333,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 137,
+            "line": 136,
             "description": "Fires the event to navigate to the given zone. The navigation happens\nonly if the zone has exactly one navigation items.",
             "itemtype": "method",
             "name": "_navigateToZone",
@@ -26160,7 +26352,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 161,
+            "line": 160,
             "description": "Sets the active navigation in the UI",
             "itemtype": "method",
             "name": "_uiSetActiveNavigation",
@@ -26179,7 +26371,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 174,
+            "line": 173,
             "description": "Handles the fixed navigation in the UI",
             "itemtype": "method",
             "name": "_uiHandleFixedNavigation",
@@ -26198,7 +26390,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 200,
+            "line": 199,
             "description": "event fired when the navigation mode change so that the rest of\nthe application can also change if needed. For the navigation\nhub, the navigation mode is either true or false. True when the\nnavigation is fixed and false otherwise.",
             "itemtype": "event",
             "name": "navigationModeChange",
@@ -26224,7 +26416,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 219,
+            "line": 218,
             "description": "Marks the zone associated with the activeNavigation as active",
             "access": "protected",
             "tagname": "",
@@ -26236,7 +26428,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 237,
+            "line": 236,
             "description": "Renders the navigation hub view",
             "itemtype": "method",
             "name": "render",
@@ -26250,7 +26442,43 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 255,
+            "line": 254,
+            "description": "Sets user data to the view",
+            "itemtype": "method",
+            "name": "_setUserData",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.NavigationHubView",
+            "module": "ez-navigationhubview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-navigationhubview.js",
+            "line": 264,
+            "description": "Sets user avatar to the view",
+            "itemtype": "method",
+            "name": "_setUserAvatar",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.NavigationHubView",
+            "module": "ez-navigationhubview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-navigationhubview.js",
+            "line": 274,
+            "description": "Renders user profile to the view",
+            "itemtype": "method",
+            "name": "_renderUserProfile",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.NavigationHubView",
+            "module": "ez-navigationhubview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-navigationhubview.js",
+            "line": 284,
             "description": "Builds the zone list for the template. Each zone is represented by an\nobject with a `name` and a `hasNavigation` properties.",
             "itemtype": "method",
             "name": "_buildZones",
@@ -26266,7 +26494,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 275,
+            "line": 304,
             "description": "Returns whether the zone associated with the given key has a\nnavigation ie it has more than one navigation item view.",
             "itemtype": "method",
             "name": "_hasNavigation",
@@ -26289,7 +26517,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 290,
+            "line": 319,
             "description": "Returns the navigation item views instances associated with the given\nzone key.",
             "itemtype": "method",
             "name": "_getNavigationItemViews",
@@ -26312,7 +26540,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 303,
+            "line": 332,
             "description": "Renders the navigation items in the corresponding navigation zone",
             "itemtype": "method",
             "name": "_renderNavigationItems",
@@ -26324,7 +26552,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 342,
+            "line": 371,
             "description": "Sets the active flag on the navigation item views",
             "access": "protected",
             "tagname": "",
@@ -26343,7 +26571,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 357,
+            "line": 386,
             "description": "Makes sure the navigation corresponding to the activeNavigation value\nis shown if needed",
             "access": "protected",
             "tagname": "",
@@ -26362,7 +26590,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 374,
+            "line": 403,
             "description": "tap/mouseover handler on the navigation zones. It sets the\nactiveNavigation attribute to the corresponding value",
             "access": "protected",
             "tagname": "",
@@ -26381,7 +26609,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 386,
+            "line": 415,
             "description": "Handles the user scroll to make the navigation fixed or not",
             "access": "protected",
             "tagname": "",
@@ -26400,7 +26628,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 403,
+            "line": 432,
             "description": "Makes sure all the active navigation items are available in the menu.\nIf there's too much items, the overflowed elements are put in the\n*more* sub menu",
             "itemtype": "method",
             "name": "_uiNavigationSize",
@@ -26412,7 +26640,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 438,
+            "line": 467,
             "description": "Checks whether there are too much items in the navigation for the\ncurrent viewport size",
             "access": "protected",
             "tagname": "",
@@ -26427,7 +26655,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 450,
+            "line": 479,
             "description": "Checks whether the navigation is not completely filled up",
             "access": "protected",
             "tagname": "",
@@ -26442,7 +26670,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 461,
+            "line": 490,
             "description": "Returns all navigation items except the *More* item",
             "itemtype": "method",
             "name": "_getNavigationItems",
@@ -26457,7 +26685,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 472,
+            "line": 501,
             "description": "mouseover event handler for the sub menu links to show and place\nthe corresponding sub menu",
             "itemtype": "method",
             "name": "_uiShowSubMenu",
@@ -26476,7 +26704,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 497,
+            "line": 526,
             "description": "mouseout/clickoutside event handler for the sub menu links to hide\nthe corresponding sub menu",
             "itemtype": "method",
             "name": "_uiHideSubMenu",
@@ -26495,7 +26723,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 510,
+            "line": 539,
             "description": "Toggles the sub menu visibility",
             "access": "protected",
             "tagname": "",
@@ -26514,26 +26742,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 525,
-            "description": "Tap event handler on the logout link",
-            "itemtype": "method",
-            "name": "_logOut",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "tap event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.NavigationHubView",
-            "module": "ez-navigationhubview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 539,
+            "line": 554,
             "description": "Sets the _navigationMenu property depending on the val parameter.",
             "itemtype": "method",
             "name": "_setNavigationMenu",
@@ -26556,7 +26765,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 556,
+            "line": 571,
             "description": "Returns the navigation node corresponding to the identifier",
             "params": [
                 {
@@ -26579,7 +26788,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 568,
+            "line": 583,
             "description": "Builds the list of navigation item views based on the value. This\nmethod is a setter for the *NavigationItems.",
             "itemtype": "method",
             "name": "_buildNavigationViews",
@@ -26602,7 +26811,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 598,
+            "line": 613,
             "description": "Object describing the available zones (Platform, Studio), the\nkey is the zone identifier, the value is the zone name.",
             "itemtype": "attribute",
             "name": "zones",
@@ -26614,7 +26823,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 616,
+            "line": 631,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the platform zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -26626,7 +26835,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 632,
+            "line": 647,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studio zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -26638,7 +26847,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 648,
+            "line": 663,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the admin zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -26650,7 +26859,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 664,
+            "line": 679,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studioplus zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -26662,7 +26871,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 680,
+            "line": 695,
             "description": "Contains the identifier ('platform', 'studio', ...) of the\ncurrently active navigation. When set, this attribute updates the\n`_navigationMenu` property with the corresponding Node",
             "itemtype": "attribute",
             "name": "activeNavigation",
@@ -26675,7 +26884,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 695,
+            "line": 710,
             "description": "Whether the navigation is in fixed more or not",
             "itemtype": "attribute",
             "name": "navigationFixed",
@@ -26687,7 +26896,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 706,
+            "line": 721,
             "description": "The currently authenticated user",
             "itemtype": "attribute",
             "name": "user",
@@ -26699,11 +26908,34 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 715,
+            "line": 730,
             "description": "The matched route provided by the navigation hub view service. It\nused to detect which navigaiton item should be selected and it is\nupdated after each page change.",
             "itemtype": "attribute",
             "name": "matchedRoute",
             "type": "{Object}",
+            "class": "eZ.NavigationHubView",
+            "module": "ez-navigationhubview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-navigationhubview.js",
+            "line": 740,
+            "description": "The user profile view",
+            "itemtype": "attribute",
+            "name": "userProfileView",
+            "type": "{eZ.UserProfileView}",
+            "class": "eZ.NavigationHubView",
+            "module": "ez-navigationhubview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-navigationhubview.js",
+            "line": 754,
+            "description": "Stores the user's avatar image",
+            "itemtype": "attribute",
+            "name": "userAvatar",
+            "type": "{String}",
+            "default": "null",
             "class": "eZ.NavigationHubView",
             "module": "ez-navigationhubview",
             "namespace": "eZ"
@@ -29048,6 +29280,335 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
+            "line": 33,
+            "description": "Renders the item view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.UserMenuItemFireEventView"
+            },
+            "class": "eZ.UserMenuItemFireEventView",
+            "module": "ez-usermenuitemfire event view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
+            "line": 44,
+            "description": "Tap event handler on the user menu item",
+            "itemtype": "method",
+            "name": "_fireEvent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "tap event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.UserMenuItemFireEventView",
+            "module": "ez-usermenuitemfire event view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
+            "line": 59,
+            "description": "The event name to fire",
+            "itemtype": "attribute",
+            "name": "eventName",
+            "type": "{String}",
+            "class": "eZ.UserMenuItemFireEventView",
+            "module": "ez-usermenuitemfire event view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuitemview.js",
+            "line": 27,
+            "description": "Renders the item view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.UserMenuItemView"
+            },
+            "class": "eZ.UserMenuItemView",
+            "module": "ez-usermenuitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuitemview.js",
+            "line": 39,
+            "description": "Stores the item title",
+            "itemtype": "attribute",
+            "name": "title",
+            "type": "{String}",
+            "class": "eZ.UserMenuItemView",
+            "module": "ez-usermenuitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuitemview.js",
+            "line": 47,
+            "description": "Stores prority of the user menu item",
+            "itemtype": "attribute",
+            "name": "priority",
+            "type": "{Number}",
+            "class": "eZ.UserMenuItemView",
+            "module": "ez-usermenuitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 32,
+            "description": "Renders the user menu view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.UserMenuView"
+            },
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 44,
+            "description": "Toggles the displayed value.",
+            "itemtype": "method",
+            "name": "toggleDisplayed",
+            "access": "public",
+            "tagname": "",
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 54,
+            "description": "Hides the user menu.",
+            "itemtype": "method",
+            "name": "hide",
+            "access": "public",
+            "tagname": "",
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 64,
+            "description": "Toggles the visibility of a user menu.",
+            "itemtype": "method",
+            "name": "_uiToggleUserMenu",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 81,
+            "description": "Sets active flag to the item view",
+            "itemtype": "method",
+            "name": "_setActiveViews",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 96,
+            "description": "Renders menu items views",
+            "itemtype": "method",
+            "name": "_renderMenuItems",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 115,
+            "description": "Adds item to the menu",
+            "itemtype": "method",
+            "name": "addMenuItem",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 131,
+            "description": "Contains the views for the user menu items",
+            "itemtype": "attribute",
+            "name": "items",
+            "type": "{Array}",
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-usermenuview.js",
+            "line": 149,
+            "description": "Whether the user menu is displayed or not",
+            "itemtype": "attribute",
+            "name": "displayed",
+            "type": "Boolean",
+            "default": "false",
+            "readonly": "",
+            "class": "eZ.UserMenuView",
+            "module": "ez-usermenuview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 30,
+            "description": "The click outside user menu event handler",
+            "itemtype": "property",
+            "name": "_clickOutsideUserMenuHandler",
+            "default": "null",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 40,
+            "description": "Renders the user profile view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.UserProfileView"
+            },
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 61,
+            "description": "Set the click outside event listener",
+            "itemtype": "method",
+            "name": "_setClickOutsideUserMenuHandler",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 78,
+            "description": "Hides the user menu when clicked outside the user profile.",
+            "itemtype": "method",
+            "name": "_hideMenuOnClickOutside",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 90,
+            "description": "Renders the user menu view",
+            "itemtype": "method",
+            "name": "_renderUserMenu",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 101,
+            "description": "Toggle the user menu.",
+            "itemtype": "method",
+            "name": "_toggleUserMenu",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 114,
+            "description": "Contains data about current user",
+            "itemtype": "attribute",
+            "name": "user",
+            "type": "{eZ.User}",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 122,
+            "description": "Contains the alternative text for the user's avatar",
+            "itemtype": "attribute",
+            "name": "avatarAltText",
+            "type": "{String}",
+            "default": ": 'User\\'s avatar'",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 133,
+            "description": "Contains the default users avatar image",
+            "itemtype": "attribute",
+            "name": "defaultAvatarImage",
+            "type": "{String}",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-userprofileview.js",
+            "line": 163,
+            "description": "The user menu view",
+            "itemtype": "attribute",
+            "name": "userMenuView",
+            "type": "{eZ.UserMenuView}",
+            "class": "eZ.UserProfileView",
+            "module": "ez-userprofileview",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/ez-view.js",
             "line": 32,
             "description": "Plugs the registered plugins for this view instance",
@@ -30964,7 +31525,31 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 53,
+            "line": 57,
+            "description": "Override the default implementation to find the avatar (if any) in the user Content item.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_parseStruct",
+            "params": [
+                {
+                    "name": "the",
+                    "description": "user item",
+                    "type": "Object"
+                },
+                {
+                    "name": "the",
+                    "description": "response document",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.User",
+            "module": "ez-usermodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-usermodel.js",
+            "line": 83,
             "description": "The user's email",
             "itemtype": "attribute",
             "name": "email",
@@ -30976,7 +31561,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 64,
+            "line": 94,
             "description": "The user's login",
             "itemtype": "attribute",
             "name": "login",
@@ -30988,7 +31573,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 75,
+            "line": 105,
             "description": "The user's `enabled` flag",
             "itemtype": "attribute",
             "name": "enabled",
@@ -31000,7 +31585,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 87,
+            "line": 117,
             "description": "The user's name",
             "itemtype": "attribute",
             "name": "name",
@@ -31012,12 +31597,24 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 98,
+            "line": 128,
             "description": "The user's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
             "default": "''",
             "type": "string",
+            "class": "eZ.User",
+            "module": "ez-usermodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-usermodel.js",
+            "line": 139,
+            "description": "The user's avatar",
+            "itemtype": "attribute",
+            "name": "avatar",
+            "default": "null",
+            "type": "object",
             "class": "eZ.User",
             "module": "ez-usermodel",
             "namespace": "eZ"

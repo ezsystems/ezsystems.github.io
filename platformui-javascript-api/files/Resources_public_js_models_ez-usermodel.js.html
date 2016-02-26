@@ -239,6 +239,10 @@
                                 <li><a href="../classes/eZ.UrlView.html">eZ.UrlView</a></li>
                                 <li><a href="../classes/eZ.User.html">eZ.User</a></li>
                                 <li><a href="../classes/eZ.UserEditView.html">eZ.UserEditView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemFireEventView.html">eZ.UserMenuItemFireEventView</a></li>
+                                <li><a href="../classes/eZ.UserMenuItemView.html">eZ.UserMenuItemView</a></li>
+                                <li><a href="../classes/eZ.UserMenuView.html">eZ.UserMenuView</a></li>
+                                <li><a href="../classes/eZ.UserProfileView.html">eZ.UserProfileView</a></li>
                                 <li><a href="../classes/eZ.UserView.html">eZ.UserView</a></li>
                                 <li><a href="../classes/eZ.Version.html">eZ.Version</a></li>
                                 <li><a href="../classes/eZ.View.html">eZ.View</a></li>
@@ -416,7 +420,11 @@
                                 <li><a href="../modules/ez-user-editview.html">ez-user-editview</a></li>
                                 <li><a href="../modules/ez-user-view.html">ez-user-view</a></li>
                                 <li><a href="../modules/ez-userloadplugin.html">ez-userloadplugin</a></li>
+                                <li><a href="../modules/ez-usermenuitemfire event view.html">ez-usermenuitemfire event view</a></li>
+                                <li><a href="../modules/ez-usermenuitemview.html">ez-usermenuitemview</a></li>
+                                <li><a href="../modules/ez-usermenuview.html">ez-usermenuview</a></li>
                                 <li><a href="../modules/ez-usermodel.html">ez-usermodel</a></li>
+                                <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
@@ -499,12 +507,42 @@ YUI.add(&#x27;ez-usermodel&#x27;, function (Y) {
             var api = options.api;
 
             if ( action === &#x27;read&#x27; ) {
-                api.getUserService().loadUser(
-                    this.get(&#x27;id&#x27;), callback
-                );
+                api.getUserService().loadUser(this.get(&#x27;id&#x27;), function (err, response) {
+                    var contentType;
+
+                    if ( err ) {
+                        return callback(err, response);
+                    }
+
+                    contentType = new Y.eZ.ContentType({id: response.document.User.ContentType._href});
+                    contentType.load({api: api}, function (error) {
+                        response.document._contentType = contentType;
+                        callback(error, response);
+                    });
+                });
             } else {
                 callback(&quot;Only read operation is supported at the moment&quot;);
             }
+        },
+
+        /**
+         * Override the default implementation to find the avatar (if any) in the user Content item.
+         *
+         * @protected
+         * @method _parseStruct
+         * @param {Object} the user item
+         * @param {Object} the response document
+         */
+        _parseStruct: function (struct, responseDoc) {
+                var attrs, imageField,
+                    imageIdentifiers = responseDoc._contentType.getFieldDefinitionIdentifiers(&#x27;ezimage&#x27;);
+
+            attrs = this.constructor.superclass._parseStruct.call(this, struct);
+            imageField = struct.Version.Fields.field.filter(function (field) {
+                return field.fieldDefinitionIdentifier == imageIdentifiers[0];
+            });
+            attrs.avatar = imageField.length ? imageField[0].fieldValue : null;
+            return attrs;
         }
     }, {
         REST_STRUCT_ROOT: &quot;User&quot;,
@@ -567,6 +605,17 @@ YUI.add(&#x27;ez-usermodel&#x27;, function (Y) {
              */
             remoteId: {
                 value: &#x27;&#x27;
+            },
+
+            /**
+             * The user&#x27;s avatar
+             *
+             * @attribute avatar
+             * @default null
+             * @type object
+             */
+            avatar: {
+                value: null
             }
         }
     });
