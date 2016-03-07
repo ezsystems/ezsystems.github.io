@@ -965,6 +965,10 @@
                     <h3>Events</h3>
 
                     <ul class="index-list events extends">
+                            <li class="index-item event">
+                                <a href="#event_addedToUserMenu">addedToUserMenu</a>
+
+                            </li>
                             <li class="index-item event inherited">
                                 <a href="#event_destroy">destroy</a>
 
@@ -4478,7 +4482,7 @@ See <a href="#method_addAttr">addAttr</a>.
     </div>
 
     <div class="description">
-        <p>Adds item to the menu</p>
+        <p>Adds item to the menu and fire event when it's done</p>
 
     </div>
 
@@ -7421,7 +7425,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-usermenuview.js.html#l149"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-usermenuview.js:149</code></a>
+                            <a href="../files/Resources_public_js_views_ez-usermenuview.js.html#l159"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-usermenuview.js:159</code></a>
                             </p>
                     
                     
@@ -7482,7 +7486,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-usermenuview.js.html#l131"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-usermenuview.js:131</code></a>
+                            <a href="../files/Resources_public_js_views_ez-usermenuview.js.html#l141"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-usermenuview.js:141</code></a>
                             </p>
                     
                     
@@ -7501,6 +7505,48 @@ How this template gets used is entirely up to you and your custom
             <div id="events" class="api-class-tabpanel">
                 <h2 class="off-left">Events</h2>
 
+                    <div id="event_addedToUserMenu" class="events item">
+                        <h3 class="name"><code>addedToUserMenu</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_ez-usermenuview.js.html#l129"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-usermenuview.js:129</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Fired when the view is added to the user menu</p>
+                    
+                        </div>
+                    
+                            <div class="params">
+                                <h4>Event Payload:</h4>
+                    
+                                <ul class="params-list">
+                                    <li class="param">
+                                            <code class="param-name">userMenu</code>
+                                            <span class="type">Object</span>
+                    
+                    
+                                        <div class="param-description">
+                                            <p>the user menu view</p>
+                    
+                                        </div>
+                    
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                    
+                    </div>
                     <div id="event_destroy" class="events item inherited">
                         <h3 class="name"><code>destroy</code></h3>
                         <span class="type"></span>
