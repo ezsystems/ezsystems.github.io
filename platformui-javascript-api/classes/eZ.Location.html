@@ -731,6 +731,10 @@
                                 <a href="#method__updatehidden">_updatehidden</a>
 
                             </li>
+                            <li class="index-item method">
+                                <a href="#method__updateSorting">_updateSorting</a>
+
+                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__validate">_validate</a>
 
@@ -1711,7 +1715,7 @@ refers to the configuration object passed to the constructor.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l156"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:156</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l182"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:182</code></a>
         </p>
 
 
@@ -3122,7 +3126,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l229"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:229</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l255"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:255</code></a>
         </p>
 
 
@@ -4235,7 +4239,7 @@ internal state object, or the state proxy if it exits
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l105"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:105</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l131"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:131</code></a>
         </p>
 
 
@@ -4282,6 +4286,112 @@ internal state object, or the state proxy if it exits
                     <div class="param-description">
                         <p><code>true</code> or <code>false</code> value to be set on the hidden attribute</p>
 
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>a callback executed when the operation is finished</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__updateSorting" class="method item">
+    <h3 class="name"><code>_updateSorting</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>options</code>
+                </li>
+                <li class="arg">
+                        <code>sortField</code>
+                </li>
+                <li class="arg">
+                        <code>sortOrder</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l105"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:105</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Updates the sortfield and sortOrder of the location</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">options</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>the required for the update</p>
+
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">api</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    <p>(required) the JS REST client instance</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name">sortField</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sortOrder</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
                     </div>
 
                 </li>
@@ -5751,7 +5861,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l132"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:132</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:158</code></a>
         </p>
 
 
@@ -6098,7 +6208,7 @@ return an attribute hash.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l183"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:183</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l209"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:209</code></a>
         </p>
 
 
@@ -7751,7 +7861,7 @@ directly passed to the ContentService.loadLocation method.</p>
                 Model
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l253"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:253</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l279"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:279</code></a>
         </p>
 
 
@@ -8013,7 +8123,7 @@ be fired.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l144"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:144</code></a>
+        <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l170"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:170</code></a>
         </p>
 
 
@@ -8522,7 +8632,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l280"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:280</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l306"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:306</code></a>
                             </p>
                     
                     
@@ -8586,7 +8696,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l390"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:390</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l416"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:416</code></a>
                             </p>
                     
                     
@@ -8615,7 +8725,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l291"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:291</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l317"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:317</code></a>
                             </p>
                     
                     
@@ -8676,7 +8786,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l302"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:302</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l328"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:328</code></a>
                             </p>
                     
                     
@@ -8776,7 +8886,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l313"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:313</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l339"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:339</code></a>
                             </p>
                     
                     
@@ -8806,7 +8916,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l324"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:324</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l350"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:350</code></a>
                             </p>
                     
                     
@@ -8837,7 +8947,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l407"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:407</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l433"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:433</code></a>
                             </p>
                     
                     
@@ -8867,7 +8977,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l335"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:335</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l361"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:361</code></a>
                             </p>
                     
                     
@@ -8897,7 +9007,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l346"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:346</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l372"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:372</code></a>
                             </p>
                     
                     
@@ -8927,7 +9037,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l357"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:357</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l383"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:383</code></a>
                             </p>
                     
                     
@@ -8957,7 +9067,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l368"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:368</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l394"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:394</code></a>
                             </p>
                     
                     
@@ -8987,7 +9097,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l379"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:379</code></a>
+                            <a href="../files/Resources_public_js_models_ez-locationmodel.js.html#l405"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-locationmodel.js:405</code></a>
                             </p>
                     
                     
