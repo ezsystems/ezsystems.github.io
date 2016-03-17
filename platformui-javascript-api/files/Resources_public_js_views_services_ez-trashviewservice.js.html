@@ -496,6 +496,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
 
         initializer: function () {
             this.on(&#x27;*:emptyTrashAction&#x27;, this._emptyTrashConfirmBox);
+            this.on(&#x27;*:restoreItems&#x27;, this._restoreItems);
         },
 
         /**
@@ -586,9 +587,8 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
 
             if (!service._isParentInTrash(itemHash.ParentLocation._href, inTrashList)) {
                 parentLocation.load(loadOptions, tasks.add(function (error) {
-                    if (error) {
-                        service._error(&quot;Failed to load parent location with REST API&quot;);
-                    } else {
+                    // Do nothing if there is an error. The parent might have been deleted/restored
+                    if (!error) {
                         parentLocation.loadPath(loadOptions, tasks.add(function (error) {
                             if (error) {
                                 service._error(&quot;Failed to load parent location path with REST API&quot;);
@@ -694,6 +694,66 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
         },
 
         /**
+         * Restores trash items
+         *
+         * @method _restoreItems
+         * @protected
+         * @param {Object} e restoreItems event facade
+         * @param {Array} e.trashItems  List of trashItems to be restored
+         */
+        _restoreItems: function (e) {
+            var loadOptions = {api: this.get(&#x27;capi&#x27;)},
+                tasks = new Y.Parallel(),
+                service = this,
+                notificationIdentifier = &quot;restoreTrashItems&quot;,
+                restoreCount = 0;
+
+            this._notify(
+                &#x27;Restoring trash item(s)&#x27;,
+                notificationIdentifier,
+                &#x27;started&#x27;,
+                5
+            );
+
+            Y.each(e.trashItems, function (trashItem) {
+                trashItem.restore(loadOptions, tasks.add(function (error) {
+                    var trashItemId = trashItem.get(&#x27;id&#x27;);
+
+                    if (error) {
+                        service._notify(
+                            &quot;An error occurred while restoring trash item with Id: &quot; + trashItemId
+                            + &quot;. For the moment item&#x27;s whose original location has been deleted can not be restored&quot;,
+                            notificationIdentifier + &quot;-error-&quot; + trashItemId,
+                            &#x27;error&#x27;,
+                            0
+                        );
+
+                        return;
+                    }
+                    restoreCount++;
+                }));
+            });
+
+            tasks.done(function () {
+
+                if (restoreCount &gt; 0) {
+                    service._notify(
+                        restoreCount + &#x27; Content item(s) have been restored&#x27;,
+                        notificationIdentifier,
+                        &#x27;done&#x27;,
+                        5
+                    );
+
+                    /**
+                     * Fired once trash has just been emptied
+                     * @event refreshView
+                     */
+                    service.fire(&#x27;refreshView&#x27;);
+                }
+            });
+        },
+
+        /**
          * Fire &#x27;notify&#x27; event
          *
          * @method _notify
@@ -701,7 +761,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
          * @param {String} text the text shown during the notification
          * @param {String} identifier the identifier of the notification
          * @param {String} state the state of the notification
-         * @param {Integer} timeout the number of second, the notification will be shown
+         * @param {Number} timeout the number of second, the notification will be shown
          */
         _notify: function (text, identifier, state, timeout) {
             this.fire(&#x27;notify&#x27;, {

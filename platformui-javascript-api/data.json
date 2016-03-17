@@ -4245,7 +4245,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 14,
+            "line": 34,
             "description": "Provides the Location View View Tab view class."
         },
         "ez-locationviewlocationstabview": {
@@ -7288,7 +7288,7 @@
             "module": "ez-locationviewdetailstabview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 14,
+            "line": 34,
             "description": "The Location View View Details tab class.",
             "is_constructor": 1,
             "extends": "eZ.LocationViewTabView"
@@ -19279,7 +19279,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 35,
+            "line": 36,
             "description": "editAction event handler, makes the application navigate to edit the\ncontent available in the event facade",
             "itemtype": "method",
             "name": "_editContent",
@@ -19298,7 +19298,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 54,
+            "line": 55,
             "description": "`sendToTrashAction` event handler,\nit asks confirmation to the user before sending the location to the trash.",
             "itemtype": "method",
             "name": "_sendContentToTrashConfirmBox",
@@ -19317,7 +19317,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 74,
+            "line": 75,
             "description": "moveAction event handler, launch the universal discovery widget\nto choose a location to move the content",
             "itemtype": "method",
             "name": "_selectLocation",
@@ -19336,7 +19336,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 94,
+            "line": 95,
             "description": "Sends location to trash, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_sendToTrash",
@@ -19348,7 +19348,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 118,
+            "line": 119,
             "description": "Send to trash callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterSendToTrashCallback",
@@ -19377,7 +19377,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 150,
+            "line": 151,
             "description": "Fired when the content is sent to trash",
             "itemtype": "event",
             "name": "sentToTrash",
@@ -19394,7 +19394,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 164,
+            "line": 165,
             "description": "Move the content to the selected location",
             "itemtype": "method",
             "name": "_moveContent",
@@ -19413,7 +19413,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 197,
+            "line": 198,
             "description": "Fired when the content is moved",
             "itemtype": "event",
             "name": "movedContent",
@@ -19435,7 +19435,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 214,
+            "line": 215,
             "description": "translate event handler, makes the application to navigate to edit content available\nin the facade with given language and base language",
             "itemtype": "method",
             "name": "_translateContent",
@@ -19454,7 +19454,26 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 240,
+            "line": 241,
+            "description": "Update the sort methods of the location",
+            "itemtype": "method",
+            "name": "_updateSorting",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 280,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -19488,7 +19507,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 261,
+            "line": 301,
             "description": "Loads the location, the content and the path for the location id\navailable in the request and calls the next callback once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -19507,7 +19526,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 330,
+            "line": 370,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -19519,7 +19538,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 352,
+            "line": 392,
             "description": "The viewed location",
             "itemtype": "attribute",
             "name": "location",
@@ -19530,7 +19549,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 363,
+            "line": 403,
             "description": "The content associated with the location",
             "itemtype": "attribute",
             "name": "content",
@@ -19541,7 +19560,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 374,
+            "line": 414,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -19552,7 +19571,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 385,
+            "line": 425,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location sorted by location depth",
             "itemtype": "attribute",
             "name": "path",
@@ -19563,7 +19582,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 396,
+            "line": 436,
             "description": "The language code in which the content is being viewed",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -20857,7 +20876,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 30,
+            "line": 31,
             "description": "`emptyTrashAction` event handler,\nit asks confirmation to the user before emptying the trash.",
             "itemtype": "method",
             "name": "_emptyTrashConfirmBox",
@@ -20876,7 +20895,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 51,
+            "line": 52,
             "description": "Loads the list of Trash Items in the `trashItems` attribute and calls `callback` once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -20895,7 +20914,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 83,
+            "line": 84,
             "description": "Loads a single item based on `itemHash` and adds it to `trashItems` in the format expected by the `trashItems`\nattribute.",
             "itemtype": "method",
             "name": "_loadTrashItem",
@@ -21003,6 +21022,42 @@
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
             "line": 225,
+            "description": "Restores trash items",
+            "itemtype": "method",
+            "name": "_restoreItems",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "restoreItems event facade",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "trashItems",
+                            "description": "List of trashItems to be restored",
+                            "type": "Array"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 276,
+            "description": "Fired once trash has just been emptied",
+            "itemtype": "event",
+            "name": "refreshView",
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 285,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -21027,7 +21082,7 @@
                 {
                     "name": "timeout",
                     "description": "the number of second, the notification will be shown",
-                    "type": "Integer"
+                    "type": "Number"
                 }
             ],
             "class": "eZ.TrashViewService",
@@ -21036,7 +21091,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 246,
+            "line": 306,
             "description": "Returns the view parameters of the trash view",
             "itemtype": "method",
             "name": "_getViewParameters",
@@ -21052,7 +21107,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 261,
+            "line": 321,
             "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
             "itemtype": "attribute",
             "name": "trashItems",
@@ -21065,7 +21120,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 276,
+            "line": 336,
             "description": "Holds the eZ.ContentType constructor function",
             "itemtype": "attribute",
             "name": "contentTypeModelConstructor",
@@ -21077,7 +21132,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 287,
+            "line": 347,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -21089,7 +21144,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 298,
+            "line": 358,
             "description": "Holds the eZ.TrashItem constructor function",
             "itemtype": "attribute",
             "name": "trashItemModelConstructor",
@@ -21314,7 +21369,63 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 61,
+            "line": 89,
+            "description": "Map the sortFields identifiers in objects.\nThese objects contain the identifier, the name of the sort field and a boolean to see if it's the current selected sortField.",
+            "itemtype": "method",
+            "name": "_getSortFields",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "contains objects with identifier, name and a boolean to see if selected",
+                "type": "Array"
+            },
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 106,
+            "description": "Check if the default sortField is 'standard', then get the available ordering methods.\n'Standard' sort fields are: Content name, Priority, Modification date, Publication date",
+            "itemtype": "method",
+            "name": "_getOrderingMethods",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "contains the sortField identifiers",
+                "type": "Array"
+            },
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 124,
+            "description": "Set the selected sort type attribute",
+            "itemtype": "method",
+            "name": "_setSortType",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 138,
+            "description": "Set the selected sort order attribute",
+            "itemtype": "method",
+            "name": "_setSortingOrder",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 152,
             "description": "Fire the `loadUser` event",
             "itemtype": "method",
             "name": "_fireLoadUser",
@@ -21326,7 +21437,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 70,
+            "line": 161,
             "description": "Fired when the details view needs authors",
             "itemtype": "event",
             "name": "loadUser",
@@ -21348,7 +21459,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 94,
+            "line": 185,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -21361,7 +21472,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 107,
+            "line": 198,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -21374,7 +21485,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 120,
+            "line": 211,
             "description": "The creator of the content",
             "itemtype": "attribute",
             "name": "creator",
@@ -21385,7 +21496,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 128,
+            "line": 219,
             "description": "The owner of the content",
             "itemtype": "attribute",
             "name": "owner",
@@ -21396,7 +21507,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 136,
+            "line": 227,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -21408,7 +21519,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 147,
+            "line": 238,
             "description": "The location being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -21420,12 +21531,34 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 158,
+            "line": 249,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
             "type": "mixed",
             "writeonce": "",
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 260,
+            "description": "The selected sort field",
+            "itemtype": "attribute",
+            "name": "sortField",
+            "type": "{String}",
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 270,
+            "description": "The selected sort order",
+            "itemtype": "attribute",
+            "name": "sortOrder",
+            "type": "{String}",
             "class": "eZ.LocationViewDetailsTabView",
             "module": "ez-locationviewdetailstabview",
             "namespace": "eZ"
@@ -28366,7 +28499,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 29,
+            "line": 36,
             "description": "Event handler for the minimizeTrashBarAction event",
             "access": "protected",
             "tagname": "",
@@ -28378,7 +28511,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 39,
+            "line": 46,
             "description": "Renders the trash view",
             "itemtype": "method",
             "name": "render",
@@ -28392,7 +28525,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 60,
+            "line": 67,
             "description": "Sets the minimum height of the view",
             "access": "private",
             "tagname": "",
@@ -28404,7 +28537,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 74,
+            "line": 81,
             "description": "Converts the content of the `trashItems` attribute into JSON",
             "access": "protected",
             "tagname": "",
@@ -28420,7 +28553,65 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 100,
+            "line": 98,
+            "description": "Restores the selected trash items",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_restoreTrashItems",
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 117,
+            "description": "Fired to restore the selected items",
+            "itemtype": "event",
+            "name": "restoreItems",
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 124,
+            "description": "Updates the TrashBar buttons",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_updateTrashBarButtons",
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 137,
+            "description": "Update the disable status on a given button of the trashBar",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_updateDisableTrashBarButton",
+            "params": [
+                {
+                    "name": "actionId",
+                    "description": "of the button",
+                    "type": "String"
+                },
+                {
+                    "name": "isDisabled",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 158,
             "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
             "itemtype": "attribute",
             "name": "trashItems",
@@ -28433,7 +28624,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 115,
+            "line": 173,
             "description": "The trash bar instance, by default an instance {{#crossLink\n\"eZ.TrashBarView\"}}eZ.TrashBarView{{/crossLink}}",
             "itemtype": "attribute",
             "name": "trashBar",
@@ -30786,6 +30977,45 @@
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
             "line": 105,
+            "description": "Updates the sortfield and sortOrder of the location",
+            "itemtype": "method",
+            "name": "_updateSorting",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the required for the update",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "sortOrder",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "a callback executed when the operation is finished",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Location",
+            "module": "ez-locationmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-locationmodel.js",
+            "line": 131,
             "description": "Updates the hidden status of the location",
             "access": "protected",
             "tagname": "",
@@ -30821,7 +31051,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 132,
+            "line": 158,
             "description": "Hides the location",
             "itemtype": "method",
             "name": "hide",
@@ -30850,7 +31080,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 144,
+            "line": 170,
             "description": "Reverse the hidden status of the location",
             "itemtype": "method",
             "name": "unhide",
@@ -30879,7 +31109,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 156,
+            "line": 182,
             "description": "Deletes the location in the repository.",
             "access": "protected",
             "tagname": "",
@@ -30910,7 +31140,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 183,
+            "line": 209,
             "description": "Loads path of the current location. The result is the array containing\neZ.Location objects present on the path sorted by depth.\nThe array doesn't contain current location.\nThe result is available in the `path` attribute or in the `callback`.",
             "itemtype": "method",
             "name": "loadPath",
@@ -30951,7 +31181,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 229,
+            "line": 255,
             "description": "Loads ancestors of the location based on the `pathString`. The result is the REST API view\ncontaining locations from the path.",
             "itemtype": "method",
             "name": "_loadAncestors",
@@ -30982,7 +31212,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 253,
+            "line": 279,
             "description": "Overrides the RestModel implementation to also deal with the `path` attribute",
             "itemtype": "method",
             "name": "toJSON",
@@ -30996,7 +31226,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 280,
+            "line": 306,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -31008,7 +31238,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 291,
+            "line": 317,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -31020,7 +31250,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 302,
+            "line": 328,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -31032,7 +31262,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 313,
+            "line": 339,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -31044,7 +31274,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 324,
+            "line": 350,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -31056,7 +31286,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 335,
+            "line": 361,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -31068,7 +31298,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 346,
+            "line": 372,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -31080,7 +31310,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 357,
+            "line": 383,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -31092,7 +31322,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 368,
+            "line": 394,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -31104,7 +31334,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 379,
+            "line": 405,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -31116,7 +31346,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 390,
+            "line": 416,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -31127,7 +31357,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 407,
+            "line": 433,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",
@@ -31383,7 +31613,36 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 50,
+            "line": 41,
+            "description": "Restores the item to it's original location",
+            "itemtype": "method",
+            "name": "restore",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the required for the update",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "a callback executed when the operation is finished",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.TrashItem",
+            "module": "ez-trashitemmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-trashitemmodel.js",
+            "line": 64,
             "description": "The trash item's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -31395,7 +31654,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 61,
+            "line": 75,
             "description": "The trash item's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -31407,7 +31666,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 72,
+            "line": 86,
             "description": "The trash item's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -31419,7 +31678,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 83,
+            "line": 97,
             "description": "The trash item's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -31431,7 +31690,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 94,
+            "line": 108,
             "description": "The trash item's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -31443,7 +31702,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 105,
+            "line": 119,
             "description": "The trash item's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -31455,7 +31714,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 116,
+            "line": 130,
             "description": "The trash item's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -31467,7 +31726,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 127,
+            "line": 141,
             "description": "The trash item's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -31479,7 +31738,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 138,
+            "line": 152,
             "description": "The trash item's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -31491,7 +31750,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 149,
+            "line": 163,
             "description": "The trash item's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -31503,7 +31762,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 160,
+            "line": 174,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
