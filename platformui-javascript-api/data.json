@@ -19655,7 +19655,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 28,
+            "line": 29,
             "description": "navigateTo event handler. it redirects the user to the given route.",
             "itemtype": "method",
             "name": "_navigateTo",
@@ -19674,7 +19674,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 41,
+            "line": 42,
             "description": "logOut event handler, it logs out the user and redirect to the login\nform.",
             "itemtype": "method",
             "name": "_logOut",
@@ -19684,7 +19684,56 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 144,
+            "line": 57,
+            "description": "Returns true if a provided item is a NavigationItemView, false if item is a NavigationItemParameterView",
+            "itemtype": "method",
+            "name": "_isNavigationViewItem",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "item",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.NavigationHubViewService",
+            "module": "ez-navigationhubviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
+            "line": 69,
+            "description": "Redirects to the first item of the active zone",
+            "itemtype": "method",
+            "name": "_navigateToFirstItemRoute",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade",
+                    "props": [
+                        {
+                            "name": "newVal",
+                            "description": "new value of `activeNavigation`",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.NavigationHubViewService",
+            "module": "ez-navigationhubviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
+            "line": 182,
             "description": "Loads the given `locationId`",
             "access": "protected",
             "tagname": "",
@@ -19725,7 +19774,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 166,
+            "line": 204,
             "description": "Returns a navigation item object. See the *NavigationItems attribute.",
             "access": "private",
             "tagname": "",
@@ -19753,7 +19802,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 182,
+            "line": 220,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemView\"}}eZ.NavigationItemView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -19791,7 +19840,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 207,
+            "line": 245,
             "description": "Returns the navigation item object describing a {{#crossLink\n\"eZ.NavigationItemSubtreeView\"}}eZ.NavigationItemSubtreeView{{/crossLink}}.",
             "itemtype": "method",
             "name": "_getSubtreeItem",
@@ -19829,7 +19878,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 233,
+            "line": 271,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemParameterView\"}}eZ.NavigationItemParameterView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -19872,7 +19921,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 260,
+            "line": 298,
             "description": "Returns the parameters for the navigation hub view",
             "itemtype": "method",
             "name": "getViewParameters",
@@ -19886,8 +19935,8 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 278,
-            "description": "A matched route object from the request. This object will be used by\nthe navigation hub view to check which navigation item view is\nselected. A matched route object is a clone of the application active\nroute without the service, serviceInstance and callbacks entries and\nwith an additionnal `parameters` property holding the route\nparameters and their values.",
+            "line": 316,
+            "description": "A matched route object from the request. This object will be used by\nthe navigation hub view to check which navigation item view is\nselected. A matched route object is a clone of the application active\nroute without the service, serviceInstance and callbacks entries and\nwith an additional `parameters` property holding the route\nparameters and their values.",
             "itemtype": "method",
             "name": "_matchedRoute",
             "access": "protected",
@@ -19902,7 +19951,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 303,
+            "line": 341,
             "description": "Adds a navigation item for the given zone.\nNote: adding a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "addNavigationItem",
@@ -19924,7 +19973,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 319,
+            "line": 357,
             "description": "Removes a navigation item for the given zone.\nNote: removing a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "removeNavigationItem",
@@ -19946,7 +19995,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 343,
+            "line": 381,
             "description": "Retrieves a navigation item",
             "itemtype": "method",
             "name": "getNavigationItem",
@@ -19967,7 +20016,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 369,
+            "line": 407,
             "description": "Stores the root `location`",
             "itemtype": "attribute",
             "name": "rootLocation",
@@ -19978,7 +20027,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 381,
+            "line": 419,
             "description": "Stores the root media `location`",
             "itemtype": "attribute",
             "name": "rootMediaLocation",
@@ -19989,7 +20038,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 393,
+            "line": 431,
             "description": "Stores the navigation item objects for the 'platform' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -20002,7 +20051,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 434,
+            "line": 472,
             "description": "Stores the navigation item objects for the 'studioplus' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -20015,7 +20064,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 466,
+            "line": 504,
             "description": "Stores the navigation item objects for the 'studio' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -20028,10 +20077,10 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 498,
+            "line": 536,
             "description": "Stores the navigation item objects for the 'admin' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
-            "name": "platformNavigationItems",
+            "name": "adminNavigationItems",
             "type": "Array",
             "default": "array containing the items for the admin",
             "readonly": "",
@@ -20041,7 +20090,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 557,
+            "line": 595,
             "description": "Stores the user's avatar image",
             "itemtype": "attribute",
             "name": "userAvatar",
