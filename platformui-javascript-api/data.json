@@ -19279,7 +19279,26 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 36,
+            "line": 37,
+            "description": "Update the priority of the location.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_updatePriority",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "the event facade of the sortUpdate event",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 59,
             "description": "editAction event handler, makes the application navigate to edit the\ncontent available in the event facade",
             "itemtype": "method",
             "name": "_editContent",
@@ -19298,7 +19317,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 55,
+            "line": 78,
             "description": "`sendToTrashAction` event handler,\nit asks confirmation to the user before sending the location to the trash.",
             "itemtype": "method",
             "name": "_sendContentToTrashConfirmBox",
@@ -19317,7 +19336,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 75,
+            "line": 98,
             "description": "moveAction event handler, launch the universal discovery widget\nto choose a location to move the content",
             "itemtype": "method",
             "name": "_selectLocation",
@@ -19336,7 +19355,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 95,
+            "line": 118,
             "description": "Sends location to trash, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_sendToTrash",
@@ -19348,7 +19367,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 119,
+            "line": 142,
             "description": "Send to trash callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterSendToTrashCallback",
@@ -19377,7 +19396,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 151,
+            "line": 174,
             "description": "Fired when the content is sent to trash",
             "itemtype": "event",
             "name": "sentToTrash",
@@ -19394,7 +19413,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 165,
+            "line": 188,
             "description": "Move the content to the selected location",
             "itemtype": "method",
             "name": "_moveContent",
@@ -19413,7 +19432,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 198,
+            "line": 221,
             "description": "Fired when the content is moved",
             "itemtype": "event",
             "name": "movedContent",
@@ -19435,7 +19454,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 215,
+            "line": 238,
             "description": "translate event handler, makes the application to navigate to edit content available\nin the facade with given language and base language",
             "itemtype": "method",
             "name": "_translateContent",
@@ -19454,7 +19473,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 241,
+            "line": 264,
             "description": "Update the sort methods of the location",
             "itemtype": "method",
             "name": "_updateSorting",
@@ -19473,7 +19492,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 280,
+            "line": 303,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -19507,7 +19526,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 301,
+            "line": 324,
             "description": "Loads the location, the content and the path for the location id\navailable in the request and calls the next callback once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -19526,7 +19545,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 370,
+            "line": 393,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -19538,7 +19557,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 392,
+            "line": 415,
             "description": "The viewed location",
             "itemtype": "attribute",
             "name": "location",
@@ -19549,7 +19568,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 403,
+            "line": 426,
             "description": "The content associated with the location",
             "itemtype": "attribute",
             "name": "content",
@@ -19560,7 +19579,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 414,
+            "line": 437,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -19571,7 +19590,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 425,
+            "line": 448,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location sorted by location depth",
             "itemtype": "attribute",
             "name": "path",
@@ -19582,7 +19601,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 436,
+            "line": 459,
             "description": "The language code in which the content is being viewed",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -28194,7 +28213,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 47,
+            "line": 60,
             "description": "Refreshes the subitem list",
             "access": "protected",
             "tagname": "",
@@ -28206,7 +28225,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 58,
+            "line": 71,
             "description": "Sets the UI in the loading the state",
             "access": "protected",
             "tagname": "",
@@ -28218,7 +28237,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 68,
+            "line": 81,
             "description": "Removes the loading state of the UI",
             "itemtype": "method",
             "name": "_uiPageEndLoading",
@@ -28230,7 +28249,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 78,
+            "line": 91,
             "description": "tap event handler on the navigation links. Changes the page if the\nlink is not disabled",
             "itemtype": "method",
             "name": "_handlePagination",
@@ -28249,7 +28268,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 95,
+            "line": 108,
             "description": "Returns the *goto* function for the given type operation",
             "itemtype": "method",
             "name": "_getGotoMethod",
@@ -28272,7 +28291,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 107,
+            "line": 120,
             "description": "Go to the first page",
             "itemtype": "method",
             "name": "_gotoFirst",
@@ -28284,7 +28303,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 117,
+            "line": 130,
             "description": "Go to the next page",
             "itemtype": "method",
             "name": "_gotoNext",
@@ -28296,7 +28315,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 127,
+            "line": 140,
             "description": "Go to the previous page",
             "itemtype": "method",
             "name": "_gotoPrev",
@@ -28308,7 +28327,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 137,
+            "line": 150,
             "description": "Go to the last page",
             "itemtype": "method",
             "name": "_gotoLast",
@@ -28320,7 +28339,281 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 162,
+            "line": 175,
+            "description": "Show the edit icon to inform the user input can be edited.",
+            "itemtype": "method",
+            "name": "_displayEditIcon",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 190,
+            "description": "Show the error icon to inform the user input is not correctly filled.",
+            "itemtype": "method",
+            "name": "_displayErrorIcon",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "input",
+                    "description": "the DOM node of the input",
+                    "type": "Node"
+                },
+                {
+                    "name": "selectedCell",
+                    "description": "the DOM node of the current selected cell",
+                    "type": "Node"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 203,
+            "description": "Hide the edit icon to inform the user input can be edited.",
+            "itemtype": "method",
+            "name": "_hideEditIcon",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 216,
+            "description": "Hide the error icon.",
+            "itemtype": "method",
+            "name": "_hideErrorIcon",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "input",
+                    "description": "the DOM node of the input",
+                    "type": "Object"
+                },
+                {
+                    "name": "selectedCell",
+                    "description": "the DOM node of the current selected cell",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 229,
+            "description": "Show the 'validate' & 'cancel' buttons which allow to update or not the priority.",
+            "itemtype": "method",
+            "name": "_displayPriorityButtons",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 248,
+            "description": "Hide the 'validate' & 'cancel' buttons which allow to update or not the priority.\nAlso fill back priority input with the current sub item priority.",
+            "itemtype": "method",
+            "name": "_restorePriorityCell",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 262,
+            "description": "Restore the input value with the priority of the sub item",
+            "itemtype": "method",
+            "name": "_restorePriorityValue",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 277,
+            "description": "Return the sub item struct with the giiven locationId",
+            "itemtype": "method",
+            "name": "_getSubItemStruct",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "locationId",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 291,
+            "description": "Hide the validate and cancel buttons displayed while editing priority",
+            "itemtype": "method",
+            "name": "_hidePriorityButtons",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 304,
+            "description": "Event handler allowing to change the priority of the subitem",
+            "itemtype": "method",
+            "name": "_setPriority",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 324,
+            "description": "Validates the current input of priority",
+            "itemtype": "method",
+            "name": "_validatePriority",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 342,
+            "description": "Return the priority cell for a given location",
+            "itemtype": "method",
+            "name": "_getPriorityCell",
+            "params": [
+                {
+                    "name": "locationId",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Node"
+            },
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 353,
+            "description": "Return the priority input from its id",
+            "itemtype": "method",
+            "name": "_getPriorityInput",
+            "params": [
+                {
+                    "name": "inputId",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Node"
+            },
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 364,
+            "description": "Returns the input validity state object for the input generated by\nthe Integer template\n\nSee https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getInputValidity",
+            "return": {
+                "description": "",
+                "type": "ValidityState"
+            },
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 378,
             "description": "Checks whether the pagination will be useful",
             "itemtype": "method",
             "name": "_hasPages",
@@ -28336,7 +28629,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 173,
+            "line": 389,
             "description": "Checks whether the user is on the first \"page\".",
             "itemtype": "method",
             "name": "_isLastPage",
@@ -28352,7 +28645,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 184,
+            "line": 400,
             "description": "Checks whether the user is on the last \"page\".",
             "itemtype": "method",
             "name": "_isLastPage",
@@ -28368,7 +28661,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 195,
+            "line": 411,
             "description": "Converts the subitems array to JSON so that it can be used in the\ntemplate.",
             "itemtype": "method",
             "name": "_convertToJSONList",
@@ -28383,7 +28676,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 212,
+            "line": 428,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -28395,7 +28688,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 246,
+            "line": 462,
             "description": "The max number of the Locations to display in the subitem list\nper \"page\".",
             "itemtype": "attribute",
             "name": "limit",
@@ -28407,7 +28700,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 258,
+            "line": 474,
             "description": "The offset in the Location list.",
             "itemtype": "attribute",
             "name": "offset",
@@ -28419,7 +28712,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 269,
+            "line": 485,
             "description": "The location being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -28431,11 +28724,23 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemlistview.js",
-            "line": 280,
+            "line": 496,
             "description": "The subitems list.",
             "itemtype": "attribute",
             "name": "subitems",
             "type": "Array of {Object} array containing location structs",
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemlistview.js",
+            "line": 504,
+            "description": "Boolean to check if a subitem priority is currently selected.",
+            "itemtype": "attribute",
+            "name": "editingPriority",
+            "default": "false",
+            "type": "Boolean",
             "class": "eZ.SubitemListView",
             "module": "ez-subitemlistview",
             "namespace": "eZ"
@@ -31190,6 +31495,42 @@
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
             "line": 209,
+            "description": "Update the priority of the location.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_updatePriority",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "priority",
+                    "description": "the new priority",
+                    "type": "Number"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Location",
+            "module": "ez-locationmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-locationmodel.js",
+            "line": 235,
             "description": "Loads path of the current location. The result is the array containing\neZ.Location objects present on the path sorted by depth.\nThe array doesn't contain current location.\nThe result is available in the `path` attribute or in the `callback`.",
             "itemtype": "method",
             "name": "loadPath",
@@ -31230,7 +31571,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 255,
+            "line": 281,
             "description": "Loads ancestors of the location based on the `pathString`. The result is the REST API view\ncontaining locations from the path.",
             "itemtype": "method",
             "name": "_loadAncestors",
@@ -31261,7 +31602,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 279,
+            "line": 305,
             "description": "Overrides the RestModel implementation to also deal with the `path` attribute",
             "itemtype": "method",
             "name": "toJSON",
@@ -31275,7 +31616,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 306,
+            "line": 332,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -31287,7 +31628,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 317,
+            "line": 343,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -31299,7 +31640,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 328,
+            "line": 354,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -31311,7 +31652,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 339,
+            "line": 365,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -31323,7 +31664,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 350,
+            "line": 376,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -31335,7 +31676,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 361,
+            "line": 387,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -31347,7 +31688,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 372,
+            "line": 398,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -31359,7 +31700,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 383,
+            "line": 409,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -31371,7 +31712,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 394,
+            "line": 420,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -31383,7 +31724,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 405,
+            "line": 431,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -31395,7 +31736,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 416,
+            "line": 442,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -31406,7 +31747,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 433,
+            "line": 459,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",
