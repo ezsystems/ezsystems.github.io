@@ -494,6 +494,7 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
         initializer: function () {
             this.on(&#x27;*:logOut&#x27;, this._logOut);
             this.after(&#x27;*:navigateTo&#x27;, this._navigateTo);
+            this.after(&#x27;*:activeNavigationChange&#x27;, this._navigateToFirstItemRoute);
         },
 
         /**
@@ -522,6 +523,43 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
             app.logOut(function () {
                 app.navigateTo(&#x27;loginForm&#x27;);
             });
+        },
+
+        /**
+         * Returns true if a provided item is a NavigationItemView, false if item is a NavigationItemParameterView
+         *
+         * @method _isNavigationViewItem
+         * @private
+         * @param {Object} item
+         * @return {Boolean}
+         */
+        _isNavigationViewItem: function (item) {
+            return !!item.get;
+        },
+
+        /**
+         * Redirects to the first item of the active zone
+         *
+         * @method _navigateToFirstItemRoute
+         * @protected
+         * @param {EventFacade} e
+         * @param {String} e.newVal new value of &#x60;activeNavigation&#x60;
+         */
+        _navigateToFirstItemRoute: function (e) {
+            var zone = this.get(e.newVal + &#x27;NavigationItems&#x27;),
+                firstItem,
+                route;
+
+            if (zone &amp;&amp; zone.length &gt; 0 &amp;&amp; e.prevVal !== null) {
+                firstItem = zone[0];
+
+                if (this._isNavigationViewItem(firstItem)) {
+                    route = firstItem.get(&#x27;route&#x27;);
+                } else {
+                    route = firstItem.config.route;
+                }
+                this.get(&#x27;app&#x27;).navigateTo(route.name, route.params);
+            }
         },
 
         _load: function (next) {
@@ -751,7 +789,7 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
          * the navigation hub view to check which navigation item view is
          * selected. A matched route object is a clone of the application active
          * route without the service, serviceInstance and callbacks entries and
-         * with an additionnal &#x60;parameters&#x60; property holding the route
+         * with an additional &#x60;parameters&#x60; property holding the route
          * parameters and their values.
          *
          * @method _matchedRoute
@@ -802,13 +840,13 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
         removeNavigationItem: function (identifier, zone) {
             var attr = zone + &#x27;NavigationItems&#x27;;
 
-            this._set(attr, Y.Array.reject(this.get(attr), function (elt) {
-                if (elt.get) {
+            this._set(attr, Y.Array.reject(this.get(attr), Y.bind(function (elt) {
+                if (this._isNavigationViewItem(elt)) {
                     return elt.get(&#x27;identifier&#x27;) === identifier;
                 } else {
                     return elt.config.identifier === identifier;
                 }
-            }));
+            },this)));
         },
 
         /**
@@ -826,13 +864,13 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
                 items = items.concat(this.get(zone + &#x27;NavigationItems&#x27;));
             }, this);
 
-            return Y.Array.find(items, function (elt) {
-                if (elt.get) {
+            return Y.Array.find(items, Y.bind(function (elt) {
+                if (this._isNavigationViewItem(elt)) {
                     return elt.get(&#x27;identifier&#x27;) === identifier;
                 } else {
                     return false;
                 }
-            });
+            }, this));
         }
     }, {
         ATTRS: {
@@ -974,7 +1012,7 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
              * object for the navigation item view. This configuration must
              * contain a &#x60;title&#x60; and an &#x60;identifier&#x60; properties.
              *
-             * @attribute platformNavigationItems
+             * @attribute adminNavigationItems
              * @type Array
              * @default array containing the items for the admin
              * @readOnly

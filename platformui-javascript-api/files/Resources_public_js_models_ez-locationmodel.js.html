@@ -574,6 +574,32 @@ YUI.add(&#x27;ez-locationmodel&#x27;, function (Y) {
         },
 
         /**
+         * Updates the sortfield and sortOrder of the location
+         *
+         * @method _updateSorting
+         * @param {Object} options the required for the update
+         * @param {Object} options.api (required) the JS REST client instance
+         * @param {String} sortField
+         * @param {String} sortOrder
+         * @param {Function} callback a callback executed when the operation is finished
+         */
+        updateSorting: function (options, sortField, sortOrder, callback) {
+            var locationUpdateStruct = options.api.getContentService().newLocationUpdateStruct();
+
+            locationUpdateStruct.body.LocationUpdate.sortField = sortField;
+            locationUpdateStruct.body.LocationUpdate.sortOrder = sortOrder;
+            options.api.getContentService().updateLocation(this.get(&#x27;id&#x27;), locationUpdateStruct,
+                Y.bind(function (error, response) {
+                    if (!error) {
+                        this.set(&#x27;sortField&#x27;, sortField);
+                        this.set(&#x27;sortOrder&#x27;, sortOrder);
+                    }
+                    callback(error, response);
+                }, this)
+            );
+        },
+
+        /**
          * Updates the hidden status of the location
          *
          * @protected
@@ -649,6 +675,32 @@ YUI.add(&#x27;ez-locationmodel&#x27;, function (Y) {
                 location.reset();
                 callback(error, response);
             });
+        },
+
+        /**
+         * Update the priority of the location.
+         *
+         * @protected
+         * @method _updatePriority
+         * @param {Object} options
+         * @param {Object} options.api the JS REST client instance
+         * @param {Number} priority the new priority
+         * @param {Function} callback
+         */
+        updatePriority: function (options, priority, callback) {
+            var locationUpdateStruct = options.api.getContentService().newLocationUpdateStruct();
+
+            locationUpdateStruct.body.LocationUpdate.priority = priority;
+            locationUpdateStruct.body.LocationUpdate.sortField = this.get(&#x27;sortField&#x27;);
+            locationUpdateStruct.body.LocationUpdate.sortOrder = this.get(&#x27;sortOrder&#x27;);
+            options.api.getContentService().updateLocation(this.get(&#x27;id&#x27;), locationUpdateStruct,
+                Y.bind(function (error, response) {
+                    if (!error) {
+                        this.set(&#x27;priority&#x27;,priority);
+                    }
+                    callback(error, response);
+                }, this)
+            );
         },
 
         /**
