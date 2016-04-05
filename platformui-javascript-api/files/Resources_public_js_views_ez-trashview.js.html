@@ -492,16 +492,9 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
      * @constructor
      * @extends eZ.TemplateBasedView
      */
-    Y.eZ.TrashView = Y.Base.create(&#x27;trashView&#x27;, Y.eZ.TemplateBasedView, [Y.eZ.SelectionTable], {
-        events: {
-            &#x27;.ez-trashitem-box&#x27;: {
-                &#x27;change&#x27;: &#x27;_updateTrashBarButtons&#x27;
-            },
-        },
-
+    Y.eZ.TrashView = Y.Base.create(&#x27;trashView&#x27;, Y.eZ.TemplateBasedView, [], {
         initializer: function () {
             this.on(&#x27;*:minimizeTrashBarAction&#x27;, this._handleMinimizeTrashBar);
-            this.on(&#x27;*:restoreTrashItemsAction&#x27;, this._restoreTrashItems);
         },
 
         /**
@@ -564,57 +557,6 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
                     &#x27;contentType&#x27;: trashItem.contentType.toJSON(),
                 };
             });
-        },
-
-        /**
-         * Restores the selected trash items
-         *
-         * @private
-         * @method _restoreTrashItems
-         */
-        _restoreTrashItems: function () {
-            var selectedTrashItems = this.get(&#x27;container&#x27;).all(&#x27;.ez-trashitem-box:checked&#x27;),
-                trashItems = [];
-
-            selectedTrashItems.each(function (selectedTrashItem) {
-                Y.Array.some(this.get(&#x27;trashItems&#x27;), function (trashItem) {
-                    if (selectedTrashItem.getAttribute(&#x27;value&#x27;) === trashItem.item.get(&#x27;id&#x27;)) {
-                        trashItems.push(trashItem.item);
-                        return true;
-                    }
-                });
-            }, this);
-
-            /**
-             * Fired to restore the selected items
-             * @event restoreItems
-             */
-            this.fire(&#x27;restoreItems&#x27;, {trashItems: trashItems});
-        },
-
-        /**
-         * Updates the TrashBar buttons
-         *
-         * @private
-         * @method _updateTrashBarButtons
-         */
-        _updateTrashBarButtons: function () {
-            this._updateDisableTrashBarButton(
-                &#x27;restoreTrashItems&#x27;,
-                this.get(&#x27;container&#x27;).one(&#x27;.ez-trashitem-box:checked&#x27;) === null
-            );
-        },
-
-        /**
-         * Update the disable status on a given button of the trashBar
-         *
-         * @private
-         * @method _updateDisableTrashBarButton
-         * @param {String} actionId of the button
-         * @param {Boolean} isDisabled
-         */
-        _updateDisableTrashBarButton: function (actionId, isDisabled) {
-            this.get(&#x27;trashBar&#x27;).getAction(actionId).set(&#x27;disabled&#x27;, isDisabled);
         },
 
         destructor: function () {

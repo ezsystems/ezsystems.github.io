@@ -498,33 +498,9 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             this.on(&#x27;*:sendToTrashAction&#x27;, this._sendContentToTrashConfirmBox);
             this.on(&#x27;*:moveAction&#x27;, this._selectLocation);
             this.on(&#x27;*:translateContent&#x27;, this._translateContent);
-            this.on(&#x27;*:sortUpdate&#x27;, this._updateSorting);
-            this.on(&#x27;*:updatePriority&#x27;, this._updatePriority);
             this.after(&#x27;*:requestChange&#x27;, this._setLanguageCode);
 
             this._setLanguageCode();
-        },
-
-        /**
-         * Update the priority of the location.
-         *
-         * @protected
-         * @method _updatePriority
-         * @param {Object} e the event facade of the sortUpdate event
-         */
-        _updatePriority: function (e) {
-            var loadOptions = {api: this.get(&#x27;capi&#x27;)};
-
-            e.location.updatePriority(loadOptions, e.priority, Y.bind(function (error, response) {
-                if (error) {
-                    this._notify(
-                        &#x27;An error occurred when updating the priority&#x27;,
-                        &#x27;update-priority-&#x27; + e.location.get(&#x27;locationId&#x27;),
-                        &#x27;error&#x27;,
-                        0
-                    );
-                }
-            }, this));
         },
 
         /**
@@ -730,45 +706,6 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             app.navigate(
                 app.routeUri(routeName, routeParams)
             );
-        },
-
-        /**
-         * Update the sort methods of the location
-         *
-         * @method _updateSorting
-         * @protected
-         * @param {EventFacade} e
-         */
-        _updateSorting: function (e) {
-            var loadOptions = {api: this.get(&#x27;capi&#x27;)},
-                location = this.get(&#x27;location&#x27;),
-                notificationIdentifier = &#x27;sort-change-&#x27; + e.sortType + &#x27;-&#x27; + e.sortOrder;
-
-            this._notify(
-                &#x27;Updating the sub items sort method&#x27;,
-                notificationIdentifier,
-                &#x27;started&#x27;,
-                5
-            );
-
-            location.updateSorting(loadOptions, e.sortType, e.sortOrder, Y.bind(function (error, response) {
-                if (!error) {
-                    this._notify(
-                        &#x27;The sub items sort method has been correctly updated&#x27;,
-                        notificationIdentifier,
-                        &#x27;done&#x27;,
-                        5
-                    );
-
-                } else {
-                    this._notify(
-                        &#x27;An error occured while updating the sub items sort method:&#x27; + error,
-                        notificationIdentifier,
-                        &#x27;error&#x27;,
-                        0
-                    );
-                }
-            }, this));
         },
 
         /**
