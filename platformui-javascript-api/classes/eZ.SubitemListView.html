@@ -215,6 +215,8 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
+                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -394,6 +396,8 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
+                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -469,11 +473,11 @@
 <div class="box meta">
 
         <div class="extends">
-            Extends <a href="../classes/eZ.TemplateBasedView.html" class="crosslink">eZ.TemplateBasedView</a>
+            Extends <a href="../classes/eZ.SubitemBaseView.html" class="crosslink">eZ.SubitemBaseView</a>
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l21"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:21</code></a>
+            Defined in: <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l21"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:21</code></a>
         </div>
 
             Module: <a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a>
@@ -503,7 +507,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l21"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:21</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l21"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:21</code></a>
         </p>
 
 
@@ -1037,10 +1041,19 @@
                                 <a href="#attr_container">container</a>
                             </li>
                             <li class="index-item attr inherited">
+                                <a href="#attr_content">content</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_contentType">contentType</a>
+                            </li>
+                            <li class="index-item attr inherited">
                                 <a href="#attr_destroyed">destroyed</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_editingPriority">editingPriority</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_identifier">identifier</a>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_initialized">initialized</a>
@@ -1048,8 +1061,11 @@
                             <li class="index-item attr">
                                 <a href="#attr_limit">limit</a>
                             </li>
-                            <li class="index-item attr">
+                            <li class="index-item attr inherited">
                                 <a href="#attr_location">location</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_name">name</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_offset">offset</a>
@@ -1589,7 +1605,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l411"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:411</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l415"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:415</code></a>
         </p>
 
 
@@ -1872,7 +1888,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l175"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:175</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l179"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:179</code></a>
         </p>
 
 
@@ -1930,7 +1946,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l190"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:190</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l194"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:194</code></a>
         </p>
 
 
@@ -1996,7 +2012,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l229"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:229</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l233"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:233</code></a>
         </p>
 
 
@@ -2245,7 +2261,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l428"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:428</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l432"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:432</code></a>
         </p>
 
 
@@ -2866,7 +2882,7 @@ implementations which need to fast-track publish for performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l108"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:108</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l112"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:112</code></a>
         </p>
 
 
@@ -2924,7 +2940,7 @@ implementations which need to fast-track publish for performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l364"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:364</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l368"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:368</code></a>
         </p>
 
 
@@ -3084,7 +3100,7 @@ correct template
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l342"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:342</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l346"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:346</code></a>
         </p>
 
 
@@ -3147,7 +3163,7 @@ correct template
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l353"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:353</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l357"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:357</code></a>
         </p>
 
 
@@ -3291,7 +3307,7 @@ where the calling method has already obtained the config from state.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l277"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:277</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l281"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:281</code></a>
         </p>
 
 
@@ -3379,7 +3395,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l120"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:120</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:124</code></a>
         </p>
 
 
@@ -3411,7 +3427,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l150"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:150</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l154"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:154</code></a>
         </p>
 
 
@@ -3443,7 +3459,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:130</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l134"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:134</code></a>
         </p>
 
 
@@ -3475,7 +3491,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l140"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:140</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l144"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:144</code></a>
         </p>
 
 
@@ -3513,7 +3529,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l91"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:91</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:95</code></a>
         </p>
 
 
@@ -3565,7 +3581,7 @@ link is not disabled</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l378"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:378</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l382"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:382</code></a>
         </p>
 
 
@@ -3674,7 +3690,7 @@ link is not disabled</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l203"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:203</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l207"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:207</code></a>
         </p>
 
 
@@ -3732,7 +3748,7 @@ link is not disabled</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l216"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:216</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l220"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:220</code></a>
         </p>
 
 
@@ -3792,7 +3808,7 @@ link is not disabled</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l291"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:291</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l295"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:295</code></a>
         </p>
 
 
@@ -4167,7 +4183,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l400"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:400</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l404"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:404</code></a>
         </p>
 
 
@@ -4209,7 +4225,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l389"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:389</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l393"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:393</code></a>
         </p>
 
 
@@ -4718,7 +4734,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:60</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l62"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:62</code></a>
         </p>
 
 
@@ -4756,7 +4772,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l248"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:248</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l252"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:252</code></a>
         </p>
 
 
@@ -4812,7 +4828,7 @@ Also fill back priority input with the current sub item priority.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l262"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:262</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l266"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:266</code></a>
         </p>
 
 
@@ -5292,7 +5308,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l304"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:304</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l308"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:308</code></a>
         </p>
 
 
@@ -5442,7 +5458,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l81"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:81</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l85"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:85</code></a>
         </p>
 
 
@@ -5474,7 +5490,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l71"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:71</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:75</code></a>
         </p>
 
 
@@ -5512,7 +5528,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l324"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:324</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l328"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:328</code></a>
         </p>
 
 
@@ -8604,6 +8620,66 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
+                    <div id="attr_content" class="attr item inherited">
+                        <a name="config_content"></a> 
+                        <h3 class="name"><code>content</code></h3>
+                        <span class="type">Y.eZ.Content</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag required">required</span>
+                    
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.SubitemBaseView.html#attr_content">eZ.SubitemBaseView</a>:
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitembaseview.js.html#l56"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitembaseview.js:56</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The content associated with the current location</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="attr_contentType" class="attr item inherited">
+                        <a name="config_contentType"></a> 
+                        <h3 class="name"><code>contentType</code></h3>
+                        <span class="type">Y.eZ.ContentType</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag required">required</span>
+                    
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.SubitemBaseView.html#attr_contentType">eZ.SubitemBaseView</a>:
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitembaseview.js.html#l68"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitembaseview.js:68</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The content type of the content at the current location</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
                     <div id="attr_destroyed" class="attr item inherited">
                         <a name="config_destroyed"></a> 
                         <h3 class="name"><code>destroyed</code></h3>
@@ -8650,7 +8726,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l504"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:504</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l508"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:508</code></a>
                             </p>
                     
                     
@@ -8662,6 +8738,36 @@ How this template gets used is entirely up to you and your custom
                         </div>
                     
                             <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="attr_identifier" class="attr item inherited">
+                        <a name="config_identifier"></a> 
+                        <h3 class="name"><code>identifier</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag readonly">readonly</span>
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.SubitemBaseView.html#attr_identifier">eZ.SubitemBaseView</a>:
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitembaseview.js.html#l24"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitembaseview.js:24</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Identifier of the subitem view.</p>
+                    
+                        </div>
+                    
                     
                     
                     </div>
@@ -8711,7 +8817,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l462"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:462</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l466"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:466</code></a>
                             </p>
                     
                     
@@ -8740,9 +8846,12 @@ How this template gets used is entirely up to you and your custom
                     
                     
                         <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l485"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:485</code></a>
+                                <p>Inherited from
+                                <a href="../classes/eZ.SubitemBaseView.html#attr_location">
+                                    eZ.SubitemBaseView
+                                </a>
+                                but overwritten in
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l489"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:489</code></a>
                             </p>
                     
                     
@@ -8750,6 +8859,36 @@ How this template gets used is entirely up to you and your custom
                     
                         <div class="description">
                             <p>The location being displayed</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="attr_name" class="attr item inherited">
+                        <a name="config_name"></a> 
+                        <h3 class="name"><code>name</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag readonly">readonly</span>
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.SubitemBaseView.html#attr_name">eZ.SubitemBaseView</a>:
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitembaseview.js.html#l34"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitembaseview.js:34</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Name of the subitem view</p>
                     
                         </div>
                     
@@ -8771,7 +8910,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l474"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:474</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l478"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:478</code></a>
                             </p>
                     
                     
@@ -8801,7 +8940,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-subitemlistview.js.html#l496"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemlistview.js:496</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l500"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:500</code></a>
                             </p>
                     
                     
