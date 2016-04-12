@@ -1371,6 +1371,20 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/subitem/ez-subitemgridview.js": {
+            "name": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "modules": {
+                "ez-subitemgridview": 1
+            },
+            "classes": {
+                "eZ.SubitemGridItemView": 1,
+                "eZ.SubitemGridView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/subitem/ez-subitemlistview.js": {
             "name": "Resources/public/js/views/subitem/ez-subitemlistview.js",
             "modules": {
@@ -4273,6 +4287,23 @@
             "file": "Resources/public/js/views/subitem/ez-subitembaseview.js",
             "line": 14,
             "description": "Provides the subitem base view."
+        },
+        "ez-subitemgridview": {
+            "name": "ez-subitemgridview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.SubitemGridItemView": 1,
+                "eZ.SubitemGridView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 69,
+            "description": "Provides the subitem grid view."
         },
         "ez-subitemlistview": {
             "name": "ez-subitemlistview",
@@ -7351,6 +7382,40 @@
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
+        "eZ.SubitemGridItemView": {
+            "name": "eZ.SubitemGridItemView",
+            "shortname": "SubitemGridItemView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-subitemgridview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 17,
+            "description": "The subitem grid item view. Note: This component is **private** as this\npart will shortly change and will be replaced by the concept of content\ncards.",
+            "access": "private",
+            "tagname": "",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
+        "eZ.SubitemGridView": {
+            "name": "eZ.SubitemGridView",
+            "shortname": "eZ.SubitemGridView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-subitemgridview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 69,
+            "description": "The subitem grid view.",
+            "is_constructor": 1,
+            "extends": "eZ.SubitemBaseView"
+        },
         "eZ.SubitemListView": {
             "name": "eZ.SubitemListView",
             "shortname": "eZ.SubitemListView",
@@ -8321,7 +8386,7 @@
             "namespace": "eZ",
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
             "line": 14,
-            "description": "Views extension providing the concept of asynchronously rendered view.\nAn asynchronous view is first rendered in a *loading state*, then fires\nan event to get the missing data and when it gets them, it is rerendered.\nThe loading errors are also handled and such a view can also have a\n*retry* button. When a view is extended with this extension, its\ninitializer method should set the required properties `_fireMethod` and\noptionally the `_watchAttribute` to subscribe to the corresponding change\nevent."
+            "description": "Views extension providing the concept of asynchronously rendered view.\nAn asynchronous view is first rendered in a *loading state*, then fires\nan event to get the missing data and when it gets them, it is rerendered.\nThe loading errors are also handled and such a view can also have a\n*retry* button. When a view is extended with this extension, its\ninitializer method should set the required properties `_fireMethod` and\noptionally:\n* the `_watchAttribute` to subscribe to the corresponding change event.\n* the `_errorHandlingMethod` to customize the error handling, otherwise\nthe view is just rerendered in case of error"
         },
         "eZ.Expandable": {
             "name": "eZ.Expandable",
@@ -21587,6 +21652,260 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 42,
+            "description": "The content type of the content being displayed",
+            "itemtype": "attribute",
+            "name": "contentType",
+            "type": "{eZ.ContentType}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgridview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 50,
+            "description": "The location of the content item being displayed",
+            "itemtype": "attribute",
+            "name": "location",
+            "type": "{eZ.Location}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgridview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 58,
+            "description": "The content being displayed",
+            "itemtype": "attribute",
+            "name": "content",
+            "type": "{eZ.Content}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgridview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 90,
+            "description": "Holds the grid item view instances for the current grid.",
+            "itemtype": "property",
+            "name": "_gridItemViews",
+            "access": "protected",
+            "tagname": "",
+            "type": "Array<SubitemGridItemView>",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 119,
+            "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
+            "itemtype": "method",
+            "name": "_handleError",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 141,
+            "description": "`activeChange` handler. Set the view in loading mode and fire the\nfirst location search event if the subitems are not already filled.",
+            "itemtype": "method",
+            "name": "_prepareInitialLoad",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 154,
+            "description": "Updates the pagination displayed to the editor.",
+            "itemtype": "method",
+            "name": "_uiUpdatePagination",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 168,
+            "description": "Counts the number of loaded subitems.",
+            "itemtype": "method",
+            "name": "_countLoadedSubitems",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 179,
+            "description": "Returns the load more button",
+            "itemtype": "method",
+            "name": "_getLoadMore",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Y.Node"
+            },
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 190,
+            "description": "Disables the load more button",
+            "itemtype": "method",
+            "name": "_disableLoadMore",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 200,
+            "description": "Enables the load more button",
+            "itemtype": "method",
+            "name": "_enableLoadMore",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 210,
+            "description": "Updates the display count with the number of currently loaded\nsubitems.",
+            "itemtype": "method",
+            "name": "_updateDisplayedCount",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 223,
+            "description": "Updates the more count in the load more button.",
+            "itemtype": "method",
+            "name": "_updateMoreCount",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 241,
+            "description": "Sets the UI in the loading the state",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_uiLoading",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 251,
+            "description": "Removes the loading state of the UI",
+            "itemtype": "method",
+            "name": "_uiEndLoading",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 275,
+            "description": "Appends a rendred grid item view for the last loaded subitem.",
+            "itemtype": "method",
+            "name": "_appendGridItem",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 294,
+            "description": "`tap` event handler on the load more button.",
+            "itemtype": "method",
+            "name": "_loadMore",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 305,
+            "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
+            "itemtype": "method",
+            "name": "_fireLocationSearch",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 342,
+            "description": "The max number of the Locations to display per 'show more'\nsession",
+            "itemtype": "attribute",
+            "name": "limit",
+            "default": "10",
+            "type": "Number",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 354,
+            "description": "The offset in the Location list. A value below zero means no\nloading has not been made yet.",
+            "itemtype": "attribute",
+            "name": "offset",
+            "default": "minus the limit",
+            "type": "Number",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 368,
+            "description": "The subitems list.",
+            "itemtype": "attribute",
+            "name": "subitems",
+            "type": "Array of {Object} array containing location structs",
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
             "line": 62,
             "description": "Refreshes the subitem list",
@@ -22088,18 +22407,6 @@
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
             "line": 489,
-            "description": "The location being displayed",
-            "itemtype": "attribute",
-            "name": "location",
-            "type": "{eZ.Location}",
-            "writeonce": "",
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 500,
             "description": "The subitems list.",
             "itemtype": "attribute",
             "name": "subitems",
@@ -22110,7 +22417,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 508,
+            "line": 497,
             "description": "Boolean to check if a subitem priority is currently selected.",
             "itemtype": "attribute",
             "name": "editingPriority",
@@ -29162,7 +29469,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-subitemboxview.js",
-            "line": 269,
+            "line": 276,
             "description": "The identifier of the currently displayed subitem view\nimplementation.",
             "itemtype": "attribute",
             "name": "subitemViewIdentifier",
@@ -33229,7 +33536,7 @@
         },
         {
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
-            "line": 29,
+            "line": 31,
             "description": "Holds the method to call to fire the load event.",
             "itemtype": "property",
             "name": "_fireMethod",
@@ -33243,7 +33550,21 @@
         },
         {
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
-            "line": 38,
+            "line": 40,
+            "description": "Holds the method to call when an error occurred. By default, it's\n`render`.",
+            "itemtype": "property",
+            "name": "_errorHandlingMethod",
+            "type": "{Function}",
+            "access": "protected",
+            "tagname": "",
+            "default": "this.render",
+            "class": "eZ.AsynchronousView",
+            "module": "ez-expandable",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/extensions/ez-asynchronousview.js",
+            "line": 50,
             "description": "Holds the attribute name which stores the data needed to render the\nview. If provided, the asynchronous view will subscribe to the\ncorresponding change event.",
             "itemtype": "property",
             "name": "_watchAttribute",
@@ -33256,7 +33577,7 @@
         },
         {
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
-            "line": 72,
+            "line": 88,
             "description": "Tap event handler for the retry button. It resets the attribute which\nname is stored in the `_watchAttribute` property and the\n`loadingError` attribute and fires the loading event with the method\nin `_fireMethod`.",
             "itemtype": "method",
             "name": "_retryLoading",
@@ -33275,7 +33596,7 @@
         },
         {
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
-            "line": 95,
+            "line": 111,
             "description": "Loading error state",
             "itemtype": "attribute",
             "name": "loadingError",

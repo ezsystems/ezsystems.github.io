@@ -217,6 +217,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,6 +400,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -489,8 +492,12 @@ an event to get the missing data and when it gets them, it is rerendered.
 The loading errors are also handled and such a view can also have a
 <em>retry</em> button. When a view is extended with this extension, its
 initializer method should set the required properties <code>_fireMethod</code> and
-optionally the <code>_watchAttribute</code> to subscribe to the corresponding change
-event.</p>
+optionally:</p>
+<ul>
+<li>the <code>_watchAttribute</code> to subscribe to the corresponding change event.</li>
+<li>the <code>_errorHandlingMethod</code> to customize the error handling, otherwise
+the view is just rerendered in case of error</li>
+</ul>
 
 </div>
 
@@ -523,6 +530,10 @@ event.</p>
                     <h3>Properties</h3>
 
                     <ul class="index-list properties">
+                            <li class="index-item property protected">
+                                <a href="#property__errorHandlingMethod">_errorHandlingMethod</a>
+
+                            </li>
                             <li class="index-item property protected">
                                 <a href="#property__fireMethod">_fireMethod</a>
 
@@ -571,7 +582,7 @@ event.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l72"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:72</code></a>
+        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l88"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:88</code></a>
         </p>
 
 
@@ -611,6 +622,34 @@ in <code>_fireMethod</code>.</p>
             <div id="properties" class="api-class-tabpanel">
                 <h2 class="off-left">Properties</h2>
 
+<div id="property__errorHandlingMethod" class="property item protected">
+    <h3 class="name"><code>_errorHandlingMethod</code></h3>
+    <span class="type">Function</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l40"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:40</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Holds the method to call when an error occurred. By default, it's
+<code>render</code>.</p>
+
+    </div>
+
+        <p><strong>Default:</strong> this.render</p>
+
+
+</div>
 <div id="property__fireMethod" class="property item protected">
     <h3 class="name"><code>_fireMethod</code></h3>
     <span class="type">Function</span>
@@ -623,7 +662,7 @@ in <code>_fireMethod</code>.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l29"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:29</code></a>
+        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l31"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:31</code></a>
         </p>
 
 
@@ -649,7 +688,7 @@ in <code>_fireMethod</code>.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l38"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:38</code></a>
+        <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l50"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:50</code></a>
         </p>
 
 
@@ -685,7 +724,7 @@ corresponding change event.</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:95</code></a>
+                            <a href="../files/Resources_public_js_extensions_ez-asynchronousview.js.html#l111"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-asynchronousview.js:111</code></a>
                             </p>
                     
                     

@@ -180,6 +180,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.StudioPresentationView",
         "eZ.SubitemBaseView",
         "eZ.SubitemBoxView",
+        "eZ.SubitemGridItemView",
+        "eZ.SubitemGridView",
         "eZ.SubitemListView",
         "eZ.Tabs",
         "eZ.TemplateBasedView",
@@ -359,6 +361,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-studiopresentationview",
         "ez-subitembaseview",
         "ez-subitemboxview",
+        "ez-subitemgridview",
         "ez-subitemlistview",
         "ez-tabs",
         "ez-templatebasedview",
@@ -1113,6 +1116,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-subitemboxview",
             "name": "ez-subitemboxview",
             "description": "Provides the subitem box view."
+        },
+        {
+            "displayName": "ez-subitemgridview",
+            "name": "ez-subitemgridview",
+            "description": "Provides the subitem grid view."
         },
         {
             "displayName": "ez-subitemlistview",
