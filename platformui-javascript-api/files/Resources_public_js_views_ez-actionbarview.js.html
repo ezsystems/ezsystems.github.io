@@ -509,7 +509,7 @@ YUI.add(&#x27;ez-actionbarview&#x27;, function (Y) {
              */
             actionsList: {
                 valueFn: function () {
-                    return [
+                    var actionList = [
                         new Y.eZ.ButtonActionView({
                             actionId: &quot;minimizeActionBar&quot;,
                             disabled: false,
@@ -549,13 +549,30 @@ YUI.add(&#x27;ez-actionbarview&#x27;, function (Y) {
                             location: this.get(&#x27;location&#x27;),
                             content: this.get(&#x27;content&#x27;)
                         }),
-                        new Y.eZ.ButtonActionView({
-                            actionId: &#x27;sendToTrash&#x27;,
-                            disabled: false,
-                            label: &#x27;Send to Trash&#x27;,
-                            priority: 10
-                        }),
                     ];
+
+                    if ( !this.get(&#x27;contentType&#x27;).hasFieldType(&#x27;ezuser&#x27;) ) {
+                        actionList.push(
+                            new Y.eZ.ButtonActionView({
+                                actionId: &#x27;sendToTrash&#x27;,
+                                disabled: false,
+                                label: &#x27;Send to Trash&#x27;,
+                                priority: 10
+                            })
+                        );
+                    }
+                    else {
+                        actionList.push(
+                            new Y.eZ.ButtonActionView({
+                                actionId: &#x27;deleteContent&#x27;,
+                                disabled: false,
+                                label: &#x27;Delete&#x27;,
+                                priority: 10
+                            })
+                        );
+                    }
+
+                    return actionList;
                 }
             },
 

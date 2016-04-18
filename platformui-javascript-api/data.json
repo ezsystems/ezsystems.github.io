@@ -9254,7 +9254,7 @@
         },
         {
             "file": "Resources/public/js/apps/plugins/ez-updatetreeplugin.js",
-            "line": 31,
+            "line": 32,
             "description": "Clear the tree if it is already loaded",
             "itemtype": "method",
             "name": "_clearTree",
@@ -19542,7 +19542,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 37,
+            "line": 38,
             "description": "Update the priority of the location.",
             "access": "protected",
             "tagname": "",
@@ -19561,7 +19561,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 59,
+            "line": 60,
             "description": "editAction event handler, makes the application navigate to edit the\ncontent available in the event facade",
             "itemtype": "method",
             "name": "_editContent",
@@ -19580,7 +19580,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 78,
+            "line": 79,
             "description": "`sendToTrashAction` event handler,\nit asks confirmation to the user before sending the location to the trash.",
             "itemtype": "method",
             "name": "_sendContentToTrashConfirmBox",
@@ -19599,7 +19599,26 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 98,
+            "line": 99,
+            "description": "`deleteContentAction` event handler,\nit asks confirmation to the user before delete the content item.",
+            "itemtype": "method",
+            "name": "_confirmDeleteContent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade of the deleteAction event",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 117,
             "description": "moveAction event handler, launch the universal discovery widget\nto choose a location to move the content",
             "itemtype": "method",
             "name": "_selectLocation",
@@ -19618,7 +19637,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 118,
+            "line": 137,
             "description": "Sends location to trash, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_sendToTrash",
@@ -19630,7 +19649,19 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 142,
+            "line": 161,
+            "description": "Deletes the the content item, triggering loading parent location and notifications",
+            "itemtype": "method",
+            "name": "_deleteContent",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 182,
             "description": "Send to trash callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterSendToTrashCallback",
@@ -19659,7 +19690,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 174,
+            "line": 214,
             "description": "Fired when the content is sent to trash",
             "itemtype": "event",
             "name": "sentToTrash",
@@ -19676,7 +19707,53 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 188,
+            "line": 228,
+            "description": "Delete content item callback triggering notifications and making app to navigate to parent location",
+            "itemtype": "method",
+            "name": "_afterDeleteCallback",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "parentLocation",
+                    "description": "the parent location to which app will navigate to",
+                    "type": "eZ.Location"
+                },
+                {
+                    "name": "content",
+                    "description": "the content item that has been deleted",
+                    "type": "eZ.Content"
+                },
+                {
+                    "name": "error",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 258,
+            "description": "Fired when the content has been deleted",
+            "itemtype": "event",
+            "name": "deletedContent",
+            "params": [
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "eZ.Content"
+                }
+            ],
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 272,
             "description": "Move the content to the selected location",
             "itemtype": "method",
             "name": "_moveContent",
@@ -19695,7 +19772,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 221,
+            "line": 305,
             "description": "Fired when the content is moved",
             "itemtype": "event",
             "name": "movedContent",
@@ -19717,7 +19794,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 238,
+            "line": 322,
             "description": "translate event handler, makes the application to navigate to edit content available\nin the facade with given language and base language",
             "itemtype": "method",
             "name": "_translateContent",
@@ -19736,7 +19813,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 264,
+            "line": 348,
             "description": "Update the sort methods of the location",
             "itemtype": "method",
             "name": "_updateSorting",
@@ -19755,7 +19832,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 303,
+            "line": 387,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -19789,7 +19866,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 324,
+            "line": 408,
             "description": "Loads the location, the content and the path for the location id\navailable in the request and calls the next callback once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -19808,7 +19885,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 393,
+            "line": 477,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -19820,7 +19897,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 415,
+            "line": 499,
             "description": "The viewed location",
             "itemtype": "attribute",
             "name": "location",
@@ -19831,7 +19908,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 426,
+            "line": 510,
             "description": "The content associated with the location",
             "itemtype": "attribute",
             "name": "content",
@@ -19842,7 +19919,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 437,
+            "line": 521,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -19853,7 +19930,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 448,
+            "line": 532,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location sorted by location depth",
             "itemtype": "attribute",
             "name": "path",
@@ -19864,7 +19941,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 459,
+            "line": 543,
             "description": "The language code in which the content is being viewed",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -24571,7 +24648,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-actionbarview.js",
-            "line": 84,
+            "line": 101,
             "description": "The location being rendered",
             "itemtype": "attribute",
             "name": "location",
@@ -24583,7 +24660,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-actionbarview.js",
-            "line": 95,
+            "line": 112,
             "description": "The content associated the current location",
             "itemtype": "attribute",
             "name": "content",
@@ -24595,7 +24672,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-actionbarview.js",
-            "line": 106,
+            "line": 123,
             "description": "The content type of the content at the current location",
             "itemtype": "attribute",
             "name": "contentType",
@@ -31713,7 +31790,36 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 329,
+            "line": 316,
+            "description": "Deletes the content",
+            "itemtype": "method",
+            "name": "delete",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 344,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -31725,7 +31831,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 341,
+            "line": 356,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -31737,7 +31843,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 352,
+            "line": 367,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
