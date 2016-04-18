@@ -12724,7 +12724,7 @@
             "params": [
                 {
                     "name": "localizedTimestamp",
-                    "description": "",
+                    "description": "in millisecond",
                     "type": "Number"
                 }
             ],
@@ -12754,7 +12754,29 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
-            "line": 302,
+            "line": 304,
+            "description": "Returns the timestamp value of a given time string\n\nNote: this method should be refactored as part of EZP-23925",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_parseTime",
+            "params": [
+                {
+                    "name": "timeStr",
+                    "description": "time in 24h string format hh:mm:ss"
+                }
+            ],
+            "return": {
+                "description": "Timestamp in seconds",
+                "type": "Number"
+            },
+            "class": "eZ.DateAndTimeEditView",
+            "module": "ez-dateandtime-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
+            "line": 333,
             "description": "Whether the field is empty or not",
             "access": "protected",
             "tagname": "",
@@ -12770,7 +12792,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
-            "line": 316,
+            "line": 347,
             "description": "The number of the validate error",
             "itemtype": "attribute",
             "name": "validateError",
