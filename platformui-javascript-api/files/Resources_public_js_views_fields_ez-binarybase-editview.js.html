@@ -594,7 +594,7 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
             var file = this.get(&#x27;file&#x27;),
                 fieldValue;
 
-            if ( !this.get(&#x27;updated&#x27;) ) {
+            if ( !this.get(&#x27;updated&#x27;) &amp;&amp; !this._isCreatingTranslation()) {
                 return undefined;
             }
 
@@ -609,6 +609,19 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
                 fieldValue.data = file.data;
             }
             return this._completeFieldValue(fieldValue);
+        },
+
+        /**
+         * Check if a new translation is being created.
+         *
+         * @method _isCreatingTranslation
+         * @protected
+         * @return {Boolean}
+         */
+        _isCreatingTranslation: function () {
+            var currentVersion = this.get(&#x27;content&#x27;).get(&#x27;currentVersion&#x27;);
+
+            return currentVersion.getTranslationsList().indexOf(this.get(&#x27;languageCode&#x27;)) === -1;
         },
 
         /**
