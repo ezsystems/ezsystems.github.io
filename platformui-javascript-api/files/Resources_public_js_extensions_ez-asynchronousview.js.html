@@ -215,10 +215,6 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
-                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
-                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,9 +394,6 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
-                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
-                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -496,10 +489,8 @@ YUI.add(&#x27;ez-asynchronousview&#x27;, function (Y) {
      * The loading errors are also handled and such a view can also have a
      * *retry* button. When a view is extended with this extension, its
      * initializer method should set the required properties &#x60;_fireMethod&#x60; and
-     * optionally:
-     * * the &#x60;_watchAttribute&#x60; to subscribe to the corresponding change event.
-     * * the &#x60;_errorHandlingMethod&#x60; to customize the error handling, otherwise
-     * the view is just rerendered in case of error
+     * optionally the &#x60;_watchAttribute&#x60; to subscribe to the corresponding change
+     * event.
      *
      * @namespace eZ
      * @class AsynchronousView
@@ -513,16 +504,6 @@ YUI.add(&#x27;ez-asynchronousview&#x27;, function (Y) {
          * @required
          * @type {Function}
          * @protected
-         */
-
-        /**
-         * Holds the method to call when an error occurred. By default, it&#x27;s
-         * &#x60;render&#x60;.
-         *
-         * @property _errorHandlingMethod
-         * @type {Function}
-         * @protected
-         * @default this.render
          */
 
         /**
@@ -542,10 +523,6 @@ YUI.add(&#x27;ez-asynchronousview&#x27;, function (Y) {
         },
 
         initializer: function () {
-            if ( !this._errorHandlingMethod ) {
-                this._errorHandlingMethod = this.render;
-            }
-
             this.after(&#x27;activeChange&#x27;, function (e) {
                 if ( this.get(&#x27;active&#x27;) ) {
                     this._fireMethod(e);
@@ -553,7 +530,7 @@ YUI.add(&#x27;ez-asynchronousview&#x27;, function (Y) {
             });
 
             this.after(&#x27;loadingErrorChange&#x27;, function (e) {
-                this._errorHandlingMethod();
+                this.render();
             });
 
             if ( this._watchAttribute ) {

@@ -215,10 +215,6 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
-                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
-                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,9 +394,6 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
-                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
-                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -529,6 +522,15 @@ YUI.add(&#x27;ez-selection-editview&#x27;, function (Y) {
              * @type eZ.SelectionFilterView
              */
             this._selectionFilter = null;
+
+            /**
+             * Holds the clickoutside event handle.
+             *
+             * @property _clickoutsideHandler
+             * @protected
+             * @type {EventHandle}
+             */
+            this._clickoutsideHandler = null;
             this._useStandardFieldDefinitionDescription = false;
 
             this.after(&#x27;activeChange&#x27;, function (e) {
@@ -558,6 +560,18 @@ YUI.add(&#x27;ez-selection-editview&#x27;, function (Y) {
         },
 
         /**
+         * Recreates the selection filter when the view is rerendered.
+         *
+         * @method _afterActiveReRender
+         * @protected
+         */
+        _afterActiveReRender: function () {
+            this._selectionFilter.destroy();
+            this._clickoutsideHandler.detach();
+            this._initSelectionFilter();
+        },
+
+        /**
          * Initializes and the selection filter view for the current
          * field/fieldDefinition. Once created, it is render right away.
          *
@@ -565,8 +579,6 @@ YUI.add(&#x27;ez-selection-editview&#x27;, function (Y) {
          * @protected
          */
         _initSelectionFilter: function () {
-            var container = this.get(&#x27;container&#x27;);
-
             this._selectionFilter = this._getSelectionFilter();
 
             this._selectionFilter.on(&#x27;select&#x27;, Y.bind(function (e) {
@@ -588,14 +600,12 @@ YUI.add(&#x27;ez-selection-editview&#x27;, function (Y) {
             }, this));
 
             this._selectionFilter.render();
-
-            this._attachedViewEvents.push(
-                container.one(&#x27;.ez-selection-input-ui&#x27;).on(
-                    &#x27;clickoutside&#x27;, Y.bind(function (e) {
-                        this.set(&#x27;showSelectionUI&#x27;, false);
-                    }, this)
-                )
+            this._clickoutsideHandler = this.get(&#x27;container&#x27;).one(&#x27;.ez-selection-input-ui&#x27;).on(
+                &#x27;clickoutside&#x27;, Y.bind(function (e) {
+                    this.set(&#x27;showSelectionUI&#x27;, false);
+                }, this)
             );
+            this._attachedViewEvents.push(this._clickoutsideHandler);
         },
 
         /**

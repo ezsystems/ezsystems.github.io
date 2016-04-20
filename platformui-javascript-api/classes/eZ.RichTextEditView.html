@@ -215,10 +215,6 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
-                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
-                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,9 +394,6 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
-                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
-                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -561,6 +554,10 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__addOutOfOrder">_addOutOfOrder</a>
+
+                            </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__afterActiveReRender">_afterActiveReRender</a>
 
                             </li>
                             <li class="index-item method protected inherited">
@@ -1382,6 +1379,42 @@ For example, if:
 
 
 </div>
+<div id="method__afterActiveReRender" class="method item protected">
+    <h3 class="name"><code>_afterActiveReRender</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="../classes/eZ.FieldEditView.html#method__afterActiveReRender">
+                eZ.FieldEditView
+            </a>
+            but overwritten in
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:60</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Makes sure the editor is destroyed and re-initialized as if the view
+just becomes active.</p>
+
+    </div>
+
+
+
+
+</div>
 <div id="method__afterContainerChange" class="method item protected inherited">
     <h3 class="name"><code>_afterContainerChange</code></h3>
 
@@ -1599,7 +1632,7 @@ this class for iteration performance reasons.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__checkValidityDescription">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l145"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:145</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l164"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:164</code></a>
         </p>
 
 
@@ -1926,7 +1959,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__errorUI">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l109"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:109</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l128"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:128</code></a>
         </p>
 
 
@@ -2179,7 +2212,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l174"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:174</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l186"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:186</code></a>
         </p>
 
 
@@ -2728,7 +2761,7 @@ cached value.
         <span class="paren">()</span>
 
         <span class="returns-inline">
-            <span class="type"></span>
+            <span class="type">Object</span>
         </span>
 
 
@@ -2744,7 +2777,7 @@ cached value.
                 eZ.FieldEditView
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l296"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:296</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l308"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:308</code></a>
         </p>
 
 
@@ -2753,7 +2786,8 @@ cached value.
 
     <div class="description">
         <p>Returns the field value suitable for the REST API based on the
-current input.</p>
+current input. Also fills the <code>xhtml5edit</code> property so this value can
+also be used when switching language.</p>
 
     </div>
 
@@ -2762,8 +2796,7 @@ current input.</p>
             <h4>Returns:</h4>
 
             <div class="returns-description">
-                    <p>String</p>
-
+                        <span class="type">Object</span>:
             </div>
         </div>
 
@@ -2856,7 +2889,7 @@ implementations which need to fast-track publish for performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l245"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:245</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l257"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:257</code></a>
         </p>
 
 
@@ -2899,7 +2932,7 @@ fragment only contains the content of the root <section> element.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:101</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l113"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:113</code></a>
         </p>
 
 
@@ -3167,7 +3200,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l308"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:308</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l326"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:326</code></a>
         </p>
 
 
@@ -3272,7 +3305,7 @@ EditorContentProcessors.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__hideDescription">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l198"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:198</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l217"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:217</code></a>
         </p>
 
 
@@ -3554,7 +3587,7 @@ either through the constructor.ATTRS property, or explicitly passed in.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l136"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:136</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l148"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:148</code></a>
         </p>
 
 
@@ -3678,7 +3711,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l213"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:213</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l225"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:225</code></a>
         </p>
 
 
@@ -3790,7 +3823,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__isTouch">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l330"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:330</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l349"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:349</code></a>
         </p>
 
 
@@ -4264,7 +4297,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l126"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:126</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l138"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:138</code></a>
         </p>
 
 
@@ -4299,7 +4332,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l273"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:273</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l285"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:285</code></a>
         </p>
 
 
@@ -4769,7 +4802,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__setErrorMessage">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l134"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:134</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l153"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:153</code></a>
         </p>
 
 
@@ -4822,7 +4855,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l77"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:77</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l89"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:89</code></a>
         </p>
 
 
@@ -4971,7 +5004,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__setTooltipPosition">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l175"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:175</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l194"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:194</code></a>
         </p>
 
 
@@ -5003,7 +5036,7 @@ The tooltip position is modified by it's height and is relative to the field inp
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__showDescription">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l157"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:157</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l176"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:176</code></a>
         </p>
 
 
@@ -5034,7 +5067,7 @@ The tooltip position is modified by it's height and is relative to the field inp
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:60</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l72"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:72</code></a>
         </p>
 
 
@@ -5072,7 +5105,7 @@ class on the view container.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l185"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:185</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l197"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:197</code></a>
         </p>
 
 
@@ -5126,7 +5159,7 @@ class on the view container.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l89"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:89</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:101</code></a>
         </p>
 
 
@@ -5177,7 +5210,7 @@ class on the view container.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method__variables">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l96"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:96</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l115"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:115</code></a>
         </p>
 
 
@@ -6599,7 +6632,7 @@ falsy value otherwise
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method_getField">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l302"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:302</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l321"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:321</code></a>
         </p>
 
 
@@ -6749,7 +6782,7 @@ and invokes initializers for the class hierarchy.
                 eZ.TemplateBasedView
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l218"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:218</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l237"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:237</code></a>
         </p>
 
 
@@ -6783,7 +6816,7 @@ errorStatusChange event
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method_isValid">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l274"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:274</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l293"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:293</code></a>
         </p>
 
 
@@ -7795,7 +7828,10 @@ the list.
     <div class="description">
         Default implementation of the field edit view render. By default, it
 injects the field definition, the field, the content and the content
-type
+type. If the view is already active, it calls <code>_afterActiveReRender</code>
+after the rendering process so that the field edit view
+implementation has a way to handle *rerender* for instance when
+switching language in the UI.
     </div>
 
 
@@ -8237,7 +8273,7 @@ be removed.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#method_validate">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l262"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:262</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l281"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:281</code></a>
         </p>
 
 
@@ -8360,7 +8396,7 @@ from the error state to the normal state.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#property__handleFieldDescriptionVisibility">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l226"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:226</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l245"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:245</code></a>
         </p>
 
 
@@ -8410,7 +8446,7 @@ from the error state to the normal state.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#property_">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l431"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:431</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l450"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:450</code></a>
         </p>
 
 
@@ -8437,7 +8473,7 @@ identifier
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#property__tooltipInitialPosition">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l247"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:247</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l266"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:266</code></a>
         </p>
 
 
@@ -8463,7 +8499,7 @@ This will be used to restore its position when vanishing
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.FieldEditView.html#property__useStandardFieldDefinitionDescription">eZ.FieldEditView</a>:
-        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l236"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:236</code></a>
+        <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l255"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:255</code></a>
         </p>
 
 
@@ -8646,7 +8682,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l391"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:391</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l409"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:409</code></a>
                             </p>
                     
                     
@@ -8727,7 +8763,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_content">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l377"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:377</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l396"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:396</code></a>
                             </p>
                     
                     
@@ -8756,7 +8792,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_contentType">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l408"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:408</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l427"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:427</code></a>
                             </p>
                     
                     
@@ -8816,7 +8852,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l353"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:353</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l371"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:371</code></a>
                             </p>
                     
                     
@@ -8845,7 +8881,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l417"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:417</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l435"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:435</code></a>
                             </p>
                     
                     
@@ -8876,7 +8912,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_errorStatus">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l342"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:342</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l361"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:361</code></a>
                             </p>
                     
                     
@@ -8907,7 +8943,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_field">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l366"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:366</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l385"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:385</code></a>
                             </p>
                     
                     
@@ -8936,7 +8972,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_fieldDefinition">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l355"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:355</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l374"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:374</code></a>
                             </p>
                     
                     
@@ -8966,7 +9002,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l340"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:340</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l358"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:358</code></a>
                             </p>
                     
                     
@@ -8997,7 +9033,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l404"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:404</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l422"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:422</code></a>
                             </p>
                     
                     
@@ -9058,7 +9094,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_languageCode">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l419"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:419</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l438"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:438</code></a>
                             </p>
                     
                     
@@ -9119,7 +9155,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l364"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:364</code></a>
+                            <a href="../files/Resources_public_js_views_fields_ez-richtext-editview.js.html#l382"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-editview.js:382</code></a>
                             </p>
                     
                     
@@ -9149,7 +9185,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_user">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l399"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:399</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l418"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:418</code></a>
                             </p>
                     
                     
@@ -9177,7 +9213,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.FieldEditView.html#attr_version">eZ.FieldEditView</a>:
-                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l388"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:388</code></a>
+                            <a href="../files/Resources_public_js_views_ez-fieldeditview.js.html#l407"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldeditview.js:407</code></a>
                             </p>
                     
                     

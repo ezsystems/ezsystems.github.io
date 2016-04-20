@@ -215,10 +215,6 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
-                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
-                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,9 +394,6 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
-                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
-                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -489,26 +482,6 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var SORTFIELD_NAME_DICTIONARY = {
-            &#x27;PUBLISHED&#x27;: &#x27;Publication date&#x27;,
-            &#x27;PATH&#x27;: &#x27;Location path&#x27;,
-            &#x27;CLASS_IDENTIFIER&#x27;: &#x27;Content type identifier&#x27;,
-            &#x27;MODIFIED&#x27;: &#x27;Modification date&#x27;,
-            &#x27;SECTION&#x27;: &#x27;Section&#x27;,
-            &#x27;DEPTH&#x27;: &#x27;Location depth&#x27;,
-            &#x27;CLASS_NAME&#x27;: &#x27;Content type name&#x27;,
-            &#x27;PRIORITY&#x27;: &#x27;Priority&#x27;,
-            &#x27;NAME&#x27;: &#x27;Content name&#x27;,
-        },
-        events = {
-            &#x27;.ez-subitems-ordering-sort-type&#x27;: {
-                &#x27;change&#x27;: &#x27;_setSortType&#x27;,
-            },
-            &#x27;.ez-subitems-sorting-order&#x27;: {
-                &#x27;change&#x27;: &#x27;_setSortingOrder&#x27;,
-            },
-        };
-
     /**
      * The Location View View Details tab class.
      *
@@ -523,12 +496,6 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
 
             this.after([&#x27;creatorChange&#x27;, &#x27;ownerChange&#x27;], function (e) {
                 this.render();
-            });
-            this.events = Y.merge(this.events, events);
-            this._set(&#x27;sortField&#x27;, this.get(&#x27;location&#x27;).get(&#x27;sortField&#x27;));
-            this._set(&#x27;sortOrder&#x27;, this.get(&#x27;location&#x27;).get(&#x27;sortOrder&#x27;));
-            this.after([&#x27;sortFieldChange&#x27;, &#x27;sortOrderChange&#x27;], function (e) {
-                this.fire(&#x27;sortUpdate&#x27;, {sortType: this.get(&#x27;sortField&#x27;), sortOrder: this.get(&#x27;sortOrder&#x27;)});
             });
         },
 
@@ -557,74 +524,9 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
                 &quot;translationsList&quot;: translationsList,
                 &quot;languageCount&quot;: translationsList.length,
                 &quot;loadingError&quot;: this.get(&#x27;loadingError&#x27;),
-                &quot;sortFields&quot;: this._getSortFields(),
-                &quot;isAscendingOrder&quot;: (this.get(&#x27;sortOrder&#x27;) === &#x27;ASC&#x27;)
             }));
 
             return this;
-        },
-
-        /**
-         * Map the sortFields identifiers in objects.
-         * These objects contain the identifier, the name of the sort field and a boolean to see if it&#x27;s the current selected sortField.
-         *
-         * @method _getSortFields
-         * @protected
-         * @return {Array} contains objects with identifier, name and a boolean to see if selected
-         */
-        _getSortFields: function () {
-            var sortFieldIdentifiers = this._getOrderingMethods(),
-                sortFields = Y.Array.map(sortFieldIdentifiers, function(id) {
-                    return {identifier: id, name: SORTFIELD_NAME_DICTIONARY[id], selected: (id === this.get(&#x27;sortField&#x27;))};
-                }, this);
-
-            return sortFields;
-        },
-
-        /**
-         * Check if the default sortField is &#x27;standard&#x27;, then get the available ordering methods.
-         * &#x27;Standard&#x27; sort fields are: Content name, Priority, Modification date, Publication date
-         *
-         * @method _getOrderingMethods
-         * @protected
-         * @return {Array} contains the sortField identifiers
-         */
-        _getOrderingMethods: function () {
-            var location = this.get(&#x27;location&#x27;),
-                standardSortFields = [&#x27;NAME&#x27;, &#x27;PRIORITY&#x27;, &#x27;MODIFIED&#x27;, &#x27;PUBLISHED&#x27;];
-
-            if (standardSortFields.indexOf(location.get(&#x27;sortField&#x27;)) === -1) {
-                standardSortFields.push(location.get(&#x27;sortField&#x27;));
-            }
-            return standardSortFields;
-        },
-
-        /**
-         * Set the selected sort type attribute
-         *
-         * @method _setSortType
-         * @protected
-         */
-        _setSortType: function () {
-            var container = this.get(&#x27;container&#x27;),
-                sortFieldSelector = container.one(&quot;.ez-subitems-ordering-sort-type&quot;),
-                sortFieldSelectedIndex = sortFieldSelector.get(&#x27;selectedIndex&#x27;);
-
-            this._set(&#x27;sortField&#x27;, sortFieldSelector.get(&#x27;options&#x27;).item(sortFieldSelectedIndex).get(&#x27;value&#x27;));
-        },
-
-        /**
-         * Set the selected sort order attribute
-         *
-         * @method _setSortingOrder
-         * @protected
-         */
-        _setSortingOrder: function () {
-            var container = this.get(&#x27;container&#x27;),
-                sortFieldSelector = container.one(&quot;.ez-subitems-sorting-order&quot;),
-                sortFieldSelectedIndex = sortFieldSelector.get(&#x27;selectedIndex&#x27;);
-
-            this._set(&#x27;sortOrder&#x27;, sortFieldSelector.get(&#x27;options&#x27;).item(sortFieldSelectedIndex).get(&#x27;value&#x27;));
         },
 
         /**
@@ -733,26 +635,6 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
              */
             config: {
                 writeOnce: &quot;initOnly&quot;,
-            },
-
-            /**
-             * The selected sort field
-             *
-             * @attribute sortField
-             * @type {String}
-             */
-            sortField: {
-                value: &#x27;&#x27;
-            },
-
-            /**
-             * The selected sort order
-             *
-             * @attribute sortOrder
-             * @type {String}
-             */
-            sortOrder: {
-                value: &#x27;&#x27;
             },
         }
     });

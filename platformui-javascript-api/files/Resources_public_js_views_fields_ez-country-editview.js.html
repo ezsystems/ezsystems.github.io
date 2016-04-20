@@ -215,10 +215,6 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
-                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
-                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,9 +394,6 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
-                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
-                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -524,7 +517,7 @@ YUI.add(&#x27;ez-country-editview&#x27;, function (Y) {
          * @return {String}
          */
         _getCountryName: function (alpha2Code) {
-            var countryList = this._getCountryList();
+            var countryList = this.get(&#x27;countryList&#x27;);
 
             if (countryList[alpha2Code]) {
                 return countryList[alpha2Code].Name;
@@ -532,22 +525,6 @@ YUI.add(&#x27;ez-country-editview&#x27;, function (Y) {
                 console.warn(&quot;Unknown country code: &quot; + alpha2Code);
                 return alpha2Code;
             }
-        },
-
-        /**
-         * Returns the country list indexed by Alpha2 code.
-         *
-         * @method _getCountryList
-         * @protected
-         * @return {Object}
-         */
-        _getCountryList: function () {
-            var config = this.get(&#x27;config&#x27;);
-
-            if ( config &amp;&amp; config.countriesInfo ) {
-                return config.countriesInfo;
-            }
-            return {};
         },
 
         _getSelectionFilter: function () {
@@ -585,7 +562,7 @@ YUI.add(&#x27;ez-country-editview&#x27;, function (Y) {
         _getSource: function () {
             var countriesArray = [];
 
-            Y.Object.each(this._getCountryList(), function (country) {
+            Y.Object.each(this.get(&#x27;countryList&#x27;), function (country) {
                 countriesArray.push(country);
             });
             return countriesArray;
@@ -626,18 +603,14 @@ YUI.add(&#x27;ez-country-editview&#x27;, function (Y) {
              */
 
             /**
-             * The country list indexed by alpha2 code.
-             * This attribute is deprecated and will be removed in PlatformUI 2.0
+             * The country list indexed by alpha2 code
              *
              * @attribute countryList
              * @readOnly
              * @type {Object}
-             * @deprecated
              */
             countryList: {
-                getter: function () {
-                    return this._getCountryList();
-                },
+                value: {},
                 readOnly: true,
             },
         }

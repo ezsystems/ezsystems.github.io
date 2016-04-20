@@ -215,10 +215,6 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
-                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
-                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -398,9 +394,6 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
-                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
-                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -500,6 +493,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
     Y.eZ.RoleServerSideViewService = Y.Base.create(&#x27;roleServerSideViewService&#x27;, Y.eZ.ServerSideViewService, [], {
         initializer: function () {
             this.on(&#x27;*:contentDiscover&#x27;, function (e) {
+                // If we&#x27;re not discovering for a role assignment, the contentDiscoveredHandler is already set
                 if (this._isDiscoveringForAssigningRole(e)) {
                     e.config.contentDiscoveredHandler = Y.bind(this._assignRole, this);
                 }
@@ -531,17 +525,10 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             var data = e.target.get(&#x27;data&#x27;),
                 userService = this.get(&#x27;capi&#x27;).getUserService(),
                 countAssigned = 0,
-                service = this,
-                limitation = null;
-
-            if (this._hasSectionLimitation(data)) {
-               limitation = this._createSectionLimitation(data);
-            } else if (this._hasSubtreeLimitation(data)) {
-                limitation = this._createSubtreeLimitation(data);
-            }
+                service = this;
 
             this._assignRoleNotificationStarted(
-                data, e.selection
+                data.roleId, data.roleName, e.selection
             );
 
             userService.loadRole(data.roleId, function (error, response) {
@@ -550,7 +537,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
 
                 if (error) {
                     service._loadRoleErrorNotification(
-                        data, e.selection
+                        data.roleId, data.roleName, e.selection
                     );
                     return;
                 }
@@ -571,87 +558,16 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                             countAssigned++;
                         });
 
-                    service._assignRoleToAssignee(struct, role, limitation, end);
+                    service._assignRoleToAssignee(struct, role, end);
                 });
 
                 tasks.done(function () {
                     service._assignRoleCallback(
-                        data, e.selection, countAssigned,
+                        data.roleId, data.roleName, e.selection, countAssigned,
                         Y.bind(data.afterUpdateCallback, service)
                     );
                 });
             });
-        },
-
-
-        /**
-         * Check if the UDW config has a section limitationType
-         *
-         * @method _hasSectionLimitation
-         * @protected
-         * @param {Object} assignActionData it can contain the limitation type
-         * @return {Boolean}
-         */
-        _hasSectionLimitation: function (assignActionData) {
-            return assignActionData.limitationType == &#x27;Section&#x27;;
-        },
-
-        /**
-         * Check if the UDW config has a subtree limitationType
-         *
-         * @method _hasSubtreeLimitation
-         * @protected
-         * @param {Object} assignActionData it can contain the limitation type
-         * @return {Boolean}
-         */
-        _hasSubtreeLimitation: function (assignActionData) {
-            return assignActionData.limitationType == &#x27;Subtree&#x27;;
-        },
-
-        /**
-         * Create the limitation object with the section currently chosen.
-         *
-         * @method _createSectionLimitation
-         * @protected
-         * @param {Object} data
-         * @return {Object} the limitation with its identifer and values as expected by the API
-         */
-        _createSectionLimitation: function (data) {
-            // Creating a limitation in the format described in the JS REST client&#x27;s &#x60;UserService.prototype.newRoleAssignInputStruct()&#x60;
-            var limitation = {
-                    &quot;_identifier&quot;: data.limitationType,
-                    &quot;values&quot;: {
-                        &quot;ref&quot;: [{
-                            &quot;_href&quot;: data.section.sectionRestId,
-                            &quot;_media-type&quot;: &quot;application\/vnd.ez.api.Section+json&quot;
-                        }]
-                    }
-                };
-            return limitation;
-        },
-
-        /**
-         * Create the limitation object with the subtree locations currently chosen.
-         *
-         * @method _createSubtreeLimitation
-         * @protected
-         * @param {Object} data
-         * @return {Object} the limitation with its identifer and values as expected by the API
-         */
-        _createSubtreeLimitation: function (data) {
-            // Creating a limitation in the format described in the JS REST client&#x27;s &#x60;UserService.prototype.newRoleAssignInputStruct()&#x60;
-            var limitation,
-                limitationValues = Y.Array.map(data.subtreeIds, function(subtreeId) {
-                    return {&quot;_href&quot;: subtreeId, &quot;_media-type&quot;: &quot;application\/vnd.ez.api.Location+json&quot;};
-                });
-
-            limitation = {
-                &quot;_identifier&quot;: &quot;Subtree&quot;,
-                &quot;values&quot;: {
-                    &quot;ref&quot;: limitationValues
-                }
-            };
-            return limitation;
         },
 
         /**
@@ -663,8 +579,12 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
          * @param {Role} role
          * @param {Function} callback the callback function
          */
-        _assignRoleToAssignee: function (struct, role, limitation, callback) {
-            var contentTypeIdentifier = struct.contentType.get(&#x27;identifier&#x27;);
+        _assignRoleToAssignee: function (struct, role, callback) {
+            var // TODO: EZP-24905 Role assignment limitations
+                // limitation will be filled like example in UserService.prototype.newRoleAssignInputStruct()
+                // hrefs in the limitation must be converted to IDs, as expected by the API
+                limitation = null,
+                contentTypeIdentifier = struct.contentType.get(&#x27;identifier&#x27;);
 
             if (contentTypeIdentifier === &#x27;user&#x27;) {
                 this._assignRoleToUser(role, limitation, struct.contentInfo, callback);
@@ -748,30 +668,20 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
          *
          * @method _assignRoleCallback
          * @protected
-         * @param {object} assignActionData
+         * @param {String} roleId the role id
+         * @param {String} roleName the role name
          * @param {Array} contents the array of users/groups to which role is being assigned to
          * @param {Integer} countAssigned number of successfully assignments
          * @param {Function} callback the callback to call when other tasks are done
          */
-        _assignRoleCallback: function (assignActionData, contents, countAssigned, callback) {
+        _assignRoleCallback: function (roleId, roleName, contents, countAssigned, callback) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
-                    &#x27;assign-role&#x27;, assignActionData, contents
-                ),
-                notificationSucessText =
-                    &#x27;&quot;&#x27;
-                    + assignActionData.roleName
-                    + &#x27;&quot; role has been assigned to &#x27;
-                    + countAssigned
-                    + &#x27; users/groups&#x27;;
+                    &#x27;assign-role&#x27;, roleId, contents
+                );
 
             if (countAssigned&gt;0) {
-                if (this._hasSectionLimitation(assignActionData)) {
-                    notificationSucessText += &#x27; limited to &#x27; + assignActionData.section.sectionName + &#x27; section&#x27;;
-                } else if (this._hasSubtreeLimitation(assignActionData)) {
-                    notificationSucessText += &#x27; with a subtree limitation&#x27;;
-                }
                 this._notify(
-                    notificationSucessText ,
+                    &#x27;&quot;&#x27; + roleName + &#x27;&quot; role has been assigned to &#x27; + countAssigned + &#x27; users/groups&#x27;,
                     notificationIdentifier,
                     &#x27;done&#x27;,
                     5
@@ -793,22 +703,17 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
          *
          * @method _assignRoleNotificationStarted
          * @protected
-         * @param {Object} assignActionData it contains the role id, role name and the section name (if there is a section limitation)
+         * @param {String} roleId the role id
+         * @param {String} roleName the role name
          * @param {Array} contents the array of users/groups to which role is being assigned to
          */
-        _assignRoleNotificationStarted: function (assignActionData, contents) {
+        _assignRoleNotificationStarted: function (roleId, roleName, contents) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
-                    &#x27;assign-role&#x27;, assignActionData, contents
-                ),
-                notificationText = &#x27;Assigning the role &quot;&#x27; + assignActionData.roleName + &#x27;&quot; to &#x27; + contents.length + &#x27; users/groups&#x27;;
+                    &#x27;assign-role&#x27;, roleId, contents
+                );
 
-            if (this._hasSectionLimitation(assignActionData)) {
-                notificationText += &#x27; limited to &#x27; + assignActionData.section.sectionName + &#x27; section&#x27;;
-            } else if (this._hasSubtreeLimitation(assignActionData)) {
-                notificationText += &#x27; with a subtree limitation&#x27;;
-            }
             this._notify(
-                notificationText,
+                &#x27;Assigning the role &quot;&#x27; + roleName + &#x27;&quot; to &#x27; + contents.length + &#x27; users/groups&#x27;,
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -820,16 +725,17 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
          *
          * @method _loadRoleErrorNotification
          * @protected
-         * @param {Y.Object} assignActionData it contains the role name
+         * @param {String} roleId the role id
+         * @param {String} roleName the role name
          * @param {Array} contents the array of users/groups to which role is being assigned to
          */
-        _loadRoleErrorNotification: function (assignActionData, contents) {
+        _loadRoleErrorNotification: function (roleId, roleName, contents) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
-                    &#x27;assign-role&#x27;, assignActionData, contents
+                    &#x27;assign-role&#x27;, roleId, contents
                 );
 
             this._notify(
-                &#x27;The role &quot;&#x27; + assignActionData.roleName + &#x27;&quot; could not be loaded&#x27;,
+                &#x27;The role &quot;&#x27; + roleName + &#x27;&quot; could not be loaded&#x27;,
                 notificationIdentifier,
                 &#x27;error&#x27;,
                 0
@@ -843,28 +749,17 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
          * @method _getAssignRoleNotificationIdentifier
          * @protected
          * @param {String} action custom string describing action which is being taken
-         * @param {Object} assignActionData it contains the role id and infos on the section limitation if there is one.
+         * @param {String} roleId the role id
          * @param {Array} contents the array of users/groups to which role is being assigned to
          * @return {String} unique notification identifier based on passed parameters
          */
-        _getAssignRoleNotificationIdentifier: function (action, assignActionData, contents) {
-            var contentIds = [],
-                identifier,
-                subtreeIds = &#x27;&#x27;;
+        _getAssignRoleNotificationIdentifier: function (action, roleId, contents) {
+            var contentIds = [];
 
             Y.Array.each(contents, function (struct) {
                 contentIds.push(struct.contentInfo.get(&#x27;id&#x27;));
             });
-            identifier = action + &#x27;-&#x27; + assignActionData.roleId + &#x27;-&#x27; + contentIds.join(&#x27;_&#x27;);
-            if (this._hasSectionLimitation(assignActionData)) {
-                identifier += &#x27;section-limit-&#x27;+ assignActionData.section.sectionId;
-            } else if (this._hasSubtreeLimitation(assignActionData)) {
-                Y.Array.each(assignActionData.subtreeIds, function (subtreeId) {
-                    subtreeIds += subtreeId;
-                });
-                identifier += &#x27;subtree-limit-&#x27;+ subtreeIds;
-            }
-            return identifier;
+            return action + &#x27;-&#x27; + roleId + &#x27;-&#x27; + contentIds.join(&#x27;_&#x27;);
         },
 
         /**
