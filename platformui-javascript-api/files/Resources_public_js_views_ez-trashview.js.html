@@ -215,6 +215,10 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
+                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -394,6 +398,9 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
+                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -492,9 +499,16 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
      * @constructor
      * @extends eZ.TemplateBasedView
      */
-    Y.eZ.TrashView = Y.Base.create(&#x27;trashView&#x27;, Y.eZ.TemplateBasedView, [], {
+    Y.eZ.TrashView = Y.Base.create(&#x27;trashView&#x27;, Y.eZ.TemplateBasedView, [Y.eZ.SelectionTable], {
+        events: {
+            &#x27;.ez-trashitem-box&#x27;: {
+                &#x27;change&#x27;: &#x27;_updateTrashBarButtons&#x27;
+            },
+        },
+
         initializer: function () {
             this.on(&#x27;*:minimizeTrashBarAction&#x27;, this._handleMinimizeTrashBar);
+            this.on(&#x27;*:restoreTrashItemsAction&#x27;, this._restoreTrashItems);
         },
 
         /**
@@ -557,6 +571,57 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
                     &#x27;contentType&#x27;: trashItem.contentType.toJSON(),
                 };
             });
+        },
+
+        /**
+         * Restores the selected trash items
+         *
+         * @private
+         * @method _restoreTrashItems
+         */
+        _restoreTrashItems: function () {
+            var selectedTrashItems = this.get(&#x27;container&#x27;).all(&#x27;.ez-trashitem-box:checked&#x27;),
+                trashItems = [];
+
+            selectedTrashItems.each(function (selectedTrashItem) {
+                Y.Array.some(this.get(&#x27;trashItems&#x27;), function (trashItem) {
+                    if (selectedTrashItem.getAttribute(&#x27;value&#x27;) === trashItem.item.get(&#x27;id&#x27;)) {
+                        trashItems.push(trashItem.item);
+                        return true;
+                    }
+                });
+            }, this);
+
+            /**
+             * Fired to restore the selected items
+             * @event restoreItems
+             */
+            this.fire(&#x27;restoreItems&#x27;, {trashItems: trashItems});
+        },
+
+        /**
+         * Updates the TrashBar buttons
+         *
+         * @private
+         * @method _updateTrashBarButtons
+         */
+        _updateTrashBarButtons: function () {
+            this._updateDisableTrashBarButton(
+                &#x27;restoreTrashItems&#x27;,
+                this.get(&#x27;container&#x27;).one(&#x27;.ez-trashitem-box:checked&#x27;) === null
+            );
+        },
+
+        /**
+         * Update the disable status on a given button of the trashBar
+         *
+         * @private
+         * @method _updateDisableTrashBarButton
+         * @param {String} actionId of the button
+         * @param {Boolean} isDisabled
+         */
+        _updateDisableTrashBarButton: function (actionId, isDisabled) {
+            this.get(&#x27;trashBar&#x27;).getAction(actionId).set(&#x27;disabled&#x27;, isDisabled);
         },
 
         destructor: function () {

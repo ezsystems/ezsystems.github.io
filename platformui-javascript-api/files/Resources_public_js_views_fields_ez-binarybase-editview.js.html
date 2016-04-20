@@ -215,6 +215,10 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
+                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -394,6 +398,9 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
+                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -587,7 +594,7 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
             var file = this.get(&#x27;file&#x27;),
                 fieldValue;
 
-            if ( !this.get(&#x27;updated&#x27;) &amp;&amp; !this._isCreatingTranslation()) {
+            if ( !this.get(&#x27;updated&#x27;) ) {
                 return undefined;
             }
 
@@ -602,19 +609,6 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
                 fieldValue.data = file.data;
             }
             return this._completeFieldValue(fieldValue);
-        },
-
-        /**
-         * Check if a new translation is being created.
-         *
-         * @method _isCreatingTranslation
-         * @protected
-         * @return {Boolean}
-         */
-        _isCreatingTranslation: function () {
-            var currentVersion = this.get(&#x27;content&#x27;).get(&#x27;currentVersion&#x27;);
-
-            return currentVersion.getTranslationsList().indexOf(this.get(&#x27;languageCode&#x27;)) === -1;
         },
 
         /**

@@ -215,6 +215,10 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
+                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -394,6 +398,9 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
+                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -473,7 +480,7 @@
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l14"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:14</code></a>
+            Defined in: <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l34"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:34</code></a>
         </div>
 
             Module: <a href="../modules/ez-locationviewdetailstabview.html">ez-locationviewdetailstabview</a>
@@ -503,7 +510,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l14"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:14</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l34"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:34</code></a>
         </p>
 
 
@@ -650,6 +657,14 @@
                                 <a href="#method__getName">_getName</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getOrderingMethods">_getOrderingMethods</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getSortFields">_getSortFields</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getStateVal">_getStateVal</a>
 
@@ -729,6 +744,14 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__setAttrVal">_setAttrVal</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__setSortingOrder">_setSortingOrder</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__setSortType">_setSortType</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -957,6 +980,12 @@
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_selected">selected</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_sortField">sortField</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_sortOrder">sortOrder</a>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_title">title</a>
@@ -1930,7 +1959,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l61"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:61</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l152"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:152</code></a>
         </p>
 
 
@@ -2630,6 +2659,96 @@ correct template
 
             <div class="returns-description">
                     <p>String</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getOrderingMethods" class="method item protected">
+    <h3 class="name"><code>_getOrderingMethods</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l106"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:106</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Check if the default sortField is 'standard', then get the available ordering methods.
+'Standard' sort fields are: Content name, Priority, Modification date, Publication date</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Array</span>:
+                    <p>contains the sortField identifiers</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getSortFields" class="method item protected">
+    <h3 class="name"><code>_getSortFields</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l89"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:89</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Map the sortFields identifiers in objects.
+These objects contain the identifier, the name of the sort field and a boolean to see if it's the current selected sortField.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Array</span>:
+                    <p>contains objects with identifier, name and a boolean to see if selected</p>
 
             </div>
         </div>
@@ -4045,6 +4164,70 @@ where the calling method has already obtained the config from state.</p>
 
             </div>
         </div>
+
+
+</div>
+<div id="method__setSortingOrder" class="method item protected">
+    <h3 class="name"><code>_setSortingOrder</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l138"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:138</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Set the selected sort order attribute</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method__setSortType" class="method item protected">
+    <h3 class="name"><code>_setSortType</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:124</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Set the selected sort type attribute</p>
+
+    </div>
+
+
 
 
 </div>
@@ -7172,7 +7355,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:158</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l249"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:249</code></a>
                             </p>
                     
                     
@@ -7252,7 +7435,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l136"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:136</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l227"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:227</code></a>
                             </p>
                     
                     
@@ -7281,7 +7464,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l120"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:120</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l211"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:211</code></a>
                             </p>
                     
                     
@@ -7345,7 +7528,7 @@ How this template gets used is entirely up to you and your custom
                                     eZ.LocationViewTabView
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l107"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:107</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l198"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:198</code></a>
                             </p>
                     
                     
@@ -7406,7 +7589,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l147"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:147</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l238"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:238</code></a>
                             </p>
                     
                     
@@ -7435,7 +7618,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l128"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:128</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:219</code></a>
                             </p>
                     
                     
@@ -7508,6 +7691,64 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
+                    <div id="attr_sortField" class="attr item">
+                        <a name="config_sortField"></a> 
+                        <h3 class="name"><code>sortField</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l260"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:260</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The selected sort field</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="attr_sortOrder" class="attr item">
+                        <a name="config_sortOrder"></a> 
+                        <h3 class="name"><code>sortOrder</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l270"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:270</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The selected sort order</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
                     <div id="attr_title" class="attr item">
                         <a name="config_title"></a> 
                         <h3 class="name"><code>title</code></h3>
@@ -7527,7 +7768,7 @@ How this template gets used is entirely up to you and your custom
                                     eZ.LocationViewTabView
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l94"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:94</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l185"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:185</code></a>
                             </p>
                     
                     
@@ -7658,7 +7899,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l70"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:70</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewdetailstabview.js.html#l161"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewdetailstabview.js:161</code></a>
                             </p>
                     
                     

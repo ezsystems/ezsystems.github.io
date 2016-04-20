@@ -215,6 +215,10 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
+                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -394,6 +398,9 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
+                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -594,6 +601,14 @@
                                 <a href="#method__cloneDefaultValue">_cloneDefaultValue</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__createSectionLimitation">_createSectionLimitation</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__createSubtreeLimitation">_createSubtreeLimitation</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__defAttrChangeFn">_defAttrChangeFn</a>
 
@@ -688,6 +703,14 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__hasPotentialSubscribers">_hasPotentialSubscribers</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__hasSectionLimitation">_hasSectionLimitation</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__hasSubtreeLimitation">_hasSubtreeLimitation</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -1358,7 +1381,7 @@ attribute configuration has cloneDefaultValue set to shallow or deep).
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l45"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:45</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l44"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:44</code></a>
         </p>
 
 
@@ -1397,10 +1420,7 @@ the universal discovery widget</p>
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>roleId</code>
-                </li>
-                <li class="arg">
-                        <code>roleName</code>
+                        <code>assignActionData</code>
                 </li>
                 <li class="arg">
                         <code>contents</code>
@@ -1425,7 +1445,7 @@ the universal discovery widget</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l195"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:195</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l268"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:268</code></a>
         </p>
 
 
@@ -1442,24 +1462,12 @@ the universal discovery widget</p>
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">roleId</code>
-                        <span class="type">String</span>
+                        <code class="param-name">assignActionData</code>
+                        <span class="type">Object</span>
 
 
                     <div class="param-description">
-                        <p>the role id</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">roleName</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                        <p>the role name</p>
-
+                         
                     </div>
 
                 </li>
@@ -1508,10 +1516,7 @@ the universal discovery widget</p>
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>roleId</code>
-                </li>
-                <li class="arg">
-                        <code>roleName</code>
+                        <code>assignActionData</code>
                 </li>
                 <li class="arg">
                         <code>contents</code>
@@ -1530,7 +1535,7 @@ the universal discovery widget</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l230"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:230</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l313"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:313</code></a>
         </p>
 
 
@@ -1547,23 +1552,12 @@ the universal discovery widget</p>
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">roleId</code>
-                        <span class="type">String</span>
+                        <code class="param-name">assignActionData</code>
+                        <span class="type">Object</span>
 
 
                     <div class="param-description">
-                        <p>the role id</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">roleName</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                        <p>the role name</p>
+                        <p>it contains the role id, role name and the section name (if there is a section limitation)</p>
 
                     </div>
 
@@ -1613,7 +1607,7 @@ the universal discovery widget</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l102"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:102</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l179"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:179</code></a>
         </p>
 
 
@@ -1698,7 +1692,7 @@ the universal discovery widget</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l127"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:127</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l200"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:200</code></a>
         </p>
 
 
@@ -1795,7 +1789,7 @@ the universal discovery widget</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l159"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:159</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l232"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:232</code></a>
         </p>
 
 
@@ -2013,6 +2007,138 @@ Since it's on a critical path, we don't want to re-do the check.
             </ul>
         </div>
 
+
+
+</div>
+<div id="method__createSectionLimitation" class="method item protected">
+    <h3 class="name"><code>_createSectionLimitation</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l133"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:133</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Create the limitation object with the section currently chosen.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>the limitation with its identifer and values as expected by the API</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method__createSubtreeLimitation" class="method item protected">
+    <h3 class="name"><code>_createSubtreeLimitation</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l155"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:155</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Create the limitation object with the subtree locations currently chosen.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>the limitation with its identifer and values as expected by the API</p>
+
+            </div>
+        </div>
 
 
 </div>
@@ -2547,7 +2673,7 @@ if this is a sub-attribute value being change. Otherwise null.
                         <code>action</code>
                 </li>
                 <li class="arg">
-                        <code>roleId</code>
+                        <code>assignActionData</code>
                 </li>
                 <li class="arg">
                         <code>contents</code>
@@ -2569,7 +2695,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l274"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:274</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l361"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:361</code></a>
         </p>
 
 
@@ -2598,12 +2724,12 @@ role ID and IDs of users/groups which role is being assigned to.</p>
 
                 </li>
                 <li class="param">
-                        <code class="param-name">roleId</code>
-                        <span class="type">String</span>
+                        <code class="param-name">assignActionData</code>
+                        <span class="type">Object</span>
 
 
                     <div class="param-description">
-                        <p>the role id</p>
+                        <p>it contains the role id and infos on the section limitation if there is one.</p>
 
                     </div>
 
@@ -3574,6 +3700,136 @@ redirection needs to happen in the application.
 
 
 </div>
+<div id="method__hasSectionLimitation" class="method item protected">
+    <h3 class="name"><code>_hasSectionLimitation</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>assignActionData</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l109"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:109</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Check if the UDW config has a section limitationType</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">assignActionData</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>it can contain the limitation type</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method__hasSubtreeLimitation" class="method item protected">
+    <h3 class="name"><code>_hasSubtreeLimitation</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>assignActionData</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l121"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:121</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Check if the UDW config has a subtree limitationType</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">assignActionData</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>it can contain the limitation type</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__initAttrHost" class="method item private inherited">
     <h3 class="name"><code>_initAttrHost</code></h3>
 
@@ -3936,7 +4192,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l32"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:32</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l31"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:31</code></a>
         </p>
 
 
@@ -4162,10 +4418,7 @@ in parameter. If an error occurs, an error event is triggered.
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>roleId</code>
-                </li>
-                <li class="arg">
-                        <code>roleName</code>
+                        <code>assignActionData</code>
                 </li>
                 <li class="arg">
                         <code>contents</code>
@@ -4184,7 +4437,7 @@ in parameter. If an error occurs, an error event is triggered.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l252"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:252</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l340"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:340</code></a>
         </p>
 
 
@@ -4201,23 +4454,12 @@ in parameter. If an error occurs, an error event is triggered.
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">roleId</code>
-                        <span class="type">String</span>
+                        <code class="param-name">assignActionData</code>
+                        <span class="type">Y.Object</span>
 
 
                     <div class="param-description">
-                        <p>the role id</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">roleName</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                        <p>the role name</p>
+                        <p>it contains the role name</p>
 
                     </div>
 
@@ -4424,7 +4666,7 @@ by the top level attribute name, or null, if valueHash is falsey.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l294"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:294</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-roleserversideviewservice.js.html#l392"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-roleserversideviewservice.js:392</code></a>
         </p>
 
 

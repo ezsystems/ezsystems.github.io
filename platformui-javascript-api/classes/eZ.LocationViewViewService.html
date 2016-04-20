@@ -215,6 +215,10 @@
                                 <li><a href="../classes/eZ.SideViewService.html">eZ.SideViewService</a></li>
                                 <li><a href="../classes/eZ.StudioPlusPresentationView.html">eZ.StudioPlusPresentationView</a></li>
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
+                                <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
+                                <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -394,6 +398,9 @@
                                 <li><a href="../modules/ez-sideviewservice.html">ez-sideviewservice</a></li>
                                 <li><a href="../modules/ez-studiopluspresentationview.html">ez-studiopluspresentationview</a></li>
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
+                                <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
+                                <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -552,6 +559,10 @@
 
                             </li>
                             <li class="index-item method protected">
+                                <a href="#method__afterDeleteCallback">_afterDeleteCallback</a>
+
+                            </li>
+                            <li class="index-item method protected">
                                 <a href="#method__afterSendToTrashCallback">_afterSendToTrashCallback</a>
 
                             </li>
@@ -575,6 +586,10 @@
                                 <a href="#method__cloneDefaultValue">_cloneDefaultValue</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__confirmDeleteContent">_confirmDeleteContent</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__defAttrChangeFn">_defAttrChangeFn</a>
 
@@ -585,6 +600,10 @@
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__defInitFn">_defInitFn</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__deleteContent">_deleteContent</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -762,6 +781,14 @@
                             </li>
                             <li class="index-item method protected">
                                 <a href="#method__translateContent">_translateContent</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__updatePriority">_updatePriority</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__updateSorting">_updateSorting</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -969,6 +996,10 @@
                     <h3>Events</h3>
 
                     <ul class="index-list events extends">
+                            <li class="index-item event">
+                                <a href="#event_deletedContent">deletedContent</a>
+
+                            </li>
                             <li class="index-item event inherited">
                                 <a href="#event_destroy">destroy</a>
 
@@ -1232,6 +1263,88 @@ For example, if:
 
 
 </div>
+<div id="method__afterDeleteCallback" class="method item protected">
+    <h3 class="name"><code>_afterDeleteCallback</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>parentLocation</code>
+                </li>
+                <li class="arg">
+                        <code>content</code>
+                </li>
+                <li class="arg">
+                        <code>error</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l228"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:228</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Delete content item callback triggering notifications and making app to navigate to parent location</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">parentLocation</code>
+                        <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a></span>
+
+
+                    <div class="param-description">
+                        <p>the parent location to which app will navigate to</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">content</code>
+                        <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+
+
+                    <div class="param-description">
+                        <p>the content item that has been deleted</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">error</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__afterSendToTrashCallback" class="method item protected">
     <h3 class="name"><code>_afterSendToTrashCallback</code></h3>
 
@@ -1260,7 +1373,7 @@ For example, if:
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l118"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:118</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l182"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:182</code></a>
         </p>
 
 
@@ -1532,6 +1645,62 @@ Since it's on a critical path, we don't want to re-do the check.
 
 
 </div>
+<div id="method__confirmDeleteContent" class="method item protected">
+    <h3 class="name"><code>_confirmDeleteContent</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l99"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:99</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p><code>deleteContentAction</code> event handler,
+it asks confirmation to the user before delete the content item.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>event facade of the deleteAction event</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__defAttrChangeFn" class="method item private inherited">
     <h3 class="name"><code>_defAttrChangeFn</code></h3>
 
@@ -1705,6 +1874,38 @@ refers to the configuration object passed to the constructor.
 
 
 </div>
+<div id="method__deleteContent" class="method item protected">
+    <h3 class="name"><code>_deleteContent</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l161"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:161</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Deletes the the content item, triggering loading parent location and notifications</p>
+
+    </div>
+
+
+
+
+</div>
 <div id="method__destroyHierarchy" class="method item private inherited">
     <h3 class="name"><code>_destroyHierarchy</code></h3>
 
@@ -1759,7 +1960,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l35"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:35</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:60</code></a>
         </p>
 
 
@@ -3214,7 +3415,7 @@ added lazily and still requires initialization.
                 eZ.ViewService
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l261"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:261</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l408"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:408</code></a>
         </p>
 
 
@@ -3356,7 +3557,7 @@ it published) by setting the events 'monitor' config.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l164"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:164</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l272"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:272</code></a>
         </p>
 
 
@@ -3486,7 +3687,7 @@ by the top level attribute name, or null, if valueHash is falsey.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l240"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:240</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l387"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:387</code></a>
         </p>
 
 
@@ -3825,7 +4026,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:74</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l117"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:117</code></a>
         </p>
 
 
@@ -3880,7 +4081,7 @@ to choose a location to move the content</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l54"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:54</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l79"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:79</code></a>
         </p>
 
 
@@ -3930,7 +4131,7 @@ it asks confirmation to the user before sending the location to the trash.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l94"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:94</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l137"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:137</code></a>
         </p>
 
 
@@ -4387,7 +4588,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l330"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:330</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l477"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:477</code></a>
         </p>
 
 
@@ -4559,7 +4760,7 @@ internal state object, or the state proxy if it exits
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l214"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:214</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l322"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:322</code></a>
         </p>
 
 
@@ -4569,6 +4770,115 @@ internal state object, or the state proxy if it exits
     <div class="description">
         <p>translate event handler, makes the application to navigate to edit content available
 in the facade with given language and base language</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__updatePriority" class="method item protected">
+    <h3 class="name"><code>_updatePriority</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l38"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:38</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the priority of the location.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>the event facade of the sortUpdate event</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__updateSorting" class="method item protected">
+    <h3 class="name"><code>_updateSorting</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l348"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:348</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the sort methods of the location</p>
 
     </div>
 
@@ -7442,7 +7752,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l363"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:363</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l510"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:510</code></a>
                             </p>
                     
                     
@@ -7471,7 +7781,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l374"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:374</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l521"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:521</code></a>
                             </p>
                     
                     
@@ -7562,7 +7872,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l396"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:396</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l543"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:543</code></a>
                             </p>
                     
                     
@@ -7591,7 +7901,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l352"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:352</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l499"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:499</code></a>
                             </p>
                     
                     
@@ -7620,7 +7930,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l385"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:385</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l532"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:532</code></a>
                             </p>
                     
                     
@@ -7696,6 +8006,47 @@ not handled by the MyClass._NON_ATTRS_CFG
             <div id="events" class="api-class-tabpanel">
                 <h2 class="off-left">Events</h2>
 
+                    <div id="event_deletedContent" class="events item">
+                        <h3 class="name"><code>deletedContent</code></h3>
+                        <span class="type"></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l258"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:258</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Fired when the content has been deleted</p>
+                    
+                        </div>
+                    
+                            <div class="params">
+                                <h4>Event Payload:</h4>
+                    
+                                <ul class="params-list">
+                                    <li class="param">
+                                            <code class="param-name">content</code>
+                                            <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+                    
+                    
+                                        <div class="param-description">
+                                             
+                                        </div>
+                    
+                                    </li>
+                                </ul>
+                            </div>
+                    
+                    
+                    </div>
                     <div id="event_destroy" class="events item inherited">
                         <h3 class="name"><code>destroy</code></h3>
                         <span class="type"></span>
@@ -7847,7 +8198,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l197"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:197</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l305"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:305</code></a>
                             </p>
                     
                     
@@ -7898,7 +8249,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l150"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:150</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-locationviewviewservice.js.html#l214"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-locationviewviewservice.js:214</code></a>
                             </p>
                     
                     
