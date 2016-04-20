@@ -12202,7 +12202,23 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-country-editview.js",
-            "line": 125,
+            "line": 59,
+            "description": "Returns the country list indexed by Alpha2 code.",
+            "itemtype": "method",
+            "name": "_getCountryList",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.CountryEditView",
+            "module": "ez-country-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-country-editview.js",
+            "line": 141,
             "description": "The text and id values of the selected options",
             "itemtype": "attribute",
             "name": "values",
@@ -12215,12 +12231,13 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-country-editview.js",
-            "line": 134,
-            "description": "The country list indexed by alpha2 code",
+            "line": 150,
+            "description": "The country list indexed by alpha2 code.\nThis attribute is deprecated and will be removed in PlatformUI 2.0",
             "itemtype": "attribute",
             "name": "countryList",
             "readonly": "",
             "type": "{Object}",
+            "deprecated": true,
             "class": "eZ.CountryEditView",
             "module": "ez-country-editview",
             "namespace": "eZ"
