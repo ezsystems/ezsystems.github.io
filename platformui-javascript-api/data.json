@@ -11360,6 +11360,22 @@
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
             "line": 136,
+            "description": "Check if a new translation is being created.",
+            "itemtype": "method",
+            "name": "_isCreatingTranslation",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.BinaryBaseEditView",
+            "module": "ez-binarybase-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
+            "line": 149,
             "description": "Method called at the end of the field value building process in\n`_getFieldValue`. It takes the fieldValue in parameter and MUST\nreturn the final field value. By default, it only returns the passed\nfield value. It is meant to be overridden in views extending the\nbinary base edit view if the field value is supposed to have\nadditional properties.",
             "itemtype": "method",
             "name": "_completeFieldValue",
@@ -11380,7 +11396,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 152,
+            "line": 165,
             "description": "Checks whether the file field is currently empty.",
             "access": "protected",
             "tagname": "",
@@ -11396,7 +11412,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 163,
+            "line": 176,
             "description": "Event handler for the change event on the file input",
             "itemtype": "method",
             "name": "_updateFile",
@@ -11415,7 +11431,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 177,
+            "line": 190,
             "description": "Returns the warning message suitable when the user tries to use a too\nbig file",
             "itemtype": "method",
             "name": "_getOverSizeMessage",
@@ -11438,7 +11454,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 190,
+            "line": 203,
             "description": "Returns a \"human\" readable version of the max allowed file size",
             "itemtype": "method",
             "name": "_getHumanMaxSize",
@@ -11454,7 +11470,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 201,
+            "line": 214,
             "description": "Read the content of the choosen File (if its size match the field\nconfiguration) and update the `file` attribute with the corresponding\nstructure",
             "itemtype": "method",
             "name": "_readFile",
@@ -11473,7 +11489,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 225,
+            "line": 238,
             "description": "Method called before we start reading the content of the selected\nfile. The default implementation does nothing, it is meant to be\noverridden in the views extending the binary base edit view.",
             "itemtype": "method",
             "name": "_beforeReadFile",
@@ -11492,7 +11508,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 237,
+            "line": 250,
             "description": "Checks whether the File in parameter is valid for the field. By\ndefault, only the size of the file is checked against the maximum\nallowed file size.",
             "itemtype": "method",
             "name": "_valid",
@@ -11514,7 +11530,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 251,
+            "line": 264,
             "description": "Returns the maximum allowed size in bytes or 0 if no limit is set.",
             "itemtype": "method",
             "name": "_maxSize",
@@ -11529,7 +11545,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 264,
+            "line": 277,
             "description": "Checks whether the size is valid according to the field definition\nconfiguration. If the file can not be accepted, a warning message is\nset in the `warning` attribute.",
             "params": [
                 {
@@ -11552,7 +11568,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 284,
+            "line": 297,
             "description": "Toggle a class on the view container based on the value",
             "itemtype": "method",
             "name": "_toggleClass",
@@ -11575,7 +11591,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 302,
+            "line": 315,
             "description": "Event handler for the tap event on the remove button",
             "itemtype": "method",
             "name": "_removeBinaryFile",
@@ -11594,7 +11610,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 315,
+            "line": 328,
             "description": "Event handler for the tap event on the upload button",
             "itemtype": "method",
             "name": "_chooseFile",
@@ -11613,7 +11629,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 328,
+            "line": 341,
             "description": "Event handler for the dragenter and dragover DOM event",
             "itemtype": "method",
             "name": "_prepareDrop",
@@ -11632,7 +11648,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 341,
+            "line": 354,
             "description": "Prepares visually the drop area",
             "itemtype": "method",
             "name": "_uiPrepareDropArea",
@@ -11651,7 +11667,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 353,
+            "line": 366,
             "description": "Resets visually the drop area",
             "itemtype": "method",
             "name": "_uiResetDropArea",
@@ -11663,7 +11679,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 363,
+            "line": 376,
             "description": "Event handler for the drop DOM event.",
             "itemtype": "method",
             "name": "_drop",
@@ -11682,7 +11698,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 392,
+            "line": 405,
             "description": "warningChange event handler, it displays/hides the warning message\ndepending on the attribute value.",
             "itemtype": "method",
             "name": "_uiHandleWarningMessage",
@@ -11694,7 +11710,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 411,
+            "line": 424,
             "description": "Event handler for the tap event on the hide link of the warning box.",
             "params": [
                 {
@@ -11713,7 +11729,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 423,
+            "line": 436,
             "description": "Sets the `updated` attribute to false when the attached version is\nsaved. This is to avoid sending again and again the same file",
             "itemtype": "method",
             "name": "_trackVersionSave",
@@ -11725,7 +11741,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 436,
+            "line": 449,
             "description": "Creates the file structure based on the File object provided by the\ninput file and on the base64 encoded binaryfile content. It also creates a\nblob URL for the newly selected object.",
             "itemtype": "method",
             "name": "_createFileStruct",
@@ -11753,7 +11769,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 457,
+            "line": 470,
             "description": "file attribute setter. It converts the different input type to a\nconsistent object no matter if the file attribute is filled from the\nREST fieldValue or from the user input.",
             "access": "protected",
             "tagname": "",
@@ -11776,7 +11792,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 495,
+            "line": 508,
             "description": "The file struct object for the current field. This attribute has\na setter to accept either null value, any REST fieldValue\nor an object created from a File.",
             "readonly": "",
             "itemtype": "attribute",
@@ -11788,7 +11804,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 510,
+            "line": 523,
             "description": "Stores the warning message (if any) or false",
             "itemtype": "attribute",
             "name": "warning",
@@ -11800,7 +11816,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 522,
+            "line": 535,
             "description": "Flag indicating whether the user changed something in the binaryfile\nfield. This attribute is used to avoid sending the same binaryfile\nagain and again.",
             "itemtype": "attribute",
             "name": "updated",
@@ -11812,7 +11828,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 536,
+            "line": 549,
             "description": "FileReader instance",
             "itemtype": "attribute",
             "name": "fileReader",
