@@ -32786,6 +32786,20 @@
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
             "line": 305,
+            "description": "Returns if the location is a root one",
+            "itemtype": "method",
+            "name": "isRootLocation",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.Location",
+            "module": "ez-locationmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-locationmodel.js",
+            "line": 315,
             "description": "Overrides the RestModel implementation to also deal with the `path` attribute",
             "itemtype": "method",
             "name": "toJSON",
@@ -32799,7 +32813,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 332,
+            "line": 342,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -32811,7 +32825,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 343,
+            "line": 353,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -32823,7 +32837,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 354,
+            "line": 364,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -32835,7 +32849,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 365,
+            "line": 375,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -32847,7 +32861,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 376,
+            "line": 386,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -32859,7 +32873,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 387,
+            "line": 397,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -32871,7 +32885,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 398,
+            "line": 408,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -32883,7 +32897,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 409,
+            "line": 419,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -32895,7 +32909,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 420,
+            "line": 430,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -32907,7 +32921,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 431,
+            "line": 441,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -32919,7 +32933,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 442,
+            "line": 452,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -32930,7 +32944,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 459,
+            "line": 469,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",

@@ -781,6 +781,16 @@ YUI.add(&#x27;ez-locationmodel&#x27;, function (Y) {
         },
 
         /**
+         * Returns if the location is a root one
+         * 
+         * @method isRootLocation
+         * @return {boolean}
+         */
+        isRootLocation: function() {
+            return this.get(&#x27;depth&#x27;) === 1;
+        },
+
+        /**
          * Overrides the RestModel implementation to also deal with the &#x60;path&#x60; attribute
          *
          * @method toJSON
