@@ -9254,7 +9254,7 @@
         },
         {
             "file": "Resources/public/js/apps/plugins/ez-updatetreeplugin.js",
-            "line": 32,
+            "line": 35,
             "description": "Clear the tree if it is already loaded",
             "itemtype": "method",
             "name": "_clearTree",
@@ -21832,7 +21832,24 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 276,
+            "line": 262,
+            "description": "Fired when a Location is restored.",
+            "itemtype": "event",
+            "name": "restoredLocation",
+            "params": [
+                {
+                    "name": "trashItem",
+                    "description": "",
+                    "type": "eZ.TrashItem"
+                }
+            ],
+            "class": "eZ.TrashViewService",
+            "module": "ez-trashviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-trashviewservice.js",
+            "line": 285,
             "description": "Fired once trash has just been emptied",
             "itemtype": "event",
             "name": "refreshView",
@@ -21842,7 +21859,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 285,
+            "line": 294,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -21876,7 +21893,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 306,
+            "line": 315,
             "description": "Returns the view parameters of the trash view",
             "itemtype": "method",
             "name": "_getViewParameters",
@@ -21892,7 +21909,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 321,
+            "line": 330,
             "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
             "itemtype": "attribute",
             "name": "trashItems",
@@ -21905,7 +21922,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 336,
+            "line": 345,
             "description": "Holds the eZ.ContentType constructor function",
             "itemtype": "attribute",
             "name": "contentTypeModelConstructor",
@@ -21917,7 +21934,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 347,
+            "line": 356,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -21929,7 +21946,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 358,
+            "line": 367,
             "description": "Holds the eZ.TrashItem constructor function",
             "itemtype": "attribute",
             "name": "trashItemModelConstructor",

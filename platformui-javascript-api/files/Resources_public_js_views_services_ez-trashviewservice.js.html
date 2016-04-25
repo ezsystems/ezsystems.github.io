@@ -737,6 +737,15 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
 
                         return;
                     }
+                    /**
+                     * Fired when a Location is restored.
+                     *
+                     * @event restoredLocation
+                     * @param trashItem {eZ.TrashItem}
+                     */
+                    service.fire(&#x27;restoredLocation&#x27;, {
+                        trashItem: trashItem,
+                    });
                     restoreCount++;
                 }));
             });
