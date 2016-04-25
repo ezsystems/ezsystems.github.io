@@ -516,7 +516,8 @@ YUI.add(&#x27;ez-publishdraftplugin&#x27;, function (Y) {
             var service = this.get(&#x27;host&#x27;),
                 content = service.get(&#x27;content&#x27;),
                 notificationIdentifier,
-                app = service.get(&#x27;app&#x27;);
+                app = service.get(&#x27;app&#x27;),
+                buttonActionView = e.target;
 
             if ( !e.formIsValid ) {
                 return;
@@ -537,6 +538,12 @@ YUI.add(&#x27;ez-publishdraftplugin&#x27;, function (Y) {
             });
 
             app.set(&#x27;loading&#x27;, true);
+            buttonActionView.set(&quot;disabled&quot;, true);
+
+            app.onceAfter(&#x27;loadingChange&#x27;, function () {
+                buttonActionView.set(&quot;disabled&quot;, false);
+            });
+
             if ( content.isNew() ) {
                 this._set(&#x27;isNewContent&#x27;, true);
                 this._createPublishContent(e.fields);

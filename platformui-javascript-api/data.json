@@ -18256,7 +18256,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 70,
+            "line": 77,
             "description": "Notify the user about the publish process and fire the `publishedDraft`\nevent.",
             "itemtype": "method",
             "name": "_publishDraftCallback",
@@ -18268,7 +18268,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 103,
+            "line": 110,
             "description": "Fired when the draft is published",
             "itemtype": "event",
             "name": "publishedDraft",
@@ -18285,7 +18285,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 113,
+            "line": 120,
             "description": "Creates a draft of a new content with the given fields and directly\ntries to publish it.",
             "itemtype": "method",
             "name": "_createPublishContent",
@@ -18303,7 +18303,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 146,
+            "line": 153,
             "description": "Sets the given fields on the version and publishes it. This method is\ncalled in the case where the content already exists in the repository\nand the user wants to publish a new version of it.",
             "itemtype": "method",
             "name": "_savePublishVersion",
@@ -18321,7 +18321,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 171,
+            "line": 178,
             "description": "Notifies the editor about a publishing error",
             "itemtype": "method",
             "name": "_notifyError",
@@ -18340,7 +18340,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 189,
+            "line": 196,
             "description": "Builds the notification identifier for the publish notification",
             "itemtype": "method",
             "name": "_buildNotificationIdentifier",
@@ -18364,7 +18364,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-publishdraftplugin.js",
-            "line": 209,
+            "line": 216,
             "description": "Hold the flag to see if the published content already exists",
             "itemtype": "attribute",
             "name": "isNewContent",
