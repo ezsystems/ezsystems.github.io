@@ -494,6 +494,7 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
         IS_BEING_UPDATED = &#x27;is-image-being-updated&#x27;,
         HAS_LOADING_ERROR = &#x27;has-loading-error&#x27;,
         NOT_IMAGE_TPL = &quot;The file &#x27;{name}&#x27; was refused because it seems to not be an image. Please choose an image file.&quot;,
+        SVG_IMAGE_TPL = &quot;SVG images are not supported. Please choose another image file.&quot;,
         L = Y.Lang,
         win = Y.config.win,
         events = {
@@ -626,9 +627,8 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
         },
 
         /**
-         * Checks that the mime type of the user selected file starts with
-         * &quot;image/&quot;. In case of error, a warning message is set in the &#x60;warning&#x60;
-         * attribute.
+         * Checks that the &#x60;file&#x60; represents a valid image file the Image field
+         * type. In case of error, a warning message is set in the &#x60;warning&#x60;
          *
          * @method _validType
          * @param {File} file the File object to be stored in the field
@@ -636,12 +636,16 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
          * @return Boolean
          */
         _validType: function (file) {
-            var isImage = (file.type.indexOf(&#x27;image/&#x27;) === 0);
+            var isImage = (file.type.indexOf(&#x27;image/&#x27;) === 0),
+                isSVG = (file.type.indexOf(&#x27;image/svg&#x27;) === 0);
 
             if ( !isImage ) {
                 this._set(&#x27;warning&#x27;, L.sub(NOT_IMAGE_TPL, {name: file.name}));
             }
-            return isImage;
+            if ( isSVG ) {
+                this._set(&#x27;warning&#x27;, SVG_IMAGE_TPL);
+            }
+            return (isImage &amp;&amp; !isSVG);
         },
 
         /**

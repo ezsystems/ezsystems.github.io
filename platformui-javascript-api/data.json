@@ -3258,7 +3258,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 28,
+            "line": 29,
             "description": "Provides the field edit view for the Image (ezimage) fields"
         },
         "ez-image-view": {
@@ -6279,7 +6279,7 @@
             "module": "ez-image-editview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 28,
+            "line": 29,
             "description": "The Image edit view",
             "is_constructor": 1,
             "extends": "eZ.BinaryBaseEditView"
@@ -13094,7 +13094,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 52,
+            "line": 53,
             "description": "Initializes the attributes events handling",
             "itemtype": "method",
             "name": "_initAttributesEvents",
@@ -13106,7 +13106,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 70,
+            "line": 71,
             "description": "Reflects the new image object in the generated UI",
             "itemtype": "method",
             "name": "_uiImageChange",
@@ -13118,7 +13118,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 100,
+            "line": 101,
             "description": "Set the state classes on the view container",
             "itemtype": "method",
             "name": "_setStateClasses",
@@ -13130,7 +13130,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 112,
+            "line": 113,
             "description": "Event handler for the valuechange event on the input field for the\nalternative text",
             "itemtype": "method",
             "name": "_altTextChange",
@@ -13149,7 +13149,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 124,
+            "line": 125,
             "description": "Removes the *being updated* class before reading the image content.",
             "itemtype": "method",
             "name": "_beforeReadFile",
@@ -13161,7 +13161,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 134,
+            "line": 135,
             "description": "Checks whether the File in parameter is valid for the field. It\nchecks the size of the selected file and its mime type.",
             "itemtype": "method",
             "name": "_valid",
@@ -13183,8 +13183,8 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 150,
-            "description": "Checks that the mime type of the user selected file starts with\n\"image/\". In case of error, a warning message is set in the `warning`\nattribute.",
+            "line": 151,
+            "description": "Checks that the `file` represents a valid image file the Image field\ntype. In case of error, a warning message is set in the `warning`",
             "itemtype": "method",
             "name": "_validType",
             "params": [
@@ -13205,7 +13205,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 169,
+            "line": 173,
             "description": "Returns a \"human\" readable version of the max allowed file size. It\nis overidden the max size is in byte in Image fields.",
             "itemtype": "method",
             "name": "_getHumanMaxSize",
@@ -13221,7 +13221,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 181,
+            "line": 185,
             "description": "Returns the maximum allowed size in bytes or 0 if no limit is set.\nThe default implementation is overriden because in the case of the\nImage field, the field definition directly contains the maximum size\nin bytes while for BinaryFile and Media, this size is in megabytes.",
             "itemtype": "method",
             "name": "_maxSize",
@@ -13236,7 +13236,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 197,
+            "line": 201,
             "description": "Defines the variables to be imported in the field edit template.",
             "access": "protected",
             "tagname": "",
@@ -13252,7 +13252,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 212,
+            "line": 216,
             "description": "Completes the field value with the alternative text",
             "access": "protected",
             "tagname": "",
@@ -13275,7 +13275,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 226,
+            "line": 230,
             "description": "Fire the `loadImageVariation` event",
             "itemtype": "method",
             "name": "_fireLoadImageVariation",
@@ -13287,7 +13287,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 234,
+            "line": 238,
             "description": "Fired when the view needs the image variation",
             "itemtype": "event",
             "name": "loadImageVariation",
@@ -13309,7 +13309,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 249,
+            "line": 253,
             "description": "Creates the image structure based on the File object provided by the\ninput file and on the base64 encoded image content. It also creates a\nblob URL for the newly selected object.",
             "itemtype": "method",
             "name": "_createFileStruct",
@@ -13337,7 +13337,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 273,
+            "line": 277,
             "description": "image attribute setter. It converts the different input type to a\nconsistent object no matter if the image attribute is filled from the\nREST fieldValue or from the user input.",
             "access": "protected",
             "tagname": "",
@@ -13360,7 +13360,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 313,
+            "line": 317,
             "description": "The alternative image text",
             "itemtype": "attribute",
             "name": "alternativeText",
@@ -13372,7 +13372,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 325,
+            "line": 329,
             "description": "The image variation to display",
             "itemtype": "attribute",
             "name": "imageVariation",
@@ -13383,7 +13383,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 335,
+            "line": 339,
             "description": "The variation identifier to use to display the image",
             "itemtype": "attribute",
             "name": "variationIdentifier",
