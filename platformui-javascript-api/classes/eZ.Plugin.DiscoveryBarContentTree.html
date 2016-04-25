@@ -626,6 +626,14 @@ handle the content tree related events and fetching.</p>
                                 <a href="#method__getAttrs">_getAttrs</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getBaseLocationId">_getBaseLocationId</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method__getCAPI">_getCAPI</a>
+
+                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__getClasses">_getClasses</a>
 
@@ -638,8 +646,20 @@ handle the content tree related events and fetching.</p>
                                 <a href="#method__getInstanceAttrCfgs">_getInstanceAttrCfgs</a>
 
                             </li>
+                            <li class="index-item method private">
+                                <a href="#method__getResponse">_getResponse</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getRootNode">_getRootNode</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getStateVal">_getStateVal</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getTreePath">_getTreePath</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -682,12 +702,20 @@ handle the content tree related events and fetching.</p>
                                 <a href="#method__isLazyAttr">_isLazyAttr</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__isLocationViewDisplayed">_isLocationViewDisplayed</a>
+
+                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__loadContents">_loadContents</a>
 
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__loadNode">_loadNode</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__loadRootNode">_loadRootNode</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -704,6 +732,10 @@ handle the content tree related events and fetching.</p>
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__preInitEventCfg">_preInitEventCfg</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method__prepareRecursiveLoad">_prepareRecursiveLoad</a>
 
                             </li>
                             <li class="index-item method protected deprecated inherited">
@@ -957,6 +989,9 @@ handle the content tree related events and fetching.</p>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_initialized">initialized</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_rootLocationId">rootLocationId</a>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_tree">tree</a>
@@ -1405,7 +1440,7 @@ this class for iteration performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l55"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:55</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l144"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:144</code></a>
         </p>
 
 
@@ -2233,6 +2268,92 @@ returned. If set to true, all attributes modified from their initial values are 
 
 
 </div>
+<div id="method__getBaseLocationId" class="method item protected">
+    <h3 class="name"><code>_getBaseLocationId</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l81"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:81</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the base location id used to build the tree. If a Location is
+displayed, its Location id is used, otherwise we fallback on the
+rootLocationId</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getCAPI" class="method item private">
+    <h3 class="name"><code>_getCAPI</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/eZ.CAPI.html" class="crosslink">eZ.CAPI</a></span>
+        </span>
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l230"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:230</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the CAPI</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/eZ.CAPI.html" class="crosslink">eZ.CAPI</a></span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getClasses" class="method item protected inherited">
     <h3 class="name"><code>_getClasses</code></h3>
 
@@ -2414,6 +2535,112 @@ for passing through to <code>addAttrs</code>.
 
 
 </div>
+<div id="method__getResponse" class="method item private">
+    <h3 class="name"><code>_getResponse</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:219</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the response object.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getRootNode" class="method item protected">
+    <h3 class="name"><code>_getRootNode</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>path</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l115"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:115</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Builds the root node for the tree.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">path</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getStateVal" class="method item private inherited">
     <h3 class="name"><code>_getStateVal</code></h3>
 
@@ -2494,6 +2721,50 @@ where the calling method has already obtained the config from state.
 
 
 </div>
+<div id="method__getTreePath" class="method item protected">
+    <h3 class="name"><code>_getTreePath</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l97"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:97</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the tree path. If a Location is displayed, the path build in
+the LocationViewView is used, otherwise the path is empty which means
+the root Location will have to be loaded later.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Array</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getType" class="method item private inherited">
     <h3 class="name"><code>_getType</code></h3>
 
@@ -2549,7 +2820,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l28"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:28</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l44"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:44</code></a>
         </p>
 
 
@@ -3053,6 +3324,48 @@ added lazily and still requires initialization.
 
 
 </div>
+<div id="method__isLocationViewDisplayed" class="method item protected">
+    <h3 class="name"><code>_isLocationViewDisplayed</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l70"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:70</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Checks whether the currently active view is a LocationViewView.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__loadContents" class="method item protected inherited">
     <h3 class="name"><code>_loadContents</code></h3>
 
@@ -3189,6 +3502,60 @@ the <code>load</code> method of the Y.Plugin.Tree.Lazy plugin</p>
                 <li class="param">
                         <code class="param-name">callback</code>
                         <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__loadRootNode" class="method item protected">
+    <h3 class="name"><code>_loadRootNode</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>tree</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l191"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:191</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Loads the tree root node. The root Location is also loaded if needed.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">tree</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Tree.html" class="crosslink external" target="_blank">Tree</a></span>
 
 
                     <div class="param-description">
@@ -3435,6 +3802,73 @@ construction, prior to init.
 
                     <div class="param-description">
                         The user configuration object
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__prepareRecursiveLoad" class="method item">
+    <h3 class="name"><code>_prepareRecursiveLoad</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>tree</code>
+                </li>
+                <li class="arg">
+                        <code>path</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l167"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:167</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Prepares the recursive tree loading when a specific Location is
+displayed.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">tree</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Tree.html" class="crosslink external" target="_blank">Tree</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">path</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                         
                     </div>
 
                 </li>
@@ -6721,7 +7155,7 @@ Listeners attached through this method will be detached when the plugin is unplu
 
 
 </div>
-<div id="method_parallelLoad" class="method item inherited">
+<div id="method_parallelLoad" class="method item">
     <h3 class="name"><code>parallelLoad</code></h3>
 
         <div class="args">
@@ -6740,9 +7174,12 @@ Listeners attached through this method will be detached when the plugin is unplu
 
 
     <div class="meta">
-                <p>Inherited from
-                <a href="../classes/eZ.Plugin.ViewServiceBase.html#method_parallelLoad">eZ.Plugin.ViewServiceBase</a>:
-        <a href="../files/Resources_public_js_views_services_plugins_ez-viewservicebaseplugin.js.html#l67"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-viewservicebaseplugin.js:67</code></a>
+            <p>Inherited from
+            <a href="../classes/eZ.Plugin.ViewServiceBase.html#method_parallelLoad">
+                eZ.Plugin.ViewServiceBase
+            </a>
+            but overwritten in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l28"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:28</code></a>
         </p>
 
 
@@ -6750,9 +7187,9 @@ Listeners attached through this method will be detached when the plugin is unplu
     </div>
 
     <div class="description">
-        Load implementation that will be called in parallel with the view
-service <code>load</code> implementation. When done, the <code>callback</code> has to be
-called.
+        <p>Retrieves the root location id so that we can fallback on it as a
+starting point to build the tree.</p>
+
     </div>
 
         <div class="params">
@@ -7877,6 +8314,36 @@ applied by the plugin to the host object.
                         </div>
                     
                             <p><strong>Default:</strong> false</p>
+                    
+                    
+                    </div>
+                    <div id="attr_rootLocationId" class="attr item">
+                        <a name="config_rootLocationId"></a> 
+                        <h3 class="name"><code>rootLocationId</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag readonly">readonly</span>
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l244"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:244</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The system root location id</p>
+                    
+                        </div>
+                    
                     
                     
                     </div>

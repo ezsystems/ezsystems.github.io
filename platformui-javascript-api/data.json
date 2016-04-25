@@ -17532,6 +17532,23 @@
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
             "line": 28,
+            "description": "Retrieves the root location id so that we can fallback on it as a\nstarting point to build the tree.",
+            "itemtype": "method",
+            "name": "parallelLoad",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 44,
             "description": "`treeAction` event handler. If the currently displayed location is\navailable in the tree, it opens and selects it otherwise, it builds\nthe entire tree.",
             "itemtype": "method",
             "name": "_handleTree",
@@ -17550,7 +17567,78 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 55,
+            "line": 70,
+            "description": "Checks whether the currently active view is a LocationViewView.",
+            "itemtype": "method",
+            "name": "_isLocationViewDisplayed",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 81,
+            "description": "Returns the base location id used to build the tree. If a Location is\ndisplayed, its Location id is used, otherwise we fallback on the\nrootLocationId",
+            "itemtype": "method",
+            "name": "_getBaseLocationId",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 97,
+            "description": "Returns the tree path. If a Location is displayed, the path build in\nthe LocationViewView is used, otherwise the path is empty which means\nthe root Location will have to be loaded later.",
+            "itemtype": "method",
+            "name": "_getTreePath",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 115,
+            "description": "Builds the root node for the tree.",
+            "itemtype": "method",
+            "name": "_getRootNode",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 144,
             "description": "Builds the complete to tree and set it to the `view`",
             "itemtype": "method",
             "name": "_buildTree",
@@ -17563,6 +17651,91 @@
                     "type": "View"
                 }
             ],
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 167,
+            "description": "Prepares the recursive tree loading when a specific Location is\ndisplayed.",
+            "itemtype": "method",
+            "name": "_prepareRecursiveLoad",
+            "params": [
+                {
+                    "name": "tree",
+                    "description": "",
+                    "type": "Tree"
+                },
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 191,
+            "description": "Loads the tree root node. The root Location is also loaded if needed.",
+            "itemtype": "method",
+            "name": "_loadRootNode",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "tree",
+                    "description": "",
+                    "type": "Tree"
+                }
+            ],
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 219,
+            "description": "Returns the response object.",
+            "itemtype": "method",
+            "name": "_getResponse",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 230,
+            "description": "Returns the CAPI",
+            "itemtype": "method",
+            "name": "_getCAPI",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "eZ.CAPI"
+            },
+            "class": "eZ.Plugin.DiscoveryBarContentTree",
+            "module": "ez-discoverybarcontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
+            "line": 244,
+            "description": "The system root location id",
+            "itemtype": "attribute",
+            "name": "rootLocationId",
+            "readonly": "",
+            "type": "{String}",
             "class": "eZ.Plugin.DiscoveryBarContentTree",
             "module": "ez-discoverybarcontenttreeplugin",
             "namespace": "eZ.Plugin"
