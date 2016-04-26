@@ -12337,6 +12337,22 @@
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
             "line": 57,
+            "description": "Checks whether the field contains a valid timestamp.",
+            "itemtype": "method",
+            "name": "_containsValidTimestamp",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.DateEditView",
+            "module": "ez-date-editview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-date-editview.js",
+            "line": 70,
             "description": "Synchronize Date attribute",
             "itemtype": "method",
             "name": "_syncDateAttribute",
@@ -12348,7 +12364,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 71,
+            "line": 84,
             "description": "Update the input with the date attribute\n(for browsers not supporting HTML5 date input )",
             "itemtype": "method",
             "name": "_uiUpdateInput",
@@ -12360,7 +12376,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 82,
+            "line": 95,
             "description": "Update the calendar with the date attribute\n(for browsers not supporting HTML5 date input )",
             "itemtype": "method",
             "name": "_uiUpdateCalendar",
@@ -12372,7 +12388,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 104,
+            "line": 117,
             "description": "Check if input is valid and set the date attribute\n(for browsers not supporting HTML5 date input )",
             "itemtype": "method",
             "name": "_manualInput",
@@ -12384,7 +12400,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 115,
+            "line": 128,
             "description": "Set the date attribute from the date choose in the custom calendar\n(for browsers not supporting HTML5 date input )",
             "itemtype": "method",
             "name": "_calendarInput",
@@ -12396,7 +12412,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 131,
+            "line": 144,
             "description": "Cancel the current date input",
             "itemtype": "method",
             "name": "_cancelDate",
@@ -12408,7 +12424,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 143,
+            "line": 156,
             "description": "Toggle the YUI calendar",
             "itemtype": "method",
             "name": "_toggleCalendar",
@@ -12420,7 +12436,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 154,
+            "line": 167,
             "description": "Validates the current input of date field",
             "itemtype": "method",
             "name": "validate",
@@ -12430,7 +12446,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 167,
+            "line": 180,
             "description": "Validation for browsers supporting date input",
             "access": "protected",
             "tagname": "",
@@ -12442,7 +12458,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 185,
+            "line": 198,
             "description": "Validation for browsers NOT supporting date input",
             "access": "protected",
             "tagname": "",
@@ -12454,7 +12470,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 203,
+            "line": 216,
             "description": "Defines the variables to import in the field edit template for date",
             "access": "protected",
             "tagname": "",
@@ -12470,7 +12486,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 220,
+            "line": 233,
             "description": "Check if browser supports",
             "itemtype": "method",
             "name": "_detectInputDateSupport",
@@ -12482,7 +12498,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 233,
+            "line": 246,
             "description": "Initialize the calendar widget for browsers not supporting date input",
             "itemtype": "method",
             "name": "_initializeCalendarWidget",
@@ -12494,7 +12510,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 265,
+            "line": 278,
             "description": "Returns the calendar container node.",
             "itemtype": "method",
             "name": "_getCalendarContainer",
@@ -12510,7 +12526,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 276,
+            "line": 289,
             "description": "Moves the calendar to the newly generated calendar container.",
             "itemtype": "method",
             "name": "_afterActiveReRender",
@@ -12522,7 +12538,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 290,
+            "line": 303,
             "description": "Check if date input is empty",
             "itemtype": "method",
             "name": "_isDateEmpty",
@@ -12534,7 +12550,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 300,
+            "line": 313,
             "description": "Check if date is valid",
             "itemtype": "method",
             "name": "_isDateValid",
@@ -12546,7 +12562,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 310,
+            "line": 323,
             "description": "Returns the date input node of the date template",
             "access": "protected",
             "tagname": "",
@@ -12562,7 +12578,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 322,
+            "line": 335,
             "description": "Returns the input validity state object for the input generated by\nthe date template\n\nSee https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
             "access": "protected",
             "tagname": "",
@@ -12578,7 +12594,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 336,
+            "line": 349,
             "description": "Returns the currently filled date value",
             "access": "protected",
             "tagname": "",
@@ -12594,7 +12610,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 354,
+            "line": 367,
             "description": "Checks if browser supports HTML5 date input",
             "itemtype": "attribute",
             "name": "supportsDateInput",
@@ -12605,7 +12621,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 365,
+            "line": 378,
             "description": "YUI calendar instance",
             "itemtype": "attribute",
             "name": "calendar",
@@ -12616,7 +12632,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-date-editview.js",
-            "line": 375,
+            "line": 388,
             "description": "The valid date filled in the input to update the calendar",
             "itemtype": "attribute",
             "name": "date",
