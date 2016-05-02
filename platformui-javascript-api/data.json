@@ -22437,13 +22437,44 @@
             "name": "_appendGridItem",
             "access": "protected",
             "tagname": "",
+            "params": [
+                {
+                    "name": "newSubitems",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
             "class": "eZ.SubitemGridView",
             "module": "ez-subitemgridview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 294,
+            "line": 295,
+            "description": "Return an array containing the subitems that we want to append\nin the grid view.",
+            "itemtype": "method",
+            "name": "_getNewlyAddedSubitems",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "subitemNewVal",
+                    "description": "an array containing the new subitems.",
+                    "type": "Array"
+                },
+                {
+                    "name": "subitemPrevVal",
+                    "description": "an array containing the old subitems.",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.SubitemGridView",
+            "module": "ez-subitemgridview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
+            "line": 311,
             "description": "`tap` event handler on the load more button.",
             "itemtype": "method",
             "name": "_loadMore",
@@ -22455,7 +22486,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 305,
+            "line": 322,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -22467,7 +22498,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 342,
+            "line": 359,
             "description": "The max number of the Locations to display per 'show more'\nsession",
             "itemtype": "attribute",
             "name": "limit",
@@ -22479,7 +22510,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 354,
+            "line": 371,
             "description": "The offset in the Location list. A value below zero means no\nloading has not been made yet.",
             "itemtype": "attribute",
             "name": "offset",
@@ -22491,7 +22522,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 368,
+            "line": 385,
             "description": "The subitems list.",
             "itemtype": "attribute",
             "name": "subitems",

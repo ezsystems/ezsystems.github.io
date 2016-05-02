@@ -677,6 +677,10 @@
                                 <a href="#method__getName">_getName</a>
 
                             </li>
+                            <li class="index-item method private">
+                                <a href="#method__getNewlyAddedSubitems">_getNewlyAddedSubitems</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getStateVal">_getStateVal</a>
 
@@ -1389,7 +1393,13 @@ attribute configuration has cloneDefaultValue set to shallow or deep).
 <div id="method__appendGridItem" class="method item protected">
     <h3 class="name"><code>_appendGridItem</code></h3>
 
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>newSubitems</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
 
 
 
@@ -1414,6 +1424,22 @@ attribute configuration has cloneDefaultValue set to shallow or deep).
 
     </div>
 
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">newSubitems</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
 
 
 
@@ -2124,7 +2150,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l305"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:305</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l322"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:322</code></a>
         </p>
 
 
@@ -2873,6 +2899,76 @@ correct template
 
 
 </div>
+<div id="method__getNewlyAddedSubitems" class="method item private">
+    <h3 class="name"><code>_getNewlyAddedSubitems</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>subitemNewVal</code>
+                </li>
+                <li class="arg">
+                        <code>subitemPrevVal</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l295"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:295</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Return an array containing the subitems that we want to append
+in the grid view.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">subitemNewVal</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>an array containing the new subitems.</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">subitemPrevVal</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>an array containing the old subitems.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__getStateVal" class="method item private inherited">
     <h3 class="name"><code>_getStateVal</code></h3>
 
@@ -3504,7 +3600,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l294"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:294</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l311"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:311</code></a>
         </p>
 
 
@@ -7897,7 +7993,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l342"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:342</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l359"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:359</code></a>
                             </p>
                     
                     
@@ -7988,7 +8084,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l354"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:354</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l371"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:371</code></a>
                             </p>
                     
                     
@@ -8019,7 +8115,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l368"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:368</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemgridview.js.html#l385"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemgridview.js:385</code></a>
                             </p>
                     
                     
