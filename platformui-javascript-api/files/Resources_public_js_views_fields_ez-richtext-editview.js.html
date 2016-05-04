@@ -44,6 +44,7 @@
                                 <li><a href="../classes/CKEDITOR.plugins.ezembed.html">CKEDITOR.plugins.ezembed</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezfocusblock.html">CKEDITOR.plugins.ezfocusblock</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezremoveblock.html">CKEDITOR.plugins.ezremoveblock</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.yui3.html">CKEDITOR.plugins.yui3</a></li>
                                 <li><a href="../classes/eZ.AccordionElement.html">eZ.AccordionElement</a></li>
                                 <li><a href="../classes/eZ.ActionBarView.html">eZ.ActionBarView</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockRemove.html">eZ.AlloyEditorButton.ButtonBlockRemove</a></li>
@@ -637,7 +638,7 @@ YUI.add(&#x27;ez-richtext-editview&#x27;, function (Y) {
             editor = AlloyEditor.editable(
                 this.get(&#x27;container&#x27;).one(&#x27;.ez-richtext-editor&#x27;).getDOMNode(), {
                     toolbars: this.get(&#x27;toolbarsConfig&#x27;),
-                    extraPlugins: AlloyEditor.Core.ATTRS.extraPlugins.value + &#x27;,ezaddcontent,widget,ezembed,ezremoveblock,ezfocusblock&#x27;,
+                    extraPlugins: AlloyEditor.Core.ATTRS.extraPlugins.value + &#x27;,ezaddcontent,widget,ezembed,ezremoveblock,ezfocusblock,yui3&#x27;,
                     eZ: {
                         editableRegion: &#x27;.&#x27; + EDITABLE_CLASS,
                         imageVariations: this._getImageVariations(),

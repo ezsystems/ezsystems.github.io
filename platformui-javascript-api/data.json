@@ -2584,6 +2584,17 @@
                 "CKEDITOR.plugins": 1
             }
         },
+        "Resources/public/js/alloyeditor/plugins/yui3.js": {
+            "name": "Resources/public/js/alloyeditor/plugins/yui3.js",
+            "modules": {},
+            "classes": {
+                "CKEDITOR.plugins.yui3": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "CKEDITOR.plugins": 1
+            }
+        },
         "Resources/public/js/alloyeditor/processors/base.js": {
             "name": "Resources/public/js/alloyeditor/processors/base.js",
             "modules": {
@@ -5415,7 +5426,8 @@
                 "CKEDITOR.plugins.ezaddcontent": 1,
                 "CKEDITOR.plugins.ezembed": 1,
                 "CKEDITOR.plugins.ezfocusblock": 1,
-                "CKEDITOR.plugins.ezremoveblock": 1
+                "CKEDITOR.plugins.ezremoveblock": 1,
+                "CKEDITOR.plugins.yui3": 1
             },
             "fors": {},
             "namespaces": {
@@ -5423,8 +5435,8 @@
                 "CKEDITOR.plugins": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 90,
+            "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
+            "line": 22,
             "description": "Provides the image variation drop down"
         },
         "ez-alloyeditor-button-blocktextaligncenter": {
@@ -8995,6 +9007,21 @@
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
             "line": 90,
             "description": "CKEditor plugin providing the eZRemoveBlock command. This command\nallows to remove the block element holding the caret or the focused\nwidget",
+            "is_constructor": 1
+        },
+        "CKEDITOR.plugins.yui3": {
+            "name": "CKEDITOR.plugins.yui3",
+            "shortname": "CKEDITOR.plugins.yui3",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "CKEDITOR.plugins",
+            "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
+            "line": 22,
+            "description": "CKEditor plugin to help the integration of CKEditor in a YUI3\napplication. It makes sure we remove the auto-generated YUI3 id on DOM\nnodes inside the editor before executing an editor command.\nSee https://jira.ez.no/browse/EZP-25718",
             "is_constructor": 1
         },
         "eZ.EditorContentProcessorBase": {

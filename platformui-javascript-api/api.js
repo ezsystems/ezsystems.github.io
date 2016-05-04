@@ -7,6 +7,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "CKEDITOR.plugins.ezembed",
         "CKEDITOR.plugins.ezfocusblock",
         "CKEDITOR.plugins.ezremoveblock",
+        "CKEDITOR.plugins.yui3",
         "eZ.AccordionElement",
         "eZ.ActionBarView",
         "eZ.AlloyEditorButton.ButtonBlockRemove",

@@ -44,6 +44,7 @@
                                 <li><a href="../classes/CKEDITOR.plugins.ezembed.html">CKEDITOR.plugins.ezembed</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezfocusblock.html">CKEDITOR.plugins.ezfocusblock</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezremoveblock.html">CKEDITOR.plugins.ezremoveblock</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.yui3.html">CKEDITOR.plugins.yui3</a></li>
                                 <li><a href="../classes/eZ.AccordionElement.html">eZ.AccordionElement</a></li>
                                 <li><a href="../classes/eZ.ActionBarView.html">eZ.ActionBarView</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonBlockRemove.html">eZ.AlloyEditorButton.ButtonBlockRemove</a></li>
@@ -782,7 +783,7 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
         _getNewlyAddedSubitems: function (subitemNewVal, subitemPrevVal) {
             var subitemPreviousCount = subitemPrevVal ? subitemPrevVal.length : 0,
                 subitemNewCount = subitemNewVal.length;
-
+            
             return this.get(&#x27;subitems&#x27;).slice(subitemPreviousCount - subitemNewCount);
         },
 
