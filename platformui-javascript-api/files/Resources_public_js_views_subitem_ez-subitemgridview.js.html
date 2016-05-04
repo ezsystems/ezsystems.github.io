@@ -783,7 +783,7 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
         _getNewlyAddedSubitems: function (subitemNewVal, subitemPrevVal) {
             var subitemPreviousCount = subitemPrevVal ? subitemPrevVal.length : 0,
                 subitemNewCount = subitemNewVal.length;
-            
+
             return this.get(&#x27;subitems&#x27;).slice(subitemPreviousCount - subitemNewCount);
         },
 
