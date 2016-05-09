@@ -8,6 +8,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "CKEDITOR.plugins.ezfocusblock",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
+        "SubitemGridItemView",
         "eZ.AccordionElement",
         "eZ.ActionBarView",
         "eZ.AlloyEditorButton.ButtonBlockRemove",
@@ -181,7 +182,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.StudioPresentationView",
         "eZ.SubitemBaseView",
         "eZ.SubitemBoxView",
-        "eZ.SubitemGridItemView",
         "eZ.SubitemGridView",
         "eZ.SubitemListView",
         "eZ.Tabs",
@@ -362,6 +362,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-studiopresentationview",
         "ez-subitembaseview",
         "ez-subitemboxview",
+        "ez-subitemgriditemview",
         "ez-subitemgridview",
         "ez-subitemlistview",
         "ez-tabs",
@@ -1117,6 +1118,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-subitemboxview",
             "name": "ez-subitemboxview",
             "description": "Provides the subitem box view."
+        },
+        {
+            "displayName": "ez-subitemgriditemview",
+            "name": "ez-subitemgriditemview",
+            "description": "Provides the subitem grid item view."
         },
         {
             "displayName": "ez-subitemgridview",

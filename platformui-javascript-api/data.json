@@ -1371,13 +1371,23 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/subitem/ez-subitemgriditemview.js": {
+            "name": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "modules": {
+                "ez-subitemgriditemview": 1
+            },
+            "classes": {
+                "SubitemGridItemView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "Resources/public/js/views/subitem/ez-subitemgridview.js": {
             "name": "Resources/public/js/views/subitem/ez-subitemgridview.js",
             "modules": {
                 "ez-subitemgridview": 1
             },
             "classes": {
-                "eZ.SubitemGridItemView": 1,
                 "eZ.SubitemGridView": 1
             },
             "fors": {},
@@ -4299,12 +4309,25 @@
             "line": 14,
             "description": "Provides the subitem base view."
         },
+        "ez-subitemgriditemview": {
+            "name": "ez-subitemgriditemview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "SubitemGridItemView": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 20,
+            "description": "Provides the subitem grid item view."
+        },
         "ez-subitemgridview": {
             "name": "ez-subitemgridview",
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.SubitemGridItemView": 1,
                 "eZ.SubitemGridView": 1
             },
             "fors": {},
@@ -4313,7 +4336,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 69,
+            "line": 16,
             "description": "Provides the subitem grid view."
         },
         "ez-subitemlistview": {
@@ -7394,21 +7417,19 @@
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
-        "eZ.SubitemGridItemView": {
-            "name": "eZ.SubitemGridItemView",
+        "SubitemGridItemView": {
+            "name": "SubitemGridItemView",
             "shortname": "SubitemGridItemView",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-subitemgridview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 17,
-            "description": "The subitem grid item view. Note: This component is **private** as this\npart will shortly change and will be replaced by the concept of content\ncards.",
-            "access": "private",
-            "tagname": "",
+            "module": "ez-subitemgriditemview",
+            "namespace": "",
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 20,
+            "description": "The subitem grid item view.",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
@@ -7423,7 +7444,7 @@
             "module": "ez-subitemgridview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 69,
+            "line": 16,
             "description": "The subitem grid view.",
             "is_constructor": 1,
             "extends": "eZ.SubitemBaseView"
@@ -22274,38 +22295,133 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 42,
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 52,
+            "description": "Renders the image variation",
+            "itemtype": "method",
+            "name": "_renderImageVariation",
+            "access": "protected",
+            "tagname": "",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 64,
+            "description": "Fires the `loadImageVariation` event for the given image field and\nthe image variation stored in `variationIdentifier` attribute.",
+            "itemtype": "method",
+            "name": "_fireLoadImageVariation",
+            "params": [
+                {
+                    "name": "imageField",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "protected",
+            "tagname": "",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 79,
+            "description": "`imageStateChange` handler. It sets a state class on the container\nand make sure the previous state class was removed.",
+            "itemtype": "method",
+            "name": "_uiSetState",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 96,
+            "description": "Returns the first filled ezimage field of the content or null if\nthere's none.",
+            "itemtype": "method",
+            "name": "_getFilledImageField",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Object|Null"
+            },
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 123,
+            "description": "Holds the current state of the grid item view regarding an image\nto display.",
+            "itemtype": "attribute",
+            "name": "imageState",
+            "readonly": "",
+            "default": "undefined",
+            "type": "{String}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 136,
+            "description": "The image variation to display. This attribute is filled\nasynchronously if the content has a filled ezimage field.",
+            "itemtype": "attribute",
+            "name": "imageVariation",
+            "type": "{Object}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 145,
+            "description": "The variation identifier to use to display the image",
+            "itemtype": "attribute",
+            "name": "variationIdentifier",
+            "type": "{String}",
+            "default": "'platformui_rawcontentview'",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 156,
             "description": "The content type of the content being displayed",
             "itemtype": "attribute",
             "name": "contentType",
             "type": "{eZ.ContentType}",
             "class": "SubitemGridItemView",
-            "module": "ez-subitemgridview"
+            "module": "ez-subitemgriditemview"
         },
         {
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 50,
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 164,
             "description": "The location of the content item being displayed",
             "itemtype": "attribute",
             "name": "location",
             "type": "{eZ.Location}",
             "class": "SubitemGridItemView",
-            "module": "ez-subitemgridview"
+            "module": "ez-subitemgriditemview"
         },
         {
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 58,
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 172,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
             "type": "{eZ.Content}",
             "class": "SubitemGridItemView",
-            "module": "ez-subitemgridview"
+            "module": "ez-subitemgriditemview"
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 90,
+            "line": 37,
             "description": "Holds the grid item view instances for the current grid.",
             "itemtype": "property",
             "name": "_gridItemViews",
@@ -22318,7 +22434,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 119,
+            "line": 66,
             "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
             "itemtype": "method",
             "name": "_handleError",
@@ -22330,7 +22446,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 141,
+            "line": 88,
             "description": "`activeChange` handler. Set the view in loading mode and fire the\nfirst location search event if the subitems are not already filled.",
             "itemtype": "method",
             "name": "_prepareInitialLoad",
@@ -22342,7 +22458,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 154,
+            "line": 101,
             "description": "Updates the pagination displayed to the editor.",
             "itemtype": "method",
             "name": "_uiUpdatePagination",
@@ -22354,7 +22470,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 168,
+            "line": 115,
             "description": "Counts the number of loaded subitems.",
             "itemtype": "method",
             "name": "_countLoadedSubitems",
@@ -22370,7 +22486,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 179,
+            "line": 126,
             "description": "Returns the load more button",
             "itemtype": "method",
             "name": "_getLoadMore",
@@ -22386,7 +22502,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 190,
+            "line": 137,
             "description": "Disables the load more button",
             "itemtype": "method",
             "name": "_disableLoadMore",
@@ -22398,7 +22514,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 200,
+            "line": 147,
             "description": "Enables the load more button",
             "itemtype": "method",
             "name": "_enableLoadMore",
@@ -22410,7 +22526,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 210,
+            "line": 157,
             "description": "Updates the display count with the number of currently loaded\nsubitems.",
             "itemtype": "method",
             "name": "_updateDisplayedCount",
@@ -22422,7 +22538,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 223,
+            "line": 170,
             "description": "Updates the more count in the load more button.",
             "itemtype": "method",
             "name": "_updateMoreCount",
@@ -22434,7 +22550,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 241,
+            "line": 188,
             "description": "Sets the UI in the loading the state",
             "access": "protected",
             "tagname": "",
@@ -22446,7 +22562,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 251,
+            "line": 198,
             "description": "Removes the loading state of the UI",
             "itemtype": "method",
             "name": "_uiEndLoading",
@@ -22458,7 +22574,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 275,
+            "line": 222,
             "description": "Appends a rendred grid item view for the last loaded subitem.",
             "itemtype": "method",
             "name": "_appendGridItem",
@@ -22477,7 +22593,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 295,
+            "line": 244,
             "description": "Return an array containing the subitems that we want to append\nin the grid view.",
             "itemtype": "method",
             "name": "_getNewlyAddedSubitems",
@@ -22501,7 +22617,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 311,
+            "line": 260,
             "description": "`tap` event handler on the load more button.",
             "itemtype": "method",
             "name": "_loadMore",
@@ -22513,7 +22629,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 322,
+            "line": 271,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -22525,7 +22641,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 359,
+            "line": 308,
             "description": "The max number of the Locations to display per 'show more'\nsession",
             "itemtype": "attribute",
             "name": "limit",
@@ -22537,7 +22653,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 371,
+            "line": 320,
             "description": "The offset in the Location list. A value below zero means no\nloading has not been made yet.",
             "itemtype": "attribute",
             "name": "offset",
@@ -22549,7 +22665,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 385,
+            "line": 334,
             "description": "The subitems list.",
             "itemtype": "attribute",
             "name": "subitems",
@@ -32027,6 +32143,32 @@
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
             "line": 166,
+            "description": "Returns the fields which field type has the given identifier.",
+            "itemtype": "method",
+            "name": "getFieldsOfType",
+            "params": [
+                {
+                    "name": "contentType",
+                    "description": "",
+                    "type": "eZ.ContentType"
+                },
+                {
+                    "name": "fieldTypeIdentifier",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 182,
             "description": "Checks whether the content is translated into `languageCode`",
             "itemtype": "method",
             "name": "hasTranslation",
@@ -32047,7 +32189,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 177,
+            "line": 193,
             "description": "Filters the relations on this content by type or optionally by field\ndefinition identifier.",
             "itemtype": "method",
             "name": "relations",
@@ -32075,7 +32217,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 212,
+            "line": 228,
             "description": "copy implementation that relies on the JS REST client.",
             "itemtype": "method",
             "name": "copy",
@@ -32109,7 +32251,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 225,
+            "line": 241,
             "description": "Loads content's locations list",
             "itemtype": "method",
             "name": "loadLocations",
@@ -32144,7 +32286,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 280,
+            "line": 296,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -32178,7 +32320,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 297,
+            "line": 313,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -32212,7 +32354,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 316,
+            "line": 332,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -32241,7 +32383,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 344,
+            "line": 360,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -32253,7 +32395,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 356,
+            "line": 372,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -32265,7 +32407,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 367,
+            "line": 383,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
