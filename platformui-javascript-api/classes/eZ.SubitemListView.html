@@ -219,6 +219,7 @@
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
+                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -403,6 +404,7 @@
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
                                 <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
+                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -583,9 +585,10 @@
                                 <a href="#method__cloneDefaultValue">_cloneDefaultValue</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method protected deprecated">
                                 <a href="#method__convertToJSONList">_convertToJSONList</a>
 
+                                    <span class="flag deprecated">deprecated</span>
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__defAttrChangeFn">_defAttrChangeFn</a>
@@ -608,15 +611,7 @@
 
                             </li>
                             <li class="index-item method protected">
-                                <a href="#method__displayEditIcon">_displayEditIcon</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__displayErrorIcon">_displayErrorIcon</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__displayPriorityButtons">_displayPriorityButtons</a>
+                                <a href="#method__destroyItemViews">_destroyItemViews</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -659,6 +654,10 @@
                                 <a href="#method__getClasses">_getClasses</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getColumns">_getColumns</a>
+
+                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__getContainer">_getContainer</a>
 
@@ -671,10 +670,6 @@
                                 <a href="#method__getGotoMethod">_getGotoMethod</a>
 
                             </li>
-                            <li class="index-item method protected">
-                                <a href="#method__getInputValidity">_getInputValidity</a>
-
-                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getInstanceAttrCfgs">_getInstanceAttrCfgs</a>
 
@@ -683,20 +678,8 @@
                                 <a href="#method__getName">_getName</a>
 
                             </li>
-                            <li class="index-item method">
-                                <a href="#method__getPriorityCell">_getPriorityCell</a>
-
-                            </li>
-                            <li class="index-item method">
-                                <a href="#method__getPriorityInput">_getPriorityInput</a>
-
-                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getStateVal">_getStateVal</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__getSubItemStruct">_getSubItemStruct</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -731,18 +714,6 @@
                                 <a href="#method__hasPotentialSubscribers">_hasPotentialSubscribers</a>
 
                             </li>
-                            <li class="index-item method protected">
-                                <a href="#method__hideEditIcon">_hideEditIcon</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__hideErrorIcon">_hideErrorIcon</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__hidePriorityButtons">_hidePriorityButtons</a>
-
-                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__initAttrHost">_initAttrHost</a>
 
@@ -768,7 +739,7 @@
 
                             </li>
                             <li class="index-item method private">
-                                <a href="#method__isLastPage">_isLastPage</a>
+                                <a href="#method__isFirstPage">_isFirstPage</a>
 
                             </li>
                             <li class="index-item method private">
@@ -777,6 +748,10 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__isLazyAttr">_isLazyAttr</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__lockPriorityEdit">_lockPriorityEdit</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -809,11 +784,7 @@
 
                             </li>
                             <li class="index-item method protected">
-                                <a href="#method__restorePriorityCell">_restorePriorityCell</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__restorePriorityValue">_restorePriorityValue</a>
+                                <a href="#method__renderItems">_renderItems</a>
 
                             </li>
                             <li class="index-item method protected inherited inherited">
@@ -830,10 +801,6 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__setAttrVal">_setAttrVal</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__setPriority">_setPriority</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -853,7 +820,7 @@
 
                             </li>
                             <li class="index-item method protected">
-                                <a href="#method__validatePriority">_validatePriority</a>
+                                <a href="#method__unlockPriorityEdit">_unlockPriorityEdit</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -1018,6 +985,10 @@
                                 <a href="#property__allowAdHocAttrs">_allowAdHocAttrs</a>
 
                             </li>
+                            <li class="index-item property protected">
+                                <a href="#property__itemViews">_itemViews</a>
+
+                            </li>
                             <li class="index-item property inherited">
                                 <a href="#property_containerTemplate">containerTemplate</a>
 
@@ -1055,13 +1026,16 @@
                                 <a href="#attr_destroyed">destroyed</a>
                             </li>
                             <li class="index-item attr">
-                                <a href="#attr_editingPriority">editingPriority</a>
+                                <a href="#attr_displayedProperties">displayedProperties</a>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_identifier">identifier</a>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_initialized">initialized</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_itemViewConstructor">itemViewConstructor</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_limit">limit</a>
@@ -1077,6 +1051,9 @@
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_offset">offset</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_propertyNames">propertyNames</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_subitems">subitems</a>
@@ -1594,7 +1571,7 @@ Since it's on a critical path, we don't want to re-do the check.
 
 
 </div>
-<div id="method__convertToJSONList" class="method item protected">
+<div id="method__convertToJSONList" class="method item protected deprecated">
     <h3 class="name"><code>_convertToJSONList</code></h3>
 
         <span class="paren">()</span>
@@ -1603,6 +1580,7 @@ Since it's on a critical path, we don't want to re-do the check.
             <span class="type"></span>
         </span>
 
+        <span class="flag deprecated" title="in 1.3">deprecated</span>
 
         <span class="flag protected">protected</span>
 
@@ -1613,16 +1591,19 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l427"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:427</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l317"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:317</code></a>
         </p>
 
 
+            <p>Deprecated: in 1.3</p>
 
     </div>
 
     <div class="description">
         <p>Converts the subitems array to JSON so that it can be used in the
-template.</p>
+template.
+<strong>Deprecated:</strong> this method and the corresponding <code>subitems</code> template
+variable will be removed in PlatformUI 2.0</p>
 
     </div>
 
@@ -1874,16 +1855,10 @@ the destructor method on the prototype of each class in the hierarchy.
 
 
 </div>
-<div id="method__displayEditIcon" class="method item protected">
-    <h3 class="name"><code>_displayEditIcon</code></h3>
+<div id="method__destroyItemViews" class="method item protected">
+    <h3 class="name"><code>_destroyItemViews</code></h3>
 
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
 
 
 
@@ -1896,7 +1871,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l191"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:191</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l243"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:243</code></a>
         </p>
 
 
@@ -1904,151 +1879,10 @@ the destructor method on the prototype of each class in the hierarchy.
     </div>
 
     <div class="description">
-        <p>Show the edit icon to inform the user input can be edited.</p>
+        <p>Destroys the instantiated item views.</p>
 
     </div>
 
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__displayErrorIcon" class="method item protected">
-    <h3 class="name"><code>_displayErrorIcon</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>input</code>
-                </li>
-                <li class="arg">
-                        <code>selectedCell</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l206"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:206</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Show the error icon to inform the user input is not correctly filled.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">input</code>
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
-
-
-                    <div class="param-description">
-                        <p>the DOM node of the input</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">selectedCell</code>
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
-
-
-                    <div class="param-description">
-                        <p>the DOM node of the current selected cell</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__displayPriorityButtons" class="method item protected">
-    <h3 class="name"><code>_displayPriorityButtons</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l245"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:245</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Show the 'validate' &amp; 'cancel' buttons which allow to update or not the priority.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
 
 
 
@@ -2269,7 +2103,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l444"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:444</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l337"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:337</code></a>
         </p>
 
 
@@ -2731,6 +2565,50 @@ cached value.
 
 
 </div>
+<div id="method__getColumns" class="method item protected">
+    <h3 class="name"><code>_getColumns</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l226"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:226</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns an array of objects describing the columns to add to the
+list. Each object contains an <code>identifier</code> and a <code>name</code>.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>Array</p>
+
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getContainer" class="method item protected inherited">
     <h3 class="name"><code>_getContainer</code></h3>
 
@@ -2890,7 +2768,7 @@ implementations which need to fast-track publish for performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:124</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:158</code></a>
         </p>
 
 
@@ -2924,50 +2802,6 @@ implementations which need to fast-track publish for performance reasons.
 
             <div class="returns-description">
                         <span class="type">Function</span>:
-            </div>
-        </div>
-
-
-</div>
-<div id="method__getInputValidity" class="method item protected">
-    <h3 class="name"><code>_getInputValidity</code></h3>
-
-        <span class="paren">()</span>
-
-        <span class="returns-inline">
-            <span class="type">ValidityState</span>
-        </span>
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l380"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:380</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Returns the input validity state object for the input generated by
-the Integer template</p>
-<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState">https://developer.mozilla.org/en-US/docs/Web/API/ValidityState</a></p>
-
-    </div>
-
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">ValidityState</span>:
             </div>
         </div>
 
@@ -3084,132 +2918,6 @@ correct template
 
 
 </div>
-<div id="method__getPriorityCell" class="method item">
-    <h3 class="name"><code>_getPriorityCell</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>locationId</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
-        </span>
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l358"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:358</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Return the priority cell for a given location</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">locationId</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>:
-            </div>
-        </div>
-
-
-</div>
-<div id="method__getPriorityInput" class="method item">
-    <h3 class="name"><code>_getPriorityInput</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>inputId</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
-        </span>
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l369"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:369</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Return the priority input from its id</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">inputId</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>:
-            </div>
-        </div>
-
-
-</div>
 <div id="method__getStateVal" class="method item private inherited">
     <h3 class="name"><code>_getStateVal</code></h3>
 
@@ -3290,70 +2998,6 @@ where the calling method has already obtained the config from state.
 
 
 </div>
-<div id="method__getSubItemStruct" class="method item protected">
-    <h3 class="name"><code>_getSubItemStruct</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>locationId</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type">Object</span>
-        </span>
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l293"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:293</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Return the sub item struct with the giiven locationId</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">locationId</code>
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Object</span>:
-            </div>
-        </div>
-
-
-</div>
 <div id="method__getType" class="method item private inherited">
     <h3 class="name"><code>_getType</code></h3>
 
@@ -3403,7 +3047,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l136"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:136</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l170"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:170</code></a>
         </p>
 
 
@@ -3435,7 +3079,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l166"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:166</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l200"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:200</code></a>
         </p>
 
 
@@ -3467,7 +3111,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l146"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:146</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l180"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:180</code></a>
         </p>
 
 
@@ -3499,7 +3143,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l156"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:156</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l190"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:190</code></a>
         </p>
 
 
@@ -3537,7 +3181,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l107"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:107</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l141"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:141</code></a>
         </p>
 
 
@@ -3589,7 +3233,7 @@ link is not disabled</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l394"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:394</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l284"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:284</code></a>
         </p>
 
 
@@ -3673,162 +3317,6 @@ link is not disabled</p>
                     Whether the event has potential subscribers or not
             </div>
         </div>
-
-
-</div>
-<div id="method__hideEditIcon" class="method item protected">
-    <h3 class="name"><code>_hideEditIcon</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:219</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Hide the edit icon to inform the user input can be edited.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__hideErrorIcon" class="method item protected">
-    <h3 class="name"><code>_hideErrorIcon</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>input</code>
-                </li>
-                <li class="arg">
-                        <code>selectedCell</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l232"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:232</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Hide the error icon.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">input</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>the DOM node of the input</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">selectedCell</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>the DOM node of the current selected cell</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__hidePriorityButtons" class="method item protected">
-    <h3 class="name"><code>_hidePriorityButtons</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l307"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:307</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Hide the validate and cancel buttons displayed while editing priority</p>
-
-    </div>
-
-
 
 
 </div>
@@ -4172,8 +3660,8 @@ across the class hierarchy for the instance.
 
 
 </div>
-<div id="method__isLastPage" class="method item private">
-    <h3 class="name"><code>_isLastPage</code></h3>
+<div id="method__isFirstPage" class="method item private">
+    <h3 class="name"><code>_isFirstPage</code></h3>
 
         <span class="paren">()</span>
 
@@ -4191,7 +3679,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l416"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:416</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l295"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:295</code></a>
         </p>
 
 
@@ -4199,7 +3687,7 @@ across the class hierarchy for the instance.
     </div>
 
     <div class="description">
-        <p>Checks whether the user is on the last &quot;page&quot;.</p>
+        <p>Checks whether the user is on the first &quot;page&quot;.</p>
 
     </div>
 
@@ -4233,7 +3721,7 @@ across the class hierarchy for the instance.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l405"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:405</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l306"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:306</code></a>
         </p>
 
 
@@ -4241,7 +3729,7 @@ across the class hierarchy for the instance.
     </div>
 
     <div class="description">
-        <p>Checks whether the user is on the first &quot;page&quot;.</p>
+        <p>Checks whether the user is on the last &quot;page&quot;.</p>
 
     </div>
 
@@ -4318,6 +3806,61 @@ added lazily and still requires initialization.
                     true if it's a lazily added attribute, false otherwise.
             </div>
         </div>
+
+
+</div>
+<div id="method__lockPriorityEdit" class="method item protected">
+    <h3 class="name"><code>_lockPriorityEdit</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>view</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l92"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:92</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Makes sure only one priority can be edited at a time.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">view</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/View.html" class="crosslink external" target="_blank">View</a></span>
+
+
+                    <div class="param-description">
+                        <p>the view where the priority occurs</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
 
 
 </div>
@@ -4742,7 +4285,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:75</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l109"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:109</code></a>
         </p>
 
 
@@ -4758,16 +4301,10 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
 
 
 </div>
-<div id="method__restorePriorityCell" class="method item protected">
-    <h3 class="name"><code>_restorePriorityCell</code></h3>
+<div id="method__renderItems" class="method item protected">
+    <h3 class="name"><code>_renderItems</code></h3>
 
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
 
 
 
@@ -4780,7 +4317,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l264"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:264</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l256"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:256</code></a>
         </p>
 
 
@@ -4788,83 +4325,10 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     </div>
 
     <div class="description">
-        <p>Hide the 'validate' &amp; 'cancel' buttons which allow to update or not the priority.
-Also fill back priority input with the current sub item priority.</p>
+        <p>Renders an item view per subitem.</p>
 
     </div>
 
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__restorePriorityValue" class="method item protected">
-    <h3 class="name"><code>_restorePriorityValue</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l278"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:278</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Restore the input value with the priority of the sub item</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
 
 
 
@@ -5294,61 +4758,6 @@ where the calling method has already obtained the config from state.</p>
 
 
 </div>
-<div id="method__setPriority" class="method item protected">
-    <h3 class="name"><code>_setPriority</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l320"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:320</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Event handler allowing to change the priority of the subitem</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
 <div id="method__setStateVal" class="method item private inherited">
     <h3 class="name"><code>_setStateVal</code></h3>
 
@@ -5466,7 +4875,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l97"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:97</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l131"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:131</code></a>
         </p>
 
 
@@ -5498,7 +4907,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l87"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:87</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l121"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:121</code></a>
         </p>
 
 
@@ -5514,16 +4923,10 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
 </div>
-<div id="method__validatePriority" class="method item protected">
-    <h3 class="name"><code>_validatePriority</code></h3>
+<div id="method__unlockPriorityEdit" class="method item protected">
+    <h3 class="name"><code>_unlockPriorityEdit</code></h3>
 
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
 
 
 
@@ -5536,7 +4939,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l340"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:340</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l79"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:79</code></a>
         </p>
 
 
@@ -5544,27 +4947,11 @@ view in lowercase with the suffix <code>-ez-template</code>.
     </div>
 
     <div class="description">
-        <p>Validates the current input of priority</p>
+        <p>Restores the <code>canEditPriority</code> attribute so that the priority can be
+editing in all views</p>
 
     </div>
 
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
 
 
 
@@ -8425,6 +7812,32 @@ instantiate a view and set a bunch of attributes without having to subclass
 
 
 </div>
+<div id="property__itemViews" class="property item protected">
+    <h3 class="name"><code>_itemViews</code></h3>
+    <span class="type">Array</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l61"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:61</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Holds the displayed subitem list item view instances</p>
+
+    </div>
+
+
+
+</div>
 <div id="property_containerTemplate" class="property item inherited">
     <h3 class="name"><code>containerTemplate</code></h3>
     <span class="type">String</span>
@@ -8719,10 +8132,10 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
-                    <div id="attr_editingPriority" class="attr item">
-                        <a name="config_editingPriority"></a> 
-                        <h3 class="name"><code>editingPriority</code></h3>
-                        <span class="type">Boolean</span>
+                    <div id="attr_displayedProperties" class="attr item">
+                        <a name="config_displayedProperties"></a> 
+                        <h3 class="name"><code>displayedProperties</code></h3>
+                        <span class="type">Array</span>
                     
                     
                     
@@ -8734,18 +8147,17 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l530"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:530</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l425"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:425</code></a>
                             </p>
                     
                     
                         </div>
                     
                         <div class="description">
-                            <p>Boolean to check if a subitem priority is currently selected.</p>
+                            <p>The properties to display</p>
                     
                         </div>
                     
-                            <p><strong>Default:</strong> false</p>
                     
                     
                     </div>
@@ -8810,6 +8222,37 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
+                    <div id="attr_itemViewConstructor" class="attr item">
+                        <a name="config_itemViewConstructor"></a> 
+                        <h3 class="name"><code>itemViewConstructor</code></h3>
+                        <span class="type">Function</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l452"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:452</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The constructor function to use to instance the item view
+                    instances.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> {Y.eZ.SubitemListItemView}</p>
+                    
+                    
+                    </div>
                     <div id="attr_limit" class="attr item">
                         <a name="config_limit"></a> 
                         <h3 class="name"><code>limit</code></h3>
@@ -8825,7 +8268,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l499"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:499</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l394"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:394</code></a>
                             </p>
                     
                     
@@ -8857,7 +8300,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l484"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:484</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l379"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:379</code></a>
                             </p>
                     
                     
@@ -8947,7 +8390,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l511"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:511</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l406"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:406</code></a>
                             </p>
                     
                     
@@ -8959,6 +8402,36 @@ How this template gets used is entirely up to you and your custom
                         </div>
                     
                             <p><strong>Default:</strong> 0</p>
+                    
+                    
+                    </div>
+                    <div id="attr_propertyNames" class="attr item">
+                        <a name="config_propertyNames"></a> 
+                        <h3 class="name"><code>propertyNames</code></h3>
+                        <span class="type">Object</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l435"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:435</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>A key value object to store the human readable names of the
+                    columns.</p>
+                    
+                        </div>
+                    
                     
                     
                     </div>
@@ -8977,7 +8450,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l522"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:522</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistview.js.html#l417"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistview.js:417</code></a>
                             </p>
                     
                     
