@@ -1371,14 +1371,37 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/subitem/ez-subitemgriditemview.js": {
+            "name": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "modules": {
+                "ez-subitemgriditemview": 1
+            },
+            "classes": {
+                "SubitemGridItemView": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "Resources/public/js/views/subitem/ez-subitemgridview.js": {
             "name": "Resources/public/js/views/subitem/ez-subitemgridview.js",
             "modules": {
                 "ez-subitemgridview": 1
             },
             "classes": {
-                "eZ.SubitemGridItemView": 1,
                 "eZ.SubitemGridView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/subitem/ez-subitemlistitemview.js": {
+            "name": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "modules": {
+                "ez-subitemlistitemview": 1
+            },
+            "classes": {
+                "eZ.SubitemListItemView": 1
             },
             "fors": {},
             "namespaces": {
@@ -4299,12 +4322,25 @@
             "line": 14,
             "description": "Provides the subitem base view."
         },
+        "ez-subitemgriditemview": {
+            "name": "ez-subitemgriditemview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "SubitemGridItemView": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 20,
+            "description": "Provides the subitem grid item view."
+        },
         "ez-subitemgridview": {
             "name": "ez-subitemgridview",
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.SubitemGridItemView": 1,
                 "eZ.SubitemGridView": 1
             },
             "fors": {},
@@ -4313,8 +4349,24 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 69,
+            "line": 16,
             "description": "Provides the subitem grid view."
+        },
+        "ez-subitemlistitemview": {
+            "name": "ez-subitemlistitemview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.SubitemListItemView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 18,
+            "description": "Provides the subitem list item view."
         },
         "ez-subitemlistview": {
             "name": "ez-subitemlistview",
@@ -7394,21 +7446,19 @@
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
-        "eZ.SubitemGridItemView": {
-            "name": "eZ.SubitemGridItemView",
+        "SubitemGridItemView": {
+            "name": "SubitemGridItemView",
             "shortname": "SubitemGridItemView",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-subitemgridview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 17,
-            "description": "The subitem grid item view. Note: This component is **private** as this\npart will shortly change and will be replaced by the concept of content\ncards.",
-            "access": "private",
-            "tagname": "",
+            "module": "ez-subitemgriditemview",
+            "namespace": "",
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 20,
+            "description": "The subitem grid item view.",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
@@ -7423,10 +7473,26 @@
             "module": "ez-subitemgridview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 69,
+            "line": 16,
             "description": "The subitem grid view.",
             "is_constructor": 1,
             "extends": "eZ.SubitemBaseView"
+        },
+        "eZ.SubitemListItemView": {
+            "name": "eZ.SubitemListItemView",
+            "shortname": "eZ.SubitemListItemView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 18,
+            "description": "The subitem list item view.",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
         },
         "eZ.SubitemListView": {
             "name": "eZ.SubitemListView",
@@ -22274,38 +22340,133 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 42,
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 52,
+            "description": "Renders the image variation",
+            "itemtype": "method",
+            "name": "_renderImageVariation",
+            "access": "protected",
+            "tagname": "",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 64,
+            "description": "Fires the `loadImageVariation` event for the given image field and\nthe image variation stored in `variationIdentifier` attribute.",
+            "itemtype": "method",
+            "name": "_fireLoadImageVariation",
+            "params": [
+                {
+                    "name": "imageField",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "protected",
+            "tagname": "",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 79,
+            "description": "`imageStateChange` handler. It sets a state class on the container\nand make sure the previous state class was removed.",
+            "itemtype": "method",
+            "name": "_uiSetState",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 96,
+            "description": "Returns the first filled ezimage field of the content or null if\nthere's none.",
+            "itemtype": "method",
+            "name": "_getFilledImageField",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Object|Null"
+            },
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 123,
+            "description": "Holds the current state of the grid item view regarding an image\nto display.",
+            "itemtype": "attribute",
+            "name": "imageState",
+            "readonly": "",
+            "default": "undefined",
+            "type": "{String}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 136,
+            "description": "The image variation to display. This attribute is filled\nasynchronously if the content has a filled ezimage field.",
+            "itemtype": "attribute",
+            "name": "imageVariation",
+            "type": "{Object}",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 145,
+            "description": "The variation identifier to use to display the image",
+            "itemtype": "attribute",
+            "name": "variationIdentifier",
+            "type": "{String}",
+            "default": "'platformui_rawcontentview'",
+            "class": "SubitemGridItemView",
+            "module": "ez-subitemgriditemview"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 156,
             "description": "The content type of the content being displayed",
             "itemtype": "attribute",
             "name": "contentType",
             "type": "{eZ.ContentType}",
             "class": "SubitemGridItemView",
-            "module": "ez-subitemgridview"
+            "module": "ez-subitemgriditemview"
         },
         {
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 50,
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 164,
             "description": "The location of the content item being displayed",
             "itemtype": "attribute",
             "name": "location",
             "type": "{eZ.Location}",
             "class": "SubitemGridItemView",
-            "module": "ez-subitemgridview"
+            "module": "ez-subitemgriditemview"
         },
         {
-            "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 58,
+            "file": "Resources/public/js/views/subitem/ez-subitemgriditemview.js",
+            "line": 172,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
             "type": "{eZ.Content}",
             "class": "SubitemGridItemView",
-            "module": "ez-subitemgridview"
+            "module": "ez-subitemgriditemview"
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 90,
+            "line": 37,
             "description": "Holds the grid item view instances for the current grid.",
             "itemtype": "property",
             "name": "_gridItemViews",
@@ -22318,7 +22479,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 119,
+            "line": 66,
             "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
             "itemtype": "method",
             "name": "_handleError",
@@ -22330,7 +22491,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 141,
+            "line": 88,
             "description": "`activeChange` handler. Set the view in loading mode and fire the\nfirst location search event if the subitems are not already filled.",
             "itemtype": "method",
             "name": "_prepareInitialLoad",
@@ -22342,7 +22503,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 154,
+            "line": 101,
             "description": "Updates the pagination displayed to the editor.",
             "itemtype": "method",
             "name": "_uiUpdatePagination",
@@ -22354,7 +22515,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 168,
+            "line": 115,
             "description": "Counts the number of loaded subitems.",
             "itemtype": "method",
             "name": "_countLoadedSubitems",
@@ -22370,7 +22531,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 179,
+            "line": 126,
             "description": "Returns the load more button",
             "itemtype": "method",
             "name": "_getLoadMore",
@@ -22386,7 +22547,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 190,
+            "line": 137,
             "description": "Disables the load more button",
             "itemtype": "method",
             "name": "_disableLoadMore",
@@ -22398,7 +22559,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 200,
+            "line": 147,
             "description": "Enables the load more button",
             "itemtype": "method",
             "name": "_enableLoadMore",
@@ -22410,7 +22571,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 210,
+            "line": 157,
             "description": "Updates the display count with the number of currently loaded\nsubitems.",
             "itemtype": "method",
             "name": "_updateDisplayedCount",
@@ -22422,7 +22583,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 223,
+            "line": 170,
             "description": "Updates the more count in the load more button.",
             "itemtype": "method",
             "name": "_updateMoreCount",
@@ -22434,7 +22595,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 241,
+            "line": 188,
             "description": "Sets the UI in the loading the state",
             "access": "protected",
             "tagname": "",
@@ -22446,7 +22607,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 251,
+            "line": 198,
             "description": "Removes the loading state of the UI",
             "itemtype": "method",
             "name": "_uiEndLoading",
@@ -22458,7 +22619,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 275,
+            "line": 222,
             "description": "Appends a rendred grid item view for the last loaded subitem.",
             "itemtype": "method",
             "name": "_appendGridItem",
@@ -22477,7 +22638,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 295,
+            "line": 244,
             "description": "Return an array containing the subitems that we want to append\nin the grid view.",
             "itemtype": "method",
             "name": "_getNewlyAddedSubitems",
@@ -22501,7 +22662,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 311,
+            "line": 260,
             "description": "`tap` event handler on the load more button.",
             "itemtype": "method",
             "name": "_loadMore",
@@ -22513,7 +22674,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 322,
+            "line": 271,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -22525,7 +22686,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 359,
+            "line": 308,
             "description": "The max number of the Locations to display per 'show more'\nsession",
             "itemtype": "attribute",
             "name": "limit",
@@ -22537,7 +22698,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 371,
+            "line": 320,
             "description": "The offset in the Location list. A value below zero means no\nloading has not been made yet.",
             "itemtype": "attribute",
             "name": "offset",
@@ -22549,7 +22710,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemgridview.js",
-            "line": 385,
+            "line": 334,
             "description": "The subitems list.",
             "itemtype": "attribute",
             "name": "subitems",
@@ -22559,8 +22720,530 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 65,
+            "description": "Returns the property object from its identifier. A property object\ndescribes the property of the content struct to display, it contains:\n\n* the `identifier`\n* the `class` to add to the cell\n* the formated `value`\n* optionnally the value already rendered in `rendered`",
+            "itemtype": "method",
+            "name": "_getProperty",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "propertyIdentifier",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 97,
+            "description": "Returns the array of property object for the properties to display.",
+            "itemtype": "method",
+            "name": "_getProperties",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 110,
+            "description": "Renders the property with the template which id is `tplId`.",
+            "itemtype": "method",
+            "name": "_renderProperty",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "tplId",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "property",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 130,
+            "description": "Finds and returns a method by its name or `fn` if it's already a\nfunction",
+            "itemtype": "method",
+            "name": "_getFunction",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "String|Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 146,
+            "description": "Returns an attribute value of the Content item",
+            "itemtype": "method",
+            "name": "_getContentAttribute",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "attr",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Mixed"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 158,
+            "description": "Returns the name of the content type",
+            "itemtype": "method",
+            "name": "_getContentTypeName",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 169,
+            "description": "Returns an attribut value of the Location",
+            "itemtype": "method",
+            "name": "_getLocationAttribute",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "attr",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Mixed"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 181,
+            "description": "Returns the translations list",
+            "itemtype": "method",
+            "name": "_getTranslations",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "array of language codes in which the content is\ntranslated",
+                "type": "Array"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 193,
+            "description": "Formats a date to human readable string.",
+            "itemtype": "method",
+            "name": "_formatDate",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "property",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 211,
+            "description": "Formats the translations list to a string suitable for the template",
+            "itemtype": "method",
+            "name": "_formatTranslations",
+            "params": [
+                {
+                    "name": "property",
+                    "description": "a translations property",
+                    "type": "Object"
+                }
+            ],
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 223,
+            "description": "Displays the edit icon to inform the user input can be edited.",
+            "itemtype": "method",
+            "name": "_displayEditIcon",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 235,
+            "description": "Hides the edit icon",
+            "itemtype": "method",
+            "name": "_hideEditIcon",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 245,
+            "description": "Starts the priority edit by setting the `editingPriority` to true (if\npossible).",
+            "itemtype": "method",
+            "name": "_startPriorityEdit",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 258,
+            "description": "Ends the priority edit by setting the `editingPriority` to false.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_endPriorityEdit",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 268,
+            "description": "Shows the error icon to inform the user input is not correctly filled.",
+            "itemtype": "method",
+            "name": "_displayErrorIcon",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 280,
+            "description": "Hides the error icon.",
+            "itemtype": "method",
+            "name": "_hideErrorIcon",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 292,
+            "description": "Displays the 'validate' & 'cancel' buttons",
+            "itemtype": "method",
+            "name": "_displayPriorityButtons",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 303,
+            "description": "`tap` event handler on the cancel button. It makes sure to restore\nthe state of the priority cell.",
+            "itemtype": "method",
+            "name": "_restorePriorityCell",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 317,
+            "description": "Restores the input value with the priority of the location",
+            "itemtype": "method",
+            "name": "_restorePriorityValue",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 330,
+            "description": "Hides the validate and cancel buttons displayed while editing priority",
+            "itemtype": "method",
+            "name": "_hidePriorityButtons",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 341,
+            "description": "`submit` event handler to change the priority of the Location",
+            "itemtype": "method",
+            "name": "_setPriority",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 357,
+            "description": "Validates the priority input",
+            "itemtype": "method",
+            "name": "_validatePriority",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 377,
+            "description": "Returns the priority cell",
+            "itemtype": "method",
+            "name": "_getPriorityCell",
+            "return": {
+                "description": "",
+                "type": "Node"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 387,
+            "description": "Returns the priority input",
+            "itemtype": "method",
+            "name": "_getPriorityInput",
+            "return": {
+                "description": "",
+                "type": "Node"
+            },
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 398,
+            "description": "True is the priority of the Location is being edited",
+            "itemtype": "attribute",
+            "name": "editingPriority",
+            "default": "false",
+            "type": "Boolean",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 409,
+            "description": "True is the priority of the Location can be edited",
+            "itemtype": "attribute",
+            "name": "canEditPriority",
+            "default": "true",
+            "type": "Boolean",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 420,
+            "description": "The content type of the content item being displayed",
+            "itemtype": "attribute",
+            "name": "contentType",
+            "type": "{eZ.ContentType}",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 428,
+            "description": "The location of the content item being displayed",
+            "itemtype": "attribute",
+            "name": "location",
+            "type": "{eZ.Location}",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 436,
+            "description": "The content item being displayed",
+            "itemtype": "attribute",
+            "name": "content",
+            "type": "{eZ.Content}",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 444,
+            "description": "The properties to display",
+            "itemtype": "attribute",
+            "name": "displayedProperties",
+            "type": "{Array}",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 452,
+            "description": "Lists the available porperties to display and the corresponding\nconfiguration for `_getProperty` to extract, format and\noptionnally render the property. The object keys are the property\nidentifiers. Each entry in this object is an object with:\n\n* `extractor`: a function or a method name to extract the value.\nThis function receives the property identifier as a parameter.\n* [optional] `formatter`: a function or a method name to format\nthe value. This function receives the property identifier as a\nparameter.\n* [optional] `template`: a template id to directly render the\nproperty. The template receives the corresponding property\nobject, the Location, the Content item and the Content type\nobjects.",
+            "itemtype": "attribute",
+            "name": "availableProperties",
+            "type": "Object",
+            "readonly": "",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 75,
+            "line": 61,
+            "description": "Holds the displayed subitem list item view instances",
+            "itemtype": "property",
+            "name": "_itemViews",
+            "type": "{Array}",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
+            "line": 79,
+            "description": "Restores the `canEditPriority` attribute so that the priority can be\nediting in all views",
+            "itemtype": "method",
+            "name": "_unlockPriorityEdit",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
+            "line": 92,
+            "description": "Makes sure only one priority can be edited at a time.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_lockPriorityEdit",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "the view where the priority occurs",
+                    "type": "View"
+                }
+            ],
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
+            "line": 109,
             "description": "Refreshes the subitem list",
             "access": "protected",
             "tagname": "",
@@ -22572,7 +23255,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 87,
+            "line": 121,
             "description": "Sets the UI in the loading the state",
             "access": "protected",
             "tagname": "",
@@ -22584,7 +23267,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 97,
+            "line": 131,
             "description": "Removes the loading state of the UI",
             "itemtype": "method",
             "name": "_uiPageEndLoading",
@@ -22596,7 +23279,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 107,
+            "line": 141,
             "description": "tap event handler on the navigation links. Changes the page if the\nlink is not disabled",
             "itemtype": "method",
             "name": "_handlePagination",
@@ -22615,7 +23298,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 124,
+            "line": 158,
             "description": "Returns the *goto* function for the given type operation",
             "itemtype": "method",
             "name": "_getGotoMethod",
@@ -22638,7 +23321,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 136,
+            "line": 170,
             "description": "Go to the first page",
             "itemtype": "method",
             "name": "_gotoFirst",
@@ -22650,7 +23333,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 146,
+            "line": 180,
             "description": "Go to the next page",
             "itemtype": "method",
             "name": "_gotoNext",
@@ -22662,7 +23345,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 156,
+            "line": 190,
             "description": "Go to the previous page",
             "itemtype": "method",
             "name": "_gotoPrev",
@@ -22674,7 +23357,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 166,
+            "line": 200,
             "description": "Go to the last page",
             "itemtype": "method",
             "name": "_gotoLast",
@@ -22686,165 +23369,14 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 191,
-            "description": "Show the edit icon to inform the user input can be edited.",
+            "line": 226,
+            "description": "Returns an array of objects describing the columns to add to the\nlist. Each object contains an `identifier` and a `name`.",
             "itemtype": "method",
-            "name": "_displayEditIcon",
+            "name": "_getColumns",
             "access": "protected",
             "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 206,
-            "description": "Show the error icon to inform the user input is not correctly filled.",
-            "itemtype": "method",
-            "name": "_displayErrorIcon",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "input",
-                    "description": "the DOM node of the input",
-                    "type": "Node"
-                },
-                {
-                    "name": "selectedCell",
-                    "description": "the DOM node of the current selected cell",
-                    "type": "Node"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 219,
-            "description": "Hide the edit icon to inform the user input can be edited.",
-            "itemtype": "method",
-            "name": "_hideEditIcon",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 232,
-            "description": "Hide the error icon.",
-            "itemtype": "method",
-            "name": "_hideErrorIcon",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "input",
-                    "description": "the DOM node of the input",
-                    "type": "Object"
-                },
-                {
-                    "name": "selectedCell",
-                    "description": "the DOM node of the current selected cell",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 245,
-            "description": "Show the 'validate' & 'cancel' buttons which allow to update or not the priority.",
-            "itemtype": "method",
-            "name": "_displayPriorityButtons",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 264,
-            "description": "Hide the 'validate' & 'cancel' buttons which allow to update or not the priority.\nAlso fill back priority input with the current sub item priority.",
-            "itemtype": "method",
-            "name": "_restorePriorityCell",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 278,
-            "description": "Restore the input value with the priority of the sub item",
-            "itemtype": "method",
-            "name": "_restorePriorityValue",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 293,
-            "description": "Return the sub item struct with the giiven locationId",
-            "itemtype": "method",
-            "name": "_getSubItemStruct",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "locationId",
-                    "description": "",
-                    "type": "Number"
-                }
-            ],
             "return": {
-                "description": "",
-                "type": "Object"
+                "description": "Array"
             },
             "class": "eZ.SubitemListView",
             "module": "ez-subitemlistview",
@@ -22852,10 +23384,10 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 307,
-            "description": "Hide the validate and cancel buttons displayed while editing priority",
+            "line": 243,
+            "description": "Destroys the instantiated item views.",
             "itemtype": "method",
-            "name": "_hidePriorityButtons",
+            "name": "_destroyItemViews",
             "access": "protected",
             "tagname": "",
             "class": "eZ.SubitemListView",
@@ -22864,103 +23396,19 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 320,
-            "description": "Event handler allowing to change the priority of the subitem",
-            "itemtype": "method",
-            "name": "_setPriority",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 340,
-            "description": "Validates the current input of priority",
-            "itemtype": "method",
-            "name": "_validatePriority",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "event facade",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 358,
-            "description": "Return the priority cell for a given location",
-            "itemtype": "method",
-            "name": "_getPriorityCell",
-            "params": [
-                {
-                    "name": "locationId",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Node"
-            },
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 369,
-            "description": "Return the priority input from its id",
-            "itemtype": "method",
-            "name": "_getPriorityInput",
-            "params": [
-                {
-                    "name": "inputId",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Node"
-            },
-            "class": "eZ.SubitemListView",
-            "module": "ez-subitemlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 380,
-            "description": "Returns the input validity state object for the input generated by\nthe Integer template\n\nSee https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
+            "line": 256,
+            "description": "Renders an item view per subitem.",
             "access": "protected",
             "tagname": "",
             "itemtype": "method",
-            "name": "_getInputValidity",
-            "return": {
-                "description": "",
-                "type": "ValidityState"
-            },
+            "name": "_renderItems",
             "class": "eZ.SubitemListView",
             "module": "ez-subitemlistview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 394,
+            "line": 284,
             "description": "Checks whether the pagination will be useful",
             "itemtype": "method",
             "name": "_hasPages",
@@ -22976,10 +23424,10 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 405,
+            "line": 295,
             "description": "Checks whether the user is on the first \"page\".",
             "itemtype": "method",
-            "name": "_isLastPage",
+            "name": "_isFirstPage",
             "access": "private",
             "tagname": "",
             "return": {
@@ -22992,7 +23440,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 416,
+            "line": 306,
             "description": "Checks whether the user is on the last \"page\".",
             "itemtype": "method",
             "name": "_isLastPage",
@@ -23008,12 +23456,14 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 427,
-            "description": "Converts the subitems array to JSON so that it can be used in the\ntemplate.",
+            "line": 317,
+            "description": "Converts the subitems array to JSON so that it can be used in the\ntemplate.\n**Deprecated:** this method and the corresponding `subitems` template\nvariable will be removed in PlatformUI 2.0",
             "itemtype": "method",
             "name": "_convertToJSONList",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
+            "deprecationMessage": "in 1.3",
             "return": {
                 "description": "undefined|Array"
             },
@@ -23023,7 +23473,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 444,
+            "line": 337,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -23035,7 +23485,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 484,
+            "line": 379,
             "description": "Indicates the whether the subitem list is currently in loading.\nThe default value depends on the number of subitems.",
             "itemtype": "attribute",
             "name": "loading",
@@ -23047,7 +23497,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 499,
+            "line": 394,
             "description": "The max number of the Locations to display in the subitem list\nper \"page\".",
             "itemtype": "attribute",
             "name": "limit",
@@ -23059,7 +23509,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 511,
+            "line": 406,
             "description": "The offset in the Location list.",
             "itemtype": "attribute",
             "name": "offset",
@@ -23071,7 +23521,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 522,
+            "line": 417,
             "description": "The subitems list.",
             "itemtype": "attribute",
             "name": "subitems",
@@ -23082,12 +23532,34 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
-            "line": 530,
-            "description": "Boolean to check if a subitem priority is currently selected.",
+            "line": 425,
+            "description": "The properties to display",
             "itemtype": "attribute",
-            "name": "editingPriority",
-            "default": "false",
-            "type": "Boolean",
+            "name": "displayedProperties",
+            "type": "Array",
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
+            "line": 435,
+            "description": "A key value object to store the human readable names of the\ncolumns.",
+            "itemtype": "attribute",
+            "name": "propertyNames",
+            "type": "{Object}",
+            "class": "eZ.SubitemListView",
+            "module": "ez-subitemlistview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistview.js",
+            "line": 452,
+            "description": "The constructor function to use to instance the item view\ninstances.",
+            "itemtype": "attribute",
+            "name": "itemViewConstructor",
+            "type": "{Function}",
+            "default": "{Y.eZ.SubitemListItemView}",
             "class": "eZ.SubitemListView",
             "module": "ez-subitemlistview",
             "namespace": "eZ"
@@ -32027,6 +32499,32 @@
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
             "line": 166,
+            "description": "Returns the fields which field type has the given identifier.",
+            "itemtype": "method",
+            "name": "getFieldsOfType",
+            "params": [
+                {
+                    "name": "contentType",
+                    "description": "",
+                    "type": "eZ.ContentType"
+                },
+                {
+                    "name": "fieldTypeIdentifier",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 182,
             "description": "Checks whether the content is translated into `languageCode`",
             "itemtype": "method",
             "name": "hasTranslation",
@@ -32047,7 +32545,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 177,
+            "line": 193,
             "description": "Filters the relations on this content by type or optionally by field\ndefinition identifier.",
             "itemtype": "method",
             "name": "relations",
@@ -32075,7 +32573,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 212,
+            "line": 228,
             "description": "copy implementation that relies on the JS REST client.",
             "itemtype": "method",
             "name": "copy",
@@ -32109,7 +32607,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 225,
+            "line": 241,
             "description": "Loads content's locations list",
             "itemtype": "method",
             "name": "loadLocations",
@@ -32144,7 +32642,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 280,
+            "line": 296,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -32178,7 +32676,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 297,
+            "line": 313,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -32212,7 +32710,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 316,
+            "line": 332,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -32241,7 +32739,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 344,
+            "line": 360,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -32253,7 +32751,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 356,
+            "line": 372,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -32265,7 +32763,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 367,
+            "line": 383,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
