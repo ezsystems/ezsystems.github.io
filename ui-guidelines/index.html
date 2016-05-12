@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="eZ Systems" content="UI Guidelines">
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/guidelines.js"></script>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+
+		<!-- Custom css & js-->
+		<link rel="stylesheet" href="css/guidelines.css">
+
+		<!-- Prism - Code snippets -->
+		<link href="css/prism.css" rel="stylesheet">
+		<script src="js/prism.js" data-default-language="markup"></script>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<head>
+
+	<body data-spy="scroll" data-target=".scrollspy">
+		<nav id="top" class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+		    		<a class="navbar-brand" href="#">
+		        		<img alt="Brand" src="images/eZ-Logo.svg">
+		      		</a>
+		    	</div>
+		    	<div>
+			  		<h2>UI Guidelines</h2>
+			  	</div>
+		  	</div>
+		</nav>
+
+		<div class="ui-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10 header">
+						<h1>eZ System's User Interface Guidelines</h1>
+						<p class="header top-low">This is a resource for designers, product managers, and developers, providing a unified language. We use it to simplify the way people interact with content, offering a consistent interface across our CMS.</p>
+						<p class="header top-low">eZ’s UI Guidelines provides a simplified and recognizable experience; increases our productivity, enabling us to evolve faster; and it allows us to develop collectively.</p>
+						<p class="header top-low bottom-half-extra">This is an open source project, you can directly impact its evolution by filling issues and submitting pull requests. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row ui-content-style">
+				<div class="col-md-10">
+					<div id="design">
+						<h2 class="font-header">Design</h2>
+						<p>This UI Guidelines reflects the components, features and patterns that underpin eZ’s Platform and Studio products. These patterns and components provide a cohesive language and consistent look and feel when improving and evolving our products. Our Design Principles underpin our user-centered and open source approaches.</p>
+						<div id="design-principles" class="sub-section">
+							<h3 class="font-header">Design Principles</h3>
+							<h4 class="principles font-header">SIMPLICITY</h4>
+							<p class="text-principles">Simplify the way people interact with content. Optimize workflows removing unnecessary steps to make it easier, faster and more intuitive.</p>
+							<h4 class="principles font-header">EXPANDABLE</h4>
+							<p class="text-principles">Our UI design is open and includes extendable areas where contributors can add new features and functionalities that strengthen our product.</p>
+							<h4 class="principles font-header">EFFICIENCY</h4>
+							<p class="text-principles">The UI design has to adapt to the constantly evolving expectations of the users, enhancing the experience.</p>
+							<h4 class="principles font-header">CONSISTENCY</h4>
+							<p class="text-principles">Our design focuses on strengthen user’s intuition ensuring that the UI applies the same elements that are easy to access and understand for the same action across the product.</p>
+						</div>
+						<div id="design-philosophy" class="sub-section">
+							<h3 class="font-header">Philosophy</h3>
+							<p>The design philosophy underpins everything we do as a Product and Engineering Teams. It informs the way our products look, the way they behave and the way we work as a team.</p>
+							<h4 class="principles font-header">1. MODERN</h4>
+							<p class="text-principles">We design and built a new generation of content management software. This has been the result of marathon 3 years of collaboration.</p>
+							<h4 class="principles font-header">2. SIMPLE</h4>
+							<p class="text-principles">Our interface is the result of our vision: to deliver tools that simplify the way people — developers, designers, editors and marketers — interact with content.</p>
+							<h4 class="principles font-header">3. CONTENT-CENTRIC</h4>
+							<p class="text-principles">eZ’s content engine provides a solid mechanism to reuse content. Across channels and contexts, users can easily repackage content for simple integration, and continuous optimization.</p>
+							<h4 class="principles font-header">4. MULTI - PLATFORM / CHANNEL / LANGUAGE</h4>
+							<p class="text-principles">A flexible UI that accounts for different languages as well as format time and date conventions to support global variations.</p>
+							<h4 class="principles font-header">5. EXPERT / BEGINNER</h4>
+							<p class="text-principles">To keep our focus on improving the experience of whomever uses eZ, from developers and designers to content editors, marketers and end users.</p>
+							<h4 class="principles font-header">6. EXPANDABLE</h4>
+							<p class="text-principles">eZ Platform is designed to be extended by developers with new features and functionality. The content editing interface is open and allows developers to create custom features.</p>
+							<h4 class="principles font-header">7. FLEXIBLE</h4>
+							<p class="text-principles">Opportunities for customization are limitless, so customers that use eZ are well positioned to continually adapt to their end users’ ever-changing needs.</p>
+							<h4 class="principles font-header">8. USER-CENTERED</h4>
+							<p class="text-principles">The experience must be personal and adapt to the constantly changing expectations of the end user. A great experience enhances the efficiency of any project.</p>
+							<h4 class="principles font-header">9. OPEN SOURCED</h4>
+							<p class="text-principles">Members of the Community play a key role in the continuous development of eZ Platform. We are committed to try to handle incoming community contributions.</p>
+							<h4 class="principles font-header">10. LAST...</h4>
+							<p class="text-principles">But not least. We put quality first.</p>
+						</div>
+					</div>
+					<hr>
+					<div id="components" class="content-section">
+						<h2 class="font-header">Components</h2>
+
+						<div id="components-item1" class="modules">
+							<h3 class="module-header">ITEM 1</h3>
+							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<h5 class="header-black">REQUIREMENTS</h5>
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
+								<div class="panel-body">Specify here for Platform UI or Studio UI</div>
+								<div class="panel-heading"><strong>What -> </strong><span class="heading-text">(purpose)</span></div>
+								<div class="panel-body">Explain here the purpose we look for with this component.</div>
+								<div class="panel-heading"><strong>How -> </strong><span class="heading-text">(What does it do / differentiators)</span></div>
+								<div class="panel-body">Explain here what it will be achieved when using this component</div>
+								<div class="panel-heading"><strong>Variants -> </strong><span class="heading-text">Other variants &#38; states</span></div>
+								<div class="panel-body">
+									<p class="regular">Name of other component with common characteristics</p>
+								</div>
+							</div>
+							<div class="code-samples">
+								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<p class="regular">Explanation text of what are we going to get with this component.</p>
+								<p class="regular">General UI specifications of the components within the layout.</p>
+								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">Final remark, underscoring some details about the UI implications when placing this component within the component.</p>
+
+								<iframe src="https://codepen.io/eZ_UI/embed/KzEOde?default-tab=html&amp;line-numbers=true&amp;height=350" width="100%" height="350px"></iframe>
+								<pre class="language-markup"><code class="language-markup">&lt;code snippet with basic structure for the component here&gt;</code></pre>
+
+								<p class="regular">Closing description. Include here some text for underscoring something interesting or important about the component.</p>
+								<p class="regular">If you need more text, you can continue here. No problem.</p>
+							</div>
+						</div>
+
+						<div id="components-item2" class="modules">
+							<h3 class="module-header">ITEM 2</h3>
+							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<h5 class="header-black">REQUIREMENTS</h5>
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
+								<div class="panel-body">Specify here for Platform UI or Studio UI</div>
+								<div class="panel-heading"><strong>What -> </strong><span class="heading-text">(purpose)</span></div>
+								<div class="panel-body">Explain here the purpose we look for with this component.</div>
+								<div class="panel-heading"><strong>How -> </strong><span class="heading-text">(What does it do / differentiators)</span></div>
+								<div class="panel-body">Explain here what it will be achieved when using this component</div>
+								<div class="panel-heading"><strong>Variants -> </strong><span class="heading-text">Other variants &#38; states</span></div>
+								<div class="panel-body">
+									<p class="regular">Name of other component with common characteristics</p>
+								</div>
+							</div>
+							<div class="code-samples">
+								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<p class="regular">Explanation text of what are we going to get with this component.</p>
+								<p class="regular">General UI specifications of the components within the layout.</p>
+								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">Final remark, underscoring some details about the UI implications when placing this component within the component.</p>
+
+								<iframe src="https://codepen.io/eZ_UI/embed/KzEOde?default-tab=html&amp;line-numbers=true&amp;height=350" width="100%" height="350px"></iframe>
+								<pre class="language-markup"><code class="language-markup">&lt;code snippet with basic structure for the component here&gt;</code></pre>
+
+								<p class="regular">Closing description. Include here some text for underscoring something interesting or important about the component.</p>
+								<p class="regular">If you need more text, you can continue here. No problem.</p>
+							</div>
+						</div>
+
+						<div id="components-item3" class="modules">
+							<h3 class="module-header">ITEM 3</h3>
+							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<h5 class="header-black">REQUIREMENTS</h5>
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
+								<div class="panel-body">Specify here for Platform UI or Studio UI</div>
+								<div class="panel-heading"><strong>What -> </strong><span class="heading-text">(purpose)</span></div>
+								<div class="panel-body">Explain here the purpose we look for with this component.</div>
+								<div class="panel-heading"><strong>How -> </strong><span class="heading-text">(What does it do / differentiators)</span></div>
+								<div class="panel-body">Explain here what it will be achieved when using this component</div>
+								<div class="panel-heading"><strong>Variants -> </strong><span class="heading-text">Other variants &#38; states</span></div>
+								<div class="panel-body">
+									<p class="regular">Name of other component with common characteristics</p>
+								</div>
+							</div>
+							<div class="code-samples">
+								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<p class="regular">Explanation text of what are we going to get with this component.</p>
+								<p class="regular">General UI specifications of the components within the layout.</p>
+								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">Final remark, underscoring some details about the UI implications when placing this component within the component.</p>
+
+								<iframe src="https://codepen.io/eZ_UI/embed/KzEOde?default-tab=html&amp;line-numbers=true&amp;height=350" width="100%" height="350px"></iframe>
+								<pre class="language-markup"><code class="language-markup">&lt;code snippet with basic structure for the component here&gt;</code></pre>
+
+								<p class="regular">Closing description. Include here some text for underscoring something interesting or important about the component.</p>
+								<p class="regular">If you need more text, you can continue here. No problem.</p>
+							</div>
+						</div>
+
+						<div id="components-item4" class="modules">
+							<h3 class="module-header">ITEM 4</h3>
+							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<h5 class="header-black">REQUIREMENTS</h5>
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
+								<div class="panel-body">Specify here for Platform UI or Studio UI</div>
+								<div class="panel-heading"><strong>What -> </strong><span class="heading-text">(purpose)</span></div>
+								<div class="panel-body">Explain here the purpose we look for with this component.</div>
+								<div class="panel-heading"><strong>How -> </strong><span class="heading-text">(What does it do / differentiators)</span></div>
+								<div class="panel-body">Explain here what it will be achieved when using this component</div>
+								<div class="panel-heading"><strong>Variants -> </strong><span class="heading-text">Other variants &#38; states</span></div>
+								<div class="panel-body">
+									<p class="regular">Name of other component with common characteristics</p>
+								</div>
+							</div>
+							<div class="code-samples">
+								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<p class="regular">Explanation text of what are we going to get with this component.</p>
+								<p class="regular">General UI specifications of the components within the layout.</p>
+								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">Final remark, underscoring some details about the UI implications when placing this component within the component.</p>
+
+								<iframe src="https://codepen.io/eZ_UI/embed/KzEOde?default-tab=html&amp;line-numbers=true&amp;height=350" width="100%" height="350px"></iframe>
+								<pre class="language-markup"><code class="language-markup">&lt;code snippet with basic structure for the component here&gt;</code></pre>
+
+								<p class="regular">Closing description. Include here some text for underscoring something interesting or important about the component.</p>
+								<p class="regular">If you need more text, you can continue here. No problem.</p>
+							</div>
+						</div>
+
+						<div id="components-item5" class="modules">
+							<h3 class="module-header">ITEM 5</h3>
+							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<h5 class="header-black">REQUIREMENTS</h5>
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
+								<div class="panel-body">Specify here for Platform UI or Studio UI</div>
+								<div class="panel-heading"><strong>What -> </strong><span class="heading-text">(purpose)</span></div>
+								<div class="panel-body">Explain here the purpose we look for with this component.</div>
+								<div class="panel-heading"><strong>How -> </strong><span class="heading-text">(What does it do / differentiators)</span></div>
+								<div class="panel-body">Explain here what it will be achieved when using this component</div>
+								<div class="panel-heading"><strong>Variants -> </strong><span class="heading-text">Other variants &#38; states</span></div>
+								<div class="panel-body">
+									<p class="regular">Name of other component with common characteristics</p>
+								</div>
+							</div>
+							<div class="code-samples">
+								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<p class="regular">Explanation text of what are we going to get with this component.</p>
+								<p class="regular">General UI specifications of the components within the layout.</p>
+								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">Final remark, underscoring some details about the UI implications when placing this component within the component.</p>
+
+								<iframe src="https://codepen.io/eZ_UI/embed/KzEOde?default-tab=html&amp;line-numbers=true&amp;height=350" width="100%" height="350px"></iframe>
+								<pre class="language-markup"><code class="language-markup">&lt;code snippet with basic structure for the component here&gt;</code></pre>
+
+								<p class="regular">Closing description. Include here some text for underscoring something interesting or important about the component.</p>
+								<p class="regular">If you need more text, you can continue here. No problem.</p>
+							</div>
+						</div>
+
+						<div id="components-item6" class="modules">
+							<h3 class="module-header">ITEM 6</h3>
+							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<h5 class="header-black">REQUIREMENTS</h5>
+							<div class="panel panel-default">
+								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
+								<div class="panel-body">Specify here for Platform UI or Studio UI</div>
+								<div class="panel-heading"><strong>What -> </strong><span class="heading-text">(purpose)</span></div>
+								<div class="panel-body">Explain here the purpose we look for with this component.</div>
+								<div class="panel-heading"><strong>How -> </strong><span class="heading-text">(What does it do / differentiators)</span></div>
+								<div class="panel-body">Explain here what it will be achieved when using this component</div>
+								<div class="panel-heading"><strong>Variants -> </strong><span class="heading-text">Other variants &#38; states</span></div>
+								<div class="panel-body">
+									<p class="regular">Name of other component with common characteristics</p>
+								</div>
+							</div>
+							<div class="code-samples">
+								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<p class="regular">Explanation text of what are we going to get with this component.</p>
+								<p class="regular">General UI specifications of the components within the layout.</p>
+								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">More description here, if necessary.</p>
+								<p class="regular">Final remark, underscoring some details about the UI implications when placing this component within the component.</p>
+
+								<iframe src="https://codepen.io/eZ_UI/embed/KzEOde?default-tab=html&amp;line-numbers=true&amp;height=350" width="100%" height="350px"></iframe>
+								<pre class="language-markup"><code class="language-markup">&lt;code snippet with basic structure for the component here&gt;</code></pre>
+
+								<p class="regular">Closing description. Include here some text for underscoring something interesting or important about the component.</p>
+								<p class="regular">If you need more text, you can continue here. No problem.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div id="resources" class="content-section">
+						<h2 class="font-header">Resources</h2>
+						<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
+						<div id="resources-itemA" class="modules">
+							<h4 class="module-header">ITEM A</h4>
+							<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
+						</div>
+						<div id="resources-itemB" class="modules">
+							<h4 class="module-header">ITEM B</h4>
+							<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
+						</div>
+						<div id="resources-itemC" class="modules">
+							<h4 class="module-header">ITEM C</h4>
+							<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-2 scrollspy">
+					<ul id="navigation" class="nav hidden-xs hidden-sm" data-spy="affix">
+						<li>
+							<a href="#design">Design</a>
+							<ul class="nav">
+								<li>
+									<a href="#design-principles">
+										<span class="fa fa-angle-right"></span>Design Principles
+									</a>
+								</li>
+								<li>
+									<a href="#design-philosophy">
+										<span class="fa fa-angle-right"></span>Philosophy
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#components">Components</a>
+							<ul class="nav">
+								<li>
+									<a href="#components-item1">
+										<span class="fa fa-angle-right"></span>Item 1
+									</a>
+								</li>
+								<li>
+									<a href="#components-item2">
+										<span class="fa fa-angle-right"></span>Item 2
+									</a>
+								</li>
+								<li>
+									<a href="#components-item3">
+										<span class="fa fa-angle-right"></span>Item 3
+									</a>
+								</li>
+								<li>
+									<a href="#components-item4">
+										<span class="fa fa-angle-right"></span>Item 4
+									</a>
+								</li>
+								<li>
+									<a href="#components-item5">
+										<span class="fa fa-angle-right"></span>Item 5
+									</a>
+								</li>
+								<li>
+									<a href="#components-item6">
+										<span class="fa fa-angle-right"></span>Item 6
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#resources">Resources</a>
+							<ul class="nav">
+								<li>
+									<a href="#resources-itemA">
+										<span class="fa fa-angle-right"></span>Item A
+									</a>
+								</li>
+								<li>
+									<a href="#resources-itemB">
+										<span class="fa fa-angle-right"></span>Item B
+									</a>
+								</li>
+								<li>
+									<a href="#resources-itemC">
+										<span class="fa fa-angle-right"></span>Item C
+									</a>
+								</li>
+							</ul>
+						</li>
+						<div class="final">
+							<a class="back-top" href="#top">Back to top</a>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
