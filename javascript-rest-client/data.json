@@ -2687,6 +2687,26 @@
         {
             "file": "src/services/ContentService.js",
             "line": 563,
+            "description": "Loads user drafts",
+            "itemtype": "method",
+            "name": "loadUserDrafts",
+            "params": [
+                {
+                    "name": "userId",
+                    "description": "target user identifier (e.g. \"/api/ezp/v2/user/users/14\")",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "callback executed after performing the request (see\n {{#crossLink \"ContentService\"}} Note on the callbacks usage{{/crossLink}} for more info)",
+                    "type": "Function"
+                }
+            ],
+            "class": "ContentService"
+        },
+        {
+            "file": "src/services/ContentService.js",
+            "line": 581,
             "description": "Load current version for target content",
             "itemtype": "method",
             "name": "loadCurrentVersion",
@@ -2706,7 +2726,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 595,
+            "line": 613,
             "description": "Loads a specific version of target content. This method returns fields and relations",
             "itemtype": "method",
             "name": "loadContent",
@@ -2750,7 +2770,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 648,
+            "line": 666,
             "description": "Loads all versions for the target content",
             "itemtype": "method",
             "name": "loadVersions",
@@ -2770,7 +2790,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 680,
+            "line": 698,
             "description": "Updates the fields of a target draft",
             "itemtype": "method",
             "name": "updateContent",
@@ -2795,7 +2815,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 699,
+            "line": 717,
             "description": "Creates a draft from a published or archived version.",
             "itemtype": "method",
             "name": "createContentDraft",
@@ -2824,7 +2844,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 755,
+            "line": 773,
             "description": "Deletes target version of the content.",
             "itemtype": "method",
             "name": "deleteVersion",
@@ -2844,7 +2864,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 773,
+            "line": 791,
             "description": "Publishes target version of the content.",
             "itemtype": "method",
             "name": "publishVersion",
@@ -2864,7 +2884,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 795,
+            "line": 813,
             "description": "Creates a new location for target content object",
             "itemtype": "method",
             "name": "createLocation",
@@ -2889,7 +2909,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 828,
+            "line": 846,
             "description": "Loads all locations for target content object",
             "itemtype": "method",
             "name": "loadLocations",
@@ -2909,7 +2929,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 860,
+            "line": 878,
             "description": "Loads target location",
             "itemtype": "method",
             "name": "loadLocation",
@@ -2929,7 +2949,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 878,
+            "line": 896,
             "description": "Loads target location by remote Id",
             "itemtype": "method",
             "name": "loadLocationByRemoteId",
@@ -2949,7 +2969,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 906,
+            "line": 924,
             "description": "Updates target location",
             "itemtype": "method",
             "name": "updateLocation",
@@ -2974,7 +2994,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 925,
+            "line": 943,
             "description": "Loads children for the target location",
             "itemtype": "method",
             "name": "loadLocationChildren",
@@ -3011,7 +3031,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 983,
+            "line": 1001,
             "description": "Copies the subtree starting from \"subtree\" as a new subtree of \"targetLocation\"",
             "itemtype": "method",
             "name": "copySubtree",
@@ -3036,7 +3056,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1002,
+            "line": 1020,
             "description": "Moves the subtree to a new subtree of \"targetLocation\"\nThe targetLocation can also be /content/trash, in that case the location is put into the trash.",
             "itemtype": "method",
             "name": "moveSubtree",
@@ -3061,7 +3081,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1022,
+            "line": 1040,
             "description": "Swaps the location of the \"subtree\" with \"targetLocation\"",
             "itemtype": "method",
             "name": "swapLocation",
@@ -3086,7 +3106,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1041,
+            "line": 1059,
             "description": "Deletes the location and all it's subtrees\nEvery content object is deleted which does not have any other location.\nOtherwise the deleted location is removed from the content object.\nThe children are recursively deleted.",
             "itemtype": "method",
             "name": "deleteLocation",
@@ -3106,7 +3126,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1066,
+            "line": 1084,
             "description": "Creates a new view. Views are used to perform content queries by certain criteria.",
             "itemtype": "method",
             "name": "createView",
@@ -3129,7 +3149,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1109,
+            "line": 1127,
             "description": "Loads the relations of the target version.",
             "itemtype": "method",
             "name": "loadRelations",
@@ -3166,7 +3186,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1163,
+            "line": 1181,
             "description": "Loads the relations of the target content's current version",
             "itemtype": "method",
             "name": "loadCurrentRelations",
@@ -3203,7 +3223,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1216,
+            "line": 1234,
             "description": "Loads target relation",
             "itemtype": "method",
             "name": "loadRelation",
@@ -3223,7 +3243,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1234,
+            "line": 1252,
             "description": "Creates a new relation of type COMMON for the given draft.",
             "itemtype": "method",
             "name": "addRelation",
@@ -3251,7 +3271,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1275,
+            "line": 1293,
             "description": "Delete target relation",
             "itemtype": "method",
             "name": "deleteRelation",
@@ -3271,7 +3291,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1297,
+            "line": 1315,
             "description": "Loads all the trash can items",
             "itemtype": "method",
             "name": "loadTrashItems",
@@ -3303,7 +3323,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1347,
+            "line": 1365,
             "description": "Loads target trash can item",
             "itemtype": "method",
             "name": "loadTrashItem",
@@ -3323,7 +3343,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1365,
+            "line": 1383,
             "description": "Restores target trashItem",
             "itemtype": "method",
             "name": "recover",
@@ -3349,7 +3369,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1393,
+            "line": 1411,
             "description": "Delete target trashItem",
             "itemtype": "method",
             "name": "deleteTrashItem",
@@ -3369,7 +3389,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1411,
+            "line": 1429,
             "description": "Empty the trash can",
             "itemtype": "method",
             "name": "emptyThrash",
@@ -3386,7 +3406,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1428,
+            "line": 1446,
             "description": "Empty the trash can",
             "itemtype": "method",
             "name": "emptyTrash",
@@ -3401,7 +3421,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1461,
+            "line": 1479,
             "description": "Loads all the ObjectState groups",
             "itemtype": "method",
             "name": "loadObjectStateGroups",
@@ -3421,7 +3441,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1479,
+            "line": 1497,
             "description": "Loads target ObjectState group",
             "itemtype": "method",
             "name": "loadObjectStateGroup",
@@ -3441,7 +3461,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1497,
+            "line": 1515,
             "description": "Create a new ObjectState group",
             "itemtype": "method",
             "name": "createObjectStateGroup",
@@ -3466,7 +3486,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1516,
+            "line": 1534,
             "description": "Update target ObjectState group",
             "itemtype": "method",
             "name": "updateObjectStateGroup",
@@ -3491,7 +3511,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1535,
+            "line": 1553,
             "description": "Delete target ObjectState group",
             "itemtype": "method",
             "name": "deleteObjectStateGroup",
@@ -3511,7 +3531,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1553,
+            "line": 1571,
             "description": "Creates a new ObjectState in target group",
             "itemtype": "method",
             "name": "createObjectState",
@@ -3536,7 +3556,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1572,
+            "line": 1590,
             "description": "Load target ObjectState",
             "itemtype": "method",
             "name": "loadObjectState",
@@ -3556,7 +3576,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1590,
+            "line": 1608,
             "description": "Update target ObjectState",
             "itemtype": "method",
             "name": "updateObjectState",
@@ -3581,7 +3601,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1609,
+            "line": 1627,
             "description": "Delete target ObjectState",
             "itemtype": "method",
             "name": "deleteObjectState",
@@ -3601,7 +3621,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1627,
+            "line": 1645,
             "description": "Get ObjectStates of target content",
             "itemtype": "method",
             "name": "getContentState",
@@ -3621,7 +3641,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1645,
+            "line": 1663,
             "description": "Set ObjectStates of a content",
             "itemtype": "method",
             "name": "setContentState",
@@ -3649,7 +3669,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1690,
+            "line": 1708,
             "description": "Creates a new UrlAlias",
             "itemtype": "method",
             "name": "createUrlAlias",
@@ -3674,7 +3694,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1709,
+            "line": 1727,
             "description": "Loads all the global UrlAliases",
             "itemtype": "method",
             "name": "loadUrlAliases",
@@ -3694,7 +3714,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1727,
+            "line": 1745,
             "description": "Loads all the UrlAliases for a location",
             "itemtype": "method",
             "name": "listLocationAliases",
@@ -3721,7 +3741,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1757,
+            "line": 1775,
             "description": "Load target URL Alias",
             "itemtype": "method",
             "name": "loadUrlAlias",
@@ -3741,7 +3761,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1775,
+            "line": 1793,
             "description": "Delete target URL Alias",
             "itemtype": "method",
             "name": "deleteUrlAlias",
@@ -3761,7 +3781,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1797,
+            "line": 1815,
             "description": "Creates a new UrlWildcard",
             "itemtype": "method",
             "name": "createUrlWildcard",
@@ -3786,7 +3806,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1816,
+            "line": 1834,
             "description": "Loads all UrlWildcards",
             "itemtype": "method",
             "name": "loadUrlWildcards",
@@ -3806,7 +3826,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1834,
+            "line": 1852,
             "description": "Loads target UrlWildcard",
             "itemtype": "method",
             "name": "loadUrlWildcard",
@@ -3826,7 +3846,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1852,
+            "line": 1870,
             "description": "Deletes target UrlWildcard",
             "itemtype": "method",
             "name": "deleteUrlWildcard",
@@ -3846,7 +3866,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1870,
+            "line": 1888,
             "description": "Loads an image variation",
             "itemtype": "method",
             "name": "loadImageVariation",
