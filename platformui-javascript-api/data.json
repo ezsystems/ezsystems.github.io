@@ -17447,6 +17447,61 @@
         {
             "file": "Resources/public/js/views/services/plugins/ez-contenttreeplugin.js",
             "line": 130,
+            "description": "Builds the root node for the tree.",
+            "itemtype": "method",
+            "name": "_getRootNode",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "loadContent",
+                    "description": "Optional flag indicating whether the Content should be provided in the\nselection",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.ContentTree",
+            "module": "ez-contenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-contenttreeplugin.js",
+            "line": 162,
+            "description": "Prepares the recursive tree loading when a specific Location is\ndisplayed.",
+            "itemtype": "method",
+            "name": "_prepareRecursiveLoad",
+            "params": [
+                {
+                    "name": "tree",
+                    "description": "",
+                    "type": "Tree"
+                },
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.ContentTree",
+            "module": "ez-contenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-contenttreeplugin.js",
+            "line": 189,
             "description": "Loads the Content for each tree node representing the children of\n`levelLocation`.",
             "itemtype": "method",
             "name": "_loadContents",
@@ -17475,7 +17530,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-contenttreeplugin.js",
-            "line": 170,
+            "line": 229,
             "description": "The Tree structure to display the locations",
             "itemtype": "attribute",
             "name": "tree",
@@ -17725,29 +17780,6 @@
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
             "line": 115,
-            "description": "Builds the root node for the tree.",
-            "itemtype": "method",
-            "name": "_getRootNode",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "path",
-                    "description": "",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Object"
-            },
-            "class": "eZ.Plugin.DiscoveryBarContentTree",
-            "module": "ez-discoverybarcontenttreeplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 144,
             "description": "Builds the complete to tree and set it to the `view`",
             "itemtype": "method",
             "name": "_buildTree",
@@ -17766,29 +17798,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 167,
-            "description": "Prepares the recursive tree loading when a specific Location is\ndisplayed.",
-            "itemtype": "method",
-            "name": "_prepareRecursiveLoad",
-            "params": [
-                {
-                    "name": "tree",
-                    "description": "",
-                    "type": "Tree"
-                },
-                {
-                    "name": "path",
-                    "description": "",
-                    "type": "Array"
-                }
-            ],
-            "class": "eZ.Plugin.DiscoveryBarContentTree",
-            "module": "ez-discoverybarcontenttreeplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 191,
+            "line": 140,
             "description": "Loads the tree root node. The root Location is also loaded if needed.",
             "itemtype": "method",
             "name": "_loadRootNode",
@@ -17807,7 +17817,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 219,
+            "line": 168,
             "description": "Returns the response object.",
             "itemtype": "method",
             "name": "_getResponse",
@@ -17823,7 +17833,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 230,
+            "line": 179,
             "description": "Returns the CAPI",
             "itemtype": "method",
             "name": "_getCAPI",
@@ -17839,7 +17849,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-discoverybarcontenttreeplugin.js",
-            "line": 244,
+            "line": 193,
             "description": "The system root location id",
             "itemtype": "attribute",
             "name": "rootLocationId",
@@ -19070,6 +19080,30 @@
                     "name": "browseView",
                     "description": "",
                     "type": "eZ.UniversalDiscoveryBrowseView"
+                }
+            ],
+            "class": "eZ.Plugin.UniversalDiscoveryContentTree",
+            "module": "ez-universaldiscoverycontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-universaldiscoverycontenttreeplugin.js",
+            "line": 78,
+            "description": "`Get the path of the UDW starting Location.",
+            "itemtype": "method",
+            "name": "_loadStartingLocationPath",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "startingLocation",
+                    "description": "",
+                    "type": "eZ.Location"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
                 }
             ],
             "class": "eZ.Plugin.UniversalDiscoveryContentTree",
@@ -24350,7 +24384,7 @@
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
             "line": 84,
-            "description": "`treeNavigate` event handler. It fires the `selectedContent` event\nand set the content structure on the selected view so that it is\ndisplayed.",
+            "description": "`treeNavigate` event handler. It will select the node in the tree\nand call _selectContent that will set the content structure in the selected view",
             "itemtype": "method",
             "name": "_selectContent",
             "access": "protected",
@@ -24368,7 +24402,43 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 102,
+            "line": 99,
+            "description": "Public method to select a content",
+            "itemtype": "method",
+            "name": "selectContent",
+            "params": [
+                {
+                    "name": "struct",
+                    "description": "the node data",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.UniversalDiscoveryBrowseView",
+            "module": "ez-universaldiscoverybrowseview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
+            "line": 109,
+            "description": "Fire the selectcontent event and set the content structure on the selected view so that it is\ndisplayed.",
+            "itemtype": "method",
+            "name": "_selectContent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "struct",
+                    "description": "the node data",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.UniversalDiscoveryBrowseView",
+            "module": "ez-universaldiscoverybrowseview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
+            "line": 122,
             "description": "`visibleChange` event handler. It makes to reset the current\nselection when the browse method is hidden/showed",
             "itemtype": "method",
             "name": "_unselectContent",
@@ -24380,7 +24450,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 114,
+            "line": 134,
             "description": "Fires the `selectContent` event for the given `selection`",
             "itemtype": "method",
             "name": "_fireSelectContent",
@@ -24399,7 +24469,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 122,
+            "line": 142,
             "description": "Fired when a content is selected or unselected. The event facade\nprovides the content structure (the contentInfo, location and content\ntype models) if a selection was made.",
             "itemtype": "event",
             "name": "selectContent",
@@ -24433,7 +24503,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 139,
+            "line": 159,
             "itemtype": "attribute",
             "name": "title",
             "default": "'Browse'",
@@ -24443,7 +24513,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 148,
+            "line": 168,
             "itemtype": "attribute",
             "name": "identifier",
             "default": "'browse'",
@@ -24453,7 +24523,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 157,
+            "line": 177,
             "description": "Holds the tree view",
             "itemtype": "attribute",
             "name": "treeView",
@@ -24464,7 +24534,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 171,
+            "line": 191,
             "description": "Holds the selected view that displays the currently selected\ncontent (if any)",
             "itemtype": "attribute",
             "name": "selectedView",
@@ -24812,6 +24882,18 @@
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
             "line": 99,
+            "description": "The Location Id where the content discovery can start.",
+            "itemtype": "attribute",
+            "name": "multiple",
+            "type": "{String}",
+            "default": "false if there's no starting location",
+            "class": "eZ.UniversalDiscoveryMethodBaseView",
+            "module": "ez-universaldiscoverymethodbaseview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
+            "line": 110,
             "description": "Flag indicating whether the Content should be provided in the\nselection.",
             "itemtype": "attribute",
             "name": "loadContent",
@@ -24823,7 +24905,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 111,
+            "line": 122,
             "description": "The visible flag. it is updated by the universal discovery view\ndepending on the tab state.",
             "itemtype": "attribute",
             "name": "visible",
@@ -24835,7 +24917,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 123,
+            "line": 134,
             "description": "Checks wether the content is already selected.",
             "itemtype": "attribute",
             "name": "isAlreadySelected",
@@ -24846,7 +24928,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 136,
+            "line": 147,
             "description": "Checks wether the content is selectable.",
             "itemtype": "attribute",
             "name": "isSelectable",
@@ -31397,7 +31479,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 272,
+            "line": 273,
             "description": "Stores a reference to the visible method view",
             "itemtype": "property",
             "name": "_visibleMethodView",
@@ -31410,7 +31492,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 295,
+            "line": 297,
             "description": "tabChange event handler to update the `visibleMethod` attribute.",
             "itemtype": "method",
             "name": "_updateVisibleMethod",
@@ -31429,7 +31511,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 312,
+            "line": 314,
             "description": "Publishes the cancelDiscover and contentDiscovered events",
             "itemtype": "method",
             "name": "_publishEvents",
@@ -31441,7 +31523,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 333,
+            "line": 335,
             "description": "cancelDiscoverHandlerChange and contentDiscoveredHandlerChange event\nhandler. It makes sure the potential previous event handler are\nremoved and it adds the new handlers if any.",
             "itemtype": "method",
             "name": "_syncEventHandler",
@@ -31470,7 +31552,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 353,
+            "line": 355,
             "description": "Resets the state of the view",
             "itemtype": "method",
             "name": "_resetState",
@@ -31482,7 +31564,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 367,
+            "line": 369,
             "description": "Custom reset implementation to make sure to reset the confirmed list\nsub view.",
             "itemtype": "method",
             "name": "reset",
@@ -31499,7 +31581,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 382,
+            "line": 384,
             "description": "Tap event handler on the cancel link(s).",
             "itemtype": "method",
             "name": "_cancel",
@@ -31518,7 +31600,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 391,
+            "line": 393,
             "description": "Fired when the user cancel the selection. By default, the\napplication will close the universal discovery view but this\nevent can be prevented or stopped to avoid that.",
             "itemtype": "event",
             "name": "cancelDiscover",
@@ -31529,7 +31611,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 402,
+            "line": 404,
             "description": "Tap event handler on the confirm button",
             "itemtype": "method",
             "name": "_confirmSelection",
@@ -31541,7 +31623,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 409,
+            "line": 411,
             "description": "Fired when the user confirms the selection. By default, the\napplication will close the universal discovery view but this\nevent can be prevented and stopped so that it does not bubble to\nthe app plugin responsible for that.",
             "itemtype": "event",
             "name": "contentDiscovered",
@@ -31559,7 +31641,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 441,
+            "line": 443,
             "description": "Renders the available methods in a DOM element which id is the\nHTML identifier of the method.",
             "itemtype": "method",
             "name": "_renderMethods",
@@ -31571,7 +31653,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 456,
+            "line": 458,
             "description": "Builds an array containing objects that describes the available\nmethods.",
             "access": "protected",
             "tagname": "",
@@ -31586,7 +31668,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 478,
+            "line": 480,
             "description": "Title of the universal discovery view",
             "itemtype": "attribute",
             "name": "title",
@@ -31598,7 +31680,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 489,
+            "line": 491,
             "description": "Flag indicating whether the user is able to select several\ncontents.",
             "itemtype": "attribute",
             "name": "multiple",
@@ -31610,7 +31692,19 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 501,
+            "line": 503,
+            "description": "The location id that the UDW tree will select on start",
+            "itemtype": "attribute",
+            "name": "startingLocationId",
+            "type": "{String}",
+            "default": "false if there is no starting location",
+            "class": "eZ.UniversalDiscoveryView",
+            "module": "ez-universaldiscoveryview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
+            "line": 514,
             "description": "Flag indicating whether the Content should be provided in the\nselection.",
             "itemtype": "attribute",
             "name": "loadContent",
@@ -31622,7 +31716,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 513,
+            "line": 526,
             "description": "An event handler function for the `contentDiscovered` event.",
             "itemtype": "attribute",
             "name": "contentDiscoveredHandler",
@@ -31634,7 +31728,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 524,
+            "line": 537,
             "description": "An event handler function for the `cancelDiscover` event.",
             "itemtype": "attribute",
             "name": "cancelDiscoverHandler",
@@ -31646,7 +31740,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 535,
+            "line": 548,
             "description": "The available methods to discover content. Each element in the\narray should be an instance of a class extending\nY.eZ.UniversalDiscoveryMethodBaseView.",
             "itemtype": "attribute",
             "name": "methods",
@@ -31657,7 +31751,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 564,
+            "line": 579,
             "description": "The identifier of the visible method",
             "itemtype": "attribute",
             "name": "visibleMethod",
@@ -31669,7 +31763,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 575,
+            "line": 590,
             "description": "The current selection of the discovery. This selection is\nprovided to the contentDiscovered event handler in the event\nfacade. Depending on the `multiple` flag and on the user action,\nthe selection is either null or an object (`multiple` set to\nfalse) or an array (`multiple` set to true)",
             "itemtype": "attribute",
             "name": "selection",
@@ -31682,7 +31776,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 592,
+            "line": 607,
             "description": "The confirmed list view. It displays the user's current confirmed\nlist content.",
             "itemtype": "attribute",
             "name": "@confirmedListView",
@@ -31693,7 +31787,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 607,
+            "line": 622,
             "description": "An arbitrary object the component triggering the universal\ndiscovery can set. It is useful to store some data the\ncontentDiscovered and cancelDiscover handlers need.",
             "itemtype": "attribute",
             "name": "data",
@@ -31705,7 +31799,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 620,
+            "line": 635,
             "description": "Checks wether the content is selectable. Function can be provided in the config\nwhen firing the `contentDiscover` event so it can check if content is selectable\ndepending on the context where UDW is triggered.",
             "itemtype": "attribute",
             "name": "isSelectable",

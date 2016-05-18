@@ -504,7 +504,7 @@ YUI.add(&#x27;ez-universaldiscoverybrowseview&#x27;, function (Y) {
      */
     Y.eZ.UniversalDiscoveryBrowseView = Y.Base.create(&#x27;universalDiscoveryBrowseView&#x27;, Y.eZ.UniversalDiscoveryMethodBaseView, [], {
         initializer: function () {
-            this.on(&#x27;*:treeNavigate&#x27;, this._selectContent);
+            this.on(&#x27;*:treeNavigate&#x27;, this._uiSelectContent);
             this.after([&#x27;multipleChange&#x27;, &#x27;isSelectableChange&#x27;], this._setSelectedViewAttrs);
             this.after(&#x27;visibleChange&#x27;, this._unselectContent);
         },
@@ -564,21 +564,41 @@ YUI.add(&#x27;ez-universaldiscoverybrowseview&#x27;, function (Y) {
         },
 
         /**
-         * &#x60;treeNavigate&#x60; event handler. It fires the &#x60;selectedContent&#x60; event
-         * and set the content structure on the selected view so that it is
-         * displayed.
-         *
+         * &#x60;treeNavigate&#x60; event handler. It will select the node in the tree
+         * and call _selectContent that will set the content structure in the selected view
          * @method _selectContent
          * @protected
          * @param {EventFacade} e
          */
-        _selectContent: function (e) {
+        _uiSelectContent: function (e) {
             var node = e.tree.getNodeById(e.nodeId);
 
             e.preventDefault();
-            this._fireSelectContent(node.data);
             node.select();
-            this.get(&#x27;selectedView&#x27;).set(&#x27;contentStruct&#x27;, node.data);
+            this._selectContent(node.data);
+        },
+
+        /**
+         * Public method to select a content
+         *
+         * @method selectContent
+         * @param {Object} struct the node data
+         */
+        selectContent: function (struct) {
+            this._selectContent(struct);
+        },
+
+        /**
+         * Fire the selectcontent event and set the content structure on the selected view so that it is
+         * displayed.
+         *
+         * @method _selectContent
+         * @protected
+         * @param {Object} struct the node data
+         */
+        _selectContent: function (struct) {
+            this._fireSelectContent(struct);
+            this.get(&#x27;selectedView&#x27;).set(&#x27;contentStruct&#x27;, struct);
         },
 
         /**

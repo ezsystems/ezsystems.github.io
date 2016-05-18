@@ -595,35 +595,6 @@ YUI.add(&#x27;ez-discoverybarcontenttreeplugin&#x27;, function (Y) {
         },
 
         /**
-         * Builds the root node for the tree.
-         *
-         * @method _getRootNode
-         * @protected
-         * @param {Array} path
-         * @return {Object}
-         */
-        _getRootNode: function (path) {
-            var data = {},
-                id = this.get(&#x27;rootLocationId&#x27;);
-
-            if ( path[0] ) {
-                data = {
-                    location: path[0],
-                    contentInfo: path[0].get(&#x27;contentInfo&#x27;),
-                };
-                id = path[0].get(&#x27;id&#x27;);
-            }
-            return {
-                data: data,
-                id: id,
-                state: {
-                    leaf: false,
-                },
-                canHaveChildren: true,
-            };
-        },
-
-        /**
          * Builds the complete to tree and set it to the &#x60;view&#x60;
          *
          * @method _buildTree
@@ -646,29 +617,7 @@ YUI.add(&#x27;ez-discoverybarcontenttreeplugin&#x27;, function (Y) {
             this._loadRootNode(tree);
         },
 
-        /**
-         * Prepares the recursive tree loading when a specific Location is
-         * displayed.
-         *
-         * @method _prepareRecursiveLoad
-         * @param {Tree} tree
-         * @param {Array} path
-         */
-        _prepareRecursiveLoad: function (tree, path) {
-            var subscription;
 
-            subscription = tree.lazy.on(&#x27;load&#x27;, function (evt) {
-                path.shift();
-                if ( path[0] ) {
-                    tree.getNodeById(path[0].get(&#x27;id&#x27;)).open();
-                    if ( path.length === 1 ) {
-                        tree.getNodeById(path[0].get(&#x27;id&#x27;)).select();
-                    }
-                } else {
-                    subscription.detach();
-                }
-            });
-        },
 
         /**
          * Loads the tree root node. The root Location is also loaded if needed.
