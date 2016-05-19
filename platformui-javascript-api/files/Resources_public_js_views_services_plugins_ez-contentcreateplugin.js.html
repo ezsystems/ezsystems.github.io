@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
-                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,7 +254,6 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
-                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -402,9 +401,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
-                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -515,7 +512,6 @@ YUI.add(&#x27;ez-contentcreateplugin&#x27;, function (Y) {
          */
         parallelLoad: function (next) {
             this.set(&#x27;contentType&#x27;, undefined);
-            this.set(&#x27;languageCode&#x27;, undefined);
             this.set(&#x27;parentLocation&#x27;, undefined);
             next();
         },
@@ -528,7 +524,7 @@ YUI.add(&#x27;ez-contentcreateplugin&#x27;, function (Y) {
          * @param {eZ.ViewService} service
          */
         setNextViewServiceParameters: function (service) {
-            if ( this.get(&#x27;contentType&#x27;) &amp;&amp; this.get(&#x27;languageCode&#x27;) &amp;&amp; this.get(&#x27;parentLocation&#x27;) ) {
+            if ( this.get(&#x27;contentType&#x27;) &amp;&amp; this.get(&#x27;parentLocation&#x27;) ) {
                 service.setAttrs({
                     contentType: this.get(&#x27;contentType&#x27;),
                     languageCode: this.get(&#x27;languageCode&#x27;),
@@ -600,7 +596,6 @@ YUI.add(&#x27;ez-contentcreateplugin&#x27;, function (Y) {
 
             this.setAttrs({
                 contentType: event.contentType,
-                languageCode: event.languageCode,
                 parentLocation: service.get(&#x27;location&#x27;),
                 parentContent: service.get(&#x27;content&#x27;)
             });
@@ -623,11 +618,15 @@ YUI.add(&#x27;ez-contentcreateplugin&#x27;, function (Y) {
              * The language code to use to create the new content
              *
              * @attribute languageCode
-             * @default undefined
+             * @default value taken from app.contentCreationDefaultLanguageCode
              * @type String
              */
-            languageCode: {},
-
+            languageCode: {
+                valueFn: function () {
+                    var app = this.get(&#x27;host&#x27;).get(&#x27;app&#x27;);
+                    return app.get(&#x27;contentCreationDefaultLanguageCode&#x27;);
+                }
+            },
             /**
              * The parent location of the content that will be created
              *

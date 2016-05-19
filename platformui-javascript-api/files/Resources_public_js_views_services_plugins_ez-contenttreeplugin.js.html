@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
-                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,7 +254,6 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
-                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -402,9 +401,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
-                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -607,65 +604,6 @@ YUI.add(&#x27;ez-contenttreeplugin&#x27;, function (Y) {
                     callback();
                 });
             }, this));
-        },
-
-        /**
-         * Builds the root node for the tree.
-         *
-         * @method _getRootNode
-         * @protected
-         * @param {Array} path
-         * @param {Boolean} loadContent Optional flag indicating whether the Content should be provided in the
-         * selection
-         * @return {Object}
-         */
-        _getRootNode: function (path, loadContent) {
-            var data = {},
-                id = this.get(&#x27;rootLocationId&#x27;);
-      
-            if ( path[0] ) {
-                data = {
-                    location: path[0],
-                    contentInfo: path[0].get(&#x27;contentInfo&#x27;),
-                    loadContent: loadContent,
-                };
-                id = path[0].get(&#x27;id&#x27;);
-            }
-            return {
-                data: data,
-                id: id,
-                state: {
-                    leaf: false,
-                },
-                canHaveChildren: true,
-            };
-        },
-
-        /**
-         * Prepares the recursive tree loading when a specific Location is
-         * displayed.
-         *
-         * @method _prepareRecursiveLoad
-         * @param {Tree} tree
-         * @param {Array} path
-         * @param {Function} callback
-         */
-        _prepareRecursiveLoad: function (tree, path, callback) {
-            var subscription;
-
-            subscription = tree.lazy.on(&#x27;load&#x27;, function (evt) {
-                path.shift();
-                if ( path[0] ) {
-                    tree.getNodeById(path[0].get(&#x27;id&#x27;)).open();
-                    if ( path.length === 1 ) {
-                        tree.getNodeById(path[0].get(&#x27;id&#x27;)).select();
-                        subscription.detach();
-                        if (callback) {
-                            callback();
-                        }
-                    }
-                }
-            });
         },
 
         /**

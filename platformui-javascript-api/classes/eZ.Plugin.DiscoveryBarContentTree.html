@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
-                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,7 +254,6 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
-                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -402,9 +401,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
-                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -654,7 +651,7 @@ handle the content tree related events and fetching.</p>
                                 <a href="#method__getResponse">_getResponse</a>
 
                             </li>
-                            <li class="index-item method protected inherited">
+                            <li class="index-item method protected">
                                 <a href="#method__getRootNode">_getRootNode</a>
 
                             </li>
@@ -738,7 +735,7 @@ handle the content tree related events and fetching.</p>
                                 <a href="#method__preInitEventCfg">_preInitEventCfg</a>
 
                             </li>
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method__prepareRecursiveLoad">_prepareRecursiveLoad</a>
 
                             </li>
@@ -1444,7 +1441,7 @@ this class for iteration performance reasons.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l115"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:115</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l144"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:144</code></a>
         </p>
 
 
@@ -2335,7 +2332,7 @@ rootLocationId</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l179"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:179</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l230"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:230</code></a>
         </p>
 
 
@@ -2558,7 +2555,7 @@ for passing through to <code>addAttrs</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l168"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:168</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:219</code></a>
         </p>
 
 
@@ -2581,16 +2578,13 @@ for passing through to <code>addAttrs</code>.
 
 
 </div>
-<div id="method__getRootNode" class="method item protected inherited">
+<div id="method__getRootNode" class="method item protected">
     <h3 class="name"><code>_getRootNode</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
                         <code>path</code>
-                </li>
-                <li class="arg">
-                        <code>loadContent</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -2607,9 +2601,9 @@ for passing through to <code>addAttrs</code>.
 
 
     <div class="meta">
-                <p>Inherited from
-                <a href="../classes/eZ.Plugin.ContentTree.html#method__getRootNode">eZ.Plugin.ContentTree</a>:
-        <a href="../files/Resources_public_js_views_services_plugins_ez-contenttreeplugin.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-contenttreeplugin.js:130</code></a>
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l115"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:115</code></a>
         </p>
 
 
@@ -2632,18 +2626,6 @@ for passing through to <code>addAttrs</code>.
 
                     <div class="param-description">
                          
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">loadContent</code>
-                        <span class="type">Boolean</span>
-
-
-                    <div class="param-description">
-                        <p>Optional flag indicating whether the Content should be provided in the
-selection</p>
-
                     </div>
 
                 </li>
@@ -3413,7 +3395,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.Plugin.ContentTree.html#method__loadContents">eZ.Plugin.ContentTree</a>:
-        <a href="../files/Resources_public_js_views_services_plugins_ez-contenttreeplugin.js.html#l189"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-contenttreeplugin.js:189</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-contenttreeplugin.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-contenttreeplugin.js:130</code></a>
         </p>
 
 
@@ -3556,7 +3538,7 @@ the <code>load</code> method of the Y.Plugin.Tree.Lazy plugin</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l140"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:140</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l191"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:191</code></a>
         </p>
 
 
@@ -3830,7 +3812,7 @@ construction, prior to init.
 
 
 </div>
-<div id="method__prepareRecursiveLoad" class="method item inherited">
+<div id="method__prepareRecursiveLoad" class="method item">
     <h3 class="name"><code>_prepareRecursiveLoad</code></h3>
 
         <div class="args">
@@ -3840,9 +3822,6 @@ construction, prior to init.
                 </li>
                 <li class="arg">
                         <code>path</code>
-                </li>
-                <li class="arg">
-                        <code>callback</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -3855,9 +3834,9 @@ construction, prior to init.
 
 
     <div class="meta">
-                <p>Inherited from
-                <a href="../classes/eZ.Plugin.ContentTree.html#method__prepareRecursiveLoad">eZ.Plugin.ContentTree</a>:
-        <a href="../files/Resources_public_js_views_services_plugins_ez-contenttreeplugin.js.html#l162"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-contenttreeplugin.js:162</code></a>
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l167"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:167</code></a>
         </p>
 
 
@@ -3887,16 +3866,6 @@ displayed.</p>
                 <li class="param">
                         <code class="param-name">path</code>
                         <span class="type">Array</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">callback</code>
-                        <span class="type">Function</span>
 
 
                     <div class="param-description">
@@ -8365,7 +8334,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l193"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:193</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-discoverybarcontenttreeplugin.js.html#l244"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-discoverybarcontenttreeplugin.js:244</code></a>
                             </p>
                     
                     
@@ -8395,7 +8364,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.Plugin.ContentTree.html#attr_tree">eZ.Plugin.ContentTree</a>:
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-contenttreeplugin.js.html#l229"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-contenttreeplugin.js:229</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-contenttreeplugin.js.html#l170"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-contenttreeplugin.js:170</code></a>
                             </p>
                     
                     

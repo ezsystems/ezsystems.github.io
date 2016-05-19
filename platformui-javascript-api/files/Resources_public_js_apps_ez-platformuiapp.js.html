@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
-                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,7 +254,6 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
-                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -402,9 +401,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
-                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -676,7 +673,8 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
          */
         _dispatchConfig: function () {
             var config = this.get(&#x27;config&#x27;),
-                systemLanguageList = {};
+                systemLanguageList = {},
+                defaultLanguageCode;
 
             if ( !config ) {
                 return;
@@ -703,8 +701,12 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
             if ( config.languages ) {
                 Y.Array.each(config.languages, function (language) {
                     systemLanguageList[language.languageCode] = language;
+                    if ( language.default ) {
+                        defaultLanguageCode = language.languageCode;
+                    }
                 });
                 this._set(&#x27;systemLanguageList&#x27;, systemLanguageList);
+                this._set(&#x27;contentCreationDefaultLanguageCode&#x27;, defaultLanguageCode);
                 delete config.languages;
             }
         },
@@ -1512,6 +1514,19 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
             systemLanguageList: {
                 readOnly: true,
                 value: {}
+            },
+
+            /**
+             * Default language code, as defined by the current siteaccess language config.
+             *
+             * @attribute contentCreationDefaultLanguageCode
+             * @default &quot;eng-GB&quot;
+             * @type {String}
+             * @readOnly
+             */
+            contentCreationDefaultLanguageCode: {
+                readOnly: true,
+                value: &quot;eng-GB&quot;
             },
         }
     });

@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
-                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,7 +254,6 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
-                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -402,9 +401,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
-                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
-                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -540,7 +537,7 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
                 type = this.get(&#x27;contentType&#x27;),
                 defaultFields = {};
 
-            content.set(&#x27;name&#x27;, &#x27;New &quot;&#x27; + this.get(&#x27;contentType&#x27;).get(&#x27;names&#x27;)[&#x27;eng-GB&#x27;] + &#x27;&quot;&#x27;);
+            content.set(&#x27;name&#x27;, this._getNewContentName());
             Y.Object.each(type.get(&#x27;fieldDefinitions&#x27;), function (fieldDef, identifier) {
                 defaultFields[identifier] = {
                     fieldDefinitionIdentifier: identifier,
@@ -592,6 +589,25 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
                     languageCode: content.get(&#x27;mainLanguageCode&#x27;),
                 });
             });
+        },
+
+        /**
+         * Gets the name for a new content based on current contentType and languageCode
+         *
+         * @method _getNewContentName
+         * @protected
+         */
+        _getNewContentName: function() {
+            var app = this.get(&#x27;app&#x27;),
+                type = this.get(&#x27;contentType&#x27;),
+                contentTypeNames,
+                contentTypeName;
+
+            contentTypeNames = type.get(&#x27;names&#x27;);
+            contentTypeName = contentTypeNames[app.get(&#x27;contentCreationDefaultLanguageCode&#x27;)]
+                || contentTypeNames[Object.keys(contentTypeNames)[0]];
+
+            return &#x27;New &quot;&#x27; + contentTypeName + &#x27;&quot;&#x27;;
         },
 
         /**
