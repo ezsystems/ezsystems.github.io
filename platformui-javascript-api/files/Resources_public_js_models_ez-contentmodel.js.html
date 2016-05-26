@@ -789,7 +789,13 @@ YUI.add(&#x27;ez-contentmodel&#x27;, function (Y) {
 
             updateStruct.setMainLocation(locationId);
 
-            contentService.updateContentMetadata(this.get(&#x27;id&#x27;), updateStruct, callback);
+            contentService.updateContentMetadata(this.get(&#x27;id&#x27;), updateStruct, Y.bind(function (error, response) {
+                if (!error) {
+                    this.get(&#x27;resources&#x27;).MainLocation = locationId;
+                }
+
+                callback(error, response);
+            },this));
         },
 
         /**

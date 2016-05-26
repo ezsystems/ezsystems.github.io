@@ -32259,7 +32259,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 316,
+            "line": 322,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -32288,7 +32288,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 344,
+            "line": 350,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -32300,7 +32300,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 356,
+            "line": 362,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -32312,7 +32312,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 367,
+            "line": 373,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
