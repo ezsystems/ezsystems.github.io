@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
+                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,6 +254,7 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
+                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -401,7 +402,9 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
+                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -746,7 +749,8 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
          * @protected
          */
         _updateMethods: function () {
-            var visibleMethod = this.get(&#x27;visibleMethod&#x27;);
+            var visibleMethod = this.get(&#x27;visibleMethod&#x27;),
+                startingLocationId = this.get(&#x27;startingLocationId&#x27;);
 
             /**
              * Stores a reference to the visible method view
@@ -762,6 +766,7 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
                 method.setAttrs({
                     &#x27;multiple&#x27;: this.get(&#x27;multiple&#x27;),
                     &#x27;loadContent&#x27;: this.get(&#x27;loadContent&#x27;),
+                    &#x27;startingLocationId&#x27;: startingLocationId,
                     &#x27;visible&#x27;: visible,
                     &#x27;isSelectable&#x27;: Y.bind(this.get(&#x27;isSelectable&#x27;), this)
                 });
@@ -978,6 +983,17 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
             },
 
             /**
+             * The location id that the UDW tree will select on start
+             * @attribute startingLocationId
+             * @type {String}
+             * @default false if there is no starting location
+             *
+             */
+            startingLocationId: {
+                value: false,
+            },
+
+            /**
              * Flag indicating whether the Content should be provided in the
              * selection.
              *
@@ -1027,14 +1043,16 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
                             priority: 100,
                             multiple: this.get(&#x27;multiple&#x27;),
                             loadContent: this.get(&#x27;loadContent&#x27;),
-                            isAlreadySelected: Y.bind(this._isAlreadySelected, this)
+                            isAlreadySelected: Y.bind(this._isAlreadySelected, this),
+                            startingLocationId: this.get(&#x27;startingLocationId&#x27;)
                         }),
                         new Y.eZ.UniversalDiscoverySearchView({
                             bubbleTargets: this,
                             priority: 200,
                             multiple: this.get(&#x27;multiple&#x27;),
                             loadContent: this.get(&#x27;loadContent&#x27;),
-                            isAlreadySelected: Y.bind(this._isAlreadySelected, this)
+                            isAlreadySelected: Y.bind(this._isAlreadySelected, this),
+                            startingLocationId: this.get(&#x27;startingLocationId&#x27;)
                         }),
                     ];
                 },

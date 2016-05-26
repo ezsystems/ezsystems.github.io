@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
+                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,6 +254,7 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
+                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -401,7 +402,9 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
+                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -490,60 +493,7 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var IS_PAGE_LOADING = &#x27;is-page-loading&#x27;,
-        SubitemGridItemView;
-
-    /**
-     * The subitem grid item view. Note: This component is **private** as this
-     * part will shortly change and will be replaced by the concept of content
-     * cards.
-     *
-     * @private
-     * @class SubitemGridItemView
-     * @constructor
-     * @extends eZ.TemplateBasedView
-     */
-    SubitemGridItemView = Y.Base.create(&#x27;subitemGridItemView&#x27;, Y.eZ.TemplateBasedView, [], {
-        initializer: function () {
-            this.containerTemplate = &#x27;&lt;div class=&quot;ez-subitemgrid-item&quot;/&gt;&#x27;;
-        },
-
-        render: function () {
-            this.get(&#x27;container&#x27;).setHTML(this.template({
-                content: this.get(&#x27;content&#x27;).toJSON(),
-                location: this.get(&#x27;location&#x27;).toJSON(),
-                contentType: this.get(&#x27;contentType&#x27;).toJSON(),
-            }));
-            return this;
-        },
-    }, {
-        ATTRS: {
-            /**
-             * The content type of the content being displayed
-             *
-             * @attribute contentType
-             * @type {eZ.ContentType}
-             */
-            contentType: {},
-
-            /**
-             * The location of the content item being displayed
-             *
-             * @attribute location
-             * @type {eZ.Location}
-             */
-            location: {},
-
-            /**
-             * The content being displayed
-             *
-             * @attribute content
-             * @type {eZ.Content}
-             */
-            content: {},
-        },
-    });
-
+    var IS_PAGE_LOADING = &#x27;is-page-loading&#x27;;
 
     /**
      * The subitem grid view.
@@ -762,12 +712,14 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
             var gridContent = this.get(&#x27;container&#x27;).one(&#x27;.ez-subitemgrid-content&#x27;);
 
             newSubitems.forEach(function (struct) {
-                var itemView = new SubitemGridItemView(struct);
+                var itemView = new Y.eZ.SubitemGridItemView(struct);
 
+                itemView.addTarget(this);
                 this._gridItemViews.push(itemView);
                 gridContent.append(
                     itemView.render().get(&#x27;container&#x27;)
                 );
+                itemView.set(&#x27;active&#x27;, true);
             }, this);
         },
 
@@ -783,7 +735,7 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
         _getNewlyAddedSubitems: function (subitemNewVal, subitemPrevVal) {
             var subitemPreviousCount = subitemPrevVal ? subitemPrevVal.length : 0,
                 subitemNewCount = subitemNewVal.length;
-            
+
             return this.get(&#x27;subitems&#x27;).slice(subitemPreviousCount - subitemNewCount);
         },
 

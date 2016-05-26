@@ -218,8 +218,8 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
-                                <li><a href="../classes/eZ.SubitemGridItemView.html">eZ.SubitemGridItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
+                                <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -254,6 +254,7 @@
                                 <li><a href="../classes/eZ.ViewService.html">eZ.ViewService</a></li>
                                 <li><a href="../classes/eZ.XmlTextEditView.html">eZ.XmlTextEditView</a></li>
                                 <li><a href="../classes/eZ.XmlTextView.html">eZ.XmlTextView</a></li>
+                                <li><a href="../classes/SubitemGridItemView.html">SubitemGridItemView</a></li>
                             </ul>
                 
                 
@@ -401,7 +402,9 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
+                                <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -501,7 +504,7 @@ YUI.add(&#x27;ez-universaldiscoverybrowseview&#x27;, function (Y) {
      */
     Y.eZ.UniversalDiscoveryBrowseView = Y.Base.create(&#x27;universalDiscoveryBrowseView&#x27;, Y.eZ.UniversalDiscoveryMethodBaseView, [], {
         initializer: function () {
-            this.on(&#x27;*:treeNavigate&#x27;, this._selectContent);
+            this.on(&#x27;*:treeNavigate&#x27;, this._uiSelectContent);
             this.after([&#x27;multipleChange&#x27;, &#x27;isSelectableChange&#x27;], this._setSelectedViewAttrs);
             this.after(&#x27;visibleChange&#x27;, this._unselectContent);
         },
@@ -561,21 +564,41 @@ YUI.add(&#x27;ez-universaldiscoverybrowseview&#x27;, function (Y) {
         },
 
         /**
-         * &#x60;treeNavigate&#x60; event handler. It fires the &#x60;selectedContent&#x60; event
-         * and set the content structure on the selected view so that it is
-         * displayed.
-         *
+         * &#x60;treeNavigate&#x60; event handler. It will select the node in the tree
+         * and call _selectContent that will set the content structure in the selected view
          * @method _selectContent
          * @protected
          * @param {EventFacade} e
          */
-        _selectContent: function (e) {
+        _uiSelectContent: function (e) {
             var node = e.tree.getNodeById(e.nodeId);
 
             e.preventDefault();
-            this._fireSelectContent(node.data);
             node.select();
-            this.get(&#x27;selectedView&#x27;).set(&#x27;contentStruct&#x27;, node.data);
+            this._selectContent(node.data);
+        },
+
+        /**
+         * Public method to select a content
+         *
+         * @method selectContent
+         * @param {Object} struct the node data
+         */
+        selectContent: function (struct) {
+            this._selectContent(struct);
+        },
+
+        /**
+         * Fire the selectcontent event and set the content structure on the selected view so that it is
+         * displayed.
+         *
+         * @method _selectContent
+         * @protected
+         * @param {Object} struct the node data
+         */
+        _selectContent: function (struct) {
+            this._fireSelectContent(struct);
+            this.get(&#x27;selectedView&#x27;).set(&#x27;contentStruct&#x27;, struct);
         },
 
         /**
