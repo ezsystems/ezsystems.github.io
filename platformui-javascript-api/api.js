@@ -103,6 +103,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.LocationViewLocationsTabView",
         "eZ.LocationViewRelationsTabView",
         "eZ.LocationViewTabView",
+        "eZ.LocationViewVersionsTabView",
         "eZ.LocationViewView",
         "eZ.LocationViewViewService",
         "eZ.LocationViewViewTabView",
@@ -150,6 +151,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.UniversalDiscoveryContentTree",
         "eZ.Plugin.UpdateTree",
         "eZ.Plugin.UserLoad",
+        "eZ.Plugin.VersionsLoad",
         "eZ.Plugin.ViewServiceBase",
         "eZ.Plugin.VisibilitySwitcherPlugin",
         "eZ.PluginRegistry",
@@ -213,6 +215,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.UserProfileView",
         "eZ.UserView",
         "eZ.Version",
+        "eZ.VersionInfo",
         "eZ.View",
         "eZ.ViewService",
         "eZ.XmlTextEditView",
@@ -311,6 +314,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-locationviewdetailstabview",
         "ez-locationviewlocationstabview",
         "ez-locationviewrelationstabview",
+        "ez-locationviewversionstabview",
         "ez-locationviewview",
         "ez-locationviewviewservice",
         "ez-locationviewviewtabview",
@@ -397,7 +401,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-usermenuview",
         "ez-usermodel",
         "ez-userprofileview",
+        "ez-versioninfomodel",
         "ez-versionmodel",
+        "ez-versionsloadplugin",
         "ez-view",
         "ez-viewservice",
         "ez-viewservicebaseplugin",
@@ -862,6 +868,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the Location View Relations Tab view class."
         },
         {
+            "displayName": "ez-locationviewversionstabview",
+            "name": "ez-locationviewversionstabview",
+            "description": "Provides the Location View Versions Tab view class."
+        },
+        {
             "displayName": "ez-locationviewview",
             "name": "ez-locationviewview",
             "description": "Provides the Location view View class"
@@ -1292,9 +1303,19 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the User Profile View class"
         },
         {
+            "displayName": "ez-versioninfomodel",
+            "name": "ez-versioninfomodel",
+            "description": "Provides the VersionInfo model class"
+        },
+        {
             "displayName": "ez-versionmodel",
             "name": "ez-versionmodel",
             "description": "Provides the Version model class"
+        },
+        {
+            "displayName": "ez-versionsloadplugin",
+            "name": "ez-versionsloadplugin",
+            "description": "Provides the versions list load plugin"
         },
         {
             "displayName": "ez-view",

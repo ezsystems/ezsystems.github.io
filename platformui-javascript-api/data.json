@@ -1149,6 +1149,19 @@
                 "eZ.Plugin": 1
             }
         },
+        "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "modules": {
+                "ez-versionsloadplugin": 1
+            },
+            "classes": {
+                "eZ.Plugin.VersionsLoad": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
         "Resources/public/js/views/services/plugins/ez-viewservicebaseplugin.js": {
             "name": "Resources/public/js/views/services/plugins/ez-viewservicebaseplugin.js",
             "modules": {
@@ -1454,6 +1467,19 @@
             },
             "classes": {
                 "eZ.LocationViewRelationsTabView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/tabs/ez-locationviewversionstabview.js": {
+            "name": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "modules": {
+                "ez-locationviewversionstabview": 1
+            },
+            "classes": {
+                "eZ.LocationViewVersionsTabView": 1
             },
             "fors": {},
             "namespaces": {
@@ -2144,6 +2170,19 @@
             },
             "classes": {
                 "eZ.User": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/models/ez-versioninfomodel.js": {
+            "name": "Resources/public/js/models/ez-versioninfomodel.js",
+            "modules": {
+                "ez-versioninfomodel": 1
+            },
+            "classes": {
+                "eZ.VersionInfo": 1
             },
             "fors": {},
             "namespaces": {
@@ -4123,6 +4162,22 @@
             "line": 14,
             "description": "Provides the user load plugin"
         },
+        "ez-versionsloadplugin": {
+            "name": "ez-versionsloadplugin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Plugin.VersionsLoad": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "line": 14,
+            "description": "Provides the versions list load plugin"
+        },
         "ez-viewservicebaseplugin": {
             "name": "ez-viewservicebaseplugin",
             "submodules": {},
@@ -4431,6 +4486,22 @@
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
             "line": 16,
             "description": "Provides the Location View Relations Tab view class."
+        },
+        "ez-locationviewversionstabview": {
+            "name": "ez-locationviewversionstabview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.LocationViewVersionsTabView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 14,
+            "description": "Provides the Location View Versions Tab view class."
         },
         "ez-locationviewviewtabview": {
             "name": "ez-locationviewviewtabview",
@@ -5205,6 +5276,22 @@
             "file": "Resources/public/js/models/ez-usermodel.js",
             "line": 15,
             "description": "Provides the User model class"
+        },
+        "ez-versioninfomodel": {
+            "name": "ez-versioninfomodel",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.VersionInfo": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 15,
+            "description": "Provides the VersionInfo model class"
         },
         "ez-versionmodel": {
             "name": "ez-versionmodel",
@@ -7155,6 +7242,22 @@
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
+        "eZ.Plugin.VersionsLoad": {
+            "name": "eZ.Plugin.VersionsLoad",
+            "shortname": "eZ.Plugin.VersionsLoad",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-versionsloadplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "line": 14,
+            "description": "Object versions load plugin. It sets an event handler to load versions\nof content for versions tab in location view.\n\nIn order to use it you need to fire `loadVersions` event with parameter\n`content` containing the eZ.Content object for which you want to load versions.",
+            "is_constructor": 1,
+            "extends": "eZ.Plugin.ViewServiceBase"
+        },
         "eZ.Plugin.ViewServiceBase": {
             "name": "eZ.Plugin.ViewServiceBase",
             "shortname": "eZ.Plugin.ViewServiceBase",
@@ -7555,6 +7658,22 @@
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
             "line": 16,
             "description": "The Location View Relations tab class.",
+            "is_constructor": 1,
+            "extends": "eZ.LocationViewTabView"
+        },
+        "eZ.LocationViewVersionsTabView": {
+            "name": "eZ.LocationViewVersionsTabView",
+            "shortname": "eZ.LocationViewVersionsTabView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 14,
+            "description": "The Location View View Versions tab class.",
             "is_constructor": 1,
             "extends": "eZ.LocationViewTabView"
         },
@@ -8418,6 +8537,22 @@
             "is_constructor": 1,
             "extends": "eZ.RestModel"
         },
+        "eZ.VersionInfo": {
+            "name": "eZ.VersionInfo",
+            "shortname": "eZ.VersionInfo",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ",
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 15,
+            "description": "VersionInfo model",
+            "is_constructor": 1,
+            "extends": "eZ.RestModel"
+        },
         "eZ.Version": {
             "name": "eZ.Version",
             "shortname": "eZ.Version",
@@ -8432,7 +8567,7 @@
             "line": 15,
             "description": "Version model",
             "is_constructor": 1,
-            "extends": "eZ.RestModel"
+            "extends": "eZ.VersionInfo"
         },
         "eZ.AccordionElement": {
             "name": "eZ.AccordionElement",
@@ -19155,6 +19290,55 @@
             "namespace": "eZ.Plugin"
         },
         {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "line": 32,
+            "description": "Loads versions list for content given in event facade. When loading of versions\nis finished, then it is set in `versions` attribute of the event target.\n\nThe version attribute should be an object with the given properties: `archived`,\n`published` and `draft`",
+            "itemtype": "method",
+            "name": "_loadVersions",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "loadVersions event facade",
+                    "type": "EventFacade",
+                    "props": [
+                        {
+                            "name": "content",
+                            "description": "the content",
+                            "type": "eZ.Content"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.Plugin.VersionsLoad",
+            "module": "ez-versionsloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "line": 62,
+            "description": "Sorts an array of version info by status",
+            "itemtype": "method",
+            "name": "_sortVersions",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "of eZ.VersionInfo",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "of sorted versions by status:\n             struct.<status_name>: {Array} of eZ.VersionInfo",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.VersionsLoad",
+            "module": "ez-versionsloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
             "file": "Resources/public/js/views/services/plugins/ez-viewservicebaseplugin.js",
             "line": 54,
             "description": "Load implementation that will be called after the default view\nservice `load` implementation. In others terms, here you can use the\npotential results of the view service `load` method. When done, the\n`callback` has to be called.",
@@ -24280,6 +24464,113 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 54,
+            "description": "Prepares a list of versionInfo to be displayed",
+            "itemtype": "method",
+            "name": "_prepareVersionsForDisplay",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "of eZ.VersionInfo",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "of Displayable versions struct:\n             struct.items: {Array} of JSONified versionInfo\n             struct.hasItems: true is struct has items",
+                "type": "Object"
+            },
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 80,
+            "description": "Fire the `loadVersions` event to retrieve the versions",
+            "itemtype": "method",
+            "name": "_fireLoadVersions",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 87,
+            "description": "Fired when versions are about to be loaded",
+            "itemtype": "event",
+            "name": "loadVersions",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 96,
+            "description": "The title of the tab",
+            "itemtype": "attribute",
+            "name": "title",
+            "type": "{String}",
+            "default": "\"Versions\"",
+            "readonly": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 109,
+            "description": "The identifier of the tab",
+            "itemtype": "attribute",
+            "name": "identifier",
+            "type": "{String}",
+            "default": "\"versions\"",
+            "readonly": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 122,
+            "description": "List of the current content versions sorted by status.\nEach status name is a properties of the versions object.",
+            "itemtype": "attribute",
+            "name": "versions",
+            "type": "{Object}",
+            "default": "{}",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 134,
+            "description": "The content being displayed",
+            "itemtype": "attribute",
+            "name": "content",
+            "type": "{eZ.Content}",
+            "writeonce": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 145,
+            "description": "The config",
+            "itemtype": "attribute",
+            "name": "config",
+            "type": "mixed",
+            "writeonce": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/tabs/ez-locationviewviewtabview.js",
             "line": 34,
             "description": "The title of the tab",
@@ -28570,7 +28861,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 360,
+            "line": 367,
             "description": "The subitem box view or null if the content (type) is not\nconfigured to be a container.",
             "itemtype": "attribute",
             "name": "subitemBox",
@@ -28582,7 +28873,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 386,
+            "line": 393,
             "description": "Returns the subitem list view. This attribute is deprecated and\nwill be removed in PlatformUI 2.0",
             "itemtype": "attribute",
             "name": "subitemList",
@@ -28595,7 +28886,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-locationviewview.js",
-            "line": 409,
+            "line": 416,
             "description": "Stores the identifier of the selected tab.",
             "itemtype": "attribute",
             "name": "selectedTab",
@@ -32784,6 +33075,35 @@
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
             "line": 296,
+            "description": "Loads content's version list",
+            "itemtype": "method",
+            "name": "loadVersions",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 324,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -32817,7 +33137,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 313,
+            "line": 341,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -32851,7 +33171,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 338,
+            "line": 366,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -32880,7 +33200,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 366,
+            "line": 394,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -32892,7 +33212,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 378,
+            "line": 406,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -32904,7 +33224,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 389,
+            "line": 417,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
@@ -34392,6 +34712,200 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 24,
+            "description": "Override of the eZ.RestModel _parseStruct method to locate the VersionInfo in the\nREST_STRUCT_ROOT hierarchy and add the Version Id",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_parseStruct",
+            "params": [
+                {
+                    "name": "struct",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "responseDoc",
+                    "description": "the full response document",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 41,
+            "description": "Return list of translations of version as array of language codes",
+            "itemtype": "method",
+            "name": "getTranslationsList",
+            "return": {
+                "description": "language codes of translations",
+                "type": "Array"
+            },
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 51,
+            "description": "Checks whether the version is translated into `languageCode`",
+            "itemtype": "method",
+            "name": "hasTranslation",
+            "params": [
+                {
+                    "name": "languageCode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 62,
+            "description": "Checks whether the version is a draft",
+            "itemtype": "method",
+            "name": "isDraft",
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 72,
+            "description": "Checks whether the version was created by the `user`",
+            "itemtype": "method",
+            "name": "createdBy",
+            "params": [
+                {
+                    "name": "user",
+                    "description": "",
+                    "type": "eZ.User"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 92,
+            "description": "The version id (f.e. \"450\")",
+            "itemtype": "attribute",
+            "name": "versionId",
+            "type": "String",
+            "default": "\"\"",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 103,
+            "description": "The version status",
+            "itemtype": "attribute",
+            "name": "status",
+            "type": "String",
+            "default": "\"\"",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 114,
+            "description": "The version number",
+            "itemtype": "attribute",
+            "name": "versionNo",
+            "type": "Number",
+            "default": "1",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 125,
+            "description": "The creation date of the version",
+            "itemtype": "attribute",
+            "name": "creationDate",
+            "type": "Date",
+            "default": "epoch",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 137,
+            "description": "The modification date of the version",
+            "itemtype": "attribute",
+            "name": "modificationDate",
+            "type": "Date",
+            "default": "epoch",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 149,
+            "description": "The language codes",
+            "itemtype": "attribute",
+            "name": "languageCodes",
+            "type": "String",
+            "default": "\"\"",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 160,
+            "description": "The initial language code",
+            "itemtype": "attribute",
+            "name": "initialLanguageCode",
+            "type": "String",
+            "default": "\"\"",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 171,
+            "description": "The names of the version per language",
+            "itemtype": "attribute",
+            "name": "names",
+            "type": "Object",
+            "default": "{}",
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/models/ez-versionmodel.js",
             "line": 24,
             "description": "sync implementation for the Version. For now, it supports reading a\nversion from its id, creating a new one based on the content current\nversion, updating it and deleting it. The update can also publish the\nversion",
@@ -34660,173 +35174,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 207,
-            "description": "Return list of translations of version as array of language codes",
-            "itemtype": "method",
-            "name": "getTranslationsList",
-            "return": {
-                "description": "language codes of translations",
-                "type": "Array"
-            },
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 217,
-            "description": "Checks whether the version is translated into `languageCode`",
-            "itemtype": "method",
-            "name": "hasTranslation",
-            "params": [
-                {
-                    "name": "languageCode",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 228,
-            "description": "Checks whether the version is a draft",
-            "itemtype": "method",
-            "name": "isDraft",
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 238,
-            "description": "Checks whether the version was created by the `user`",
-            "itemtype": "method",
-            "name": "createdBy",
-            "params": [
-                {
-                    "name": "user",
-                    "description": "",
-                    "type": "eZ.User"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 258,
-            "description": "The version id (f.e. \"450\")",
-            "itemtype": "attribute",
-            "name": "versionId",
-            "type": "String",
-            "default": "\"\"",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 269,
-            "description": "The version status",
-            "itemtype": "attribute",
-            "name": "status",
-            "type": "String",
-            "default": "\"\"",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 280,
-            "description": "The version number",
-            "itemtype": "attribute",
-            "name": "versionNo",
-            "type": "Number",
-            "default": "1",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 291,
-            "description": "The creation date of the version",
-            "itemtype": "attribute",
-            "name": "creationDate",
-            "type": "Date",
-            "default": "epoch",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 303,
-            "description": "The modification date of the version",
-            "itemtype": "attribute",
-            "name": "modificationDate",
-            "type": "Date",
-            "default": "epoch",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 315,
-            "description": "The language codes",
-            "itemtype": "attribute",
-            "name": "languageCodes",
-            "type": "String",
-            "default": "\"\"",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 326,
-            "description": "The initial language code",
-            "itemtype": "attribute",
-            "name": "initialLanguageCode",
-            "type": "String",
-            "default": "\"\"",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 337,
-            "description": "The names of the version per language",
-            "itemtype": "attribute",
-            "name": "names",
-            "type": "Object",
-            "default": "{}",
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 349,
+            "line": 216,
             "description": "The fields of the version by field identifier",
             "itemtype": "attribute",
             "name": "fields",
