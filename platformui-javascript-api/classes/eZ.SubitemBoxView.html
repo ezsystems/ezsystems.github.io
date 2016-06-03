@@ -1006,6 +1006,9 @@ displayed.</p>
                                 <a href="#attr_location">location</a>
                             </li>
                             <li class="index-item attr">
+                                <a href="#attr_mediaContentTypeGroupId">mediaContentTypeGroupId</a>
+                            </li>
+                            <li class="index-item attr">
                                 <a href="#attr_subitemViewIdentifier">subitemViewIdentifier</a>
                             </li>
                             <li class="index-item attr">
@@ -7953,10 +7956,10 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
-                    <div id="attr_subitemViewIdentifier" class="attr item">
-                        <a name="config_subitemViewIdentifier"></a> 
-                        <h3 class="name"><code>subitemViewIdentifier</code></h3>
-                        <span class="type">String</span>
+                    <div id="attr_mediaContentTypeGroupId" class="attr item">
+                        <a name="config_mediaContentTypeGroupId"></a> 
+                        <h3 class="name"><code>mediaContentTypeGroupId</code></h3>
+                        <span class="type"></span>
                     
                     
                     
@@ -7975,12 +7978,44 @@ How this template gets used is entirely up to you and your custom
                         </div>
                     
                         <div class="description">
-                            <p>The identifier of the currently displayed subitem view
-                    implementation.</p>
+                            <p>The id of the media Content Type Group.</p>
                     
                         </div>
                     
-                            <p><strong>Default:</strong> &#x27;list&#x27;</p>
+                            <p><strong>Default:</strong> &#x27;/api/ezp/v2/content/typegroups/3&#x27;</p>
+                    
+                    
+                    </div>
+                    <div id="attr_subitemViewIdentifier" class="attr item">
+                        <a name="config_subitemViewIdentifier"></a> 
+                        <h3 class="name"><code>subitemViewIdentifier</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_ez-subitemboxview.js.html#l286"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-subitemboxview.js:286</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The identifier of the currently displayed subitem view
+                    implementation. By default, the 'list' view is displayed unless
+                    the Content Type of the currently displayed Content is in the
+                    'Media' Content Type Group.</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> &#x27;list&#x27; or &#x27;grid&#x27;</p>
                     
                     
                     </div>

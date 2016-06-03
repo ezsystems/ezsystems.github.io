@@ -766,15 +766,32 @@ YUI.add(&#x27;ez-subitemboxview&#x27;, function (Y) {
             },
 
             /**
+             * The id of the media Content Type Group.
+             *
+             * @attribute mediaContentTypeGroupId
+             * @default &#x27;/api/ezp/v2/content/typegroups/3&#x27;
+             */
+            mediaContentTypeGroupId: {
+                value: &#x27;/api/ezp/v2/content/typegroups/3&#x27;
+            },
+
+            /**
              * The identifier of the currently displayed subitem view
-             * implementation.
+             * implementation. By default, the &#x27;list&#x27; view is displayed unless
+             * the Content Type of the currently displayed Content is in the
+             * &#x27;Media&#x27; Content Type Group.
              *
              * @attribute subitemViewIdentifier
              * @type {String}
-             * @default &#x27;list&#x27;
+             * @default &#x27;list&#x27; or &#x27;grid&#x27;
              */
             subitemViewIdentifier: {
-                value: &#x27;list&#x27;,
+                valueFn: function () {
+                    if ( this.get(&#x27;contentType&#x27;).belongTo(this.get(&#x27;mediaContentTypeGroupId&#x27;)) ) {
+                        return &#x27;grid&#x27;;
+                    }
+                    return &#x27;list&#x27;;
+                },
             },
         }
     });

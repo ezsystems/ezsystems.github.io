@@ -720,6 +720,10 @@
                                 <a href="#method__publish">_publish</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__readType">_readType</a>
+
+                            </li>
                             <li class="index-item method protected inherited inherited">
                                 <a href="#method__set">_set</a>
 
@@ -778,6 +782,10 @@
                             </li>
                             <li class="index-item method inherited">
                                 <a href="#method_before">before</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_belongTo">belongTo</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -992,6 +1000,9 @@
                     <ul class="index-list attrs extends">
                             <li class="index-item attr inherited">
                                 <a href="#attr_clientId">clientId</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_contentTypeGroupIds">contentTypeGroupIds</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_creationDate">creationDate</a>
@@ -3270,7 +3281,7 @@ before calling the <code>parse()</code> method.
 
 
 </div>
-<div id="method__parseStruct" class="method item protected inherited">
+<div id="method__parseStruct" class="method item protected">
     <h3 class="name"><code>_parseStruct</code></h3>
 
         <div class="args">
@@ -3279,7 +3290,7 @@ before calling the <code>parse()</code> method.
                         <code>struct</code>
                 </li>
                 <li class="arg">
-                        <code>doc</code>
+                        <code>responseDoc</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -3296,9 +3307,12 @@ before calling the <code>parse()</code> method.
 
 
     <div class="meta">
-                <p>Inherited from
-                <a href="../classes/eZ.RestModel.html#method__parseStruct">eZ.RestModel</a>:
-        <a href="../files/Resources_public_js_models_ez-restmodel.js.html#l110"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-restmodel.js:110</code></a>
+            <p>Inherited from
+            <a href="../classes/eZ.RestModel.html#method__parseStruct">
+                eZ.RestModel
+            </a>
+            but overwritten in
+        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l82"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:82</code></a>
         </p>
 
 
@@ -3306,8 +3320,10 @@ before calling the <code>parse()</code> method.
     </div>
 
     <div class="description">
-        Parses the hash returned by the eZ Publish REST API
-based on ATTRS_REST_MAP and LINKS_MAP properties
+        <p>Override of the eZ.RestModel _parseStruct method to also read the
+content type group ids when the content type is loaded with the
+<code>loadGroups</code> flag.</p>
+
     </div>
 
         <div class="params">
@@ -3326,12 +3342,12 @@ based on ATTRS_REST_MAP and LINKS_MAP properties
 
                 </li>
                 <li class="param">
-                        <code class="param-name">doc</code>
+                        <code class="param-name">responseDoc</code>
                         <span class="type">Object</span>
 
 
                     <div class="param-description">
-                        <p>The complete object</p>
+                        <p>the full response document</p>
 
                     </div>
 
@@ -3597,6 +3613,100 @@ path publish, which can be used by critical code paths to improve performance.
 be the default <code>CustomEvent</code> instance, and can be configured independently.
             </div>
         </div>
+
+
+</div>
+<div id="method__readType" class="method item protected">
+    <h3 class="name"><code>_readType</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>options</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l48"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:48</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p><code>sync</code> implementation for the <code>read</code> action. It takes into account
+the optional <code>loadGroups</code> flag to load the Content Type Group ids.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">options</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>the options for the sync.</p>
+
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">api</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    <p>(required) the JS REST client instance</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[loadGroups=false]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>also load the Content
+Type Groups the Content Type belongs to.</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>a callback executed when the operation is finished</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
 
 
 </div>
@@ -4861,6 +4971,70 @@ callback, object (method host), methodName, context, 0-n arguments
 
 
 </div>
+<div id="method_belongTo" class="method item">
+    <h3 class="name"><code>belongTo</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>contentTypeGroupId</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l176"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:176</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Checks whether the Content Type belongs to the Content Type Group
+which id is given in parameter.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">contentTypeGroupId</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method_bubble" class="method item inherited">
     <h3 class="name"><code>bubble</code></h3>
 
@@ -5711,7 +5885,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:101</code></a>
+        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:158</code></a>
         </p>
 
 
@@ -5769,7 +5943,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l49"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:49</code></a>
+        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l106"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:106</code></a>
         </p>
 
 
@@ -5858,7 +6032,7 @@ the <code>fieldDefinitions</code> (array of field definition) entries.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l87"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:87</code></a>
+        <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l144"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:144</code></a>
         </p>
 
 
@@ -7656,6 +7830,19 @@ directly passed to the ContentService.loadContentType method.</p>
                                 </div>
 
                             </li>
+                            <li class="param">
+                                    <code class="param-name optional">[loadGroups=false]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>also load the Content
+Type Groups id the Content Type belongs to (only applicable for
+the 'read' operation).</p>
+
+                                </div>
+
+                            </li>
                         </ul>
                 </li>
                 <li class="param">
@@ -8327,6 +8514,37 @@ list.on('*:change', function (e) {
                     
                     
                     </div>
+                    <div id="attr_contentTypeGroupIds" class="attr item">
+                        <a name="config_contentTypeGroupIds"></a> 
+                        <h3 class="name"><code>contentTypeGroupIds</code></h3>
+                        <span class="type">Array</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l393"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:393</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>The Content Type Group Ids the Content Type belongs to. This
+                    attribute is only filled if the Content Type was loaded in the
+                    <code>loadGroups</code> flag.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
                     <div id="attr_creationDate" class="attr item">
                         <a name="config_creationDate"></a> 
                         <h3 class="name"><code>creationDate</code></h3>
@@ -8342,7 +8560,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l129"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:129</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l198"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:198</code></a>
                             </p>
                     
                     
@@ -8372,7 +8590,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l141"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:141</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l210"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:210</code></a>
                             </p>
                     
                     
@@ -8402,7 +8620,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l153"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:153</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l222"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:222</code></a>
                             </p>
                     
                     
@@ -8432,7 +8650,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l164"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:164</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l233"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:233</code></a>
                             </p>
                     
                     
@@ -8462,7 +8680,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l175"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:175</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l244"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:244</code></a>
                             </p>
                     
                     
@@ -8523,7 +8741,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l289"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:289</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l358"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:358</code></a>
                             </p>
                     
                     
@@ -8595,7 +8813,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l187"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:187</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l256"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:256</code></a>
                             </p>
                     
                     
@@ -8656,7 +8874,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l198"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:198</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l267"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:267</code></a>
                             </p>
                     
                     
@@ -8686,7 +8904,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l210"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:210</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l279"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:279</code></a>
                             </p>
                     
                     
@@ -8716,7 +8934,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l221"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:221</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l290"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:290</code></a>
                             </p>
                     
                     
@@ -8746,7 +8964,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l233"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:233</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l302"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:302</code></a>
                             </p>
                     
                     
@@ -8776,7 +8994,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l245"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:245</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l314"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:314</code></a>
                             </p>
                     
                     
@@ -8806,7 +9024,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l256"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:256</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l325"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:325</code></a>
                             </p>
                     
                     
@@ -8871,7 +9089,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l267"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:267</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l336"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:336</code></a>
                             </p>
                     
                     
@@ -8901,7 +9119,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l278"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:278</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contenttypemodel.js.html#l347"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contenttypemodel.js:347</code></a>
                             </p>
                     
                     

@@ -20737,7 +20737,7 @@
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
-            "type": "Y.eZ.Content",
+            "type": "Y.eZ.ContentType",
             "class": "eZ.LocationViewViewService",
             "module": "ez-locationviewviewservice",
             "namespace": "eZ"
@@ -31244,11 +31244,22 @@
         {
             "file": "Resources/public/js/views/ez-subitemboxview.js",
             "line": 276,
-            "description": "The identifier of the currently displayed subitem view\nimplementation.",
+            "description": "The id of the media Content Type Group.",
+            "itemtype": "attribute",
+            "name": "mediaContentTypeGroupId",
+            "default": "'/api/ezp/v2/content/typegroups/3'",
+            "class": "eZ.SubitemBoxView",
+            "module": "ez-subitemboxview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-subitemboxview.js",
+            "line": 286,
+            "description": "The identifier of the currently displayed subitem view\nimplementation. By default, the 'list' view is displayed unless\nthe Content Type of the currently displayed Content is in the\n'Media' Content Type Group.",
             "itemtype": "attribute",
             "name": "subitemViewIdentifier",
             "type": "{String}",
-            "default": "'list'",
+            "default": "'list' or 'grid'",
             "class": "eZ.SubitemBoxView",
             "module": "ez-subitemboxview",
             "namespace": "eZ"
@@ -33563,6 +33574,13 @@
                             "name": "api",
                             "description": "(required) the JS REST client instance",
                             "type": "Object"
+                        },
+                        {
+                            "name": "loadGroups",
+                            "description": "also load the Content\n       Type Groups id the Content Type belongs to (only applicable for\n       the 'read' operation).",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
                         }
                     ]
                 },
@@ -33578,7 +33596,73 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 49,
+            "line": 48,
+            "description": "`sync` implementation for the `read` action. It takes into account\nthe optional `loadGroups` flag to load the Content Type Group ids.",
+            "itemtype": "method",
+            "name": "_readType",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the options for the sync.",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "loadGroups",
+                            "description": "also load the Content\n       Type Groups the Content Type belongs to.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "a callback executed when the operation is finished",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.ContentType",
+            "module": "ez-contenttypemodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contenttypemodel.js",
+            "line": 82,
+            "description": "Override of the eZ.RestModel _parseStruct method to also read the\ncontent type group ids when the content type is loaded with the\n`loadGroups` flag.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_parseStruct",
+            "params": [
+                {
+                    "name": "struct",
+                    "description": "the struct to transform",
+                    "type": "Object"
+                },
+                {
+                    "name": "responseDoc",
+                    "description": "the full response document",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.ContentType",
+            "module": "ez-contenttypemodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contenttypemodel.js",
+            "line": 106,
             "description": "Returns the field definitions organized by field group. Each element\nof the array is a hash containing the `fieldGroupName` (string) and\nthe `fieldDefinitions` (array of field definition) entries.",
             "itemtype": "method",
             "name": "getFieldGroups",
@@ -33592,7 +33676,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 87,
+            "line": 144,
             "description": "Checks whether the content type has a field definition which field\ntype is the given fieldTypeIdentifier (ezstring, ezuser, ...)",
             "itemtype": "method",
             "name": "hasFieldType",
@@ -33613,7 +33697,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 101,
+            "line": 158,
             "description": "Returns the fieldIdentifiers of a given type.",
             "itemtype": "method",
             "name": "getFieldDefinitionIdentifiers",
@@ -33634,7 +33718,28 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 129,
+            "line": 176,
+            "description": "Checks whether the Content Type belongs to the Content Type Group\nwhich id is given in parameter.",
+            "itemtype": "method",
+            "name": "belongTo",
+            "params": [
+                {
+                    "name": "contentTypeGroupId",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.ContentType",
+            "module": "ez-contenttypemodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contenttypemodel.js",
+            "line": 198,
             "description": "The content type's creation date",
             "itemtype": "attribute",
             "name": "creationDate",
@@ -33646,7 +33751,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 141,
+            "line": 210,
             "description": "The content type's default always available flag",
             "itemtype": "attribute",
             "name": "defaultAlwaysAvailable",
@@ -33658,7 +33763,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 153,
+            "line": 222,
             "description": "The content type's default sort field",
             "itemtype": "attribute",
             "name": "defaultSortField",
@@ -33670,7 +33775,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 164,
+            "line": 233,
             "description": "The content type's default sort order",
             "itemtype": "attribute",
             "name": "defaultSortOrder",
@@ -33682,7 +33787,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 175,
+            "line": 244,
             "description": "The content type's descriptions",
             "itemtype": "attribute",
             "name": "descriptions",
@@ -33694,7 +33799,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 187,
+            "line": 256,
             "description": "The content type's identifier",
             "itemtype": "attribute",
             "name": "identifier",
@@ -33706,7 +33811,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 198,
+            "line": 267,
             "description": "The content type's is container flag",
             "itemtype": "attribute",
             "name": "isContainer",
@@ -33718,7 +33823,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 210,
+            "line": 279,
             "description": "The content type's main language code (eng-GB, ....)",
             "itemtype": "attribute",
             "name": "mainLanguageCode",
@@ -33730,7 +33835,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 221,
+            "line": 290,
             "description": "The content type's modification date",
             "itemtype": "attribute",
             "name": "modificationDate",
@@ -33742,7 +33847,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 233,
+            "line": 302,
             "description": "The content type's names",
             "itemtype": "attribute",
             "name": "names",
@@ -33754,7 +33859,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 245,
+            "line": 314,
             "description": "The content type's name schema",
             "itemtype": "attribute",
             "name": "nameSchema",
@@ -33766,7 +33871,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 256,
+            "line": 325,
             "description": "The content type's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -33778,7 +33883,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 267,
+            "line": 336,
             "description": "The content type's status",
             "itemtype": "attribute",
             "name": "status",
@@ -33790,7 +33895,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 278,
+            "line": 347,
             "description": "The content type's url alias schema",
             "itemtype": "attribute",
             "name": "urlAliasSchema",
@@ -33802,12 +33907,23 @@
         },
         {
             "file": "Resources/public/js/models/ez-contenttypemodel.js",
-            "line": 289,
+            "line": 358,
             "description": "The content type's field definitions indexed by field definition\nidentifier. The localized properties names and description of\neach field definition are normalized with\n{{#crossLink \"eZ.RestModel/_setterLocalizedValue:method\"}}_setterLocalizedValue{{/crossLink}}",
             "itemtype": "attribute",
             "name": "fieldDefinitions",
             "default": "undefined",
             "type": "Object",
+            "class": "eZ.ContentType",
+            "module": "ez-contenttypemodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contenttypemodel.js",
+            "line": 393,
+            "description": "The Content Type Group Ids the Content Type belongs to. This\nattribute is only filled if the Content Type was loaded in the\n`loadGroups` flag.",
+            "itemtype": "attribute",
+            "name": "contentTypeGroupIds",
+            "type": "{Array}",
             "class": "eZ.ContentType",
             "module": "ez-contenttypemodel",
             "namespace": "eZ"
