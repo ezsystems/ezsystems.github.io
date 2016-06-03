@@ -137,6 +137,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.LanguageSelectionBox",
         "eZ.Plugin.LocationCreate",
         "eZ.Plugin.LocationRemove",
+        "eZ.Plugin.LocationSwap",
         "eZ.Plugin.LocationsLoad",
         "eZ.Plugin.LoginAvailable",
         "eZ.Plugin.NotificationHub",
@@ -311,6 +312,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-locationremoveplugin",
         "ez-locationsearchplugin",
         "ez-locationsloadplugin",
+        "ez-locationswapplugin",
         "ez-locationviewdetailstabview",
         "ez-locationviewlocationstabview",
         "ez-locationviewrelationstabview",
@@ -851,6 +853,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-locationsloadplugin",
             "name": "ez-locationsloadplugin",
             "description": "Provides the locations list load plugin"
+        },
+        {
+            "displayName": "ez-locationswapplugin",
+            "name": "ez-locationswapplugin",
+            "description": "Provides the plugin for swap location"
         },
         {
             "displayName": "ez-locationviewdetailstabview",

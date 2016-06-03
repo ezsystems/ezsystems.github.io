@@ -174,6 +174,7 @@
                                 <li><a href="../classes/eZ.Plugin.LocationCreate.html">eZ.Plugin.LocationCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationRemove.html">eZ.Plugin.LocationRemove</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationsLoad.html">eZ.Plugin.LocationsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.LocationSwap.html">eZ.Plugin.LocationSwap</a></li>
                                 <li><a href="../classes/eZ.Plugin.LoginAvailable.html">eZ.Plugin.LoginAvailable</a></li>
                                 <li><a href="../classes/eZ.Plugin.NotificationHub.html">eZ.Plugin.NotificationHub</a></li>
                                 <li><a href="../classes/eZ.Plugin.ObjectRelationLoad.html">eZ.Plugin.ObjectRelationLoad</a></li>
@@ -350,6 +351,7 @@
                                 <li><a href="../modules/ez-locationremoveplugin.html">ez-locationremoveplugin</a></li>
                                 <li><a href="../modules/ez-locationsearchplugin.html">ez-locationsearchplugin</a></li>
                                 <li><a href="../modules/ez-locationsloadplugin.html">ez-locationsloadplugin</a></li>
+                                <li><a href="../modules/ez-locationswapplugin.html">ez-locationswapplugin</a></li>
                                 <li><a href="../modules/ez-locationviewdetailstabview.html">ez-locationviewdetailstabview</a></li>
                                 <li><a href="../modules/ez-locationviewlocationstabview.html">ez-locationviewlocationstabview</a></li>
                                 <li><a href="../modules/ez-locationviewrelationstabview.html">ez-locationviewrelationstabview</a></li>
@@ -665,6 +667,21 @@ YUI.add(&#x27;ez-locationmodel&#x27;, function (Y) {
          */
         unhide: function (options, callback) {
             this._updateHidden(options, &#x27;false&#x27;, callback);
+        },
+
+        /**
+         * Swap the location with other location
+         * 
+         * @method swap
+         * @param {Object} options the required for the swap         *
+         * @param {Object} options.api (required) the JS REST client instance
+         * @param {eZ.Location} destinationLocation Location where the given one will be relocated
+         * @param {Function} callback a callback executed when the operation is finished
+         */
+        swap: function(options, destinationLocation, callback) {
+            var contentService = options.api.getContentService();
+
+            contentService.swapLocation(this.get(&#x27;id&#x27;), destinationLocation.get(&#x27;id&#x27;), callback);
         },
 
         /**

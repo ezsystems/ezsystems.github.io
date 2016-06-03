@@ -174,6 +174,7 @@
                                 <li><a href="../classes/eZ.Plugin.LocationCreate.html">eZ.Plugin.LocationCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationRemove.html">eZ.Plugin.LocationRemove</a></li>
                                 <li><a href="../classes/eZ.Plugin.LocationsLoad.html">eZ.Plugin.LocationsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.LocationSwap.html">eZ.Plugin.LocationSwap</a></li>
                                 <li><a href="../classes/eZ.Plugin.LoginAvailable.html">eZ.Plugin.LoginAvailable</a></li>
                                 <li><a href="../classes/eZ.Plugin.NotificationHub.html">eZ.Plugin.NotificationHub</a></li>
                                 <li><a href="../classes/eZ.Plugin.ObjectRelationLoad.html">eZ.Plugin.ObjectRelationLoad</a></li>
@@ -350,6 +351,7 @@
                                 <li><a href="../modules/ez-locationremoveplugin.html">ez-locationremoveplugin</a></li>
                                 <li><a href="../modules/ez-locationsearchplugin.html">ez-locationsearchplugin</a></li>
                                 <li><a href="../modules/ez-locationsloadplugin.html">ez-locationsloadplugin</a></li>
+                                <li><a href="../modules/ez-locationswapplugin.html">ez-locationswapplugin</a></li>
                                 <li><a href="../modules/ez-locationviewdetailstabview.html">ez-locationviewdetailstabview</a></li>
                                 <li><a href="../modules/ez-locationviewlocationstabview.html">ez-locationviewlocationstabview</a></li>
                                 <li><a href="../modules/ez-locationviewrelationstabview.html">ez-locationviewrelationstabview</a></li>
@@ -511,6 +513,9 @@ YUI.add(&#x27;ez-locationviewlocationstabview&#x27;, function (Y) {
             },
             &#x27;.ez-remove-locations-button&#x27;: {
                 &#x27;tap&#x27;: &#x27;_removeSelectedLocations&#x27;
+            },
+            &#x27;.ez-locations-swap-button&#x27;: {
+                &#x27;tap&#x27;: &#x27;_swapLocation&#x27;
             }
         };
 
@@ -590,6 +595,26 @@ YUI.add(&#x27;ez-locationviewlocationstabview&#x27;, function (Y) {
             this.fire(&#x27;createLocation&#x27;, {
                 content: this.get(&#x27;content&#x27;),
                 afterCreateCallback: Y.bind(this._refresh, this)
+            });
+        },
+
+        /**
+         * Tap event handler on the &#x60;Swap location&#x60; button. It fires the
+         * &#x60;swapLocation&#x60; event
+         *
+         * @method _swapLocation
+         * @protected
+         * @param {EventFacade} e
+         */
+        _swapLocation: function (e) {
+            /**
+             * Fired when the user clicks on &#x60;Swap location&#x60; button
+             *
+             * @event swapLocation
+             * @param {eZ.Location} location the content to be swapped
+             */
+            this.fire(&#x27;swapLocation&#x27;, {
+                location: this.get(&#x27;location&#x27;),
             });
         },
 

@@ -1045,6 +1045,19 @@
                 "eZ.Plugin": 1
             }
         },
+        "Resources/public/js/views/services/plugins/ez-locationswapplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "modules": {
+                "ez-locationswapplugin": 1
+            },
+            "classes": {
+                "eZ.Plugin.LocationSwap": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
         "Resources/public/js/views/services/plugins/ez-loginavailableplugin.js": {
             "name": "Resources/public/js/views/services/plugins/ez-loginavailableplugin.js",
             "modules": {
@@ -4034,6 +4047,22 @@
             "line": 14,
             "description": "Provides the locations list load plugin"
         },
+        "ez-locationswapplugin": {
+            "name": "ez-locationswapplugin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Plugin.LocationSwap": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "line": 14,
+            "description": "Provides the plugin for swap location"
+        },
         "ez-loginavailableplugin": {
             "name": "ez-loginavailableplugin",
             "submodules": {},
@@ -4468,7 +4497,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 29,
+            "line": 32,
             "description": "Provides the Location View Locations Tab view class."
         },
         "ez-locationviewrelationstabview": {
@@ -7113,6 +7142,22 @@
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
+        "eZ.Plugin.LocationSwap": {
+            "name": "eZ.Plugin.LocationSwap",
+            "shortname": "eZ.Plugin.LocationSwap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-locationswapplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "line": 14,
+            "description": "Swap location plugin. It sets an event handler to swap location\n\nIn order to use it you need to fire `swapLocation` event with parameter\n`location` containing the eZ.Location object you want swap with other.",
+            "is_constructor": 1,
+            "extends": "eZ.Plugin.ViewServiceBase"
+        },
         "eZ.Plugin.LoginAvailable": {
             "name": "eZ.Plugin.LoginAvailable",
             "shortname": "eZ.Plugin.LoginAvailable",
@@ -7640,7 +7685,7 @@
             "module": "ez-locationviewlocationstabview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 29,
+            "line": 32,
             "description": "The Location View Locations Tab View class.",
             "is_constructor": 1,
             "extends": "eZ.LocationViewTabView"
@@ -18241,6 +18286,78 @@
             "namespace": "eZ.Plugin"
         },
         {
+            "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "line": 31,
+            "description": "swapLocation event handler, launch the universal discovery widget\nto choose the location you want to swap with the given one",
+            "itemtype": "method",
+            "name": "_selectDestinationLocation",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "swapLocation event facade",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.Plugin.LocationSwap",
+            "module": "ez-locationswapplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "line": 70,
+            "description": "Swaps the given location with the selected one",
+            "itemtype": "method",
+            "name": "_swapLocations",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.Plugin.LocationSwap",
+            "module": "ez-locationswapplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "line": 119,
+            "description": "Fire 'notify' event",
+            "itemtype": "method",
+            "name": "_notify",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "the text shown during the notification",
+                    "type": "String"
+                },
+                {
+                    "name": "identifier",
+                    "description": "the identifier of the notification",
+                    "type": "String"
+                },
+                {
+                    "name": "state",
+                    "description": "the state of the notification",
+                    "type": "String"
+                },
+                {
+                    "name": "timeout",
+                    "description": "the number of second, the notification will be shown",
+                    "type": "Integer"
+                }
+            ],
+            "class": "eZ.Plugin.LocationSwap",
+            "module": "ez-locationswapplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
             "file": "Resources/public/js/views/services/plugins/ez-loginavailableplugin.js",
             "line": 30,
             "description": "`isLoginAvailable` event handler, it checks if the login in the event\nfacade is available.",
@@ -24005,7 +24122,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 64,
+            "line": 67,
             "description": "Fire the `loadLocations` event",
             "itemtype": "method",
             "name": "_fireLoadLocations",
@@ -24017,7 +24134,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 71,
+            "line": 74,
             "description": "Fired when the locations tab view needs content's locations",
             "itemtype": "event",
             "name": "loadLocations",
@@ -24039,7 +24156,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 85,
+            "line": 88,
             "description": "Tap event handler on the `Add location` button. It fires the\n`createLocation` event",
             "itemtype": "method",
             "name": "_addLocation",
@@ -24058,7 +24175,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 94,
+            "line": 97,
             "description": "Fired when the user clicks on `Add location` button",
             "itemtype": "event",
             "name": "createLocation",
@@ -24080,7 +24197,43 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 108,
+            "line": 111,
+            "description": "Tap event handler on the `Swap location` button. It fires the\n`swapLocation` event",
+            "itemtype": "method",
+            "name": "_swapLocation",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.LocationViewLocationsTabView",
+            "module": "ez-locationviewlocationstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
+            "line": 120,
+            "description": "Fired when the user clicks on `Swap location` button",
+            "itemtype": "event",
+            "name": "swapLocation",
+            "params": [
+                {
+                    "name": "location",
+                    "description": "the content to be swapped",
+                    "type": "eZ.Location"
+                }
+            ],
+            "class": "eZ.LocationViewLocationsTabView",
+            "module": "ez-locationviewlocationstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
+            "line": 131,
             "description": "After create location callback function. It fires `loadLocations` event\nfor refresh the view.",
             "itemtype": "method",
             "name": "_refresh",
@@ -24092,7 +24245,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 119,
+            "line": 142,
             "description": "Tap event handler on the main location radio input. It fires the\n`setMainLocation` event",
             "itemtype": "method",
             "name": "_setMainLocation",
@@ -24111,7 +24264,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 145,
+            "line": 168,
             "description": "Turns off disabled state for main location radio inputs.",
             "itemtype": "method",
             "name": "_enableSetMainLocationRadios",
@@ -24123,7 +24276,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 155,
+            "line": 178,
             "description": "Switches the visibility of the location provided in the `switchVisibility` event",
             "itemtype": "method",
             "name": "_switchVisibility",
@@ -24142,7 +24295,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 177,
+            "line": 200,
             "description": "Fired when the user clicks on the hide/reveal button",
             "itemtype": "event",
             "name": "switchVisibility",
@@ -24159,7 +24312,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 196,
+            "line": 219,
             "description": "Tap event handler on the `Remove selected` button. It fires the\n`removeLocations` event",
             "itemtype": "method",
             "name": "_removeSelectedLocations",
@@ -24178,7 +24331,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 226,
+            "line": 249,
             "description": "Callback function called after removing location(s).",
             "itemtype": "method",
             "name": "_afterRemoveLocationCallback",
@@ -24197,7 +24350,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 241,
+            "line": 264,
             "description": "Disables all checkboxes on locations list preventing from making use of them.",
             "itemtype": "method",
             "name": "_disableLocationsCheckboxes",
@@ -24209,7 +24362,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 251,
+            "line": 274,
             "description": "Enables checkboxes on locations list. Checkbox of main location remains disabled.",
             "itemtype": "method",
             "name": "_enableLocationsCheckboxes",
@@ -24221,7 +24374,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 264,
+            "line": 287,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -24234,7 +24387,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 277,
+            "line": 300,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -24247,7 +24400,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 290,
+            "line": 313,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -24259,7 +24412,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 301,
+            "line": 324,
             "description": "The location being displayed in the location view.",
             "itemtype": "attribute",
             "name": "location",
@@ -24271,7 +24424,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 312,
+            "line": 335,
             "description": "List of locations of the content",
             "itemtype": "attribute",
             "name": "locations",
@@ -24282,7 +24435,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewlocationstabview.js",
-            "line": 320,
+            "line": 343,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
@@ -33870,6 +34023,40 @@
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
             "line": 182,
+            "description": "Swap the location with other location",
+            "itemtype": "method",
+            "name": "swap",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the required for the swap         *",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "destinationLocation",
+                    "description": "Location where the given one will be relocated",
+                    "type": "eZ.Location"
+                },
+                {
+                    "name": "callback",
+                    "description": "a callback executed when the operation is finished",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Location",
+            "module": "ez-locationmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-locationmodel.js",
+            "line": 197,
             "description": "Deletes the location in the repository.",
             "access": "protected",
             "tagname": "",
@@ -33900,7 +34087,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 209,
+            "line": 224,
             "description": "Update the priority of the location.",
             "access": "protected",
             "tagname": "",
@@ -33936,7 +34123,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 235,
+            "line": 250,
             "description": "Loads path of the current location. The result is the array containing\neZ.Location objects present on the path sorted by depth.\nThe array doesn't contain current location.\nThe result is available in the `path` attribute or in the `callback`.",
             "itemtype": "method",
             "name": "loadPath",
@@ -33977,7 +34164,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 281,
+            "line": 296,
             "description": "Loads ancestors of the location based on the `pathString`. The result is the REST API view\ncontaining locations from the path.",
             "itemtype": "method",
             "name": "_loadAncestors",
@@ -34008,7 +34195,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 305,
+            "line": 320,
             "description": "Returns if the location is a root one",
             "itemtype": "method",
             "name": "isRootLocation",
@@ -34022,7 +34209,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 315,
+            "line": 330,
             "description": "Overrides the RestModel implementation to also deal with the `path` attribute",
             "itemtype": "method",
             "name": "toJSON",
@@ -34036,7 +34223,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 342,
+            "line": 357,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -34048,7 +34235,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 353,
+            "line": 368,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -34060,7 +34247,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 364,
+            "line": 379,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -34072,7 +34259,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 375,
+            "line": 390,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -34084,7 +34271,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 386,
+            "line": 401,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -34096,7 +34283,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 397,
+            "line": 412,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -34108,7 +34295,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 408,
+            "line": 423,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -34120,7 +34307,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 419,
+            "line": 434,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -34132,7 +34319,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 430,
+            "line": 445,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -34144,7 +34331,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 441,
+            "line": 456,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -34156,7 +34343,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 452,
+            "line": 467,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -34167,7 +34354,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 469,
+            "line": 484,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",
