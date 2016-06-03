@@ -8,9 +8,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "CKEDITOR.plugins.ezfocusblock",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
-        "SubitemGridItemView",
         "eZ.AccordionElement",
         "eZ.ActionBarView",
+        "eZ.AlloyEditor.Toolbars.ezadd",
         "eZ.AlloyEditorButton.ButtonBlockRemove",
         "eZ.AlloyEditorButton.ButtonBlockTextAlign",
         "eZ.AlloyEditorButton.ButtonBlockTextAlignCenter",
@@ -103,7 +103,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.LocationViewLocationsTabView",
         "eZ.LocationViewRelationsTabView",
         "eZ.LocationViewTabView",
-        "eZ.LocationViewVersionsTabView",
         "eZ.LocationViewView",
         "eZ.LocationViewViewService",
         "eZ.LocationViewViewTabView",
@@ -137,7 +136,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.LanguageSelectionBox",
         "eZ.Plugin.LocationCreate",
         "eZ.Plugin.LocationRemove",
-        "eZ.Plugin.LocationSwap",
         "eZ.Plugin.LocationsLoad",
         "eZ.Plugin.LoginAvailable",
         "eZ.Plugin.NotificationHub",
@@ -152,7 +150,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.UniversalDiscoveryContentTree",
         "eZ.Plugin.UpdateTree",
         "eZ.Plugin.UserLoad",
-        "eZ.Plugin.VersionsLoad",
         "eZ.Plugin.ViewServiceBase",
         "eZ.Plugin.VisibilitySwitcherPlugin",
         "eZ.PluginRegistry",
@@ -185,8 +182,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.StudioPresentationView",
         "eZ.SubitemBaseView",
         "eZ.SubitemBoxView",
+        "eZ.SubitemGridItemView",
         "eZ.SubitemGridView",
-        "eZ.SubitemListItemView",
         "eZ.SubitemListView",
         "eZ.Tabs",
         "eZ.TemplateBasedView",
@@ -216,7 +213,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.UserProfileView",
         "eZ.UserView",
         "eZ.Version",
-        "eZ.VersionInfo",
         "eZ.View",
         "eZ.ViewService",
         "eZ.XmlTextEditView",
@@ -244,6 +240,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-toolbar-config-heading",
         "ez-alloyeditor-toolbar-config-image",
         "ez-alloyeditor-toolbar-config-paragraph",
+        "ez-alloyeditor-toolbar-ezadd",
         "ez-author-editview",
         "ez-author-view",
         "ez-barview",
@@ -312,11 +309,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-locationremoveplugin",
         "ez-locationsearchplugin",
         "ez-locationsloadplugin",
-        "ez-locationswapplugin",
         "ez-locationviewdetailstabview",
         "ez-locationviewlocationstabview",
         "ez-locationviewrelationstabview",
-        "ez-locationviewversionstabview",
         "ez-locationviewview",
         "ez-locationviewviewservice",
         "ez-locationviewviewtabview",
@@ -369,9 +364,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-studiopresentationview",
         "ez-subitembaseview",
         "ez-subitemboxview",
-        "ez-subitemgriditemview",
         "ez-subitemgridview",
-        "ez-subitemlistitemview",
         "ez-subitemlistview",
         "ez-tabs",
         "ez-templatebasedview",
@@ -403,9 +396,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-usermenuview",
         "ez-usermodel",
         "ez-userprofileview",
-        "ez-versioninfomodel",
         "ez-versionmodel",
-        "ez-versionsloadplugin",
         "ez-view",
         "ez-viewservice",
         "ez-viewservicebaseplugin",
@@ -513,6 +504,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-toolbar-config-paragraph",
             "name": "ez-alloyeditor-toolbar-config-paragraph",
             "description": "Provides the AlloyEditor `styles` toolbar configuration for paragraphs."
+        },
+        {
+            "displayName": "ez-alloyeditor-toolbar-ezadd",
+            "name": "ez-alloyeditor-toolbar-ezadd",
+            "description": "Provides the `ezadd` toolbar"
         },
         {
             "displayName": "ez-author-editview",
@@ -855,11 +851,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the locations list load plugin"
         },
         {
-            "displayName": "ez-locationswapplugin",
-            "name": "ez-locationswapplugin",
-            "description": "Provides the plugin for swap location"
-        },
-        {
             "displayName": "ez-locationviewdetailstabview",
             "name": "ez-locationviewdetailstabview",
             "description": "Provides the Location View View Tab view class."
@@ -873,11 +864,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-locationviewrelationstabview",
             "name": "ez-locationviewrelationstabview",
             "description": "Provides the Location View Relations Tab view class."
-        },
-        {
-            "displayName": "ez-locationviewversionstabview",
-            "name": "ez-locationviewversionstabview",
-            "description": "Provides the Location View Versions Tab view class."
         },
         {
             "displayName": "ez-locationviewview",
@@ -1140,19 +1126,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the subitem box view."
         },
         {
-            "displayName": "ez-subitemgriditemview",
-            "name": "ez-subitemgriditemview",
-            "description": "Provides the subitem grid item view."
-        },
-        {
             "displayName": "ez-subitemgridview",
             "name": "ez-subitemgridview",
             "description": "Provides the subitem grid view."
-        },
-        {
-            "displayName": "ez-subitemlistitemview",
-            "name": "ez-subitemlistitemview",
-            "description": "Provides the subitem list item view."
         },
         {
             "displayName": "ez-subitemlistview",
@@ -1310,19 +1286,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the User Profile View class"
         },
         {
-            "displayName": "ez-versioninfomodel",
-            "name": "ez-versioninfomodel",
-            "description": "Provides the VersionInfo model class"
-        },
-        {
             "displayName": "ez-versionmodel",
             "name": "ez-versionmodel",
             "description": "Provides the Version model class"
-        },
-        {
-            "displayName": "ez-versionsloadplugin",
-            "name": "ez-versionsloadplugin",
-            "description": "Provides the versions list load plugin"
         },
         {
             "displayName": "ez-view",
