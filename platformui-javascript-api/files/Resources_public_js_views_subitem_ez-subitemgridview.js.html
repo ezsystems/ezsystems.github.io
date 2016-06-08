@@ -76,6 +76,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Table.html">eZ.AlloyEditorToolbarConfig.Table</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Text.html">eZ.AlloyEditorToolbarConfig.Text</a></li>
+                                <li><a href="../classes/eZ.AsynchronousSubitemView.html">eZ.AsynchronousSubitemView</a></li>
                                 <li><a href="../classes/eZ.AsynchronousView.html">eZ.AsynchronousView</a></li>
                                 <li><a href="../classes/eZ.AuthorEditView.html">eZ.AuthorEditView</a></li>
                                 <li><a href="../classes/eZ.AuthorInputView.html">eZ.AuthorInputView</a></li>
@@ -135,6 +136,7 @@
                                 <li><a href="../classes/eZ.LanguageSelectionBoxView.html">eZ.LanguageSelectionBoxView</a></li>
                                 <li><a href="../classes/eZ.LanguageSelectionBoxViewService.html">eZ.LanguageSelectionBoxViewService</a></li>
                                 <li><a href="../classes/eZ.LanguageSwitcherView.html">eZ.LanguageSwitcherView</a></li>
+                                <li><a href="../classes/eZ.LoadMorePagination.html">eZ.LoadMorePagination</a></li>
                                 <li><a href="../classes/eZ.Location.html">eZ.Location</a></li>
                                 <li><a href="../classes/eZ.LocationViewDetailsTabView.html">eZ.LocationViewDetailsTabView</a></li>
                                 <li><a href="../classes/eZ.LocationViewLocationsTabView.html">eZ.LocationViewLocationsTabView</a></li>
@@ -224,6 +226,7 @@
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
+                                <li><a href="../classes/eZ.SubitemListMoreView.html">eZ.SubitemListMoreView</a></li>
                                 <li><a href="../classes/eZ.SubitemListView.html">eZ.SubitemListView</a></li>
                                 <li><a href="../classes/eZ.Tabs.html">eZ.Tabs</a></li>
                                 <li><a href="../classes/eZ.TemplateBasedView.html">eZ.TemplateBasedView</a></li>
@@ -285,6 +288,7 @@
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-image.html">ez-alloyeditor-toolbar-config-image</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-paragraph.html">ez-alloyeditor-toolbar-config-paragraph</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-ezadd.html">ez-alloyeditor-toolbar-ezadd</a></li>
+                                <li><a href="../modules/ez-asynchronousview.html">ez-asynchronousview</a></li>
                                 <li><a href="../modules/ez-author-editview.html">ez-author-editview</a></li>
                                 <li><a href="../modules/ez-author-view.html">ez-author-view</a></li>
                                 <li><a href="../modules/ez-barview.html">ez-barview</a></li>
@@ -348,6 +352,7 @@
                                 <li><a href="../modules/ez-languageselectionboxview.html">ez-languageselectionboxview</a></li>
                                 <li><a href="../modules/ez-languageselectionboxviewservice.html">ez-languageselectionboxviewservice</a></li>
                                 <li><a href="../modules/ez-languageswitcherview.html">ez-languageswitcherview</a></li>
+                                <li><a href="../modules/ez-loadmorepagination.html">ez-loadmorepagination</a></li>
                                 <li><a href="../modules/ez-locationcreateplugin.html">ez-locationcreateplugin</a></li>
                                 <li><a href="../modules/ez-locationmodel.html">ez-locationmodel</a></li>
                                 <li><a href="../modules/ez-locationremoveplugin.html">ez-locationremoveplugin</a></li>
@@ -413,6 +418,7 @@
                                 <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
+                                <li><a href="../modules/ez-subitemlistmoreview.html">ez-subitemlistmoreview</a></li>
                                 <li><a href="../modules/ez-subitemlistview.html">ez-subitemlistview</a></li>
                                 <li><a href="../modules/ez-tabs.html">ez-tabs</a></li>
                                 <li><a href="../modules/ez-templatebasedview.html">ez-templatebasedview</a></li>
@@ -503,7 +509,11 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var IS_PAGE_LOADING = &#x27;is-page-loading&#x27;;
+    function logDeprecatedWarning(what, replace) {
+        console.log(&#x27;[DEPRECATED] &#x60;&#x27; + what + &#x27;&#x60; is deprecated&#x27;);
+        console.log(&#x27;[DEPRECATED] it will be removed from PlatformUI 2.0&#x27;);
+        console.log(&#x27;[DEPRECATED] Please use &#x60;&#x27; + replace + &#x27;&#x60; instead&#x27;);
+    }
 
     /**
      * The subitem grid view.
@@ -511,196 +521,45 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
      * @namespace eZ
      * @class SubitemGridView
      * @constructor
-     * @extends eZ.SubitemBaseView
+     * @extends eZ.AsynchronousSubitemView
      */
-    Y.eZ.SubitemGridView = Y.Base.create(&#x27;subitemGridView&#x27;, Y.eZ.SubitemBaseView, [Y.eZ.AsynchronousView], {
-        events: {
-            &#x27;.ez-subitemgrid-more&#x27;: {
-                &#x27;tap&#x27;: &#x27;_loadMore&#x27;,
-            },
-        },
-
+    Y.eZ.SubitemGridView = Y.Base.create(&#x27;subitemGridView&#x27;, Y.eZ.AsynchronousSubitemView, [], {
         initializer: function () {
             this._set(&#x27;identifier&#x27;, &#x27;grid&#x27;);
             this._set(&#x27;name&#x27;, &#x27;Grid view&#x27;);
-            this._fireMethod = this._prepareInitialLoad;
-            this._errorHandlingMethod = this._handleError;
 
-            /**
-             * Holds the grid item view instances for the current grid.
-             *
-             * @property _gridItemViews
-             * @protected
-             * @type Array&lt;SubitemGridItemView&gt;
-             */
-            this._gridItemViews = [];
-
-            this.after(&#x27;offsetChange&#x27;, function (e) {
-                if ( this.get(&#x27;offset&#x27;) &gt;= 0 ) {
-                    this._uiLoading();
-                    this._fireLocationSearch();
-                    this._disableLoadMore();
-                }
-            });
-            this.after(&#x27;subitemsChange&#x27;, function (e) {
-                this._uiUpdatePagination();
-                this._appendGridItem(this._getNewlyAddedSubitems(e.newVal, e.prevVal));
-            });
-            this.after([&#x27;subitemsChange&#x27;, &#x27;loadingErrorChange&#x27;], this._uiEndLoading);
-        },
-
-        destructor: function () {
-            this._gridItemViews.forEach(function (item) {
-                item.destroy();
-            });
-        },
-
-        /**
-         * Handles the loading error. It fires a notification and makes sure the
-         * state of the view is consistent with what is actually loaded.
-         *
-         * @method _handleError
-         * @protected
-         */
-        _handleError: function () {
-            if ( this.get(&#x27;loadingError&#x27;) ) {
-                this.fire(&#x27;notify&#x27;, {
-                    notification: {
-                        text: &quot;An error occurred while the loading the subitems&quot;,
-                        identifier: &#x27;subitem-grid-load-error-&#x27; + this.get(&#x27;location&#x27;).get(&#x27;id&#x27;),
-                        state: &#x27;error&#x27;,
-                        timeout: 0
-                    }
-                });
-                this.set(&#x27;offset&#x27;, this.get(&#x27;offset&#x27;) - this.get(&#x27;limit&#x27;));
-                this._uiUpdatePagination();
-            }
-        },
-
-        /**
-         * &#x60;activeChange&#x60; handler. Set the view in loading mode and fire the
-         * first location search event if the subitems are not already filled.
-         *
-         * @method _prepareInitialLoad
-         * @protected
-         */
-        _prepareInitialLoad: function () {
-            if ( this.get(&#x27;offset&#x27;) &lt; 0 ) {
-                this.set(&#x27;offset&#x27;, 0);
-            }
-        },
-
-        /**
-         * Updates the pagination displayed to the editor.
-         *
-         * @method _uiUpdatePagination
-         * @protected
-         */
-        _uiUpdatePagination: function () {
-            this._updateDisplayedCount();
-            this._updateMoreCount();
-            if ( this._countLoadedSubitems() &lt; this.get(&#x27;location&#x27;).get(&#x27;childCount&#x27;) ) {
-                this._enableLoadMore();
-            }
-        },
-
-        /**
-         * Counts the number of loaded subitems.
-         *
-         * @method _countLoadedSubitems
-         * @protected
-         * @return {Number}
-         */
-        _countLoadedSubitems: function () {
-            return this.get(&#x27;subitems&#x27;) ? this.get(&#x27;subitems&#x27;).length : 0;
-        },
-
-        /**
-         * Returns the load more button
-         *
-         * @method _getLoadMore
-         * @protected
-         * @return {Y.Node}
-         */
-        _getLoadMore: function () {
-            return this.get(&#x27;container&#x27;).one(&#x27;.ez-subitemgrid-more&#x27;);
-        },
-
-        /**
-         * Disables the load more button
-         *
-         * @method _disableLoadMore
-         * @protected
-         */
-        _disableLoadMore: function () {
-            this._getLoadMore().set(&#x27;disabled&#x27;, true);
-        },
-
-        /**
-         * Enables the load more button
-         *
-         * @method _enableLoadMore
-         * @protected
-         */
-        _enableLoadMore: function () {
-            this._getLoadMore().set(&#x27;disabled&#x27;, false);
-        },
-
-        /**
-         * Updates the display count with the number of currently loaded
-         * subitems.
-         *
-         * @method _updateDisplayedCount
-         * @protected
-         */
-        _updateDisplayedCount: function () {
-            this.get(&#x27;container&#x27;).one(&#x27;.ez-subitemgrid-display-count&#x27;).setContent(
-                this._countLoadedSubitems()
-            );
-        },
-
-        /**
-         * Updates the more count in the load more button.
-         *
-         * @method _updateMoreCount
-         * @protected
-         */
-        _updateMoreCount: function () {
-            var moreCount = Math.min(
-                    this.get(&#x27;limit&#x27;),
-                    this.get(&#x27;location&#x27;).get(&#x27;childCount&#x27;) - this._countLoadedSubitems()
-                );
-
-            if ( !moreCount ) {
-                moreCount = this.get(&#x27;limit&#x27;);
-            }
-            this.get(&#x27;container&#x27;).one(&#x27;.ez-subitemgrid-more-count&#x27;).setContent(moreCount);
+            this._ItemView = Y.eZ.SubitemGridItemView;
+            this._itemViewBaseConfig = {};
         },
 
         /**
          * Sets the UI in the loading the state
          *
          * @protected
+         * @deprecated
          * @method _uiLoading
          */
         _uiLoading: function () {
-            this.get(&#x27;container&#x27;).addClass(IS_PAGE_LOADING);
+            logDeprecatedWarning(&#x27;_uiLoading&#x27;, &#x27;_uiPageLoading&#x27;);
+            this._uiPageLoading();
         },
 
         /**
          * Removes the loading state of the UI
          *
          * @method _uiEndLoading
+         * @deprecated
          * @protected
          */
         _uiEndLoading: function () {
-            this.get(&#x27;container&#x27;).removeClass(IS_PAGE_LOADING);
+            logDeprecatedWarning(&#x27;_uiEndLoading&#x27;, &#x27;_uiPageEndLoading&#x27;);
+            this._uiPageEndLoading();
         },
 
         render: function () {
-            var subitemCount = this.get(&#x27;location&#x27;).get(&#x27;childCount&#x27;);
+            var subitemCount = this._getChildCount();
 
-            if ( !this.get(&#x27;subitems&#x27;) ) {
+            if ( !this.get(&#x27;items&#x27;) ) {
                 this.get(&#x27;container&#x27;).setHTML(this.template({
                     limit: this.get(&#x27;limit&#x27;),
                     subitemCount: subitemCount,
@@ -715,128 +574,46 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
          * Appends a rendred grid item view for the last loaded subitem.
          *
          * @method _appendGridItem
+         * @deprecated
          * @protected
          * @param {Array} newSubitems
          */
         _appendGridItem: function (newSubitems) {
-            var gridContent = this.get(&#x27;container&#x27;).one(&#x27;.ez-subitemgrid-content&#x27;);
-
-            newSubitems.forEach(function (struct) {
-                var itemView = new Y.eZ.SubitemGridItemView(struct);
-
-                itemView.addTarget(this);
-                this._gridItemViews.push(itemView);
-                gridContent.append(
-                    itemView.render().get(&#x27;container&#x27;)
-                );
-                itemView.set(&#x27;active&#x27;, true);
-            }, this);
+            logDeprecatedWarning(&#x27;_appendGridItem&#x27;, &#x27;_appendItems&#x27;);
+            this._appendItems(newSubitems);
+            this._gridItemViews = this._itemViews;
         },
 
         /**
-         * Return an array containing the subitems that we want to append
-         * in the grid view.
+         * Counts the number of loaded items.
          *
-         * @method _getNewlyAddedSubitems
-         * @private
-         * @param {Array} subitemNewVal an array containing the new subitems.
-         * @param {Array} subitemPrevVal an array containing the old subitems.
-         */
-        _getNewlyAddedSubitems: function (subitemNewVal, subitemPrevVal) {
-            var subitemPreviousCount = subitemPrevVal ? subitemPrevVal.length : 0,
-                subitemNewCount = subitemNewVal.length;
-
-            return this.get(&#x27;subitems&#x27;).slice(subitemPreviousCount - subitemNewCount);
-        },
-
-        /**
-         * &#x60;tap&#x60; event handler on the load more button.
-         *
-         * @method _loadMore
+         * @method _countLoadedSubitems
+         * @deprecated
          * @protected
+         * @return {Number}
          */
-        _loadMore: function (e) {
-            e.preventDefault();
-            this.set(&#x27;offset&#x27;, this.get(&#x27;offset&#x27;) + this.get(&#x27;limit&#x27;));
+        _countLoadedSubitems: function () {
+            logDeprecatedWarning(&#x27;_countLoadedSubitems&#x27;, &#x27;_countLoadedItems&#x27;);
+            return this._countLoadedItems();
         },
 
-        /**
-         * Fires the &#x60;locationSearch&#x60; event to fetch the subitems of the
-         * currently displayed Location.
-         *
-         * @method _fireLocationSearch
-         * @protected
-         */
-        _fireLocationSearch: function () {
-            var locationId = this.get(&#x27;location&#x27;).get(&#x27;locationId&#x27;);
-
-            this.set(&#x27;loadingError&#x27;, false);
-            this.fire(&#x27;locationSearch&#x27;, {
-                viewName: &#x27;subitemgrid-&#x27; + locationId,
-                resultAttribute: &#x27;subitems&#x27;,
-                loadContentType: true,
-                loadContent: true,
-                search: {
-                    criteria: {
-                        &quot;ParentLocationIdCriterion&quot;: this.get(&#x27;location&#x27;).get(&#x27;locationId&#x27;),
-                    },
-                    offset: this.get(&#x27;offset&#x27;),
-                    limit: this.get(&#x27;limit&#x27;),
-                    /*
-                     * @TODO see https://jira.ez.no/browse/EZP-24315
-                     * this is not yet supported by the views in the REST API
-                    sortClauses: {
-                        SortClause: {
-                            SortField: this.get(&#x27;location&#x27;).get(&#x27;sortField&#x27;),
-                            SortOrder: this.get(&#x27;location&#x27;).get(&#x27;sortOrder&#x27;),
-                        },
-                    },
-                    */
-                },
-            });
-        },
     }, {
         ATTRS: {
             /**
-             * The max number of the Locations to display per &#x27;show more&#x27;
-             * session
-             *
-             * @attribute limit
-             * @default 10
-             * @type Number
-             */
-            limit: {
-                value: 10,
-            },
-
-            /**
-             * The offset in the Location list. A value below zero means no
-             * loading has not been made yet.
-             *
-             * @attribute offset
-             * @default minus the limit
-             * @type Number
-             */
-            offset: {
-                valueFn: function () {
-                    return -1 * this.get(&#x27;limit&#x27;);
-                },
-            },
-
-            /**
-             * The subitems list.
+             * The subitems list. This attribute is deprecated, it will be
+             * removed in PlatformUI 2.0. Use &#x60;items&#x60; instead.
              *
              * @attribute subitems
+             * @deprecated
              * @type Array of {Object} array containing location structs
              */
             subitems: {
-                setter: function (value) {
-                    var current = this.get(&#x27;subitems&#x27;);
-
-                    if ( current ) {
-                        return current.concat(value);
-                    }
-                    return value;
+                setter: function (value, attr, info) {
+                    this.set(&#x27;items&#x27;, value);
+                    return this.get(&#x27;items&#x27;);
+                },
+                getter: function () {
+                    return this.get(&#x27;items&#x27;);
                 },
             },
         }

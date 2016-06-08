@@ -40,6 +40,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorToolbarConfig.Paragraph",
         "eZ.AlloyEditorToolbarConfig.Table",
         "eZ.AlloyEditorToolbarConfig.Text",
+        "eZ.AsynchronousSubitemView",
         "eZ.AsynchronousView",
         "eZ.AuthorEditView",
         "eZ.AuthorInputView",
@@ -99,6 +100,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.LanguageSelectionBoxView",
         "eZ.LanguageSelectionBoxViewService",
         "eZ.LanguageSwitcherView",
+        "eZ.LoadMorePagination",
         "eZ.Location",
         "eZ.LocationViewDetailsTabView",
         "eZ.LocationViewLocationsTabView",
@@ -188,6 +190,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.SubitemBoxView",
         "eZ.SubitemGridView",
         "eZ.SubitemListItemView",
+        "eZ.SubitemListMoreView",
         "eZ.SubitemListView",
         "eZ.Tabs",
         "eZ.TemplateBasedView",
@@ -246,6 +249,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-toolbar-config-image",
         "ez-alloyeditor-toolbar-config-paragraph",
         "ez-alloyeditor-toolbar-ezadd",
+        "ez-asynchronousview",
         "ez-author-editview",
         "ez-author-view",
         "ez-barview",
@@ -309,6 +313,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-languageselectionboxview",
         "ez-languageselectionboxviewservice",
         "ez-languageswitcherview",
+        "ez-loadmorepagination",
         "ez-locationcreateplugin",
         "ez-locationmodel",
         "ez-locationremoveplugin",
@@ -374,6 +379,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-subitemgriditemview",
         "ez-subitemgridview",
         "ez-subitemlistitemview",
+        "ez-subitemlistmoreview",
         "ez-subitemlistview",
         "ez-tabs",
         "ez-templatebasedview",
@@ -520,6 +526,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-toolbar-ezadd",
             "name": "ez-alloyeditor-toolbar-ezadd",
             "description": "Provides the `ezadd` toolbar"
+        },
+        {
+            "displayName": "ez-asynchronousview",
+            "name": "ez-asynchronousview",
+            "description": "Provides the Asynchronous extension for the view"
         },
         {
             "displayName": "ez-author-editview",
@@ -739,7 +750,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-expandable",
             "name": "ez-expandable",
-            "description": "Provides the Asynchronous extension for the view"
+            "description": "The expandable extension"
         },
         {
             "displayName": "ez-fieldeditview",
@@ -835,6 +846,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-languageswitcherview",
             "name": "ez-languageswitcherview",
             "description": "Provides the Language Switcher View class"
+        },
+        {
+            "displayName": "ez-loadmorepagination",
+            "name": "ez-loadmorepagination",
+            "description": "Provide the LoadMorePagination extension"
         },
         {
             "displayName": "ez-locationcreateplugin",
@@ -1162,9 +1178,14 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the subitem list item view."
         },
         {
+            "displayName": "ez-subitemlistmoreview",
+            "name": "ez-subitemlistmoreview",
+            "description": "Provides the subitem list view paginated with a *Load More* button"
+        },
+        {
             "displayName": "ez-subitemlistview",
             "name": "ez-subitemlistview",
-            "description": "Provides the subitem list view."
+            "description": "Provides the subitem list view. This module is deprecated"
         },
         {
             "displayName": "ez-tabs",
