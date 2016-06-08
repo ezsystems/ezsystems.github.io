@@ -546,7 +546,7 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
          * @protected
          */
         _prepareInitialLoad: function () {
-            if ( this.get(&#x27;offset&#x27;) &lt; 0 ) {
+            if ( this.get(&#x27;offset&#x27;) &lt; 0 &amp;&amp; this._getChildCount() ) {
                 this.set(&#x27;offset&#x27;, 0);
             }
         },
