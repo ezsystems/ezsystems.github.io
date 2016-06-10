@@ -35078,7 +35078,36 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 83,
+            "line": 77,
+            "description": "Loads drafts created by a given user",
+            "itemtype": "method",
+            "name": "loadDrafts",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "function to call after processing response",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.User",
+            "module": "ez-usermodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-usermodel.js",
+            "line": 112,
             "description": "The user's email",
             "itemtype": "attribute",
             "name": "email",
@@ -35090,7 +35119,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 94,
+            "line": 123,
             "description": "The user's login",
             "itemtype": "attribute",
             "name": "login",
@@ -35102,7 +35131,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 105,
+            "line": 134,
             "description": "The user's `enabled` flag",
             "itemtype": "attribute",
             "name": "enabled",
@@ -35114,7 +35143,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 117,
+            "line": 146,
             "description": "The user's name",
             "itemtype": "attribute",
             "name": "name",
@@ -35126,7 +35155,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 128,
+            "line": 157,
             "description": "The user's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -35138,7 +35167,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-usermodel.js",
-            "line": 139,
+            "line": 168,
             "description": "The user's avatar",
             "itemtype": "attribute",
             "name": "avatar",
