@@ -70,6 +70,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.CountryEditView",
         "eZ.CountryView",
         "eZ.CreateContentActionView",
+        "eZ.DashboardBlockAllContentView",
+        "eZ.DashboardBlockBaseView",
+        "eZ.DashboardBlocksView",
+        "eZ.DashboardBlocksViewService",
         "eZ.DashboardView",
         "eZ.DateAndTimeEditView",
         "eZ.DateAndTimeView",
@@ -278,6 +282,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-country-editview",
         "ez-country-view",
         "ez-createcontentactionview",
+        "ez-dashboardblockallcontentview",
+        "ez-dashboardblockbaseview",
+        "ez-dashboardblocksview",
         "ez-dashboardview",
         "ez-date-editview",
         "ez-dateandtime-editview",
@@ -673,9 +680,24 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the create content action view class"
         },
         {
+            "displayName": "ez-dashboardblockallcontentview",
+            "name": "ez-dashboardblockallcontentview",
+            "description": "Provides the All Content Dashboard Block View class"
+        },
+        {
+            "displayName": "ez-dashboardblockbaseview",
+            "name": "ez-dashboardblockbaseview",
+            "description": "Provides the Dashboard Base Block View class"
+        },
+        {
+            "displayName": "ez-dashboardblocksview",
+            "name": "ez-dashboardblocksview",
+            "description": "Provides the Dashboard Blocks View class"
+        },
+        {
             "displayName": "ez-dashboardview",
             "name": "ez-dashboardview",
-            "description": "Provides the Dashboard View class"
+            "description": "Provides the Dashboard View class.\nAs of 1.4, this module is deprecated."
         },
         {
             "displayName": "ez-date-editview",

@@ -211,6 +211,32 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js": {
+            "name": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "modules": {
+                "ez-dashboardblockallcontentview": 1
+            },
+            "classes": {
+                "eZ.DashboardBlockAllContentView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js": {
+            "name": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
+            "modules": {
+                "ez-dashboardblockbaseview": 1
+            },
+            "classes": {
+                "eZ.DashboardBlockBaseView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js": {
             "name": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
             "modules": {
@@ -1236,6 +1262,17 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/services/ez-dashboardblocksviewservice.js": {
+            "name": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "modules": {},
+            "classes": {
+                "eZ.DashboardBlocksViewService": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/services/ez-discoverybarviewservice.js": {
             "name": "Resources/public/js/views/services/ez-discoverybarviewservice.js",
             "modules": {
@@ -1671,6 +1708,19 @@
             },
             "classes": {
                 "eZ.ContentTypeSelectorView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/ez-dashboardblocksview.js": {
+            "name": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "modules": {
+                "ez-dashboardblocksview": 1
+            },
+            "classes": {
+                "eZ.DashboardBlocksView": 1
             },
             "fors": {},
             "namespaces": {
@@ -3092,6 +3142,38 @@
             "line": 16,
             "description": "Provides the translate action view class"
         },
+        "ez-dashboardblockallcontentview": {
+            "name": "ez-dashboardblockallcontentview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.DashboardBlockAllContentView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 24,
+            "description": "Provides the All Content Dashboard Block View class"
+        },
+        "ez-dashboardblockbaseview": {
+            "name": "ez-dashboardblockbaseview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.DashboardBlockBaseView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
+            "line": 15,
+            "description": "Provides the Dashboard Base Block View class"
+        },
         "ez-richtext-embedcontainer": {
             "name": "ez-richtext-embedcontainer",
             "submodules": {},
@@ -4299,15 +4381,16 @@
             "elements": {},
             "classes": {
                 "eZ.ContentCreateViewService": 1,
-                "eZ.ContentEditViewService": 1
+                "eZ.ContentEditViewService": 1,
+                "eZ.DashboardBlocksViewService": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 14,
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 15,
             "description": "Provides the view service components to create some content"
         },
         "ez-discoverybarviewservice": {
@@ -4779,6 +4862,22 @@
             "line": 18,
             "description": "Provides the content type selector view class"
         },
+        "ez-dashboardblocksview": {
+            "name": "ez-dashboardblocksview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.DashboardBlocksView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 16,
+            "description": "Provides the Dashboard Blocks View class"
+        },
         "ez-dashboardview": {
             "name": "ez-dashboardview",
             "submodules": {},
@@ -4792,8 +4891,10 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/ez-dashboardview.js",
-            "line": 14,
-            "description": "Provides the Dashboard View class"
+            "line": 20,
+            "description": "Provides the Dashboard View class.\nAs of 1.4, this module is deprecated.",
+            "deprecated": true,
+            "deprecationMessage": "Use ez-dashboardblocksview instead."
         },
         "ez-discoverybarview": {
             "name": "ez-discoverybarview",
@@ -6225,6 +6326,38 @@
             "is_constructor": 1,
             "extends": "eZ.ButtonActionView"
         },
+        "eZ.DashboardBlockAllContentView": {
+            "name": "eZ.DashboardBlockAllContentView",
+            "shortname": "eZ.DashboardBlockAllContentView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 24,
+            "description": "The all content dashboard block view",
+            "is_constructor": 1,
+            "extends": "eZ.DashboardBlockBaseView"
+        },
+        "eZ.DashboardBlockBaseView": {
+            "name": "eZ.DashboardBlockBaseView",
+            "shortname": "eZ.DashboardBlockBaseView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-dashboardblockbaseview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
+            "line": 15,
+            "description": "The dashboard base block view",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
         "eZ.RichTextEmbedContainer": {
             "name": "eZ.RichTextEmbedContainer",
             "shortname": "eZ.RichTextEmbedContainer",
@@ -7503,6 +7636,22 @@
             "is_constructor": 1,
             "extends": "eZ.ViewService"
         },
+        "eZ.DashboardBlocksViewService": {
+            "name": "eZ.DashboardBlocksViewService",
+            "shortname": "eZ.DashboardBlocksViewService",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 15,
+            "description": "The dashboard blocks view service",
+            "is_constructor": 1,
+            "extends": "eZ.ViewService"
+        },
         "eZ.DiscoveryBarViewService": {
             "name": "eZ.DiscoveryBarViewService",
             "shortname": "eZ.DiscoveryBarViewService",
@@ -8064,6 +8213,22 @@
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
+        "eZ.DashboardBlocksView": {
+            "name": "eZ.DashboardBlocksView",
+            "shortname": "eZ.DashboardBlocksView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 16,
+            "description": "The dashboard blocks view",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
         "eZ.DashboardView": {
             "name": "eZ.DashboardView",
             "shortname": "eZ.DashboardView",
@@ -8075,7 +8240,7 @@
             "module": "ez-dashboardview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/ez-dashboardview.js",
-            "line": 14,
+            "line": 20,
             "description": "The dashboard view",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
@@ -10267,7 +10432,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 924,
+            "line": 925,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -10279,7 +10444,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 936,
+            "line": 937,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -10292,7 +10457,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 949,
+            "line": 950,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -10305,7 +10470,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 962,
+            "line": 963,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -10317,7 +10482,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 975,
+            "line": 976,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -10331,7 +10496,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 989,
+            "line": 990,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -10343,7 +10508,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1003,
+            "line": 1004,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -10355,7 +10520,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1014,
+            "line": 1015,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -10367,7 +10532,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1026,
+            "line": 1027,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -10380,7 +10545,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1040,
+            "line": 1041,
             "description": "Default language code, as defined by the current siteaccess language config.",
             "itemtype": "attribute",
             "name": "contentCreationDefaultLanguageCode",
@@ -11134,6 +11299,142 @@
             "type": "eZ.TreeView",
             "class": "eZ.TreeActionView",
             "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 36,
+            "description": "Stores the click outside event handler",
+            "itemtype": "property",
+            "name": "_clickOutsideHandler",
+            "type": "{Object}",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 54,
+            "description": "Renders the dashboard block view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.DashboardBlockAllContentView"
+            },
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 82,
+            "description": "Shows the row options",
+            "itemtype": "method",
+            "name": "_uiShowOptions",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 97,
+            "description": "Clears the click outside handler",
+            "itemtype": "method",
+            "name": "_clearClickOutsideHandler",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 109,
+            "description": "Hides the row options",
+            "itemtype": "method",
+            "name": "_uiHideOptions",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 121,
+            "description": "Removes the loading state of the UI",
+            "itemtype": "method",
+            "name": "_uiEndLoading",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 131,
+            "description": "Makes request for data",
+            "itemtype": "method",
+            "name": "_fireSearchEvent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
+            "line": 168,
+            "description": "The items list.",
+            "itemtype": "attribute",
+            "name": "items",
+            "type": "Array of objects containing location structs",
+            "class": "eZ.DashboardBlockAllContentView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
+            "line": 26,
+            "description": "The block priority/order",
+            "itemtype": "attribute",
+            "name": "priority",
+            "type": "Number",
+            "default": "0",
+            "class": "eZ.DashboardBlockBaseView",
+            "module": "ez-dashboardblockbaseview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
+            "line": 37,
+            "description": "The block identifier",
+            "itemtype": "attribute",
+            "name": "identifier",
+            "type": "String",
+            "required": 1,
+            "class": "eZ.DashboardBlockBaseView",
+            "module": "ez-dashboardblockbaseview",
             "namespace": "eZ"
         },
         {
@@ -20480,6 +20781,90 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 8,
+            "description": "Provides the dashboard blocks view service class",
+            "itemtype": "method",
+            "name": "ez-dashboardblocksviewservice",
+            "class": "eZ.DashboardBlocksViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 31,
+            "description": "Loads content root location",
+            "itemtype": "method",
+            "name": "_loadRootLocation",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Y.Promise"
+            },
+            "class": "eZ.DashboardBlocksViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 54,
+            "description": "Loads model data of a root location",
+            "itemtype": "method",
+            "name": "_loadRootLocationModelData",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "rootLocationId",
+                    "description": "root location REST id",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Y.Promise"
+            },
+            "class": "eZ.DashboardBlocksViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 88,
+            "description": "Root location model",
+            "itemtype": "attribute",
+            "name": "rootLocation",
+            "type": "Y.eZ.Location",
+            "class": "eZ.DashboardBlocksViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 100,
+            "description": "The error message to be displayed\nwhen loading root location id fails.",
+            "itemtype": "attribute",
+            "name": "loadRootLocationErrorMessage",
+            "type": "String",
+            "default": "'Cannot load root location'",
+            "class": "eZ.DashboardBlocksViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
+            "line": 112,
+            "description": "The error message to be displayed\nwhen loading location model data fails.",
+            "itemtype": "attribute",
+            "name": "loadLocationModelErrorMessage",
+            "type": "String",
+            "default": "'Cannot load root location data into model'",
+            "class": "eZ.DashboardBlocksViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/services/ez-discoverybarviewservice.js",
             "line": 28,
             "description": "Redirects to the Trash",
@@ -27461,8 +27846,143 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 29,
+            "description": "Renders the dashboard view",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "the view itself",
+                "type": "eZ.DashboardBlocksView"
+            },
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 42,
+            "description": "Toggles blocks active state",
+            "itemtype": "method",
+            "name": "_toggleBlocksActiveState",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 55,
+            "description": "Renders blocks on the dashboard",
+            "itemtype": "method",
+            "name": "_renderBlocks",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 71,
+            "description": "Sorts the provided list of blocks by priority.",
+            "itemtype": "method",
+            "name": "_sortBlocks",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "blocks",
+                    "description": "list of blocks",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "sorted list of blocks",
+                "type": "Array"
+            },
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 85,
+            "description": "Adds a block to the dashboard",
+            "itemtype": "method",
+            "name": "addBlock",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "dashboard block view instance",
+                    "type": "Y.eZ.DashboardBlockBaseView"
+                }
+            ],
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 107,
+            "description": "Finds block with a given identifier",
+            "itemtype": "method",
+            "name": "_findBlocks",
+            "params": [
+                {
+                    "name": "identifier",
+                    "description": "block identifier",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "a block view",
+                "type": "eZ.DashboardBlockBaseView|Null"
+            },
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 120,
+            "description": "Removes a block from the dashboard",
+            "itemtype": "method",
+            "name": "removeBlock",
+            "params": [
+                {
+                    "name": "identifier",
+                    "description": "block identifier",
+                    "type": "String"
+                }
+            ],
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-dashboardblocksview.js",
+            "line": 138,
+            "description": "An array dashboard blocks view instances.\nTo add a new block or remove existing one\nuse `addBlock` or `removeBlock` methods accordingly.",
+            "itemtype": "attribute",
+            "name": "blocks",
+            "type": "Array",
+            "readonly": "",
+            "class": "eZ.DashboardBlocksView",
+            "module": "ez-dashboardblocksview",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/ez-dashboardview.js",
-            "line": 28,
+            "line": 34,
             "description": "Renders the dashboard view",
             "itemtype": "method",
             "name": "render",
@@ -27476,7 +27996,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-dashboardview.js",
-            "line": 41,
+            "line": 47,
             "description": "Sets the source of the iframe to the value of the iframeSource attribute.",
             "itemtype": "method",
             "name": "_setIFrameSource",
@@ -27488,7 +28008,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-dashboardview.js",
-            "line": 53,
+            "line": 59,
             "description": "Stores the iframe Source",
             "itemtype": "attribute",
             "name": "iframeSource",
