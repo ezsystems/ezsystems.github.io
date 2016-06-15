@@ -224,6 +224,17 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js": {
+            "name": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "modules": {},
+            "classes": {
+                "eZ.DashboardBlockAsynchronousView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js": {
             "name": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
             "modules": {
@@ -231,6 +242,19 @@
             },
             "classes": {
                 "eZ.DashboardBlockBaseView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js": {
+            "name": "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js",
+            "modules": {
+                "ez-dashboardblockmydraftstview": 1
+            },
+            "classes": {
+                "eZ.DashboardBlockMyDraftsView": 1
             },
             "fors": {},
             "namespaces": {
@@ -1175,11 +1199,22 @@
                 "eZ.Plugin": 1
             }
         },
-        "Resources/public/js/views/services/plugins/ez-userloadplugin.js": {
-            "name": "Resources/public/js/views/services/plugins/ez-userloadplugin.js",
+        "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
             "modules": {
                 "ez-userloadplugin": 1
             },
+            "classes": {
+                "eZ.Plugin.UserDrafts": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
+        "Resources/public/js/views/services/plugins/ez-userloadplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-userloadplugin.js",
+            "modules": {},
             "classes": {
                 "eZ.Plugin.UserLoad": 1
             },
@@ -3147,15 +3182,16 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.DashboardBlockAllContentView": 1
+                "eZ.DashboardBlockAllContentView": 1,
+                "eZ.DashboardBlockAsynchronousView": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 24,
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 23,
             "description": "Provides the All Content Dashboard Block View class"
         },
         "ez-dashboardblockbaseview": {
@@ -3173,6 +3209,22 @@
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
             "line": 15,
             "description": "Provides the Dashboard Base Block View class"
+        },
+        "ez-dashboardblockmydraftstview": {
+            "name": "ez-dashboardblockmydraftstview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.DashboardBlockMyDraftsView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js",
+            "line": 17,
+            "description": "Provides the My Drafts Dashboard Block View class"
         },
         "ez-richtext-embedcontainer": {
             "name": "ez-richtext-embedcontainer",
@@ -4314,6 +4366,7 @@
             "submodules": {},
             "elements": {},
             "classes": {
+                "eZ.Plugin.UserDrafts": 1,
                 "eZ.Plugin.UserLoad": 1
             },
             "fors": {},
@@ -6337,8 +6390,24 @@
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 24,
+            "line": 17,
             "description": "The all content dashboard block view",
+            "is_constructor": 1,
+            "extends": "eZ.DashboardBlockAsynchronousView"
+        },
+        "eZ.DashboardBlockAsynchronousView": {
+            "name": "eZ.DashboardBlockAsynchronousView",
+            "shortname": "eZ.DashboardBlockAsynchronousView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 23,
+            "description": "The asynchronous dashboard block view",
             "is_constructor": 1,
             "extends": "eZ.DashboardBlockBaseView"
         },
@@ -6357,6 +6426,22 @@
             "description": "The dashboard base block view",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
+        },
+        "eZ.DashboardBlockMyDraftsView": {
+            "name": "eZ.DashboardBlockMyDraftsView",
+            "shortname": "eZ.DashboardBlockMyDraftsView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-dashboardblockmydraftstview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js",
+            "line": 17,
+            "description": "The my drafts dashboard block view",
+            "is_constructor": 1,
+            "extends": "eZ.DashboardBlockAsynchronousView"
         },
         "eZ.RichTextEmbedContainer": {
             "name": "eZ.RichTextEmbedContainer",
@@ -7520,6 +7605,22 @@
             "description": "Universal Discovery Content Tree Plugin. It enhances the universal\ndiscovery to handle the content tree related events and fetching.",
             "is_constructor": 1,
             "extends": "eZ.Plugin.ContentTree"
+        },
+        "eZ.Plugin.UserDrafts": {
+            "name": "eZ.Plugin.UserDrafts",
+            "shortname": "eZ.Plugin.UserDrafts",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-userloadplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
+            "line": 15,
+            "description": "Object user drafts plugin.\n\nIn order to use it you need to fire the `loadUserDrafts` event with two parameters:\n - `attributeName` where to store the result\n - `limit` limit of results",
+            "is_constructor": 1,
+            "extends": "eZ.Plugin.ViewServiceBase"
         },
         "eZ.Plugin.UserLoad": {
             "name": "eZ.Plugin.UserLoad",
@@ -11303,11 +11404,10 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 36,
-            "description": "Stores the click outside event handler",
-            "itemtype": "property",
-            "name": "_clickOutsideHandler",
-            "type": "{Object}",
+            "line": 38,
+            "description": "Fires a `locationSearch` event to search for the last modified\ncontent under the root Location.",
+            "itemtype": "method",
+            "name": "_fireLoadDataEvent",
             "access": "protected",
             "tagname": "",
             "class": "eZ.DashboardBlockAllContentView",
@@ -11315,22 +11415,21 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 54,
-            "description": "Renders the dashboard block view",
-            "itemtype": "method",
-            "name": "render",
-            "return": {
-                "description": "the view itself",
-                "type": "eZ.DashboardBlockAllContentView"
-            },
-            "class": "eZ.DashboardBlockAllContentView",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 35,
+            "description": "Stores the click outside event handler",
+            "itemtype": "property",
+            "name": "_clickOutsideHandler",
+            "type": "{Object}",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 82,
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 64,
             "description": "Shows the row options",
             "itemtype": "method",
             "name": "_uiShowOptions",
@@ -11343,73 +11442,90 @@
                     "type": "Object"
                 }
             ],
-            "class": "eZ.DashboardBlockAllContentView",
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 97,
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 79,
             "description": "Clears the click outside handler",
             "itemtype": "method",
             "name": "_clearClickOutsideHandler",
             "access": "protected",
             "tagname": "",
-            "class": "eZ.DashboardBlockAllContentView",
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 109,
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 91,
             "description": "Hides the row options",
             "itemtype": "method",
             "name": "_uiHideOptions",
             "access": "protected",
             "tagname": "",
-            "class": "eZ.DashboardBlockAllContentView",
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 121,
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 103,
             "description": "Removes the loading state of the UI",
             "itemtype": "method",
             "name": "_uiEndLoading",
             "access": "protected",
             "tagname": "",
-            "class": "eZ.DashboardBlockAllContentView",
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 131,
-            "description": "Makes request for data",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 113,
+            "description": "Fires an event to request the data to display.  This method must be\nreimplemented when extending eZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
-            "name": "_fireSearchEvent",
+            "name": "_fireLoadDataEvent",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockAsynchronousView",
+            "module": "ez-dashboardblockallcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 123,
+            "description": "Returns a representation of an item suitable for the template. This\nmethod must be reimplemented when extending\neZ.DashboardBlockAsynchronousView.",
+            "itemtype": "method",
+            "name": "_getTemplateItem",
             "access": "protected",
             "tagname": "",
             "params": [
                 {
-                    "name": "event",
-                    "description": "event facade",
+                    "name": "item",
+                    "description": "",
                     "type": "Object"
                 }
             ],
-            "class": "eZ.DashboardBlockAllContentView",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 168,
-            "description": "The items list.",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
+            "line": 142,
+            "description": "Hold the items to display in the block",
             "itemtype": "attribute",
             "name": "items",
-            "type": "Array of objects containing location structs",
-            "class": "eZ.DashboardBlockAllContentView",
+            "type": "Array",
+            "default": "[]",
+            "class": "eZ.DashboardBlockAsynchronousView",
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ"
         },
@@ -11435,6 +11551,40 @@
             "required": 1,
             "class": "eZ.DashboardBlockBaseView",
             "module": "ez-dashboardblockbaseview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js",
+            "line": 38,
+            "description": "Fires the `loadUserDrafts` event to retrieve the user's drafts with\nthe corresponding ContentInfo and ContentType objects.",
+            "itemtype": "method",
+            "name": "_fireLoadDataEvent",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockMyDraftsView",
+            "module": "ez-dashboardblockmydraftstview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js",
+            "line": 46,
+            "description": "Makes request for my drafts dashboard block data.\nListened in {eZ.Plugin.UserDrafts}",
+            "itemtype": "event",
+            "name": "loadUserDrafts",
+            "params": [
+                {
+                    "name": "attributeName",
+                    "description": "the name of attribute to be updated when data is loaded",
+                    "type": "String"
+                },
+                {
+                    "name": "limit",
+                    "description": "number of results",
+                    "type": "Number"
+                }
+            ],
+            "class": "eZ.DashboardBlockMyDraftsView",
+            "module": "ez-dashboardblockmydraftstview",
             "namespace": "eZ"
         },
         {
@@ -19476,6 +19626,11 @@
                             "type": "Object"
                         },
                         {
+                            "name": "sortClauses",
+                            "description": "",
+                            "type": "Object"
+                        },
+                        {
                             "name": "limit",
                             "description": "",
                             "type": "Number",
@@ -19500,7 +19655,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 72,
+            "line": 70,
             "description": "`contentSearch` event handler. It executes a content search and calls\nthe callback provided in the event parameters when done.",
             "itemtype": "method",
             "name": "_doContentSearch",
@@ -19520,6 +19675,11 @@
                                 {
                                     "name": "criteria",
                                     "description": "the search criteria used as Criteria in ContentQuery",
+                                    "type": "Object"
+                                },
+                                {
+                                    "name": "sortClauses",
+                                    "description": "the search sort clauses",
                                     "type": "Object"
                                 },
                                 {
@@ -19570,7 +19730,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 119,
+            "line": 118,
             "description": "`locationSearch` event handler. It executes the location search and\nset the result on the target of the event.",
             "itemtype": "method",
             "name": "_doLocationSearch",
@@ -19590,6 +19750,11 @@
                                 {
                                     "name": "criteria",
                                     "description": "the search criteria used as Criteria in LocationQuery",
+                                    "type": "Object"
+                                },
+                                {
+                                    "name": "sortClauses",
+                                    "description": "the search sort clauses",
                                     "type": "Object"
                                 },
                                 {
@@ -19856,6 +20021,139 @@
             ],
             "class": "eZ.Plugin.UniversalDiscoveryContentTree",
             "module": "ez-universaldiscoverycontenttreeplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
+            "line": 32,
+            "description": "Loads the user's draft with the corresponding ContentInfo and\nContentType.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_loadUserDrafts",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "loadUserDrafts event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.Plugin.UserDrafts",
+            "module": "ez-userloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
+            "line": 56,
+            "description": "Returns the last `limit` draft. It also initializes the version\nstructures that will be filled asynchronously with the ContentInfo\nand the ContentType.",
+            "itemtype": "method",
+            "name": "_extractLastDrafts",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "array of versions",
+                    "type": "Array"
+                },
+                {
+                    "name": "limit",
+                    "description": "the number of versions to keep",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "an array of Object containing a `version` entry referencing\nthe corresponding `eZ.Version`."
+            },
+            "class": "eZ.Plugin.UserDrafts",
+            "module": "ez-userloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
+            "line": 76,
+            "description": "Prepares the loading of the ContentInfo and the ContentType of the\nVersions.",
+            "itemtype": "method",
+            "name": "_collectDraftsData",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "event target view",
+                    "type": "eZ.View"
+                },
+                {
+                    "name": "attributeName",
+                    "description": "name of an attribute to be updated with data",
+                    "type": "String"
+                },
+                {
+                    "name": "limit",
+                    "description": "number of items to be returned in the end",
+                    "type": "Number"
+                },
+                {
+                    "name": "error",
+                    "description": "is error?",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "versions",
+                    "description": "list of versions",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Y.Promise"
+            },
+            "class": "eZ.Plugin.UserDrafts",
+            "module": "ez-userloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
+            "line": 107,
+            "description": "Prepares the loading of the ContentInfo corresponding to each\nVersions.",
+            "itemtype": "method",
+            "name": "_loadDraftContentInfo",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "list of version structures",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Y.Promise"
+            },
+            "class": "eZ.Plugin.UserDrafts",
+            "module": "ez-userloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-userdraftsplugin.js",
+            "line": 142,
+            "description": "Prepares the loading of the Content Type corresponding to each\nVersions.",
+            "itemtype": "method",
+            "name": "_loadDraftContentType",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "list of version structures",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Y.Promise"
+            },
+            "class": "eZ.Plugin.UserDrafts",
+            "module": "ez-userloadplugin",
             "namespace": "eZ.Plugin"
         },
         {
@@ -33443,6 +33741,18 @@
             "name": "publishedDate",
             "default": "epoch",
             "type": "Date",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 103,
+            "description": "The current version number",
+            "itemtype": "attribute",
+            "name": "currentVersionNo",
+            "default": "0",
+            "type": "Number",
             "class": "eZ.ContentInfoAttributes",
             "module": "ez-contentinfo-attributes",
             "namespace": "eZ"

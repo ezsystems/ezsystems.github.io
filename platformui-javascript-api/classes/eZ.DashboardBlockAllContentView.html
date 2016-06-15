@@ -107,7 +107,9 @@
                                 <li><a href="../classes/eZ.CountryView.html">eZ.CountryView</a></li>
                                 <li><a href="../classes/eZ.CreateContentActionView.html">eZ.CreateContentActionView</a></li>
                                 <li><a href="../classes/eZ.DashboardBlockAllContentView.html">eZ.DashboardBlockAllContentView</a></li>
+                                <li><a href="../classes/eZ.DashboardBlockAsynchronousView.html">eZ.DashboardBlockAsynchronousView</a></li>
                                 <li><a href="../classes/eZ.DashboardBlockBaseView.html">eZ.DashboardBlockBaseView</a></li>
+                                <li><a href="../classes/eZ.DashboardBlockMyDraftsView.html">eZ.DashboardBlockMyDraftsView</a></li>
                                 <li><a href="../classes/eZ.DashboardBlocksView.html">eZ.DashboardBlocksView</a></li>
                                 <li><a href="../classes/eZ.DashboardBlocksViewService.html">eZ.DashboardBlocksViewService</a></li>
                                 <li><a href="../classes/eZ.DashboardView.html">eZ.DashboardView</a></li>
@@ -194,6 +196,7 @@
                                 <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
+                                <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.VersionsLoad.html">eZ.Plugin.VersionsLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.ViewServiceBase.html">eZ.Plugin.ViewServiceBase</a></li>
@@ -323,6 +326,7 @@
                                 <li><a href="../modules/ez-createcontentactionview.html">ez-createcontentactionview</a></li>
                                 <li><a href="../modules/ez-dashboardblockallcontentview.html">ez-dashboardblockallcontentview</a></li>
                                 <li><a href="../modules/ez-dashboardblockbaseview.html">ez-dashboardblockbaseview</a></li>
+                                <li><a href="../modules/ez-dashboardblockmydraftstview.html">ez-dashboardblockmydraftstview</a></li>
                                 <li><a href="../modules/ez-dashboardblocksview.html">ez-dashboardblocksview</a></li>
                                 <li><a href="../modules/ez-dashboardview.html">ez-dashboardview</a></li>
                                 <li><a href="../modules/ez-date-editview.html">ez-date-editview</a></li>
@@ -503,11 +507,11 @@
 <div class="box meta">
 
         <div class="extends">
-            Extends <a href="../classes/eZ.DashboardBlockBaseView.html" class="crosslink">eZ.DashboardBlockBaseView</a>
+            Extends <a href="../classes/eZ.DashboardBlockAsynchronousView.html" class="crosslink">eZ.DashboardBlockAsynchronousView</a>
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l24"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:24</code></a>
+            Defined in: <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l17"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:17</code></a>
         </div>
 
             Module: <a href="../modules/ez-dashboardblockallcontentview.html">ez-dashboardblockallcontentview</a>
@@ -537,7 +541,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l24"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:24</code></a>
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l17"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:17</code></a>
         </p>
 
 
@@ -604,7 +608,7 @@
                                 <a href="#method__baseInit">_baseInit</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
                                 <a href="#method__clearClickOutsideHandler">_clearClickOutsideHandler</a>
 
                             </li>
@@ -640,8 +644,8 @@
                                 <a href="#method__fireAttrChange">_fireAttrChange</a>
 
                             </li>
-                            <li class="index-item method protected">
-                                <a href="#method__fireSearchEvent">_fireSearchEvent</a>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__fireLoadDataEvent">_fireLoadDataEvent</a>
 
                             </li>
                             <li class="index-item method protected inherited">
@@ -690,6 +694,10 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getStateVal">_getStateVal</a>
+
+                            </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__getTemplateItem">_getTemplateItem</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -777,15 +785,15 @@
                                 <a href="#method__setTemplate">_setTemplate</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
                                 <a href="#method__uiEndLoading">_uiEndLoading</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
                                 <a href="#method__uiHideOptions">_uiHideOptions</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method protected inherited">
                                 <a href="#method__uiShowOptions">_uiShowOptions</a>
 
                             </li>
@@ -951,7 +959,7 @@
                                 <a href="#property__allowAdHocAttrs">_allowAdHocAttrs</a>
 
                             </li>
-                            <li class="index-item property protected">
+                            <li class="index-item property protected inherited">
                                 <a href="#property__clickOutsideHandler">_clickOutsideHandler</a>
 
                             </li>
@@ -991,7 +999,7 @@
                             <li class="index-item attr inherited">
                                 <a href="#attr_initialized">initialized</a>
                             </li>
-                            <li class="index-item attr">
+                            <li class="index-item attr inherited">
                                 <a href="#attr_items">items</a>
                             </li>
                             <li class="index-item attr inherited">
@@ -1456,7 +1464,7 @@ this class for iteration performance reasons.
 
 
 </div>
-<div id="method__clearClickOutsideHandler" class="method item protected">
+<div id="method__clearClickOutsideHandler" class="method item protected inherited">
     <h3 class="name"><code>_clearClickOutsideHandler</code></h3>
 
         <span class="paren">()</span>
@@ -1470,9 +1478,9 @@ this class for iteration performance reasons.
 
 
     <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l97"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:97</code></a>
+                <p>Inherited from
+                <a href="../classes/eZ.DashboardBlockAsynchronousView.html#method__clearClickOutsideHandler">eZ.DashboardBlockAsynchronousView</a>:
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l79"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:79</code></a>
         </p>
 
 
@@ -1480,8 +1488,7 @@ this class for iteration performance reasons.
     </div>
 
     <div class="description">
-        <p>Clears the click outside handler</p>
-
+        Clears the click outside handler
     </div>
 
 
@@ -1978,16 +1985,10 @@ if this is a sub-attribute value being change. Otherwise null.
 
 
 </div>
-<div id="method__fireSearchEvent" class="method item protected">
-    <h3 class="name"><code>_fireSearchEvent</code></h3>
+<div id="method__fireLoadDataEvent" class="method item protected">
+    <h3 class="name"><code>_fireLoadDataEvent</code></h3>
 
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>event</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
+        <span class="paren">()</span>
 
 
 
@@ -1998,9 +1999,12 @@ if this is a sub-attribute value being change. Otherwise null.
 
 
     <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l131"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:131</code></a>
+            <p>Inherited from
+            <a href="../classes/eZ.DashboardBlockAsynchronousView.html#method__fireLoadDataEvent">
+                eZ.DashboardBlockAsynchronousView
+            </a>
+            but overwritten in
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l38"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:38</code></a>
         </p>
 
 
@@ -2008,27 +2012,11 @@ if this is a sub-attribute value being change. Otherwise null.
     </div>
 
     <div class="description">
-        <p>Makes request for data</p>
+        <p>Fires a <code>locationSearch</code> event to search for the last modified
+content under the root Location.</p>
 
     </div>
 
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">event</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                        <p>event facade</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
 
 
 
@@ -2796,6 +2784,71 @@ where the calling method has already obtained the config from state.
             <div class="returns-description">
                         <span class="type">Any</span>:
                     The stored value of the attribute
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getTemplateItem" class="method item protected inherited">
+    <h3 class="name"><code>_getTemplateItem</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>item</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.DashboardBlockAsynchronousView.html#method__getTemplateItem">eZ.DashboardBlockAsynchronousView</a>:
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l123"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:123</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Returns a representation of an item suitable for the template. This
+method must be reimplemented when extending
+eZ.DashboardBlockAsynchronousView.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">item</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
             </div>
         </div>
 
@@ -4227,7 +4280,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
 </div>
-<div id="method__uiEndLoading" class="method item protected">
+<div id="method__uiEndLoading" class="method item protected inherited">
     <h3 class="name"><code>_uiEndLoading</code></h3>
 
         <span class="paren">()</span>
@@ -4241,9 +4294,9 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
     <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l121"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:121</code></a>
+                <p>Inherited from
+                <a href="../classes/eZ.DashboardBlockAsynchronousView.html#method__uiEndLoading">eZ.DashboardBlockAsynchronousView</a>:
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l103"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:103</code></a>
         </p>
 
 
@@ -4251,15 +4304,14 @@ view in lowercase with the suffix <code>-ez-template</code>.
     </div>
 
     <div class="description">
-        <p>Removes the loading state of the UI</p>
-
+        Removes the loading state of the UI
     </div>
 
 
 
 
 </div>
-<div id="method__uiHideOptions" class="method item protected">
+<div id="method__uiHideOptions" class="method item protected inherited">
     <h3 class="name"><code>_uiHideOptions</code></h3>
 
         <span class="paren">()</span>
@@ -4273,9 +4325,9 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
     <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l109"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:109</code></a>
+                <p>Inherited from
+                <a href="../classes/eZ.DashboardBlockAsynchronousView.html#method__uiHideOptions">eZ.DashboardBlockAsynchronousView</a>:
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l91"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:91</code></a>
         </p>
 
 
@@ -4283,15 +4335,14 @@ view in lowercase with the suffix <code>-ez-template</code>.
     </div>
 
     <div class="description">
-        <p>Hides the row options</p>
-
+        Hides the row options
     </div>
 
 
 
 
 </div>
-<div id="method__uiShowOptions" class="method item protected">
+<div id="method__uiShowOptions" class="method item protected inherited">
     <h3 class="name"><code>_uiShowOptions</code></h3>
 
         <div class="args">
@@ -4311,9 +4362,9 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
     <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l82"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:82</code></a>
+                <p>Inherited from
+                <a href="../classes/eZ.DashboardBlockAsynchronousView.html#method__uiShowOptions">eZ.DashboardBlockAsynchronousView</a>:
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:64</code></a>
         </p>
 
 
@@ -4321,8 +4372,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     </div>
 
     <div class="description">
-        <p>Shows the row options</p>
-
+        Shows the row options
     </div>
 
         <div class="params">
@@ -4335,8 +4385,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
                     <div class="param-description">
-                        <p>event facade</p>
-
+                        event facade
                     </div>
 
                 </li>
@@ -6701,28 +6750,23 @@ but doesn't destroy it or any event listeners attached to it.
 
 
 </div>
-<div id="method_render" class="method item">
+<div id="method_render" class="method item inherited">
     <h3 class="name"><code>render</code></h3>
 
         <span class="paren">()</span>
 
-        <span class="returns-inline">
-            <span class="type"><a href="../classes/eZ.DashboardBlockAllContentView.html" class="crosslink">eZ.DashboardBlockAllContentView</a></span>
-        </span>
 
 
 
 
 
+        <span class="flag chainable">chainable</span>
 
 
     <div class="meta">
-            <p>Inherited from
-            <a href="http://yuilibrary.com/yui/docs/api/classes/View.html#method_render">
-                View
-            </a>
-            but overwritten in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l54"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:54</code></a>
+                <p>Inherited from
+                <a href="http://yuilibrary.com/yui/docs/api/classes/View.html#method_render">View</a>:
+        <a href="http://yuilibrary.com/yui/docs/api/files/app_js_view.js.html#l285"><code>app&#x2F;js&#x2F;view.js:285</code></a>
         </p>
 
 
@@ -6730,20 +6774,25 @@ but doesn't destroy it or any event listeners attached to it.
     </div>
 
     <div class="description">
-        <p>Renders the dashboard block view</p>
+        Renders this view.
 
+This method is a noop by default. Override it to provide a custom
+implementation that renders this view's content and appends it to the
+container element. Ideally your <code>render</code> method should also return <code>this</code> as
+the end to allow chaining, but that's up to you.
+
+Since there's no default renderer, you're free to render your view however
+you see fit, whether that means manipulating the DOM directly, dumping
+strings into <code>innerHTML</code>, or using a template language of some kind.
+
+For basic templating needs, <code>Y.Node.create()</code> and <code>Y.Lang.sub()</code> may
+suffice, but there are no restrictions on what tools or techniques you can
+use to render your view. All you need to do is append something to the
+container element at some point, and optionally append the container
+to the DOM if it's not there already.
     </div>
 
 
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type"><a href="../classes/eZ.DashboardBlockAllContentView.html" class="crosslink">eZ.DashboardBlockAllContentView</a></span>:
-                    <p>the view itself</p>
-
-            </div>
-        </div>
 
 
 </div>
@@ -7189,7 +7238,7 @@ instantiate a view and set a bunch of attributes without having to subclass
 
 
 </div>
-<div id="property__clickOutsideHandler" class="property item protected">
+<div id="property__clickOutsideHandler" class="property item protected inherited">
     <h3 class="name"><code>_clickOutsideHandler</code></h3>
     <span class="type">Object</span>
 
@@ -7199,17 +7248,16 @@ instantiate a view and set a bunch of attributes without having to subclass
 
 
     <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l36"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:36</code></a>
+                <p>Inherited from
+                <a href="../classes/eZ.DashboardBlockAsynchronousView.html#property__clickOutsideHandler">eZ.DashboardBlockAsynchronousView</a>:
+        <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l35"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:35</code></a>
         </p>
 
 
     </div>
 
     <div class="description">
-        <p>Stores the click outside event handler</p>
-
+        Stores the click outside event handler
     </div>
 
 
@@ -7509,10 +7557,10 @@ How this template gets used is entirely up to you and your custom
                     
                     
                     </div>
-                    <div id="attr_items" class="attr item">
+                    <div id="attr_items" class="attr item inherited">
                         <a name="config_items"></a> 
                         <h3 class="name"><code>items</code></h3>
-                        <span class="type">Array of objects containing location structs</span>
+                        <span class="type">Array</span>
                     
                     
                     
@@ -7522,19 +7570,19 @@ How this template gets used is entirely up to you and your custom
                     
                     
                         <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockallcontentview.js.html#l168"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockallcontentview.js:168</code></a>
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.DashboardBlockAsynchronousView.html#attr_items">eZ.DashboardBlockAsynchronousView</a>:
+                            <a href="../files/Resources_public_js_views_dashboard_ez-dashboardblockasynchronousview.js.html#l142"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;dashboard&#x2F;ez-dashboardblockasynchronousview.js:142</code></a>
                             </p>
                     
                     
                         </div>
                     
                         <div class="description">
-                            <p>The items list.</p>
-                    
+                            Hold the items to display in the block
                         </div>
                     
+                            <p><strong>Default:</strong> []</p>
                     
                     
                     </div>

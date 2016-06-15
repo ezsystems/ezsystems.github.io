@@ -71,7 +71,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.CountryView",
         "eZ.CreateContentActionView",
         "eZ.DashboardBlockAllContentView",
+        "eZ.DashboardBlockAsynchronousView",
         "eZ.DashboardBlockBaseView",
+        "eZ.DashboardBlockMyDraftsView",
         "eZ.DashboardBlocksView",
         "eZ.DashboardBlocksViewService",
         "eZ.DashboardView",
@@ -158,6 +160,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.Search",
         "eZ.Plugin.UniversalDiscoveryContentTree",
         "eZ.Plugin.UpdateTree",
+        "eZ.Plugin.UserDrafts",
         "eZ.Plugin.UserLoad",
         "eZ.Plugin.VersionsLoad",
         "eZ.Plugin.ViewServiceBase",
@@ -284,6 +287,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-createcontentactionview",
         "ez-dashboardblockallcontentview",
         "ez-dashboardblockbaseview",
+        "ez-dashboardblockmydraftstview",
         "ez-dashboardblocksview",
         "ez-dashboardview",
         "ez-date-editview",
@@ -688,6 +692,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-dashboardblockbaseview",
             "name": "ez-dashboardblockbaseview",
             "description": "Provides the Dashboard Base Block View class"
+        },
+        {
+            "displayName": "ez-dashboardblockmydraftstview",
+            "name": "ez-dashboardblockmydraftstview",
+            "description": "Provides the My Drafts Dashboard Block View class"
         },
         {
             "displayName": "ez-dashboardblocksview",
