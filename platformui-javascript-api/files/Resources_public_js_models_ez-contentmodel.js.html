@@ -199,7 +199,7 @@
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
-                                <li><a href="../classes/eZ.Plugin.VersionsLoad.html">eZ.Plugin.VersionsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.Versions.html">eZ.Plugin.Versions</a></li>
                                 <li><a href="../classes/eZ.Plugin.ViewServiceBase.html">eZ.Plugin.ViewServiceBase</a></li>
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
@@ -465,7 +465,7 @@
                                 <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versioninfomodel.html">ez-versioninfomodel</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
-                                <li><a href="../modules/ez-versionsloadplugin.html">ez-versionsloadplugin</a></li>
+                                <li><a href="../modules/ez-versionsplugin.html">ez-versionsplugin</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
                                 <li><a href="../modules/ez-viewservicebaseplugin.html">ez-viewservicebaseplugin</a></li>
@@ -850,6 +850,35 @@ YUI.add(&#x27;ez-contentmodel&#x27;, function (Y) {
         },
 
         /**
+         * Creates a new draft for the content
+         *
+         * @method createDraft
+         * @param {Object} options
+         * @param {Object} options.api (required) the JS REST client instance
+         * @param {String} versionNo (optional) Version Number for the draft to be based on. If not
+         *                                      provided, the current version of the content will
+         *                                      be used. Ex: 42
+         * @param {Function} callback(error, version)
+         */
+        createDraft: function (options, versionNo, callback) {
+            var capi = options.api,
+                contentService = capi.getContentService();
+
+            contentService.createContentDraft(this.get(&#x27;id&#x27;), versionNo, function (error, response) {
+                var version;
+                if (error) {
+                    callback(error, response);
+                    return;
+                }
+
+                version = new Y.eZ.Version();
+                version.setAttrs(version.parse(response));
+
+                callback(error, version);
+            });
+        },
+
+        /**
          * Sets main location for content
          *
          * @method setMainLocation
@@ -885,7 +914,7 @@ YUI.add(&#x27;ez-contentmodel&#x27;, function (Y) {
         delete: function (options, callback) {
             var capi = options.api,
                 contentService = capi.getContentService();
-            
+
             contentService.deleteContent(this.get(&#x27;id&#x27;), callback);
         }
     }, {

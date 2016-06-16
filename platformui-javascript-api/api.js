@@ -163,7 +163,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.UpdateTree",
         "eZ.Plugin.UserDrafts",
         "eZ.Plugin.UserLoad",
-        "eZ.Plugin.VersionsLoad",
+        "eZ.Plugin.Versions",
         "eZ.Plugin.ViewServiceBase",
         "eZ.Plugin.VisibilitySwitcherPlugin",
         "eZ.PluginRegistry",
@@ -426,7 +426,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-userprofileview",
         "ez-versioninfomodel",
         "ez-versionmodel",
-        "ez-versionsloadplugin",
+        "ez-versionsplugin",
         "ez-view",
         "ez-viewservice",
         "ez-viewservicebaseplugin",
@@ -1386,9 +1386,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the Version model class"
         },
         {
-            "displayName": "ez-versionsloadplugin",
-            "name": "ez-versionsloadplugin",
-            "description": "Provides the versions list load plugin"
+            "displayName": "ez-versionsplugin",
+            "name": "ez-versionsplugin",
+            "description": "Provides the versions plugin"
         },
         {
             "displayName": "ez-view",

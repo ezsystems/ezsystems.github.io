@@ -199,7 +199,7 @@
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
-                                <li><a href="../classes/eZ.Plugin.VersionsLoad.html">eZ.Plugin.VersionsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.Versions.html">eZ.Plugin.Versions</a></li>
                                 <li><a href="../classes/eZ.Plugin.ViewServiceBase.html">eZ.Plugin.ViewServiceBase</a></li>
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
@@ -465,7 +465,7 @@
                                 <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versioninfomodel.html">ez-versioninfomodel</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
-                                <li><a href="../modules/ez-versionsloadplugin.html">ez-versionsloadplugin</a></li>
+                                <li><a href="../modules/ez-versionsplugin.html">ez-versionsplugin</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
                                 <li><a href="../modules/ez-viewservicebaseplugin.html">ez-viewservicebaseplugin</a></li>
@@ -522,6 +522,15 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
+    var events = {
+        &#x27;.ez-create-draft-from-archived-button&#x27;: {
+            &#x27;tap&#x27;: &#x27;_createDraftFromArchivedVersion&#x27;
+        },
+        &#x27;.ez-archived-version-checkbox&#x27;: {
+            &#x27;change&#x27;: &#x27;_enableCreateDraftFromArchivedVersionButton&#x27;
+        }
+    };
+
     /**
      * The Location View View Versions tab class.
      *
@@ -532,6 +541,7 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
      */
     Y.eZ.LocationViewVersionsTabView = Y.Base.create(&#x27;locationViewVersionsTabView&#x27;, Y.eZ.LocationViewTabView, [Y.eZ.AsynchronousView], {
         initializer: function () {
+            this.events = Y.merge(this.events, events);
             this._fireMethod = this._fireLoadVersions;
             this._watchAttribute = &#x27;versions&#x27;;
         },
@@ -602,6 +612,70 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
              */
             this.fire(&#x27;loadVersions&#x27;, {content: this.get(&#x27;content&#x27;)});
         },
+
+        /**
+         * Enables the &#x60;Create Draft form archived version&#x60; button if the selection is right
+         *
+         * @method _enableCreateDraftFromArchivedVersionButton
+         * @protected
+         */
+        _enableCreateDraftFromArchivedVersionButton: function () {
+            var c = this.get(&#x27;container&#x27;),
+                checked = c.all(&#x27;.ez-archived-version-checkbox:checked&#x27;),
+                button = c.one(&#x27;.ez-create-draft-from-archived-button&#x27;);
+
+            if (checked.size() === 1) {
+                button.set(&#x27;disabled&#x27;, false);
+            } else {
+                button.set(&#x27;disabled&#x27;, true);
+            }
+        },
+
+        /**
+         * Creates a draft from an archived version
+         *
+         * @method _createDraftFromArchivedVersion
+         * @protected
+         */
+        _createDraftFromArchivedVersion: function () {
+            var c = this.get(&#x27;container&#x27;),
+                versions = Y.Array.reject(this.get(&#x27;versions&#x27;).ARCHIVED, function (version) {
+                    var checkbox = c.one(&#x27;.ez-archived-version-checkbox[data-version-id=&quot;&#x27; + version.get(&#x27;id&#x27;) + &#x27;&quot;]&#x27;);
+
+                    if (checkbox &amp;&amp; checkbox.get(&#x27;checked&#x27;)) {
+                        return false;
+                    }
+                    return true;
+                });
+
+            if (versions.length === 1) {
+                this._disableArchivedVersionsCheckboxes();
+
+                /**
+                 * Fired when the user clicks on the Create draft from archived version button
+                 *
+                 * @event createDraft
+                 * @param {eZ.Content} content
+                 *        {String} versionNo of the archived version. Ex: 42
+                 *
+                 */
+                this.fire(&#x27;createDraft&#x27;, {
+                    content: this.get(&#x27;content&#x27;),
+                    versionNo: versions[0].get(&#x27;versionNo&#x27;),
+                });
+            }
+        },
+
+        /**
+         * Disables all checkboxes on archived version list preventing from making use of them.
+         *
+         * @method _disableArchivedVersionsCheckboxes
+         * @private
+         */
+        _disableArchivedVersionsCheckboxes: function () {
+            this.get(&#x27;container&#x27;).all(&#x27;.ez-archived-version-checkbox&#x27;).set(&#x27;disabled&#x27;, true);
+        },
+
     }, {
         ATTRS: {
             /**

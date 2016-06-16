@@ -1236,13 +1236,13 @@
                 "eZ.Plugin": 1
             }
         },
-        "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js": {
-            "name": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+        "Resources/public/js/views/services/plugins/ez-versionsplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
             "modules": {
-                "ez-versionsloadplugin": 1
+                "ez-versionsplugin": 1
             },
             "classes": {
-                "eZ.Plugin.VersionsLoad": 1
+                "eZ.Plugin.Versions": 1
             },
             "fors": {},
             "namespaces": {
@@ -4407,21 +4407,21 @@
             "line": 14,
             "description": "Provides the user load plugin"
         },
-        "ez-versionsloadplugin": {
-            "name": "ez-versionsloadplugin",
+        "ez-versionsplugin": {
+            "name": "ez-versionsplugin",
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.Plugin.VersionsLoad": 1
+                "eZ.Plugin.Versions": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ.Plugin": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
             "line": 14,
-            "description": "Provides the versions list load plugin"
+            "description": "Provides the versions plugin"
         },
         "ez-viewservicebaseplugin": {
             "name": "ez-viewservicebaseplugin",
@@ -4764,7 +4764,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 14,
+            "line": 23,
             "description": "Provides the Location View Versions Tab view class."
         },
         "ez-locationviewviewtabview": {
@@ -7683,19 +7683,19 @@
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
-        "eZ.Plugin.VersionsLoad": {
-            "name": "eZ.Plugin.VersionsLoad",
-            "shortname": "eZ.Plugin.VersionsLoad",
+        "eZ.Plugin.Versions": {
+            "name": "eZ.Plugin.Versions",
+            "shortname": "eZ.Plugin.Versions",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-versionsloadplugin",
+            "module": "ez-versionsplugin",
             "namespace": "eZ.Plugin",
-            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
             "line": 14,
-            "description": "Object versions load plugin. It sets an event handler to load versions\nof content for versions tab in location view.\n\nIn order to use it you need to fire `loadVersions` event with parameter\n`content` containing the eZ.Content object for which you want to load versions.",
+            "description": "Object versions plugin. It sets event handlers to handle versions\nof content for versions tab in location view.\n\nLoading versions:\nIn order to use it you need to fire `loadVersions` event with parameter\n`content` containing the eZ.Content object for which you want to load versions.\n\nCreating draft based on an archived version:\nIn order to use it you need to fire 'createDraft' with corresponding\nparameters (see method).",
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
@@ -8162,7 +8162,7 @@
             "module": "ez-locationviewversionstabview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 14,
+            "line": 23,
             "description": "The Location View View Versions tab class.",
             "is_constructor": 1,
             "extends": "eZ.LocationViewTabView"
@@ -20245,8 +20245,8 @@
             "namespace": "eZ.Plugin"
         },
         {
-            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
-            "line": 32,
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 38,
             "description": "Loads versions list for content given in event facade. When loading of versions\nis finished, then it is set in `versions` attribute of the event target.\n\nThe version attribute should be an object with the given properties: `archived`,\n`published` and `draft`",
             "itemtype": "method",
             "name": "_loadVersions",
@@ -20266,13 +20266,13 @@
                     ]
                 }
             ],
-            "class": "eZ.Plugin.VersionsLoad",
-            "module": "ez-versionsloadplugin",
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
             "namespace": "eZ.Plugin"
         },
         {
-            "file": "Resources/public/js/views/services/plugins/ez-versionsloadplugin.js",
-            "line": 62,
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 68,
             "description": "Sorts an array of version info by status",
             "itemtype": "method",
             "name": "_sortVersions",
@@ -20289,8 +20289,73 @@
                 "description": "of sorted versions by status:\n             struct.<status_name>: {Array} of eZ.VersionInfo",
                 "type": "Object"
             },
-            "class": "eZ.Plugin.VersionsLoad",
-            "module": "ez-versionsloadplugin",
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 90,
+            "description": "Creates a draft based on an archived version and redirect to the edit page in order\nto edit it.",
+            "itemtype": "method",
+            "name": "_createDraftFromArchivedVersion",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade",
+                    "props": [
+                        {
+                            "name": "content",
+                            "description": "the content",
+                            "type": "eZ.Content"
+                        },
+                        {
+                            "name": "versionNo",
+                            "description": "of the archived version. Ex: 42",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 134,
+            "description": "Fire 'notify' event",
+            "itemtype": "method",
+            "name": "_notify",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "the text shown during the notification",
+                    "type": "String"
+                },
+                {
+                    "name": "identifier",
+                    "description": "the identifier of the notification",
+                    "type": "String"
+                },
+                {
+                    "name": "state",
+                    "description": "the state of the notification",
+                    "type": "String"
+                },
+                {
+                    "name": "timeout",
+                    "description": "the number of second, the notification will be shown",
+                    "type": "Number"
+                }
+            ],
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
             "namespace": "eZ.Plugin"
         },
         {
@@ -25492,7 +25557,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 54,
+            "line": 64,
             "description": "Prepares a list of versionInfo to be displayed",
             "itemtype": "method",
             "name": "_prepareVersionsForDisplay",
@@ -25515,7 +25580,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 80,
+            "line": 90,
             "description": "Fire the `loadVersions` event to retrieve the versions",
             "itemtype": "method",
             "name": "_fireLoadVersions",
@@ -25527,7 +25592,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 87,
+            "line": 97,
             "description": "Fired when versions are about to be loaded",
             "itemtype": "event",
             "name": "loadVersions",
@@ -25537,7 +25602,60 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 96,
+            "line": 105,
+            "description": "Enables the `Create Draft form archived version` button if the selection is right",
+            "itemtype": "method",
+            "name": "_enableCreateDraftFromArchivedVersionButton",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 123,
+            "description": "Creates a draft from an archived version",
+            "itemtype": "method",
+            "name": "_createDraftFromArchivedVersion",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 143,
+            "description": "Fired when the user clicks on the Create draft from archived version button",
+            "itemtype": "event",
+            "name": "createDraft",
+            "params": [
+                {
+                    "name": "content",
+                    "description": "{String} versionNo of the archived version. Ex: 42",
+                    "type": "eZ.Content"
+                }
+            ],
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 158,
+            "description": "Disables all checkboxes on archived version list preventing from making use of them.",
+            "itemtype": "method",
+            "name": "_disableArchivedVersionsCheckboxes",
+            "access": "private",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 170,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -25550,7 +25668,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 109,
+            "line": 183,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -25563,7 +25681,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 122,
+            "line": 196,
             "description": "List of the current content versions sorted by status.\nEach status name is a properties of the versions object.",
             "itemtype": "attribute",
             "name": "versions",
@@ -25575,7 +25693,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 134,
+            "line": 208,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -25587,7 +25705,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 145,
+            "line": 219,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
@@ -34323,6 +34441,40 @@
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
             "line": 341,
+            "description": "Creates a new draft for the content",
+            "itemtype": "method",
+            "name": "createDraft",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "versionNo",
+                    "description": "(optional) Version Number for the draft to be based on. If not\n                                     provided, the current version of the content will\n                                     be used. Ex: 42",
+                    "type": "String"
+                },
+                {
+                    "name": "callback(error,",
+                    "description": "version)",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 370,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -34356,7 +34508,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 366,
+            "line": 395,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -34385,7 +34537,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 394,
+            "line": 423,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -34397,7 +34549,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 406,
+            "line": 435,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -34409,7 +34561,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 417,
+            "line": 446,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",

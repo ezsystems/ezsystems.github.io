@@ -199,7 +199,7 @@
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
-                                <li><a href="../classes/eZ.Plugin.VersionsLoad.html">eZ.Plugin.VersionsLoad</a></li>
+                                <li><a href="../classes/eZ.Plugin.Versions.html">eZ.Plugin.Versions</a></li>
                                 <li><a href="../classes/eZ.Plugin.ViewServiceBase.html">eZ.Plugin.ViewServiceBase</a></li>
                                 <li><a href="../classes/eZ.Plugin.VisibilitySwitcherPlugin.html">eZ.Plugin.VisibilitySwitcherPlugin</a></li>
                                 <li><a href="../classes/eZ.PluginRegistry.html">eZ.PluginRegistry</a></li>
@@ -465,7 +465,7 @@
                                 <li><a href="../modules/ez-userprofileview.html">ez-userprofileview</a></li>
                                 <li><a href="../modules/ez-versioninfomodel.html">ez-versioninfomodel</a></li>
                                 <li><a href="../modules/ez-versionmodel.html">ez-versionmodel</a></li>
-                                <li><a href="../modules/ez-versionsloadplugin.html">ez-versionsloadplugin</a></li>
+                                <li><a href="../modules/ez-versionsplugin.html">ez-versionsplugin</a></li>
                                 <li><a href="../modules/ez-view.html">ez-view</a></li>
                                 <li><a href="../modules/ez-viewservice.html">ez-viewservice</a></li>
                                 <li><a href="../modules/ez-viewservicebaseplugin.html">ez-viewservicebaseplugin</a></li>
@@ -817,6 +817,10 @@
                             </li>
                             <li class="index-item method">
                                 <a href="#method_copy">copy</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_createDraft">createDraft</a>
 
                             </li>
                             <li class="index-item method">
@@ -5298,6 +5302,101 @@ callback, object (method host), methodName, context, 0-n arguments
 
 
 </div>
+<div id="method_createDraft" class="method item">
+    <h3 class="name"><code>createDraft</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>options</code>
+                </li>
+                <li class="arg">
+                        <code>versionNo</code>
+                </li>
+                <li class="arg">
+                        <code>callback(error,</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l341"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:341</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Creates a new draft for the content</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">options</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">api</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    <p>(required) the JS REST client instance</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name">versionNo</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>(optional) Version Number for the draft to be based on. If not
+provided, the current version of the content will
+be used. Ex: 42</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback(error,</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        <p>version)</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method_delete" class="method item">
     <h3 class="name"><code>delete</code></h3>
 
@@ -5322,7 +5421,7 @@ callback, object (method host), methodName, context, 0-n arguments
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l366"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:366</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l395"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:395</code></a>
         </p>
 
 
@@ -8323,7 +8422,7 @@ be fired.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l341"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:341</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l370"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:370</code></a>
         </p>
 
 
@@ -9186,7 +9285,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l417"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:417</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l446"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:446</code></a>
                             </p>
                     
                     
@@ -9246,7 +9345,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l394"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:394</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l423"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:423</code></a>
                             </p>
                     
                     
@@ -9347,7 +9446,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l406"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:406</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l435"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:435</code></a>
                             </p>
                     
                     
