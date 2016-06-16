@@ -73,6 +73,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.DashboardBlockAllContentView",
         "eZ.DashboardBlockAsynchronousView",
         "eZ.DashboardBlockBaseView",
+        "eZ.DashboardBlockMyContentView",
         "eZ.DashboardBlockMyDraftsView",
         "eZ.DashboardBlocksView",
         "eZ.DashboardBlocksViewService",
@@ -287,6 +288,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-createcontentactionview",
         "ez-dashboardblockallcontentview",
         "ez-dashboardblockbaseview",
+        "ez-dashboardblockmycontentview",
         "ez-dashboardblockmydraftstview",
         "ez-dashboardblocksview",
         "ez-dashboardview",
@@ -692,6 +694,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-dashboardblockbaseview",
             "name": "ez-dashboardblockbaseview",
             "description": "Provides the Dashboard Base Block View class"
+        },
+        {
+            "displayName": "ez-dashboardblockmycontentview",
+            "name": "ez-dashboardblockmycontentview",
+            "description": "Provides the My Content Dashboard Block View class"
         },
         {
             "displayName": "ez-dashboardblockmydraftstview",

@@ -248,6 +248,19 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js": {
+            "name": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
+            "modules": {
+                "ez-dashboardblockmycontentview": 1
+            },
+            "classes": {
+                "eZ.DashboardBlockMyContentView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js": {
             "name": "Resources/public/js/views/dashboard/ez-dashboardblockmydraftsview.js",
             "modules": {
@@ -3209,6 +3222,22 @@
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockbaseview.js",
             "line": 15,
             "description": "Provides the Dashboard Base Block View class"
+        },
+        "ez-dashboardblockmycontentview": {
+            "name": "ez-dashboardblockmycontentview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.DashboardBlockMyContentView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
+            "line": 17,
+            "description": "Provides the My Content Dashboard Block View class"
         },
         "ez-dashboardblockmydraftstview": {
             "name": "ez-dashboardblockmydraftstview",
@@ -6426,6 +6455,22 @@
             "description": "The dashboard base block view",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
+        },
+        "eZ.DashboardBlockMyContentView": {
+            "name": "eZ.DashboardBlockMyContentView",
+            "shortname": "eZ.DashboardBlockMyContentView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-dashboardblockmycontentview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
+            "line": 17,
+            "description": "The all content dashboard block view",
+            "is_constructor": 1,
+            "extends": "eZ.DashboardBlockAsynchronousView"
         },
         "eZ.DashboardBlockMyDraftsView": {
             "name": "eZ.DashboardBlockMyDraftsView",
@@ -11551,6 +11596,18 @@
             "required": 1,
             "class": "eZ.DashboardBlockBaseView",
             "module": "ez-dashboardblockbaseview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
+            "line": 38,
+            "description": "Fires a `locationSearch` event to search for the last modified\ncontent under the root Location.",
+            "itemtype": "method",
+            "name": "_fireLoadDataEvent",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DashboardBlockMyContentView",
+            "module": "ez-dashboardblockmycontentview",
             "namespace": "eZ"
         },
         {
@@ -21129,7 +21186,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
-            "line": 88,
+            "line": 89,
             "description": "Root location model",
             "itemtype": "attribute",
             "name": "rootLocation",
@@ -21140,7 +21197,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
-            "line": 100,
+            "line": 101,
             "description": "The error message to be displayed\nwhen loading root location id fails.",
             "itemtype": "attribute",
             "name": "loadRootLocationErrorMessage",
@@ -21152,7 +21209,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
-            "line": 112,
+            "line": 113,
             "description": "The error message to be displayed\nwhen loading location model data fails.",
             "itemtype": "attribute",
             "name": "loadLocationModelErrorMessage",
@@ -36003,6 +36060,18 @@
             "name": "avatar",
             "default": "null",
             "type": "object",
+            "class": "eZ.User",
+            "module": "ez-usermodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-usermodel.js",
+            "line": 179,
+            "description": "The user id",
+            "itemtype": "attribute",
+            "name": "userId",
+            "default": "''",
+            "type": "Number",
             "class": "eZ.User",
             "module": "ez-usermodel",
             "namespace": "eZ"
