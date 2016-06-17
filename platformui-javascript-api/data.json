@@ -22398,7 +22398,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 179,
+            "line": 182,
             "description": "Assign the role to selected content",
             "itemtype": "method",
             "name": "_assignRoleToAssignee",
@@ -22427,7 +22427,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 200,
+            "line": 203,
             "description": "Assign the role to a user",
             "itemtype": "method",
             "name": "_assignRoleToUser",
@@ -22461,7 +22461,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 232,
+            "line": 235,
             "description": "Assign the role to a user group",
             "itemtype": "method",
             "name": "_assignRoleToUserGroup",
@@ -22500,7 +22500,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 268,
+            "line": 271,
             "description": "Assign role callback triggering notification and calling given callback",
             "itemtype": "method",
             "name": "_assignRoleCallback",
@@ -22534,7 +22534,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 313,
+            "line": 316,
             "description": "Notification changed to *started* before assigning role to users/groups",
             "itemtype": "method",
             "name": "_assignRoleNotificationStarted",
@@ -22558,7 +22558,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 340,
+            "line": 343,
             "description": "Notification with *error* state when loadRole fails",
             "itemtype": "method",
             "name": "_loadRoleErrorNotification",
@@ -22582,7 +22582,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 361,
+            "line": 364,
             "description": "Generates identifier for notifications which is unique based on\nrole ID and IDs of users/groups which role is being assigned to.",
             "itemtype": "method",
             "name": "_getAssignRoleNotificationIdentifier",
@@ -22615,7 +22615,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 392,
+            "line": 395,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
