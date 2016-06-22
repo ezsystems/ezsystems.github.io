@@ -742,6 +742,10 @@
                                 <a href="#method__isLazyAttr">_isLazyAttr</a>
 
                             </li>
+                            <li class="index-item method private">
+                                <a href="#method__isSortedByPriority">_isSortedByPriority</a>
+
+                            </li>
                             <li class="index-item method protected">
                                 <a href="#method__lockPriorityEdit">_lockPriorityEdit</a>
 
@@ -773,6 +777,10 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__publish">_publish</a>
+
+                            </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__refresh">_refresh</a>
 
                             </li>
                             <li class="index-item method protected inherited inherited">
@@ -1974,7 +1982,13 @@ if this is a sub-attribute value being change. Otherwise null.
 <div id="method__fireLocationSearch" class="method item protected inherited">
     <h3 class="name"><code>_fireLocationSearch</code></h3>
 
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>forceLimit</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
 
 
 
@@ -1987,7 +2001,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__fireLocationSearch">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l78"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:78</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l99"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:99</code></a>
         </p>
 
 
@@ -2000,6 +2014,25 @@ currently displayed Location.</p>
 
     </div>
 
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">forceLimit</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
+
+
+                    <div class="param-description">
+                        <p>indicates if we should force a limit value
+(and offset to 0). This is used to reload the current list of
+subitems.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
 
 
 
@@ -2510,7 +2543,7 @@ cached value.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l77"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:77</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l96"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:96</code></a>
         </p>
 
 
@@ -2909,7 +2942,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__handleError">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l56"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:56</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l78"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:78</code></a>
         </p>
 
 
@@ -3395,6 +3428,48 @@ added lazily and still requires initialization.
 
 
 </div>
+<div id="method__isSortedByPriority" class="method item private">
+    <h3 class="name"><code>_isSortedByPriority</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l49"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:49</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns whether the subitems should be sorted by priority.</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__lockPriorityEdit" class="method item protected">
     <h3 class="name"><code>_lockPriorityEdit</code></h3>
 
@@ -3417,7 +3492,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l54"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:54</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l73"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:73</code></a>
         </p>
 
 
@@ -3708,7 +3783,7 @@ construction, prior to init.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__prepareInitialLoad">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l42"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:42</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:46</code></a>
         </p>
 
 
@@ -3886,6 +3961,39 @@ path publish, which can be used by critical code paths to improve performance.
 be the default <code>CustomEvent</code> instance, and can be configured independently.
             </div>
         </div>
+
+
+</div>
+<div id="method__refresh" class="method item protected inherited">
+    <h3 class="name"><code>_refresh</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.AsynchronousSubitemView.html#method__refresh">eZ.AsynchronousSubitemView</a>:
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:60</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Refreshes the view if it's active. The subitems are reloaded and then
+rerendered.</p>
+
+    </div>
+
+
 
 
 </div>
@@ -4431,7 +4539,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l41"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:41</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:60</code></a>
         </p>
 
 
@@ -7613,7 +7721,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:95</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l114"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:114</code></a>
                             </p>
                     
                     
@@ -7703,7 +7811,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l122"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:122</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l141"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:141</code></a>
                             </p>
                     
                     
@@ -7794,7 +7902,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l105"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:105</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:124</code></a>
                             </p>
                     
                     

@@ -547,6 +547,25 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
                     this._unlockPriorityEdit();
                 }
             });
+
+            this.on(&#x27;*:updatePriority&#x27;, function (e) {
+                if ( this._isSortedByPriority() ) {
+                    this._set(&#x27;loading&#x27;, true);
+                    this._disableLoadMore();
+                    e.location.onceAfter(&#x27;priorityChange&#x27;, Y.bind(this._refresh, this));
+                }
+            });
+        },
+
+        /**
+         * Returns whether the subitems should be sorted by priority.
+         *
+         * @method _isSortedByPriority
+         * @private
+         * @return {Boolean}
+         */
+        _isSortedByPriority: function () {
+            return this.get(&#x27;location&#x27;).get(&#x27;sortField&#x27;) === &#x27;PRIORITY&#x27;;
         },
 
         /**

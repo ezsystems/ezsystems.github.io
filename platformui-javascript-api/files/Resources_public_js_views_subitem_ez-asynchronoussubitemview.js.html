@@ -548,6 +548,10 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
             this.after(&#x27;loadingErrorChange&#x27;, function (e) {
                 this._set(&#x27;loading&#x27;, false);
             });
+            this.get(&#x27;location&#x27;).after(
+                [&#x27;sortOrderChange&#x27;, &#x27;sortFieldChange&#x27;],
+                Y.bind(this._refresh, this)
+            );
         },
 
         /**
@@ -561,6 +565,24 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
         _prepareInitialLoad: function () {
             if ( this.get(&#x27;offset&#x27;) &lt; 0 &amp;&amp; this._getChildCount() ) {
                 this.set(&#x27;offset&#x27;, 0);
+            }
+        },
+
+        /**
+         * Refreshes the view if it&#x27;s active. The subitems are reloaded and then
+         * rerendered.
+         *
+         * @method _refresh
+         * @protected
+         */
+        _refresh: function () {
+            if ( this.get(&#x27;active&#x27;) ) {
+                this.set(&#x27;items&#x27;, [], {reset: true});
+                this._set(&#x27;loading&#x27;, true);
+                this.once(&#x27;loadingChange&#x27;, function () {
+                    this._destroyItemViews();
+                });
+                this._fireLocationSearch(this.get(&#x27;offset&#x27;) + this.get(&#x27;limit&#x27;));
             }
         },
 
@@ -581,8 +603,7 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
                         timeout: 0
                     }
                 });
-                this.set(&#x27;offset&#x27;, this.get(&#x27;offset&#x27;) - this.get(&#x27;limit&#x27;));
-                this._uiUpdatePagination();
+                this._disableLoadMore();
             }
         },
 
@@ -591,9 +612,12 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
          * currently displayed Location.
          *
          * @method _fireLocationSearch
+         * @param {Number} forceLimit indicates if we should force a limit value
+         * (and offset to 0). This is used to reload the current list of
+         * subitems.
          * @protected
          */
-        _fireLocationSearch: function () {
+        _fireLocationSearch: function (forceLimit) {
             var locationId = this.get(&#x27;location&#x27;).get(&#x27;locationId&#x27;);
 
             this.set(&#x27;loadingError&#x27;, false);
@@ -606,18 +630,9 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
                     criteria: {
                         &quot;ParentLocationIdCriterion&quot;: this.get(&#x27;location&#x27;).get(&#x27;locationId&#x27;),
                     },
-                    offset: this.get(&#x27;offset&#x27;),
-                    limit: this.get(&#x27;limit&#x27;),
-                    /*
-                     * @TODO see https://jira.ez.no/browse/EZP-24315
-                     * this is not yet supported by the views in the REST API
-                    sortClauses: {
-                        SortClause: {
-                            SortField: this.get(&#x27;location&#x27;).get(&#x27;sortField&#x27;),
-                            SortOrder: this.get(&#x27;location&#x27;).get(&#x27;sortOrder&#x27;),
-                        },
-                    },
-                    */
+                    offset: forceLimit ? 0 : this.get(&#x27;offset&#x27;),
+                    limit: forceLimit ? forceLimit : this.get(&#x27;limit&#x27;),
+                    sortLocation: this.get(&#x27;location&#x27;),
                 },
             });
         },

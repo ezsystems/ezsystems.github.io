@@ -537,7 +537,7 @@ YUI.add(&#x27;ez-updatetreeplugin&#x27;, function (Y) {
                 events = [
                     &#x27;*:sentToTrash&#x27;, &#x27;*:restoredLocation&#x27;, &#x27;*:copiedContent&#x27;,
                     &#x27;*:movedContent&#x27;, &#x27;*:publishedDraft&#x27;, &#x27;*:savedDraft&#x27;,
-                    &#x27;*:deletedContent&#x27;, &#x27;*:swappedLocation&#x27;,
+                    &#x27;*:deletedContent&#x27;, &#x27;*:swappedLocation&#x27;, &#x27;*:updatedLocationSorting&#x27;,
                 ];
 
             app.on(events, Y.bind(this._clearTree, this));

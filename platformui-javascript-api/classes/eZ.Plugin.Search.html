@@ -862,6 +862,10 @@ and execute the corresponding search.</p>
                                 <a href="#method_doBefore">doBefore</a>
 
                             </li>
+                            <li class="index-item method">
+                                <a href="#method_findLocations">findLocations</a>
+
+                            </li>
                             <li class="index-item method inherited">
                                 <a href="#method_fire">fire</a>
 
@@ -1520,7 +1524,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l223"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:223</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l260"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:260</code></a>
         </p>
 
 
@@ -1583,7 +1587,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l205"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:205</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l242"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:242</code></a>
         </p>
 
 
@@ -1979,7 +1983,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l70"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:70</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:74</code></a>
         </p>
 
 
@@ -2115,6 +2119,9 @@ and optionally a <code>contentType</code> (depending on <code>loadContentType</c
                 <li class="arg">
                         <code>e</code>
                 </li>
+                <li class="arg">
+                        <code class="optional">[search.sortLocation]</code>
+                </li>
             </ul><span class="paren">)</span>
         </div>
 
@@ -2129,7 +2136,7 @@ and optionally a <code>contentType</code> (depending on <code>loadContentType</c
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l118"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:118</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l175"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:175</code></a>
         </p>
 
 
@@ -2174,8 +2181,9 @@ set the result on the target of the event.</p>
                                             </div>
                                         </li>
                                         <li class="param">
-                                                <code class="param-name">sortClauses</code>
+                                                <code class="param-name optional">[sortClauses]</code>
                                                 <span class="type">Object</span>
+                                                <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                             <div class="param-description">
                                                 the search sort clauses
@@ -2210,8 +2218,9 @@ set the result on the target of the event.</p>
 
                             </li>
                             <li class="param">
-                                    <code class="param-name">resultTotalCountAttribute</code>
+                                    <code class="param-name optional">[resultTotalCountAttribute]</code>
                                     <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                 <div class="param-description">
                                     <p>the name of attribute that will be updated with total
@@ -2221,8 +2230,9 @@ number of records matching search criteria</p>
 
                             </li>
                             <li class="param">
-                                    <code class="param-name">loadContent</code>
+                                    <code class="param-name optional">[loadContent]</code>
                                     <span class="type">Bool</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                 <div class="param-description">
                                     <p>the flag indicating whether the eZ.Content should be loaded for all
@@ -2233,8 +2243,9 @@ every search result (locationStruct)</p>
 
                             </li>
                             <li class="param">
-                                    <code class="param-name">loadContentType</code>
+                                    <code class="param-name optional">[loadContentType]</code>
                                     <span class="type">Bool</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                 <div class="param-description">
                                     <p>the flag indicating whether the eZ.ContentType should be loaded for all
@@ -2245,6 +2256,19 @@ every search result (locationStruct)</p>
 
                             </li>
                         </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name optional">[search.sortLocation]</code>
+                        <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a></span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>the Location to use to
+generate the sort clauses</p>
+
+                    </div>
+
                 </li>
             </ul>
         </div>
@@ -3620,7 +3644,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l322"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:322</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l359"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:359</code></a>
         </p>
 
 
@@ -3688,7 +3712,7 @@ field for the location struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l286"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:286</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l323"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:323</code></a>
         </p>
 
 
@@ -3762,7 +3786,7 @@ field for the location struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l241"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:241</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l278"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:278</code></a>
         </p>
 
 
@@ -4011,7 +4035,7 @@ by the top level attribute name, or null, if valueHash is falsey.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l182"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:182</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:219</code></a>
         </p>
 
 
@@ -6169,6 +6193,196 @@ or injects code "before" a given method on the host.
                     handle  The detach handle for the handler.
             </div>
         </div>
+
+
+</div>
+<div id="method_findLocations" class="method item">
+    <h3 class="name"><code>findLocations</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>search</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l122"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:122</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Executes a location search based on the provide <code>search</code> object.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">search</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">viewName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>the name of the REST view to use</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">criteria</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    <p>the search criteria used as Criteria in LocationQuery</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[sortClauses]</code>
+                                    <span class="type">Object</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>the sort clauses</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[sortLocation]</code>
+                                    <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>the Location to use to
+generate the sort clauses</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[offset]</code>
+                                    <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[limit]</code>
+                                    <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[loadContent]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>flag indicating whether the
+Content item of each result has to be loaded in addition</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[loadContentType]</code>
+                                    <span class="type">Boolean</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>flag indicating whether the
+Content Type of each result has to be loaded in addition</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">error</code>
+                                    <span class="type">Error | Null</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">result</code>
+                                    <span class="type">Response | Array</span>
+
+                                <div class="param-description">
+                                    <p>the Response object in case
+of error or an array of Location struct. A Location struct is object
+containing the Location and/or the Content item and/or the Content
+Type depending on the <code>loadContent</code> and <code>loadContentType</code> flags.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">resultCount</code>
+                                    <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
+
+                                <div class="param-description">
+                                    <p>the total result number of the
+search</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
 
 
 </div>
@@ -8468,7 +8682,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l372"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:372</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l416"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:416</code></a>
                             </p>
                     
                     
@@ -8588,7 +8802,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l361"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:361</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l405"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:405</code></a>
                             </p>
                     
                     

@@ -558,84 +558,46 @@ YUI.add(&#x27;ez-contenttreeplugin&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadNode: function (node, callback) {
-            var capi = this.get(&#x27;host&#x27;).get(&#x27;capi&#x27;),
-                options = {api: capi},
-                contentService = capi.getContentService(),
-                levelLocation = node.data.location,
-                query;
+            var levelLocation = node.data.location,
+                loadContent = this.get(&#x27;tree&#x27;).rootNode.data.loadContent;
 
-            query = contentService.newViewCreateStruct(&#x27;children_&#x27; + levelLocation.get(&#x27;locationId&#x27;), &#x27;LocationQuery&#x27;);
-            query.body.ViewInput.LocationQuery.Criteria = {
-                &quot;ParentLocationIdCriterion&quot;: levelLocation.get(&#x27;locationId&#x27;),
-            };
-
-            /*
-             * @TODO sort correctly the sub-items of the levelLocation
-             * see https://jira.ez.no/browse/EZP-24998
-            query.body.ViewInput.LocationQuery.SortClauses = {
-                &quot;SortClause&quot;: {
-                    &quot;SortField&quot;: levelLocation.get(&#x27;sortField&#x27;),
-                    &quot;SortOrder&quot;: levelLocation.get(&#x27;sortOrder&#x27;),
+            this.get(&#x27;host&#x27;).search.findLocations({
+                viewName: &#x27;children_&#x27; + levelLocation.get(&#x27;locationId&#x27;),
+                criteria: {
+                    &quot;ParentLocationIdCriterion&quot;: levelLocation.get(&#x27;locationId&#x27;),
                 },
-            };
-            */
-
-            contentService.createView(query, Y.bind(function (err, response) {
-                var tasks = new Y.Parallel(),
-                    loadError = false,
-                    children = {};
-
-                if ( err ) {
+                sortLocation: levelLocation,
+                loadContent: loadContent,
+                loadContentType: true,
+            }, function (error, results) {
+                if ( error ) {
                     callback({node: node});
                     return;
                 }
-                Y.Array.each(response.document.View.Result.searchHits.searchHit, function (hit) {
-                    var loc, contentInfo, contentType,
-                        end = tasks.add(function (err) {
-                            if ( err ) {
-                                loadError = true;
-                                return;
-                            }
-                            node.append({
-                                data: children[loc.get(&#x27;id&#x27;)],
-                                id: loc.get(&#x27;id&#x27;),
-                                canHaveChildren: children[loc.get(&#x27;id&#x27;)].contentType.get(&#x27;isContainer&#x27;),
-                                state: {
-                                    leaf: (loc.get(&#x27;childCount&#x27;) === 0),
-                                },
-                            });
-                        });
+                results.forEach(function (locationStruct) {
+                    var location = locationStruct.location,
+                        contentType = locationStruct.contentType,
+                        data = {
+                            location: location,
+                            contentInfo: location.get(&#x27;contentInfo&#x27;),
+                            contentType: contentType,
+                        };
 
-                    loc = new Y.eZ.Location({id: hit.value.Location._href});
-                    loc.loadFromHash(hit.value.Location);
-
-                    // TODO we should be a bit smarter here to not load again
-                    // and again the same content type at least for a given level.
-                    contentInfo = loc.get(&#x27;contentInfo&#x27;);
-                    contentType = new Y.eZ.ContentType({id: contentInfo.get(&#x27;resources&#x27;).ContentType});
-
-                    children[loc.get(&#x27;id&#x27;)] = {
-                        &quot;location&quot;: loc,
-                        &quot;contentInfo&quot;: contentInfo,
-                        &quot;contentType&quot;: contentType,
-                    };
-                    contentType.load(options, end);
-                });
-
-                if ( node.tree.rootNode.data.loadContent ) {
-                    this._loadContents(levelLocation, children, tasks.add(function (err) {
-                        loadError = err;
-                    }));
-                }
-
-                tasks.done(function () {
-                    if ( loadError ) {
-                        callback({node: node});
-                        return;
+                    if ( loadContent ) {
+                        data.content = locationStruct.content;
                     }
-                    callback();
+
+                    node.append({
+                        data: data,
+                        id: location.get(&#x27;id&#x27;),
+                        canHaveChildren: contentType.get(&#x27;isContainer&#x27;),
+                        state: {
+                            leaf: (location.get(&#x27;childCount&#x27;) === 0),
+                        },
+                    });
                 });
-            }, this));
+                callback();
+            });
         },
 
         /**
@@ -705,6 +667,7 @@ YUI.add(&#x27;ez-contenttreeplugin&#x27;, function (Y) {
          * @param {eZ.Location} levelLocation
          * @param {Object} data
          * @param {Function} callback
+         * @deprecated
          * @protected
          */
         _loadContents: function (levelLocation, data, callback) {
@@ -712,6 +675,8 @@ YUI.add(&#x27;ez-contenttreeplugin&#x27;, function (Y) {
                 contents = {},
                 query;
 
+            console.log(&#x27;[DEPRECATED] &#x60;_loadContents&#x60; method is deprecated&#x27;);
+            console.log(&#x27;[DEPRECATED] it will be removed from PlatformUI 2.0&#x27;);
             query = contentService.newViewCreateStruct(&#x27;children_content&#x27; + levelLocation.get(&#x27;locationId&#x27;), &#x27;ContentQuery&#x27;);
             query.body.ViewInput.ContentQuery.Criteria = {
                 &quot;ParentLocationIdCriterion&quot;: levelLocation.get(&#x27;locationId&#x27;),

@@ -598,7 +598,7 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
             /**
              * Holds the View constructor to use to render each item.
              *
-             * @property _ItemViews
+             * @property _ItemView
              * @protected
              * @required
              * @type {Function}
@@ -633,8 +633,8 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
             });
             this.after(&#x27;itemsChange&#x27;, function (e) {
                 this._set(&#x27;loading&#x27;, false);
-                this._uiUpdatePagination();
                 this._appendItems(this._getNewlyAddedItems(e.newVal, e.prevVal));
+                this._uiUpdatePagination();
             });
         },
 
@@ -646,8 +646,9 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
          */
         _destroyItemViews: function () {
             this._itemViews.forEach(function (item) {
-                item.destroy();
+                item.destroy({remove: true});
             });
+            this._itemViews = [];
         },
 
         destructor: function () {
@@ -688,14 +689,14 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
         },
 
         /**
-         * Counts the number of loaded items.
+         * Counts the number of loaded and displayed items.
          *
          * @method _countLoadedItems
          * @protected
          * @return {Number}
          */
         _countLoadedItems: function () {
-            return this.get(&#x27;items&#x27;) ? this.get(&#x27;items&#x27;).length : 0;
+            return this._itemViews.length;
         },
 
         /**
@@ -740,6 +741,8 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
             this._updateMoreCount();
             if ( this._countLoadedItems() &lt; this._getExpectedItemsCount() ) {
                 this._enableLoadMore();
+            } else {
+                this._disableLoadMore();
             }
         },
 
@@ -862,8 +865,12 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
              */
             items: {
                 setter: function (value, attr, info) {
-                    var current = this.get(&#x27;items&#x27;);
+                    var current = this.get(&#x27;items&#x27;),
+                        flag = info || {};
 
+                    if ( flag.reset ) {
+                        return value;
+                    }
                     if ( current ) {
                         return current.concat(value);
                     }
