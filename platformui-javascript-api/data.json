@@ -19015,7 +19015,24 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
-            "line": 119,
+            "line": 110,
+            "description": "Fired when a Location is swapped with another one.",
+            "itemtype": "event",
+            "name": "swappedLocation",
+            "params": [
+                {
+                    "name": "location",
+                    "description": "",
+                    "type": "eZ.Location"
+                }
+            ],
+            "class": "eZ.Plugin.LocationSwap",
+            "module": "ez-locationswapplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
+            "line": 128,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
