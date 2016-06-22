@@ -555,10 +555,19 @@ YUI.add(&#x27;ez-dashboardblockasynchronousview&#x27;, function (Y) {
 
             this.get(&#x27;container&#x27;)
                 .addClass(this._generateViewClassName(Y.eZ.DashboardBlockBaseView.NAME))
-                .addClass(this._generateViewClassName(Y.eZ.DashboardBlockAsynchronousView.NAME))
-                .addClass(CLASS_LOADING);
+                .addClass(this._generateViewClassName(Y.eZ.DashboardBlockAsynchronousView.NAME));
 
-            this.after(&#x27;itemsChange&#x27;, this._uiEndLoading);
+            this.after(&#x27;itemsChange&#x27;, function () {
+                this._set(&#x27;loading&#x27;, false);
+            });
+            this.after(&#x27;loadingChange&#x27;, function () {
+                if ( this.get(&#x27;loading&#x27;) ) {
+                    this._uiStartLoading();
+                } else {
+                    this._uiEndLoading();
+                }
+            });
+            this._set(&#x27;loading&#x27;, true);
         },
 
         render: function () {
@@ -566,6 +575,7 @@ YUI.add(&#x27;ez-dashboardblockasynchronousview&#x27;, function (Y) {
 
             this.get(&#x27;container&#x27;).setHTML(this.template({
                 items: items,
+                loading: this.get(&#x27;loading&#x27;),
                 loadingError: this.get(&#x27;loadingError&#x27;),
             }));
 
@@ -612,13 +622,23 @@ YUI.add(&#x27;ez-dashboardblockasynchronousview&#x27;, function (Y) {
         },
 
         /**
-         * Removes the loading state of the UI
+         * Removes the loading class to reflect the non loading state
          *
          * @method _uiEndLoading
          * @protected
          */
         _uiEndLoading: function () {
             this.get(&#x27;container&#x27;).removeClass(CLASS_LOADING);
+        },
+
+        /**
+         * Adds the loading class to reflect the loading state
+         *
+         * @method _uiStartLoading
+         * @protected
+         */
+        _uiStartLoading: function () {
+            this.get(&#x27;container&#x27;).addClass(CLASS_LOADING);
         },
 
         /**
@@ -659,6 +679,18 @@ YUI.add(&#x27;ez-dashboardblockasynchronousview&#x27;, function (Y) {
              */
             items: {
                 value: []
+            },
+
+            /**
+             * Flag indicating if the block is currently waiting for data.
+             *
+             * @attribute loading
+             * @type Boolean
+             * @default undefined
+             * @readOnly
+             */
+            loading: {
+                readOnly: true,
             }
         }
     });
