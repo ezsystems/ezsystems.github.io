@@ -23812,7 +23812,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 78,
+            "line": 84,
             "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
             "itemtype": "method",
             "name": "_handleError",
@@ -23824,7 +23824,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 99,
+            "line": 105,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
