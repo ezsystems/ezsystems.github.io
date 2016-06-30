@@ -1140,6 +1140,9 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
                     });
                 };
 
+            if ( this.get(&#x27;activeView&#x27;) ) {
+                this.get(&#x27;activeView&#x27;).set(&#x27;active&#x27;, false);
+            }
             if ( serviceInstance ) {
                 this.set(&#x27;loading&#x27;, true);
                 viewInfo.service = serviceInstance;
@@ -1209,11 +1212,8 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
          * @param {Object} e activeViewChange event facade
          */
         _afterActiveViewChange: function (e) {
-            var cb, prevView = e.prevVal, that = this,
+            var cb, that = this,
                 handleActive = function (view) {
-                    if ( prevView ) {
-                        prevView.set(&#x27;active&#x27;, false);
-                    }
                     view.set(&#x27;active&#x27;, true);
                 },
                 removeContainerTransformStyle = function (view) {
