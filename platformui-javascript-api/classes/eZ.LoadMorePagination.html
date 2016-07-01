@@ -404,6 +404,7 @@
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
+                                <li><a href="../modules/ez-registerlanguagehelpersplugin.html">ez-registerlanguagehelpersplugin</a></li>
                                 <li><a href="../modules/ez-relation-editview.html">ez-relation-editview</a></li>
                                 <li><a href="../modules/ez-relation-view.html">ez-relation-view</a></li>
                                 <li><a href="../modules/ez-relationlist-editview.html">ez-relationlist-editview</a></li>
@@ -439,6 +440,7 @@
                                 <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
                                 <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
                                 <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-translateproperty.html">ez-translateproperty</a></li>
                                 <li><a href="../modules/ez-trashbarview.html">ez-trashbarview</a></li>
                                 <li><a href="../modules/ez-trashitemmodel.html">ez-trashitemmodel</a></li>
                                 <li><a href="../modules/ez-trashview.html">ez-trashview</a></li>
@@ -590,6 +592,10 @@ the item view.</li>
                                 <a href="#method__enableLoadMore">_enableLoadMore</a>
 
                             </li>
+                            <li class="index-item method private">
+                                <a href="#method__getItemViewConfig">_getItemViewConfig</a>
+
+                            </li>
                             <li class="index-item method protected">
                                 <a href="#method__getLoadMore">_getLoadMore</a>
 
@@ -700,7 +706,7 @@ the item view.</li>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l269"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:269</code></a>
+        <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l287"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:287</code></a>
         </p>
 
 
@@ -870,6 +876,72 @@ the item view.</li>
 
 
 </div>
+<div id="method__getItemViewConfig" class="method item private">
+    <h3 class="name"><code>_getItemViewConfig</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>struct</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l269"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:269</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the item view configuration for the given <code>struct</code>.
+It mixes the view configuration, the  base item view configuration
+and the struct.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">struct</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getLoadMore" class="method item protected">
     <h3 class="name"><code>_getLoadMore</code></h3>
 
@@ -937,7 +1009,7 @@ the item view.</li>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l294"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:294</code></a>
+        <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l311"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:311</code></a>
         </p>
 
 
@@ -1336,7 +1408,7 @@ object is used as the configuraton for the item view instance.</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l349"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:349</code></a>
+                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l366"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:366</code></a>
                             </p>
                     
                     
@@ -1365,7 +1437,7 @@ object is used as the configuraton for the item view instance.</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l323"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:323</code></a>
+                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l340"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:340</code></a>
                             </p>
                     
                     
@@ -1397,7 +1469,7 @@ object is used as the configuraton for the item view instance.</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l311"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:311</code></a>
+                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l328"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:328</code></a>
                             </p>
                     
                     
@@ -1426,7 +1498,7 @@ object is used as the configuraton for the item view instance.</p>
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l335"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:335</code></a>
+                            <a href="../files/Resources_public_js_extensions_ez-loadmorepagination.js.html#l352"><code>Resources&#x2F;public&#x2F;js&#x2F;extensions&#x2F;ez-loadmorepagination.js:352</code></a>
                             </p>
                     
                     

@@ -404,6 +404,7 @@
                                 <li><a href="../modules/ez-publishdraftplugin.html">ez-publishdraftplugin</a></li>
                                 <li><a href="../modules/ez-rawcontentview.html">ez-rawcontentview</a></li>
                                 <li><a href="../modules/ez-registerhelpersplugin.html">ez-registerhelpersplugin</a></li>
+                                <li><a href="../modules/ez-registerlanguagehelpersplugin.html">ez-registerlanguagehelpersplugin</a></li>
                                 <li><a href="../modules/ez-relation-editview.html">ez-relation-editview</a></li>
                                 <li><a href="../modules/ez-relation-view.html">ez-relation-view</a></li>
                                 <li><a href="../modules/ez-relationlist-editview.html">ez-relationlist-editview</a></li>
@@ -439,6 +440,7 @@
                                 <li><a href="../modules/ez-textline-editview.html">ez-textline-editview</a></li>
                                 <li><a href="../modules/ez-time-editview.html">ez-time-editview</a></li>
                                 <li><a href="../modules/ez-translateactionview.html">ez-translateactionview</a></li>
+                                <li><a href="../modules/ez-translateproperty.html">ez-translateproperty</a></li>
                                 <li><a href="../modules/ez-trashbarview.html">ez-trashbarview</a></li>
                                 <li><a href="../modules/ez-trashitemmodel.html">ez-trashitemmodel</a></li>
                                 <li><a href="../modules/ez-trashview.html">ez-trashview</a></li>
@@ -778,6 +780,24 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
         },
 
         /**
+         * Returns the item view configuration for the given &#x60;struct&#x60;.
+         * It mixes the view configuration, the  base item view configuration
+         * and the struct.
+         *
+         * @private
+         * @method _getItemViewConfig
+         * @param {Object} struct
+         * @return {Object}
+         */
+        _getItemViewConfig: function (struct) {
+            return Y.merge(
+                {config: this.get(&#x27;config&#x27;)},
+                this._itemViewBaseConfig,
+                struct
+            );
+        },
+
+        /**
          * Appends a rendered item view for the last loaded items.
          *
          * @method _appendItems
@@ -787,11 +807,10 @@ YUI.add(&#x27;ez-loadmorepagination&#x27;, function (Y) {
          */
         _appendItems: function (newItems) {
             var content = this.get(&#x27;container&#x27;).one(&#x27;.ez-loadmorepagination-content&#x27;),
-                ItemView = this._ItemView,
-                baseConfig = this._itemViewBaseConfig;
+                ItemView = this._ItemView;
 
             newItems.forEach(function (struct) {
-                var itemView = new ItemView(Y.merge(baseConfig, struct));
+                var itemView = new ItemView(this._getItemViewConfig(struct));
 
                 itemView.addTarget(this);
                 this._itemViews.push(itemView);
