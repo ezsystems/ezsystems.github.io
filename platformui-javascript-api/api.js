@@ -8,7 +8,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "CKEDITOR.plugins.ezfocusblock",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
-        "SubitemGridItemView",
         "eZ.AccordionElement",
         "eZ.ActionBarView",
         "eZ.AlloyEditor.Toolbars.ezadd",
@@ -40,7 +39,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorToolbarConfig.Paragraph",
         "eZ.AlloyEditorToolbarConfig.Table",
         "eZ.AlloyEditorToolbarConfig.Text",
-        "eZ.AsynchronousSubitemView",
         "eZ.AsynchronousView",
         "eZ.AuthorEditView",
         "eZ.AuthorInputView",
@@ -70,13 +68,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.CountryEditView",
         "eZ.CountryView",
         "eZ.CreateContentActionView",
-        "eZ.DashboardBlockAllContentView",
-        "eZ.DashboardBlockAsynchronousView",
-        "eZ.DashboardBlockBaseView",
-        "eZ.DashboardBlockMyContentView",
-        "eZ.DashboardBlockMyDraftsView",
-        "eZ.DashboardBlocksView",
-        "eZ.DashboardBlocksViewService",
         "eZ.DashboardView",
         "eZ.DateAndTimeEditView",
         "eZ.DateAndTimeView",
@@ -107,13 +98,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.LanguageSelectionBoxView",
         "eZ.LanguageSelectionBoxViewService",
         "eZ.LanguageSwitcherView",
-        "eZ.LoadMorePagination",
         "eZ.Location",
         "eZ.LocationViewDetailsTabView",
         "eZ.LocationViewLocationsTabView",
         "eZ.LocationViewRelationsTabView",
         "eZ.LocationViewTabView",
-        "eZ.LocationViewVersionsTabView",
         "eZ.LocationViewView",
         "eZ.LocationViewViewService",
         "eZ.LocationViewViewTabView",
@@ -147,7 +136,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.LanguageSelectionBox",
         "eZ.Plugin.LocationCreate",
         "eZ.Plugin.LocationRemove",
-        "eZ.Plugin.LocationSwap",
         "eZ.Plugin.LocationsLoad",
         "eZ.Plugin.LoginAvailable",
         "eZ.Plugin.NotificationHub",
@@ -161,9 +149,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.Search",
         "eZ.Plugin.UniversalDiscoveryContentTree",
         "eZ.Plugin.UpdateTree",
-        "eZ.Plugin.UserDrafts",
         "eZ.Plugin.UserLoad",
-        "eZ.Plugin.Versions",
         "eZ.Plugin.ViewServiceBase",
         "eZ.Plugin.VisibilitySwitcherPlugin",
         "eZ.PluginRegistry",
@@ -196,9 +182,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.StudioPresentationView",
         "eZ.SubitemBaseView",
         "eZ.SubitemBoxView",
+        "eZ.SubitemGridItemView",
         "eZ.SubitemGridView",
-        "eZ.SubitemListItemView",
-        "eZ.SubitemListMoreView",
         "eZ.SubitemListView",
         "eZ.Tabs",
         "eZ.TemplateBasedView",
@@ -228,7 +213,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.UserProfileView",
         "eZ.UserView",
         "eZ.Version",
-        "eZ.VersionInfo",
         "eZ.View",
         "eZ.ViewService",
         "eZ.XmlTextEditView",
@@ -257,7 +241,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-toolbar-config-image",
         "ez-alloyeditor-toolbar-config-paragraph",
         "ez-alloyeditor-toolbar-ezadd",
-        "ez-asynchronousview",
         "ez-author-editview",
         "ez-author-view",
         "ez-barview",
@@ -286,11 +269,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-country-editview",
         "ez-country-view",
         "ez-createcontentactionview",
-        "ez-dashboardblockallcontentview",
-        "ez-dashboardblockbaseview",
-        "ez-dashboardblockmycontentview",
-        "ez-dashboardblockmydraftstview",
-        "ez-dashboardblocksview",
         "ez-dashboardview",
         "ez-date-editview",
         "ez-dateandtime-editview",
@@ -326,17 +304,14 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-languageselectionboxview",
         "ez-languageselectionboxviewservice",
         "ez-languageswitcherview",
-        "ez-loadmorepagination",
         "ez-locationcreateplugin",
         "ez-locationmodel",
         "ez-locationremoveplugin",
         "ez-locationsearchplugin",
         "ez-locationsloadplugin",
-        "ez-locationswapplugin",
         "ez-locationviewdetailstabview",
         "ez-locationviewlocationstabview",
         "ez-locationviewrelationstabview",
-        "ez-locationviewversionstabview",
         "ez-locationviewview",
         "ez-locationviewviewservice",
         "ez-locationviewviewtabview",
@@ -365,6 +340,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-publishdraftplugin",
         "ez-rawcontentview",
         "ez-registerhelpersplugin",
+        "ez-registerlanguagehelpersplugin",
         "ez-relation-editview",
         "ez-relation-view",
         "ez-relationlist-editview",
@@ -389,10 +365,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-studiopresentationview",
         "ez-subitembaseview",
         "ez-subitemboxview",
-        "ez-subitemgriditemview",
         "ez-subitemgridview",
-        "ez-subitemlistitemview",
-        "ez-subitemlistmoreview",
         "ez-subitemlistview",
         "ez-tabs",
         "ez-templatebasedview",
@@ -400,6 +373,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-textline-editview",
         "ez-time-editview",
         "ez-translateactionview",
+        "ez-translateproperty",
         "ez-trashbarview",
         "ez-trashitemmodel",
         "ez-trashview",
@@ -424,9 +398,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-usermenuview",
         "ez-usermodel",
         "ez-userprofileview",
-        "ez-versioninfomodel",
         "ez-versionmodel",
-        "ez-versionsplugin",
         "ez-view",
         "ez-viewservice",
         "ez-viewservicebaseplugin",
@@ -539,11 +511,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-toolbar-ezadd",
             "name": "ez-alloyeditor-toolbar-ezadd",
             "description": "Provides the `ezadd` toolbar"
-        },
-        {
-            "displayName": "ez-asynchronousview",
-            "name": "ez-asynchronousview",
-            "description": "Provides the Asynchronous extension for the view"
         },
         {
             "displayName": "ez-author-editview",
@@ -686,34 +653,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the create content action view class"
         },
         {
-            "displayName": "ez-dashboardblockallcontentview",
-            "name": "ez-dashboardblockallcontentview",
-            "description": "Provides the All Content Dashboard Block View class"
-        },
-        {
-            "displayName": "ez-dashboardblockbaseview",
-            "name": "ez-dashboardblockbaseview",
-            "description": "Provides the Dashboard Base Block View class"
-        },
-        {
-            "displayName": "ez-dashboardblockmycontentview",
-            "name": "ez-dashboardblockmycontentview",
-            "description": "Provides the My Content Dashboard Block View class"
-        },
-        {
-            "displayName": "ez-dashboardblockmydraftstview",
-            "name": "ez-dashboardblockmydraftstview",
-            "description": "Provides the My Drafts Dashboard Block View class"
-        },
-        {
-            "displayName": "ez-dashboardblocksview",
-            "name": "ez-dashboardblocksview",
-            "description": "Provides the Dashboard Blocks View class"
-        },
-        {
             "displayName": "ez-dashboardview",
             "name": "ez-dashboardview",
-            "description": "Provides the Dashboard View class.\nAs of 1.4, this module is deprecated."
+            "description": "Provides the Dashboard View class"
         },
         {
             "displayName": "ez-date-editview",
@@ -788,7 +730,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-expandable",
             "name": "ez-expandable",
-            "description": "The expandable extension"
+            "description": "Provides the Asynchronous extension for the view"
         },
         {
             "displayName": "ez-fieldeditview",
@@ -886,11 +828,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the Language Switcher View class"
         },
         {
-            "displayName": "ez-loadmorepagination",
-            "name": "ez-loadmorepagination",
-            "description": "Provide the LoadMorePagination extension"
-        },
-        {
             "displayName": "ez-locationcreateplugin",
             "name": "ez-locationcreateplugin",
             "description": "Provides the plugin for creating location"
@@ -916,11 +853,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the locations list load plugin"
         },
         {
-            "displayName": "ez-locationswapplugin",
-            "name": "ez-locationswapplugin",
-            "description": "Provides the plugin for swap location"
-        },
-        {
             "displayName": "ez-locationviewdetailstabview",
             "name": "ez-locationviewdetailstabview",
             "description": "Provides the Location View View Tab view class."
@@ -934,11 +866,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-locationviewrelationstabview",
             "name": "ez-locationviewrelationstabview",
             "description": "Provides the Location View Relations Tab view class."
-        },
-        {
-            "displayName": "ez-locationviewversionstabview",
-            "name": "ez-locationviewversionstabview",
-            "description": "Provides the Location View Versions Tab view class."
         },
         {
             "displayName": "ez-locationviewview",
@@ -1078,6 +1005,11 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-registerhelpersplugin",
             "name": "ez-registerhelpersplugin",
+            "description": "Provides the register url helpers plugin"
+        },
+        {
+            "displayName": "ez-registerlanguagehelpersplugin",
+            "name": "ez-registerlanguagehelpersplugin",
             "description": "Provides the register language helpers plugin"
         },
         {
@@ -1201,29 +1133,14 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the subitem box view."
         },
         {
-            "displayName": "ez-subitemgriditemview",
-            "name": "ez-subitemgriditemview",
-            "description": "Provides the subitem grid item view."
-        },
-        {
             "displayName": "ez-subitemgridview",
             "name": "ez-subitemgridview",
             "description": "Provides the subitem grid view."
         },
         {
-            "displayName": "ez-subitemlistitemview",
-            "name": "ez-subitemlistitemview",
-            "description": "Provides the subitem list item view."
-        },
-        {
-            "displayName": "ez-subitemlistmoreview",
-            "name": "ez-subitemlistmoreview",
-            "description": "Provides the subitem list view paginated with a *Load More* button"
-        },
-        {
             "displayName": "ez-subitemlistview",
             "name": "ez-subitemlistview",
-            "description": "Provides the subitem list view. This module is deprecated"
+            "description": "Provides the subitem list view."
         },
         {
             "displayName": "ez-tabs",
@@ -1254,6 +1171,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-translateactionview",
             "name": "ez-translateactionview",
             "description": "Provides the translate action view class"
+        },
+        {
+            "displayName": "ez-translateproperty",
+            "name": "ez-translateproperty",
+            "description": "Provides the translate property plugin"
         },
         {
             "displayName": "ez-trashbarview",
@@ -1376,19 +1298,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the User Profile View class"
         },
         {
-            "displayName": "ez-versioninfomodel",
-            "name": "ez-versioninfomodel",
-            "description": "Provides the VersionInfo model class"
-        },
-        {
             "displayName": "ez-versionmodel",
             "name": "ez-versionmodel",
             "description": "Provides the Version model class"
-        },
-        {
-            "displayName": "ez-versionsplugin",
-            "name": "ez-versionsplugin",
-            "description": "Provides the versions plugin"
         },
         {
             "displayName": "ez-view",
