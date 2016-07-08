@@ -533,7 +533,7 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
      * &#x60;content&#x60; containing the eZ.Content object for which you want to load versions.
      *
      * Deleting versions:
-     * In order to use it you need to fire &#x60;deleteVersionDraft&#x60;
+     * In order to use it you need to fire &#x60;deleteVersion&#x60;
      *
      * Creating draft based on an archived version:
      * In order to use it you need to fire &#x27;createDraft&#x27; with corresponding
@@ -549,7 +549,7 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
         initializer: function () {
             this.onHostEvent(&#x27;*:loadVersions&#x27;, this._loadVersions);
             this.onHostEvent(&#x27;*:createDraft&#x27;, this._createDraftFromArchivedVersion);
-            this.onHostEvent(&#x27;*:deleteVersionDraft&#x27;, this._deleteDraftConfirm);
+            this.onHostEvent(&#x27;*:deleteVersion&#x27;, this._confirmDeleteVersion);
         },
 
         /**
@@ -649,19 +649,19 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
         },
 
         /**
-         * deleteVersionDraft event handler, opens confirm box to confirm that selected draft
+         * deleteVersion event handler, opens confirm box to confirm that selected versions
          * are going to be deleted
          *
-         * @method _deleteDraftConfirm
+         * @method _confirmDeleteVersion
          * @private
-         * @param {EventFacade} e deleteVersionDraft event facade
+         * @param {EventFacade} e deleteVersion event facade
          */
-        _deleteDraftConfirm: function (e) {
+        _confirmDeleteVersion: function (e) {
             var service = this.get(&#x27;host&#x27;);
 
             service.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: &quot;Are you sure you want to remove selected drafts?&quot;,
+                    title: &quot;Are you sure you want to remove selected version(s)?&quot;,
                     confirmHandler: Y.bind(function () {
                         this._deleteVersion(e.versions, e.afterDeleteVersionsCallback);
                     }, this),

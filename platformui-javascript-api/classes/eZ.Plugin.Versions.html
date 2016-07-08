@@ -530,7 +530,7 @@ of content for versions tab in location view.</p>
 In order to use it you need to fire <code>loadVersions</code> event with parameter
 <code>content</code> containing the eZ.Content object for which you want to load versions.</p>
 <p>Deleting versions:
-In order to use it you need to fire <code>deleteVersionDraft</code></p>
+In order to use it you need to fire <code>deleteVersion</code></p>
 <p>Creating draft based on an archived version:
 In order to use it you need to fire 'createDraft' with corresponding
 parameters (see method).</p>
@@ -622,6 +622,10 @@ parameters (see method).</p>
 
                             </li>
                             <li class="index-item method private">
+                                <a href="#method__confirmDeleteVersion">_confirmDeleteVersion</a>
+
+                            </li>
+                            <li class="index-item method private">
                                 <a href="#method__createDraftFromArchivedVersion">_createDraftFromArchivedVersion</a>
 
                             </li>
@@ -635,10 +639,6 @@ parameters (see method).</p>
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__defInitFn">_defInitFn</a>
-
-                            </li>
-                            <li class="index-item method private">
-                                <a href="#method__deleteDraftConfirm">_deleteDraftConfirm</a>
 
                             </li>
                             <li class="index-item method protected">
@@ -1481,6 +1481,62 @@ Since it's on a critical path, we don't want to re-do the check.
 
 
 </div>
+<div id="method__confirmDeleteVersion" class="method item private">
+    <h3 class="name"><code>_confirmDeleteVersion</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l138"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:138</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>deleteVersion event handler, opens confirm box to confirm that selected versions
+are going to be deleted</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
+
+
+                    <div class="param-description">
+                        <p>deleteVersion event facade</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__createDraftFromArchivedVersion" class="method item private">
     <h3 class="name"><code>_createDraftFromArchivedVersion</code></h3>
 
@@ -1722,62 +1778,6 @@ to edit it.</p>
                     <div class="param-description">
                         Event object, with a cfg property which
 refers to the configuration object passed to the constructor.
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__deleteDraftConfirm" class="method item private">
-    <h3 class="name"><code>_deleteDraftConfirm</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>e</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag private">private</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l138"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:138</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>deleteVersionDraft event handler, opens confirm box to confirm that selected draft
-are going to be deleted</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">e</code>
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
-
-
-                    <div class="param-description">
-                        <p>deleteVersionDraft event facade</p>
-
                     </div>
 
                 </li>
