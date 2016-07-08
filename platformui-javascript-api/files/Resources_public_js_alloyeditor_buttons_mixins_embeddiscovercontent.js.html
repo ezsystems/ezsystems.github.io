@@ -613,6 +613,27 @@ YUI.add(&#x27;ez-alloyeditor-button-mixin-embeddiscovercontent&#x27;, function (
             embedWidget.setHref(&#x27;ezcontent://&#x27; + contentInfo.get(&#x27;contentId&#x27;));
             embedWidget.focus();
         },
+
+        /**
+         * Fires the &#x60;updatedEmbed&#x60; event. This should be called right after the
+         * embed element is updated.
+         *
+         * @method _fireUpdatedEmbed
+         * @protected
+         * @param {Object} selection the UDW selection
+         */
+        _fireUpdatedEmbed: function (selection) {
+            /**
+             * Fired when the embed widget is updated in the editor. This event
+             * can be listened to render the embed widget that has been updated.
+             *
+             * @event updatedEmbed
+             * @param {Object} embedStruct the UDW selection
+             */
+            this.props.editor.get(&#x27;nativeEditor&#x27;).fire(&#x27;updatedEmbed&#x27;, {
+                embedStruct: selection,
+            });
+        },
     };
 });
 

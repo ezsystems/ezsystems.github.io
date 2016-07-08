@@ -570,8 +570,7 @@ YUI.add(&#x27;ez-alloyeditor-button-image&#x27;, function (Y) {
          * @protected
          */
         _addImage: function (e) {
-            var nativeEditor = this.props.editor.get(&#x27;nativeEditor&#x27;),
-                widget;
+            var widget;
 
             this.execCommand();
             this._setContentInfo(e.selection.contentInfo);
@@ -580,7 +579,7 @@ YUI.add(&#x27;ez-alloyeditor-button-image&#x27;, function (Y) {
                 .setConfig(&#x27;size&#x27;, &#x27;medium&#x27;)
                 .setImageType()
                 .setWidgetContent(&#x27;&#x27;);
-            nativeEditor.fire(&#x27;updatedEmbed&#x27;);
+            this._fireUpdatedEmbed(e.selection);
             widget.setFocused(true);
         },
 

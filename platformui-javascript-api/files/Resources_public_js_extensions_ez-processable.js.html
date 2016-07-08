@@ -590,10 +590,12 @@ YUI.add(&#x27;ez-processable&#x27;, function (Y) {
          *
          * @method _process
          * @protected
+         * @param {EventFacade} [event] the event parameters of the event
+         * triggering the process (if any)
          */
-        _process: function () {
+        _process: function (event) {
             this.get(&#x27;processors&#x27;).forEach(function (info) {
-                info.processor.process(this);
+                info.processor.process(this, event);
             }, this);
         },
     }, {

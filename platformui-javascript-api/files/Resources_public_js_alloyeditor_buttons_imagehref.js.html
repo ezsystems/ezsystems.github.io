@@ -576,7 +576,7 @@ YUI.add(&#x27;ez-alloyeditor-button-imagehref&#x27;, function (Y) {
 
             this._setContentInfo(contentInfo);
             this._getWidget().setWidgetContent(&#x27;&#x27;);
-            this.props.editor.get(&#x27;nativeEditor&#x27;).fire(&#x27;updatedEmbed&#x27;);
+            this._fireUpdatedEmbed(e.selection);
         },
 
         render: function () {

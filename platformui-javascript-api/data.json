@@ -11851,6 +11851,12 @@
                     "name": "view",
                     "description": "",
                     "type": "eZ.FieldView|eZ.FieldEditView"
+                },
+                {
+                    "name": "event",
+                    "description": "the event parameters (if any) that triggered\nthe process",
+                    "type": "EventFacade",
+                    "optional": true
                 }
             ],
             "class": "eZ.RichTextResolveEmbed",
@@ -11859,7 +11865,36 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 38,
+            "line": 44,
+            "description": "Renders the embed from the embedStruct provided in the event parameters\nthat triggered the process.",
+            "itemtype": "method",
+            "name": "_renderSelectedContent",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                },
+                {
+                    "name": "embedStruct",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "mapNodes",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 68,
             "description": "Returns a node list of nodes representing an embed that are not yet been\nrendered.",
             "itemtype": "method",
             "name": "_getEmbedList",
@@ -11882,7 +11917,45 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 60,
+            "line": 90,
+            "description": "Renders the embeds in the `mapNode` as loading",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_renderLoadingEmbedElements",
+            "params": [
+                {
+                    "name": "mapNode",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 103,
+            "description": "Renders the given embed node as loading",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_renderLoadingEmbed",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 115,
             "description": "Renders the embed as in *loading mode*.",
             "itemtype": "method",
             "name": "_renderLoadingEmbeds",
@@ -11895,13 +11968,14 @@
                     "type": "NodeList"
                 }
             ],
+            "deprecated": true,
             "class": "eZ.RichTextResolveEmbed",
             "module": "ez-richtext-resolveembed",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 74,
+            "line": 131,
             "description": "Search for the content that are embed",
             "itemtype": "method",
             "name": "_loadEmbeds",
@@ -11925,7 +11999,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 93,
+            "line": 150,
             "description": "Renders the embed with the search results",
             "itemtype": "method",
             "name": "_renderEmbed",
@@ -11954,7 +12028,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 113,
+            "line": 170,
             "description": "Builds a map between the content id and the embed nodes embedding it.",
             "itemtype": "method",
             "name": "_buildEmbedMapNodes",
@@ -11977,7 +12051,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 133,
+            "line": 190,
             "description": "Returns the content id of an embed node",
             "itemtype": "method",
             "name": "_getEmbedContentId",
@@ -12000,7 +12074,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 145,
+            "line": 202,
             "description": "Adds the loading class on the embed node",
             "itemtype": "method",
             "name": "_setLoading",
@@ -12023,7 +12097,30 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 157,
+            "line": 214,
+            "description": "Appends the content node to the embed node.",
+            "itemtype": "method",
+            "name": "_appendContentNode",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "return": {
+                "description": "the content node",
+                "type": "Node"
+            },
+            "class": "eZ.RichTextResolveEmbed",
+            "module": "ez-richtext-resolveembed",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
+            "line": 227,
             "description": "Appends the embed content element when in loading mode.",
             "itemtype": "method",
             "name": "_appendLoadingNode",
@@ -12042,7 +12139,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 168,
+            "line": 238,
             "description": "Unsets the loading mode by remove the loading class.",
             "itemtype": "method",
             "name": "_unsetLoading",
@@ -12065,7 +12162,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
-            "line": 180,
+            "line": 250,
             "description": "Returns the node representing the embed content.",
             "itemtype": "method",
             "name": "_getEmbedContent",
@@ -12088,7 +12185,41 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
-            "line": 72,
+            "line": 81,
+            "description": "Fires the loadImageVariation event to load the image variation to display\nin the image embed.",
+            "itemtype": "method",
+            "name": "_loadVariation",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "eZ.Content"
+                },
+                {
+                    "name": "imageField",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "embedNode",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "class": "eZ.RichTextResolveImage",
+            "module": "ez-richtext-resolveimage",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
+            "line": 104,
             "description": "Renders the image inside the embed node.",
             "itemtype": "method",
             "name": "_renderImage",
@@ -12117,7 +12248,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
-            "line": 89,
+            "line": 121,
             "description": "Returns the image variation for the embedNode.",
             "itemtype": "method",
             "name": "_getEmbedVariation",
@@ -37795,13 +37926,21 @@
             "name": "_process",
             "access": "protected",
             "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "the event parameters of the event\ntriggering the process (if any)",
+                    "type": "EventFacade",
+                    "optional": true
+                }
+            ],
             "class": "eZ.Processable",
             "module": "ez-processable",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/extensions/ez-processable.js",
-            "line": 88,
+            "line": 90,
             "description": "Holds the processors. Each entry is an object containing 2\nproperties:\n- `processor` the processor\n- `priority` its priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -38566,6 +38705,42 @@
                     "name": "contentInfo",
                     "description": "",
                     "type": "eZ.ContentInfo"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
+            "module": "ez-alloyeditor-button-mixin-embeddiscovercontent",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
+            "line": 104,
+            "description": "Fires the `updatedEmbed` event. This should be called right after the\nembed element is updated.",
+            "itemtype": "method",
+            "name": "_fireUpdatedEmbed",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "selection",
+                    "description": "the UDW selection",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
+            "module": "ez-alloyeditor-button-mixin-embeddiscovercontent",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
+            "line": 113,
+            "description": "Fired when the embed widget is updated in the editor. This event\ncan be listened to render the embed widget that has been updated.",
+            "itemtype": "event",
+            "name": "updatedEmbed",
+            "params": [
+                {
+                    "name": "embedStruct",
+                    "description": "the UDW selection",
+                    "type": "Object"
                 }
             ],
             "class": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
