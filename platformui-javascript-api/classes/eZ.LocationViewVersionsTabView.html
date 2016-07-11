@@ -515,7 +515,7 @@
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l32"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:32</code></a>
+            Defined in: <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l23"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:23</code></a>
         </div>
 
             Module: <a href="../modules/ez-locationviewversionstabview.html">ez-locationviewversionstabview</a>
@@ -545,7 +545,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l32"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:32</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l23"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:23</code></a>
         </p>
 
 
@@ -596,10 +596,6 @@
                                 <a href="#method__afterContainerChange">_afterContainerChange</a>
 
                             </li>
-                            <li class="index-item method protected">
-                                <a href="#method__afterDeleteVersionsCallback">_afterDeleteVersionsCallback</a>
-
-                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__aggregateAttrs">_aggregateAttrs</a>
 
@@ -636,14 +632,6 @@
                                 <a href="#method__defInitFn">_defInitFn</a>
 
                             </li>
-                            <li class="index-item method protected">
-                                <a href="#method__deleteArchived">_deleteArchived</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__deleteDraft">_deleteDraft</a>
-
-                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__destroyContainer">_destroyContainer</a>
 
@@ -653,19 +641,11 @@
 
                             </li>
                             <li class="index-item method private">
-                                <a href="#method__disableVersionsCheckboxes">_disableVersionsCheckboxes</a>
+                                <a href="#method__disableArchivedVersionsCheckboxes">_disableArchivedVersionsCheckboxes</a>
 
                             </li>
                             <li class="index-item method protected">
-                                <a href="#method__enableArchivedVersionButtons">_enableArchivedVersionButtons</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__enableCreateDeleteDraftButton">_enableCreateDeleteDraftButton</a>
-
-                            </li>
-                            <li class="index-item method private">
-                                <a href="#method__enableVersionsCheckboxes">_enableVersionsCheckboxes</a>
+                                <a href="#method__enableCreateDraftFromArchivedVersionButton">_enableCreateDraftFromArchivedVersionButton</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -674,10 +654,6 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__fireAttrChange">_fireAttrChange</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__fireDeleteVersions">_fireDeleteVersions</a>
 
                             </li>
                             <li class="index-item method protected">
@@ -726,18 +702,6 @@
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__getName">_getName</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__getSelectedArchived">_getSelectedArchived</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__getSelectedDrafts">_getSelectedDrafts</a>
-
-                            </li>
-                            <li class="index-item method private">
-                                <a href="#method__getSelectedVersionItems">_getSelectedVersionItems</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -807,10 +771,6 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__publish">_publish</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__refresh">_refresh</a>
 
                             </li>
                             <li class="index-item method protected inherited inherited">
@@ -1062,10 +1022,6 @@
                     <ul class="index-list events extends">
                             <li class="index-item event">
                                 <a href="#event_createDraft">createDraft</a>
-
-                            </li>
-                            <li class="index-item event">
-                                <a href="#event_deleteVersion">deleteVersion</a>
 
                             </li>
                             <li class="index-item event inherited">
@@ -1360,61 +1316,6 @@ can handle it) we may allow runtime container changes.
 
 
 </div>
-<div id="method__afterDeleteVersionsCallback" class="method item protected">
-    <h3 class="name"><code>_afterDeleteVersionsCallback</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>versionsRemoved</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l282"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:282</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Callback function called after removing version(s).</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">versionsRemoved</code>
-                        <span class="type">Boolean</span>
-
-
-                    <div class="param-description">
-                        <p>if TRUE the view is reloaded, if FALSE it just enables checkboxes</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
 <div id="method__aggregateAttrs" class="method item private inherited">
     <h3 class="name"><code>_aggregateAttrs</code></h3>
 
@@ -1649,7 +1550,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l157"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:157</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l123"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:123</code></a>
         </p>
 
 
@@ -1838,70 +1739,6 @@ refers to the configuration object passed to the constructor.
 
 
 </div>
-<div id="method__deleteArchived" class="method item protected">
-    <h3 class="name"><code>_deleteArchived</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l236"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:236</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Deletes one or several archived version</p>
-
-    </div>
-
-
-
-
-</div>
-<div id="method__deleteDraft" class="method item protected">
-    <h3 class="name"><code>_deleteDraft</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l246"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:246</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Deletes one or several drafts</p>
-
-    </div>
-
-
-
-
-</div>
 <div id="method__destroyContainer" class="method item protected inherited">
     <h3 class="name"><code>_destroyContainer</code></h3>
 
@@ -1965,8 +1802,8 @@ the destructor method on the prototype of each class in the hierarchy.
 
 
 </div>
-<div id="method__disableVersionsCheckboxes" class="method item private">
-    <h3 class="name"><code>_disableVersionsCheckboxes</code></h3>
+<div id="method__disableArchivedVersionsCheckboxes" class="method item private">
+    <h3 class="name"><code>_disableArchivedVersionsCheckboxes</code></h3>
 
         <span class="paren">()</span>
 
@@ -1981,7 +1818,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l308"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:308</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:158</code></a>
         </p>
 
 
@@ -1997,8 +1834,8 @@ the destructor method on the prototype of each class in the hierarchy.
 
 
 </div>
-<div id="method__enableArchivedVersionButtons" class="method item protected">
-    <h3 class="name"><code>_enableArchivedVersionButtons</code></h3>
+<div id="method__enableCreateDraftFromArchivedVersionButton" class="method item protected">
+    <h3 class="name"><code>_enableCreateDraftFromArchivedVersionButton</code></h3>
 
         <span class="paren">()</span>
 
@@ -2013,7 +1850,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l114"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:114</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l105"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:105</code></a>
         </p>
 
 
@@ -2021,71 +1858,7 @@ the destructor method on the prototype of each class in the hierarchy.
     </div>
 
     <div class="description">
-        <p>Enables the `buttons corresponding to the archived list.</p>
-
-    </div>
-
-
-
-
-</div>
-<div id="method__enableCreateDeleteDraftButton" class="method item protected">
-    <h3 class="name"><code>_enableCreateDeleteDraftButton</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l139"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:139</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Enables the <code>Delete selected Draft('s')</code> button if the selection is right</p>
-
-    </div>
-
-
-
-
-</div>
-<div id="method__enableVersionsCheckboxes" class="method item private">
-    <h3 class="name"><code>_enableVersionsCheckboxes</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag private">private</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l318"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:318</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Enables checkboxes on version list.</p>
+        <p>Enables the <code>Create Draft form archived version</code> button if the selection is right</p>
 
     </div>
 
@@ -2293,61 +2066,6 @@ if this is a sub-attribute value being change. Otherwise null.
 
 
 </div>
-<div id="method__fireDeleteVersions" class="method item protected">
-    <h3 class="name"><code>_fireDeleteVersions</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>versions</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l256"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:256</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Fires the Delete version event if <code>versions</code> is not empty</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">versions</code>
-                        <span class="type">Array</span>
-
-
-                    <div class="param-description">
-                        <p>of eZ.VersionInfo</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
 <div id="method__fireLoadVersions" class="method item protected">
     <h3 class="name"><code>_fireLoadVersions</code></h3>
 
@@ -2364,7 +2082,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l99"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:99</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l90"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:90</code></a>
         </p>
 
 
@@ -3064,175 +2782,6 @@ correct template
 
             <div class="returns-description">
                     <p>String</p>
-
-            </div>
-        </div>
-
-
-</div>
-<div id="method__getSelectedArchived" class="method item protected">
-    <h3 class="name"><code>_getSelectedArchived</code></h3>
-
-        <span class="paren">()</span>
-
-        <span class="returns-inline">
-            <span class="type">Array</span>
-        </span>
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l222"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:222</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Returns the selected archived versions as VersionInfo</p>
-
-    </div>
-
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Array</span>:
-                    <p>of eZ.VersionInfo</p>
-
-            </div>
-        </div>
-
-
-</div>
-<div id="method__getSelectedDrafts" class="method item protected">
-    <h3 class="name"><code>_getSelectedDrafts</code></h3>
-
-        <span class="paren">()</span>
-
-        <span class="returns-inline">
-            <span class="type">Array</span>
-        </span>
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l208"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:208</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Returns the selected draft as VersionInfo</p>
-
-    </div>
-
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Array</span>:
-                    <p>of eZ.VersionInfo</p>
-
-            </div>
-        </div>
-
-
-</div>
-<div id="method__getSelectedVersionItems" class="method item private">
-    <h3 class="name"><code>_getSelectedVersionItems</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>versionList</code>
-                </li>
-                <li class="arg">
-                        <code>checkboxClass</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type">Array</span>
-        </span>
-
-
-        <span class="flag private">private</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l184"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:184</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Returns the selected versions as VersionInfo</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">versionList</code>
-                        <span class="type">Array</span>
-
-
-                    <div class="param-description">
-                        <p>of eZ.VersionInfo versions to pick from</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">checkboxClass</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                        <p>CSS class of the checkboxes</p>
-
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Array</span>:
-                    <p>of eZ.VersionInfo</p>
 
             </div>
         </div>
@@ -4088,7 +3637,7 @@ construction, prior to init.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l73"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:73</code></a>
+        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:64</code></a>
         </p>
 
 
@@ -4292,38 +3841,6 @@ path publish, which can be used by critical code paths to improve performance.
 be the default <code>CustomEvent</code> instance, and can be configured independently.
             </div>
         </div>
-
-
-</div>
-<div id="method__refresh" class="method item protected">
-    <h3 class="name"><code>_refresh</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l298"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:298</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Refreshes the tab. It fires <code>loadVersions</code> event.</p>
-
-    </div>
-
-
 
 
 </div>
@@ -7876,7 +7393,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l379"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:379</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:219</code></a>
                             </p>
                     
                     
@@ -7956,7 +7473,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l368"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:368</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l208"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:208</code></a>
                             </p>
                     
                     
@@ -8020,7 +7537,7 @@ How this template gets used is entirely up to you and your custom
                                     eZ.LocationViewTabView
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l343"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:343</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l183"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:183</code></a>
                             </p>
                     
                     
@@ -8144,7 +7661,7 @@ How this template gets used is entirely up to you and your custom
                                     eZ.LocationViewTabView
                                 </a>
                                 but overwritten in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l330"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:330</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l170"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:170</code></a>
                             </p>
                     
                     
@@ -8174,7 +7691,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l356"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:356</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l196"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:196</code></a>
                             </p>
                     
                     
@@ -8206,7 +7723,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l169"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:169</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l143"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:143</code></a>
                             </p>
                     
                     
@@ -8228,49 +7745,6 @@ How this template gets used is entirely up to you and your custom
                     
                                         <div class="param-description">
                                             <p>{String} versionNo of the archived version. Ex: 42</p>
-                    
-                                        </div>
-                    
-                                    </li>
-                                </ul>
-                            </div>
-                    
-                    
-                    </div>
-                    <div id="event_deleteVersion" class="events item">
-                        <h3 class="name"><code>deleteVersion</code></h3>
-                        <span class="type"></span>
-                    
-                    
-                    
-                    
-                    
-                        <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l267"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:267</code></a>
-                            </p>
-                    
-                    
-                        </div>
-                    
-                        <div class="description">
-                            <p>Fired when the user clicks any of the delete version buttons</p>
-                    
-                        </div>
-                    
-                            <div class="params">
-                                <h4>Event Payload:</h4>
-                    
-                                <ul class="params-list">
-                                    <li class="param">
-                                            <code class="param-name">of</code>
-                                            <span class="type">Array</span>
-                    
-                    
-                                        <div class="param-description">
-                                            <p>eZ.VersionInfo
-                    {Function} afterDeleteVersionsCallback</p>
                     
                                         </div>
                     
@@ -8391,7 +7865,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l106"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:106</code></a>
+                            <a href="../files/Resources_public_js_views_tabs_ez-locationviewversionstabview.js.html#l97"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;tabs&#x2F;ez-locationviewversionstabview.js:97</code></a>
                             </p>
                     
                     
