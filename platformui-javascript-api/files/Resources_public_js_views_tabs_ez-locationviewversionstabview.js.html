@@ -529,7 +529,10 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
             &#x27;tap&#x27;: &#x27;_createDraftFromArchivedVersion&#x27;
         },
         &#x27;.ez-archived-version-checkbox&#x27;: {
-            &#x27;change&#x27;: &#x27;_enableArchivedVersionButtons&#x27;
+            &#x27;change&#x27;: &#x27;_setArchivedButtonsState&#x27;
+        },
+        &#x27;.ez-edit-draft-button&#x27;: {
+            &#x27;tap&#x27;: &#x27;_editDraft&#x27;
         },
         &#x27;.ez-delete-draft-button&#x27;: {
             &#x27;tap&#x27;: &#x27;_deleteDraft&#x27;
@@ -538,7 +541,7 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
             &#x27;tap&#x27;: &#x27;_deleteArchived&#x27;
         },
         &#x27;.ez-draft-version-checkbox&#x27;: {
-            &#x27;change&#x27;: &#x27;_enableCreateDeleteDraftButton&#x27;
+            &#x27;change&#x27;: &#x27;_setDraftButtonsState&#x27;
         },
     };
 
@@ -625,12 +628,25 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
         },
 
         /**
-         * Enables the &#x60;buttons corresponding to the archived list.
+         * Enables the &#x60;Create Draft form archived version&#x60; button if the selection is right
          *
-         * @method _enableArchivedVersionButtons
+         * @method _enableCreateDraftFromArchivedVersionButton
+         * @protected
+         * @deprecated
+         */
+        _enableCreateDraftFromArchivedVersionButton: function () {
+            console.log(&#x27;[DEPRECATED] The method &#x60;_enableCreateDraftFromArchivedVersionButton&#x60; is deprecated&#x27;);
+            console.log(&#x27;[DEPRECATED] it will be removed from PlatformUI 2.0&#x27;);
+            this._setArchivedButtonsState.apply(this, arguments);
+        },
+
+        /**
+         * Enables the Archived buttons if the selection in the list is right
+         *
+         * @method _setArchivedButtonsState
          * @protected
          */
-        _enableArchivedVersionButtons: function () {
+        _setArchivedButtonsState: function () {
             var c = this.get(&#x27;container&#x27;),
                 checked = c.all(&#x27;.ez-archived-version-checkbox:checked&#x27;),
                 createDraftButton = c.one(&#x27;.ez-create-draft-from-archived-button&#x27;),
@@ -650,20 +666,27 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
         },
 
         /**
-         * Enables the &#x60;Delete selected Draft(&#x27;s&#x27;)&#x60; button if the selection is right
+         * Enables the Draft buttons if the selection in the list is right
          *
-         * @method _enableCreateDeleteDraftButton
+         * @method _setDraftButtonsState
          * @protected
          */
-        _enableCreateDeleteDraftButton: function () {
+        _setDraftButtonsState: function () {
             var c = this.get(&#x27;container&#x27;),
                 checked = c.all(&#x27;.ez-draft-version-checkbox:checked&#x27;),
-                button = c.one(&#x27;.ez-delete-draft-button&#x27;);
+                editDraftButton = c.one(&#x27;.ez-edit-draft-button&#x27;),
+                deleteButton = c.one(&#x27;.ez-delete-draft-button&#x27;);
+
+            if (checked.size() === 1) {
+                editDraftButton.set(&#x27;disabled&#x27;, false);
+            } else {
+                editDraftButton.set(&#x27;disabled&#x27;, true);
+            }
 
             if (checked.size() &gt;= 1) {
-                button.set(&#x27;disabled&#x27;, false);
+                deleteButton.set(&#x27;disabled&#x27;, false);
             } else {
-                button.set(&#x27;disabled&#x27;, true);
+                deleteButton.set(&#x27;disabled&#x27;, true);
             }
         },
 
@@ -690,6 +713,33 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
                 this.fire(&#x27;createDraft&#x27;, {
                     content: this.get(&#x27;content&#x27;),
                     versionNo: versions[0].get(&#x27;versionNo&#x27;),
+                });
+            }
+        },
+
+        /**
+         * Edits a selected draft
+         *
+         * @method _editDraft
+         * @protected
+         */
+        _editDraft: function () {
+            var versions = this._getSelectedDrafts();
+
+            if (versions.length === 1) {
+                this._disableVersionsCheckboxes();
+
+                /**
+                 * Fired when the user clicks on the edit draft button
+                 *
+                 * @event editVersion
+                 * @param {eZ.Content} content
+                 * @param {eZ.Version} version
+                 *
+                 */
+                this.fire(&#x27;editVersion&#x27;, {
+                    content: this.get(&#x27;content&#x27;),
+                    version: versions[0],
                 });
             }
         },
