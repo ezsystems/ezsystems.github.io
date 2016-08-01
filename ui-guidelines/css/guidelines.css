@@ -165,8 +165,60 @@ pre {
 	font-size: 1em;
 	font-weight: bold;
 }
+
+/*==== TYPOGRAPHY ====*/
+
+.font-weights {
+	width: 100%;
+	height: 10em;
+}
+.weight-sample {
+	width: 20%;
+	float: left;
+	display: block;
+	margin-right: 5%;
+	border: 1px solid #fce3da;
+	border-radius: 8px;
+}
+.big-letter{
+	font-size: 6em;
+}
+.light {font-weight: 300;}
+.normal {font-weight: 400;}
+.medium {font-weight: 500;}
+.bold {font-weight: 700;}
+.text-size {margin-left: 1.5em;}
+
+h1 .text-h1 {font-size: 2em;}
+h2 .text-h2 {font-size: 1.5em;}
+h3 .text-h3 {font-size: 1.25em;}
+/*h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.25em;}*/
+
+.text-x-huge {font-size: 2.5em;}
+.text-huge {font-size: 1.875em;}
+.text-xx-large {font-size: 1.4em;}
+.text-x-large {font-size: 1.133em;}
+.text-large {font-size: 1.1em;}
+.text-xx-medium {font-size: 1.066em;}
+.text-x-medium {font-size: 1em;}
+.text-medium {font-size: .933em;}
+.text-small {font-size: .9em;}
+.text-x-small {font-size: .866em;}
+.text-xx-small {font-size: .85em;}
+.text-minimum {font-size: .8em;}
+.text-x-minimum {font-size: .75em;}
+.text-xx-minimum {font-size: .625em;}
+
 /*==== HELPERS ====*/
 .top-half-extra {margin-top: 2em;}
 .top-extra {margin-top: 4em;}
 .top-low {margin-top: 1.5em;}
+.top-minimum {margin-top: 1em;}
 .bottom-half-extra {margin-bottom: 1.5em;}
+.top-up-double {margin-top: -2em;}
+.top-up {margin-top: -1em;}
+.top-up-quarter {margin-top: -.75em;}
+.top-up-half {margin-top: -.5em;}
+.left-one {margin-left: 2em;}
