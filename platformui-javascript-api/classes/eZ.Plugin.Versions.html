@@ -529,6 +529,8 @@ of content for versions tab in location view.</p>
 <p>Loading versions:
 In order to use it you need to fire <code>loadVersions</code> event with parameter
 <code>content</code> containing the eZ.Content object for which you want to load versions.</p>
+<p>Deleting versions:
+In order to use it you need to fire <code>deleteVersion</code></p>
 <p>Creating draft based on an archived version:
 In order to use it you need to fire 'createDraft' with corresponding
 parameters (see method).</p>
@@ -620,6 +622,10 @@ parameters (see method).</p>
 
                             </li>
                             <li class="index-item method private">
+                                <a href="#method__confirmDeleteVersion">_confirmDeleteVersion</a>
+
+                            </li>
+                            <li class="index-item method private">
                                 <a href="#method__createDraftFromArchivedVersion">_createDraftFromArchivedVersion</a>
 
                             </li>
@@ -633,6 +639,10 @@ parameters (see method).</p>
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__defInitFn">_defInitFn</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__deleteVersion">_deleteVersion</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -750,6 +760,10 @@ parameters (see method).</p>
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__publish">_publish</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method__redirectToEditVersion">_redirectToEditVersion</a>
 
                             </li>
                             <li class="index-item method protected inherited inherited">
@@ -1471,6 +1485,62 @@ Since it's on a critical path, we don't want to re-do the check.
 
 
 </div>
+<div id="method__confirmDeleteVersion" class="method item private">
+    <h3 class="name"><code>_confirmDeleteVersion</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l163"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:163</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>deleteVersion event handler, opens confirm box to confirm that selected versions
+are going to be deleted</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
+
+
+                    <div class="param-description">
+                        <p>deleteVersion event facade</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__createDraftFromArchivedVersion" class="method item private">
     <h3 class="name"><code>_createDraftFromArchivedVersion</code></h3>
 
@@ -1493,7 +1563,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l90"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:90</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:95</code></a>
         </p>
 
 
@@ -1712,6 +1782,74 @@ to edit it.</p>
                     <div class="param-description">
                         Event object, with a cfg property which
 refers to the configuration object passed to the constructor.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__deleteVersion" class="method item protected">
+    <h3 class="name"><code>_deleteVersion</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>versions</code>
+                </li>
+                <li class="arg">
+                        <code>callback</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l185"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:185</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Removes given versions. After that, calls the callback function.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">versions</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>array containing eZ.VersionInfo objects for removal</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">callback</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                         
                     </div>
 
                 </li>
@@ -3075,7 +3213,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l38"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:38</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l43"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:43</code></a>
         </p>
 
 
@@ -3308,7 +3446,7 @@ by the top level attribute name, or null, if valueHash is falsey.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l134"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:134</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l252"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:252</code></a>
         </p>
 
 
@@ -3622,6 +3760,82 @@ path publish, which can be used by critical code paths to improve performance.
 be the default <code>CustomEvent</code> instance, and can be configured independently.
             </div>
         </div>
+
+
+</div>
+<div id="method__redirectToEditVersion" class="method item private">
+    <h3 class="name"><code>_redirectToEditVersion</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l139"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:139</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Edits a given version by redirecting to the edit page</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">content</code>
+                                    <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+
+                                <div class="param-description">
+                                    <p>the content</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">version</code>
+                                    <span class="type"><a href="../classes/eZ.Version.html" class="crosslink">eZ.Version</a></span>
+
+                                <div class="param-description">
+                                    <p>to be edited</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
 
 
 </div>
@@ -4142,7 +4356,7 @@ internal state object, or the state proxy if it exits
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l68"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:68</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-versionsplugin.js.html#l73"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-versionsplugin.js:73</code></a>
         </p>
 
 
