@@ -537,7 +537,9 @@ YUI.add(&#x27;ez-navigationitemview&#x27;, function (Y) {
      */
     Y.eZ.NavigationItemView = Y.Base.create(&#x27;navigationItemView&#x27;, Y.eZ.TemplateBasedView, [], {
         initializer: function () {
-            this.containerTemplate = &#x27;&lt;li class=&quot;&#x27; + this._generateViewClassName(this._getName()) + &#x27;&quot;/&gt;&#x27;;
+            var dataNavigationIdentifier = &#x27;data-navigation-item-identifier=&quot;&#x27; + this.get(&#x27;identifier&#x27;) + &#x27;&quot;&#x27;;
+
+            this.containerTemplate = &#x27;&lt;li class=&quot;&#x27; + this._generateViewClassName(this._getName()) + &#x27;&quot; &#x27; + dataNavigationIdentifier + &#x27;/&gt;&#x27;;
             this.after(&#x27;selectedChange&#x27;, this._uiSelectedChange);
             this.after(&#x27;routeChange&#x27;, function (){
                 this.render();

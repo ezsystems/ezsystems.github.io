@@ -17908,7 +17908,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 34,
+            "line": 36,
             "description": "selectedChange event handler. Adds or removes the navigation active\nclass depending on the `selected` attribute value.",
             "itemtype": "method",
             "name": "_uiSelectedChange",
@@ -17920,7 +17920,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 61,
+            "line": 63,
             "description": "Returns whether the matched route is the same as the one stored in\nthe navigation item.",
             "itemtype": "method",
             "name": "_sameRoute",
@@ -17942,7 +17942,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 74,
+            "line": 76,
             "description": "Checks whether the navigation item is selected or not based on the\nmatched route object provided by the navigation hub service.\nThis default implementation only compares the matched route name\nagainst the route stored in the `route` attribute.",
             "itemtype": "method",
             "name": "matchRoute",
@@ -17963,7 +17963,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 92,
+            "line": 94,
             "description": "Identifier of the navigation item",
             "itemtype": "attribute",
             "name": "identifier",
@@ -17974,7 +17974,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 100,
+            "line": 102,
             "description": "Title of the navigation item",
             "itemtype": "attribute",
             "name": "title",
@@ -17985,7 +17985,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 108,
+            "line": 110,
             "description": "Route configuration of the item. This should contain an object\nwith a `name` property referencing a route and optionally a\n`params` property holding the parameters of the route.",
             "itemtype": "attribute",
             "name": "route",
@@ -17996,7 +17996,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 118,
+            "line": 120,
             "description": "Flag indicating whether the item is selected according to the\nmatched route provided to the last call of `match` vs. the route\nstored in the `route` attribute",
             "itemtype": "attribute",
             "name": "selected",
@@ -34241,7 +34241,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 35,
+            "line": 37,
             "description": "Renders the item view",
             "itemtype": "method",
             "name": "render",
@@ -34255,7 +34255,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 46,
+            "line": 48,
             "description": "Adds the event listener to hide the user menu",
             "itemtype": "method",
             "name": "_addUserMenuHideOnEvent",
@@ -34274,7 +34274,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 57,
+            "line": 59,
             "description": "Tap event handler on the user menu item",
             "itemtype": "method",
             "name": "_fireEvent",
@@ -34293,7 +34293,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 72,
+            "line": 74,
             "description": "The event name to fire",
             "itemtype": "attribute",
             "name": "eventName",

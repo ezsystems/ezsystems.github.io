@@ -540,7 +540,9 @@ YUI.add(&#x27;ez-usermenuitemfireeventview&#x27;, function (Y) {
         },
 
         initializer: function () {
-            this.containerTemplate = &#x27;&lt;li class=&quot;&#x27; + this._generateViewClassName(this._getName()) + &#x27;&quot;/&gt;&#x27;;
+            var dataEvent = &#x27;data-event-name=&quot;&#x27; + this.get(&#x27;eventName&#x27;) + &#x27;&quot;&#x27;;
+
+            this.containerTemplate = &#x27;&lt;li class=&quot;&#x27; + this._generateViewClassName(this._getName()) + &#x27;&quot; &#x27; + dataEvent + &#x27;/&gt;&#x27;;
 
             this.on(&#x27;addedToUserMenu&#x27;, this._addUserMenuHideOnEvent, this);
         },
