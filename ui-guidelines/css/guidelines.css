@@ -175,7 +175,6 @@ pre {
 .weight-sample {
 	width: 20%;
 	float: left;
-	display: block;
 	margin-right: 5%;
 	border: 1px solid #fce3da;
 	border-radius: 8px;
@@ -189,12 +188,9 @@ pre {
 .bold {font-weight: 700;}
 .text-size {margin-left: 1.5em;}
 
-h1 .text-h1 {font-size: 2em;}
-h2 .text-h2 {font-size: 1.5em;}
-h3 .text-h3 {font-size: 1.25em;}
-/*h1 {font-size: 2em;}
-h2 {font-size: 1.5em;}
-h3 {font-size: 1.25em;}*/
+.text-h1 {font-size: 2.5em;}
+.text-h2 {font-size: 1.5em;}
+.text-h3 {font-size: 1.25em;}
 
 .text-x-huge {font-size: 2.5em;}
 .text-huge {font-size: 1.875em;}
@@ -211,14 +207,14 @@ h3 {font-size: 1.25em;}*/
 .text-x-minimum {font-size: .75em;}
 .text-xx-minimum {font-size: .625em;}
 
-/*==== HELPERS ====*/
-.top-half-extra {margin-top: 2em;}
-.top-extra {margin-top: 4em;}
-.top-low {margin-top: 1.5em;}
-.top-minimum {margin-top: 1em;}
-.bottom-half-extra {margin-bottom: 1.5em;}
-.top-up-double {margin-top: -2em;}
-.top-up {margin-top: -1em;}
-.top-up-quarter {margin-top: -.75em;}
-.top-up-half {margin-top: -.5em;}
-.left-one {margin-left: 2em;}
+/*==== UTILITIES ====*/
+.adds-marginTop-fourEm {margin-top: 4em;}
+.adds-marginTop-twoEm {margin-top: 2em;}
+.adds-marginTop-oneHalfEm {margin-top: 1.5em;}
+.adds-marginTop-oneEm {margin-top: 1em;}
+.adds-marginBottom-oneHalfEm {margin-bottom: 1.5em;}
+.takes-marginTop-twoEm {margin-top: -2em;}
+.takes-marginTop-oneEm {margin-top: -1em;}
+.takes-marginTop-threeQuartersEm {margin-top: -.75em;}
+.takes-marginTop-halfEm {margin-top: -.5em;}
+.adds-marginLeft-twoEm {margin-left: 2em;}
