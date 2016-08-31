@@ -5970,7 +5970,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
-            "line": 22,
+            "line": 24,
             "description": "Provides the image variation drop down"
         },
         "ez-alloyeditor-button-blocktextaligncenter": {
@@ -9857,7 +9857,7 @@
             "module": "ez-alloyeditor-button-remove",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
-            "line": 22,
+            "line": 24,
             "description": "CKEditor plugin to help the integration of CKEditor in a YUI3\napplication. It makes sure we remove the auto-generated YUI3 id on DOM\nnodes inside the editor before executing an editor command.\nSee https://jira.ez.no/browse/EZP-25718",
             "is_constructor": 1
         },

@@ -527,12 +527,14 @@ YUI.add(&#x27;ez-alloyeditor-plugin-yui3&#x27;, function (Y) {
     }
 
     function cleanUpIds(editor) {
+        editor.undoManager.lock();
         Array.prototype.forEach.call(
             editor.element.$.querySelectorAll(&#x27;[id]&#x27;),
             function (element) {
                 element.removeAttribute(&#x27;id&#x27;);
             }
         );
+        editor.undoManager.unlock();
     }
 
     /**
