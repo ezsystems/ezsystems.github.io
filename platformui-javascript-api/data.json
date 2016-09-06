@@ -11843,7 +11843,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 74,
+            "line": 75,
             "description": "Shows the row options",
             "itemtype": "method",
             "name": "_uiShowOptions",
@@ -11862,7 +11862,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 89,
+            "line": 90,
             "description": "Clears the click outside handler",
             "itemtype": "method",
             "name": "_clearClickOutsideHandler",
@@ -11874,7 +11874,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 101,
+            "line": 102,
             "description": "Hides the row options",
             "itemtype": "method",
             "name": "_uiHideOptions",
@@ -11886,7 +11886,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 113,
+            "line": 114,
             "description": "Removes the loading class to reflect the non loading state",
             "itemtype": "method",
             "name": "_uiEndLoading",
@@ -11898,7 +11898,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 123,
+            "line": 124,
             "description": "Adds the loading class to reflect the loading state",
             "itemtype": "method",
             "name": "_uiStartLoading",
@@ -11910,7 +11910,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 133,
+            "line": 134,
             "description": "Fires an event to request the data to display.  This method must be\nreimplemented when extending eZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
             "name": "_fireLoadDataEvent",
@@ -11922,7 +11922,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 143,
+            "line": 144,
             "description": "Returns a representation of an item suitable for the template. This\nmethod must be reimplemented when extending\neZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
             "name": "_getTemplateItem",
@@ -11945,7 +11945,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 162,
+            "line": 163,
             "description": "Hold the items to display in the block",
             "itemtype": "attribute",
             "name": "items",
@@ -11957,7 +11957,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 173,
+            "line": 174,
             "description": "Flag indicating if the block is currently waiting for data.",
             "itemtype": "attribute",
             "name": "loading",
@@ -34916,6 +34916,25 @@
         {
             "file": "Resources/public/js/views/ez-view.js",
             "line": 46,
+            "description": "Adds DOM event handlers on the current view. It makes sure\nevent subscriptions are really taken into account which might\nnot be the case if the view container has already been initialized.\nsee https://jira.ez.no/browse/EZP-26236",
+            "itemtype": "method",
+            "name": "_addDOMEventHandlers",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "events",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.View",
+            "module": "ez-view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-view.js",
+            "line": 65,
             "description": "Sets the active attribute of the sub views stored in attributes to\nthe same value as the current view",
             "itemtype": "method",
             "name": "_setSubviewsActive",
@@ -34927,7 +34946,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-view.js",
-            "line": 64,
+            "line": 83,
             "description": "Stores the active status of the view. It is set to true by the\napplication after the view container has been added to DOM.",
             "itemtype": "attribute",
             "name": "active",
@@ -34939,7 +34958,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-view.js",
-            "line": 76,
+            "line": 95,
             "description": "An arbitrary config object",
             "itemtype": "attribute",
             "name": "config",

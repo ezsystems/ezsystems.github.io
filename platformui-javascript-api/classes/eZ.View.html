@@ -555,6 +555,10 @@ detect its state and react when it is changed</p>
                                 <a href="#method__addAttrs">_addAttrs</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__addDOMEventHandlers">_addDOMEventHandlers</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__addLazyAttr">_addLazyAttr</a>
 
@@ -1041,6 +1045,63 @@ Values defined in the cfgs argument will be over-written by values in this argum
                         Whether or not to delay the intialization of these attributes until the first call to get/set.
 Individual attributes can over-ride this behavior by defining a lazyAdd configuration property in their configuration.
 See <a href="#method_addAttr">addAttr</a>.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__addDOMEventHandlers" class="method item protected">
+    <h3 class="name"><code>_addDOMEventHandlers</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>events</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_ez-view.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:46</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Adds DOM event handlers on the current view. It makes sure
+event subscriptions are really taken into account which might
+not be the case if the view container has already been initialized.
+see <a href="https://jira.ez.no/browse/EZP-26236">https://jira.ez.no/browse/EZP-26236</a></p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">events</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        
                     </div>
 
                 </li>
@@ -4000,7 +4061,7 @@ internal state object, or the state proxy if it exits
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-view.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:46</code></a>
+        <a href="../files/Resources_public_js_views_ez-view.js.html#l65"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:65</code></a>
         </p>
 
 
@@ -7005,7 +7066,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-view.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:64</code></a>
+                            <a href="../files/Resources_public_js_views_ez-view.js.html#l83"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:83</code></a>
                             </p>
                     
                     
@@ -7036,7 +7097,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-view.js.html#l76"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:76</code></a>
+                            <a href="../files/Resources_public_js_views_ez-view.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:95</code></a>
                             </p>
                     
                     

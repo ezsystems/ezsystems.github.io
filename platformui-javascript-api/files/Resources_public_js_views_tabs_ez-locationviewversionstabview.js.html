@@ -558,7 +558,7 @@ YUI.add(&#x27;ez-locationviewversionstabview&#x27;, function (Y) {
      */
     Y.eZ.LocationViewVersionsTabView = Y.Base.create(&#x27;locationViewVersionsTabView&#x27;, Y.eZ.LocationViewTabView, [Y.eZ.AsynchronousView], {
         initializer: function () {
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
             this._fireMethod = this._fireLoadVersions;
             this._watchAttribute = &#x27;versions&#x27;;
         },

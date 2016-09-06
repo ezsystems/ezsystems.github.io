@@ -557,7 +557,7 @@ YUI.add(&#x27;ez-media-editview&#x27;, function (Y) {
                 ];
 
             this._handleFieldDescriptionVisibility = false;
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
             if ( fieldValue ) {
                 this._set(&#x27;autoplay&#x27;, fieldValue.autoplay);
                 this._set(&#x27;hasController&#x27;, fieldValue.hasController);

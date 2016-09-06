@@ -562,7 +562,7 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
             this.after([&#x27;creatorChange&#x27;, &#x27;ownerChange&#x27;], function (e) {
                 this.render();
             });
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
             this._set(&#x27;sortField&#x27;, this.get(&#x27;location&#x27;).get(&#x27;sortField&#x27;));
             this._set(&#x27;sortOrder&#x27;, this.get(&#x27;location&#x27;).get(&#x27;sortOrder&#x27;));
             this.after([&#x27;sortFieldChange&#x27;, &#x27;sortOrderChange&#x27;], function (e) {

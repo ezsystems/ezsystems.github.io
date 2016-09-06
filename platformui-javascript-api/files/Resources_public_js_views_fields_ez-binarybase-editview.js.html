@@ -566,7 +566,7 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
      */
     Y.eZ.BinaryBaseEditView = Y.Base.create(&#x27;binarybaseEditView&#x27;, Y.eZ.FieldEditView, [], {
         initializer: function () {
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
             this._set(&#x27;file&#x27;, this.get(&#x27;field&#x27;));
             this.after(&#x27;warningChange&#x27;, this._uiHandleWarningMessage);
             this.after(&#x27;fileChange&#x27;, function (e) {

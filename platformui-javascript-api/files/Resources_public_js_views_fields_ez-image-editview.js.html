@@ -555,7 +555,7 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
             var fieldValue = this.get(&#x27;field&#x27;).fieldValue;
 
             this._handleFieldDescriptionVisibility = false;
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
             this._fireMethod = this._fireLoadImageVariation;
             this._watchAttribute = false;
 
