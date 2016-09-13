@@ -543,7 +543,7 @@ YUI.add(&#x27;ez-translateactionview&#x27;, function (Y) {
      */
     Y.eZ.TranslateActionView = Y.Base.create(&#x27;translateActionView&#x27;, Y.eZ.ButtonActionView, [Y.eZ.Expandable], {
         initializer: function () {
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
             this.after({
                 &#x27;translateAction&#x27;: this._toggleExpanded,
                 &#x27;expandedChange&#x27;: this._setClickOutsideEventHandler,

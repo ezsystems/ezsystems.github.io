@@ -544,7 +544,7 @@ YUI.add(&#x27;ez-sectionserversideview&#x27;, function (Y) {
      */
     Y.eZ.SectionServerSideView = Y.Base.create(&#x27;sectionServerSideView&#x27;, Y.eZ.ServerSideView, [], {
         initializer: function () {
-            this.events = Y.merge(this.events, events);
+            this._addDOMEventHandlers(events);
         },
 
         /**
