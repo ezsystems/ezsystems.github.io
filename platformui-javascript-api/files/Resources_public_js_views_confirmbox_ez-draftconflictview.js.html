@@ -554,7 +554,7 @@ YUI.add(&#x27;ez-draftconflictview&#x27;, function (Y) {
              * @protected
              */
             this._clickOutsideHandler = null;
-            this._addDOMEventHandlers(EVENTS);
+            this.events = Y.merge(this.events, EVENTS);
         },
 
         render: function () {
