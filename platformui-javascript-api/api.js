@@ -83,7 +83,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.DateEditView",
         "eZ.DiscoveryBarView",
         "eZ.DiscoveryBarViewService",
-        "eZ.DraftConflictView",
         "eZ.EditActionBarView",
         "eZ.EditPreviewView",
         "eZ.EditorContentProcessorBase",
@@ -137,7 +136,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.PlatformUIApp",
         "eZ.Plugin.ConfirmBox",
         "eZ.Plugin.ContentCreate",
-        "eZ.Plugin.ContentEdit",
         "eZ.Plugin.ContentSetMainLocation",
         "eZ.Plugin.ContentTree",
         "eZ.Plugin.CopyContent",
@@ -272,7 +270,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-confirmboxplugin",
         "ez-contentcreateplugin",
         "ez-contenteditformview",
-        "ez-contenteditplugin",
         "ez-contenteditview",
         "ez-contenteditviewservice",
         "ez-contentinfo-attributes",
@@ -609,11 +606,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-contenteditformview",
             "name": "ez-contenteditformview",
             "description": "Provides the Form View class"
-        },
-        {
-            "displayName": "ez-contenteditplugin",
-            "name": "ez-contenteditplugin",
-            "description": "Provides the edit content plugin"
         },
         {
             "displayName": "ez-contenteditview",
