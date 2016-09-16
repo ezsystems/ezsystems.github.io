@@ -184,6 +184,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.RichTextView",
         "eZ.RoleServerSideView",
         "eZ.RoleServerSideViewService",
+        "eZ.SearchListView",
+        "eZ.SearchView",
+        "eZ.SearchViewService",
         "eZ.SectionServerSideView",
         "eZ.SectionServerSideViewService",
         "eZ.SelectionEditView",
@@ -381,7 +384,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-richtext-view",
         "ez-roleserversideview",
         "ez-savedraftplugin",
+        "ez-searchlistview",
         "ez-searchplugin",
+        "ez-searchview",
+        "ez-searchviewservice'",
         "ez-sectionserversideview",
         "ez-selection-editview",
         "ez-selection-table",
@@ -1156,9 +1162,24 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the save draft plugin."
         },
         {
+            "displayName": "ez-searchlistview",
+            "name": "ez-searchlistview",
+            "description": "Provides the search list view class"
+        },
+        {
             "displayName": "ez-searchplugin",
             "name": "ez-searchplugin",
             "description": "Provides the search plugin"
+        },
+        {
+            "displayName": "ez-searchview",
+            "name": "ez-searchview",
+            "description": "Provides the search view class"
+        },
+        {
+            "displayName": "ez-searchviewservice'",
+            "name": "ez-searchviewservice'",
+            "description": "Provides the search view service class"
         },
         {
             "displayName": "ez-sectionserversideview",
