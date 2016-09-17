@@ -213,6 +213,17 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/confirmbox/ez-draftconflictview.js": {
+            "name": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "modules": {},
+            "classes": {
+                "eZ.DraftConflictView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js": {
             "name": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
             "modules": {
@@ -978,6 +989,19 @@
             },
             "classes": {
                 "eZ.Plugin.ContentCreate": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
+        "Resources/public/js/views/services/plugins/ez-contenteditplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-contenteditplugin.js",
+            "modules": {
+                "ez-contenteditplugin": 1
+            },
+            "classes": {
+                "eZ.Plugin.ContentEdit": 1
             },
             "fors": {},
             "namespaces": {
@@ -3205,15 +3229,16 @@
             "elements": {},
             "classes": {
                 "eZ.TranslateActionView": 1,
-                "eZ.TreeActionView": 1
+                "eZ.TreeActionView": 1,
+                "eZ.DraftConflictView": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/views/actions/ez-treeactionview.js",
-            "line": 16,
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 17,
             "description": "Provides the translate action view class"
         },
         "ez-dashboardblockallcontentview": {
@@ -4130,6 +4155,22 @@
             "line": 14,
             "description": "Provides the content create plugin for the location view view service."
         },
+        "ez-contenteditplugin": {
+            "name": "ez-contenteditplugin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Plugin.ContentEdit": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/services/plugins/ez-contenteditplugin.js",
+            "line": 14,
+            "description": "Provides the edit content plugin"
+        },
         "ez-contentsetmainlocationplugin": {
             "name": "ez-contentsetmainlocationplugin",
             "submodules": {},
@@ -4790,7 +4831,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 23,
+            "line": 35,
             "description": "Provides the Location View Versions Tab view class."
         },
         "ez-locationviewviewtabview": {
@@ -6449,6 +6490,22 @@
             "is_constructor": 1,
             "extends": "eZ.ButtonActionView"
         },
+        "eZ.DraftConflictView": {
+            "name": "eZ.DraftConflictView",
+            "shortname": "eZ.DraftConflictView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-translateactionview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 17,
+            "description": "The Draft conflict view.",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
         "eZ.DashboardBlockAllContentView": {
             "name": "eZ.DashboardBlockAllContentView",
             "shortname": "eZ.DashboardBlockAllContentView",
@@ -7419,6 +7476,22 @@
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
+        "eZ.Plugin.ContentEdit": {
+            "name": "eZ.Plugin.ContentEdit",
+            "shortname": "eZ.Plugin.ContentEdit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-contenteditplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/views/services/plugins/ez-contenteditplugin.js",
+            "line": 14,
+            "description": "Content Edit plugin. It sets an event handler to edit content\n\nIn order to use it you need to fire the `editContentRequest`.",
+            "is_constructor": 1,
+            "extends": "eZ.Plugin.ViewServiceBase"
+        },
         "eZ.Plugin.ContentSetMainLocation": {
             "name": "eZ.Plugin.ContentSetMainLocation",
             "shortname": "eZ.Plugin.ContentSetMainLocation",
@@ -7736,7 +7809,7 @@
             "namespace": "eZ.Plugin",
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
             "line": 14,
-            "description": "Object versions plugin. It sets event handlers to handle versions\nof content for versions tab in location view.\n\nLoading versions:\nIn order to use it you need to fire `loadVersions` event with parameter\n`content` containing the eZ.Content object for which you want to load versions.\n\nCreating draft based on an archived version:\nIn order to use it you need to fire 'createDraft' with corresponding\nparameters (see method).",
+            "description": "Object versions plugin. It sets event handlers to handle versions\nof content for versions tab in location view.\n\nLoading versions:\nIn order to use it you need to fire `loadVersions` event with parameter\n`content` containing the eZ.Content object for which you want to load versions.\n\nDeleting versions:\nIn order to use it you need to fire `deleteVersion`\n\nCreating draft based on an archived version:\nIn order to use it you need to fire 'createDraft' with corresponding\nparameters (see method).",
             "is_constructor": 1,
             "extends": "eZ.Plugin.ViewServiceBase"
         },
@@ -8203,7 +8276,7 @@
             "module": "ez-locationviewversionstabview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 23,
+            "line": 35,
             "description": "The Location View View Versions tab class.",
             "is_constructor": 1,
             "extends": "eZ.LocationViewTabView"
@@ -11653,6 +11726,148 @@
             "name": "treeView",
             "type": "eZ.TreeView",
             "class": "eZ.TreeActionView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 33,
+            "description": "Stores the click outside event handler",
+            "itemtype": "property",
+            "name": "_clickOutsideHandler",
+            "type": "{Object}",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 56,
+            "description": "Shows the row options",
+            "itemtype": "method",
+            "name": "_uiShowRowOptions",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 73,
+            "description": "Clears the click outside handler",
+            "itemtype": "method",
+            "name": "_clearClickOutsideHandler",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 85,
+            "description": "Hides the row options",
+            "itemtype": "method",
+            "name": "_uiHideRowOptions",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 97,
+            "description": "Prepares the list of draft to be displayed",
+            "itemtype": "method",
+            "name": "_prepareDraftForDisplay",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "of JSONified eZ.VersionInfo",
+                "type": "Array"
+            },
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 114,
+            "description": "Fire the `confirm` event",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_confirmDraftEdition",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 123,
+            "description": "Fired to redirect to the draft edition",
+            "itemtype": "event",
+            "name": "confirm",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 132,
+            "description": "Draft to be displayed in the conflict screen",
+            "itemtype": "attribute",
+            "name": "drafts",
+            "default": "[]",
+            "type": "{Array}",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 143,
+            "description": "Content being displayed",
+            "itemtype": "attribute",
+            "name": "content",
+            "default": "{}",
+            "type": "{eZ.Content}",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 154,
+            "description": "languageCode currently in use",
+            "itemtype": "attribute",
+            "name": "languageCode",
+            "default": "\"\"",
+            "type": "{String}",
+            "class": "eZ.DraftConflictView",
+            "module": "ez-translateactionview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
+            "line": 165,
+            "description": "The content type of the content",
+            "itemtype": "attribute",
+            "name": "contentType",
+            "default": "{}",
+            "type": "Y.eZ.ContentType",
+            "class": "eZ.DraftConflictView",
             "module": "ez-translateactionview",
             "namespace": "eZ"
         },
@@ -17963,7 +18178,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 34,
+            "line": 36,
             "description": "selectedChange event handler. Adds or removes the navigation active\nclass depending on the `selected` attribute value.",
             "itemtype": "method",
             "name": "_uiSelectedChange",
@@ -17975,7 +18190,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 61,
+            "line": 63,
             "description": "Returns whether the matched route is the same as the one stored in\nthe navigation item.",
             "itemtype": "method",
             "name": "_sameRoute",
@@ -17997,7 +18212,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 74,
+            "line": 76,
             "description": "Checks whether the navigation item is selected or not based on the\nmatched route object provided by the navigation hub service.\nThis default implementation only compares the matched route name\nagainst the route stored in the `route` attribute.",
             "itemtype": "method",
             "name": "matchRoute",
@@ -18018,7 +18233,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 92,
+            "line": 94,
             "description": "Identifier of the navigation item",
             "itemtype": "attribute",
             "name": "identifier",
@@ -18029,7 +18244,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 100,
+            "line": 102,
             "description": "Title of the navigation item",
             "itemtype": "attribute",
             "name": "title",
@@ -18040,7 +18255,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 108,
+            "line": 110,
             "description": "Route configuration of the item. This should contain an object\nwith a `name` property referencing a route and optionally a\n`params` property holding the parameters of the route.",
             "itemtype": "attribute",
             "name": "route",
@@ -18051,7 +18266,7 @@
         },
         {
             "file": "Resources/public/js/views/navigation/ez-navigationitemview.js",
-            "line": 118,
+            "line": 120,
             "description": "Flag indicating whether the item is selected according to the\nmatched route provided to the last call of `match` vs. the route\nstored in the `route` attribute",
             "itemtype": "attribute",
             "name": "selected",
@@ -18574,6 +18789,42 @@
             "default": "undefined",
             "class": "eZ.Plugin.ContentCreate",
             "module": "ez-contentcreateplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-contenteditplugin.js",
+            "line": 30,
+            "description": "editContentRequest event handler, makes the application display a\ndraft conflict screen if needed or redirects to the edit screen.",
+            "itemtype": "method",
+            "name": "_checkExistingDraft",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "event facade of the editContentRequest event",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "content",
+                            "description": "being edited",
+                            "type": "eZ.Content"
+                        },
+                        {
+                            "name": "languageCode",
+                            "description": "",
+                            "type": "String"
+                        },
+                        {
+                            "name": "contentType",
+                            "description": "of the content",
+                            "type": "eZ.ContentType"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.Plugin.ContentEdit",
+            "module": "ez-contenteditplugin",
             "namespace": "eZ.Plugin"
         },
         {
@@ -20730,7 +20981,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 38,
+            "line": 43,
             "description": "Loads versions list for content given in event facade. When loading of versions\nis finished, then it is set in `versions` attribute of the event target.\n\nThe version attribute should be an object with the given properties: `archived`,\n`published` and `draft`",
             "itemtype": "method",
             "name": "_loadVersions",
@@ -20756,12 +21007,13 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 68,
+            "line": 73,
             "description": "Sorts an array of version info by status",
             "itemtype": "method",
             "name": "_sortVersions",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
             "params": [
                 {
                     "name": "versions",
@@ -20779,7 +21031,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 90,
+            "line": 99,
             "description": "Creates a draft based on an archived version and redirect to the edit page in order\nto edit it.",
             "itemtype": "method",
             "name": "_createDraftFromArchivedVersion",
@@ -20810,7 +21062,81 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 134,
+            "line": 143,
+            "description": "Edits a given version by redirecting to the edit page",
+            "itemtype": "method",
+            "name": "_redirectToEditVersion",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade",
+                    "props": [
+                        {
+                            "name": "content",
+                            "description": "the content",
+                            "type": "eZ.Content"
+                        },
+                        {
+                            "name": "version",
+                            "description": "to be edited",
+                            "type": "eZ.Version"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 167,
+            "description": "deleteVersion event handler, opens confirm box to confirm that selected versions\nare going to be deleted",
+            "itemtype": "method",
+            "name": "_confirmDeleteVersion",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "deleteVersion event facade",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 189,
+            "description": "Removes given versions. After that, calls the callback function.",
+            "itemtype": "method",
+            "name": "_deleteVersion",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "array containing eZ.VersionInfo objects for removal",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.Versions",
+            "module": "ez-versionsplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
+            "line": 256,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -21820,7 +22146,17 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 79,
+            "line": 70,
+            "description": "Fired when a content needs to be edited",
+            "itemtype": "event",
+            "name": "editContentRequest",
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 81,
             "description": "`sendToTrashAction` event handler,\nit asks confirmation to the user before sending the location to the trash.",
             "itemtype": "method",
             "name": "_sendContentToTrashConfirmBox",
@@ -21839,7 +22175,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 99,
+            "line": 101,
             "description": "`deleteContentAction` event handler,\nit asks confirmation to the user before delete the content item.",
             "itemtype": "method",
             "name": "_confirmDeleteContent",
@@ -21858,7 +22194,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 117,
+            "line": 119,
             "description": "moveAction event handler, launch the universal discovery widget\nto choose a location to move the content",
             "itemtype": "method",
             "name": "_selectLocation",
@@ -21877,7 +22213,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 137,
+            "line": 139,
             "description": "Sends location to trash, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_sendToTrash",
@@ -21889,7 +22225,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 161,
+            "line": 163,
             "description": "Deletes the the content item, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_deleteContent",
@@ -21901,7 +22237,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 182,
+            "line": 184,
             "description": "Send to trash callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterSendToTrashCallback",
@@ -21930,7 +22266,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 214,
+            "line": 216,
             "description": "Fired when the content is sent to trash",
             "itemtype": "event",
             "name": "sentToTrash",
@@ -21947,7 +22283,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 228,
+            "line": 230,
             "description": "Delete content item callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterDeleteCallback",
@@ -21976,7 +22312,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 258,
+            "line": 260,
             "description": "Fired when the content has been deleted",
             "itemtype": "event",
             "name": "deletedContent",
@@ -21993,7 +22329,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 272,
+            "line": 274,
             "description": "Move the content to the selected location",
             "itemtype": "method",
             "name": "_moveContent",
@@ -22012,7 +22348,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 305,
+            "line": 307,
             "description": "Fired when the content is moved",
             "itemtype": "event",
             "name": "movedContent",
@@ -22034,7 +22370,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 322,
+            "line": 324,
             "description": "translate event handler, makes the application to navigate to edit content available\nin the facade with given language and base language",
             "itemtype": "method",
             "name": "_translateContent",
@@ -22053,7 +22389,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 348,
+            "line": 350,
             "description": "Update the sort methods of the location",
             "itemtype": "method",
             "name": "_updateSorting",
@@ -22072,7 +22408,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 375,
+            "line": 377,
             "description": "Fired when the sortOrder and/or sortField have been\nsuccessfully updated.",
             "itemtype": "event",
             "name": "updatedLocationSorting",
@@ -22089,7 +22425,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 397,
+            "line": 399,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -22123,7 +22459,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 418,
+            "line": 420,
             "description": "Loads the location, the content and the path for the location id\navailable in the request and calls the next callback once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -22142,7 +22478,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 487,
+            "line": 489,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -22154,7 +22490,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 509,
+            "line": 511,
             "description": "The viewed location",
             "itemtype": "attribute",
             "name": "location",
@@ -22165,7 +22501,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 520,
+            "line": 522,
             "description": "The content associated with the location",
             "itemtype": "attribute",
             "name": "content",
@@ -22176,7 +22512,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 531,
+            "line": 533,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -22187,7 +22523,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 542,
+            "line": 544,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location sorted by location depth",
             "itemtype": "attribute",
             "name": "path",
@@ -22198,7 +22534,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 553,
+            "line": 555,
             "description": "The language code in which the content is being viewed",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -26093,7 +26429,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 64,
+            "line": 76,
             "description": "Prepares a list of versionInfo to be displayed",
             "itemtype": "method",
             "name": "_prepareVersionsForDisplay",
@@ -26116,7 +26452,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 90,
+            "line": 102,
             "description": "Fire the `loadVersions` event to retrieve the versions",
             "itemtype": "method",
             "name": "_fireLoadVersions",
@@ -26128,7 +26464,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 97,
+            "line": 109,
             "description": "Fired when versions are about to be loaded",
             "itemtype": "event",
             "name": "loadVersions",
@@ -26138,10 +26474,23 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 105,
+            "line": 117,
             "description": "Enables the `Create Draft form archived version` button if the selection is right",
             "itemtype": "method",
             "name": "_enableCreateDraftFromArchivedVersionButton",
+            "access": "protected",
+            "tagname": "",
+            "deprecated": true,
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 130,
+            "description": "Enables the Archived buttons if the selection in the list is right",
+            "itemtype": "method",
+            "name": "_setArchivedButtonsState",
             "access": "protected",
             "tagname": "",
             "class": "eZ.LocationViewVersionsTabView",
@@ -26150,7 +26499,19 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 123,
+            "line": 155,
+            "description": "Enables the Draft buttons if the selection in the list is right",
+            "itemtype": "method",
+            "name": "_setDraftButtonsState",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 180,
             "description": "Creates a draft from an archived version",
             "itemtype": "method",
             "name": "_createDraftFromArchivedVersion",
@@ -26162,7 +26523,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 143,
+            "line": 192,
             "description": "Fired when the user clicks on the Create draft from archived version button",
             "itemtype": "event",
             "name": "createDraft",
@@ -26179,10 +26540,195 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 158,
+            "line": 207,
+            "description": "Edits a selected draft",
+            "itemtype": "method",
+            "name": "_editDraft",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 219,
+            "description": "Fired when the user clicks on the edit draft button",
+            "itemtype": "event",
+            "name": "editVersion",
+            "params": [
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "eZ.Content"
+                },
+                {
+                    "name": "version",
+                    "description": "",
+                    "type": "eZ.Version"
+                }
+            ],
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 234,
+            "description": "Returns the selected versions as VersionInfo",
+            "itemtype": "method",
+            "name": "_getSelectedVersionItems",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versionList",
+                    "description": "of eZ.VersionInfo versions to pick from",
+                    "type": "Array"
+                },
+                {
+                    "name": "checkboxClass",
+                    "description": "CSS class of the checkboxes",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "of eZ.VersionInfo",
+                "type": "Array"
+            },
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 258,
+            "description": "Returns the selected draft as VersionInfo",
+            "itemtype": "method",
+            "name": "_getSelectedDrafts",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "of eZ.VersionInfo",
+                "type": "Array"
+            },
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 272,
+            "description": "Returns the selected archived versions as VersionInfo",
+            "itemtype": "method",
+            "name": "_getSelectedArchived",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "of eZ.VersionInfo",
+                "type": "Array"
+            },
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 286,
+            "description": "Deletes one or several archived version",
+            "itemtype": "method",
+            "name": "_deleteArchived",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 296,
+            "description": "Deletes one or several drafts",
+            "itemtype": "method",
+            "name": "_deleteDraft",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 306,
+            "description": "Fires the Delete version event if `versions` is not empty",
+            "itemtype": "method",
+            "name": "_fireDeleteVersions",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "of eZ.VersionInfo",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 317,
+            "description": "Fired when the user clicks any of the delete version buttons",
+            "itemtype": "event",
+            "name": "deleteVersion",
+            "params": [
+                {
+                    "name": "of",
+                    "description": "eZ.VersionInfo\n       {Function} afterDeleteVersionsCallback",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 332,
+            "description": "Callback function called after removing version(s).",
+            "itemtype": "method",
+            "name": "_afterDeleteVersionsCallback",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versionsRemoved",
+                    "description": "if TRUE the view is reloaded, if FALSE it just enables checkboxes",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 348,
+            "description": "Refreshes the tab. It fires `loadVersions` event.",
+            "itemtype": "method",
+            "name": "_refresh",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 358,
             "description": "Disables all checkboxes on archived version list preventing from making use of them.",
             "itemtype": "method",
-            "name": "_disableArchivedVersionsCheckboxes",
+            "name": "_disableVersionsCheckboxes",
             "access": "private",
             "tagname": "",
             "class": "eZ.LocationViewVersionsTabView",
@@ -26191,7 +26737,19 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 170,
+            "line": 368,
+            "description": "Enables checkboxes on version list.",
+            "itemtype": "method",
+            "name": "_enableVersionsCheckboxes",
+            "access": "private",
+            "tagname": "",
+            "class": "eZ.LocationViewVersionsTabView",
+            "module": "ez-locationviewversionstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
+            "line": 380,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -26204,7 +26762,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 183,
+            "line": 393,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -26217,7 +26775,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 196,
+            "line": 406,
             "description": "List of the current content versions sorted by status.\nEach status name is a properties of the versions object.",
             "itemtype": "attribute",
             "name": "versions",
@@ -26229,7 +26787,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 208,
+            "line": 418,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -26241,7 +26799,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewversionstabview.js",
-            "line": 219,
+            "line": 429,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
@@ -27981,7 +28539,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 71,
+            "line": 74,
             "description": "Updates the title in the rendered confirmBox",
             "itemtype": "method",
             "name": "_uiUpdateTitle",
@@ -27993,7 +28551,31 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 82,
+            "line": 85,
+            "description": "Hides of reveal the buttons",
+            "itemtype": "method",
+            "name": "_uiButtonDisplay",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.ConfirmBoxView",
+            "module": "ez-barview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-confirmboxview.js",
+            "line": 101,
+            "description": "Updates the view in the rendered confirmBox",
+            "itemtype": "method",
+            "name": "_uiUpdateView",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.ConfirmBoxView",
+            "module": "ez-barview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-confirmboxview.js",
+            "line": 123,
             "description": "Publishes the cancelDiscover and contentDiscovered events",
             "itemtype": "method",
             "name": "_publishEvents",
@@ -28005,7 +28587,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 103,
+            "line": 144,
             "description": "Updates the event handler for the given event",
             "itemtype": "method",
             "name": "_syncEventHandler",
@@ -28034,7 +28616,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 122,
+            "line": 165,
             "description": "Resets the state of the confirmBox view",
             "itemtype": "method",
             "name": "_resetState",
@@ -28046,7 +28628,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 145,
+            "line": 194,
             "description": "Closes the confirmBox by firing the confirmBoxClose event",
             "access": "protected",
             "tagname": "",
@@ -28058,7 +28640,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 156,
+            "line": 205,
             "description": "Title of the confirmBox",
             "itemtype": "attribute",
             "name": "title",
@@ -28070,7 +28652,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 167,
+            "line": 216,
             "description": "Details of the confirmBox.\nThis attribute is supposed to contain an HTML fragment\nthat won't be escaped while rendering the confirm box view.",
             "itemtype": "attribute",
             "name": "details",
@@ -28082,7 +28664,31 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 180,
+            "line": 229,
+            "description": "View of the confirmBox.\nA Y.View that can be provided to be displayed in the confirm box",
+            "itemtype": "attribute",
+            "name": "view",
+            "default": "null",
+            "type": "{Y.View|null}",
+            "class": "eZ.ConfirmBoxView",
+            "module": "ez-barview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-confirmboxview.js",
+            "line": 241,
+            "description": "Wether or not to display the `Confirm` and `Cancel` buttons",
+            "itemtype": "attribute",
+            "name": "renderDefaultButtons",
+            "default": "true",
+            "type": "{Boolean}",
+            "class": "eZ.ConfirmBoxView",
+            "module": "ez-barview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-confirmboxview.js",
+            "line": 252,
             "description": "confirm event handler",
             "itemtype": "attribute",
             "name": "confirmHandler",
@@ -28094,7 +28700,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-confirmboxview.js",
-            "line": 191,
+            "line": 263,
             "description": "cancel event handler",
             "itemtype": "attribute",
             "name": "cancelHandler",
@@ -34000,7 +34606,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 35,
+            "line": 37,
             "description": "Renders the item view",
             "itemtype": "method",
             "name": "render",
@@ -34014,7 +34620,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 46,
+            "line": 48,
             "description": "Adds the event listener to hide the user menu",
             "itemtype": "method",
             "name": "_addUserMenuHideOnEvent",
@@ -34033,7 +34639,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 57,
+            "line": 59,
             "description": "Tap event handler on the user menu item",
             "itemtype": "method",
             "name": "_fireEvent",
@@ -34052,7 +34658,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-usermenuitemfireeventview.js",
-            "line": 72,
+            "line": 74,
             "description": "The event name to fire",
             "itemtype": "attribute",
             "name": "eventName",
@@ -34969,6 +35575,58 @@
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
             "line": 326,
+            "description": "Loads content's version list sorted by status",
+            "itemtype": "method",
+            "name": "loadVersionsSortedByStatus",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 340,
+            "description": "Sorts an array of version info by status",
+            "itemtype": "method",
+            "name": "_sortVersions",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "of eZ.VersionInfo",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "of sorted versions by status:\n             struct.<status_name>: {Array} of eZ.VersionInfo",
+                "type": "Object"
+            },
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 362,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -35002,7 +35660,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 343,
+            "line": 379,
             "description": "Creates a new draft for the content",
             "itemtype": "method",
             "name": "createDraft",
@@ -35036,7 +35694,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 372,
+            "line": 408,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -35070,7 +35728,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 397,
+            "line": 433,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -35099,7 +35757,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 428,
+            "line": 464,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -35111,7 +35769,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 440,
+            "line": 476,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -35123,7 +35781,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 451,
+            "line": 487,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
@@ -36837,7 +37495,41 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 24,
+            "line": 26,
+            "description": "sync implementation for the VersionInfo. For now, it supports deleting it.",
+            "itemtype": "method",
+            "name": "sync",
+            "params": [
+                {
+                    "name": "action",
+                    "description": "the action, only delete is supported",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "the options for the sync.",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "a callback executed when the operation is finished",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 43,
             "description": "Override of the eZ.RestModel _parseStruct method to locate the VersionInfo in the\nREST_STRUCT_ROOT hierarchy and add the Version Id",
             "access": "protected",
             "tagname": "",
@@ -36865,7 +37557,38 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 41,
+            "line": 60,
+            "description": "Deletes the version in the repository.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_deleteVersion",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.VersionInfo",
+            "module": "ez-versioninfomodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versioninfomodel.js",
+            "line": 86,
             "description": "Return list of translations of version as array of language codes",
             "itemtype": "method",
             "name": "getTranslationsList",
@@ -36879,7 +37602,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 51,
+            "line": 96,
             "description": "Checks whether the version is translated into `languageCode`",
             "itemtype": "method",
             "name": "hasTranslation",
@@ -36900,7 +37623,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 62,
+            "line": 107,
             "description": "Checks whether the version is a draft",
             "itemtype": "method",
             "name": "isDraft",
@@ -36914,7 +37637,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 72,
+            "line": 117,
             "description": "Checks whether the version was created by the `user`",
             "itemtype": "method",
             "name": "createdBy",
@@ -36935,7 +37658,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 92,
+            "line": 137,
             "description": "The version id (f.e. \"450\")",
             "itemtype": "attribute",
             "name": "versionId",
@@ -36947,7 +37670,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 103,
+            "line": 148,
             "description": "The version status",
             "itemtype": "attribute",
             "name": "status",
@@ -36959,7 +37682,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 114,
+            "line": 159,
             "description": "The version number",
             "itemtype": "attribute",
             "name": "versionNo",
@@ -36971,7 +37694,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 125,
+            "line": 170,
             "description": "The creation date of the version",
             "itemtype": "attribute",
             "name": "creationDate",
@@ -36983,7 +37706,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 137,
+            "line": 182,
             "description": "The modification date of the version",
             "itemtype": "attribute",
             "name": "modificationDate",
@@ -36995,7 +37718,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 149,
+            "line": 194,
             "description": "The language codes",
             "itemtype": "attribute",
             "name": "languageCodes",
@@ -37007,7 +37730,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 160,
+            "line": 205,
             "description": "The initial language code",
             "itemtype": "attribute",
             "name": "initialLanguageCode",
@@ -37019,7 +37742,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versioninfomodel.js",
-            "line": 171,
+            "line": 216,
             "description": "The names of the version per language",
             "itemtype": "attribute",
             "name": "names",
@@ -37071,37 +37794,6 @@
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
             "line": 56,
-            "description": "Deletes the version in the repository.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_deleteVersion",
-            "params": [
-                {
-                    "name": "options",
-                    "description": "",
-                    "type": "Object",
-                    "props": [
-                        {
-                            "name": "api",
-                            "description": "the JS REST client instance",
-                            "type": "Object"
-                        }
-                    ]
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.Version",
-            "module": "ez-versionmodel",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 82,
             "description": "Saves the version in the repository. Only the version with a status\ndifferent than PUBLISHED can be saved. In addtion, if options\ncontains a publish property with a truthy value, it will also publish\nthe version.",
             "itemtype": "method",
             "name": "save",
@@ -37148,7 +37840,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 99,
+            "line": 73,
             "description": "Creates a new version for a given contentId in the repository",
             "itemtype": "method",
             "name": "_createVersion",
@@ -37182,7 +37874,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 122,
+            "line": 96,
             "description": "Updates a version in the repository and potentially publish it",
             "access": "protected",
             "tagname": "",
@@ -37220,7 +37912,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 158,
+            "line": 132,
             "description": "Publishes the version in the repository",
             "itemtype": "method",
             "name": "publishVersion",
@@ -37249,7 +37941,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 172,
+            "line": 146,
             "description": "Override of the eZ.RestModel _parseStruct method to read the fields\nof the version and the id which are not available under the\nREST_STRUCT_ROOT hierarchy",
             "access": "protected",
             "tagname": "",
@@ -37277,7 +37969,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 196,
+            "line": 170,
             "description": "Returns the field which identifier is in parameter",
             "itemtype": "method",
             "name": "getField",
@@ -37298,7 +37990,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 207,
+            "line": 181,
             "description": "Checks whether the version is the current version of the given\n`content`",
             "itemtype": "method",
             "name": "isCurrentVersionOf",
@@ -37319,7 +38011,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 229,
+            "line": 203,
             "description": "The fields of the version by field identifier",
             "itemtype": "attribute",
             "name": "fields",
