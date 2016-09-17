@@ -97,7 +97,7 @@
                                 <li><a href="../classes/eZ.ContentEditView.html">eZ.ContentEditView</a></li>
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
-                                <li><a href="../classes/eZ.ContentInfoAttributes.html">eZ.ContentInfoAttributes</a></li>
+                                <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -119,6 +119,7 @@
                                 <li><a href="../classes/eZ.DateEditView.html">eZ.DateEditView</a></li>
                                 <li><a href="../classes/eZ.DiscoveryBarView.html">eZ.DiscoveryBarView</a></li>
                                 <li><a href="../classes/eZ.DiscoveryBarViewService.html">eZ.DiscoveryBarViewService</a></li>
+                                <li><a href="../classes/eZ.DraftConflict.html">eZ.DraftConflict</a></li>
                                 <li><a href="../classes/eZ.DraftConflictView.html">eZ.DraftConflictView</a></li>
                                 <li><a href="../classes/eZ.EditActionBarView.html">eZ.EditActionBarView</a></li>
                                 <li><a href="../classes/eZ.EditorContentProcessorBase.html">eZ.EditorContentProcessorBase</a></li>
@@ -220,6 +221,9 @@
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
+                                <li><a href="../classes/eZ.SearchListView.html">eZ.SearchListView</a></li>
+                                <li><a href="../classes/eZ.SearchView.html">eZ.SearchView</a></li>
+                                <li><a href="../classes/eZ.SearchViewService.html">eZ.SearchViewService</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
                                 <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
@@ -315,6 +319,7 @@
                                 <li><a href="../modules/ez-contenteditview.html">ez-contenteditview</a></li>
                                 <li><a href="../modules/ez-contenteditviewservice.html">ez-contenteditviewservice</a></li>
                                 <li><a href="../modules/ez-contentinfo-attributes.html">ez-contentinfo-attributes</a></li>
+                                <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
@@ -342,6 +347,7 @@
                                 <li><a href="../modules/ez-discoverybarview.html">ez-discoverybarview</a></li>
                                 <li><a href="../modules/ez-discoverybarviewservice.html">ez-discoverybarviewservice</a></li>
                                 <li><a href="../modules/ez-domstateplugin.html">ez-domstateplugin</a></li>
+                                <li><a href="../modules/ez-draftconflict.html">ez-draftconflict</a></li>
                                 <li><a href="../modules/ez-editactionbarview.html">ez-editactionbarview</a></li>
                                 <li><a href="../modules/ez-editorcontentprocessorbase.html">ez-editorcontentprocessorbase</a></li>
                                 <li><a href="../modules/ez-editorcontentprocessorremoveids.html">ez-editorcontentprocessorremoveids</a></li>
@@ -420,7 +426,10 @@
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
+                                <li><a href="../modules/ez-searchlistview.html">ez-searchlistview</a></li>
                                 <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
+                                <li><a href="../modules/ez-searchview.html">ez-searchview</a></li>
+                                <li><a href="../modules/ez-searchviewservice&#x27;.html">ez-searchviewservice&#x27;</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -613,10 +622,6 @@ to the notification hub view service.</p>
                                 <a href="#method__baseInit">_baseInit</a>
 
                             </li>
-                            <li class="index-item method private">
-                                <a href="#method__checkIsLoggedIn">_checkIsLoggedIn</a>
-
-                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__cloneDefaultValue">_cloneDefaultValue</a>
 
@@ -717,10 +722,6 @@ to the notification hub view service.</p>
                                 <a href="#method__isLazyAttr">_isLazyAttr</a>
 
                             </li>
-                            <li class="index-item method private">
-                                <a href="#method__logOut">_logOut</a>
-
-                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__monitor">_monitor</a>
 
@@ -764,10 +765,6 @@ to the notification hub view service.</p>
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__setStateVal">_setStateVal</a>
-
-                            </li>
-                            <li class="index-item method protected">
-                                <a href="#method__showNotification">_showNotification</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -1391,73 +1388,6 @@ this class for iteration performance reasons.
         Internal initialization implementation for BaseCore
     </div>
 
-
-
-
-</div>
-<div id="method__checkIsLoggedIn" class="method item private">
-    <h3 class="name"><code>_checkIsLoggedIn</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>notLoggedInCallback</code>
-                </li>
-                <li class="arg">
-                        <code>loggedInCallback</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag private">private</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_apps_plugins_ez-notificationhubplugin.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;plugins&#x2F;ez-notificationhubplugin.js:46</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Checks if the user is logged in and call the corresponding callback.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">notLoggedInCallback</code>
-                        <span class="type">Function</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">loggedInCallback</code>
-                        <span class="type">Function</span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
 
 
 
@@ -3021,38 +2951,6 @@ added lazily and still requires initialization.
 
 
 </div>
-<div id="method__logOut" class="method item private">
-    <h3 class="name"><code>_logOut</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-        <span class="flag private">private</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_apps_plugins_ez-notificationhubplugin.js.html#l68"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;plugins&#x2F;ez-notificationhubplugin.js:68</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Logs out the user and redirect to the login form.</p>
-
-    </div>
-
-
-
-
-</div>
 <div id="method__monitor" class="method item private inherited">
     <h3 class="name"><code>_monitor</code></h3>
 
@@ -3934,60 +3832,6 @@ internal state object, or the state proxy if it exits
 
                     <div class="param-description">
                         The value of the attribute
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-
-
-</div>
-<div id="method__showNotification" class="method item protected">
-    <h3 class="name"><code>_showNotification</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>notification</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_apps_plugins_ez-notificationhubplugin.js.html#l82"><code>Resources&#x2F;public&#x2F;js&#x2F;apps&#x2F;plugins&#x2F;ez-notificationhubplugin.js:82</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Shows the notification in the notification hub.</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">notification</code>
-                        <span class="type">Object</span>
-
-
-                    <div class="param-description">
-                         
                     </div>
 
                 </li>
