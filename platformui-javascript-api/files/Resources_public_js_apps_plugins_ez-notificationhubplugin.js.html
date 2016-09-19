@@ -554,9 +554,65 @@ YUI.add(&#x27;ez-notificationhubplugin&#x27;, function (Y) {
                 app.showSideView(&#x27;notificationHub&#x27;);
             });
 
-            app.on(&#x27;*:notify&#x27;, function (e) {
-                app.showSideView(&#x27;notificationHub&#x27;, {notification: e.notification});
+            app.on(&#x27;*:notify&#x27;, Y.bind(function (e) {
+                var notification = e.notification;
+
+                if ( notification.state === &#x27;error&#x27; ) {
+                    this._checkIsLoggedIn(
+                        this._logOut,
+                        Y.bind(this._showNotification, this, e.notification)
+                    );
+                } else {
+                    this._showNotification(e.notification);
+                }
+            }, this));
+        },
+
+        /**
+         * Checks if the user is logged in and call the corresponding callback.
+         *
+         * @private
+         * @method _checkIsLoggedIn
+         * @param {Function} notLoggedInCallback
+         * @param {Function} loggedInCallback
+         */
+        _checkIsLoggedIn: function (notLoggedInCallback, loggedInCallback) {
+            var app = this.get(&#x27;host&#x27;);
+
+            app.set(&#x27;loading&#x27;, true);
+            app.isLoggedIn(Y.bind(function (notLoggedIn) {
+                if ( notLoggedIn ) {
+                    notLoggedInCallback.apply(this);
+                    return;
+                }
+                app.set(&#x27;loading&#x27;, false);
+                loggedInCallback.apply(this);
+            }, this));
+        },
+
+        /**
+         * Logs out the user and redirect to the login form.
+         *
+         * @method _logOut
+         * @private
+         */
+        _logOut: function () {
+            var app = this.get(&#x27;host&#x27;);
+
+            app.logOut(function () {
+                app.navigateTo(&#x27;loginForm&#x27;);
             });
+        },
+
+        /**
+         * Shows the notification in the notification hub.
+         *
+         * @method _showNotification
+         * @param {Object} notification
+         * @protected
+         */
+        _showNotification: function (notification) {
+            this.get(&#x27;host&#x27;).showSideView(&#x27;notificationHub&#x27;, {notification: notification});
         },
     }, {
         NS: &#x27;notificationHub&#x27;,

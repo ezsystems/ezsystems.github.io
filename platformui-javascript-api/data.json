@@ -10271,6 +10271,61 @@
             "namespace": "eZ.Plugin"
         },
         {
+            "file": "Resources/public/js/apps/plugins/ez-notificationhubplugin.js",
+            "line": 46,
+            "description": "Checks if the user is logged in and call the corresponding callback.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_checkIsLoggedIn",
+            "params": [
+                {
+                    "name": "notLoggedInCallback",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "loggedInCallback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Plugin.NotificationHub",
+            "module": "ez-notificationhubplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/apps/plugins/ez-notificationhubplugin.js",
+            "line": 68,
+            "description": "Logs out the user and redirect to the login form.",
+            "itemtype": "method",
+            "name": "_logOut",
+            "access": "private",
+            "tagname": "",
+            "class": "eZ.Plugin.NotificationHub",
+            "module": "ez-notificationhubplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/apps/plugins/ez-notificationhubplugin.js",
+            "line": 82,
+            "description": "Shows the notification in the notification hub.",
+            "itemtype": "method",
+            "name": "_showNotification",
+            "params": [
+                {
+                    "name": "notification",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.Plugin.NotificationHub",
+            "module": "ez-notificationhubplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
             "file": "Resources/public/js/apps/plugins/ez-positionplugin.js",
             "line": 41,
             "description": "Sets the given style property on the node after applying the given\noffset. It stores the actual state of the property in a data\nattribute to avoid having to deal with running transitions when\ngetting the actual style.",
