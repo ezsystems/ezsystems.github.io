@@ -1434,19 +1434,6 @@
                 "eZ": 1
             }
         },
-        "Resources/public/js/views/services/ez-searchviewservice.js": {
-            "name": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "modules": {
-                "ez-searchviewservice'": 1
-            },
-            "classes": {
-                "eZ.SearchViewService": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
         "Resources/public/js/views/services/ez-sectionserversideviewservice.js": {
             "name": "Resources/public/js/views/services/ez-sectionserversideviewservice.js",
             "modules": {},
@@ -2005,32 +1992,6 @@
                 "eZ": 1
             }
         },
-        "Resources/public/js/views/ez-searchlistview.js": {
-            "name": "Resources/public/js/views/ez-searchlistview.js",
-            "modules": {
-                "ez-searchlistview": 1
-            },
-            "classes": {
-                "eZ.SearchListView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
-        "Resources/public/js/views/ez-searchview.js": {
-            "name": "Resources/public/js/views/ez-searchview.js",
-            "modules": {
-                "ez-searchview": 1
-            },
-            "classes": {
-                "eZ.SearchView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
         "Resources/public/js/views/ez-selectionfilterview.js": {
             "name": "Resources/public/js/views/ez-selectionfilterview.js",
             "modules": {
@@ -2229,17 +2190,8 @@
             "modules": {
                 "ez-contentinfo-attributes": 1
             },
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "Resources/public/js/models/extensions/ez-contentinfo-base.js": {
-            "name": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "modules": {
-                "ez-contentinfo-base": 1
-            },
             "classes": {
-                "eZ.ContentInfoBase": 1
+                "eZ.ContentInfoAttributes": 1
             },
             "fors": {},
             "namespaces": {
@@ -2431,19 +2383,6 @@
             },
             "classes": {
                 "eZ.AsynchronousView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
-        "Resources/public/js/extensions/ez-draftconflict.js": {
-            "name": "Resources/public/js/extensions/ez-draftconflict.js",
-            "modules": {
-                "ez-draftconflict": 1
-            },
-            "classes": {
-                "eZ.DraftConflict": 1
             },
             "fors": {},
             "namespaces": {
@@ -3348,7 +3287,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
-            "line": 22,
+            "line": 17,
             "description": "Provides the My Content Dashboard Block View class"
         },
         "ez-dashboardblockmydraftstview": {
@@ -4674,23 +4613,7 @@
             "classes": {
                 "eZ.NavigationHubViewService": 1,
                 "eZ.NotificationHubViewService": 1,
-                "eZ.RoleServerSideViewService": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 14,
-            "description": "Provides the view service component for the navigation hub"
-        },
-        "ez-searchviewservice'": {
-            "name": "ez-searchviewservice'",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.SearchViewService": 1,
+                "eZ.RoleServerSideViewService": 1,
                 "eZ.SectionServerSideViewService": 1,
                 "eZ.ServerSideViewService": 1
             },
@@ -4701,7 +4624,7 @@
             "tag": "module",
             "file": "Resources/public/js/views/services/ez-serversideviewservice.js",
             "line": 18,
-            "description": "Provides the search view service class"
+            "description": "Provides the view service component for the navigation hub"
         },
         "ez-trashviewservice": {
             "name": "ez-trashviewservice",
@@ -5332,38 +5255,6 @@
             "line": 18,
             "description": "Provides the Raw Content View class"
         },
-        "ez-searchlistview": {
-            "name": "ez-searchlistview",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.SearchListView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 15,
-            "description": "Provides the search list view class"
-        },
-        "ez-searchview": {
-            "name": "ez-searchview",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.SearchView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 14,
-            "description": "Provides the search view class"
-        },
         "ez-selectionfilterview": {
             "name": "ez-selectionfilterview",
             "submodules": {},
@@ -5577,31 +5468,17 @@
             "name": "ez-contentinfo-attributes",
             "submodules": {},
             "elements": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {},
-            "tag": "module",
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
-            "line": 7,
-            "description": "The content info attributes extension. As of 1.6 it is deprecated.",
-            "deprecated": true,
-            "deprecationMessage": "use ez-contentinfo-base instead"
-        },
-        "ez-contentinfo-base": {
-            "name": "ez-contentinfo-base",
-            "submodules": {},
-            "elements": {},
             "classes": {
-                "eZ.ContentInfoBase": 1
+                "eZ.ContentInfoAttributes": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
             "line": 14,
-            "description": "The content info base extension"
+            "description": "The content info attributes extension"
         },
         "ez-contenttree": {
             "name": "ez-contenttree",
@@ -5812,22 +5689,6 @@
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
             "line": 14,
             "description": "Provides the Asynchronous extension for the view"
-        },
-        "ez-draftconflict": {
-            "name": "ez-draftconflict",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.DraftConflict": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/extensions/ez-draftconflict.js",
-            "line": 14,
-            "description": "The draft conflict extension"
         },
         "ez-expandable": {
             "name": "ez-expandable",
@@ -6656,7 +6517,7 @@
             "module": "ez-dashboardblockallcontentview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 22,
+            "line": 17,
             "description": "The all content dashboard block view",
             "is_constructor": 1,
             "extends": "eZ.DashboardBlockAsynchronousView"
@@ -6704,7 +6565,7 @@
             "module": "ez-dashboardblockmycontentview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
-            "line": 22,
+            "line": 17,
             "description": "The all content dashboard block view",
             "is_constructor": 1,
             "extends": "eZ.DashboardBlockAsynchronousView"
@@ -8163,22 +8024,6 @@
             "is_constructor": 1,
             "extends": "eZ.ServerSideViewService"
         },
-        "eZ.SearchViewService": {
-            "name": "eZ.SearchViewService",
-            "shortname": "eZ.SearchViewService",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 14,
-            "description": "The search view service class",
-            "is_constructor": 1,
-            "extends": "Y.eZ.ViewService"
-        },
         "eZ.SectionServerSideViewService": {
             "name": "eZ.SectionServerSideViewService",
             "shortname": "eZ.SectionServerSideViewService",
@@ -8187,7 +8032,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ",
             "file": "Resources/public/js/views/services/ez-sectionserversideviewservice.js",
             "line": 14,
@@ -8203,7 +8048,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ",
             "file": "Resources/public/js/views/services/ez-serversideviewservice.js",
             "line": 18,
@@ -8883,38 +8728,6 @@
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
-        "eZ.SearchListView": {
-            "name": "eZ.SearchListView",
-            "shortname": "eZ.SearchListView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-searchlistview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 15,
-            "description": "The search list view",
-            "is_constructor": 1,
-            "extends": "Y.eZ.TemplateBasedView"
-        },
-        "eZ.SearchView": {
-            "name": "eZ.SearchView",
-            "shortname": "eZ.SearchView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-searchview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 14,
-            "description": "The search view",
-            "is_constructor": 1,
-            "extends": "Y.eZ.TemplateBasedView"
-        },
         "eZ.SelectionFilterView": {
             "name": "eZ.SelectionFilterView",
             "shortname": "eZ.SelectionFilterView",
@@ -9152,9 +8965,9 @@
             "description": "An abstract class that adds the `active` attribute so that any view can\ndetect its state and react when it is changed",
             "extends": "View"
         },
-        "eZ.ContentInfoBase": {
-            "name": "eZ.ContentInfoBase",
-            "shortname": "eZ.ContentInfoBase",
+        "eZ.ContentInfoAttributes": {
+            "name": "eZ.ContentInfoAttributes",
+            "shortname": "eZ.ContentInfoAttributes",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -9162,11 +8975,11 @@
             "extension_for": [
                 "eZ.RestModel"
             ],
-            "module": "ez-contentinfo-base",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ",
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
             "line": 14,
-            "description": "Extension providing ContentInfo attributes and methods for Models needing them."
+            "description": "Extension providing ContentInfo attributes for Models needing them."
         },
         "eZ.ContentTree": {
             "name": "eZ.ContentTree",
@@ -9407,22 +9220,6 @@
             "file": "Resources/public/js/extensions/ez-asynchronousview.js",
             "line": 14,
             "description": "Views extension providing the concept of asynchronously rendered view.\nAn asynchronous view is first rendered in a *loading state*, then fires\nan event to get the missing data and when it gets them, it is rerendered.\nThe loading errors are also handled and such a view can also have a\n*retry* button. When a view is extended with this extension, its\ninitializer method should set the required properties `_fireMethod` and\noptionally:\n* the `_watchAttribute` to subscribe to the corresponding change event.\n* the `_errorHandlingMethod` to customize the error handling, otherwise\nthe view is just rerendered in case of error"
-        },
-        "eZ.DraftConflict": {
-            "name": "eZ.DraftConflict",
-            "shortname": "eZ.DraftConflict",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [
-                "Y.View"
-            ],
-            "module": "ez-draftconflict",
-            "namespace": "eZ",
-            "file": "Resources/public/js/extensions/ez-draftconflict.js",
-            "line": 14,
-            "description": "Views extension providing the draft conflict feature.\n\nWhen a view is extended with this extension, it needs to call the `_fireEditContentRequest`."
         },
         "eZ.Expandable": {
             "name": "eZ.Expandable",
@@ -10427,7 +10224,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 126,
+            "line": 122,
             "description": "The hash change event subscription.",
             "itemtype": "property",
             "name": "_hashSubscription",
@@ -10441,7 +10238,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 136,
+            "line": 132,
             "description": "The current location hash .",
             "itemtype": "property",
             "name": "_currentLocationHash",
@@ -10455,7 +10252,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 146,
+            "line": 142,
             "description": "Initializes the application.",
             "itemtype": "method",
             "name": "initializer",
@@ -10465,7 +10262,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 155,
+            "line": 151,
             "description": "Stores the initial title of the page so it can be used when\ngenerating the title depending on the active view",
             "itemtype": "property",
             "name": "_initialTitle",
@@ -10478,7 +10275,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 191,
+            "line": 187,
             "description": "Prevent hash changes by setting the old hash on hashChange event",
             "itemtype": "method",
             "name": "_preventHashChange",
@@ -10490,7 +10287,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 208,
+            "line": 204,
             "description": "Allows hash changes by detaching hashChange subscription",
             "itemtype": "method",
             "name": "_allowHashChange",
@@ -10502,7 +10299,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 218,
+            "line": 214,
             "description": "Disable routing by deleting the callbacks of the routes",
             "itemtype": "method",
             "name": "_disableRouting",
@@ -10514,7 +10311,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 231,
+            "line": 227,
             "description": "Enables routing by setting back the callbacks to the routes",
             "itemtype": "method",
             "name": "_enableRouting",
@@ -10526,7 +10323,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 243,
+            "line": 239,
             "description": "Destroy properly every side view.",
             "itemtype": "method",
             "name": "_destroySideViews",
@@ -10538,7 +10335,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 262,
+            "line": 258,
             "description": "Refreshes the current view",
             "itemtype": "method",
             "name": "_refreshView",
@@ -10550,7 +10347,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 272,
+            "line": 268,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -10562,7 +10359,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 322,
+            "line": 318,
             "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
             "itemtype": "method",
             "name": "getLanguageName",
@@ -10584,7 +10381,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 341,
+            "line": 337,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -10611,7 +10408,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 373,
+            "line": 369,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -10634,7 +10431,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 384,
+            "line": 380,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -10668,7 +10465,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 424,
+            "line": 420,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -10697,7 +10494,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 435,
+            "line": 431,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -10707,7 +10504,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 448,
+            "line": 444,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -10737,7 +10534,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 478,
+            "line": 474,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -10764,7 +10561,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 495,
+            "line": 491,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitly\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -10791,7 +10588,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 522,
+            "line": 518,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -10818,7 +10615,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 544,
+            "line": 540,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -10835,7 +10632,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 554,
+            "line": 550,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -10874,7 +10671,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 619,
+            "line": 615,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -10893,7 +10690,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 637,
+            "line": 633,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -10917,7 +10714,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 659,
+            "line": 655,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -10944,7 +10741,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 695,
+            "line": 691,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -10971,7 +10768,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 764,
+            "line": 760,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -10990,7 +10787,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 780,
+            "line": 776,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -11009,7 +10806,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 821,
+            "line": 817,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -11028,7 +10825,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 839,
+            "line": 835,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -11038,7 +10835,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1026,
+            "line": 1008,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -11050,7 +10847,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1038,
+            "line": 1020,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -11063,7 +10860,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1051,
+            "line": 1033,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -11076,7 +10873,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1064,
+            "line": 1046,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -11088,7 +10885,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1077,
+            "line": 1059,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -11102,7 +10899,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1091,
+            "line": 1073,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -11114,7 +10911,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1105,
+            "line": 1087,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -11126,7 +10923,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1116,
+            "line": 1098,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -11138,7 +10935,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1128,
+            "line": 1110,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -11151,7 +10948,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1142,
+            "line": 1124,
             "description": "Default language code, as defined by the current siteaccess language config.",
             "itemtype": "attribute",
             "name": "contentCreationDefaultLanguageCode",
@@ -11164,7 +10961,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1155,
+            "line": 1137,
             "description": "Holds the Locales conversion map between eZ Locale codes and\nPOSIX ones. See locale.yml",
             "itemtype": "attribute",
             "name": "localesMap",
@@ -11177,7 +10974,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1169,
+            "line": 1151,
             "description": "Boolean that determine if the app routing is enabled",
             "itemtype": "attribute",
             "name": "routingEnabled",
@@ -11947,7 +11744,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 71,
+            "line": 56,
             "description": "Shows the row options",
             "itemtype": "method",
             "name": "_uiShowRowOptions",
@@ -11966,7 +11763,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 88,
+            "line": 73,
             "description": "Clears the click outside handler",
             "itemtype": "method",
             "name": "_clearClickOutsideHandler",
@@ -11978,7 +11775,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 100,
+            "line": 85,
             "description": "Hides the row options",
             "itemtype": "method",
             "name": "_uiHideRowOptions",
@@ -11990,7 +11787,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 112,
+            "line": 97,
             "description": "Prepares the list of draft to be displayed",
             "itemtype": "method",
             "name": "_prepareDraftForDisplay",
@@ -12006,7 +11803,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 129,
+            "line": 114,
             "description": "Fire the `confirm` event",
             "access": "protected",
             "tagname": "",
@@ -12018,7 +11815,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 138,
+            "line": 123,
             "description": "Fired to redirect to the draft edition",
             "itemtype": "event",
             "name": "confirm",
@@ -12028,7 +11825,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 147,
+            "line": 132,
             "description": "Draft to be displayed in the conflict screen",
             "itemtype": "attribute",
             "name": "drafts",
@@ -12040,32 +11837,19 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 158,
-            "description": "Content being displayed as a Content. This attribute is deprecated, it will be\nremoved in PlatformUI 2.0. Use `contentInfo` instead.",
+            "line": 143,
+            "description": "Content being displayed",
             "itemtype": "attribute",
             "name": "content",
             "default": "{}",
             "type": "{eZ.Content}",
-            "deprecated": true,
             "class": "eZ.DraftConflictView",
             "module": "ez-translateactionview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 171,
-            "description": "Content being displayed as a ContentInfo",
-            "itemtype": "attribute",
-            "name": "contentInfo",
-            "default": "null",
-            "type": "{eZ.ContentInfo}",
-            "class": "eZ.DraftConflictView",
-            "module": "ez-translateactionview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 182,
+            "line": 154,
             "description": "languageCode currently in use",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -12077,7 +11861,7 @@
         },
         {
             "file": "Resources/public/js/views/confirmbox/ez-draftconflictview.js",
-            "line": 193,
+            "line": 165,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -12089,7 +11873,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockallcontentview.js",
-            "line": 58,
+            "line": 38,
             "description": "Fires a `locationSearch` event to search for the last modified\ncontent under the root Location.",
             "itemtype": "method",
             "name": "_fireLoadDataEvent",
@@ -12114,7 +11898,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 75,
+            "line": 74,
             "description": "Shows the row options",
             "itemtype": "method",
             "name": "_uiShowOptions",
@@ -12133,7 +11917,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 90,
+            "line": 89,
             "description": "Clears the click outside handler",
             "itemtype": "method",
             "name": "_clearClickOutsideHandler",
@@ -12145,7 +11929,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 102,
+            "line": 101,
             "description": "Hides the row options",
             "itemtype": "method",
             "name": "_uiHideOptions",
@@ -12157,7 +11941,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 114,
+            "line": 113,
             "description": "Removes the loading class to reflect the non loading state",
             "itemtype": "method",
             "name": "_uiEndLoading",
@@ -12169,7 +11953,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 124,
+            "line": 123,
             "description": "Adds the loading class to reflect the loading state",
             "itemtype": "method",
             "name": "_uiStartLoading",
@@ -12181,7 +11965,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 134,
+            "line": 133,
             "description": "Fires an event to request the data to display.  This method must be\nreimplemented when extending eZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
             "name": "_fireLoadDataEvent",
@@ -12193,7 +11977,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 144,
+            "line": 143,
             "description": "Returns a representation of an item suitable for the template. This\nmethod must be reimplemented when extending\neZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
             "name": "_getTemplateItem",
@@ -12216,30 +12000,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 158,
-            "description": "Gets a single item from the `items` attribute.",
-            "itemtype": "method",
-            "name": "_getItem",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "contentId",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The item as an object or undefined if the item was not found",
-                "type": "Object|undefined"
-            },
-            "class": "eZ.DashboardBlockAsynchronousView",
-            "module": "ez-dashboardblockallcontentview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 179,
+            "line": 162,
             "description": "Hold the items to display in the block",
             "itemtype": "attribute",
             "name": "items",
@@ -12251,7 +12012,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 190,
+            "line": 173,
             "description": "Flag indicating if the block is currently waiting for data.",
             "itemtype": "attribute",
             "name": "loading",
@@ -12288,19 +12049,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
-            "line": 44,
-            "description": "Retrieves the item and fires a `editContentRequest` event to edit a content's version",
-            "itemtype": "method",
-            "name": "_callFireEditContentRequest",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.DashboardBlockMyContentView",
-            "module": "ez-dashboardblockmycontentview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/dashboard/ez-dashboardblockmycontentview.js",
-            "line": 63,
+            "line": 38,
             "description": "Fires a `locationSearch` event to search for the last modified\ncontent under the root Location.",
             "itemtype": "method",
             "name": "_fireLoadDataEvent",
@@ -19058,13 +18807,8 @@
                     "props": [
                         {
                             "name": "content",
-                            "description": "(deprecated use contentInfo) being edited",
-                            "type": "eZ.Content"
-                        },
-                        {
-                            "name": "contentInfo",
                             "description": "being edited",
-                            "type": "eZ.ContentInfo"
+                            "type": "eZ.Content"
                         },
                         {
                             "name": "languageCode",
@@ -22352,22 +22096,10 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-discoverybarviewservice.js",
-            "line": 29,
+            "line": 28,
             "description": "Redirects to the Trash",
             "itemtype": "method",
             "name": "_redirectToTrashView",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.DiscoveryBarViewService",
-            "module": "ez-discoverybarviewservice",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-discoverybarviewservice.js",
-            "line": 39,
-            "description": "Redirects to the Search view",
-            "itemtype": "method",
-            "name": "_redirectToSearchView",
             "access": "protected",
             "tagname": "",
             "class": "eZ.DiscoveryBarViewService",
@@ -22414,7 +22146,17 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 75,
+            "line": 70,
+            "description": "Fired when a content needs to be edited",
+            "itemtype": "event",
+            "name": "editContentRequest",
+            "class": "eZ.LocationViewViewService",
+            "module": "ez-locationviewviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
+            "line": 81,
             "description": "`sendToTrashAction` event handler,\nit asks confirmation to the user before sending the location to the trash.",
             "itemtype": "method",
             "name": "_sendContentToTrashConfirmBox",
@@ -22433,7 +22175,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 95,
+            "line": 101,
             "description": "`deleteContentAction` event handler,\nit asks confirmation to the user before delete the content item.",
             "itemtype": "method",
             "name": "_confirmDeleteContent",
@@ -22452,7 +22194,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 113,
+            "line": 119,
             "description": "moveAction event handler, launch the universal discovery widget\nto choose a location to move the content",
             "itemtype": "method",
             "name": "_selectLocation",
@@ -22471,7 +22213,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 133,
+            "line": 139,
             "description": "Sends location to trash, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_sendToTrash",
@@ -22483,7 +22225,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 157,
+            "line": 163,
             "description": "Deletes the the content item, triggering loading parent location and notifications",
             "itemtype": "method",
             "name": "_deleteContent",
@@ -22495,7 +22237,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 178,
+            "line": 184,
             "description": "Send to trash callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterSendToTrashCallback",
@@ -22524,7 +22266,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 210,
+            "line": 216,
             "description": "Fired when the content is sent to trash",
             "itemtype": "event",
             "name": "sentToTrash",
@@ -22541,7 +22283,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 224,
+            "line": 230,
             "description": "Delete content item callback triggering notifications and making app to navigate to parent location",
             "itemtype": "method",
             "name": "_afterDeleteCallback",
@@ -22570,7 +22312,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 254,
+            "line": 260,
             "description": "Fired when the content has been deleted",
             "itemtype": "event",
             "name": "deletedContent",
@@ -22587,7 +22329,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 268,
+            "line": 274,
             "description": "Move the content to the selected location",
             "itemtype": "method",
             "name": "_moveContent",
@@ -22606,7 +22348,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 301,
+            "line": 307,
             "description": "Fired when the content is moved",
             "itemtype": "event",
             "name": "movedContent",
@@ -22628,7 +22370,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 318,
+            "line": 324,
             "description": "translate event handler, makes the application to navigate to edit content available\nin the facade with given language and base language",
             "itemtype": "method",
             "name": "_translateContent",
@@ -22647,7 +22389,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 344,
+            "line": 350,
             "description": "Update the sort methods of the location",
             "itemtype": "method",
             "name": "_updateSorting",
@@ -22666,7 +22408,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 371,
+            "line": 377,
             "description": "Fired when the sortOrder and/or sortField have been\nsuccessfully updated.",
             "itemtype": "event",
             "name": "updatedLocationSorting",
@@ -22683,7 +22425,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 393,
+            "line": 399,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -22717,7 +22459,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 414,
+            "line": 420,
             "description": "Loads the location, the content and the path for the location id\navailable in the request and calls the next callback once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -22736,7 +22478,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 483,
+            "line": 489,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -22748,7 +22490,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 505,
+            "line": 511,
             "description": "The viewed location",
             "itemtype": "attribute",
             "name": "location",
@@ -22759,7 +22501,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 516,
+            "line": 522,
             "description": "The content associated with the location",
             "itemtype": "attribute",
             "name": "content",
@@ -22770,7 +22512,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 527,
+            "line": 533,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -22781,7 +22523,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 538,
+            "line": 544,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location sorted by location depth",
             "itemtype": "attribute",
             "name": "path",
@@ -22792,7 +22534,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 549,
+            "line": 555,
             "description": "The language code in which the content is being viewed",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -23743,117 +23485,13 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 30,
-            "description": "Set the searchString and limit from the URL,\nIf there is a searchString make a fulltext search, stores the results,\nand calls `callback` once it's done.",
-            "itemtype": "method",
-            "name": "_load",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 61,
-            "description": "Makes the app navigate to \"doSearch\" location",
-            "itemtype": "method",
-            "name": "_navigateToDoSearch",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "eventFacade",
-                    "description": "",
-                    "type": "EventFacade"
-                },
-                {
-                    "name": "e.searchString",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "e.limit",
-                    "description": "",
-                    "type": "Integer"
-                }
-            ],
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 91,
-            "description": "The number of elements that should increase the limit\n after loading more contents",
-            "itemtype": "attribute",
-            "name": "limit",
-            "default": "10",
-            "type": "Number",
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 103,
-            "description": "The search string used for the search request",
-            "itemtype": "attribute",
-            "name": "searchString",
-            "type": "String",
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 111,
-            "description": "The search result list containing the items to display",
-            "itemtype": "attribute",
-            "name": "searchResultList",
-            "type": "Array",
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 119,
-            "description": "The number of item returned by the searchRequest",
-            "itemtype": "attribute",
-            "name": "searchResultCount",
-            "type": "Number",
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-searchviewservice.js",
-            "line": 127,
-            "description": "The limit of the results",
-            "itemtype": "attribute",
-            "name": "limit",
-            "type": "Number",
-            "class": "eZ.SearchViewService",
-            "module": "ez-searchviewservice'",
-            "namespace": "eZ"
-        },
-        {
             "file": "Resources/public/js/views/services/ez-sectionserversideviewservice.js",
             "line": 7,
             "description": "Provides the section server side view service class",
             "itemtype": "method",
             "name": "ez-sectionserversideviewservice",
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -23872,7 +23510,7 @@
                 }
             ],
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -23906,7 +23544,7 @@
                 }
             ],
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -23935,7 +23573,7 @@
                 }
             ],
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -23964,7 +23602,7 @@
                 }
             ],
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -23997,7 +23635,7 @@
                 "type": "String"
             },
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24016,7 +23654,7 @@
                 }
             ],
             "class": "eZ.SectionServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24026,7 +23664,7 @@
             "itemtype": "method",
             "name": "ez-serversideviewservice",
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24045,7 +23683,7 @@
                 }
             ],
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24074,7 +23712,7 @@
                 }
             ],
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24098,7 +23736,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24121,7 +23759,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24145,7 +23783,7 @@
                 }
             ],
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24164,7 +23802,7 @@
                 }
             ],
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24183,7 +23821,7 @@
                 }
             ],
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24206,7 +23844,7 @@
                 "type": "Node"
             },
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24229,7 +23867,7 @@
                 "type": "String"
             },
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24252,7 +23890,7 @@
                 "type": "Boolean"
             },
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24271,7 +23909,7 @@
                 }
             ],
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24287,7 +23925,7 @@
                 "type": "Object"
             },
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24299,7 +23937,7 @@
             "default": "\"\"",
             "type": "String",
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -24311,7 +23949,7 @@
             "default": "\"\"",
             "type": "String",
             "class": "eZ.ServerSideViewService",
-            "module": "ez-searchviewservice'",
+            "module": "ez-navigationhubviewservice",
             "namespace": "eZ"
         },
         {
@@ -32906,237 +32544,6 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 49,
-            "description": "Returns the search result count.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_getSearchResultCount",
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 59,
-            "description": "Renders an item view per result item.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_renderItems",
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 88,
-            "description": "Returns an array of objects describing the columns to add to the\nlist. Each object contains an `identifier` and a `name`.",
-            "itemtype": "method",
-            "name": "_getColumns",
-            "access": "protected",
-            "tagname": "",
-            "return": {
-                "description": "Array"
-            },
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 107,
-            "description": "The number of item returned by the searchRequest",
-            "itemtype": "attribute",
-            "name": "searchResultCount",
-            "type": "Number",
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 115,
-            "description": "The properties to display",
-            "itemtype": "attribute",
-            "name": "displayedProperties",
-            "type": "Array",
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 125,
-            "description": "A key value object to store the human readable names of the\ncolumns.",
-            "itemtype": "attribute",
-            "name": "propertyNames",
-            "type": "{Object}",
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 141,
-            "description": "The constructor function to use to instance the item view\ninstances.",
-            "itemtype": "attribute",
-            "name": "itemViewConstructor",
-            "type": "{Function}",
-            "default": "{Y.eZ.SubitemListItemView}",
-            "class": "eZ.SearchListView",
-            "module": "ez-searchlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 53,
-            "description": "Renders the view which handle the list results",
-            "access": "private",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_renderSearchListView",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 65,
-            "description": "Fire the searchRequest with a searchString and a limit in params",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "searchString",
-                    "description": "The string used to search",
-                    "type": "String"
-                },
-                {
-                    "name": "limit",
-                    "description": "The limit of result to show",
-                    "type": "Integer"
-                }
-            ],
-            "itemtype": "method",
-            "name": "_fireSearchRequest",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 80,
-            "description": "Submit form event handler, will set the userSearchString",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "EventFacade"
-                }
-            ],
-            "itemtype": "method",
-            "name": "_setUserSearchString",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 95,
-            "description": "Sets the minimum height of the view",
-            "access": "private",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_uiSetMinHeight",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 110,
-            "description": "The search string the user wants to search",
-            "itemtype": "attribute",
-            "name": "userSearchString",
-            "default": "true",
-            "type": "Boolean",
-            "readonly": "",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 122,
-            "description": "The limit of the results",
-            "itemtype": "attribute",
-            "name": "limit",
-            "type": "Number",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 130,
-            "description": "The number of elements that should increase the limit\n after loading more contents",
-            "itemtype": "attribute",
-            "name": "limit",
-            "type": "Number",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 139,
-            "description": "The search string used for the search request",
-            "itemtype": "attribute",
-            "name": "searchString",
-            "default": "true",
-            "type": "String",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 148,
-            "description": "The search result list containing the items to display",
-            "itemtype": "attribute",
-            "name": "searchResultList",
-            "type": "Array",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 156,
-            "description": "The number of item returned by the searchRequest",
-            "itemtype": "attribute",
-            "name": "searchResultCount",
-            "type": "Number",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-searchview.js",
-            "line": 164,
-            "description": "The view which handle the result list",
-            "itemtype": "attribute",
-            "name": "searchListView",
-            "type": "{ez.SearchListView}",
-            "class": "eZ.SearchView",
-            "module": "ez-searchview",
-            "namespace": "eZ"
-        },
-        {
             "file": "Resources/public/js/views/ez-selectionfilterview.js",
             "line": 53,
             "description": "Initializes the selection filter view. It adds the necessary classes\nand sets up the event handlers",
@@ -35564,25 +34971,6 @@
         {
             "file": "Resources/public/js/views/ez-view.js",
             "line": 46,
-            "description": "Adds DOM event handlers on the current view. It makes sure\nevent subscriptions are really taken into account which might\nnot be the case if the view container has already been initialized.\nsee https://jira.ez.no/browse/EZP-26236",
-            "itemtype": "method",
-            "name": "_addDOMEventHandlers",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "events",
-                    "description": "",
-                    "type": "Object"
-                }
-            ],
-            "class": "eZ.View",
-            "module": "ez-view",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-view.js",
-            "line": 65,
             "description": "Sets the active attribute of the sub views stored in attributes to\nthe same value as the current view",
             "itemtype": "method",
             "name": "_setSubviewsActive",
@@ -35594,7 +34982,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-view.js",
-            "line": 83,
+            "line": 64,
             "description": "Stores the active status of the view. It is set to true by the\napplication after the view container has been added to DOM.",
             "itemtype": "attribute",
             "name": "active",
@@ -35606,7 +34994,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-view.js",
-            "line": 95,
+            "line": 76,
             "description": "An arbitrary config object",
             "itemtype": "attribute",
             "name": "config",
@@ -35617,180 +35005,99 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 22,
-            "description": "Loads content's version list",
-            "itemtype": "method",
-            "name": "loadVersions",
-            "params": [
-                {
-                    "name": "options",
-                    "description": "",
-                    "type": "Object",
-                    "props": [
-                        {
-                            "name": "api",
-                            "description": "(required) the JS REST client instance",
-                            "type": "Object"
-                        }
-                    ]
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 50,
-            "description": "Loads content's version list sorted by status",
-            "itemtype": "method",
-            "name": "loadVersionsSortedByStatus",
-            "params": [
-                {
-                    "name": "options",
-                    "description": "",
-                    "type": "Object",
-                    "props": [
-                        {
-                            "name": "api",
-                            "description": "(required) the JS REST client instance",
-                            "type": "Object"
-                        }
-                    ]
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 64,
-            "description": "Sorts an array of version info by status",
-            "itemtype": "method",
-            "name": "_sortVersions",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "versions",
-                    "description": "of eZ.VersionInfo",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "of sorted versions by status:\n             struct.<status_name>: {Array} of eZ.VersionInfo",
-                "type": "Object"
-            },
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 87,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 23,
             "description": "The content id of the content in the eZ Publish repository",
             "itemtype": "attribute",
             "name": "contentId",
             "default": "''",
             "type": "string",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 98,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 34,
             "description": "The name of the content",
             "itemtype": "attribute",
             "name": "name",
             "default": "''",
             "type": "string",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 109,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 45,
             "description": "The remote id of the content in the eZ Publish repository",
             "itemtype": "attribute",
             "name": "remoteId",
             "default": "''",
             "type": "string",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 120,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 56,
             "description": "The always available flag of the content",
             "itemtype": "attribute",
             "name": "alwaysAvailable",
             "default": "false",
             "type": "boolean",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 132,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 68,
             "description": "The last modification date of the content",
             "itemtype": "attribute",
             "name": "lastModificationDate",
             "default": "epoch",
             "type": "Date",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 144,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 80,
             "description": "The main language code of the content (eng-GB, fre-FR, ...)",
             "itemtype": "attribute",
             "name": "mainLanguageCode",
             "default": "''",
             "type": "string",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 155,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 91,
             "description": "The published date of the content",
             "itemtype": "attribute",
             "name": "publishedDate",
             "default": "epoch",
             "type": "Date",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/models/extensions/ez-contentinfo-base.js",
-            "line": 167,
+            "file": "Resources/public/js/models/extensions/ez-contentinfo-attributes.js",
+            "line": 103,
             "description": "The current version number",
             "itemtype": "attribute",
             "name": "currentVersionNo",
             "default": "0",
             "type": "Number",
-            "class": "eZ.ContentInfoBase",
-            "module": "ez-contentinfo-base",
+            "class": "eZ.ContentInfoAttributes",
+            "module": "ez-contentinfo-attributes",
             "namespace": "eZ"
         },
         {
@@ -36238,7 +35545,88 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 300,
+            "line": 298,
+            "description": "Loads content's version list",
+            "itemtype": "method",
+            "name": "loadVersions",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 326,
+            "description": "Loads content's version list sorted by status",
+            "itemtype": "method",
+            "name": "loadVersionsSortedByStatus",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 340,
+            "description": "Sorts an array of version info by status",
+            "itemtype": "method",
+            "name": "_sortVersions",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "versions",
+                    "description": "of eZ.VersionInfo",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "of sorted versions by status:\n             struct.<status_name>: {Array} of eZ.VersionInfo",
+                "type": "Object"
+            },
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 362,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -36272,7 +35660,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 317,
+            "line": 379,
             "description": "Creates a new draft for the content",
             "itemtype": "method",
             "name": "createDraft",
@@ -36306,7 +35694,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 346,
+            "line": 408,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -36340,7 +35728,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 371,
+            "line": 433,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -36369,7 +35757,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 402,
+            "line": 464,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -36381,7 +35769,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 414,
+            "line": 476,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -36393,7 +35781,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 425,
+            "line": 487,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
@@ -38767,40 +38155,6 @@
             "default": "false",
             "class": "eZ.AsynchronousView",
             "module": "ez-asynchronousview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/extensions/ez-draftconflict.js",
-            "line": 25,
-            "description": "Fire a `editContentRequest` event to edit a content's version",
-            "itemtype": "method",
-            "name": "_fireEditContentRequest",
-            "params": [
-                {
-                    "name": "contentItem",
-                    "description": "",
-                    "type": "Y.eZ.ContentInfo"
-                },
-                {
-                    "name": "contentType",
-                    "description": "",
-                    "type": "Y.eZ.ContentType"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.DraftConflict",
-            "module": "ez-draftconflict",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/extensions/ez-draftconflict.js",
-            "line": 34,
-            "description": "Fired when a content needs to be edited",
-            "itemtype": "event",
-            "name": "editContentRequest",
-            "class": "eZ.DraftConflict",
-            "module": "ez-draftconflict",
             "namespace": "eZ"
         },
         {
