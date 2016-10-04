@@ -97,7 +97,7 @@
                                 <li><a href="../classes/eZ.ContentEditView.html">eZ.ContentEditView</a></li>
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
-                                <li><a href="../classes/eZ.ContentInfoAttributes.html">eZ.ContentInfoAttributes</a></li>
+                                <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -119,6 +119,7 @@
                                 <li><a href="../classes/eZ.DateEditView.html">eZ.DateEditView</a></li>
                                 <li><a href="../classes/eZ.DiscoveryBarView.html">eZ.DiscoveryBarView</a></li>
                                 <li><a href="../classes/eZ.DiscoveryBarViewService.html">eZ.DiscoveryBarViewService</a></li>
+                                <li><a href="../classes/eZ.DraftConflict.html">eZ.DraftConflict</a></li>
                                 <li><a href="../classes/eZ.DraftConflictView.html">eZ.DraftConflictView</a></li>
                                 <li><a href="../classes/eZ.EditActionBarView.html">eZ.EditActionBarView</a></li>
                                 <li><a href="../classes/eZ.EditorContentProcessorBase.html">eZ.EditorContentProcessorBase</a></li>
@@ -220,6 +221,9 @@
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideView.html">eZ.RoleServerSideView</a></li>
                                 <li><a href="../classes/eZ.RoleServerSideViewService.html">eZ.RoleServerSideViewService</a></li>
+                                <li><a href="../classes/eZ.SearchListView.html">eZ.SearchListView</a></li>
+                                <li><a href="../classes/eZ.SearchView.html">eZ.SearchView</a></li>
+                                <li><a href="../classes/eZ.SearchViewService.html">eZ.SearchViewService</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
                                 <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
@@ -315,6 +319,7 @@
                                 <li><a href="../modules/ez-contenteditview.html">ez-contenteditview</a></li>
                                 <li><a href="../modules/ez-contenteditviewservice.html">ez-contenteditviewservice</a></li>
                                 <li><a href="../modules/ez-contentinfo-attributes.html">ez-contentinfo-attributes</a></li>
+                                <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
@@ -342,6 +347,7 @@
                                 <li><a href="../modules/ez-discoverybarview.html">ez-discoverybarview</a></li>
                                 <li><a href="../modules/ez-discoverybarviewservice.html">ez-discoverybarviewservice</a></li>
                                 <li><a href="../modules/ez-domstateplugin.html">ez-domstateplugin</a></li>
+                                <li><a href="../modules/ez-draftconflict.html">ez-draftconflict</a></li>
                                 <li><a href="../modules/ez-editactionbarview.html">ez-editactionbarview</a></li>
                                 <li><a href="../modules/ez-editorcontentprocessorbase.html">ez-editorcontentprocessorbase</a></li>
                                 <li><a href="../modules/ez-editorcontentprocessorremoveids.html">ez-editorcontentprocessorremoveids</a></li>
@@ -420,7 +426,10 @@
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
                                 <li><a href="../modules/ez-roleserversideview.html">ez-roleserversideview</a></li>
                                 <li><a href="../modules/ez-savedraftplugin.html">ez-savedraftplugin</a></li>
+                                <li><a href="../modules/ez-searchlistview.html">ez-searchlistview</a></li>
                                 <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
+                                <li><a href="../modules/ez-searchview.html">ez-searchview</a></li>
+                                <li><a href="../modules/ez-searchviewservice&#x27;.html">ez-searchviewservice&#x27;</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -586,6 +595,10 @@ button.</p>
                     <ul class="index-list methods extends">
                             <li class="index-item method private inherited">
                                 <a href="#method__addAttrs">_addAttrs</a>
+
+                            </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__addDOMEventHandlers">_addDOMEventHandlers</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -1160,6 +1173,62 @@ Values defined in the cfgs argument will be over-written by values in this argum
                         Whether or not to delay the intialization of these attributes until the first call to get/set.
 Individual attributes can over-ride this behavior by defining a lazyAdd configuration property in their configuration.
 See <a href="#method_addAttr">addAttr</a>.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__addDOMEventHandlers" class="method item protected inherited">
+    <h3 class="name"><code>_addDOMEventHandlers</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>events</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.View.html#method__addDOMEventHandlers">eZ.View</a>:
+        <a href="../files/Resources_public_js_views_ez-view.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:46</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Adds DOM event handlers on the current view. It makes sure
+event subscriptions are really taken into account which might
+not be the case if the view container has already been initialized.
+see https://jira.ez.no/browse/EZP-26236
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">events</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
                     </div>
 
                 </li>
@@ -4993,7 +5062,7 @@ internal state object, or the state proxy if it exits
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.View.html#method__setSubviewsActive">eZ.View</a>:
-        <a href="../files/Resources_public_js_views_ez-view.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:46</code></a>
+        <a href="../files/Resources_public_js_views_ez-view.js.html#l65"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:65</code></a>
         </p>
 
 
@@ -8245,7 +8314,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.View.html#attr_active">eZ.View</a>:
-                            <a href="../files/Resources_public_js_views_ez-view.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:64</code></a>
+                            <a href="../files/Resources_public_js_views_ez-view.js.html#l83"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:83</code></a>
                             </p>
                     
                     
@@ -8275,7 +8344,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.View.html#attr_config">eZ.View</a>:
-                            <a href="../files/Resources_public_js_views_ez-view.js.html#l76"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:76</code></a>
+                            <a href="../files/Resources_public_js_views_ez-view.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-view.js:95</code></a>
                             </p>
                     
                     
