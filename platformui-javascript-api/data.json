@@ -35476,7 +35476,30 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 230,
+            "line": 228,
+            "description": "Returns the relations ids from the field in the shape of an Array of Object",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getRelationsFromField",
+            "params": [
+                {
+                    "name": "fieldDefinitionIdentifier",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 256,
             "description": "copy implementation that relies on the JS REST client.",
             "itemtype": "method",
             "name": "copy",
@@ -35510,7 +35533,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 243,
+            "line": 269,
             "description": "Loads content's locations list",
             "itemtype": "method",
             "name": "loadLocations",
@@ -35545,7 +35568,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 298,
+            "line": 324,
             "description": "Loads content's version list",
             "itemtype": "method",
             "name": "loadVersions",
@@ -35574,7 +35597,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 326,
+            "line": 352,
             "description": "Loads content's version list sorted by status",
             "itemtype": "method",
             "name": "loadVersionsSortedByStatus",
@@ -35603,7 +35626,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 340,
+            "line": 366,
             "description": "Sorts an array of version info by status",
             "itemtype": "method",
             "name": "_sortVersions",
@@ -35626,7 +35649,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 362,
+            "line": 388,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -35660,7 +35683,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 379,
+            "line": 405,
             "description": "Creates a new draft for the content",
             "itemtype": "method",
             "name": "createDraft",
@@ -35694,7 +35717,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 408,
+            "line": 434,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -35728,7 +35751,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 433,
+            "line": 459,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -35757,7 +35780,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 464,
+            "line": 490,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
             "itemtype": "attribute",
             "name": "fields",
@@ -35769,7 +35792,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 476,
+            "line": 502,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -35781,7 +35804,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 487,
+            "line": 513,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",

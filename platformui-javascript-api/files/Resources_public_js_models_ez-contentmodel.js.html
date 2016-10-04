@@ -728,19 +728,45 @@ YUI.add(&#x27;ez-contentmodel&#x27;, function (Y) {
                 return this.get(&#x27;relations&#x27;);
             }
 
+            if (type === &quot;ATTRIBUTE&quot; &amp;&amp; fieldDefinitionIdentifier) {
+                return this._getRelationsFromField(fieldDefinitionIdentifier);
+            }
+
             relations = Y.Array.filter(this.get(&#x27;relations&#x27;), function (relation) {
-                if (
-                    fieldDefFilter
-                    &amp;&amp; type === relation.type
-                    &amp;&amp; fieldDefinitionIdentifier === relation.fieldDefinitionIdentifier
-                ) {
-                    return true;
-                } else if ( !fieldDefFilter &amp;&amp; type === relation.type ) {
+                if ( !fieldDefFilter &amp;&amp; type === relation.type ) {
                     return true;
                 }
                 return false;
             });
             return relations;
+        },
+
+        /**
+         * Returns the relations ids from the field in the shape of an Array of Object
+         *
+         * @protected
+         * @method _getRelationsFromField
+         *
+         * @param {String} fieldDefinitionIdentifier
+         * @return {Array}
+         */
+        _getRelationsFromField: function(fieldDefinitionIdentifier) {
+            var fields = this.get(&#x27;fields&#x27;),
+                destinationContentIds,
+                fieldValue = fields[fieldDefinitionIdentifier].fieldValue;
+
+            if (fieldValue.destinationContentIds) {
+                // relation list
+                destinationContentIds = fieldValue.destinationContentIds;
+            } else {
+                // relation
+                destinationContentIds = [fieldValue.destinationContentId];
+            }
+
+            return destinationContentIds.map(function (contentId) {
+                // Will use a cleaner approach on 1.6 when EZP-23000 is fixed and we have REST ID available
+                return {destination: &quot;/api/ezp/v2/content/objects/&quot; + contentId};
+            });
         },
 
         /**
