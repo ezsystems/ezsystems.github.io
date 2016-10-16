@@ -82,19 +82,27 @@ hr {
 /*Secondary colors*/
 #action-bar {background-color: #106D95;}
 #action-bar-line {background-color: #7AAABE;}
-#action-bar-text {background-color: #E1F5FF;}
 #general-bar {background-color: #667076;}
 #general-bar-line {background-color: #BBB;}
-#general-bar-text {background-color: #FDFDFD; border: 1px solid #333;}
 #action-bar-preview {background-color: #185068;}
 #form-box-border {background-color: #b1d2e0;}
 #form-data {background-color: #3B6D86;}
 #form-dropdown {background-color: #747474;}
 #focus-background {background-color: #FCB700;}
-
-
-
-
+/*Text colors*/
+#text-base {background-color: #333;}
+#text-base-colored {background-color: #FFF; border: 1px solid #333;}
+#content-type-text {background-color: #878787;}
+#validation-text {background-color: #d92d42;}
+#hyperlink {background-color: #F15922;}
+#breadcrumb {background-color: #6B6B6B;}
+#translation-content {background-color: #4B4B4B;}
+#section-separator {background-color: #2B84B1;}
+#non-active-tab {background-color: #909090;}
+#translation-action-bar {background-color: #E2DB6E;}
+#general-bar-text {background-color: #FDFDFD; border: 1px solid #333;}
+#action-bar-text {background-color: #E1F5FF;}
+#stu-block-elements {background-color: #7E7E7E;}
 
 
 
