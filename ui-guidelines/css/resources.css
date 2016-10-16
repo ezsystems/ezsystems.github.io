@@ -103,7 +103,10 @@ hr {
 #general-bar-text {background-color: #FDFDFD; border: 1px solid #333;}
 #action-bar-text {background-color: #E1F5FF;}
 #stu-block-elements {background-color: #7E7E7E;}
-
+/*Notification colors*/
+#feedback-positive {background-color: #17A98D;}
+#feedback-processing {background-color: #FFC035;}
+#feedback-negative {background-color: #E85365;}
 
 
 
