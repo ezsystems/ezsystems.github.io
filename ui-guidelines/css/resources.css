@@ -70,6 +70,7 @@ hr {
 	border-radius: 4px;
 	margin-bottom: 1em;
 }
+/*Primary colors*/
 #primary-enabled {background-color: #FF7543;}
 #primary-hover {background-color: #F15A10;}
 #secondary-enabled {background-color: #2b84b1;}
@@ -78,7 +79,18 @@ hr {
 #neutral-hover {background-color: #667076;}
 #negative-enabled {background-color: #E85365;}
 #negative-hover {background-color: #D92D42;}
-
+/*Secondary colors*/
+#action-bar {background-color: #106D95;}
+#action-bar-line {background-color: #7AAABE;}
+#action-bar-text {background-color: #E1F5FF;}
+#general-bar {background-color: #667076;}
+#general-bar-line {background-color: #BBB;}
+#general-bar-text {background-color: #FDFDFD; border: 1px solid #333;}
+#action-bar-preview {background-color: #185068;}
+#form-box-border {background-color: #b1d2e0;}
+#form-data {background-color: #3B6D86;}
+#form-dropdown {background-color: #747474;}
+#focus-background {background-color: #FCB700;}
 
 
 
