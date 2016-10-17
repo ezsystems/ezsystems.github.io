@@ -108,16 +108,17 @@ hr {
 .clr-text-actionbar {background-color: #E1F5FF;}
 .clr-text-stu-blockelements {background-color: #7E7E7E;}
 /*Background colors*/
-#background-base {background-color: #fafafa; border: 1px solid #333;}
-#background-content {background-color: #f3f3f3; border: 1px solid #333;}
-#background-section-main {background-color: #e3e3e3; border: 1px solid #333;}
-#background-section {background-color: #dbdbdb; border: 1px solid #333;}
-#background-fieldtype {background-color: #bbb;}
-#background-stu-actionbar {background-color: #ebebeb; border: 1px solid #333;}
-#background-stu-landing {background-color: #969696;}
-#background-stu-timeline {background-color: #ccc;}
-#background-stu-timeline-line {background-color: #dedede; border: 1px solid #333;}
-#background-table {background-color: #c2c2c2;}
+.clr-background {background-color: #fafafa; border: 1px solid #333;}
+.clr-background-header {background-color: #e7e7e7; border: 1px solid #333;}
+.clr-background-content {background-color: #f3f3f3; border: 1px solid #333;}
+.clr-background-section-main {background-color: #e3e3e3; border: 1px solid #333;}
+.clr-background-section {background-color: #dbdbdb; border: 1px solid #333;}
+.clr-background-fieldtype {background-color: #bbb;}
+.clr-background-stu-actionbar {background-color: #ebebeb; border: 1px solid #333;}
+.clr-background-stu-landing {background-color: #969696;}
+.clr-background-stu-timeline {background-color: #ccc;}
+.clr-background-stu-timeline-line {background-color: #dedede; border: 1px solid #333;}
+.clr-background-table {background-color: #c2c2c2;}
 /*Notification colors*/
 #feedback-positive {background-color: #17A98D;}
 #feedback-processing {background-color: #FFC035;}
