@@ -56,7 +56,7 @@ hr {
 .color-group {
 	display: inline-block;
 	float: left;
-	margin: 1em 3em 1.5em 0;
+	margin: 1em 3em 1em 0;
 }
 .color-group-bottom { 
 	margin-bottom: 0em;
@@ -64,21 +64,25 @@ hr {
 .color-box {
 	display: block;
 	float: left;
-	height: 7em;
+	height: 5em;
 	width: 7em;
 	border: 1px solid transparent;
 	border-radius: 4px;
 	margin-bottom: 1em;
 }
+.color-label {
+	font-size: .9em;
+	font-family: 'Quantico', sans-serif;
+}
 /*Primary colors*/
-#primary-enabled {background-color: #FF7543;}
-#primary-hover {background-color: #F15A10;}
-#secondary-enabled {background-color: #2b84b1;}
-#secondary-hover {background-color: #006094;}
-#neutral-enabled {background-color: #9b9b9b;}
-#neutral-hover {background-color: #667076;}
-#negative-enabled {background-color: #E85365;}
-#negative-hover {background-color: #D92D42;}
+.clr-primary {background-color: #FF7543;}
+.clr-primary-hover {background-color: #F15A10;}
+.clr-secondary {background-color: #2b84b1;}
+.clr-secondary-hover {background-color: #006094;}
+.clr-neutral {background-color: #9b9b9b;}
+.clr-neutral-hover {background-color: #667076;}
+.clr-negative {background-color: #E85365;}
+.clr-negative-hover {background-color: #D92D42;}
 /*Secondary colors*/
 #action-bar {background-color: #106D95;}
 #action-bar-line {background-color: #7AAABE;}
