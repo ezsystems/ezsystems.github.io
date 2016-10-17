@@ -120,9 +120,9 @@ hr {
 .clr-background-stu-timeline-line {background-color: #dedede; border: 1px solid #333;}
 .clr-background-table {background-color: #c2c2c2;}
 /*Notification colors*/
-#feedback-positive {background-color: #17A98D;}
-#feedback-processing {background-color: #FFC035;}
-#feedback-negative {background-color: #E85365;}
+.clr-feedback-positive {background-color: #17A98D;}
+.clr-feedback-processing {background-color: #FFC035;}
+.clr-feedback-negative {background-color: #E85365;}
 
 
 
