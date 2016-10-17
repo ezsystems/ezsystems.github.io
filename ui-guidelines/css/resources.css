@@ -94,19 +94,19 @@ hr {
 .clr-form-dropdown {background-color: #747474;}
 .clr-focus-background {background-color: #FCB700;}
 /*Text colors*/
-#text-base {background-color: #333;}
-#text-base-colored {background-color: #FFF; border: 1px solid #333;}
-#content-type-text {background-color: #878787;}
-#validation-text {background-color: #d92d42;}
-#hyperlink {background-color: #F15922;}
-#breadcrumb {background-color: #6B6B6B;}
-#translation-content {background-color: #4B4B4B;}
-#section-separator {background-color: #2B84B1;}
-#non-active-tab {background-color: #909090;}
-#translation-action-bar {background-color: #E2DB6E;}
-#general-bar-text {background-color: #FDFDFD; border: 1px solid #333;}
-#action-bar-text {background-color: #E1F5FF;}
-#stu-block-elements {background-color: #7E7E7E;}
+.clr-text {background-color: #333;}
+.clr-text-white {background-color: #FFF; border: 1px solid #333;}
+.clr-text-ctype {background-color: #878787;}
+.clr-text-validation {background-color: #d92d42;}
+.clr-hyperlink {background-color: #F15922;}
+.clr-breadcrumb {background-color: #6B6B6B;}
+.clr-text-translation {background-color: #4B4B4B;}
+.clr-text-section {background-color: #2B84B1;}
+.clr-text-tab-nonactive {background-color: #909090;}
+.clr-text-translation-actionbar {background-color: #E2DB6E;}
+.clr-text-generalbar {background-color: #FDFDFD; border: 1px solid #333;}
+.clr-text-actionbar {background-color: #E1F5FF;}
+.clr-text-stu-blockelements {background-color: #7E7E7E;}
 /*Background colors*/
 #background-base {background-color: #fafafa; border: 1px solid #333;}
 #background-content {background-color: #f3f3f3; border: 1px solid #333;}
