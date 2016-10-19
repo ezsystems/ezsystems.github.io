@@ -137,14 +137,8 @@ p {
 	font-weight: 700;
 	text-decoration: underline;
 }
-.code {
-	padding: 2px 4px;
-	font-size: .875em;
-	color: #e94b10;
+.label-code {
 	background-color: #fce3da;
-	border-radius: 4px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
 }
 .header-black {
 	font-weight: bold;
