@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Quantico);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body {
 	position: relative;
@@ -138,11 +139,12 @@ p {
 }
 .code {
 	padding: 2px 4px;
-	font-size: 1em;
+	font-size: .875em;
 	color: #e94b10;
 	background-color: #fce3da;
 	border-radius: 4px;
-	font-family: 'Quantico', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 }
 .header-black {
 	font-weight: bold;
