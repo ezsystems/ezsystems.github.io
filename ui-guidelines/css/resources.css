@@ -29,11 +29,12 @@
 .text-size {
     margin-left: 1.5em;
 }
-
-.typography, .typography p {
+.typography {
 	font-family: 'Open Sans', Arial, sans-serif;
 }
-
+.typography p {
+    font-family: inherit;
+}
 .text-h1 {
     font-size: 2.5em;
 }
