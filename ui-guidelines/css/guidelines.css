@@ -167,13 +167,13 @@ pre {
 }
 
 /*==== UTILITIES ====*/
-.u-space-top-big {margin-top: 4em;}
-.u-space-top-xlarge {margin-top: 2em;}
-.u-space-top-large {margin-top: 1.5em;}
-.u-space-top {margin-top: 1em;}
+.u-move-down-big {margin-top: 4em;}
+.u-move-down-xlarge {margin-top: 2em;}
+.u-move-down-large {margin-top: 1.5em;}
+.u-move-down {margin-top: 1em;}
 .u-space-bottom-large {margin-bottom: 1.5em;}
-.u-space-left-xlarge {margin-left: 2em;}
-.u-move-top-xlarge {margin-top: -2em;}
-.u-move-top {margin-top: -1em;}
-.u-move-top-small {margin-top: -.75em;}
-.u-move-top-xsmall {margin-top: -.5em;}
+.u-move-left-xlarge {margin-left: 2em;}
+.u-move-up-xlarge {margin-top: -2em;}
+.u-move-up {margin-top: -1em;}
+.u-move-up-small {margin-top: -.75em;}
+.u-move-up-xsmall {margin-top: -.5em;}
