@@ -162,17 +162,26 @@ pre {
 	font-weight: bold;
 }
 .btn {
-	position: relative;
-	float: right;
-	margin-right: -1px;
-	margin-top: -1px;
-	padding: .25em .5em;
-	border: 1px solid #dbdbdb;
-	border-radius: 0 4px 0 4px;
-	background-color: #f3f3f3;
-	color: #667076;
+	display: none;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background-color: transparent;
 	font-size: .85em;
 	cursor: pointer;
+}
+.color-box p {
+	margin-top: 1.75em;
+}
+.color-box:hover .btn {
+	display: block;
+	color: #fff;
+}
+.color-box:hover .btn-dark {
+	color: #333;
+}
+.color-box:hover .label-code {
+	display: none;
 }
 
 /*==== UTILITIES ====*/
