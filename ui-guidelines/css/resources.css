@@ -175,7 +175,7 @@ hr {
 }
 .clr-text-white {
     background-color: #FFF; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-text-ctype {
     background-color: #878787;
@@ -203,7 +203,7 @@ hr {
 }
 .clr-text-generalbar {
     background-color: #FDFDFD; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-text-actionbar {
     background-color: #E1F5FF;
@@ -214,7 +214,7 @@ hr {
 /*Background colors*/
 .clr-background {
     background-color: #fafafa; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-header {
     background-color: #e7e7e7; 
