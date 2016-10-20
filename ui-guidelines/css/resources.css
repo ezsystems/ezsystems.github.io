@@ -94,26 +94,27 @@ hr {
 	border-top: 1px solid #333;
 }
 .color-row {
-	display: inline-block;
+	display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-bottom: 2em;
 }
 .color-group {
-	display: inline-block;
-	float: left;
-	margin: 1em 3em .5em 0;
+	margin: 1em 1.5em 0 0;
 }
 .color-group-bottom { 
 	margin-bottom: 0em;
 }
 .color-box {
-	display: block;
-	float: left;
 	height: 5em;
 	width: 7em;
+    margin-bottom: 1em;
 	border: 1px solid transparent;
 	border-radius: 4px;
-	margin-bottom: 1em;
 }
 .color-label {
+    margin-top: -.5em;
 	font-size: .9em;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
