@@ -218,26 +218,26 @@ hr {
 }
 .clr-background-header {
     background-color: #e7e7e7; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-content {
     background-color: #f3f3f3; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-section-main {
     background-color: #e3e3e3; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-section {
     background-color: #dbdbdb; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-fieldtype {
     background-color: #bbb;
 }
 .clr-background-stu-actionbar {
     background-color: #ebebeb; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-stu-landing {
     background-color: #969696;
@@ -247,7 +247,7 @@ hr {
 }
 .clr-background-stu-timeline-line {
     background-color: #dedede; 
-    border: 1px solid #333;
+    border: 1px solid #f3f3f3;
 }
 .clr-background-table {
     background-color: #c2c2c2;
