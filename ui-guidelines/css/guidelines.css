@@ -161,6 +161,19 @@ pre {
 	font-size: 1em;
 	font-weight: bold;
 }
+.btn {
+	position: relative;
+	float: right;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: .25em .5em;
+	border: 1px solid #dbdbdb;
+	border-radius: 0 4px 0 4px;
+	background-color: #f3f3f3;
+	color: #667076;
+	font-size: .85em;
+	cursor: pointer;
+}
 
 /*==== UTILITIES ====*/
 .u-move-down-big {
