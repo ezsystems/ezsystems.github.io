@@ -175,6 +175,7 @@ pre {
 }
 .color-box:hover .btn {
 	display: block;
+	margin-left: -.25em;
 	color: #fff;
 }
 .color-box:hover .btn-dark {
