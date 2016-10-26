@@ -115,21 +115,21 @@ hr {
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: space-around;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 .color-group {
-	margin: 1em 1.5em 0 0;
+	margin: .75rem 1.5rem 0 0;
 }
 .color-box {
-	height: 5em;
-	width: 7em;
-    margin-bottom: 1em;
+	height: 4.5rem;
+	width: 7rem;
+    margin-bottom: 1rem;
 	border: 1px solid transparent;
 	border-radius: 4px;
 }
 .color-label {
-    margin-top: -.5em;
-	font-size: .9em;
+    margin-top: -.75rem;
+	font-size: .75rem;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 }
