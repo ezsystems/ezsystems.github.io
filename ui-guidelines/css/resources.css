@@ -35,30 +35,30 @@
 .typography p {
     font-family: inherit;
 }
-.text-h1 {
-    font-size: 2.5em;
+h1 {
+    font-size: 2.5rem;
 }
-.text-h2 {
-    font-size: 2em;
+h2 {
+    font-size: 2rem;
 }
-.text-h3 {
-    font-size: 1.75em;
+h3 {
+    font-size: 1.75rem;
 }
-.text-h4 {
-    font-size: 1.5em;
+h4 {
+    font-size: 1.5rem;
 }
-.text-h5 {
-    font-size: 1.25em;
+h5 {
+    font-size: 1.25rem;
 }
-.text-h6 {
-    font-size: 1em;
+h6 {
+    font-size: 1rem;
 }
-.text-h1,
-.text-h2,
-.text-h3,
-.text-h4,
-.text-h5,
-.text-h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: bold;
 }
 
