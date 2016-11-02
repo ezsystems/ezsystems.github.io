@@ -2599,17 +2599,6 @@
                 "eZ": 1
             }
         },
-        "Resources/public/js/external/ez-translator.js": {
-            "name": "Resources/public/js/external/ez-translator.js",
-            "modules": {},
-            "classes": {
-                "eZ.Translator": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
         "Resources/public/js/services/ez-googlemapapiloader.js": {
             "name": "Resources/public/js/services/ez-googlemapapiloader.js",
             "modules": {
@@ -6043,16 +6032,15 @@
             "elements": {},
             "classes": {
                 "eZ.CAPI": 1,
-                "eZ.SessionAuthAgent": 1,
-                "eZ.Translator": 1
+                "eZ.SessionAuthAgent": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/external/ez-translator.js",
-            "line": 11,
+            "file": "Resources/public/js/external/ez-capi.js",
+            "line": 21,
             "description": "Provides the translate property plugin"
         },
         "ez-googlemapapiloader": {
@@ -6579,7 +6567,7 @@
             "namespace": "eZ.Plugin",
             "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
             "line": 14,
-            "description": "Register Language Helpers plugin for the Platform UI application. It registers\nhandlebars helpers:\n\n   * `language_name` is for returning language name based on given language code. It takes the\n   language code as an argument\n\n   * `translate_property` returns the translation of a property. It takes as an argument the property to\n   translate as a hash indexed by eZ Locale for example:\n   {'eng-GB': 'potatoes', 'fre-FR': 'pomme de terre'}\n\n   * `translate` returns a translated message. It takes as an argument the message to translate, the domain\n   where the message can be found and the parameters to be applied to the message.",
+            "description": "Register Language Helpers plugin for the Platform UI application. It registers\nhandlebars helper allowing to get language name based on language code:\n\n  * `language_name` is for returning language name based on given language code. It takes the\n  language code as an argument",
             "is_constructor": 1,
             "extends": "Plugin.Base"
         },
@@ -9730,21 +9718,6 @@
             "description": "Session Auth Agent. See https://github.com/ezsystems/ez-js-rest-client",
             "is_constructor": 1
         },
-        "eZ.Translator": {
-            "name": "eZ.Translator",
-            "shortname": "eZ.Translator",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-translateproperty",
-            "namespace": "eZ",
-            "file": "Resources/public/js/external/ez-translator.js",
-            "line": 11,
-            "description": "eZ JavaScript Translator\nhttps://github.com/willdurand/BazingaJsTranslationBundle",
-            "is_constructor": 1
-        },
         "eZ.GoogleMapAPILoader": {
             "name": "eZ.GoogleMapAPILoader",
             "shortname": "eZ.GoogleMapAPILoader",
@@ -10564,7 +10537,7 @@
         },
         {
             "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
-            "line": 40,
+            "line": 32,
             "description": "Registers the `language_name` handlebars helper. The `language_name` helper expects the\nargument to be a language code. It will return language name from the language object\nin app's systemLanguageList. If language with given language code won't be found in\nsystemLanguageList then language code is returned.",
             "itemtype": "method",
             "name": "_registerLanguageName",
@@ -10576,22 +10549,10 @@
         },
         {
             "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
-            "line": 55,
+            "line": 47,
             "description": "Registers the `translate_property` handlebars helper. The\n`translate_property` helper expects a hash indexed by eZ Locale\n('eng-GB', 'fre-FR', ...) and will try to pick the best one according\nto the browser languages configuration.",
             "itemtype": "method",
             "name": "_registerTranslatedProperty",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.Plugin.RegisterLanguageHelpers",
-            "module": "ez-registerlanguagehelpersplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
-            "line": 70,
-            "description": "Registers the `translate` handlebars helper.\nThe `translate` helper expects a message that can be found in a domain (See Symfony translation documentation).\nA list of variables to be inserted into the translated message can be provided in the `variables` attribute\nin the shape of a JSON hash, here is a example:\n{\"name\": \"John Doe\", \"age\": \"42\"}",
-            "itemtype": "method",
-            "name": "_registerTranslate",
             "access": "protected",
             "tagname": "",
             "class": "eZ.Plugin.RegisterLanguageHelpers",
