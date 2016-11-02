@@ -6,6 +6,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "CKEDITOR.plugins.ezaddcontent",
         "CKEDITOR.plugins.ezembed",
         "CKEDITOR.plugins.ezfocusblock",
+        "CKEDITOR.plugins.ezpaste",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
         "SubitemGridItemView",
@@ -61,7 +62,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.ContentEditView",
         "eZ.ContentEditViewService",
         "eZ.ContentInfo",
-        "eZ.ContentInfoBase",
+        "eZ.ContentInfoAttributes",
         "eZ.ContentTree",
         "eZ.ContentType",
         "eZ.ContentTypeEditServerSideView",
@@ -83,11 +84,12 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.DateEditView",
         "eZ.DiscoveryBarView",
         "eZ.DiscoveryBarViewService",
-        "eZ.DraftConflict",
         "eZ.DraftConflictView",
         "eZ.EditActionBarView",
         "eZ.EditPreviewView",
         "eZ.EditorContentProcessorBase",
+        "eZ.EditorContentProcessorEmptyEmbed",
+        "eZ.EditorContentProcessorRemoveAnchors",
         "eZ.EditorContentProcessorRemoveIds",
         "eZ.EditorContentProcessorXHTML5Edit",
         "eZ.EmailAddressEditView",
@@ -185,9 +187,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.RichTextView",
         "eZ.RoleServerSideView",
         "eZ.RoleServerSideViewService",
-        "eZ.SearchListView",
-        "eZ.SearchView",
-        "eZ.SearchViewService",
         "eZ.SectionServerSideView",
         "eZ.SectionServerSideViewService",
         "eZ.SelectionEditView",
@@ -280,7 +279,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-contenteditview",
         "ez-contenteditviewservice",
         "ez-contentinfo-attributes",
-        "ez-contentinfo-base",
         "ez-contentinfomodel",
         "ez-contentmodel",
         "ez-contentsetmainlocationplugin",
@@ -308,9 +306,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-discoverybarview",
         "ez-discoverybarviewservice",
         "ez-domstateplugin",
-        "ez-draftconflict",
         "ez-editactionbarview",
         "ez-editorcontentprocessorbase",
+        "ez-editorcontentprocessoremptyembed",
+        "ez-editorcontentprocessorremoveanchors",
         "ez-editorcontentprocessorremoveids",
         "ez-editorcontentprocessorxhtml5edit",
         "ez-editpreviewview",
@@ -387,10 +386,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-richtext-view",
         "ez-roleserversideview",
         "ez-savedraftplugin",
-        "ez-searchlistview",
         "ez-searchplugin",
-        "ez-searchview",
-        "ez-searchviewservice'",
         "ez-sectionserversideview",
         "ez-selection-editview",
         "ez-selection-table",
@@ -637,12 +633,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-contentinfo-attributes",
             "name": "ez-contentinfo-attributes",
-            "description": "The content info attributes extension. As of 1.6 it is deprecated."
-        },
-        {
-            "displayName": "ez-contentinfo-base",
-            "name": "ez-contentinfo-base",
-            "description": "The content info base extension"
+            "description": "The content info attributes extension"
         },
         {
             "displayName": "ez-contentinfomodel",
@@ -780,11 +771,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the DOM state plugin"
         },
         {
-            "displayName": "ez-draftconflict",
-            "name": "ez-draftconflict",
-            "description": "The draft conflict extension"
-        },
-        {
             "displayName": "ez-editactionbarview",
             "name": "ez-editactionbarview",
             "description": "Provides the Edit Action Bar class"
@@ -793,6 +779,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-editorcontentprocessorbase",
             "name": "ez-editorcontentprocessorbase",
             "description": "Provides the base EditorContentProcessor"
+        },
+        {
+            "displayName": "ez-editorcontentprocessoremptyembed",
+            "name": "ez-editorcontentprocessoremptyembed",
+            "description": "Provides the empty embed EditorContentProcessor"
+        },
+        {
+            "displayName": "ez-editorcontentprocessorremoveanchors",
+            "name": "ez-editorcontentprocessorremoveanchors",
+            "description": "Provides the remove anchors EditorContentProcessor"
         },
         {
             "displayName": "ez-editorcontentprocessorremoveids",
@@ -1175,24 +1171,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the save draft plugin."
         },
         {
-            "displayName": "ez-searchlistview",
-            "name": "ez-searchlistview",
-            "description": "Provides the search list view class"
-        },
-        {
             "displayName": "ez-searchplugin",
             "name": "ez-searchplugin",
             "description": "Provides the search plugin"
-        },
-        {
-            "displayName": "ez-searchview",
-            "name": "ez-searchview",
-            "description": "Provides the search view class"
-        },
-        {
-            "displayName": "ez-searchviewservice'",
-            "name": "ez-searchviewservice'",
-            "description": "Provides the search view service class"
         },
         {
             "displayName": "ez-sectionserversideview",
