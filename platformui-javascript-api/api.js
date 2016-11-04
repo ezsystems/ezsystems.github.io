@@ -62,7 +62,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.ContentEditView",
         "eZ.ContentEditViewService",
         "eZ.ContentInfo",
-        "eZ.ContentInfoAttributes",
+        "eZ.ContentInfoBase",
         "eZ.ContentTree",
         "eZ.ContentType",
         "eZ.ContentTypeEditServerSideView",
@@ -84,6 +84,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.DateEditView",
         "eZ.DiscoveryBarView",
         "eZ.DiscoveryBarViewService",
+        "eZ.DraftConflict",
         "eZ.DraftConflictView",
         "eZ.EditActionBarView",
         "eZ.EditPreviewView",
@@ -95,6 +96,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.EmailAddressEditView",
         "eZ.Expandable",
         "eZ.FieldEditView",
+        "eZ.FieldErrorDetails",
         "eZ.FieldView",
         "eZ.FloatEditView",
         "eZ.FloatView",
@@ -187,6 +189,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.RichTextView",
         "eZ.RoleServerSideView",
         "eZ.RoleServerSideViewService",
+        "eZ.SearchListView",
+        "eZ.SearchView",
+        "eZ.SearchViewService",
         "eZ.SectionServerSideView",
         "eZ.SectionServerSideViewService",
         "eZ.SelectionEditView",
@@ -238,6 +243,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.ViewService",
         "eZ.XmlTextEditView",
         "eZ.XmlTextView",
+        "eZ.draftServerSideValidation",
         "eZ.timeEditView"
     ],
     "modules": [
@@ -279,6 +285,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-contenteditview",
         "ez-contenteditviewservice",
         "ez-contentinfo-attributes",
+        "ez-contentinfo-base",
         "ez-contentinfomodel",
         "ez-contentmodel",
         "ez-contentsetmainlocationplugin",
@@ -306,6 +313,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-discoverybarview",
         "ez-discoverybarviewservice",
         "ez-domstateplugin",
+        "ez-draftconflict",
+        "ez-draftserversidevalidation",
         "ez-editactionbarview",
         "ez-editorcontentprocessorbase",
         "ez-editorcontentprocessoremptyembed",
@@ -386,7 +395,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-richtext-view",
         "ez-roleserversideview",
         "ez-savedraftplugin",
+        "ez-searchlistview",
         "ez-searchplugin",
+        "ez-searchview",
+        "ez-searchviewservice'",
         "ez-sectionserversideview",
         "ez-selection-editview",
         "ez-selection-table",
@@ -633,7 +645,12 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-contentinfo-attributes",
             "name": "ez-contentinfo-attributes",
-            "description": "The content info attributes extension"
+            "description": "The content info attributes extension. As of 1.6 it is deprecated."
+        },
+        {
+            "displayName": "ez-contentinfo-base",
+            "name": "ez-contentinfo-base",
+            "description": "The content info base extension"
         },
         {
             "displayName": "ez-contentinfomodel",
@@ -769,6 +786,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-domstateplugin",
             "name": "ez-domstateplugin",
             "description": "Provides the DOM state plugin"
+        },
+        {
+            "displayName": "ez-draftconflict",
+            "name": "ez-draftconflict",
+            "description": "The draft conflict extension"
+        },
+        {
+            "displayName": "ez-draftserversidevalidation",
+            "name": "ez-draftserversidevalidation",
+            "description": "Provides the draft server side validation extension"
         },
         {
             "displayName": "ez-editactionbarview",
@@ -1171,9 +1198,24 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the save draft plugin."
         },
         {
+            "displayName": "ez-searchlistview",
+            "name": "ez-searchlistview",
+            "description": "Provides the search list view class"
+        },
+        {
             "displayName": "ez-searchplugin",
             "name": "ez-searchplugin",
             "description": "Provides the search plugin"
+        },
+        {
+            "displayName": "ez-searchview",
+            "name": "ez-searchview",
+            "description": "Provides the search view class"
+        },
+        {
+            "displayName": "ez-searchviewservice'",
+            "name": "ez-searchviewservice'",
+            "description": "Provides the search view service class"
         },
         {
             "displayName": "ez-sectionserversideview",
