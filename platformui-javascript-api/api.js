@@ -215,6 +215,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TextBlockEditView",
         "eZ.TextLineEditView",
         "eZ.TranslateActionView",
+        "eZ.Translator",
         "eZ.TrashBarView",
         "eZ.TrashItem",
         "eZ.TrashView",

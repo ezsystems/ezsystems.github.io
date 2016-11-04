@@ -253,6 +253,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -546,10 +547,17 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
 
     /**
      * Register Language Helpers plugin for the Platform UI application. It registers
-     * handlebars helper allowing to get language name based on language code:
+     * handlebars helpers:
      *
-     *   * &#x60;language_name&#x60; is for returning language name based on given language code. It takes the
-     *   language code as an argument
+     *    * &#x60;language_name&#x60; is for returning language name based on given language code. It takes the
+     *    language code as an argument
+     *
+     *    * &#x60;translate_property&#x60; returns the translation of a property. It takes as an argument the property to
+     *    translate as a hash indexed by eZ Locale for example:
+     *    {&#x27;eng-GB&#x27;: &#x27;potatoes&#x27;, &#x27;fre-FR&#x27;: &#x27;pomme de terre&#x27;}
+     *
+     *    * &#x60;translate&#x60; returns a translated message. It takes as an argument the message to translate, the domain
+     *    where the message can be found and the parameters to be applied to the message.
      *
      * @namespace eZ.Plugin
      * @class RegisterLanguageHelpers
@@ -560,6 +568,7 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
         initializer: function () {
             this._registerLanguageName();
             this._registerTranslatedProperty();
+            this._registerTranslate();
         },
 
         /**
@@ -590,6 +599,34 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
             var app = this.get(&#x27;host&#x27;);
 
             Y.Handlebars.registerHelper(&#x27;translate_property&#x27;, Y.bind(app.translateProperty, app, app.get(&#x27;localesMap&#x27;)));
+        },
+
+        /**
+         * Registers the &#x60;translate&#x60; handlebars helper.  The &#x60;translate&#x60; helper
+         * expects a message that can be found in a domain (See Symfony
+         * translation documentation).
+         *
+         * The parameters of the translated message can be provided as named
+         * parameters, for example:
+         *
+         *     {# string.id could be &quot;My Name is %name% and I&#x27;m %age% #}
+         *     {{ translation &#x27;string.id&#x27; &#x27;domain&#x27; name=&quot;John&quot; age=42 }}
+         *
+         * @method _registerTranslate
+         * @protected
+         */
+        _registerTranslate: function () {
+            Y.Handlebars.registerHelper(&#x27;translate&#x27;, function (message, domain, handlebarsData) {
+                var params = {};
+
+                Y.Object.each(handlebarsData.hash, function (value, key) {
+                    params[key] = Y.Handlebars.Utils.escapeExpression(value);
+                });
+
+                return new Y.Handlebars.SafeString(
+                    Y.eZ.Translator.trans(message, params, domain)
+                );
+            });
         },
     }, {
         NS: &#x27;registerLanguageHelpers&#x27;,
