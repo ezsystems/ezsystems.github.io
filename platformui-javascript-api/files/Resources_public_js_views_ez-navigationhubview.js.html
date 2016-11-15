@@ -253,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -296,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -1154,13 +1152,11 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
              * @readOnly
              */
             zones: {
-                valueFn: function () {
-                    return {
-                        &#x27;platform&#x27;:  Y.eZ.trans(&#x27;navigationhub.zone.platform&#x27;, {}, &#x27;editorial&#x27;),
-                        &#x27;studio&#x27;: Y.eZ.trans(&#x27;navigationhub.zone.studio&#x27;, {}, &#x27;editorial&#x27;),
-                        &#x27;studioplus&#x27;: Y.eZ.trans(&#x27;navigationhub.zone.studioplus&#x27;, {}, &#x27;editorial&#x27;),
-                        &#x27;admin&#x27;: Y.eZ.trans(&#x27;navigationhub.zone.admin&#x27;, {}, &#x27;editorial&#x27;),
-                    };
+                value: {
+                    &#x27;platform&#x27;: &#x27;Content&#x27;,
+                    &#x27;studio&#x27;: &#x27;Page&#x27;,
+                    &#x27;studioplus&#x27;: &#x27;Performance&#x27;,
+                    &#x27;admin&#x27;: &#x27;Admin Panel&#x27;,
                 },
                 readOnly: true,
             },
@@ -1273,7 +1269,7 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
              * @type {Object}
              */
             matchedRoute: {},
-
+            
             /**
              * The user profile view
              *
