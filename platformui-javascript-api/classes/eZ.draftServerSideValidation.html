@@ -253,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -296,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -622,10 +620,7 @@
                         <code>response</code>
                 </li>
                 <li class="arg">
-                        <code>(Optional)</code>
-                </li>
-                <li class="arg">
-                        <code>serverSideErrorCallback.serverSideFieldsError</code>
+                        <code class="optional">[serverSideErrorCallback]</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -669,26 +664,28 @@ and call the serverSideErrorCallback with an array of  Y.eZ.FieldErrorDetails</p
 
                 </li>
                 <li class="param">
-                        <code class="param-name">(Optional)</code>
+                        <code class="param-name optional">[serverSideErrorCallback]</code>
                         <span class="type">Function</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
 
 
                     <div class="param-description">
-                        <p>serverSideErrorCallback called on server side validation</p>
+                        <p>called on server side validation</p>
 
                     </div>
 
-                </li>
-                <li class="param">
-                        <code class="param-name">serverSideErrorCallback.serverSideFieldsError</code>
-                        <span class="type">Array</span>
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">serverSideFieldsError</code>
+                                    <span class="type">Array</span>
 
+                                <div class="param-description">
+                                    <p>Array of Y.eZ.FieldErrorDetails</p>
 
-                    <div class="param-description">
-                        <p>Array of Y.eZ.FieldErrorDetails</p>
+                                </div>
 
-                    </div>
-
+                            </li>
+                        </ul>
                 </li>
             </ul>
         </div>

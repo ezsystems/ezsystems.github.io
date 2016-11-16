@@ -253,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -296,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -561,13 +559,14 @@ YUI.add(&#x27;ez-draftserversidevalidation&#x27;, function (Y) {
          *
          * @method _parseServerFieldsErrors
          * @param {Response} response
-         * @param {Function} (Optional) serverSideErrorCallback called on server side validation
+         * @param {Function} [serverSideErrorCallback] called on server side validation
          * @param {Array} serverSideErrorCallback.serverSideFieldsError Array of Y.eZ.FieldErrorDetails
          * @protected
          */
         _parseServerFieldsErrors: function (response, serverSideErrorCallback) {
             var serverSideFieldsError = [],
-                fieldsError = response.document.ErrorMessage.errorDetails.fields;
+                error = response.document.ErrorMessage,
+                fieldsError = error.errorDetails ?  error.errorDetails.fields : [];
 
             if (serverSideErrorCallback) {
                 fieldsError.forEach(function (field) {
