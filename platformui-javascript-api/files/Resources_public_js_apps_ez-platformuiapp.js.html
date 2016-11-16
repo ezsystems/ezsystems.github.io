@@ -253,6 +253,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +296,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -685,6 +687,7 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
             this.on(&quot;logOut&quot;, this._destroySideViews);
             this.on(&quot;*:refreshView&quot;, this._refreshView);
             this._dispatchConfig();
+            Y.eZ.Translator.setPreferredLanguages(this.get(&#x27;interfaceLanguages&#x27;));
             /**
              * Stores the initial title of the page so it can be used when
              * generating the title depending on the active view
@@ -849,6 +852,10 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
                 this._set(&#x27;systemLanguageList&#x27;, systemLanguageList);
                 this._set(&#x27;contentCreationDefaultLanguageCode&#x27;, defaultLanguageCode);
                 delete config.languages;
+            }
+            if ( config.interfaceLanguages ) {
+                this._set(&#x27;interfaceLanguages&#x27;, config.interfaceLanguages);
+                delete config.interfaceLanguages;
             }
         },
 
@@ -1697,6 +1704,20 @@ YUI.add(&#x27;ez-platformuiapp&#x27;, function (Y) {
             localesMap: {
                 readOnly: true,
                 value: {},
+            },
+
+            /**
+             * List of preferred languages in which the interface should be
+             * translated.
+             *
+             * @attribute interfaceLanguages
+             * @readOnly
+             * @default [&#x27;en&#x27;]
+             * @type {Array}
+             */
+            interfaceLanguages: {
+                readOnly: true,
+                value: [&#x27;en&#x27;],
             },
             
             /**

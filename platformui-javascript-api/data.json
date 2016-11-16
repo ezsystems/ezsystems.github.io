@@ -2625,6 +2625,17 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/services/ez-translator.js": {
+            "name": "Resources/public/js/services/ez-translator.js",
+            "modules": {},
+            "classes": {
+                "eZ.Translator": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js": {
             "name": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
             "modules": {
@@ -2775,7 +2786,9 @@
         },
         "Resources/public/js/alloyeditor/buttons/embedhref.js": {
             "name": "Resources/public/js/alloyeditor/buttons/embedhref.js",
-            "modules": {},
+            "modules": {
+                "ez-alloyeditor-button-remove": 1
+            },
             "classes": {
                 "eZ.AlloyEditorButton.ButtonEmbedHref": 1
             },
@@ -2844,7 +2857,7 @@
         "Resources/public/js/alloyeditor/buttons/imagevariation.js": {
             "name": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
             "modules": {
-                "ez-alloyeditor-button-remove": 1
+                "ez-alloyeditor-button-imagevariation": 1
             },
             "classes": {
                 "eZ.AlloyEditorButton.ButtonImageVariation": 1
@@ -6064,15 +6077,16 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.PluginRegistry": 1
+                "eZ.PluginRegistry": 1,
+                "eZ.Translator": 1
             },
             "fors": {},
             "namespaces": {
                 "eZ": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/services/ez-pluginregistry.js",
-            "line": 10,
+            "file": "Resources/public/js/services/ez-translator.js",
+            "line": 13,
             "description": "Provides the plugin registry"
         },
         "ez-alloyeditor-button-mixin-blocktextalign": {
@@ -6161,26 +6175,16 @@
             "elements": {},
             "classes": {
                 "eZ.AlloyEditorButton.ButtonBlockRemove": 1,
-                "eZ.AlloyEditorButton.ButtonEmbedHref": 1,
-                "eZ.AlloyEditorButton.ButtonImageVariation": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
-                "CKEDITOR.plugins.ezaddcontent": 1,
-                "CKEDITOR.plugins.ezembed": 1,
-                "CKEDITOR.plugins.ezfocusblock": 1,
-                "CKEDITOR.plugins.ezpaste": 1,
-                "CKEDITOR.plugins.ezremoveblock": 1,
-                "CKEDITOR.plugins.yui3": 1
+                "eZ.AlloyEditorButton.ButtonEmbedHref": 1
             },
             "fors": {},
             "namespaces": {
-                "eZ.AlloyEditorButton": 1,
-                "CKEDITOR.plugins": 1
+                "eZ.AlloyEditorButton": 1
             },
             "tag": "module",
-            "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
-            "line": 24,
-            "description": "Provides the image variation drop down"
+            "file": "Resources/public/js/alloyeditor/buttons/embedhref.js",
+            "line": 23,
+            "description": "Provides the embedhref href button"
         },
         "ez-alloyeditor-button-blocktextaligncenter": {
             "name": "ez-alloyeditor-button-blocktextaligncenter",
@@ -6297,6 +6301,31 @@
             "file": "Resources/public/js/alloyeditor/buttons/imagehref.js",
             "line": 23,
             "description": "Provides the ezimagehref button"
+        },
+        "ez-alloyeditor-button-imagevariation": {
+            "name": "ez-alloyeditor-button-imagevariation",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonImageVariation": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
+                "CKEDITOR.plugins.ezaddcontent": 1,
+                "CKEDITOR.plugins.ezembed": 1,
+                "CKEDITOR.plugins.ezfocusblock": 1,
+                "CKEDITOR.plugins.ezpaste": 1,
+                "CKEDITOR.plugins.ezremoveblock": 1,
+                "CKEDITOR.plugins.yui3": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1,
+                "CKEDITOR.plugins": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
+            "line": 24,
+            "description": "Provides the image variation drop down"
         },
         "ez-editorcontentprocessorbase": {
             "name": "ez-editorcontentprocessorbase",
@@ -6567,7 +6596,7 @@
             "namespace": "eZ.Plugin",
             "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
             "line": 14,
-            "description": "Register Language Helpers plugin for the Platform UI application. It registers\nhandlebars helper allowing to get language name based on language code:\n\n  * `language_name` is for returning language name based on given language code. It takes the\n  language code as an argument",
+            "description": "Register Language Helpers plugin for the Platform UI application. It registers\nhandlebars helpers:\n\n   * `language_name` is for returning language name based on given language code. It takes the\n   language code as an argument\n\n   * `translate_property` returns the translation of a property. It takes as an argument the property to\n   translate as a hash indexed by eZ Locale for example:\n   {'eng-GB': 'potatoes', 'fre-FR': 'pomme de terre'}\n\n   * `translate` returns a translated message. It takes as an argument the message to translate, the domain\n   where the message can be found and the parameters to be applied to the message.",
             "is_constructor": 1,
             "extends": "Plugin.Base"
         },
@@ -9755,6 +9784,20 @@
             "line": 10,
             "description": "Plugin registry. It allows to register plugins by component."
         },
+        "eZ.Translator": {
+            "name": "eZ.Translator",
+            "shortname": "eZ.Translator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-pluginregistry",
+            "namespace": "eZ",
+            "file": "Resources/public/js/services/ez-translator.js",
+            "line": 13,
+            "description": "Translator *static* object."
+        },
         "eZ.AlloyEditorButton.ButtonBlockTextAlign": {
             "name": "eZ.AlloyEditorButton.ButtonBlockTextAlign",
             "shortname": "eZ.AlloyEditorButton.ButtonBlockTextAlign",
@@ -10078,7 +10121,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
             "line": 23,
@@ -10095,7 +10138,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 17,
@@ -10113,7 +10156,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 17,
@@ -10131,7 +10174,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
             "line": 97,
@@ -10146,7 +10189,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 16,
@@ -10161,7 +10204,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/focusblock.js",
             "line": 74,
@@ -10176,7 +10219,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/paste.js",
             "line": 63,
@@ -10191,7 +10234,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
             "line": 94,
@@ -10206,7 +10249,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
@@ -10537,7 +10580,7 @@
         },
         {
             "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
-            "line": 32,
+            "line": 40,
             "description": "Registers the `language_name` handlebars helper. The `language_name` helper expects the\nargument to be a language code. It will return language name from the language object\nin app's systemLanguageList. If language with given language code won't be found in\nsystemLanguageList then language code is returned.",
             "itemtype": "method",
             "name": "_registerLanguageName",
@@ -10549,10 +10592,22 @@
         },
         {
             "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
-            "line": 47,
+            "line": 55,
             "description": "Registers the `translate_property` handlebars helper. The\n`translate_property` helper expects a hash indexed by eZ Locale\n('eng-GB', 'fre-FR', ...) and will try to pick the best one according\nto the browser languages configuration.",
             "itemtype": "method",
             "name": "_registerTranslatedProperty",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.Plugin.RegisterLanguageHelpers",
+            "module": "ez-registerlanguagehelpersplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/apps/plugins/ez-registerlanguagehelpersplugin.js",
+            "line": 70,
+            "description": "Registers the `translate` handlebars helper.  The `translate` helper\nexpects a message that can be found in a domain (See Symfony\ntranslation documentation).\n\nThe parameters of the translated message can be provided as named\nparameters, for example:\n\n    {# string.id could be \"My Name is %name% and I'm %age% #}\n    {{ translation 'string.id' 'domain' name=\"John\" age=42 }}",
+            "itemtype": "method",
+            "name": "_registerTranslate",
             "access": "protected",
             "tagname": "",
             "class": "eZ.Plugin.RegisterLanguageHelpers",
@@ -10646,7 +10701,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 155,
+            "line": 156,
             "description": "Stores the initial title of the page so it can be used when\ngenerating the title depending on the active view",
             "itemtype": "property",
             "name": "_initialTitle",
@@ -10659,7 +10714,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 191,
+            "line": 192,
             "description": "Prevent hash changes by setting the old hash on hashChange event",
             "itemtype": "method",
             "name": "_preventHashChange",
@@ -10671,7 +10726,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 208,
+            "line": 209,
             "description": "Allows hash changes by detaching hashChange subscription",
             "itemtype": "method",
             "name": "_allowHashChange",
@@ -10683,7 +10738,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 218,
+            "line": 219,
             "description": "Disable routing by deleting the callbacks of the routes",
             "itemtype": "method",
             "name": "_disableRouting",
@@ -10695,7 +10750,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 231,
+            "line": 232,
             "description": "Enables routing by setting back the callbacks to the routes",
             "itemtype": "method",
             "name": "_enableRouting",
@@ -10707,7 +10762,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 243,
+            "line": 244,
             "description": "Destroy properly every side view.",
             "itemtype": "method",
             "name": "_destroySideViews",
@@ -10719,7 +10774,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 262,
+            "line": 263,
             "description": "Refreshes the current view",
             "itemtype": "method",
             "name": "_refreshView",
@@ -10731,7 +10786,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 272,
+            "line": 273,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -10743,7 +10798,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 322,
+            "line": 327,
             "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
             "itemtype": "method",
             "name": "getLanguageName",
@@ -10765,7 +10820,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 341,
+            "line": 346,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -10792,7 +10847,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 373,
+            "line": 378,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -10815,7 +10870,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 384,
+            "line": 389,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -10849,7 +10904,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 424,
+            "line": 429,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -10878,7 +10933,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 435,
+            "line": 440,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -10888,7 +10943,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 448,
+            "line": 453,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -10918,7 +10973,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 478,
+            "line": 483,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -10945,7 +11000,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 495,
+            "line": 500,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitly\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -10972,7 +11027,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 522,
+            "line": 527,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -10999,7 +11054,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 544,
+            "line": 549,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -11016,7 +11071,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 554,
+            "line": 559,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -11055,7 +11110,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 619,
+            "line": 624,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -11074,7 +11129,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 637,
+            "line": 642,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -11098,7 +11153,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 659,
+            "line": 664,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -11125,7 +11180,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 695,
+            "line": 700,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -11152,7 +11207,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 764,
+            "line": 769,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -11171,7 +11226,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 780,
+            "line": 785,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -11190,7 +11245,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 821,
+            "line": 826,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -11209,7 +11264,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 839,
+            "line": 844,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -11219,7 +11274,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1026,
+            "line": 1031,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -11231,7 +11286,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1038,
+            "line": 1043,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -11244,7 +11299,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1051,
+            "line": 1056,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -11257,7 +11312,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1064,
+            "line": 1069,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -11269,7 +11324,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1077,
+            "line": 1082,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -11283,7 +11338,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1091,
+            "line": 1096,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -11295,7 +11350,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1105,
+            "line": 1110,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -11307,7 +11362,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1116,
+            "line": 1121,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -11319,7 +11374,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1128,
+            "line": 1133,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -11332,7 +11387,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1142,
+            "line": 1147,
             "description": "Default language code, as defined by the current siteaccess language config.",
             "itemtype": "attribute",
             "name": "contentCreationDefaultLanguageCode",
@@ -11345,7 +11400,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1155,
+            "line": 1160,
             "description": "Holds the Locales conversion map between eZ Locale codes and\nPOSIX ones. See locale.yml",
             "itemtype": "attribute",
             "name": "localesMap",
@@ -11358,7 +11413,20 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1169,
+            "line": 1174,
+            "description": "List of preferred languages in which the interface should be\ntranslated.",
+            "itemtype": "attribute",
+            "name": "interfaceLanguages",
+            "readonly": "",
+            "default": "['en']",
+            "type": "{Array}",
+            "class": "eZ.PlatformUIApp",
+            "module": "ez-platformuiapp",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/apps/ez-platformuiapp.js",
+            "line": 1188,
             "description": "Boolean that determine if the app routing is enabled",
             "itemtype": "attribute",
             "name": "routingEnabled",
@@ -32958,7 +33026,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 631,
+            "line": 633,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the platform zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -32970,7 +33038,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 647,
+            "line": 649,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studio zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -32982,7 +33050,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 663,
+            "line": 665,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the admin zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -32994,7 +33062,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 679,
+            "line": 681,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studioplus zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -33006,7 +33074,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 695,
+            "line": 697,
             "description": "Contains the identifier ('platform', 'studio', ...) of the\ncurrently active navigation. When set, this attribute updates the\n`_navigationMenu` property with the corresponding Node",
             "itemtype": "attribute",
             "name": "activeNavigation",
@@ -33019,7 +33087,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 710,
+            "line": 712,
             "description": "Whether the navigation is in fixed more or not",
             "itemtype": "attribute",
             "name": "navigationFixed",
@@ -33031,7 +33099,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 721,
+            "line": 723,
             "description": "The currently authenticated user",
             "itemtype": "attribute",
             "name": "user",
@@ -33043,7 +33111,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 730,
+            "line": 732,
             "description": "The matched route provided by the navigation hub view service. It\nused to detect which navigaiton item should be selected and it is\nupdated after each page change.",
             "itemtype": "attribute",
             "name": "matchedRoute",
@@ -33054,7 +33122,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 740,
+            "line": 742,
             "description": "The user profile view",
             "itemtype": "attribute",
             "name": "userProfileView",
@@ -33065,7 +33133,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 754,
+            "line": 756,
             "description": "Stores the user's avatar image",
             "itemtype": "attribute",
             "name": "userAvatar",
@@ -40489,6 +40557,76 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/services/ez-translator.js",
+            "line": 20,
+            "description": "Sets the preferred languages to use to translate the strings.",
+            "itemtype": "method",
+            "name": "setPreferredLanguages",
+            "static": 1,
+            "params": [
+                {
+                    "name": "languages",
+                    "description": "array of language codes",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.Translator",
+            "module": "ez-pluginregistry",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/services/ez-translator.js",
+            "line": 32,
+            "description": "Translates the given key from the domain with the given parameters.\n\n** /!\\ Use the shortcut `Y.eZ.trans` so that translation keys are\nrecognized and dumped by `translation:update`.**",
+            "itemtype": "method",
+            "name": "trans",
+            "params": [
+                {
+                    "name": "String",
+                    "description": "key message to be translated"
+                },
+                {
+                    "name": "Object",
+                    "description": "parameters to be applied to the message"
+                },
+                {
+                    "name": "String",
+                    "description": "domain where the translation can be found"
+                }
+            ],
+            "static": 1,
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.Translator",
+            "module": "ez-pluginregistry",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/services/ez-translator.js",
+            "line": 57,
+            "description": "Shortcut to `Y.eZ.Translator.trans`",
+            "params": [
+                {
+                    "name": "String",
+                    "description": "key message to be translated"
+                },
+                {
+                    "name": "Object",
+                    "description": "parameters to be applied to the message"
+                },
+                {
+                    "name": "String",
+                    "description": "domain where the translation can be found"
+                }
+            ],
+            "itemtype": "method",
+            "name": "trans",
+            "static": 1,
+            "class": "eZ.Translator",
+            "module": "ez-pluginregistry",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
             "line": 30,
             "description": "The editor instance where the component is being used.",
@@ -40974,7 +41112,7 @@
                 }
             ],
             "class": "eZ.AlloyEditorButton.ButtonImageVariation",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -40987,7 +41125,7 @@
                 "description": "Array"
             },
             "class": "eZ.AlloyEditorButton.ButtonImageVariation",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -40999,7 +41137,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -41011,7 +41149,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -41023,7 +41161,7 @@
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -41045,7 +41183,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -41055,7 +41193,7 @@
             "itemtype": "method",
             "name": "insert",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41065,7 +41203,7 @@
             "itemtype": "method",
             "name": "edit",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41077,7 +41215,7 @@
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41089,7 +41227,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41108,7 +41246,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41125,7 +41263,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41137,7 +41275,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41147,7 +41285,7 @@
             "itemtype": "method",
             "name": "unsetAlignment",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41168,7 +41306,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41182,7 +41320,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41196,7 +41334,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41217,7 +41355,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41231,7 +41369,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41252,7 +41390,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41278,7 +41416,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41292,7 +41430,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41313,7 +41451,7 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41329,7 +41467,7 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41348,7 +41486,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41364,7 +41502,7 @@
                 "type": "Object"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41387,7 +41525,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41415,7 +41553,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41439,7 +41577,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41468,7 +41606,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -41492,7 +41630,7 @@
             "itemtype": "method",
             "name": "_changeFocus",
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-remove",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
