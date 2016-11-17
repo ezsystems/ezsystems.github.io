@@ -1,19 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900);
-@import url(https://fonts.googleapis.com/css?family=Quantico);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
+html {
+	font-size: 16px;
+}
 body {
 	position: relative;
+	font-family: 'Maven Pro', sans-serif;
 }
 .font-header {
-	font-family: 'Maven Pro', sans-serif;
 	font-weight: 700;
 }
-p {
-	font-size: 1.25em;
-	font-family: Helvetica, Arial, sans-serif;
-}
+
 .regular {
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 /*=== Navbar ===*/
@@ -26,10 +27,8 @@ p {
 }
 .navbar h2 {
 	line-height: .5em;
-	font-family: 'Maven Pro', sans-serif;
 }
 .ui-header {
-	font-family: 'Maven Pro', sans-serif;
 	position: relative;
 	padding: 2em 0;
 	background-color: #FF883E;
@@ -136,13 +135,8 @@ p {
 	font-weight: 700;
 	text-decoration: underline;
 }
-.code {
-	padding: 2px 4px;
-	font-size: 1em;
-	color: #e94b10;
+.label-code {
 	background-color: #fce3da;
-	border-radius: 4px;
-	font-family: 'Quantico', sans-serif;
 }
 .header-black {
 	font-weight: bold;
@@ -165,8 +159,58 @@ pre {
 	font-size: 1em;
 	font-weight: bold;
 }
-/*==== HELPERS ====*/
-.top-half-extra {margin-top: 2em;}
-.top-extra {margin-top: 4em;}
-.top-low {margin-top: 1.5em;}
-.bottom-half-extra {margin-bottom: 1.5em;}
+.btn {
+	display: none;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background-color: transparent;
+	font-size: .85em;
+	cursor: pointer;
+}
+.color-box p {
+	margin-top: 1.75em;
+}
+.color-box:hover .btn {
+	display: block;
+	margin-left: -.25em;
+	color: #fff;
+}
+.color-box:hover .btn-dark {
+	color: #333;
+}
+.color-box:hover .label-code {
+	display: none;
+}
+
+/*==== UTILITIES ====*/
+.u-move-down-big {
+	margin-top: 4em;
+}
+.u-move-down-xlarge {
+	margin-top: 2em;
+}
+.u-move-down-large {
+	margin-top: 1.5em;
+}
+.u-move-down {
+	margin-top: 1em;
+}
+.u-space-bottom-large {
+	margin-bottom: 1.5em;
+}
+.u-move-left-xlarge {
+	margin-left: 2em;
+}
+.u-move-up-xlarge {
+	margin-top: -2em;
+}
+.u-move-up {
+	margin-top: -1em;
+}
+.u-move-up-small {
+	margin-top: -.75em;
+}
+.u-move-up-xsmall {
+	margin-top: -.5em;
+}

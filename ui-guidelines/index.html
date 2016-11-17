@@ -5,6 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE-edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="eZ Systems" content="UI Guidelines">
+		<meta name="author" content="eZ Systems">
+		<meta name="copyright" content="eZ Systems">
+		<meta name="generator" content="UI Guidelines">
+		<meta name="description" content="eZ Systems is an open source content management system (CMS) provider that helps enterprises deliver digital experiences.">
+		<meta name="keywords" content="eZ Systems UI Guidelines, User Experience Management Platform, Enterprise content management system, Web style guides, cms style guidelines, open source cms, Web content management, content management software, website content management, php, php content management">
+
+		<title>UI Guidelines - eZ Systems</title>
+		<link rel="Shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
 		<!-- jQuery -->
 		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
@@ -17,10 +25,14 @@
 
 		<!-- Custom css & js-->
 		<link rel="stylesheet" href="css/guidelines.css">
+		<link rel="stylesheet" href="css/resources.css">
 
 		<!-- Prism - Code snippets -->
 		<link href="css/prism.css" rel="stylesheet">
 		<script src="js/prism.js" data-default-language="markup"></script>
+
+		<!-- Copy to Clipboard.js -->
+		<script type="text/javascript" src="js/clipboard.min.js"></script>
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -31,7 +43,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 		    		<a class="navbar-brand" href="#">
-		        		<img alt="Brand" src="images/eZ-Logo.svg">
+		        		<img alt="Brand" src="img/eZ-Logo.svg">
 		      		</a>
 		    	</div>
 		    	<div>
@@ -45,9 +57,9 @@
 				<div class="row">
 					<div class="col-md-offset-1 col-md-10 header">
 						<h1>eZ System's User Interface Guidelines</h1>
-						<p class="header top-low">This is a resource for designers, product managers, and developers, providing a unified language. We use it to simplify the way people interact with content, offering a consistent interface across our CMS.</p>
-						<p class="header top-low">eZ’s UI Guidelines provides a simplified and recognizable experience; increases our productivity, enabling us to evolve faster; and it allows us to develop collectively.</p>
-						<p class="header top-low bottom-half-extra">This is an open source project, you can directly impact its evolution by filling issues and submitting pull requests. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</p>
+						<p class="header u-move-down-large">This is a resource for designers, product managers, and developers, providing a unified language. We use it to simplify the way people interact with content, offering a consistent interface across our CMS.</p>
+						<p class="header u-move-down-large">eZ’s UI Guidelines provides a simplified and recognizable experience; increases our productivity, enabling us to evolve faster; and it allows us to develop collectively.</p>
+						<p class="header u-move-down-large u-space-bottom-large">This is an open source project, you can directly impact its evolution by filling issues and submitting pull requests. This is as much your tool as it is ours, and we look forward to collaborating with developers and partners on making it even better.</p>
 					</div>
 				</div>
 			</div>
@@ -100,7 +112,7 @@
 
 						<div id="components-item1" class="modules">
 							<h3 class="module-header">ITEM 1</h3>
-							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<div class="well"><code class="label-code">Item 1</code> component's definition here</div>
 							<h5 class="header-black">REQUIREMENTS</h5>
 							<div class="panel panel-default">
 								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
@@ -115,7 +127,7 @@
 								</div>
 							</div>
 							<div class="code-samples">
-								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<h5 class="header-black u-move-down-big">SPECIFICATIONS</h5>
 								<p class="regular">Explanation text of what are we going to get with this component.</p>
 								<p class="regular">General UI specifications of the components within the layout.</p>
 								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
@@ -133,7 +145,7 @@
 
 						<div id="components-item2" class="modules">
 							<h3 class="module-header">ITEM 2</h3>
-							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<div class="well"><code class="label-code">Item 2</code> component's definition here</div>
 							<h5 class="header-black">REQUIREMENTS</h5>
 							<div class="panel panel-default">
 								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
@@ -148,7 +160,7 @@
 								</div>
 							</div>
 							<div class="code-samples">
-								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<h5 class="header-black u-move-down-big">SPECIFICATIONS</h5>
 								<p class="regular">Explanation text of what are we going to get with this component.</p>
 								<p class="regular">General UI specifications of the components within the layout.</p>
 								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
@@ -166,7 +178,7 @@
 
 						<div id="components-item3" class="modules">
 							<h3 class="module-header">ITEM 3</h3>
-							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<div class="well"><code class="label-code">Item 3</code> component's definition here</div>
 							<h5 class="header-black">REQUIREMENTS</h5>
 							<div class="panel panel-default">
 								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
@@ -181,7 +193,7 @@
 								</div>
 							</div>
 							<div class="code-samples">
-								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<h5 class="header-black u-move-down-big">SPECIFICATIONS</h5>
 								<p class="regular">Explanation text of what are we going to get with this component.</p>
 								<p class="regular">General UI specifications of the components within the layout.</p>
 								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
@@ -199,7 +211,7 @@
 
 						<div id="components-item4" class="modules">
 							<h3 class="module-header">ITEM 4</h3>
-							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<div class="well"><code class="label-code">Item 4</code> component's definition here</div>
 							<h5 class="header-black">REQUIREMENTS</h5>
 							<div class="panel panel-default">
 								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
@@ -214,7 +226,7 @@
 								</div>
 							</div>
 							<div class="code-samples">
-								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<h5 class="header-black u-move-down-big">SPECIFICATIONS</h5>
 								<p class="regular">Explanation text of what are we going to get with this component.</p>
 								<p class="regular">General UI specifications of the components within the layout.</p>
 								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
@@ -232,7 +244,7 @@
 
 						<div id="components-item5" class="modules">
 							<h3 class="module-header">ITEM 5</h3>
-							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<div class="well"><code class="label-code">Item 5</code> component's definition here</div>
 							<h5 class="header-black">REQUIREMENTS</h5>
 							<div class="panel panel-default">
 								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
@@ -247,7 +259,7 @@
 								</div>
 							</div>
 							<div class="code-samples">
-								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<h5 class="header-black u-move-down-big">SPECIFICATIONS</h5>
 								<p class="regular">Explanation text of what are we going to get with this component.</p>
 								<p class="regular">General UI specifications of the components within the layout.</p>
 								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
@@ -265,7 +277,7 @@
 
 						<div id="components-item6" class="modules">
 							<h3 class="module-header">ITEM 6</h3>
-							<div class="well"><span class="code">Item 1</span> component's definition here</div>
+							<div class="well"><code class="label-code">Item 6</code> component's definition here</div>
 							<h5 class="header-black">REQUIREMENTS</h5>
 							<div class="panel panel-default">
 								<div class="panel-heading"><strong>For -> </strong><span class="heading-text">Products that can integrate this feature</span></div>
@@ -280,7 +292,7 @@
 								</div>
 							</div>
 							<div class="code-samples">
-								<h5 class="header-black top-extra">SPECIFICATIONS</h5>
+								<h5 class="header-black u-move-down-big">SPECIFICATIONS</h5>
 								<p class="regular">Explanation text of what are we going to get with this component.</p>
 								<p class="regular">General UI specifications of the components within the layout.</p>
 								<p class="regular">More specifications about the components, as well as explanations about the UI/Usability considerations regarding this component.</p>
@@ -300,14 +312,406 @@
 
 					<div id="resources" class="content-section">
 						<h2 class="font-header">Resources</h2>
-						<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
-						<div id="resources-itemA" class="modules">
-							<h4 class="module-header">ITEM A</h4>
-							<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
+	
+						<div id="resources-typography" class="modules">
+							<h3 class="module-header">Typography</h3>
+							<p>We target styling font-sizes with classes. This is to reduce the number of style collisions across views. Elements can inherit styles from <code class="label-code">.text-x-medium</code> or otherwise applied directly.</p>
+							<p><strong>Typographic elements do not come with any other styling properties attached</strong> to them in order to emphasize modularity and make them more flexible in where they can be used. If you need to add more styling properties don’t forget to look for any other component before.</p>
+							<h4 class="u-move-down-xlarge">Type Weights</h4>
+							<div class="typography-weights left-one u-move-down text-center">
+								<div class="weight-sample">
+									<p class="big-letter light">A</p>
+									<p class="u-move-up-xlarge">REGULAR (300)</p>
+								</div>
+								<div class="weight-sample">
+									<p class="big-letter normal">A</p>
+									<p class="u-move-up-xlarge">MEDIUM (500)</p>
+								</div>
+								<div class="weight-sample">
+									<p class="big-letter medium">A</p>
+									<p class="u-move-up-xlarge">SEMI-BOLD (600)</p>
+								</div>
+								<div class="weight-sample">
+									<p class="big-letter bold">A</p>
+									<p class="u-move-up-xlarge">BOLD (700)</p>
+								</div>
+							</div>	
+							<h4 class="u-move-down-xlarge">Type Sizes</h4>
+							<p>We use different type sizes and weights to define a layout composition.</p>
+							<div class="typography u-move-left-xlarge u-space-top">
+								<h1>eZ is an open source content management system</h1>
+								<p class="u-move-up-xsmall"><code class="label-code">h1</code><span class="text-size">2.5em</span></p>
+								<h2>eZ is an open source content management system</h2>
+								<p class="u-move-up-xsmall"><code class="label-code">h2</code><span class="text-size">2em</span></p>
+								<h3>eZ is an open source content management system</h3>
+								<p class="u-move-up-xsmall"><code class="label-code">h3</code><span class="text-size">1.75em</span></p>
+								<h4>eZ is an open source content management system</h4>
+								<p class="u-move-up-xsmall"><code class="label-code">h4</code><span class="text-size">1.5em</span></p>
+								<h5>eZ is an open source content management system</h5>
+								<p class="u-move-up-xsmall"><code class="label-code">h5</code><span class="text-size">1.25em</span></p>
+								<h6>eZ is an open source content management system</h6>
+								<p class="u-move-up-xsmall"><code class="label-code">h6</code><span class="text-size">1em</span></p>
+
+								<p class="u-move-down text-x-huge">eZ is an open source content management system</p>
+								<p class="u-move-up"><code class="label-code">.text-x-huge</code><span class="text-size">2.5rem</span></p>
+								<p class="u-move-down text-huge">eZ is an open source content management system</p>
+								<p class="u-move-up-small"><code class="label-code">.text-huge</code><span class="text-size">1.875rem</span></p>
+								<p class="u-move-down text-xx-large">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-xx-large</code><span class="text-size">1.4rem</span></p>
+								<p class="u-move-down-large text-x-large">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-x-large</code><span class="text-size">1.133rem</span></p>
+								<p class="u-move-down-large text-large">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-large</code><span class="text-size">1.1rem</span></p>
+								<p class="u-move-down-large text-xx-medium">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-xx-medium</code><span class="text-size">1.066rem</span></p>
+								<p class="u-move-down-large text-x-medium">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-x-medium</code><span class="text-size">1rem</span></p>
+								<p class="u-move-down-large text-medium">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-medium</code><span class="text-size">.933rem</span></p>
+								<p class="u-move-down-large text-small">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-small</code><span class="text-size">.9rem</span></p>
+								<p class="u-move-down-large text-x-small">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-x-small</code><span class="text-size">.866rem</span></p>
+								<p class="u-move-down-large text-xx-small">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-xx-small</code><span class="text-size">8.5rem</span></p>
+								<p class="u-move-down-large text-minimum">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-minimum</code><span class="text-size">.8rem</span></p>
+								<p class="u-move-down-large text-x-minimum">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-x-minimum</code><span class="text-size">.75rem</span></p>
+								<p class="u-move-down-large text-xx-minimum">eZ is an open source content management system</p>
+								<p class="u-move-up-xsmall"><code class="label-code">.text-xx-minimum</code><span class="text-size">.625rem</span></p>
+							</div>
 						</div>
-						<div id="resources-itemB" class="modules">
-							<h4 class="module-header">ITEM B</h4>
-							<p>Hella gluten-free pop-up sriracha cred vegan. Kombucha tousled banjo 8-bit heirloom humblebrag. Umami kickstarter next level freegan, flannel humblebrag letterpress raw denim heirloom twee. Chicharrones knausgaard occupy tacos food truck trust fund, poutine yr you probably haven't heard of them cornhole. Hella mustache kogi, kinfolk YOLO 3 wolf moon freegan biodiesel. Etsy portland post-ironic, farm-to-table letterpress franzen cold-pressed salvia hella trust fund mlkshk pug bitters craft beer. Microdosing stumptown schlitz cliche, deep v tofu hashtag mumblecore chia jean shorts skateboard 3 wolf moon flexitarian aesthetic.</p>
+						<div id="resources-colors" class="modules">
+							<h3 class="module-header">UI Colors</h3>
+							<h4 class="u-move-down-xlarge">Primary colors</h4>
+							<hr>
+							<div class="color-row">
+								<div class="color-group">
+									<div class="color-box clr-primary">
+										<button class="btn" data-clipboard-text="#ff7543">Copy #ff7543</button>
+										<p class="text-center"><code class="label-code">#ff7543</code></p>
+									</div>
+									<p class="color-label">Primary</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-primary-hover">
+										<button class="btn" data-clipboard-text="#f15a10">Copy #f15a10</button>
+										<p class="text-center"><code class="label-code">#f15a10</code></p>
+									</div>
+									<p class="color-label">Primary<br>hover</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-secondary">
+										<button class="btn" data-clipboard-text="#2b84b1">Copy #2b84b1</button>
+										<p class="text-center"><code class="label-code">#2b84b1</code></p>
+									</div>
+									<p class="color-label">Secondary</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-secondary-hover">
+										<button class="btn" data-clipboard-text="#006094">Copy #006094</button>
+										<p class="text-center"><code class="label-code">#006094</code></p>
+									</div>
+									<p class="color-label">Secondary<br>hover</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-neutral">
+										<button class="btn" data-clipboard-text="#9b9b9b">Copy #9b9b9b</button>
+										<p class="text-center"><code class="label-code">#9b9b9b</code></p>
+									</div>
+									<p class="color-label">Neutral</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-neutral-hover">
+										<button class="btn" data-clipboard-text="#667076">Copy #667076</button>
+										<p class="text-center"><code class="label-code">#667076</code></p>
+									</div>
+									<p class="color-label">Neutral<br>hover</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-negative">
+										<button class="btn" data-clipboard-text="#e85365">Copy #e85365</button>
+										<p class="text-center"><code class="label-code">#e85365</code></p>
+									</div>
+									<p class="color-label">Negative<br>enabled</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-negative-hover">
+										<button class="btn" data-clipboard-text="#d92d42">Copy #d92d42</button>
+										<p class="text-center"><code class="label-code">#d92d42</code></p>
+									</div>
+									<p class="color-label">Negative<br>hover</p>
+								</div>
+							</div>
+							<h4>Secondary colors</h4>
+							<hr>
+							<div class="color-row">
+								<div class="color-group">
+									<div class="color-box clr-action-bar">
+										<button class="btn" data-clipboard-text="#106d95">Copy #106d95</button>
+										<p class="text-center"><code class="label-code">#106d95</code></p>
+									</div>
+									<p class="color-label">Action bar<br>background</p>
+								</div>
+								<div class="color-group color-group-bottom">
+									<div class="color-box clr-action-bar-line">
+										<button class="btn" data-clipboard-text="#7aaabe">Copy #7aaabe</button>
+										<p class="text-center"><code class="label-code">#7aaabe</code></p>
+									</div>
+									<p class="color-label">Action bar<br>lines &#38; selected<br>preview</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-general-bar">
+										<button class="btn" data-clipboard-text="#667076">Copy #667076</button>
+										<p class="text-center"><code class="label-code">#667076</code></p>
+									</div>
+									<p class="color-label">General bar<br>background</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-general-bar-line">
+										<button class="btn btn-dark" data-clipboard-text="#bbb">Copy #bbb</button>
+										<p class="text-center"><code class="label-code">#bbb</code></p>
+									</div>
+									<p class="color-label">General bar<br>lines</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-action-bar-preview">
+										<button class="btn" data-clipboard-text="#185068">Copy #185068</button>
+										<p class="text-center"><code class="label-code">#185068</code></p>
+									</div>
+									<p class="color-label">Action bar<br>Action preview</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-form-border">
+										<button class="btn btn-dark" data-clipboard-text="#b1d2e0">Copy #b1d2e0</button>
+										<p class="text-center"><code class="label-code">#b1d2e0</code></p>
+									</div>
+									<p class="color-label">Form input<br>box border</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-form-data">
+										<button class="btn" data-clipboard-text="#3b6d86">Copy #3b6d86</button>
+										<p class="text-center"><code class="label-code">#3b6d86</code></p>
+									</div>
+									<p class="color-label">Form input<br>data boxes</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-form-dropdown">
+										<button class="btn" data-clipboard-text="#747474">Copy #747474</button>
+										<p class="text-center"><code class="label-code">#747474</code></p>
+									</div>
+									<p class="color-label">Form dropdown<br>list active</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-focus-background">
+										<button class="btn btn-dark" data-clipboard-text="#fcb700">Copy #fcb700</button>
+										<p class="text-center"><code class="label-code">#fcb700</code></p>
+									</div>
+									<p class="color-label">Focus<br>background</p>
+								</div>
+							</div>
+							<h4>Text colors</h4>
+							<hr>
+							<div class="color-row">
+								<div class="color-group">
+									<div class="color-box clr-text">
+										<button class="btn" data-clipboard-text="#333">Copy #333</button>
+										<p class="text-center"><code class="label-code">#333</code></p>
+									</div>
+									<p class="color-label">Text base</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-white">
+										<button class="btn btn-dark" data-clipboard-text="#fff">Copy #fff</button>
+										<p class="text-center"><code class="label-code">#fff</code></p>
+									</div>
+									<p class="color-label">Text white</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-ctype">
+										<button class="btn" data-clipboard-text="#878787">Copy #878787</button>
+										<p class="text-center"><code class="label-code">#878787</code></p>
+									</div>
+									<p class="color-label">Text CType</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-validation">
+										<button class="btn" data-clipboard-text="#d92d42">Copy #d92d42</button>
+										<p class="text-center"><code class="label-code">#d92d42</code></p>
+									</div>
+									<p class="color-label">Text validation</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-hyperlink">
+										<button class="btn" data-clipboard-text="#f15922">Copy #f15922</button>
+										<p class="text-center"><code class="label-code">#f15922</code></p>
+									</div>
+									<p class="color-label">Hyperlink</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-breadcrumb">
+										<button class="btn" data-clipboard-text="#6b6b6b">Copy #6b6b6b</button>
+										<p class="text-center"><code class="label-code">#6b6b6b</code></p>
+									</div>
+									<p class="color-label">Breadcrumb</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-translation">
+										<button class="btn" data-clipboard-text="#4b4b4b">Copy #4b4b4b</button>
+										<p class="text-center"><code class="label-code">#4b4b4b</code></p>
+									</div>
+									<p class="color-label">Text translation</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-section">
+										<button class="btn" data-clipboard-text="#2b84b1">Copy #2b84b1</button>
+										<p class="text-center"><code class="label-code">#2b84b1</code></p>
+									</div>
+									<p class="color-label">Text section</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-tab-nonactive">
+										<button class="btn" data-clipboard-text="#909090">Copy #909090</button>
+										<p class="text-center"><code class="label-code">#909090</code></p>
+									</div>
+									<p class="color-label">Text tab non<br>active &#38; Studio<br>bar</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-translation-actionbar">
+										<button class="btn btn-dark" data-clipboard-text="#e2db6e">Copy #e2db6e</button>
+										<p class="text-center"><code class="label-code">#e2db6e</code></p>
+									</div>
+									<p class="color-label">Text<br>translation<br>Action bar</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-generalbar">
+										<button class="btn btn-dark" data-clipboard-text="#fdfdfd">Copy #fdfdfd</button>
+										<p class="text-center"><code class="label-code">#fdfdfd</code></p>
+									</div>
+									<p class="color-label">Text general<br>bar</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-actionbar">
+										<button class="btn btn-dark" data-clipboard-text="#e1f5ff">Copy #e1f5ff</button>
+										<p class="text-center"><code class="label-code">#e1f5ff</code></p>
+									</div>
+									<p class="color-label">Text action<br>bar</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-text-stu-blockelements">
+										<button class="btn" data-clipboard-text="#7e7e7e">Copy #7e7e7e</button>
+										<p class="text-center"><code class="label-code">#7e7e7e</code></p>
+									</div>
+									<p class="color-label">Text Studio<br>block<br>Elements</p>
+								</div>
+							</div>
+							<h4>Background colors</h4>
+							<hr>
+							<div class="color-row">
+								<div class="color-group">
+									<div class="color-box clr-background">
+										<button class="btn btn-dark" data-clipboard-text="#fafafa">Copy #fafafa</button>
+										<p class="text-center"><code class="label-code">#fafafa</code></p>
+									</div>
+									<p class="color-label">Background</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-header">
+										<button class="btn btn-dark" data-clipboard-text="#e7e7e7">Copy #e7e7e7</button>
+										<p class="text-center"><code class="label-code">#e7e7e7</code></p>
+									</div>
+									<p class="color-label">Background<br>header</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-content">
+										<button class="btn btn-dark" data-clipboard-text="#f3f3f3">Copy #f3f3f3</button>
+										<p class="text-center"><code class="label-code">#f3f3f3</code></p>
+									</div>
+									<p class="color-label">Background<br>content</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-section-main">
+										<button class="btn btn-dark" data-clipboard-text="#e3e3e3">Copy #e3e3e3</button>
+										<p class="text-center"><code class="label-code">#e3e3e3</code></p>
+									</div>
+									<p class="color-label">Background<br>section main</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-section">
+										<button class="btn btn-dark" data-clipboard-text="#dbdbdb">Copy #dbdbdb</button>
+										<p class="text-center"><code class="label-code">#dbdbdb</code></p>
+									</div>
+									<p class="color-label">Background<br>section &#38; label</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-fieldtype">
+										<button class="btn btn-dark" data-clipboard-text="#bbb">Copy #bbb</button>
+										<p class="text-center"><code class="label-code">#bbb</code></p>
+									</div>
+									<p class="color-label">Background<br>field type</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-stu-actionbar">
+										<button class="btn btn-dark" data-clipboard-text="#ebebeb">Copy #ebebeb</button>
+										<p class="text-center"><code class="label-code">#ebebeb</code></p>
+									</div>
+									<p class="color-label">Background<br>Studio Action<br>bar</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-stu-landing">
+										<button class="btn" data-clipboard-text="#969696">Copy #969696</button>
+										<p class="text-center"><code class="label-code">#969696</code></p>
+									</div>
+									<p class="color-label">Background<br>Studio Landing<br>page</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-stu-timeline">
+										<button class="btn btn-dark" data-clipboard-text="#ccc">Copy #ccc</button>
+										<p class="text-center"><code class="label-code">#ccc</code></p>
+									</div>
+									<p class="color-label">Background<br>Studio<br>timeline</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-stu-timeline-line">
+										<button class="btn btn-dark" data-clipboard-text="#dedede">Copy #dedede</button>
+										<p class="text-center"><code class="label-code">#dedede</code></p>
+									</div>
+									<p class="color-label">Background<br>Studio<br>timeline line</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-background-table">
+										<button class="btn btn-dark" data-clipboard-text="#c2c2c2">Copy #c2c2c2</button>
+										<p class="text-center"><code class="label-code">#c2c2c2</code></p>
+									</div>
+									<p class="color-label">Background<br>table</p>
+								</div>
+							</div>
+							<h4>Notification colors</h4>
+							<hr>
+							<div class="color-row">
+								<div class="color-group">
+									<div class="color-box clr-feedback-positive">
+										<button class="btn" data-clipboard-text="#17a98d">Copy #17a98d</button>
+										<p class="text-center"><code class="label-code">#17a98d</code></p>
+									</div>
+									<p class="color-label">Feedback<br>positive</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-feedback-processing">
+										<button class="btn btn-dark" data-clipboard-text="#ffc035">Copy #ffc035</button>
+										<p class="text-center"><code class="label-code">#ffc035</code></p>
+									</div>
+									<p class="color-label">Feedback<br>processing</p>
+								</div>
+								<div class="color-group">
+									<div class="color-box clr-feedback-negative">
+										<button class="btn" data-clipboard-text="#e85365">Copy #e85365</button>
+										<p class="text-center"><code class="label-code">#e85365</code></p>
+									</div>
+									<p class="color-label">Feedback<br> negative</p>
+								</div>
+							</div>
 						</div>
 						<div id="resources-itemC" class="modules">
 							<h4 class="module-header">ITEM C</h4>
@@ -372,13 +776,13 @@
 							<a href="#resources">Resources</a>
 							<ul class="nav">
 								<li>
-									<a href="#resources-itemA">
-										<span class="fa fa-angle-right"></span>Item A
+									<a href="#resources-typography">
+										<span class="fa fa-angle-right"></span>Typography
 									</a>
 								</li>
 								<li>
-									<a href="#resources-itemB">
-										<span class="fa fa-angle-right"></span>Item B
+									<a href="#resources-colors">
+										<span class="fa fa-angle-right"></span>Colors
 									</a>
 								</li>
 								<li>
