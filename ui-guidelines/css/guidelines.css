@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900);
 @import url(https://fonts.googleapis.com/css?family=Quantico);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
 	position: relative;
@@ -165,8 +166,23 @@ pre {
 	font-size: 1em;
 	font-weight: bold;
 }
-/*==== HELPERS ====*/
+/*==== UTILITIES/HELPERS ====*/
 .top-half-extra {margin-top: 2em;}
 .top-extra {margin-top: 4em;}
 .top-low {margin-top: 1.5em;}
 .bottom-half-extra {margin-bottom: 1.5em;}
+.u-move-down-xlarge {
+	margin-top: 2em;
+}
+.u-move-left-xlarge {
+	margin-left: 2em;
+}
+.u-move-left {
+	margin-left: 1em;
+}
+.u-move-up-xlarge {
+	margin-top: -2em;
+}
+.u-move-up-xsmall {
+	margin-top: -.5em;
+}

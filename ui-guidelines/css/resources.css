@@ -1,0 +1,53 @@
+/*==== Resources TYPOGRAPHY ====*/
+.typography-row {
+	display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-bottom: 2rem;
+}
+.weight-sample {
+	width: 20%;
+	float: left;
+	margin: .5em 2em 1em 0;
+	border: 1px solid #fce3da;
+	border-radius: 8px;
+	text-align: center;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.letter-sample {
+	font-size: 6em;
+}
+.weight-text {
+	font-size: .9em;
+}
+.light {
+    font-weight: 300;
+}
+.normal {
+    font-weight: 500;
+}
+.medium {
+    font-weight: 600;
+}
+.bold {
+    font-weight: 700;
+}
+.typography {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.25em;
+}
