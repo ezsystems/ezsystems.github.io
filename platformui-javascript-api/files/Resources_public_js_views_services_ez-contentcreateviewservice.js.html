@@ -99,6 +99,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +182,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -329,6 +332,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -589,7 +594,7 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
          */
         _initModels: function (callback) {
             var content = new Y.eZ.Content(),
-                version = new Y.eZ.Version(),
+                version = content.get(&#x27;currentVersion&#x27;),
                 type = this.get(&#x27;contentType&#x27;),
                 defaultFields = {};
 
@@ -610,16 +615,15 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
         },
 
         /**
-         * Sets fields on given content and version.
+         * Sets fields on the version.
          *
          * @method _setFields
          * @protected
-         * @param {Object} fields object containing fields that will be set on given content and version
+         * @param {Object} fields object containing fields
          * @since 1.1
          */
         _setFields: function (fields) {
-            this.get(&#x27;content&#x27;).set(&#x27;fields&#x27;, fields);
-            this.get(&#x27;version&#x27;).set(&#x27;fields&#x27;, fields);
+            this.get(&#x27;version&#x27;).setFieldsIn(fields, this.get(&#x27;app&#x27;).get(&#x27;contentCreationDefaultLanguageCode&#x27;));
         },
 
         /**
@@ -701,15 +705,7 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
         _setLanguage: function (view, fields, e) {
             var version = this.get(&#x27;version&#x27;),
                 selectedLanguageCode = e.selectedLanguageCode,
-                newVersion = new Y.eZ.Version(),
                 formFields = {};
-
-            version.destroy({api: this.get(&#x27;capi&#x27;), remove: true}, function (error) {
-                if ( error ) {
-                    console.warn(&#x27;Failed to remove the version &#x27; + version.get(&#x27;versionId&#x27;));
-                }
-            });
-            this.set(&#x27;version&#x27;, newVersion);
 
             Y.Object.each(fields, function (field) {
                 formFields[field.fieldDefinitionIdentifier] = {
@@ -718,11 +714,11 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
                 };
             });
 
-            this._setFields(formFields);
+            version.setFieldsIn(formFields, selectedLanguageCode);
             this.set(&#x27;languageCode&#x27;, selectedLanguageCode);
 
             view.setAttrs({
-                version: newVersion,
+                version: version,
                 languageCode: selectedLanguageCode,
             });
 

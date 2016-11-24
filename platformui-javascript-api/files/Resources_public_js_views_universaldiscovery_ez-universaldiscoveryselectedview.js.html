@@ -99,6 +99,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +182,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -329,6 +332,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -566,7 +571,10 @@ YUI.add(&#x27;ez-universaldiscoveryselectedview&#x27;, function (Y) {
         events: {
             &#x27;.ez-ud-selected-confirm&#x27;: {
                 &#x27;tap&#x27;: &#x27;_confirmSelected&#x27;,
-            }
+            },
+            &#x27;.ez-ud-selected-visual&#x27;: {
+                &#x27;tap&#x27;: &#x27;_openContentPeekView&#x27;,
+            },
         },
 
         initializer: function () {
@@ -588,7 +596,7 @@ YUI.add(&#x27;ez-universaldiscoveryselectedview&#x27;, function (Y) {
             this._errorHandlingMethod = function () {
                 this._set(&#x27;imageState&#x27;, STATE_IMAGE_ERROR);
             };
-            
+
             this.after(&#x27;contentStructChange&#x27;, function (e) {
                 this._setConfirmButtonState(e.newVal);
                 if ( this.get(&#x27;contentStruct&#x27;) &amp;&amp; this.get(&#x27;contentStruct&#x27;).content ) {
@@ -603,6 +611,35 @@ YUI.add(&#x27;ez-universaldiscoveryselectedview&#x27;, function (Y) {
                 if ( this.get(&#x27;confirmButtonEnabled&#x27;) ) {
                     this._uiResetAnimation();
                 }
+            });
+        },
+
+        /**
+         * Opens the ContentPeekView by firing the &#x60;contentPeekOpen&#x60; event.
+         *
+         * @method _openContentPeekView
+         * @protected
+         * @param {EventFacade} e tap event facade
+         */
+        _openContentPeekView: function (e) {
+            var struct = this.get(&#x27;contentStruct&#x27;);
+
+            e.preventDefault();
+            /**
+             * Fired to open the content peek view.
+             *
+             * @event contentPeekOpen
+             * @param {Object} config
+             * @param {eZ.Content} config.content
+             * @param {eZ.Location} config.location
+             * @param {eZ.ContentType} config.contentType
+             */
+            this.fire(&#x27;contentPeekOpen&#x27;, {
+                config: {
+                    content: struct.content,
+                    location: struct.location,
+                    contentType: struct.contentType,
+                },
             });
         },
 
@@ -687,7 +724,7 @@ YUI.add(&#x27;ez-universaldiscoveryselectedview&#x27;, function (Y) {
             var content = this.get(&#x27;contentStruct&#x27;).content,
                 contentType = this.get(&#x27;contentStruct&#x27;).contentType;
 
-            return Y.Array.find(content.getFieldsOfType(contentType, &#x27;ezimage&#x27;), function (field) {
+            return Y.Array.find(content.getFieldsOfType(contentType, &#x27;ezimage&#x27;, content.get(&#x27;mainLanguageCode&#x27;)), function (field) {
                 return !!field.fieldValue;
             });
         },
@@ -882,7 +919,7 @@ YUI.add(&#x27;ez-universaldiscoveryselectedview&#x27;, function (Y) {
             imageField : {
                 value: null
             },
-            
+
             /**
              * The variation identifier to use to display the image
              *

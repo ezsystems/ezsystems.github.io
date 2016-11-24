@@ -99,6 +99,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +182,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -329,6 +332,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -2805,7 +2810,7 @@ for passing through to <code>addAttrs</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l115"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:115</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l114"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:114</code></a>
         </p>
 
 
@@ -4741,7 +4746,7 @@ redirected to the 'dashboard'.
                 eZ.ContentEditViewService
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l134"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:134</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l133"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:133</code></a>
         </p>
 
 
@@ -5261,7 +5266,7 @@ where the calling method has already obtained the config from state.</p>
     </div>
 
     <div class="description">
-        <p>Sets fields on given content and version.</p>
+        <p>Sets fields on the version.</p>
 
     </div>
 
@@ -5275,7 +5280,7 @@ where the calling method has already obtained the config from state.</p>
 
 
                     <div class="param-description">
-                        <p>object containing fields that will be set on given content and version</p>
+                        <p>object containing fields</p>
 
                     </div>
 
@@ -5314,7 +5319,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l156"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:156</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l155"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:155</code></a>
         </p>
 
 
@@ -5493,7 +5498,7 @@ The default implementation does nothing.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l90"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:90</code></a>
+        <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l89"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:89</code></a>
         </p>
 
 
@@ -8776,7 +8781,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l214"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:214</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l205"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:205</code></a>
                             </p>
                     
                     
@@ -8806,7 +8811,7 @@ not handled by the MyClass._NON_ATTRS_CFG
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l205"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:205</code></a>
+                            <a href="../files/Resources_public_js_views_services_ez-contentcreateviewservice.js.html#l196"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;ez-contentcreateviewservice.js:196</code></a>
                             </p>
                     
                     

@@ -99,6 +99,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +182,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -329,6 +332,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -1003,6 +1008,12 @@
                     <ul class="index-list attrs extends">
                             <li class="index-item attr inherited">
                                 <a href="#attr_container">container</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_content">content</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_contentType">contentType</a>
                             </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_destroyed">destroyed</a>
@@ -7381,6 +7392,62 @@ How this template gets used is entirely up to you and your custom
                         </div>
                     
                             <p><strong>Default:</strong> Y.Node.create(this.containerTemplate)</p>
+                    
+                    
+                    </div>
+                    <div id="attr_content" class="attr item inherited">
+                        <a name="config_content"></a> 
+                        <h3 class="name"><code>content</code></h3>
+                        <span class="type"><a href="../classes/eZ.Content.html" class="crosslink">eZ.Content</a></span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.FieldView.html#attr_content">eZ.FieldView</a>:
+                            <a href="../files/Resources_public_js_views_ez-fieldview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldview.js:124</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            The Content item the field belongs to
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="attr_contentType" class="attr item inherited">
+                        <a name="config_contentType"></a> 
+                        <h3 class="name"><code>contentType</code></h3>
+                        <span class="type"><a href="../classes/eZ.ContentType.html" class="crosslink">eZ.ContentType</a></span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.FieldView.html#attr_contentType">eZ.FieldView</a>:
+                            <a href="../files/Resources_public_js_views_ez-fieldview.js.html#l132"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-fieldview.js:132</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            The Content Type of the Content item
+                        </div>
+                    
                     
                     
                     </div>

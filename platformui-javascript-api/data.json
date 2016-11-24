@@ -20,6 +20,19 @@
                 "eZ.Plugin": 1
             }
         },
+        "Resources/public/js/apps/plugins/ez-contentpeekplugin.js": {
+            "name": "Resources/public/js/apps/plugins/ez-contentpeekplugin.js",
+            "modules": {
+                "ez-contentpeekplugin": 1
+            },
+            "classes": {
+                "eZ.Plugin.ContentPeek": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
         "Resources/public/js/apps/plugins/ez-domstateplugin.js": {
             "name": "Resources/public/js/apps/plugins/ez-domstateplugin.js",
             "modules": {
@@ -1349,6 +1362,17 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/services/ez-contentpeekviewservice.js": {
+            "name": "Resources/public/js/views/services/ez-contentpeekviewservice.js",
+            "modules": {},
+            "classes": {
+                "eZ.ContentPeekViewService": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/services/ez-dashboardblocksviewservice.js": {
             "name": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
             "modules": {},
@@ -1795,6 +1819,19 @@
             },
             "classes": {
                 "eZ.ContentEditView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/views/ez-contentpeekview.js": {
+            "name": "Resources/public/js/views/ez-contentpeekview.js",
+            "modules": {
+                "ez-contentpeekview": 1
+            },
+            "classes": {
+                "eZ.ContentPeekView": 1
             },
             "fors": {},
             "namespaces": {
@@ -3140,6 +3177,22 @@
             "file": "Resources/public/js/apps/plugins/ez-confirmboxplugin.js",
             "line": 14,
             "description": "Provides the confirm box plugin"
+        },
+        "ez-contentpeekplugin": {
+            "name": "ez-contentpeekplugin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Plugin.ContentPeek": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/apps/plugins/ez-contentpeekplugin.js",
+            "line": 14,
+            "description": "Provides the content peek plugin"
         },
         "ez-domstateplugin": {
             "name": "ez-domstateplugin",
@@ -4673,6 +4726,7 @@
             "classes": {
                 "eZ.ContentCreateViewService": 1,
                 "eZ.ContentEditViewService": 1,
+                "eZ.ContentPeekViewService": 1,
                 "eZ.DashboardBlocksViewService": 1
             },
             "fors": {},
@@ -5153,6 +5207,22 @@
             "line": 20,
             "description": "Provides the Content Edit View class"
         },
+        "ez-contentpeekview": {
+            "name": "ez-contentpeekview",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.ContentPeekView": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 14,
+            "description": "Provide the content peek view"
+        },
         "ez-contenttypeselector": {
             "name": "ez-contenttypeselector",
             "submodules": {},
@@ -5312,7 +5382,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 14,
+            "line": 16,
             "description": "Provides the Language Switcher View class"
         },
         "ez-universaldiscoveryview": {
@@ -6517,6 +6587,22 @@
             "file": "Resources/public/js/apps/plugins/ez-confirmboxplugin.js",
             "line": 14,
             "description": "The confirm box plugin. It's a plugin the application to set up the\n`confirmBoxOpen` and `confirmBoxClose` event handlers.",
+            "is_constructor": 1,
+            "extends": "Plugin.Base"
+        },
+        "eZ.Plugin.ContentPeek": {
+            "name": "eZ.Plugin.ContentPeek",
+            "shortname": "eZ.Plugin.ContentPeek",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-contentpeekplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/apps/plugins/ez-contentpeekplugin.js",
+            "line": 14,
+            "description": "The content peek plugin. It's a plugin for the application to set up the\n`contentPeekOpen` and `contentPeekClose` event handlers.",
             "is_constructor": 1,
             "extends": "Plugin.Base"
         },
@@ -8182,6 +8268,22 @@
             "is_constructor": 1,
             "extends": "eZ.ViewService"
         },
+        "eZ.ContentPeekViewService": {
+            "name": "eZ.ContentPeekViewService",
+            "shortname": "eZ.ContentPeekViewService",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/services/ez-contentpeekviewservice.js",
+            "line": 13,
+            "description": "The content peek view service",
+            "is_constructor": 1,
+            "extends": "eZ.ViewService"
+        },
         "eZ.DashboardBlocksViewService": {
             "name": "eZ.DashboardBlocksViewService",
             "shortname": "eZ.DashboardBlocksViewService",
@@ -8759,6 +8861,22 @@
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
+        "eZ.ContentPeekView": {
+            "name": "eZ.ContentPeekView",
+            "shortname": "eZ.ContentPeekView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-contentpeekview",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 14,
+            "description": "The content peek view",
+            "is_constructor": 1,
+            "extends": "eZ.TemplateBasedView"
+        },
         "eZ.ContentTypeSelectorView": {
             "name": "eZ.ContentTypeSelectorView",
             "shortname": "eZ.ContentTypeSelectorView",
@@ -8913,8 +9031,8 @@
             "module": "ez-languageswitcherview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 14,
-            "description": "The raw content view",
+            "line": 16,
+            "description": "The Language Switcher View",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
         },
@@ -10653,7 +10771,7 @@
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
             "line": 28,
-            "description": "The list of available sides views. Each side view is an entry in this\nhash which contains the following properties:\n\n  * `type`: a reference to the constructor of a view\n  * `container`: a selector to the node that will receive the\n     rendered view\n  * `hideClass`: a class to add on the application container to hide\n    the rendered side view when it's not needed.\n\nThe lifecycle of the side views is handled by the `handleSideViews`\nmethod based on the meta information available in the route.",
+            "description": "The list of available sides views. Each side view is an entry in this\nhash which contains the following properties:\n\n  * `type`: a reference to the constructor of a view\n  * `service`: a reference to the constructor of a view service\n  * `container`: a selector to the node that will receive the\n     rendered view\n  * `hideClass`: a class to add on the application container to hide\n    the rendered side view when it's not needed.\n  * `forceRendering`: if set to true, the side view will be rendered\n     each time time it becomes visible. Otherwise, it is rendered\n     only after its creation.\n\nThe lifecycle of the side views is handled by the `handleSideViews`\nmethod based on the meta information available in the route.",
             "itemtype": "property",
             "name": "sideViews",
             "type": "{Object}",
@@ -10663,7 +10781,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 126,
+            "line": 137,
             "description": "The hash change event subscription.",
             "itemtype": "property",
             "name": "_hashSubscription",
@@ -10677,7 +10795,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 136,
+            "line": 147,
             "description": "The current location hash .",
             "itemtype": "property",
             "name": "_currentLocationHash",
@@ -10691,7 +10809,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 146,
+            "line": 157,
             "description": "Initializes the application.",
             "itemtype": "method",
             "name": "initializer",
@@ -10701,7 +10819,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 156,
+            "line": 167,
             "description": "Stores the initial title of the page so it can be used when\ngenerating the title depending on the active view",
             "itemtype": "property",
             "name": "_initialTitle",
@@ -10714,7 +10832,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 192,
+            "line": 203,
             "description": "Prevent hash changes by setting the old hash on hashChange event",
             "itemtype": "method",
             "name": "_preventHashChange",
@@ -10726,7 +10844,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 209,
+            "line": 220,
             "description": "Allows hash changes by detaching hashChange subscription",
             "itemtype": "method",
             "name": "_allowHashChange",
@@ -10738,7 +10856,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 219,
+            "line": 230,
             "description": "Disable routing by deleting the callbacks of the routes",
             "itemtype": "method",
             "name": "_disableRouting",
@@ -10750,7 +10868,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 232,
+            "line": 243,
             "description": "Enables routing by setting back the callbacks to the routes",
             "itemtype": "method",
             "name": "_enableRouting",
@@ -10762,7 +10880,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 244,
+            "line": 255,
             "description": "Destroy properly every side view.",
             "itemtype": "method",
             "name": "_destroySideViews",
@@ -10774,7 +10892,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 263,
+            "line": 274,
             "description": "Refreshes the current view",
             "itemtype": "method",
             "name": "_refreshView",
@@ -10786,7 +10904,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 273,
+            "line": 284,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -10798,7 +10916,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 327,
+            "line": 338,
             "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
             "itemtype": "method",
             "name": "getLanguageName",
@@ -10820,7 +10938,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 346,
+            "line": 357,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -10847,7 +10965,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 378,
+            "line": 389,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -10870,7 +10988,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 389,
+            "line": 400,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -10904,7 +11022,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 429,
+            "line": 440,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -10933,7 +11051,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 440,
+            "line": 451,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -10943,7 +11061,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 453,
+            "line": 464,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -10973,7 +11091,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 483,
+            "line": 494,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -11000,7 +11118,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 500,
+            "line": 511,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitly\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -11027,7 +11145,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 527,
+            "line": 538,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -11054,7 +11172,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 549,
+            "line": 560,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -11071,7 +11189,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 559,
+            "line": 570,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -11110,7 +11228,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 624,
+            "line": 635,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -11129,7 +11247,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 642,
+            "line": 653,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -11153,7 +11271,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 664,
+            "line": 675,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -11180,7 +11298,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 700,
+            "line": 711,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -11207,7 +11325,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 769,
+            "line": 780,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -11226,7 +11344,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 785,
+            "line": 796,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -11245,7 +11363,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 826,
+            "line": 837,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -11264,7 +11382,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 844,
+            "line": 855,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -11274,7 +11392,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1031,
+            "line": 1042,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -11286,7 +11404,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1043,
+            "line": 1054,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -11299,7 +11417,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1056,
+            "line": 1067,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -11312,7 +11430,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1069,
+            "line": 1080,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -11324,7 +11442,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1082,
+            "line": 1093,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -11338,7 +11456,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1096,
+            "line": 1107,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -11350,7 +11468,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1110,
+            "line": 1121,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -11362,7 +11480,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1121,
+            "line": 1132,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -11374,7 +11492,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1133,
+            "line": 1144,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -11387,7 +11505,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1147,
+            "line": 1158,
             "description": "Default language code, as defined by the current siteaccess language config.",
             "itemtype": "attribute",
             "name": "contentCreationDefaultLanguageCode",
@@ -11400,7 +11518,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1160,
+            "line": 1171,
             "description": "Holds the Locales conversion map between eZ Locale codes and\nPOSIX ones. See locale.yml",
             "itemtype": "attribute",
             "name": "localesMap",
@@ -11413,7 +11531,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1174,
+            "line": 1185,
             "description": "List of preferred languages in which the interface should be\ntranslated.",
             "itemtype": "attribute",
             "name": "interfaceLanguages",
@@ -11426,7 +11544,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1188,
+            "line": 1199,
             "description": "Boolean that determine if the app routing is enabled",
             "itemtype": "attribute",
             "name": "routingEnabled",
@@ -12955,7 +13073,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
-            "line": 81,
+            "line": 87,
             "description": "Fires the loadImageVariation event to load the image variation to display\nin the image embed.",
             "itemtype": "method",
             "name": "_loadVariation",
@@ -12989,7 +13107,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
-            "line": 104,
+            "line": 110,
             "description": "Renders the image inside the embed node.",
             "itemtype": "method",
             "name": "_renderImage",
@@ -13018,7 +13136,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-resolveimage.js",
-            "line": 121,
+            "line": 127,
             "description": "Returns the image variation for the embedNode.",
             "itemtype": "method",
             "name": "_getEmbedVariation",
@@ -16563,7 +16681,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 75,
+            "line": 76,
             "description": "Checks whether the field is empty",
             "itemtype": "method",
             "name": "_isFieldEmpty",
@@ -16579,7 +16697,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 86,
+            "line": 87,
             "description": "Returns an object containing the additional variables",
             "itemtype": "method",
             "name": "_variables",
@@ -16594,7 +16712,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 104,
+            "line": 105,
             "description": "Tap event handler for the remove button. It resets the relation.",
             "itemtype": "method",
             "name": "_removeRelation",
@@ -16613,7 +16731,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 127,
+            "line": 128,
             "description": "Fire the contentDiscover event to launch the universal discovery widget.",
             "itemtype": "method",
             "name": "_runUniversalDiscovery",
@@ -16632,7 +16750,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 144,
+            "line": 145,
             "description": "Universal discovery contentDiscovered event handler to fill the relation after the user chose a content",
             "itemtype": "method",
             "name": "_selectRelation",
@@ -16651,7 +16769,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 159,
+            "line": 160,
             "description": "Returns the field value.",
             "access": "protected",
             "tagname": "",
@@ -16666,7 +16784,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 176,
+            "line": 177,
             "description": "The destination content or content info of the relation",
             "itemtype": "attribute",
             "name": "destinationContent",
@@ -16677,7 +16795,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-editview.js",
-            "line": 185,
+            "line": 186,
             "description": "The destination content Id of the relation",
             "itemtype": "attribute",
             "name": "destinationContentId",
@@ -16717,7 +16835,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-view.js",
-            "line": 53,
+            "line": 54,
             "description": "Returns an object containing the additional variables",
             "itemtype": "method",
             "name": "_variables",
@@ -16732,7 +16850,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relation-view.js",
-            "line": 70,
+            "line": 71,
             "description": "The destination content of the relation",
             "itemtype": "attribute",
             "name": "destinationContent",
@@ -16798,7 +16916,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 110,
+            "line": 111,
             "description": "Checks whether the field is empty",
             "itemtype": "method",
             "name": "_isFieldEmpty",
@@ -16814,7 +16932,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 124,
+            "line": 125,
             "description": "Returns an object containing the additional variables",
             "itemtype": "method",
             "name": "_variables",
@@ -16829,7 +16947,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 147,
+            "line": 148,
             "description": "Tap event handler for the remove relation buttons.\nIt remove the content related to the button from the relation list.",
             "itemtype": "method",
             "name": "_removeRelation",
@@ -16848,7 +16966,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 175,
+            "line": 176,
             "description": "Fire the contentDiscover event to launch the universal discovery widget.",
             "itemtype": "method",
             "name": "_runUniversalDiscovery",
@@ -16867,7 +16985,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 205,
+            "line": 206,
             "description": "Universal discovery contentDiscovered event handler to fill the relation list\nafter the user chose one or several contents.",
             "itemtype": "method",
             "name": "_selectRelation",
@@ -16886,7 +17004,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 227,
+            "line": 228,
             "description": "Checks if the content info is already in the relation.",
             "itemtype": "method",
             "name": "_isRelated",
@@ -16908,7 +17026,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 239,
+            "line": 240,
             "description": "Returns the field value.",
             "access": "protected",
             "tagname": "",
@@ -16923,7 +17041,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 252,
+            "line": 253,
             "description": "The related contents of the relation list",
             "itemtype": "attribute",
             "name": "relatedContents",
@@ -16934,7 +17052,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-editview.js",
-            "line": 262,
+            "line": 263,
             "description": "Array of contents Ids in the relation (e.g. 42, not /api/ezp/v2/content/objects/42)",
             "itemtype": "attribute",
             "name": "destinationContentsIds",
@@ -16974,7 +17092,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-view.js",
-            "line": 56,
+            "line": 57,
             "description": "Returns an object containing the additional variables",
             "itemtype": "method",
             "name": "_variables",
@@ -16989,7 +17107,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-relationlist-view.js",
-            "line": 78,
+            "line": 79,
             "description": "The related contents of the relation list",
             "itemtype": "attribute",
             "name": "relatedContents",
@@ -20341,7 +20459,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationloadplugin.js",
-            "line": 59,
+            "line": 68,
             "description": "The related content to be loaded",
             "itemtype": "attribute",
             "name": "relatedContent",
@@ -20385,7 +20503,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
-            "line": 81,
+            "line": 90,
             "description": "Loads content for given content id.",
             "itemtype": "method",
             "name": "_loadContent",
@@ -20422,7 +20540,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
-            "line": 107,
+            "line": 116,
             "description": "Loads content struct containing content and main location for given content id.\nThe contentStruct is being passed to the callback function.",
             "itemtype": "method",
             "name": "_loadContentStruct",
@@ -20481,7 +20599,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
-            "line": 142,
+            "line": 151,
             "description": "Loads location for content given in contentStruct and injects it to the contentStruct object.\nLocation contains fully loaded path. The contentStruct is being passed to the callback function.",
             "itemtype": "method",
             "name": "_loadLocationToContentStruct",
@@ -20542,7 +20660,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
-            "line": 188,
+            "line": 197,
             "description": "Content constructor",
             "itemtype": "attribute",
             "name": "contentModelConstructor",
@@ -20553,7 +20671,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-objectrelationsloadplugin.js",
-            "line": 198,
+            "line": 207,
             "description": "Location constructor",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -21980,7 +22098,7 @@
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
             "line": 77,
-            "description": "Sets fields on given content and version.",
+            "description": "Sets fields on the version.",
             "itemtype": "method",
             "name": "_setFields",
             "access": "protected",
@@ -21988,7 +22106,7 @@
             "params": [
                 {
                     "name": "fields",
-                    "description": "object containing fields that will be set on given content and version",
+                    "description": "object containing fields",
                     "type": "Object"
                 }
             ],
@@ -21999,7 +22117,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 90,
+            "line": 89,
             "description": "Sets the redirection URLs attributes",
             "itemtype": "method",
             "name": "_setRedirectionUrls",
@@ -22011,7 +22129,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 115,
+            "line": 114,
             "description": "Gets the name for a new content based on current contentType and languageCode",
             "itemtype": "method",
             "name": "_getNewContentName",
@@ -22023,7 +22141,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 134,
+            "line": 133,
             "description": "changeLanguage event handler. It opens languageSelectionBox for selecting\nlanguage of created content",
             "itemtype": "method",
             "name": "_selectLanguage",
@@ -22042,7 +22160,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 156,
+            "line": 155,
             "description": "Sets language of created content to one given in event facade. After that notification is fired.",
             "itemtype": "method",
             "name": "_setLanguage",
@@ -22078,7 +22196,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 205,
+            "line": 196,
             "description": "The parent location of the new content",
             "itemtype": "attribute",
             "name": "parentLocation",
@@ -22090,7 +22208,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 214,
+            "line": 205,
             "description": "The parent content of the new content",
             "itemtype": "attribute",
             "name": "parentContent",
@@ -22666,6 +22784,16 @@
             "default": "null",
             "type": "String",
             "class": "eZ.ContentEditViewService",
+            "module": "ez-contenteditviewservice",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/services/ez-contentpeekviewservice.js",
+            "line": 7,
+            "description": "Provides the content peek view service class",
+            "itemtype": "method",
+            "name": "ez-contentpeekviewservice",
+            "class": "eZ.ContentPeekViewService",
             "module": "ez-contenteditviewservice",
             "namespace": "eZ"
         },
@@ -28731,7 +28859,60 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 74,
+            "line": 77,
+            "description": "Opens the ContentPeekView by firing the `contentPeekOpen` event.",
+            "itemtype": "method",
+            "name": "_openContentPeekView",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "tap event facade",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.UniversalDiscoverySelectedView",
+            "module": "ez-universaldiscoveryselectedview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
+            "line": 88,
+            "description": "Fired to open the content peek view.",
+            "itemtype": "event",
+            "name": "contentPeekOpen",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "content",
+                            "description": "",
+                            "type": "eZ.Content"
+                        },
+                        {
+                            "name": "location",
+                            "description": "",
+                            "type": "eZ.Location"
+                        },
+                        {
+                            "name": "contentType",
+                            "description": "",
+                            "type": "eZ.ContentType"
+                        }
+                    ]
+                }
+            ],
+            "class": "eZ.UniversalDiscoverySelectedView",
+            "module": "ez-universaldiscoveryselectedview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
+            "line": 106,
             "description": "Detect if the content has an image and set the view state accordingly",
             "itemtype": "method",
             "name": "_detectImage",
@@ -28743,7 +28924,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 90,
+            "line": 122,
             "description": "Set translations",
             "itemtype": "method",
             "name": "_setTranslations",
@@ -28755,7 +28936,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 100,
+            "line": 132,
             "description": "Renders the image variation",
             "itemtype": "method",
             "name": "_renderImageVariation",
@@ -28767,7 +28948,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 112,
+            "line": 144,
             "description": "Fires the `loadImageVariation` event for the given image field and\nthe image variation stored in `variationIdentifier` attribute.",
             "itemtype": "method",
             "name": "_fireLoadImageVariation",
@@ -28779,7 +28960,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 126,
+            "line": 158,
             "description": "`imageStateChange` handler. It sets a state class on the container\nand make sure the previous state class was removed.",
             "itemtype": "method",
             "name": "_uiSetState",
@@ -28798,7 +28979,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 143,
+            "line": 175,
             "description": "Returns the first filled ezimage field of the content or null if\nthere's none.",
             "itemtype": "method",
             "name": "_getFilledImageField",
@@ -28814,7 +28995,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 160,
+            "line": 192,
             "description": "Sets the confirm selection button state depending on wether content\nis selectable and is not already selected.",
             "itemtype": "method",
             "name": "_setConfirmButtonState",
@@ -28826,7 +29007,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 179,
+            "line": 211,
             "description": "`confirmButtonEnabledChange` event handler. It sets the confirm\nbutton state depending on the value of the `confirmButtonEnabled`\nattribute",
             "itemtype": "method",
             "name": "_uiButtonState",
@@ -28838,7 +29019,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 197,
+            "line": 229,
             "description": "tap event handler on the confirm button. If the given content is not already selected\nit disables the confirm button and  fires the `confirmSelectedContent` event\nmeaning that the user wants the content to be added to his confirmed content list.",
             "itemtype": "method",
             "name": "_confirmSelected",
@@ -28857,7 +29038,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 212,
+            "line": 244,
             "description": "Fired when the user has confirmed that he wants the content to be\nadded in the confirmed list. This event will be fired/used only\nwhen the universal discovery widget is configured to allow\nseveral contents to be selected.",
             "itemtype": "event",
             "name": "confirmSelectedContent",
@@ -28874,7 +29055,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 228,
+            "line": 260,
             "description": "Returns and formats the translations list to a string suitable for the template",
             "itemtype": "method",
             "name": "_getTranslations",
@@ -28890,7 +29071,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 253,
+            "line": 285,
             "description": "Returns the element that will be animated when the displayed content\nis selected",
             "itemtype": "method",
             "name": "_getAnimatedElement",
@@ -28906,7 +29087,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 265,
+            "line": 297,
             "description": "Starts the animation of the content selection. It also returns the\nnode to animate.",
             "itemtype": "method",
             "name": "startAnimation",
@@ -28920,7 +29101,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 282,
+            "line": 314,
             "description": "Resets the animated element to its original state",
             "itemtype": "method",
             "name": "_uiResetAnimation",
@@ -28932,7 +29113,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 296,
+            "line": 328,
             "description": "'jsonifies' the model available under the identifier in the\n`contentStruct` attribute",
             "itemtype": "method",
             "name": "_modelJson",
@@ -28955,7 +29136,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 316,
+            "line": 348,
             "description": "Holds the current state of the selected view regarding an image\nto display.",
             "itemtype": "attribute",
             "name": "imageState",
@@ -28968,7 +29149,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 329,
+            "line": 361,
             "description": "The image variation to display. This attribute is filled\nasynchronously if the content has a filled ezimage field.",
             "itemtype": "attribute",
             "name": "imageVariation",
@@ -28979,7 +29160,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 340,
+            "line": 372,
             "description": "The image field of the content",
             "itemtype": "attribute",
             "name": "imageField",
@@ -28991,7 +29172,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 351,
+            "line": 383,
             "description": "The variation identifier to use to display the image",
             "itemtype": "attribute",
             "name": "variationIdentifier",
@@ -29003,7 +29184,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 362,
+            "line": 394,
             "description": "The content structure representing the content to display. It\nshould contain the content info, the location and the content\ntype models under the key `contentInfo`, `location` and\n`contentType`.",
             "itemtype": "attribute",
             "name": "contentStruct",
@@ -29015,7 +29196,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 376,
+            "line": 408,
             "description": "Flag indicating whether a confirm button has to be added.",
             "itemtype": "attribute",
             "name": "addConfirmButton",
@@ -29027,7 +29208,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 387,
+            "line": 419,
             "description": "Flag indicating whether the confirm button should be enabled or\nnot.",
             "itemtype": "attribute",
             "name": "confirmButtonEnabled",
@@ -29039,7 +29220,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 399,
+            "line": 431,
             "description": "Checks wether the content is already selected.",
             "itemtype": "attribute",
             "name": "isAlreadySelected",
@@ -29050,7 +29231,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryselectedview.js",
-            "line": 412,
+            "line": 444,
             "description": "Checks wether the content is selectable.",
             "itemtype": "attribute",
             "name": "isSelectable",
@@ -29865,7 +30046,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 67,
+            "line": 70,
             "description": "`previewAction` event handler. It fires the `saveAction` draft so\nthat the draft is saved before trying to preview the version.",
             "itemtype": "method",
             "name": "_saveAndPreview",
@@ -29884,7 +30065,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 90,
+            "line": 93,
             "description": "Event handler for the saveAction and publishAction events. It\nenriches the event facade with the updated fields and the form\nvalidity",
             "itemtype": "method",
             "name": "_handleSavePublish",
@@ -29903,7 +30084,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 109,
+            "line": 112,
             "description": "Destructor is called upon view's destruction\nDestroying and cleaning up child views",
             "itemtype": "method",
             "name": "destructor",
@@ -29913,7 +30094,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 120,
+            "line": 123,
             "description": "Return JSONified owner if the content still have an owner.\nA content with a deleted owner is considered like having no owner.",
             "itemtype": "method",
             "name": "_getOwner",
@@ -29927,7 +30108,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 131,
+            "line": 134,
             "description": "Renders the content edit view",
             "itemtype": "method",
             "name": "render",
@@ -29941,7 +30122,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 162,
+            "line": 165,
             "description": "Sets the minimum height of the view",
             "access": "private",
             "tagname": "",
@@ -29953,7 +30134,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 174,
+            "line": 177,
             "description": "Returns the title of the page when the content edit view is the\nactive view",
             "itemtype": "method",
             "name": "getTitle",
@@ -29966,7 +30147,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 185,
+            "line": 188,
             "description": "Set current input focus on the view",
             "itemtype": "method",
             "name": "setFocus",
@@ -29978,7 +30159,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 195,
+            "line": 198,
             "description": "Shows the technical infos of the content.",
             "itemtype": "method",
             "name": "_showDetails",
@@ -29990,7 +30171,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 205,
+            "line": 208,
             "description": "Hides the technical infos of the content.         *",
             "itemtype": "method",
             "name": "_hideDetails",
@@ -30002,7 +30183,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 215,
+            "line": 218,
             "description": "Event event handler for the close link in the content edit view",
             "itemtype": "method",
             "name": "_closeView",
@@ -30021,7 +30202,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 223,
+            "line": 226,
             "description": "Fired when the close link is clicked",
             "itemtype": "event",
             "name": "closeView",
@@ -30031,7 +30212,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 232,
+            "line": 235,
             "description": "Event event handler for any key pressed within the content edit view",
             "itemtype": "method",
             "name": "_handleKeyboard",
@@ -30052,7 +30233,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 248,
+            "line": 251,
             "description": "Returns whether the current browser is a touch device or not",
             "itemtype": "method",
             "name": "_isTouch",
@@ -30068,7 +30249,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 259,
+            "line": 262,
             "description": "Tap event handler on change language button. It fires `changeLanguage` event.",
             "itemtype": "method",
             "name": "_changeLanguage",
@@ -30087,7 +30268,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 269,
+            "line": 272,
             "description": "Fired when the change language link was tapped",
             "itemtype": "event",
             "name": "changeLanguage",
@@ -30104,7 +30285,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 280,
+            "line": 283,
             "description": "The content being edited",
             "itemtype": "attribute",
             "name": "content",
@@ -30117,7 +30298,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 290,
+            "line": 293,
             "description": "The version being edited",
             "itemtype": "attribute",
             "name": "content",
@@ -30130,7 +30311,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 300,
+            "line": 303,
             "description": "The content type of the content being edited",
             "itemtype": "attribute",
             "name": "contentType",
@@ -30142,7 +30323,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 311,
+            "line": 314,
             "description": "The main location of the content being edited",
             "itemtype": "attribute",
             "name": "mainLocation",
@@ -30154,7 +30335,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 322,
+            "line": 325,
             "description": "The owner of the content being edited",
             "itemtype": "attribute",
             "name": "owner",
@@ -30166,7 +30347,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 333,
+            "line": 336,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -30178,7 +30359,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 342,
+            "line": 345,
             "description": "The ContentEditFormView (by default) instance which will be used to render form",
             "itemtype": "attribute",
             "name": "formView",
@@ -30191,7 +30372,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 364,
+            "line": 367,
             "description": "The EditActionBarView (by default) instance",
             "itemtype": "attribute",
             "name": "actionBar",
@@ -30204,7 +30385,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-contenteditview.js",
-            "line": 384,
+            "line": 387,
             "description": "The language code in which the content is edited.",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -30213,6 +30394,121 @@
             "required": 1,
             "class": "eZ.ContentEditView",
             "module": "ez-contenteditview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 37,
+            "description": "Resets the view attributes. Overriden to destroy and set null in the\n`rawContentView` attribute.",
+            "itemtype": "method",
+            "name": "reset",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 53,
+            "description": "Closes the Content Peek side view by firing the `contentPeekClose`\nevent",
+            "itemtype": "method",
+            "name": "_closeContentPeek",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 62,
+            "description": "Fired to close the content peek side view",
+            "itemtype": "event",
+            "name": "contentPeekClose",
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 84,
+            "description": "Creates a new RawContentView instance.",
+            "itemtype": "method",
+            "name": "_buildRawContentView",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "eZ.RawContentView"
+            },
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 104,
+            "description": "The Content item being displayed",
+            "itemtype": "attribute",
+            "name": "content",
+            "type": "{eZ.Content}",
+            "required": 1,
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 113,
+            "description": "The Location of the Content item being displayed",
+            "itemtype": "attribute",
+            "name": "location",
+            "type": "{eZ.Location}",
+            "required": 1,
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 122,
+            "description": "The Content Type of the Content item being displayed",
+            "itemtype": "attribute",
+            "name": "contentType",
+            "type": "{eZ.ContentType}",
+            "required": 1,
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 131,
+            "description": "The language code in which the Content item is displayed",
+            "itemtype": "attribute",
+            "name": "languageCode",
+            "type": "{String}",
+            "required": 1,
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-contentpeekview.js",
+            "line": 140,
+            "description": "The raw content view instance",
+            "itemtype": "attribute",
+            "name": "rawContentView",
+            "type": "{eZ.RawContentView}",
+            "readonly": "",
+            "class": "eZ.ContentPeekView",
+            "module": "ez-contentpeekview",
             "namespace": "eZ"
         },
         {
@@ -31423,7 +31719,29 @@
         },
         {
             "file": "Resources/public/js/views/ez-fieldview.js",
-            "line": 125,
+            "line": 124,
+            "description": "The Content item the field belongs to",
+            "itemtype": "attribute",
+            "name": "content",
+            "type": "{eZ.Content}",
+            "class": "eZ.FieldView",
+            "module": "ez-fieldview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-fieldview.js",
+            "line": 132,
+            "description": "The Content Type of the Content item",
+            "itemtype": "attribute",
+            "name": "contentType",
+            "type": "{eZ.ContentType}",
+            "class": "eZ.FieldView",
+            "module": "ez-fieldview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-fieldview.js",
+            "line": 141,
             "description": "Hash containing the custom field view implementations for the\ndifferent field type identifier",
             "itemtype": "property",
             "name": "REGISTRY",
@@ -31437,7 +31755,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-fieldview.js",
-            "line": 136,
+            "line": 152,
             "description": "Registers a custom field view implementation for the given field type\nidentifier.",
             "itemtype": "method",
             "name": "registerFieldView",
@@ -31460,7 +31778,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-fieldview.js",
-            "line": 150,
+            "line": 166,
             "description": "Returns the view constructor for the given field type identifier. If\nno custom implementation is registered, the Y.eZ.FieldView\nconstructor is returned",
             "itemtype": "method",
             "name": "getFieldView",
@@ -31880,7 +32198,48 @@
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 33,
+            "line": 43,
+            "description": "`tap` event handler on the language switch links.",
+            "itemtype": "method",
+            "name": "_switchLanguage",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.LanguageSwitcherView",
+            "module": "ez-languageswitcherview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-languageswitcherview.js",
+            "line": 58,
+            "description": "Fired to indicate that the user wants to switch to a new\nlanguage. It is fired only when `switchMode` attribute is set to\n'event'.",
+            "itemtype": "event",
+            "name": "switchLanguage",
+            "params": [
+                {
+                    "name": "languageCode",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "oldLanguageCode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "eZ.LanguageSwitcherView",
+            "module": "ez-languageswitcherview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-languageswitcherview.js",
+            "line": 73,
             "description": "Renders the language switcher view",
             "itemtype": "method",
             "name": "render",
@@ -31894,7 +32253,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 51,
+            "line": 91,
             "description": "Returns array with translations of content other than already being viewed.\nIf conten doesn't have got other translations than the one already being viewed,\nthen empty array is returned.",
             "itemtype": "method",
             "name": "_getOtherTranslationsList",
@@ -31910,7 +32269,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 69,
+            "line": 109,
             "description": "expandedChange event handler to define or detach the click outside\nevent handler so that the view gets hidden when the user click\nsomewhere else",
             "itemtype": "method",
             "name": "_setClickOutsideEventHandler",
@@ -31929,10 +32288,23 @@
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 88,
+            "line": 128,
             "description": "Hides the expanded view",
             "itemtype": "method",
             "name": "_hideView",
+            "access": "protected",
+            "tagname": "",
+            "deprecated": true,
+            "class": "eZ.LanguageSwitcherView",
+            "module": "ez-languageswitcherview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-languageswitcherview.js",
+            "line": 141,
+            "description": "Hides the language list (if any)",
+            "itemtype": "method",
+            "name": "_hideLanguageList",
             "access": "protected",
             "tagname": "",
             "class": "eZ.LanguageSwitcherView",
@@ -31941,7 +32313,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 98,
+            "line": 151,
             "description": "Toggles the expanded state",
             "itemtype": "method",
             "name": "_toggleExpanded",
@@ -31953,35 +32325,44 @@
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 110,
+            "line": 163,
             "description": "The content associated the current location",
             "itemtype": "attribute",
             "name": "content",
             "type": "Y.eZ.Content",
-            "writeonce": "",
             "class": "eZ.LanguageSwitcherView",
             "module": "ez-languageswitcherview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 121,
+            "line": 171,
             "description": "The current location",
             "itemtype": "attribute",
             "name": "location",
             "type": "Y.eZ.Location",
-            "writeonce": "",
             "class": "eZ.LanguageSwitcherView",
             "module": "ez-languageswitcherview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/ez-languageswitcherview.js",
-            "line": 132,
+            "line": 179,
             "description": "Language code of language currently active for the current location",
             "itemtype": "attribute",
             "name": "languageCode",
             "type": "String",
+            "class": "eZ.LanguageSwitcherView",
+            "module": "ez-languageswitcherview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-languageswitcherview.js",
+            "line": 187,
+            "description": "The way the language switch will be done. When set to 'event',\nthe view will fire a 'switchLanguage' event while if it is set to\n'navigate', the browser will just follow the link generated by\nthe template.",
+            "itemtype": "attribute",
+            "name": "switchMode",
+            "default": "'navigate'",
             "writeonce": "",
             "class": "eZ.LanguageSwitcherView",
             "module": "ez-languageswitcherview",
@@ -33370,7 +33751,33 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 45,
+            "line": 37,
+            "description": "The field views instances for the current content",
+            "itemtype": "property",
+            "name": "_fieldViews",
+            "access": "protected",
+            "tagname": "",
+            "default": "[]",
+            "type": "Array of {eZ.FieldView}",
+            "class": "eZ.RawContentView",
+            "module": "ez-rawcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-rawcontentview.js",
+            "line": 62,
+            "description": "Forwards the active flag to the field views.",
+            "itemtype": "method",
+            "name": "_forwardActive",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.RawContentView",
+            "module": "ez-rawcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-rawcontentview.js",
+            "line": 74,
             "description": "Tap event handler to collapse/uncollapse the raw content view",
             "itemtype": "method",
             "name": "_collapseView",
@@ -33389,7 +33796,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 63,
+            "line": 92,
             "description": "Tap event handler to collapse/uncollapse the field group",
             "itemtype": "method",
             "name": "_collapseFieldGroup",
@@ -33408,7 +33815,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 84,
+            "line": 113,
             "description": "Sets the field views for the current content",
             "itemtype": "method",
             "name": "_setFieldViews",
@@ -33420,21 +33827,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 116,
-            "description": "The field views instances for the current content",
-            "itemtype": "property",
-            "name": "_fieldViews",
-            "access": "protected",
-            "tagname": "",
-            "default": "[]",
-            "type": "Array of {eZ.FieldView}",
-            "class": "eZ.RawContentView",
-            "module": "ez-rawcontentview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 127,
+            "line": 146,
             "description": "Renders the raw content view",
             "itemtype": "method",
             "name": "render",
@@ -33448,7 +33841,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 149,
+            "line": 168,
             "description": "Renders the field views in the correct field group",
             "access": "protected",
             "tagname": "",
@@ -33460,47 +33853,68 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 174,
-            "description": "The location being rendered",
+            "line": 186,
+            "description": "Destroys the field views",
+            "itemtype": "method",
+            "name": "_destroyFieldViews",
+            "access": "private",
+            "tagname": "",
+            "class": "eZ.RawContentView",
+            "module": "ez-rawcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-rawcontentview.js",
+            "line": 204,
+            "description": "The location of the Content item being rendered",
             "itemtype": "attribute",
             "name": "location",
             "type": "Y.eZ.Location",
-            "writeonce": "",
             "class": "eZ.RawContentView",
             "module": "ez-rawcontentview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 185,
-            "description": "The content associated the current location",
+            "line": 212,
+            "description": "The rendered Content item",
             "itemtype": "attribute",
             "name": "content",
             "type": "Y.eZ.Content",
-            "writeonce": "",
             "class": "eZ.RawContentView",
             "module": "ez-rawcontentview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 196,
-            "description": "The content type of the content at the current location",
+            "line": 220,
+            "description": "The Content Type of the Content item",
             "itemtype": "attribute",
             "name": "contentType",
             "type": "Y.eZ.ContentType",
-            "writeonce": "",
             "class": "eZ.RawContentView",
             "module": "ez-rawcontentview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 207,
+            "line": 228,
             "description": "Language code of language currently active for the current location",
             "itemtype": "attribute",
             "name": "languageCode",
             "type": "String",
+            "class": "eZ.RawContentView",
+            "module": "ez-rawcontentview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-rawcontentview.js",
+            "line": 236,
+            "description": "Configure the language switcher view to fire an event when\nswitching language ('event' value) or to let the browser follow\nthe link to switch language ('navigate' value).",
+            "itemtype": "attribute",
+            "name": "languageSwitchMode",
+            "type": "{String}",
+            "default": "undefined",
             "writeonce": "",
             "class": "eZ.RawContentView",
             "module": "ez-rawcontentview",
@@ -33508,7 +33922,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-rawcontentview.js",
-            "line": 218,
+            "line": 250,
             "description": "The language switcher view instance",
             "itemtype": "attribute",
             "name": "languageSwitcherView",
@@ -36573,7 +36987,7 @@
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
             "line": 24,
-            "description": "Override of the eZ.RestModel _parseStruct method to also read the\nfields of the current version",
+            "description": "Override of the eZ.RestModel _parseStruct method to also read the\nfields of the current version and the relations. The fields parsing\nis deprecated and will be removed from PlatformUI 2.0. Also, this\nparsing is broken in case of a Content translated in several\nlanguages.",
             "access": "protected",
             "tagname": "",
             "itemtype": "method",
@@ -36595,7 +37009,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 56,
+            "line": 63,
             "description": "Creates a new content (ie the content must not have an id) in the\nrepository.",
             "itemtype": "method",
             "name": "save",
@@ -36644,7 +37058,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 74,
+            "line": 81,
             "description": "sync implementation that relies on the JS REST client.\nIt only supports the 'read' and 'create' action. The callback is\ndirectly passed to the corresponding ContentService methods.",
             "itemtype": "method",
             "name": "sync",
@@ -36678,7 +37092,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 101,
+            "line": 108,
             "description": "Creates a content in the repository",
             "itemtype": "method",
             "name": "_createContent",
@@ -36729,7 +37143,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 130,
+            "line": 137,
             "description": "Creates the content create struct to create the content in the\nrepository",
             "itemtype": "method",
             "name": "_createContentStruct",
@@ -36748,14 +37162,19 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 156,
-            "description": "Returns the field which identifier is in parameter",
+            "line": 163,
+            "description": "Returns the field which identifier is in parameter. For BC,\n`languageCode` can be omitted but such case, `getField` falls back to\na deprecated and buggy behaviour with a content available in\nseveral languages.",
             "itemtype": "method",
             "name": "getField",
             "params": [
                 {
                     "name": "identifier",
                     "description": "the field definition identifier",
+                    "type": "String"
+                },
+                {
+                    "name": "languageCode",
+                    "description": "the language code in which the field",
                     "type": "String"
                 }
             ],
@@ -36769,8 +37188,29 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 168,
-            "description": "Returns the fields which field type has the given identifier.",
+            "line": 184,
+            "description": "Returns the fields in the given language code.",
+            "itemtype": "method",
+            "name": "getFieldsIn",
+            "params": [
+                {
+                    "name": "languageCode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 197,
+            "description": "Returns the fields which field type has the given identifier. For BC,\n`languageCode` can be omitted.",
             "itemtype": "method",
             "name": "getFieldsOfType",
             "params": [
@@ -36781,6 +37221,11 @@
                 },
                 {
                     "name": "fieldTypeIdentifier",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "languageCode",
                     "description": "",
                     "type": "String"
                 }
@@ -36795,7 +37240,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 184,
+            "line": 219,
             "description": "Checks whether the content is translated into `languageCode`",
             "itemtype": "method",
             "name": "hasTranslation",
@@ -36816,7 +37261,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 195,
+            "line": 230,
             "description": "Filters the relations on this content by type or optionally by field\ndefinition identifier.",
             "itemtype": "method",
             "name": "relations",
@@ -36844,7 +37289,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 228,
+            "line": 263,
             "description": "Returns the relations ids from the field in the shape of an Array of Object",
             "access": "protected",
             "tagname": "",
@@ -36867,7 +37312,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 255,
+            "line": 290,
             "description": "copy implementation that relies on the JS REST client.",
             "itemtype": "method",
             "name": "copy",
@@ -36901,7 +37346,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 268,
+            "line": 303,
             "description": "Loads content's locations list",
             "itemtype": "method",
             "name": "loadLocations",
@@ -36936,7 +37381,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 325,
+            "line": 360,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -36970,7 +37415,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 342,
+            "line": 377,
             "description": "Creates a new draft for the content",
             "itemtype": "method",
             "name": "createDraft",
@@ -37004,7 +37449,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 371,
+            "line": 406,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -37038,7 +37483,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 396,
+            "line": 431,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -37067,19 +37512,20 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 427,
-            "description": "Fields in the current version of the content indexed by field\ndefinition identifier",
+            "line": 462,
+            "description": "Fields in the current version of the content indexed by field\ndefinition identifier. This is just shortcut to the fields in the\ncurrent version.",
             "itemtype": "attribute",
             "name": "fields",
             "default": "{}",
             "type": "Object",
+            "deprecated": true,
             "class": "eZ.Content",
             "module": "ez-contentmodel",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 439,
+            "line": 481,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -37091,11 +37537,24 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 450,
+            "line": 492,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
             "type": "eZ.Version",
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 505,
+            "description": "Holds the current version to avoid creating a new object\nagain and again",
+            "itemtype": "property",
+            "name": "_currentVersion",
+            "access": "protected",
+            "tagname": "",
+            "type": "{eZ.Version}",
             "class": "eZ.Content",
             "module": "ez-contentmodel",
             "namespace": "eZ"
@@ -39279,14 +39738,66 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 170,
-            "description": "Returns the field which identifier is in parameter",
+            "line": 168,
+            "description": "Indexes the given `fields` by identifier. This is buggy by design but\nkept for BC as the fields can be translated so the same identifier\ncan appears several times in the REST response.",
+            "deprecated": true,
+            "itemtype": "method",
+            "name": "_indexFieldsByIdentifier",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "fields",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Version",
+            "module": "ez-versionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versionmodel.js",
+            "line": 189,
+            "description": "Indexes the given `fields` by language code and identifier.",
+            "itemtype": "method",
+            "name": "_indexFieldsByLanguages",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "fields",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Version",
+            "module": "ez-versionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versionmodel.js",
+            "line": 211,
+            "description": "Returns the field which identifier is in parameter in the given\nlanguage. For BC, `languageCode` can be omitted but such case,\n`getField` falls back to a deprecated and buggy behaviour with a\nversion available in several languages.",
             "itemtype": "method",
             "name": "getField",
             "params": [
                 {
                     "name": "identifier",
                     "description": "the field definition identifier",
+                    "type": "String"
+                },
+                {
+                    "name": "languageCode",
+                    "description": "the language code in which the field\nshould be returned",
                     "type": "String"
                 }
             ],
@@ -39300,7 +39811,50 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 181,
+            "line": 241,
+            "description": "Returns the fields in the given language.",
+            "itemtype": "method",
+            "name": "getFieldsIn",
+            "params": [
+                {
+                    "name": "languageCode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object|undefined"
+            },
+            "class": "eZ.Version",
+            "module": "ez-versionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versionmodel.js",
+            "line": 252,
+            "description": "Sets the fields in the given language",
+            "itemtype": "method",
+            "name": "setFieldsIn",
+            "params": [
+                {
+                    "name": "fields",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "languageCode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "eZ.Version",
+            "module": "ez-versionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versionmodel.js",
+            "line": 263,
             "description": "Checks whether the version is the current version of the given\n`content`",
             "itemtype": "method",
             "name": "isCurrentVersionOf",
@@ -39321,11 +39875,24 @@
         },
         {
             "file": "Resources/public/js/models/ez-versionmodel.js",
-            "line": 203,
+            "line": 285,
             "description": "The fields of the version by field identifier",
             "itemtype": "attribute",
             "name": "fields",
             "type": "Object",
+            "default": "{}",
+            "deprecated": true,
+            "class": "eZ.Version",
+            "module": "ez-versionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-versionmodel.js",
+            "line": 297,
+            "description": "The fields of the version by language code and field identifier,\ne.g\n     'fre-FR': {\n         'title': {},\n         'body': {},\n     }, {\n     'eng-GB': {\n         'title: {},\n         'body': {},\n     }\n\nDo not use this attribute directly, use `setFieldsIn`,\n`getFieldsIn` or `getField`.",
+            "itemtype": "attribute",
+            "name": "fieldsByLanguage",
+            "type": "{Object}",
             "default": "{}",
             "class": "eZ.Version",
             "module": "ez-versionmodel",
