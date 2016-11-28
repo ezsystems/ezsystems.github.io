@@ -676,7 +676,7 @@ YUI.add(&#x27;ez-translateactionview&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;languageSelect&#x27;, {
                 config: {
-                    title: &quot;Select a language for your new translation:&quot;,
+                    title: Y.eZ.trans(&#x27;select.a.language.for.new.translation&#x27;, {}, &#x27;bar&#x27;),
                     languageSelectedHandler: Y.bind(this._newTranslation, this),
                     cancelLanguageSelectionHandler: null,
                     canBaseTranslation: true,

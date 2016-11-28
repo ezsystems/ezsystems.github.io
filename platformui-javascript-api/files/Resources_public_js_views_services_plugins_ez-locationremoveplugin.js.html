@@ -581,7 +581,7 @@ YUI.add(&#x27;ez-locationremoveplugin&#x27;, function (Y) {
 
             service.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: &quot;Are you sure you want to remove selected locations?&quot;,
+                    title: Y.eZ.trans(&#x27;confirm.remove.location&#x27;, {}, &#x27;locationview&#x27;),
                     confirmHandler: Y.bind(function () {
                         this._removeLocations(e.locations, e.afterRemoveLocationsCallback);
                     }, this),
@@ -611,7 +611,7 @@ YUI.add(&#x27;ez-locationremoveplugin&#x27;, function (Y) {
                 redirectToMainLocation = false;
 
             this._notify(
-                &quot;Removing locations for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
+                Y.eZ.trans(&#x27;removing.locations.for&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -648,7 +648,11 @@ YUI.add(&#x27;ez-locationremoveplugin&#x27;, function (Y) {
 
                 if (countRemovedLocations &gt; 0) {
                     that._notify(
-                        countRemovedLocations + &quot; location(s) of &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; have been removed&quot;,
+                        Y.eZ.trans(
+                            &#x27;removed.locations.of&#x27;,
+                            {count: countRemovedLocations, name: content.get(&#x27;name&#x27;)},
+                            &#x27;locationview&#x27;
+                        ),
                         successNotificationIdentifier,
                         &#x27;done&#x27;,
                         5
@@ -657,7 +661,11 @@ YUI.add(&#x27;ez-locationremoveplugin&#x27;, function (Y) {
 
                 if (countRemoveLocationsFails &gt; 0) {
                     that._notify(
-                        &quot;Removing of &quot; + countRemoveLocationsFails + &quot; location(s) of &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; has failed&quot;,
+                        Y.eZ.trans(
+                            &#x27;failed.removing.locations.of&#x27;,
+                            {count: countRemoveLocationsFails, name: content.get(&#x27;name&#x27;)},
+                            &#x27;locationview&#x27;
+                        ),
                         errorNotificationIdentifier,
                         &#x27;error&#x27;,
                         0

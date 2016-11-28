@@ -576,7 +576,7 @@ YUI.add(&#x27;ez-url-editview&#x27;, function (Y) {
          */
         validate: function () {
             if ( this._getInputValidity().valueMissing ) {
-                this.set(&#x27;errorStatus&#x27;, &#x27;This field is required&#x27;);
+                this.set(&#x27;errorStatus&#x27;, Y.eZ.trans(&#x27;this.field.is.required&#x27;, {}, &#x27;fieldedit&#x27;));
             } else {
                 this.set(&#x27;errorStatus&#x27;, false);
             }

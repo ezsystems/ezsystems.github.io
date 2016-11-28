@@ -562,7 +562,7 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
     Y.eZ.SubitemListMoreView = Y.Base.create(&#x27;subitemListMoreView&#x27;, Y.eZ.AsynchronousSubitemView, [], {
         initializer: function () {
             this._set(&#x27;identifier&#x27;, &#x27;listmore&#x27;);
-            this._set(&#x27;name&#x27;, &#x27;List view&#x27;);
+            this._set(&#x27;name&#x27;, Y.eZ.trans(&#x27;list.view&#x27;, {}, &#x27;subitem&#x27;));
 
             this._ItemView = this.get(&#x27;itemViewConstructor&#x27;);
             this._itemViewBaseConfig = {
@@ -669,12 +669,14 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
              * @type {Object}
              */
             propertyNames: {
-                value: {
-                    &#x27;name&#x27;: &#x27;Name&#x27;,
-                    &#x27;lastModificationDate&#x27;: &#x27;Modified&#x27;,
-                    &#x27;contentType&#x27;: &#x27;Content type&#x27;,
-                    &#x27;priority&#x27;: &#x27;Priority&#x27;,
-                    &#x27;translations&#x27;: &#x27;Translations&#x27;,
+                valueFn: function () {
+                    return {
+                        &#x27;name&#x27;: Y.eZ.trans(&#x27;name&#x27;, {}, &#x27;subitem&#x27;),
+                        &#x27;lastModificationDate&#x27;: Y.eZ.trans(&#x27;modified&#x27;, {}, &#x27;subitem&#x27;),
+                        &#x27;contentType&#x27;: Y.eZ.trans(&#x27;content.type&#x27;, {}, &#x27;subitem&#x27;),
+                        &#x27;priority&#x27;: Y.eZ.trans(&#x27;priority&#x27;, {}, &#x27;subitem&#x27;),
+                        &#x27;translations&#x27;: Y.eZ.trans(&#x27;translations&#x27;, {}, &#x27;subitem&#x27;),
+                    };
                 }
             },
 

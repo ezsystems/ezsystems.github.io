@@ -632,7 +632,7 @@ YUI.add(&#x27;ez-asynchronoussubitemview&#x27;, function (Y) {
             if ( this.get(&#x27;loadingError&#x27;) ) {
                 this.fire(&#x27;notify&#x27;, {
                     notification: {
-                        text: &quot;An error occurred while loading the sub-items&quot;,
+                        text: Y.eZ.trans(&#x27;subitem.error.loading.list&#x27;, {}, &#x27;subitem&#x27;),
                         identifier: &#x27;subitem-load-error-&#x27; + this.get(&#x27;location&#x27;).get(&#x27;id&#x27;),
                         state: &#x27;error&#x27;,
                         timeout: 0

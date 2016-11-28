@@ -588,7 +588,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             e.location.updatePriority(loadOptions, e.priority, Y.bind(function (error, response) {
                 if (error) {
                     this._notify(
-                        &#x27;An error occurred when updating the priority&#x27;,
+                        Y.eZ.trans(&#x27;failed.updated.priority&#x27;, {}, &#x27;locationview&#x27;),
                         &#x27;update-priority-&#x27; + e.location.get(&#x27;locationId&#x27;),
                         &#x27;error&#x27;,
                         0
@@ -624,7 +624,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: &quot;Are you sure you want to send this content to trash?&quot;,
+                    title: Y.eZ.trans(&#x27;confirmed.send.to.trash&#x27;, {}, &#x27;locationview&#x27;),
                     confirmHandler: Y.bind(function () {
                         this._sendToTrash(e.content);
                     }, this)
@@ -644,7 +644,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: &quot;Are you sure you want to delete this content?&quot;,
+                    title: Y.eZ.trans(&#x27;confirmed.delete&#x27;, {}, &#x27;locationview&#x27;),
                     confirmHandler: Y.bind(this._deleteContent, this),
                 },
             });
@@ -661,7 +661,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
         _selectLocation: function (e) {
             this.fire(&#x27;contentDiscover&#x27;, {
                 config: {
-                    title: &quot;Select the location you want to move your content into&quot;,
+                    title: Y.eZ.trans(&#x27;select.location.move.to&#x27;, {}, &#x27;locationview&#x27;),
                     contentDiscoveredHandler: Y.bind(this._moveContent, this),
                     isSelectable: function (contentStruct) {
                         return contentStruct.contentType.get(&#x27;isContainer&#x27;);
@@ -685,7 +685,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                 parentLocation = path[path.length - 1];
 
             this._notify(
-                &#x27;Sending &quot;&#x27; + content.get(&#x27;name&#x27;) + &#x27;&quot; to Trash&#x27;,
+                Y.eZ.trans(&#x27;sending.to.trash&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                 &#x27;send-to-trash-&#x27; + locationId,
                 &#x27;started&#x27;,
                 0
@@ -706,7 +706,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                 parentLocation = path[path.length - 1];
 
             this._notify(
-                &#x27;Deleting &quot;&#x27; + content.get(&#x27;name&#x27;) + &#x27;&quot;&#x27;,
+                Y.eZ.trans(&#x27;deleting.content&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                 &#x27;delete-&#x27; + content.get(&#x27;id&#x27;),
                 &#x27;started&#x27;,
                 0
@@ -732,7 +732,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
 
             if (error) {
                 this._notify(
-                    &#x27;An error occurred when sending &quot;&#x27; + contentName + &#x27;&quot; to Trash&#x27;,
+                    Y.eZ.trans(&#x27;failed.sending.to.trash&#x27;, {name: contentName}, &#x27;locationview&#x27;),
                     &#x27;send-to-trash-&#x27; + locationId,
                     &#x27;error&#x27;,
                     0
@@ -741,7 +741,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             }
 
             this._notify(
-                &#x27;&quot;&#x27; + contentName + &#x27;&quot; sent to Trash&#x27;,
+                Y.eZ.trans(&#x27;sent.to.trash&#x27;, {name: contentName}, &#x27;locationview&#x27;),
                 &#x27;send-to-trash-&#x27; + locationId,
                 &#x27;done&#x27;,
                 5
@@ -776,7 +776,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
 
             if (error) {
                 this._notify(
-                    &#x27;An error occurred when deleting &quot;&#x27; + contentName + &#x27;&quot;&#x27;,
+                    Y.eZ.trans(&#x27;failed.deleting.content&#x27;, {name: contentName}, &#x27;locationview&#x27;),
                     &#x27;delete-&#x27; + content.get(&#x27;id&#x27;),
                     &#x27;error&#x27;,
                     0
@@ -785,7 +785,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             }
 
             this._notify(
-                &#x27;&quot;&#x27; + contentName + &#x27;&quot; was deleted&#x27;,
+                Y.eZ.trans(&#x27;deleted.content&#x27;, {name: contentName}, &#x27;locationview&#x27;),
                 &#x27;delete-&#x27; + content.get(&#x27;id&#x27;),
                 &#x27;done&#x27;,
                 5
@@ -824,16 +824,23 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                 parentContentName = e.selection.contentInfo.get(&#x27;name&#x27;),
                 notificationIdentifier =  &#x27;move-notification-&#x27; + parentLocationId + &#x27;-&#x27; + locationId;
 
-            this._notify(&quot;&#x27;&quot; + contentName + &quot;&#x27; is being moved under &#x27;&quot; + parentContentName + &quot;&#x27;&quot;, notificationIdentifier, &#x27;started&#x27;, 5);
+            this._notify(
+                Y.eZ.trans(&#x27;being.moved.under&#x27;, {name: contentName, parentName: parentContentName}, &#x27;locationview&#x27;),
+                notificationIdentifier,
+                &#x27;started&#x27;, 5
+            );
 
             this.get(&#x27;location&#x27;).move({api: this.get(&#x27;capi&#x27;)},  parentLocationId, function (error, response) {
                 if (error) {
-                    that._notify(&#x27;An error occurred while moving your content&#x27;, notificationIdentifier, &#x27;error&#x27;, 0);
+                    that._notify(
+                        Y.eZ.trans(&#x27;failed.moving&#x27;, {}, &#x27;locationview&#x27;),
+                        notificationIdentifier, &#x27;error&#x27;, 0
+                    );
                     return;
                 }
 
                 that._notify(
-                    &quot;&#x27;&quot; + contentName + &quot;&#x27; has been successfully moved under &#x27;&quot; + parentContentName + &quot;&#x27;&quot;,
+                    Y.eZ.trans(&#x27;moved.under&#x27;, {name: contentName, parentName: parentContentName}, &#x27;locationview&#x27;),
                     notificationIdentifier,
                     &#x27;done&#x27;,
                     5
@@ -894,7 +901,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                 notificationIdentifier = &#x27;sort-change-&#x27; + e.sortType + &#x27;-&#x27; + e.sortOrder;
 
             this._notify(
-                &#x27;Updating the sub items sort method&#x27;,
+                Y.eZ.trans(&#x27;updating.sort.method&#x27;, {}, &#x27;locationview&#x27;),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -903,7 +910,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
             location.updateSorting(loadOptions, e.sortType, e.sortOrder, Y.bind(function (error, response) {
                 if (!error) {
                     this._notify(
-                        &#x27;The sub items sort method has been correctly updated&#x27;,
+                        Y.eZ.trans(&#x27;updated.sort.method&#x27;, {}, &#x27;locationview&#x27;),
                         notificationIdentifier,
                         &#x27;done&#x27;,
                         5
@@ -921,7 +928,7 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                     });
                 } else {
                     this._notify(
-                        &#x27;An error occured while updating the sub items sort method:&#x27; + error,
+                        Y.eZ.trans(&#x27;failed.updating.sort.method&#x27;, {}, &#x27;locationview&#x27;),
                         notificationIdentifier,
                         &#x27;error&#x27;,
                         0
@@ -975,7 +982,9 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
 
                 loadContentOptions.languageCode = service.get(&#x27;languageCode&#x27;);
                 if ( error ) {
-                    service._error(&quot;Failed to load the location &quot; + location.get(&#x27;id&#x27;));
+                    service._error(
+                        Y.eZ.trans(&#x27;failed.to.load.location&#x27;, {id: location.get(&#x27;id&#x27;)}, &#x27;locationview&#x27;)
+                    );
                     return;
                 }
 
@@ -985,13 +994,17 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                 content.set(&#x27;id&#x27;, location.get(&#x27;resources&#x27;).Content);
                 content.load(loadContentOptions, function (error) {
                     if ( error ) {
-                        service._error(&quot;Failed to load the content &quot; + content.get(&#x27;id&#x27;));
+                        service._error(
+                            Y.eZ.trans(&#x27;failed.to.load.content&#x27;, {id: content.get(&#x27;id&#x27;)}, &#x27;locationview&#x27;)
+                        );
                         return;
                     }
                     type.set(&#x27;id&#x27;, content.get(&#x27;resources&#x27;).ContentType);
                     type.load(Y.merge(loadOptions, {loadGroups: true}), function (error) {
                         if ( error ) {
-                            service._error(&quot;Failed to load the content type &quot; + type.get(&#x27;id&#x27;));
+                            service._error(
+                                Y.eZ.trans(&#x27;failed.to.load.content.type&#x27;, {id: type.get(&#x27;id&#x27;)}, &#x27;locationview&#x27;)
+                            );
                             return;
                         }
                         endMainContentLoad();
@@ -1001,7 +1014,9 @@ YUI.add(&#x27;ez-locationviewviewservice&#x27;, function (Y) {
                 endLoadPath = tasks.add();
                 location.loadPath(loadOptions, function(error, path) {
                     if ( error ) {
-                        service._error(&quot;Failed to load locations&#x27;s path with REST API&quot;);
+                        service._error(
+                            Y.eZ.trans(&#x27;failed.to.load.location.path&#x27;, {}, &#x27;locationview&#x27;)
+                        );
                         return;
                     }
 

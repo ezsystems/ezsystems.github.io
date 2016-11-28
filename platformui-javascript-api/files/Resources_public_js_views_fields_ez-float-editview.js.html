@@ -551,8 +551,7 @@ YUI.add(&#x27;ez-float-editview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var L = Y.Lang,
-        FIELDTYPE_IDENTIFIER = &#x27;ezfloat&#x27;,
+    var FIELDTYPE_IDENTIFIER = &#x27;ezfloat&#x27;,
         FLOAT_PATTERN = &quot;-?\\d*\\.?\\d+&quot;; // WARNING: each backslash is doubled, because it is escaped on output otherwise
 
     /**
@@ -588,23 +587,23 @@ YUI.add(&#x27;ez-float-editview&#x27;, function (Y) {
             validity = this._getInputValidity();
 
             if ( validity.valueMissing ) {
-                this.set(&#x27;errorStatus&#x27;, &#x27;This field is required&#x27;);
+                this.set(&#x27;errorStatus&#x27;, Y.eZ.trans(&#x27;this.field.is.required&#x27;, {}, &#x27;fieldedit&#x27;));
             // Float pattern validation
             } else if ( validity.patternMismatch ) {
                 this.set(
                     &#x27;errorStatus&#x27;,
-                    &#x27;The value should be a valid float number&#x27;
+                    Y.eZ.trans(&#x27;invalid.float.value&#x27;, {}, &#x27;fieldedit&#x27;)
                 );
             // Range validation
             } else if ( config.maxFloatValue &amp;&amp; inputValue &gt; config.maxFloatValue ) {
                 this.set(
                     &#x27;errorStatus&#x27;,
-                    L.sub(&#x27;The value should be less than or equal to {maxFloatValue}&#x27;, config)
+                    Y.eZ.trans(&#x27;float.value.should.be.less.than&#x27;, config, &#x27;fieldedit&#x27;)
                 );
             } else if ( config.minFloatValue &amp;&amp; inputValue &lt; config.minFloatValue ) {
                 this.set(
                     &#x27;errorStatus&#x27;,
-                    L.sub(&#x27;The value should be more than or equal to {minFloatValue}&#x27;, config)
+                    Y.eZ.trans(&#x27;float.value.should.be.more.than&#x27;, config, &#x27;fieldedit&#x27;)
                 );
 
             } else {

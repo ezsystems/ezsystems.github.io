@@ -602,7 +602,7 @@ YUI.add(&#x27;ez-publishdraftplugin&#x27;, function (Y) {
             service.fire(&#x27;notify&#x27;, {
                 notification: {
                     identifier: notificationIdentifier,
-                    text: &#x27;Publishing the content&#x27;,
+                    text: Y.eZ.trans(&#x27;publishing.content&#x27;, {}, &#x27;contentedit&#x27;),
                     state: &#x27;started&#x27;,
                     timeout: 5,
                 },
@@ -652,7 +652,7 @@ YUI.add(&#x27;ez-publishdraftplugin&#x27;, function (Y) {
             service.fire(&#x27;notify&#x27;, {
                 notification: {
                     identifier: notificationIdentifier,
-                    text: &#x27;Content has been published&#x27;,
+                    text: Y.eZ.trans(&#x27;content.published&#x27;, {}, &#x27;contentedit&#x27;),
                     state: &#x27;done&#x27;,
                     timeout: 5,
                 },
@@ -739,7 +739,7 @@ YUI.add(&#x27;ez-publishdraftplugin&#x27;, function (Y) {
             this.get(&#x27;host&#x27;).fire(&#x27;notify&#x27;, {
                 notification: {
                     identifier: this._buildNotificationIdentifier(contentId),
-                    text: &#x27;An error occurred while publishing the draft&#x27;,
+                    text: Y.eZ.trans(&#x27;error.publishing.draft&#x27;, {}, &#x27;contentedit&#x27;),
                     state: &#x27;error&#x27;,
                     timeout: 0,
                 },

@@ -565,18 +565,6 @@ YUI.add(&#x27;ez-dateandtime-editview&#x27;, function (Y) {
         TIME_INVALID_DATE_MISSING = 10,
         ERROR_MSG_DICTIONARY = {};
 
-    ERROR_MSG_DICTIONARY[NO_ERROR] = false;
-    ERROR_MSG_DICTIONARY[DATE_TIME_INVALID] = &#x27;Date and time do not have valid inputs&#x27;;
-    ERROR_MSG_DICTIONARY[DATE_INVALID_TIME_REQUIRED] = &#x27;Date do not have a valid input and time is required&#x27;;
-    ERROR_MSG_DICTIONARY[DATE_INVALID] = &#x27;Date do not have a valid input&#x27;;
-    ERROR_MSG_DICTIONARY[TIME_INVALID_DATE_REQUIRED] = &#x27;Time do not have a valid input and date is required&#x27;;
-    ERROR_MSG_DICTIONARY[TIME_INVALID] = &#x27;Time do not have a valid input&#x27;;
-    ERROR_MSG_DICTIONARY[DATE_TIME_REQUIRED] = &#x27;Date and time are required&#x27;;
-    ERROR_MSG_DICTIONARY[TIME_REQUIRED] = &#x27;Time is required&#x27;;
-    ERROR_MSG_DICTIONARY[DATE_REQUIRED] = &#x27;Date is required&#x27;;
-    ERROR_MSG_DICTIONARY[DATE_INVALID_TIME_MISSING] = &#x27;Date do not have a valid input and time is missing&#x27;;
-    ERROR_MSG_DICTIONARY[TIME_INVALID_DATE_MISSING] = &#x27;Time do not have a valid input and date is missing&#x27;;
-
     /**
      * Date and time edit view
      *
@@ -599,6 +587,18 @@ YUI.add(&#x27;ez-dateandtime-editview&#x27;, function (Y) {
 
         initializer: function () {
             this._useStandardFieldDefinitionDescription = false;
+
+            ERROR_MSG_DICTIONARY[NO_ERROR] = false;
+            ERROR_MSG_DICTIONARY[DATE_TIME_INVALID] = Y.eZ.trans(&#x27;date.and.time.not.valid&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[DATE_INVALID_TIME_REQUIRED] = Y.eZ.trans(&#x27;date.not.valid.time.required&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[DATE_INVALID] = Y.eZ.trans(&#x27;date.not.valid&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[TIME_INVALID_DATE_REQUIRED] = Y.eZ.trans(&#x27;time.not.valid.date.required&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[TIME_INVALID] = Y.eZ.trans(&#x27;time.not.valid&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[DATE_TIME_REQUIRED] = Y.eZ.trans(&#x27;date.time.required&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[TIME_REQUIRED] = Y.eZ.trans(&#x27;time.required&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[DATE_REQUIRED] = Y.eZ.trans(&#x27;date.required&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[DATE_INVALID_TIME_MISSING] = Y.eZ.trans(&#x27;date.not.valid.time.missing&#x27;, {}, &#x27;fieldedit&#x27;);
+            ERROR_MSG_DICTIONARY[TIME_INVALID_DATE_MISSING] = Y.eZ.trans(&#x27;time.not.valid.date.missing&#x27;, {}, &#x27;fieldedit&#x27;);
         },
 
         /**

@@ -637,8 +637,10 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                         // available and the user manipulated with URI to pass
                         // any language code.
                         service._error(
-                            &quot;Could not load the content with id &#x27;&quot; + request.params.id
-                            + &quot;&#x27; and languageCode &#x27;&quot; + baseLanguageCode + &quot;&#x27;&quot;
+                            Y.eZ.trans(&#x27;failed.loading.content.id.language&#x27;, {
+                                contentId: request.params.id,
+                                languageCode: baseLanguageCode,
+                            }, &#x27;contentedit&#x27;)
                         );
                         return;
                     }
@@ -667,19 +669,19 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                 contentId = this.get(&#x27;contentInfo&#x27;).get(&#x27;id&#x27;);
 
             if ( !version.isDraft() ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; is not a draft.&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.a.draft&#x27;, {versionId: versionId}, &#x27;contentedit&#x27;));
                 return false;
             }
             if ( version.get(&#x27;resources&#x27;).Content !== contentId ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; is not a version of the content &#x27;&quot; + contentId  + &quot;&#x27;&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.a.draft.of.content&#x27;, {versionId: versionId, contentId: contentId}, &#x27;contentedit&#x27;));
                 return false;
             }
             if ( !version.hasTranslation(this.get(&#x27;languageCode&#x27;)) ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; does not exist in &#x27;&quot; + this.get(&#x27;languageCode&#x27;) + &quot;&#x27;&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.exist.in&#x27;, {versionId: versionId, languageCode: this.get(&#x27;languageCode&#x27;)}, &#x27;contentedit&#x27;));
                 return false;
             }
             if ( !version.createdBy(this.get(&#x27;app&#x27;).get(&#x27;user&#x27;)) ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; does not belong to you&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.belong.to.you&#x27;, {versionId: versionId}, &#x27;contentedit&#x27;));
                 return false;
             }
             return true;
@@ -756,7 +758,10 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                 &#x27;content&#x27;,
                 id,
                 {languageCode: languageCode},
-                &quot;Could not load the content with id &#x27;&quot; + id + &quot;&#x27; and languageCode &#x27;&quot; + languageCode + &quot;&#x27;&quot;,
+                Y.eZ.trans(
+                    &#x27;failed.loading.content.in&#x27;,
+                    {contentId: id, languageCode: languageCode}, &#x27;contentedit&#x27;
+                ),
                 callback
             );
          },
@@ -775,7 +780,10 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                 &#x27;version&#x27;,
                 id,
                 {languageCode: languageCode},
-                &quot;Could not load the version with id &#x27;&quot; + id + &quot;&#x27; and languageCode &#x27;&quot; + languageCode + &quot;&#x27;&quot;,
+                Y.eZ.trans(
+                    &#x27;failed.loading.version.in&#x27;,
+                    {versionId: id, languageCode: languageCode}, &#x27;contentedit&#x27;
+                ),
                 callback
             );
         },
@@ -789,7 +797,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadContentInfo: function (id, callback) {
-            this._loadModel(&#x27;contentInfo&#x27;, id, {}, &quot;Could not find the content id &#x27;&quot; + id + &quot;&#x27;&quot;, callback);
+            this._loadModel(
+                &#x27;contentInfo&#x27;, id, {},
+                Y.eZ.trans(
+                    &#x27;failed.finding.content&#x27;,
+                    {id: id}, &#x27;contentedit&#x27;
+                ),
+                callback
+            );
         },
 
 
@@ -802,7 +817,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadContentType: function (id, callback) {
-            this._loadModel(&#x27;contentType&#x27;, id, {}, &quot;Could not load the content type with id &#x27;&quot; + id + &quot;&#x27;&quot;, callback);
+            this._loadModel(
+                &#x27;contentType&#x27;, id, {},
+                Y.eZ.trans(
+                    &#x27;failed.loading.content.type&#x27;,
+                    {id: id}, &#x27;contentedit&#x27;
+                ),
+                callback
+            );
         },
 
         /**
@@ -814,7 +836,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadLocation: function (id, callback) {
-            this._loadModel(&#x27;location&#x27;, id, {}, &quot;Could not load the location with id &#x27;&quot; + id + &quot;&#x27;&quot;, callback);
+            this._loadModel(
+                &#x27;location&#x27;, id, {},
+                Y.eZ.trans(
+                    &#x27;failed.loading.location&#x27;,
+                    {id: id}, &#x27;contentedit&#x27;
+                ),
+                callback
+            );
         },
 
         /**
@@ -1026,7 +1055,7 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;languageSelect&#x27;, {
                 config: {
-                    title: &quot;Change language to:&quot;,
+                    title: Y.eZ.trans(&#x27;change.language.to&#x27;, {}, &#x27;contentedit&#x27;),
                     languageSelectedHandler: Y.bind(this._changeContentLanguage, this),
                     cancelLanguageSelectionHandler: null,
                     canBaseTranslation: false,

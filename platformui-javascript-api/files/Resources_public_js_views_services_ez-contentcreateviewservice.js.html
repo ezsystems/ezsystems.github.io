@@ -575,7 +575,9 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
             if ( !type.get(&#x27;fieldDefinitions&#x27;) ) {
                 type.load({api: this.get(&#x27;capi&#x27;)}, function (err) {
                     if ( err ) {
-                        return service._error(&quot;Could not load the content type with id &#x27;&quot; + type.get(&#x27;id&#x27;) + &quot;&#x27;&quot;);
+                        return service._error(
+                            Y.eZ.trans(&#x27;failed.loading.content.type&#x27;, {id: type.get(&#x27;id&#x27;)}, &#x27;contentedit&#x27;)
+                        );
                     }
                     service._initModels(next);
                 });
@@ -667,7 +669,7 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
             contentTypeName = contentTypeNames[app.get(&#x27;contentCreationDefaultLanguageCode&#x27;)]
                 || contentTypeNames[Object.keys(contentTypeNames)[0]];
 
-            return &#x27;New &quot;&#x27; + contentTypeName + &#x27;&quot;&#x27;;
+            return Y.eZ.trans(&#x27;name.new.content.of.type&#x27;, {contentTypeName: contentTypeName}, &#x27;contentedit&#x27;);
         },
 
         /**
@@ -682,7 +684,7 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;languageSelect&#x27;, {
                 config: {
-                    title: &quot;Change language to:&quot;,
+                    title: Y.eZ.trans(&#x27;change.language.to&#x27;, {}, &#x27;contentedit&#x27;),
                     languageSelectedHandler: Y.bind(this._setLanguage, this, e.target, e.fields),
                     cancelLanguageSelectionHandler: null,
                     canBaseTranslation: false,
@@ -724,7 +726,11 @@ YUI.add(&#x27;ez-contentcreateviewservice&#x27;, function (Y) {
 
             this.fire(&#x27;notify&#x27;, {
                 notification: {
-                    text: &#x27;Language has been changed to &#x27; + this.get(&#x27;app&#x27;).getLanguageName(selectedLanguageCode),
+                    text: Y.eZ.trans(
+                        &#x27;language.changed.to&#x27;,
+                        {name: this.get(&#x27;app&#x27;).getLanguageName(selectedLanguageCode)},
+                        &#x27;contentedit&#x27;
+                    ),
                     identifier: &#x27;create-content-change-language-to-&#x27; + selectedLanguageCode,
                     state: &#x27;done&#x27;,
                     timeout: 5,

@@ -580,8 +580,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: &quot;Are you sure you want to permanently delete &quot; + this.get(&#x27;trashItems&#x27;).length
-                        + &quot; items? This action cannot be reversed.&quot;,
+                    title: Y.eZ.trans(&#x27;confirm.permanent.delete.items&#x27;, {count: this.get(&#x27;trashItems&#x27;).length}, &#x27;trash&#x27;),
                     confirmHandler: Y.bind(function () {
                         this._emptyTrash();
                     }, this)
@@ -648,7 +647,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
             contentType.set(&#x27;id&#x27;, trashItem.get(&#x27;contentInfo&#x27;).get(&#x27;resources&#x27;).ContentType);
             contentType.load(loadOptions, tasks.add(function (error) {
                 if (error) {
-                    service._error(&quot;Failed to load trash item Content Type name with REST API&quot;);
+                    service._error(Y.eZ.trans(&#x27;failed.load.content.type&#x27;, {}, &#x27;trash&#x27;));
                 }
             }));
 
@@ -660,7 +659,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
                     if (!error) {
                         parentLocation.loadPath(loadOptions, tasks.add(function (error) {
                             if (error) {
-                                service._error(&quot;Failed to load parent location path with REST API&quot;);
+                                service._error(Y.eZ.trans(&#x27;failed.load.parent.location.path&#x27;, {}, &#x27;trash&#x27;));
                             }
                         }));
                     }
@@ -717,7 +716,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
             contentService.emptyTrash(Y.bind(function (error) {
                 if (error) {
                     this._notify(
-                        &#x27;An error occurred while emptying the Trash&#x27;,
+                        Y.eZ.trans(&#x27;error.emptying.trash&#x27;, {}, &#x27;trash&#x27;),
                         notificationName,
                         &#x27;error&#x27;,
                         0
@@ -732,7 +731,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
                 this.fire(&#x27;refreshView&#x27;);
 
                 this._notify(
-                    itemCount + &#x27; Items were permanently deleted.&#x27;,
+                    Y.eZ.trans(&#x27;items.permanently.deleted&#x27;, {count: itemCount}, &#x27;trash&#x27;),
                     notificationName,
                     &#x27;done&#x27;,
                     5
@@ -778,7 +777,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
                 restoreCount = 0;
 
             this._notify(
-                &#x27;Restoring trash item(s)&#x27;,
+                Y.eZ.trans(&#x27;restoring.trash.items&#x27;, {}, &#x27;trash&#x27;),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -790,8 +789,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
 
                     if (error) {
                         service._notify(
-                            &quot;An error occurred while restoring trash item with Id: &quot; + trashItemId
-                            + &quot;. For the moment item&#x27;s whose original location has been deleted can not be restored&quot;,
+                            Y.eZ.trans(&#x27;error.restoring.item&#x27;, {id: trashItemId}, &#x27;trash&#x27;),
                             notificationIdentifier + &quot;-error-&quot; + trashItemId,
                             &#x27;error&#x27;,
                             0
@@ -816,7 +814,7 @@ YUI.add(&#x27;ez-trashviewservice&#x27;, function (Y) {
 
                 if (restoreCount &gt; 0) {
                     service._notify(
-                        restoreCount + &#x27; Content item(s) have been restored&#x27;,
+                        Y.eZ.trans(&#x27;content.items.restored&#x27;, {count: restoreCount}, &#x27;trash&#x27;),
                         notificationIdentifier,
                         &#x27;done&#x27;,
                         5

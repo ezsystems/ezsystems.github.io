@@ -582,7 +582,7 @@ YUI.add(&#x27;ez-contentsetmainlocationplugin&#x27;, function (Y) {
 
             service.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: &quot;Are you sure you want to set this location as main location of content?&quot;,
+                    title: Y.eZ.trans(&#x27;confirm.set.main.location&#x27;, {}, &#x27;locationview&#x27;),
                     confirmHandler: Y.bind(function () {
                         this._setMainLocation(e.locationId, e.afterSetMainLocationCallback);
                     }, this),
@@ -607,7 +607,7 @@ YUI.add(&#x27;ez-contentsetmainlocationplugin&#x27;, function (Y) {
                 that = this;
 
             this._notify(
-                &quot;Changing the main location of &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
+                Y.eZ.trans(&#x27;changing.main.location.of&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -618,7 +618,7 @@ YUI.add(&#x27;ez-contentsetmainlocationplugin&#x27;, function (Y) {
 
                 if (error) {
                     that._notify(
-                        &quot;Changing main location of &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; failed&quot;,
+                        Y.eZ.trans(&#x27;failed.changing.main.location.of&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                         notificationIdentifier,
                         &#x27;error&#x27;,
                         0
@@ -627,7 +627,7 @@ YUI.add(&#x27;ez-contentsetmainlocationplugin&#x27;, function (Y) {
                 }
 
                 that._notify(
-                    &quot;The main location of &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; has been changed&quot;,
+                    Y.eZ.trans(&#x27;changed.main.location.of&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                     notificationIdentifier,
                     &#x27;done&#x27;,
                     5

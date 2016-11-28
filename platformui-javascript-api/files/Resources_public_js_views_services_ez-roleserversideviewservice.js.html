@@ -623,7 +623,11 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                     var end = tasks.add(function (err, response) {
                             if (err) {
                                 service._notify(
-                                    &#x27;Role has not been assigned to &quot;&#x27; + struct.contentInfo.get(&#x27;name&#x27;) + &#x27;&quot;: &#x27; + err.message,
+                                    Y.eZ.trans(
+                                        &#x27;failed.assigned.role&#x27;,
+                                        {name: struct.contentInfo.get(&#x27;name&#x27;), message: err.message},
+                                        &#x27;role&#x27;
+                                    ),
                                     &#x27;assign-role-failed-&#x27; + struct.contentInfo.get(&#x27;id&#x27;),
                                     &#x27;error&#x27;,
                                     0
@@ -736,7 +740,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             } else if (contentTypeIdentifier === &#x27;user_group&#x27;) {
                 this._assignRoleToUserGroup(role, limitation, struct.contentInfo, struct.location, callback);
             } else {
-                callback({message:&#x27;Selected content is not a user or group.&#x27;});
+                callback({message: Y.eZ.trans(&#x27;selected.content.not.user.group&#x27;, {}, &#x27;role&#x27;)});
             }
         },
 
@@ -822,18 +826,24 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
                     &#x27;assign-role&#x27;, assignActionData, contents
                 ),
-                notificationSucessText =
-                    &#x27;&quot;&#x27;
-                    + assignActionData.roleName
-                    + &#x27;&quot; role has been assigned to &#x27;
-                    + countAssigned
-                    + &#x27; users/groups&#x27;;
+                notificationSucessText = Y.eZ.trans(&#x27;role.assigned.to.user&#x27;, {
+                    name: assignActionData.roleName,
+                    count: countAssigned,
+                }, &#x27;role&#x27;);
 
             if (countAssigned&gt;0) {
                 if (this._hasSectionLimitation(assignActionData)) {
-                    notificationSucessText += &#x27; limited to &#x27; + assignActionData.section.sectionName + &#x27; section&#x27;;
+                    notificationSucessText = Y.eZ.trans(&#x27;role.assigned.to.user.section.limited&#x27;, {
+                        name: assignActionData.roleName,
+                        count: countAssigned,
+                        sectionName: assignActionData.section.sectionName
+                    }, &#x27;role&#x27;);
                 } else if (this._hasSubtreeLimitation(assignActionData)) {
-                    notificationSucessText += &#x27; with a subtree limitation&#x27;;
+                    notificationSucessText = Y.eZ.trans(&#x27;role.assigned.to.user.subtree.limited&#x27;, {
+                        name: assignActionData.roleName,
+                        count: countAssigned,
+                    }, &#x27;role&#x27;);
+
                 }
                 this._notify(
                     notificationSucessText ,
@@ -843,7 +853,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                 );
             } else {
                 this._notify(
-                    &#x27;Role has not been assigned to any users/groups&#x27;,
+                    Y.eZ.trans(&#x27;failed.assigned.role.user&#x27;, {}, &#x27;role&#x27;),
                     notificationIdentifier,
                     &#x27;error&#x27;,
                     0
@@ -865,12 +875,23 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
                     &#x27;assign-role&#x27;, assignActionData, contents
                 ),
-                notificationText = &#x27;Assigning the role &quot;&#x27; + assignActionData.roleName + &#x27;&quot; to &#x27; + contents.length + &#x27; users/groups&#x27;;
+                notificationText = Y.eZ.trans(&#x27;assigning.role.to.users&#x27;, {
+                    roleName: assignActionData.roleName,
+                    count: contents.length,
+                }, &#x27;role&#x27;);
+                
 
             if (this._hasSectionLimitation(assignActionData)) {
-                notificationText += &#x27; limited to &#x27; + assignActionData.section.sectionName + &#x27; section&#x27;;
+                notificationText = Y.eZ.trans(&#x27;assigning.role.to.users.section.limited&#x27;, {
+                    roleName: assignActionData.roleName,
+                    count: contents.length,
+                    sectionName: assignActionData.section.sectionName,
+                }, &#x27;role&#x27;);
             } else if (this._hasSubtreeLimitation(assignActionData)) {
-                notificationText += &#x27; with a subtree limitation&#x27;;
+                notificationText = Y.eZ.trans(&#x27;assigning.role.to.users.subtree.limited&#x27;, {
+                    roleName: assignActionData.roleName,
+                    count: contents.length,
+                }, &#x27;role&#x27;);
             }
             this._notify(
                 notificationText,
@@ -894,7 +915,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                 );
 
             this._notify(
-                &#x27;The role &quot;&#x27; + assignActionData.roleName + &#x27;&quot; could not be loaded&#x27;,
+                Y.eZ.trans(&#x27;failed.loading.role&#x27;, {roleName: assignActionData.roleName}, &#x27;role&#x27;),
                 notificationIdentifier,
                 &#x27;error&#x27;,
                 0

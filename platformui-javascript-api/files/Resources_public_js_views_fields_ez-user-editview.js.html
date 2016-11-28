@@ -727,7 +727,7 @@ YUI.add(&#x27;ez-user-editview&#x27;, function (Y) {
                 this._checkLoginAvailability(login);
                 this.set(&#x27;loginErrorStatus&#x27;, false);
             } else if ( loginRequired &amp;&amp; !login ) {
-                this.set(&#x27;loginErrorStatus&#x27;, &#x27;The login is required&#x27;);
+                this.set(&#x27;loginErrorStatus&#x27;, Y.eZ.trans(&#x27;login.required&#x27;, {}, &#x27;fieldedit&#x27;));
             } else {
                 this.set(&#x27;loginErrorStatus&#x27;, false);
             }
@@ -761,9 +761,9 @@ YUI.add(&#x27;ez-user-editview&#x27;, function (Y) {
                 validity = this._getEmailInputValidity();
 
             if ( validity.typeMismatch ) {
-                this.set(&#x27;emailErrorStatus&#x27;, &#x27;The email is not valid&#x27;);
+                this.set(&#x27;emailErrorStatus&#x27;, Y.eZ.trans(&#x27;email.not.valid&#x27;, {}, &#x27;fieldedit&#x27;));
             } else if ( emailRequired &amp;&amp; !this._getInputFieldValue(&#x27;email&#x27;) ) {
-                this.set(&#x27;emailErrorStatus&#x27;, &#x27;The email is required&#x27;);
+                this.set(&#x27;emailErrorStatus&#x27;, Y.eZ.trans(&#x27;email.required&#x27;, {}, &#x27;fieldedit&#x27;));
             } else {
                 this.set(&#x27;emailErrorStatus&#x27;, false);
             }

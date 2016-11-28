@@ -600,7 +600,7 @@ YUI.add(&#x27;ez-alloyeditor-button-list&#x27;, function (Y) {
             return (
                 React.createElement(&quot;button&quot;, {className: css, onClick: this._addList, tabIndex: this.props.tabIndex}, 
                     React.createElement(&quot;span&quot;, {className: &quot;ez-ae-icon ae-icon-bulleted-list&quot;}), 
-                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, &quot;List&quot;)
+                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, Y.eZ.trans(&#x27;list&#x27;, {}, &#x27;onlineeditor&#x27;))
                 )
             );
         },

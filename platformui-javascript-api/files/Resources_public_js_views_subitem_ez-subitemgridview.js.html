@@ -568,7 +568,7 @@ YUI.add(&#x27;ez-subitemgridview&#x27;, function (Y) {
     Y.eZ.SubitemGridView = Y.Base.create(&#x27;subitemGridView&#x27;, Y.eZ.AsynchronousSubitemView, [], {
         initializer: function () {
             this._set(&#x27;identifier&#x27;, &#x27;grid&#x27;);
-            this._set(&#x27;name&#x27;, &#x27;Grid view&#x27;);
+            this._set(&#x27;name&#x27;, Y.eZ.trans(&#x27;grid.view&#x27;, {}, &#x27;subitem&#x27;));
 
             this._ItemView = Y.eZ.SubitemGridItemView;
             this._itemViewBaseConfig = {};

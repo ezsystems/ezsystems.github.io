@@ -596,7 +596,8 @@ YUI.add(&#x27;ez-alloyeditor-button-heading&#x27;, function (Y) {
 
             return (
                 React.createElement(&quot;button&quot;, {className: css, onClick: this._addHeading, tabIndex: this.props.tabIndex}, 
-                    React.createElement(&quot;span&quot;, {className: &quot;ez-ae-icon ae-icon-h1&quot;}), React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, &quot;Heading&quot;)
+                    React.createElement(&quot;span&quot;, {className: &quot;ez-ae-icon ae-icon-h1&quot;}), 
+                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, Y.eZ.trans(&#x27;heading&#x27;, {}, &#x27;onlineeditor&#x27;))
                 )
             );
         },

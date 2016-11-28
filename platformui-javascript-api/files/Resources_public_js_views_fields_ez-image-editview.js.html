@@ -555,8 +555,6 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
         IS_LOADING = &#x27;is-image-loading&#x27;,
         IS_BEING_UPDATED = &#x27;is-image-being-updated&#x27;,
         HAS_LOADING_ERROR = &#x27;has-loading-error&#x27;,
-        NOT_IMAGE_TPL = &quot;The file &#x27;{name}&#x27; was refused because it seems to not be an image. Please choose an image file.&quot;,
-        SVG_IMAGE_TPL = &quot;SVG images are not supported. Please choose another image file.&quot;,
         L = Y.Lang,
         win = Y.config.win,
         events = {
@@ -636,7 +634,7 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
          * @param {File} file the File object from the input file element
          */
         _setWarningNotAnImage: function (file) {
-            this._set(&#x27;warning&#x27;, L.sub(NOT_IMAGE_TPL, {name: file.name}));
+            this._set(&#x27;warning&#x27;, Y.eZ.trans(&#x27;refused.not.an.image&#x27;, {name: file.name}, &#x27;fieldedit&#x27;));
         },
 
         /**
@@ -754,7 +752,7 @@ YUI.add(&#x27;ez-image-editview&#x27;, function (Y) {
                 this._setWarningNotAnImage(file);
             }
             if ( isSVG ) {
-                this._set(&#x27;warning&#x27;, SVG_IMAGE_TPL);
+                this._set(&#x27;warning&#x27;, Y.eZ.trans(&#x27;svg.not.supported&#x27;, {}, &#x27;fieldedit&#x27;));
             }
             return (isImage &amp;&amp; !isSVG);
         },

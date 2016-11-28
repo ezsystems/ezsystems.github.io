@@ -3581,7 +3581,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 43,
+            "line": 42,
             "description": "Provides a base class for the field edit view of file based field types\n(Image, BinaryFile, Media)"
         },
         "ez-binaryfile-editview": {
@@ -3709,7 +3709,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
-            "line": 40,
+            "line": 28,
             "description": "Provides the field edit view for the date and time fields"
         },
         "ez-dateandtime-view": {
@@ -3757,7 +3757,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-float-editview.js",
-            "line": 18,
+            "line": 17,
             "description": "Provides the field edit view for the Float (ezfloat) fields"
         },
         "ez-float-view": {
@@ -3789,7 +3789,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 29,
+            "line": 27,
             "description": "Provides the field edit view for the Image (ezimage) fields"
         },
         "ez-image-view": {
@@ -3821,7 +3821,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-integer-editview.js",
-            "line": 18,
+            "line": 17,
             "description": "Provides the field edit view for the Integer (ezinteger) fields"
         },
         "ez-integer-view": {
@@ -3915,7 +3915,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 22,
+            "line": 21,
             "description": "Provides the Map Location field view"
         },
         "ez-media-editview": {
@@ -4995,7 +4995,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 34,
+            "line": 24,
             "description": "Provides the Location View View Tab view class."
         },
         "ez-locationviewlocationstabview": {
@@ -7085,7 +7085,7 @@
             "module": "ez-binarybase-editview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 43,
+            "line": 42,
             "description": "The BinaryBase field edit view. This class is meant to be extended.",
             "is_constructor": 1,
             "extends": "FieldEditView"
@@ -7213,7 +7213,7 @@
             "module": "ez-dateandtime-editview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
-            "line": 40,
+            "line": 28,
             "description": "Date and time edit view",
             "is_constructor": 1,
             "extends": "eZ.FieldEditView"
@@ -7261,7 +7261,7 @@
             "module": "ez-float-editview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-float-editview.js",
-            "line": 18,
+            "line": 17,
             "description": "Float edit view",
             "is_constructor": 1,
             "extends": "eZ.FieldEditView"
@@ -7293,7 +7293,7 @@
             "module": "ez-image-editview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 29,
+            "line": 27,
             "description": "The Image edit view",
             "is_constructor": 1,
             "extends": "eZ.BinaryBaseEditView"
@@ -7325,7 +7325,7 @@
             "module": "ez-integer-editview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-integer-editview.js",
-            "line": 18,
+            "line": 17,
             "description": "Integer edit view",
             "is_constructor": 1,
             "extends": "eZ.FieldEditView"
@@ -7405,7 +7405,7 @@
             "module": "ez-maplocation-view",
             "namespace": "eZ",
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 22,
+            "line": 21,
             "description": "Map Location edit view",
             "is_constructor": 1,
             "extends": "eZ.FieldEditView"
@@ -8632,7 +8632,7 @@
             "module": "ez-locationviewdetailstabview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 34,
+            "line": 24,
             "description": "The Location View View Details tab class.",
             "is_constructor": 1,
             "extends": "eZ.LocationViewTabView"
@@ -13642,7 +13642,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 68,
+            "line": 67,
             "description": "Method called at the end of the render process. The default\nimplementation does nothing, it is meant to be overridden in the view\nextending the binary base edit view.",
             "itemtype": "method",
             "name": "_afterRender",
@@ -13654,7 +13654,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 79,
+            "line": 78,
             "description": "Set the state classes on the view container",
             "itemtype": "method",
             "name": "_setStateClasses",
@@ -13666,7 +13666,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 89,
+            "line": 88,
             "description": "Validates the current input of the image against the is required\nfield definition setting.",
             "itemtype": "method",
             "name": "validate",
@@ -13676,7 +13676,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 105,
+            "line": 104,
             "description": "Returns the field value suitable for the REST API based on the\ncurrent input. It makes to sure to only send the actual content\nwhen it's needed. It returns null if no file has been chosen yet or\nundefined if no change happened since the version save event.",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -13692,7 +13692,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 136,
+            "line": 135,
             "description": "Check if a new translation is being created.",
             "itemtype": "method",
             "name": "_isCreatingTranslation",
@@ -13708,7 +13708,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 149,
+            "line": 148,
             "description": "Method called at the end of the field value building process in\n`_getFieldValue`. It takes the fieldValue in parameter and MUST\nreturn the final field value. By default, it only returns the passed\nfield value. It is meant to be overridden in views extending the\nbinary base edit view if the field value is supposed to have\nadditional properties.",
             "itemtype": "method",
             "name": "_completeFieldValue",
@@ -13729,7 +13729,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 165,
+            "line": 164,
             "description": "Checks whether the file field is currently empty.",
             "access": "protected",
             "tagname": "",
@@ -13745,7 +13745,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 176,
+            "line": 175,
             "description": "Event handler for the change event on the file input",
             "itemtype": "method",
             "name": "_updateFile",
@@ -13764,7 +13764,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 190,
+            "line": 189,
             "description": "Returns the warning message suitable when the user tries to use a too\nbig file",
             "itemtype": "method",
             "name": "_getOverSizeMessage",
@@ -13787,7 +13787,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 203,
+            "line": 202,
             "description": "Returns a \"human\" readable version of the max allowed file size",
             "itemtype": "method",
             "name": "_getHumanMaxSize",
@@ -13803,7 +13803,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 214,
+            "line": 213,
             "description": "Read the content of the choosen File (if its size match the field\nconfiguration) and update the `file` attribute with the corresponding\nstructure",
             "itemtype": "method",
             "name": "_readFile",
@@ -13822,7 +13822,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 233,
+            "line": 232,
             "description": "Set the file attribute with a struct based on the file object from the\ninput file element.",
             "itemtype": "method",
             "name": "_base64ToFileStruct",
@@ -13846,7 +13846,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 249,
+            "line": 248,
             "description": "Method called before we start reading the content of the selected\nfile. The default implementation does nothing, it is meant to be\noverridden in the views extending the binary base edit view.",
             "itemtype": "method",
             "name": "_beforeReadFile",
@@ -13865,7 +13865,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 261,
+            "line": 260,
             "description": "Checks whether the File in parameter is valid for the field. By\ndefault, only the size of the file is checked against the maximum\nallowed file size.",
             "itemtype": "method",
             "name": "_valid",
@@ -13887,7 +13887,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 275,
+            "line": 274,
             "description": "Returns the maximum allowed size in bytes or 0 if no limit is set.",
             "itemtype": "method",
             "name": "_maxSize",
@@ -13902,7 +13902,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 288,
+            "line": 287,
             "description": "Checks whether the size is valid according to the field definition\nconfiguration. If the file can not be accepted, a warning message is\nset in the `warning` attribute.",
             "params": [
                 {
@@ -13925,7 +13925,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 308,
+            "line": 307,
             "description": "Toggle a class on the view container based on the value",
             "itemtype": "method",
             "name": "_toggleClass",
@@ -13948,7 +13948,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 326,
+            "line": 325,
             "description": "Event handler for the tap event on the remove button",
             "itemtype": "method",
             "name": "_removeBinaryFile",
@@ -13967,7 +13967,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 339,
+            "line": 338,
             "description": "Event handler for the tap event on the upload button",
             "itemtype": "method",
             "name": "_chooseFile",
@@ -13986,7 +13986,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 352,
+            "line": 351,
             "description": "Event handler for the dragenter and dragover DOM event",
             "itemtype": "method",
             "name": "_prepareDrop",
@@ -14005,7 +14005,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 365,
+            "line": 364,
             "description": "Prepares visually the drop area",
             "itemtype": "method",
             "name": "_uiPrepareDropArea",
@@ -14024,7 +14024,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 377,
+            "line": 376,
             "description": "Resets visually the drop area",
             "itemtype": "method",
             "name": "_uiResetDropArea",
@@ -14036,7 +14036,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 387,
+            "line": 386,
             "description": "Event handler for the drop DOM event.",
             "itemtype": "method",
             "name": "_drop",
@@ -14055,7 +14055,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 416,
+            "line": 415,
             "description": "warningChange event handler, it displays/hides the warning message\ndepending on the attribute value.",
             "itemtype": "method",
             "name": "_uiHandleWarningMessage",
@@ -14067,7 +14067,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 435,
+            "line": 434,
             "description": "Event handler for the tap event on the hide link of the warning box.",
             "params": [
                 {
@@ -14086,7 +14086,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 447,
+            "line": 446,
             "description": "Sets the `updated` attribute to false when the attached version is\nsaved. This is to avoid sending again and again the same file",
             "itemtype": "method",
             "name": "_trackVersionSave",
@@ -14098,7 +14098,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 460,
+            "line": 459,
             "description": "Creates the file structure based on the File object provided by the\ninput file and on the base64 encoded binaryfile content. It also creates a\nblob URL for the newly selected object.",
             "itemtype": "method",
             "name": "_createFileStruct",
@@ -14126,7 +14126,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 481,
+            "line": 480,
             "description": "file attribute setter. It converts the different input type to a\nconsistent object no matter if the file attribute is filled from the\nREST fieldValue or from the user input.",
             "access": "protected",
             "tagname": "",
@@ -14149,7 +14149,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 519,
+            "line": 518,
             "description": "The file struct object for the current field. This attribute has\na setter to accept either null value, any REST fieldValue\nor an object created from a File.",
             "readonly": "",
             "itemtype": "attribute",
@@ -14161,7 +14161,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 534,
+            "line": 533,
             "description": "Stores the warning message (if any) or false",
             "itemtype": "attribute",
             "name": "warning",
@@ -14173,7 +14173,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 546,
+            "line": 545,
             "description": "Flag indicating whether the user changed something in the binaryfile\nfield. This attribute is used to avoid sending the same binaryfile\nagain and again.",
             "itemtype": "attribute",
             "name": "updated",
@@ -14185,7 +14185,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-binarybase-editview.js",
-            "line": 560,
+            "line": 559,
             "description": "FileReader instance",
             "itemtype": "attribute",
             "name": "fileReader",
@@ -15240,7 +15240,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-float-editview.js",
-            "line": 34,
+            "line": 33,
             "description": "Validates the current input of Float",
             "itemtype": "method",
             "name": "validate",
@@ -15250,7 +15250,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-float-editview.js",
-            "line": 75,
+            "line": 74,
             "description": "Defines the variables to be imported in the field edit template for\nfloat",
             "access": "protected",
             "tagname": "",
@@ -15266,7 +15266,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-float-editview.js",
-            "line": 104,
+            "line": 103,
             "description": "Returns the input validity state object for the input generated by\nthe Float template\n\nSee https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
             "access": "protected",
             "tagname": "",
@@ -15282,7 +15282,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-float-editview.js",
-            "line": 118,
+            "line": 117,
             "description": "Returns the currently filled float value",
             "access": "protected",
             "tagname": "",
@@ -15312,7 +15312,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 53,
+            "line": 51,
             "description": "Set the file attribute with a struct based on the file object from the\ninput file element. This implementation adds a validation to check that the chosen file\nis really an image the browser can load.",
             "itemtype": "method",
             "name": "_base64ToFileStruct",
@@ -15336,7 +15336,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 81,
+            "line": 79,
             "description": "Removes the image being updated class",
             "itemtype": "method",
             "name": "_removeImageBeingUpdatedClass",
@@ -15348,7 +15348,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 91,
+            "line": 89,
             "description": "Sets a warning because the file is not an image",
             "itemtype": "method",
             "name": "_setWarningNotAnImage",
@@ -15367,7 +15367,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 102,
+            "line": 100,
             "description": "Initializes the attributes events handling",
             "itemtype": "method",
             "name": "_initAttributesEvents",
@@ -15379,7 +15379,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 120,
+            "line": 118,
             "description": "Reflects the new image object in the generated UI",
             "itemtype": "method",
             "name": "_uiImageChange",
@@ -15391,7 +15391,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 150,
+            "line": 148,
             "description": "Set the state classes on the view container",
             "itemtype": "method",
             "name": "_setStateClasses",
@@ -15403,7 +15403,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 162,
+            "line": 160,
             "description": "Event handler for the valuechange event on the input field for the\nalternative text",
             "itemtype": "method",
             "name": "_altTextChange",
@@ -15422,7 +15422,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 174,
+            "line": 172,
             "description": "Removes the *being updated* class before reading the image content.",
             "itemtype": "method",
             "name": "_beforeReadFile",
@@ -15434,7 +15434,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 184,
+            "line": 182,
             "description": "Checks whether the File in parameter is valid for the field. It\nchecks the size of the selected file and its mime type.",
             "itemtype": "method",
             "name": "_valid",
@@ -15456,7 +15456,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 200,
+            "line": 198,
             "description": "Checks that the `file` represents a valid image file the Image field\ntype. In case of error, a warning message is set in the `warning`",
             "itemtype": "method",
             "name": "_validType",
@@ -15478,7 +15478,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 222,
+            "line": 220,
             "description": "Returns a \"human\" readable version of the max allowed file size. It\nis overidden the max size is in byte in Image fields.",
             "itemtype": "method",
             "name": "_getHumanMaxSize",
@@ -15494,7 +15494,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 234,
+            "line": 232,
             "description": "Returns the maximum allowed size in bytes or 0 if no limit is set.\nThe default implementation is overriden because in the case of the\nImage field, the field definition directly contains the maximum size\nin bytes while for BinaryFile and Media, this size is in megabytes.",
             "itemtype": "method",
             "name": "_maxSize",
@@ -15509,7 +15509,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 250,
+            "line": 248,
             "description": "Defines the variables to be imported in the field edit template.",
             "access": "protected",
             "tagname": "",
@@ -15525,7 +15525,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 265,
+            "line": 263,
             "description": "Completes the field value with the alternative text",
             "access": "protected",
             "tagname": "",
@@ -15548,7 +15548,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 279,
+            "line": 277,
             "description": "Fire the `loadImageVariation` event",
             "itemtype": "method",
             "name": "_fireLoadImageVariation",
@@ -15560,7 +15560,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 287,
+            "line": 285,
             "description": "Fired when the view needs the image variation",
             "itemtype": "event",
             "name": "loadImageVariation",
@@ -15582,7 +15582,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 302,
+            "line": 300,
             "description": "Creates the image structure based on the File object provided by the\ninput file and on the base64 encoded image content. It also creates a\nblob URL for the newly selected object.",
             "itemtype": "method",
             "name": "_createFileStruct",
@@ -15610,7 +15610,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 326,
+            "line": 324,
             "description": "image attribute setter. It converts the different input type to a\nconsistent object no matter if the image attribute is filled from the\nREST fieldValue or from the user input.",
             "access": "protected",
             "tagname": "",
@@ -15633,7 +15633,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 366,
+            "line": 364,
             "description": "The alternative image text",
             "itemtype": "attribute",
             "name": "alternativeText",
@@ -15645,7 +15645,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 378,
+            "line": 376,
             "description": "The image variation to display",
             "itemtype": "attribute",
             "name": "imageVariation",
@@ -15656,7 +15656,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-image-editview.js",
-            "line": 388,
+            "line": 386,
             "description": "The variation identifier to use to display the image",
             "itemtype": "attribute",
             "name": "variationIdentifier",
@@ -15758,7 +15758,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-integer-editview.js",
-            "line": 34,
+            "line": 33,
             "description": "Validates the current input of Integer",
             "itemtype": "method",
             "name": "validate",
@@ -15768,7 +15768,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-integer-editview.js",
-            "line": 69,
+            "line": 68,
             "description": "Defines the variables to be imported in the field edit template for\ninteger",
             "access": "protected",
             "tagname": "",
@@ -15784,7 +15784,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-integer-editview.js",
-            "line": 98,
+            "line": 97,
             "description": "Returns the input validity state object for the input generated by\nthe Integer template\n\nSee https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
             "access": "protected",
             "tagname": "",
@@ -15800,7 +15800,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-integer-editview.js",
-            "line": 112,
+            "line": 111,
             "description": "Returns the currently filled value",
             "access": "protected",
             "tagname": "",
@@ -16293,7 +16293,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 31,
+            "line": 30,
             "description": "Initialize the view by loading the map API if the field is not empty\nand make sure to load the map once the view is active",
             "itemtype": "method",
             "name": "initializer",
@@ -16303,7 +16303,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 51,
+            "line": 50,
             "description": "Renders the map location view",
             "itemtype": "method",
             "name": "render",
@@ -16316,7 +16316,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 63,
+            "line": 62,
             "description": "Returns a clone of the DOM Node containing the field data",
             "itemtype": "method",
             "name": "_getInfoContent",
@@ -16331,7 +16331,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 76,
+            "line": 75,
             "description": "mapAPIFailed event handler",
             "itemtype": "method",
             "name": "_mapAPIFailed",
@@ -16343,7 +16343,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 89,
+            "line": 88,
             "description": "mapAPIReady event handler. It calls the map api to render a map with\nthe data stored in the field",
             "itemtype": "method",
             "name": "_initMap",
@@ -16355,7 +16355,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 121,
+            "line": 120,
             "description": "Returns the placeholder DOM Node for the map",
             "itemtype": "method",
             "name": "_getMapDomNode",
@@ -16367,7 +16367,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 131,
+            "line": 130,
             "description": "Returns a normalized value from the value stored in the field",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -16382,7 +16382,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-maplocation-view.js",
-            "line": 154,
+            "line": 153,
             "description": "Instance of a map API loader component",
             "itemtype": "attribute",
             "name": "mapAPILoader",
@@ -19818,7 +19818,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-copycontentplugin.js",
-            "line": 90,
+            "line": 93,
             "description": "Redirect the user to the copied content",
             "itemtype": "method",
             "name": "_redirect",
@@ -19837,7 +19837,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-copycontentplugin.js",
-            "line": 109,
+            "line": 115,
             "description": "Fired when the content is copied",
             "itemtype": "event",
             "name": "copiedContent",
@@ -19859,7 +19859,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-copycontentplugin.js",
-            "line": 125,
+            "line": 131,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -19893,7 +19893,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-copycontentplugin.js",
-            "line": 148,
+            "line": 154,
             "description": "The copied content",
             "itemtype": "attribute",
             "name": "copiedContent",
@@ -20185,7 +20185,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationcreateplugin.js",
-            "line": 130,
+            "line": 138,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -20262,7 +20262,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationremoveplugin.js",
-            "line": 139,
+            "line": 147,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -20370,7 +20370,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
-            "line": 110,
+            "line": 118,
             "description": "Fired when a Location is swapped with another one.",
             "itemtype": "event",
             "name": "swappedLocation",
@@ -20387,7 +20387,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-locationswapplugin.js",
-            "line": 128,
+            "line": 136,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -21028,7 +21028,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-savedraftplugin.js",
-            "line": 217,
+            "line": 219,
             "description": "The text do display to the editor when the saving draft operation\nends successfully.",
             "itemtype": "attribute",
             "name": "doneNotificationText",
@@ -21039,7 +21039,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-savedraftplugin.js",
-            "line": 228,
+            "line": 232,
             "description": "The text do display to the editor when the saving draft operation\nfails.",
             "itemtype": "attribute",
             "name": "errorNotificationText",
@@ -21839,7 +21839,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 143,
+            "line": 147,
             "description": "Edits a given version by redirecting to the edit page",
             "itemtype": "method",
             "name": "_redirectToEditVersion",
@@ -21870,7 +21870,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 167,
+            "line": 171,
             "description": "deleteVersion event handler, opens confirm box to confirm that selected versions\nare going to be deleted",
             "itemtype": "method",
             "name": "_confirmDeleteVersion",
@@ -21889,7 +21889,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 189,
+            "line": 193,
             "description": "Removes given versions. After that, calls the callback function.",
             "itemtype": "method",
             "name": "_deleteVersion",
@@ -21913,7 +21913,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-versionsplugin.js",
-            "line": 256,
+            "line": 267,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -22078,7 +22078,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 47,
+            "line": 49,
             "description": "Initializes the content, version and ower model so that the edit form\nis correctly displayed",
             "itemtype": "method",
             "name": "_initModels",
@@ -22097,7 +22097,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 77,
+            "line": 79,
             "description": "Sets fields on the version.",
             "itemtype": "method",
             "name": "_setFields",
@@ -22117,7 +22117,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 89,
+            "line": 91,
             "description": "Sets the redirection URLs attributes",
             "itemtype": "method",
             "name": "_setRedirectionUrls",
@@ -22129,7 +22129,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 114,
+            "line": 116,
             "description": "Gets the name for a new content based on current contentType and languageCode",
             "itemtype": "method",
             "name": "_getNewContentName",
@@ -22141,7 +22141,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 133,
+            "line": 135,
             "description": "changeLanguage event handler. It opens languageSelectionBox for selecting\nlanguage of created content",
             "itemtype": "method",
             "name": "_selectLanguage",
@@ -22160,7 +22160,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 155,
+            "line": 157,
             "description": "Sets language of created content to one given in event facade. After that notification is fired.",
             "itemtype": "method",
             "name": "_setLanguage",
@@ -22196,7 +22196,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 196,
+            "line": 202,
             "description": "The parent location of the new content",
             "itemtype": "attribute",
             "name": "parentLocation",
@@ -22208,7 +22208,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contentcreateviewservice.js",
-            "line": 205,
+            "line": 211,
             "description": "The parent content of the new content",
             "itemtype": "attribute",
             "name": "parentContent",
@@ -22239,7 +22239,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 113,
+            "line": 115,
             "description": "Checks whether the version can be edited. A version can be edited if:\n  - it's a draft\n  - it's a version of the content which id is passed in the request\n  - it's translated into the language code passed in the request\n  - it was created by the currently logged in user",
             "itemtype": "method",
             "name": "_canEditVersion",
@@ -22255,7 +22255,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 148,
+            "line": 150,
             "description": "Sets fields of edited version",
             "itemtype": "method",
             "name": "_setVersionFields",
@@ -22267,7 +22267,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 158,
+            "line": 160,
             "description": "Returns the fields for the newly created version. Depending on the\nloaded content, it creates the fields from the content type or from\nthe content.",
             "itemtype": "method",
             "name": "_getFieldsForEdit",
@@ -22283,7 +22283,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 181,
+            "line": 183,
             "description": "Returns collection of default fields from the ContentType of edited\ncontent and sets for them given languageCode",
             "itemtype": "method",
             "name": "_getDefaultFields",
@@ -22306,7 +22306,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 205,
+            "line": 207,
             "description": "Loads a content by its id and language code",
             "itemtype": "method",
             "name": "_loadContent",
@@ -22335,7 +22335,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 224,
+            "line": 229,
             "description": "Loads a version by its id and language code",
             "itemtype": "method",
             "name": "_loadVersion",
@@ -22364,7 +22364,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 243,
+            "line": 251,
             "description": "Loads a content info by its id",
             "itemtype": "method",
             "name": "_loadContentInfo",
@@ -22388,7 +22388,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 256,
+            "line": 271,
             "description": "Loads a content type by its id",
             "itemtype": "method",
             "name": "_loadContentType",
@@ -22412,7 +22412,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 268,
+            "line": 290,
             "description": "Loads a location type by its id",
             "itemtype": "method",
             "name": "_loadLocation",
@@ -22436,7 +22436,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 280,
+            "line": 309,
             "description": "Loads a user by its id",
             "itemtype": "method",
             "name": "_loadOwner",
@@ -22460,7 +22460,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 305,
+            "line": 334,
             "description": "Utility method to load a model by its id in a given attribute",
             "itemtype": "method",
             "name": "_loadModel",
@@ -22499,7 +22499,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 331,
+            "line": 360,
             "description": "Returns the view parameters of the content edit view",
             "itemtype": "method",
             "name": "_getViewParameters",
@@ -22515,7 +22515,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 351,
+            "line": 380,
             "description": "`publishedDraft` event handler. It redirects the user according to\nthe `publishRedirectionUrl` attribute value.",
             "itemtype": "method",
             "name": "_redirectAfterPublish",
@@ -22527,7 +22527,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 362,
+            "line": 391,
             "description": "`discardedDraft` event handler. It redirects the user according to\nthe `discardRedirectionUrl` attribute.",
             "itemtype": "method",
             "name": "_redirectAfterDiscard",
@@ -22539,7 +22539,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 373,
+            "line": 402,
             "description": "`*:closeView` event handler. It redirects the user according to the\n`closeRedirectionUrl` attribute.",
             "itemtype": "method",
             "name": "_redirectAfterClose",
@@ -22551,7 +22551,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 384,
+            "line": 413,
             "description": "Navigates to view the Location. If the location is not loaded, it is\nfirst loaded.",
             "itemtype": "method",
             "name": "_navigateToViewLocation",
@@ -22563,7 +22563,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 407,
+            "line": 436,
             "description": "Redirects the user according the redirection `attr`. If the attribute\nis filled, its value is used to redirect the user, otherwise, the\nmain location of the content is used and in last resort, the user is\nredirected to the 'dashboard'.",
             "itemtype": "method",
             "name": "_redirectToAttribute",
@@ -22582,7 +22582,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 431,
+            "line": 460,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -22594,7 +22594,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 447,
+            "line": 476,
             "description": "Set baseLanguageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setBaseLanguageCode",
@@ -22606,7 +22606,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 461,
+            "line": 490,
             "description": "Returns uri for user redirection.",
             "itemtype": "method",
             "name": "_redirectionUrl",
@@ -22622,7 +22622,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 475,
+            "line": 504,
             "description": "changeLanguage event handler. It opens languageSelectionBox for selecting\nlanguage of edited content",
             "itemtype": "method",
             "name": "_selectLanguage",
@@ -22641,7 +22641,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 499,
+            "line": 528,
             "description": "Changes language of edited content",
             "itemtype": "method",
             "name": "_changeContentLanguage",
@@ -22667,7 +22667,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 518,
+            "line": 547,
             "description": "The content to be loaded",
             "itemtype": "attribute",
             "name": "content",
@@ -22678,7 +22678,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 530,
+            "line": 559,
             "description": "The content info the content being edited",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -22689,7 +22689,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 542,
+            "line": 571,
             "description": "The main location of the content",
             "itemtype": "attribute",
             "name": "location",
@@ -22700,7 +22700,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 554,
+            "line": 583,
             "description": "The owner of the content",
             "itemtype": "attribute",
             "name": "owner",
@@ -22711,7 +22711,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 564,
+            "line": 593,
             "description": "The version that will be edited",
             "itemtype": "attribute",
             "name": "version",
@@ -22722,7 +22722,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 576,
+            "line": 605,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -22733,7 +22733,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 588,
+            "line": 617,
             "description": "The URL user will be redirected to after closing the edit view",
             "itemtype": "attribute",
             "name": "closeRedirectionUrl",
@@ -22744,7 +22744,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 598,
+            "line": 627,
             "description": "The URL user will be redirected to after discarding changes",
             "itemtype": "attribute",
             "name": "discardRedirectionUrl",
@@ -22755,7 +22755,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 608,
+            "line": 637,
             "description": "The url user will be redirected to after publishing the content",
             "itemtype": "attribute",
             "name": "closeRedirectionUrl",
@@ -22766,7 +22766,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 618,
+            "line": 647,
             "description": "The language code in which the content is edited.",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -22777,7 +22777,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-contenteditviewservice.js",
-            "line": 626,
+            "line": 655,
             "description": "The language code on which new translation is based.",
             "itemtype": "attribute",
             "name": "baseLanguageCode",
@@ -22871,7 +22871,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-dashboardblocksviewservice.js",
-            "line": 113,
+            "line": 115,
             "description": "The error message to be displayed\nwhen loading location model data fails.",
             "itemtype": "attribute",
             "name": "loadLocationModelErrorMessage",
@@ -23137,7 +23137,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 301,
+            "line": 308,
             "description": "Fired when the content is moved",
             "itemtype": "event",
             "name": "movedContent",
@@ -23159,7 +23159,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 318,
+            "line": 325,
             "description": "translate event handler, makes the application to navigate to edit content available\nin the facade with given language and base language",
             "itemtype": "method",
             "name": "_translateContent",
@@ -23178,7 +23178,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 344,
+            "line": 351,
             "description": "Update the sort methods of the location",
             "itemtype": "method",
             "name": "_updateSorting",
@@ -23197,7 +23197,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 371,
+            "line": 378,
             "description": "Fired when the sortOrder and/or sortField have been\nsuccessfully updated.",
             "itemtype": "event",
             "name": "updatedLocationSorting",
@@ -23214,7 +23214,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 393,
+            "line": 400,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -23248,7 +23248,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 414,
+            "line": 421,
             "description": "Loads the location, the content and the path for the location id\navailable in the request and calls the next callback once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -23267,7 +23267,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 483,
+            "line": 498,
             "description": "Set languageCode attribute based on parameter from request",
             "itemtype": "method",
             "name": "_setLanguageCode",
@@ -23279,7 +23279,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 505,
+            "line": 520,
             "description": "The viewed location",
             "itemtype": "attribute",
             "name": "location",
@@ -23290,7 +23290,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 516,
+            "line": 531,
             "description": "The content associated with the location",
             "itemtype": "attribute",
             "name": "content",
@@ -23301,7 +23301,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 527,
+            "line": 542,
             "description": "The content type of the content",
             "itemtype": "attribute",
             "name": "contentType",
@@ -23312,7 +23312,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 538,
+            "line": 553,
             "description": "The path from the root location to the current location. Each\nentry of the path consists of the location sorted by location depth",
             "itemtype": "attribute",
             "name": "path",
@@ -23323,7 +23323,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-locationviewviewservice.js",
-            "line": 549,
+            "line": 564,
             "description": "The language code in which the content is being viewed",
             "itemtype": "attribute",
             "name": "languageCode",
@@ -23932,7 +23932,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 109,
+            "line": 113,
             "description": "Check if the UDW config has a section limitationType",
             "itemtype": "method",
             "name": "_hasSectionLimitation",
@@ -23955,7 +23955,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 121,
+            "line": 125,
             "description": "Check if the UDW config has a subtree limitationType",
             "itemtype": "method",
             "name": "_hasSubtreeLimitation",
@@ -23978,7 +23978,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 133,
+            "line": 137,
             "description": "Create the limitation object with the section currently chosen.",
             "itemtype": "method",
             "name": "_createSectionLimitation",
@@ -24001,7 +24001,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 155,
+            "line": 159,
             "description": "Create the limitation object with the subtree locations currently chosen.",
             "itemtype": "method",
             "name": "_createSubtreeLimitation",
@@ -24024,7 +24024,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 182,
+            "line": 186,
             "description": "Assign the role to selected content",
             "itemtype": "method",
             "name": "_assignRoleToAssignee",
@@ -24053,7 +24053,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 203,
+            "line": 207,
             "description": "Assign the role to a user",
             "itemtype": "method",
             "name": "_assignRoleToUser",
@@ -24087,7 +24087,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 235,
+            "line": 239,
             "description": "Assign the role to a user group",
             "itemtype": "method",
             "name": "_assignRoleToUserGroup",
@@ -24126,7 +24126,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 271,
+            "line": 275,
             "description": "Assign role callback triggering notification and calling given callback",
             "itemtype": "method",
             "name": "_assignRoleCallback",
@@ -24160,7 +24160,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 316,
+            "line": 326,
             "description": "Notification changed to *started* before assigning role to users/groups",
             "itemtype": "method",
             "name": "_assignRoleNotificationStarted",
@@ -24184,7 +24184,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 343,
+            "line": 364,
             "description": "Notification with *error* state when loadRole fails",
             "itemtype": "method",
             "name": "_loadRoleErrorNotification",
@@ -24208,7 +24208,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 364,
+            "line": 385,
             "description": "Generates identifier for notifications which is unique based on\nrole ID and IDs of users/groups which role is being assigned to.",
             "itemtype": "method",
             "name": "_getAssignRoleNotificationIdentifier",
@@ -24241,7 +24241,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-roleserversideviewservice.js",
-            "line": 395,
+            "line": 416,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -24471,7 +24471,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-sectionserversideviewservice.js",
-            "line": 105,
+            "line": 109,
             "description": "Notification changed to *done* after assigning section to contents",
             "itemtype": "method",
             "name": "_assignSectionNotificationDone",
@@ -24500,7 +24500,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-sectionserversideviewservice.js",
-            "line": 129,
+            "line": 137,
             "description": "Generates identifier for notifications which is unique based on\nsection ID and IDs of contents which section is being assigned to.",
             "itemtype": "method",
             "name": "_getAssignSectionNotificationIdentifier",
@@ -24533,7 +24533,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-sectionserversideviewservice.js",
-            "line": 149,
+            "line": 157,
             "description": "Refreshes the section view",
             "itemtype": "method",
             "name": "_refreshView",
@@ -24866,7 +24866,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 52,
+            "line": 51,
             "description": "Loads the list of Trash Items in the `trashItems` attribute and calls `callback` once it's done.",
             "itemtype": "method",
             "name": "_load",
@@ -24885,7 +24885,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 84,
+            "line": 83,
             "description": "Loads a single item based on `itemHash` and adds it to `trashItems` in the format expected by the `trashItems`\nattribute.",
             "itemtype": "method",
             "name": "_loadTrashItem",
@@ -24919,7 +24919,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 141,
+            "line": 140,
             "description": "Builds a HashMap with trashItem's pathString as key",
             "itemtype": "method",
             "name": "_buildInTrashList",
@@ -24942,7 +24942,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 159,
+            "line": 158,
             "description": "Empties the trash, refreshes the list and add a notifications",
             "itemtype": "method",
             "name": "_emptyTrash",
@@ -24954,7 +24954,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 188,
+            "line": 187,
             "description": "Fired once trash has just been emptied",
             "itemtype": "event",
             "name": "refreshView",
@@ -24964,7 +24964,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 203,
+            "line": 202,
             "description": "Returns true if parentLocationId is in inTrashList.",
             "itemtype": "method",
             "name": "_isParentInTrash",
@@ -24992,7 +24992,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 225,
+            "line": 224,
             "description": "Restores trash items",
             "itemtype": "method",
             "name": "_restoreItems",
@@ -25018,7 +25018,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 262,
+            "line": 260,
             "description": "Fired when a Location is restored.",
             "itemtype": "event",
             "name": "restoredLocation",
@@ -25035,7 +25035,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 285,
+            "line": 283,
             "description": "Fired once trash has just been emptied",
             "itemtype": "event",
             "name": "refreshView",
@@ -25045,7 +25045,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 294,
+            "line": 292,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -25079,7 +25079,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 315,
+            "line": 313,
             "description": "Returns the view parameters of the trash view",
             "itemtype": "method",
             "name": "_getViewParameters",
@@ -25095,7 +25095,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 330,
+            "line": 328,
             "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
             "itemtype": "attribute",
             "name": "trashItems",
@@ -25108,7 +25108,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 345,
+            "line": 343,
             "description": "Holds the eZ.ContentType constructor function",
             "itemtype": "attribute",
             "name": "contentTypeModelConstructor",
@@ -25120,7 +25120,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 356,
+            "line": 354,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -25132,7 +25132,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 367,
+            "line": 365,
             "description": "Holds the eZ.TrashItem constructor function",
             "itemtype": "attribute",
             "name": "trashItemModelConstructor",
@@ -26251,7 +26251,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 141,
+            "line": 143,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "itemViewConstructor",
@@ -26630,7 +26630,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 89,
+            "line": 91,
             "description": "Map the sortFields identifiers in objects.\nThese objects contain the identifier, the name of the sort field and a boolean to see if it's the current selected sortField.",
             "itemtype": "method",
             "name": "_getSortFields",
@@ -26646,7 +26646,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 106,
+            "line": 108,
             "description": "Check if the default sortField is 'standard', then get the available ordering methods.\n'Standard' sort fields are: Content name, Priority, Modification date, Publication date",
             "itemtype": "method",
             "name": "_getOrderingMethods",
@@ -26662,7 +26662,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 124,
+            "line": 126,
             "description": "Set the selected sort type attribute",
             "itemtype": "method",
             "name": "_setSortType",
@@ -26674,7 +26674,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 138,
+            "line": 140,
             "description": "Set the selected sort order attribute",
             "itemtype": "method",
             "name": "_setSortingOrder",
@@ -26686,7 +26686,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 152,
+            "line": 154,
             "description": "Fire the `loadUser` event",
             "itemtype": "method",
             "name": "_fireLoadUser",
@@ -26698,7 +26698,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 161,
+            "line": 163,
             "description": "Fired when the details view needs authors",
             "itemtype": "event",
             "name": "loadUser",
@@ -26720,7 +26720,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 185,
+            "line": 187,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -26733,7 +26733,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 198,
+            "line": 200,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -26746,7 +26746,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 211,
+            "line": 213,
             "description": "The creator of the content",
             "itemtype": "attribute",
             "name": "creator",
@@ -26757,7 +26757,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 219,
+            "line": 221,
             "description": "The owner of the content",
             "itemtype": "attribute",
             "name": "owner",
@@ -26768,7 +26768,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 227,
+            "line": 229,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -26780,7 +26780,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 238,
+            "line": 240,
             "description": "The location being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -26792,7 +26792,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 249,
+            "line": 251,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
@@ -26804,7 +26804,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 260,
+            "line": 262,
             "description": "The selected sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -26815,7 +26815,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 270,
+            "line": 272,
             "description": "The selected sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -27961,7 +27961,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 168,
+            "line": 170,
             "itemtype": "attribute",
             "name": "identifier",
             "default": "'browse'",
@@ -27971,7 +27971,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 177,
+            "line": 179,
             "description": "Holds the tree view",
             "itemtype": "attribute",
             "name": "treeView",
@@ -27982,7 +27982,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 191,
+            "line": 193,
             "description": "Holds the selected view that displays the currently selected\ncontent (if any)",
             "itemtype": "attribute",
             "name": "selectedView",
@@ -28778,7 +28778,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 446,
+            "line": 448,
             "itemtype": "attribute",
             "name": "identifier",
             "default": "'search'",
@@ -28788,7 +28788,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 455,
+            "line": 457,
             "description": "The max number of the Locations to display in the search result list\nper \"page\".",
             "itemtype": "attribute",
             "name": "limit",
@@ -28800,7 +28800,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 467,
+            "line": 469,
             "description": "The offset in the search result list.",
             "itemtype": "attribute",
             "name": "offset",
@@ -28812,7 +28812,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 478,
+            "line": 480,
             "description": "The search text used in full text search.",
             "itemtype": "attribute",
             "name": "searchText",
@@ -28824,7 +28824,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 489,
+            "line": 491,
             "description": "The number of total search results. -1 means we are waiting for\nthe results.",
             "itemtype": "attribute",
             "name": "searchResultCount",
@@ -28836,7 +28836,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 501,
+            "line": 503,
             "description": "The search result list which is array containing location structs. Single location struct\nis indexed object containing `location` (eZ.Location) and `contentType` (eZ.ContentType)",
             "itemtype": "attribute",
             "name": "searchResultList",
@@ -28848,7 +28848,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverysearchview.js",
-            "line": 513,
+            "line": 515,
             "description": "Holds the selected view that displays the currently selected\ncontent (if any)",
             "itemtype": "attribute",
             "name": "selectedView",
@@ -34005,7 +34005,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-searchlistview.js",
-            "line": 141,
+            "line": 143,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "itemViewConstructor",

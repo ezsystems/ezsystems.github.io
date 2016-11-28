@@ -585,10 +585,10 @@ YUI.add(&#x27;ez-visibilityswitcherplugin&#x27;, function (Y) {
                 hideOptions = {api: this.get(&#x27;host&#x27;).get(&#x27;capi&#x27;)},
                 that = this,
                 notificationIdentifier = &#x27;location-switch-visibility-&#x27; + locationId,
-                notificationStartedMessage = &quot;Hiding: &quot; + locationId;
+                notificationStartedMessage = Y.eZ.trans(&#x27;hiding.location&#x27;, {id: locationId}, &#x27;bar&#x27;);
 
             if (hidden) {
-                notificationStartedMessage = &quot;Revealing: &quot; + locationId;
+                notificationStartedMessage = Y.eZ.trans(&#x27;revealing.location&#x27;, {id: locationId}, &#x27;bar&#x27;);
             }
 
             that._notify(
@@ -602,14 +602,14 @@ YUI.add(&#x27;ez-visibilityswitcherplugin&#x27;, function (Y) {
                 location.unhide(hideOptions, function (error) {
                     if (error) {
                         that._notify(
-                            &quot;Error while revealing location &quot; + locationId,
+                            Y.eZ.trans(&#x27;error.revealing.location&#x27;, {id: locationId}, &#x27;bar&#x27;),
                             notificationIdentifier,
                             &#x27;error&#x27;,
                             0
                         );
                     } else {
                         that._notify(
-                            &quot;Location &quot; + locationId + &quot; has been revealed&quot;,
+                            Y.eZ.trans(&#x27;revealed.location&#x27;, {id: locationId}, &#x27;bar&#x27;),
                             notificationIdentifier,
                             &#x27;done&#x27;,
                             5
@@ -621,14 +621,14 @@ YUI.add(&#x27;ez-visibilityswitcherplugin&#x27;, function (Y) {
                 location.hide(hideOptions, function (error) {
                     if (error) {
                         that._notify(
-                            &quot;Error while hiding location &quot; + locationId,
+                            Y.eZ.trans(&#x27;error.hiding.location&#x27;, {id: locationId}, &#x27;bar&#x27;),
                             notificationIdentifier,
                             &#x27;error&#x27;,
                             0
                         );
                     } else {
                         that._notify(
-                            &quot;Location &quot; + locationId + &quot; has been hidden&quot;,
+                            Y.eZ.trans(&#x27;hidden.location&#x27;, {id: locationId}, &#x27;bar&#x27;),
                             notificationIdentifier,
                             &#x27;done&#x27;,
                             5

@@ -598,7 +598,7 @@ YUI.add(&#x27;ez-alloyeditor-button-paragraph&#x27;, function (Y) {
             return (
                 React.createElement(&quot;button&quot;, {className: css, onClick: this._addParagraph, tabIndex: this.props.tabIndex}, 
                     React.createElement(&quot;span&quot;, {className: &quot;ez-ae-icon ez-ae-icon-paragraph&quot;}), 
-                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, &quot;Paragraph&quot;)
+                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, Y.eZ.trans(&#x27;paragraph&#x27;, {}, &#x27;onlineeditor&#x27;))
                 )
             );
         },

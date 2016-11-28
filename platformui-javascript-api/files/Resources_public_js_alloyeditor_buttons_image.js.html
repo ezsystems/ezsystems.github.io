@@ -581,7 +581,7 @@ YUI.add(&#x27;ez-alloyeditor-button-image&#x27;, function (Y) {
             return {
                 command: &#x27;ezembed&#x27;,
                 modifiesSelection: true,
-                udwTitle: &quot;Select an image to embed&quot;,
+                udwTitle: Y.eZ.trans(&#x27;select.an.image.to.embed&#x27;, {}, &#x27;onlineeditor&#x27;),
                 udwContentDiscoveredMethod: &#x27;_addImage&#x27;,
                 udwIsSelectableMethod: &#x27;_isImage&#x27;,
                 udwLoadContent: true,
@@ -616,7 +616,7 @@ YUI.add(&#x27;ez-alloyeditor-button-image&#x27;, function (Y) {
             return (
                 React.createElement(&quot;button&quot;, {className: css, onClick: this._chooseContent, tabIndex: this.props.tabIndex}, 
                     React.createElement(&quot;span&quot;, {className: &quot;ez-ae-icon ez-ae-icon-image ez-font-icon&quot;}), 
-                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, &quot;Image&quot;)
+                    React.createElement(&quot;p&quot;, {className: &quot;ez-ae-label&quot;}, Y.eZ.trans(&#x27;image&#x27;, {}, &#x27;onlineeditor&#x27;))
                 )
             );
         },

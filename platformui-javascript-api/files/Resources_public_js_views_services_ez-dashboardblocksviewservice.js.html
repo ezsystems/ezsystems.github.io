@@ -647,7 +647,9 @@ YUI.add(&#x27;ez-dashboardblocksviewservice&#x27;, function (Y) {
              * @default &#x27;Cannot load root location&#x27;
              */
             loadRootLocationErrorMessage: {
-                value: &#x27;Cannot load root location&#x27;
+                valueFn: function () {
+                    return Y.eZ.trans(&#x27;cannot.load.root.location&#x27;, {}, &#x27;dashboardblocks&#x27;);
+                },
             },
 
             /**
@@ -659,7 +661,9 @@ YUI.add(&#x27;ez-dashboardblocksviewservice&#x27;, function (Y) {
              * @default &#x27;Cannot load root location data into model&#x27;
              */
             loadLocationModelErrorMessage: {
-                value: &#x27;Cannot load root location data into model&#x27;
+                valueFn: function () {
+                    return Y.eZ.trans(&#x27;cannot.load.root.location&#x27;, {}, &#x27;dashboardblocks&#x27;);
+                },
             },
         }
     });

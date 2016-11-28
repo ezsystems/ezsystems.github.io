@@ -772,7 +772,7 @@ YUI.add(&#x27;ez-richtext-resolveembed&#x27;, function (Y) {
      * @param {Node} embedNode
      */
     ResolveEmbed.prototype._appendLoadingNode = function (embedNode) {
-        this._appendContentNode(embedNode).setContent(&#x27;Loading...&#x27;);
+        this._appendContentNode(embedNode).setContent(Y.eZ.trans(&#x27;loading...&#x27;, {}, &#x27;fieldedit&#x27;));
     };
 
     /**

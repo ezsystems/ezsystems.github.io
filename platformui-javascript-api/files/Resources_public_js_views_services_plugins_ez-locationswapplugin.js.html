@@ -585,7 +585,7 @@ YUI.add(&#x27;ez-locationswapplugin&#x27;, function (Y) {
 
             service.fire(&#x27;contentDiscover&#x27;, {
                 config: {
-                    title: &quot;Select the location you want to swap with the given one&quot;,
+                    title: Y.eZ.trans(&#x27;select.location.to.swap&#x27;, {}, &#x27;locationview&#x27;),
                     contentDiscoveredHandler: Y.bind(this._swapLocations, this, e.location),
                     multiple: false,
                     isSelectable: function(contentStruct) {
@@ -623,7 +623,11 @@ YUI.add(&#x27;ez-locationswapplugin&#x27;, function (Y) {
                 that = this;
 
             this._notify(
-                &quot;Swaping location for &#x27;&quot; + location.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
+                Y.eZ.trans(
+                    &#x27;swapping.location.for&#x27;,
+                    {name: location.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;)},
+                    &#x27;locationview&#x27;
+                ),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -632,7 +636,7 @@ YUI.add(&#x27;ez-locationswapplugin&#x27;, function (Y) {
             location.swap({api: capi}, destinationLocation, function (error) {
                 if (error) {
                     that._notify(
-                        &quot;Swapping location for &#x27;&quot; + location.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;) + &quot;&#x27; failed&quot;,
+                        Y.eZ.trans(&#x27;failed.swapping.location.for&#x27;, {name: location.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
                         notificationIdentifier,
                         &#x27;error&#x27;,
                         0
@@ -641,8 +645,12 @@ YUI.add(&#x27;ez-locationswapplugin&#x27;, function (Y) {
                 else {
                     var contentInfo = location.get(&#x27;contentInfo&#x27;);
                     that._notify(
-                        &quot;Location for &#x27;&quot; + contentInfo.get(&#x27;name&#x27;) + &quot;&#x27; &quot; +
-                        &quot;has been swapped with &#x27;&quot; + destinationLocation.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
+                        Y.eZ.trans(
+                            &#x27;swapped.location.for.with&#x27;, {
+                                name: location.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;),
+                                destinationName: destinationLocation.get(&#x27;contentInfo&#x27;).get(&#x27;name&#x27;)
+                            }, &#x27;locationview&#x27;
+                        ),
                         notificationIdentifier,
                         &#x27;done&#x27;,
                         5

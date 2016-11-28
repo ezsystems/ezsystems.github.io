@@ -551,17 +551,7 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var SORTFIELD_NAME_DICTIONARY = {
-            &#x27;PUBLISHED&#x27;: &#x27;Publication date&#x27;,
-            &#x27;PATH&#x27;: &#x27;Location path&#x27;,
-            &#x27;CLASS_IDENTIFIER&#x27;: &#x27;Content type identifier&#x27;,
-            &#x27;MODIFIED&#x27;: &#x27;Modification date&#x27;,
-            &#x27;SECTION&#x27;: &#x27;Section&#x27;,
-            &#x27;DEPTH&#x27;: &#x27;Location depth&#x27;,
-            &#x27;CLASS_NAME&#x27;: &#x27;Content type name&#x27;,
-            &#x27;PRIORITY&#x27;: &#x27;Priority&#x27;,
-            &#x27;NAME&#x27;: &#x27;Content name&#x27;,
-        },
+    var SORTFIELD_NAME_DICTIONARY = {},
         events = {
             &#x27;.ez-subitems-ordering-sort-type&#x27;: {
                 &#x27;change&#x27;: &#x27;_setSortType&#x27;,
@@ -581,6 +571,18 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
      */
     Y.eZ.LocationViewDetailsTabView = Y.Base.create(&#x27;locationViewDetailsTabView&#x27;, Y.eZ.LocationViewTabView, [Y.eZ.AsynchronousView], {
         initializer: function () {
+            SORTFIELD_NAME_DICTIONARY = {
+                &#x27;PUBLISHED&#x27;: Y.eZ.trans(&#x27;sort.published&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;PATH&#x27;: Y.eZ.trans(&#x27;sort.path&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;CLASS_IDENTIFIER&#x27;: Y.eZ.trans(&#x27;sort.content.type.identifier&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;MODIFIED&#x27;: Y.eZ.trans(&#x27;sort.modified&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;SECTION&#x27;: Y.eZ.trans(&#x27;sort.section&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;DEPTH&#x27;: Y.eZ.trans(&#x27;sort.depth&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;CLASS_NAME&#x27;: Y.eZ.trans(&#x27;sort.content.type.name&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;PRIORITY&#x27;: Y.eZ.trans(&#x27;sort.priority&#x27;, {}, &#x27;locationview&#x27;),
+                &#x27;NAME&#x27;: Y.eZ.trans(&#x27;sort.name&#x27;, {}, &#x27;locationview&#x27;),
+            };
+
             this._fireMethod = this._fireLoadUser;
 
             this.after([&#x27;creatorChange&#x27;, &#x27;ownerChange&#x27;], function (e) {

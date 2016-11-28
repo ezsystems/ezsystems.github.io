@@ -670,11 +670,13 @@ YUI.add(&#x27;ez-searchlistview&#x27;, function (Y) {
              * @type {Object}
              */
             propertyNames: {
-                value: {
-                    &#x27;name&#x27;: &#x27;Name&#x27;,
-                    &#x27;lastModificationDate&#x27;: &#x27;Modified&#x27;,
-                    &#x27;contentType&#x27;: &#x27;Content type&#x27;,
-                    &#x27;translations&#x27;: &#x27;Translations&#x27;,
+                valueFn: function () {
+                    return {
+                        &#x27;name&#x27;: Y.eZ.trans(&#x27;name&#x27;, {}, &#x27;search&#x27;),
+                        &#x27;lastModificationDate&#x27;: Y.eZ.trans(&#x27;modified&#x27;, {}, &#x27;search&#x27;),
+                        &#x27;contentType&#x27;: Y.eZ.trans(&#x27;content.type&#x27;, {}, &#x27;search&#x27;),
+                        &#x27;translations&#x27;: Y.eZ.trans(&#x27;translations&#x27;, {}, &#x27;search&#x27;),
+                    };
                 }
             },
 

@@ -624,8 +624,8 @@ YUI.add(&#x27;ez-contenteditview&#x27;, function (Y) {
                 content: e.content,
                 callback: e.callback,
                 notificationText: {
-                    started: &#x27;Saving the draft to generate the preview&#x27;,
-                    error: &#x27;An error occurred while saving the draft, the preview cannot be generated.&#x27;,
+                    started: Y.eZ.trans(&#x27;saving.draft.to.generate.the.preview&#x27;, {}, &#x27;contentedit&#x27;),
+                    error: Y.eZ.trans(&#x27;failed.saving.draft.to.generate.the.preview&#x27;, {}, &#x27;contentedit&#x27;),
                 },
             });
         },

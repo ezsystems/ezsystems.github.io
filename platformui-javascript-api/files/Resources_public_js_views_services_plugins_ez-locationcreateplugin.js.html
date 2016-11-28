@@ -582,7 +582,7 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
 
             service.fire(&#x27;contentDiscover&#x27;, {
                 config: {
-                    title: &quot;Select the location where you want to create new location&quot;,
+                    title: Y.eZ.trans(&#x27;select.location.to.create.new.location&#x27;, {}, &#x27;bar&#x27;),
                     contentDiscoveredHandler: Y.bind(this._createLocation, this),
                     multiple: true,
                     isSelectable: function (contentStruct) {
@@ -613,7 +613,7 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
                 that = this;
 
             this._notify(
-                &quot;Creating new location for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
+                Y.eZ.trans(&#x27;creating.new.location.for&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;bar&#x27;),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -626,7 +626,11 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
                     end = stack.add(function (error) {
                         if (error) {
                             that._notify(
-                                &quot;Creating new location for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; under &#x27;&quot; + parentContentInfo.get(&#x27;name&#x27;) + &quot;&#x27; failed&quot;,
+                                Y.eZ.trans(
+                                    &#x27;failed.creating.new.location.for&#x27;,
+                                    {name: content.get(&#x27;name&#x27;), parentName: parentContentInfo.get(&#x27;name&#x27;)},
+                                    &#x27;bar&#x27;
+                                ),
                                 errNotificationIdentifier,
                                 &#x27;error&#x27;,
                                 0
@@ -642,10 +646,14 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
 
             stack.done(function () {
                 if (locationsCreatedCounter &gt; 0) {
-                    var msg = &quot;New location for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; has been successfully created&quot;;
+                    var msg = Y.eZ.trans(&#x27;location.created&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;bar&#x27;);
 
                     if (locationsCreatedCounter &gt; 1) {
-                        msg = locationsCreatedCounter + &quot; new locations for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; have been successfully created&quot;;
+                        msg = Y.eZ.trans(
+                            &#x27;locations.created&#x27;,
+                            {count: locationsCreatedCounter, name: content.get(&#x27;name&#x27;)},
+                            &#x27;bar&#x27;
+                        );
                     }
                     that._notify(
                         msg,
@@ -657,7 +665,7 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
                     data.afterCreateCallback();
                 } else {
                     that._notify(
-                        &quot;Creating new location(s) for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; failed&quot;,
+                        Y.eZ.trans(&#x27;creating.new.location.for.failed&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;bar&#x27;),
                         notificationIdentifier,
                         &#x27;error&#x27;,
                         0

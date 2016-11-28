@@ -609,7 +609,7 @@ YUI.add(&#x27;ez-contenteditplugin&#x27;, function (Y) {
                 if (!error &amp;&amp; versions.DRAFT &amp;&amp; versions.DRAFT.length &gt;= 1) {
                     service.fire(&#x27;confirmBoxOpen&#x27;, {
                         config: {
-                            title: &quot;Select an Open Draft&quot;,
+                            title: Y.eZ.trans(&#x27;select.a.draft&#x27;, {}, &#x27;contentedit&#x27;),
                             view: new Y.eZ.DraftConflictView(Y.merge({
                                 drafts: versions.DRAFT,
                                 languageCode: languageCode,

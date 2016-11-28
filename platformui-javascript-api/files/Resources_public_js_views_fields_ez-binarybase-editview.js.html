@@ -557,7 +557,6 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
         IS_EMPTY = &#x27;is-field-empty&#x27;,
         DRAGGING = &#x27;is-dragging-file&#x27;,
         L = Y.Lang,
-        OVER_SIZE_TPL = &quot;The file &#x27;{name}&#x27; was refused because its size is greater than the maximum allowed size ({max})&quot;,
         win = Y.config.win,
         events = {
             &#x27;.ez-binarybase-warning-hide&#x27;: {
@@ -636,7 +635,7 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
             var def = this.get(&#x27;fieldDefinition&#x27;);
 
             if ( def.isRequired &amp;&amp; this._isEmpty() ) {
-                this.set(&#x27;errorStatus&#x27;, &#x27;This field is required&#x27;);
+                this.set(&#x27;errorStatus&#x27;, Y.eZ.trans(&#x27;this.field.is.required&#x27;, {}, &#x27;fieldedit&#x27;));
             } else {
                 this.set(&#x27;errorStatus&#x27;, false);
             }
@@ -737,7 +736,7 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
          * @return {String}
          */
         _getOverSizeMessage: function (name) {
-            return L.sub(OVER_SIZE_TPL, {name: name, max: this._getHumanMaxSize()});
+            return Y.eZ.trans(&#x27;over.maximum.allowed.size&#x27;, {name: name, max: this._getHumanMaxSize()}, &#x27;fieldedit&#x27;);
         },
 
         /**
@@ -939,14 +938,14 @@ YUI.add(&#x27;ez-binarybase-editview&#x27;, function (Y) {
             if ( files.length &gt; 1 ) {
                 this._set(
                     &#x27;warning&#x27;,
-                    &#x27;You dropped several files while only one can be stored in this field. Please choose one file.&#x27;
+                    Y.eZ.trans(&#x27;dropped.several.files&#x27;, {}, &#x27;fieldedit&#x27;)
                 );
                 return;
             }
             if ( !files[0] ) {
                 this._set(
                     &#x27;warning&#x27;,
-                    &#x27;You dropped a text selection while this field can only store a file. Please drop a file instead.&#x27;
+                    Y.eZ.trans(&#x27;dropped.text.selection&#x27;, {}, &#x27;fieldedit&#x27;)
                 );
                 return;
             }
