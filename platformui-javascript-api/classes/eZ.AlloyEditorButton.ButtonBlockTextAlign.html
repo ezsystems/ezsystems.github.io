@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -602,9 +603,10 @@
                                 <a href="#property_editor">editor</a>
 
                             </li>
-                            <li class="index-item property">
+                            <li class="index-item property deprecated">
                                 <a href="#property_label">label</a>
 
+                                    <span class="flag deprecated">deprecated</span>
                             </li>
                             <li class="index-item property">
                                 <a href="#property_tabIndex">tabIndex</a>
@@ -638,7 +640,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l83"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:83</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l86"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:86</code></a>
         </p>
 
 
@@ -672,7 +674,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l72"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:72</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:75</code></a>
         </p>
 
 
@@ -714,7 +716,7 @@ text align style</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l100"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:100</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l103"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:103</code></a>
         </p>
 
 
@@ -755,7 +757,7 @@ text align style</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:60</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l63"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:63</code></a>
         </p>
 
 
@@ -794,10 +796,11 @@ text align style</p>
 
 
 </div>
-<div id="property_label" class="property item">
+<div id="property_label" class="property item deprecated">
     <h3 class="name"><code>label</code></h3>
     <span class="type">String</span>
 
+        <span class="flag deprecated">deprecated</span>
 
 
 
@@ -812,7 +815,9 @@ text align style</p>
     </div>
 
     <div class="description">
-        <p>The label that should be used for accessibility purposes.</p>
+        <p>The label that should be used for accessibility purposes. This
+property is deprecated, component using this mixin should
+implement a _getLabel method instead.</p>
 
     </div>
 
@@ -830,7 +835,7 @@ text align style</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l44"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:44</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l47"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:47</code></a>
         </p>
 
 
@@ -856,7 +861,7 @@ means that the button has focus and is the active element.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l52"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:52</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_blocktextalign.js.html#l55"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;blocktextalign.js:55</code></a>
         </p>
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Resources/public/js/views/services/plugins/ez-publishdraftplugin.js - eZ Platform UI Bundle JavaScript API</title>
+    <title>eZ.AlloyEditorToolbarConfig.HeadingConfig - eZ Platform UI Bundle JavaScript API</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -535,257 +535,199 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1 class="file-heading">File: Resources/public/js/views/services/plugins/ez-publishdraftplugin.js</h1>
+<h1>eZ.AlloyEditorToolbarConfig.HeadingConfig Class</h1>
+<div class="box meta">
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/*
- * Copyright (C) eZ Systems AS. All rights reserved.
- * For full copyright and license information view LICENSE file distributed with this source code.
- */
-YUI.add(&#x27;ez-publishdraftplugin&#x27;, function (Y) {
-    &quot;use strict&quot;;
-    /**
-     * Provides the publish draft plugin
-     *
-     * @module ez-publishdraftplugin
-     */
-    Y.namespace(&#x27;eZ.Plugin&#x27;);
+        <div class="extends">
+            Extends BlockBase
+        </div>
 
-    /**
-     * Publish draft plugin. It publishes the version hold by the host object (a
-     * service) when the publishAction event is triggered.
-     *
-     * @namespace eZ.Plugin
-     * @class PublishDraft
-     * @constructor
-     * @extends eZ.Plugin.ViewServiceBase
-     */
-    Y.eZ.Plugin.PublishDraft = Y.Base.create(&#x27;publishDraftPlugin&#x27;, Y.eZ.Plugin.ViewServiceBase, [Y.eZ.DraftServerSideValidation], {
-        initializer: function () {
-            this.onHostEvent(&#x27;*:publishAction&#x27;, this._publishDraft);
-        },
+        <div class="foundat">
+            Defined in: <a href="../files/Resources_public_js_alloyeditor_toolbars_config_heading.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;toolbars&#x2F;config&#x2F;heading.js:74</code></a>
+        </div>
 
-        /**
-         * Event handler for the publishAction event. It publishes the version
-         * if the form is valid and redirect the user to the URL hold by the
-         * &#x60;publishRedirectionUrl&#x60; attribute.
-         *
-         * @method _publishDraft
-         * @protected
-         * @param {Object} e publishAction event facade
-         */
-        _publishDraft: function (e) {
-            var service = this.get(&#x27;host&#x27;),
-                content = service.get(&#x27;content&#x27;),
-                notificationIdentifier,
-                app = service.get(&#x27;app&#x27;),
-                buttonActionView = e.target;
+            Module: <a href="../modules/ez-alloyeditor-toolbar-config-heading.html">ez-alloyeditor-toolbar-config-heading</a>
 
-            if ( !e.formIsValid ) {
-                return;
-            }
-            if (content.isNew()) {
-                notificationIdentifier = this._buildNotificationIdentifier(false);
-            } else {
-                notificationIdentifier = this._buildNotificationIdentifier(content.get(&#x27;id&#x27;));
-            }
+</div>
 
-            /**
-             * Stores a custom _serverSideErrorCallback sent in the &#x60;publishAction&#x60; event parameters.
-             *
-             * @property _serverSideErrorCallback
-             * @protected
-             * @type {Function}
-             */
-            this._serverSideErrorCallback = e.serverSideErrorCallback;
 
-            service.fire(&#x27;notify&#x27;, {
-                notification: {
-                    identifier: notificationIdentifier,
-                    text: Y.eZ.trans(&#x27;publishing.content&#x27;, {}, &#x27;contentedit&#x27;),
-                    state: &#x27;started&#x27;,
-                    timeout: 5,
-                },
-            });
+<div class="box intro">
+    <p><code>styles</code> toolbar configuration for heading. The <code>heading</code> toolbar is
+supposed to be shown when the user puts the caret inside an heading
+element and when the selection is empty.</p>
 
-            app.set(&#x27;loading&#x27;, true);
-            buttonActionView.set(&quot;disabled&quot;, true);
+</div>
 
-            app.onceAfter(&#x27;loadingChange&#x27;, function () {
-                buttonActionView.set(&quot;disabled&quot;, false);
-            });
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_eZ.AlloyEditorToolbarConfig.HeadingConfig" class="method item">
+    <h3 class="name"><code>eZ.AlloyEditorToolbarConfig.HeadingConfig</code></h3>
 
-            if ( content.isNew() ) {
-                this._set(&#x27;isNewContent&#x27;, true);
-                this._createPublishContent(e.fields);
-            } else {
-                this._savePublishVersion(e.fields);
-            }
-        },
+        <span class="paren">()</span>
 
-        /**
-         * Notify the user about the publish process and fire the &#x60;publishedDraft&#x60;
-         * event.
-         *
-         * @method _publishDraftCallback
-         * @param {Object} error The error object.
-         * @param {Object} response The response object.
-         * @protected
-         */
-        _publishDraftCallback: function (error, response) {
-            var service = this.get(&#x27;host&#x27;),
-                app = this.get(&#x27;host&#x27;).get(&#x27;app&#x27;),
-                content = service.get(&#x27;content&#x27;),
-                notificationIdentifier = this._buildNotificationIdentifier(content.get(&#x27;id&#x27;));
 
-            if ( error ) {
-                this._parseServerFieldsErrors(response, this._serverSideErrorCallback);
-                this._notifyError(content.get(&#x27;id&#x27;));
-                app.set(&#x27;loading&#x27;, false);
-                return;
-            }
 
-            if (this.get(&#x27;isNewContent&#x27;)) {
-                notificationIdentifier = this._buildNotificationIdentifier(false);
-            }
 
-            service.fire(&#x27;notify&#x27;, {
-                notification: {
-                    identifier: notificationIdentifier,
-                    text: Y.eZ.trans(&#x27;content.published&#x27;, {}, &#x27;contentedit&#x27;),
-                    state: &#x27;done&#x27;,
-                    timeout: 5,
-                },
-            });
 
-            content.load({api: service.get(&#x27;capi&#x27;)}, function (error, response) {
-                /**
-                 * Fired when the draft is published
-                 *
-                 * @event publishedDraft
-                 * @param {eZ.Content} content
-                 */
-                service.fire(&#x27;publishedDraft&#x27;, {content: content});
-            });
-        },
 
-        /**
-         * Creates a draft of a new content with the given fields and directly
-         * tries to publish it.
-         *
-         * @method _createPublishContent
-         * @param Array fields the fields structures coming from the
-         * publishAction event
-         * @protected
-         */
-        _createPublishContent: function (fields) {
-            var service = this.get(&#x27;host&#x27;),
-                capi = service.get(&#x27;capi&#x27;),
-                version = service.get(&#x27;version&#x27;),
-                content = service.get(&#x27;content&#x27;),
-                options = {api: capi};
 
-            content.save({
-                api: capi,
-                languageCode: service.get(&#x27;languageCode&#x27;),
-                contentType: service.get(&#x27;contentType&#x27;),
-                parentLocation: service.get(&#x27;parentLocation&#x27;),
-                fields: fields,
-            }, Y.bind(function (error, response) {
-                if ( error ) {
-                    this._parseServerFieldsErrors(response, this._serverSideErrorCallback);
-                    this._notifyError(content.get(&#x27;id&#x27;));
-                    service.get(&#x27;app&#x27;).set(&#x27;loading&#x27;, false);
-                    return;
-                }
-                version.setAttrs(version.parse({document: response.document.Content.CurrentVersion}));
-                version.publishVersion(options, Y.bind(this._publishDraftCallback, this));
-            }, this));
-        },
 
-        /**
-         * Sets the given fields on the version and publishes it. This method is
-         * called in the case where the content already exists in the repository
-         * and the user wants to publish a new version of it.
-         *
-         * @method _savePublishVersion
-         * @param Array fields the fields structures coming from the
-         * publishAction event
-         * @protected
-         */
-        _savePublishVersion: function (fields) {
-            var service = this.get(&#x27;host&#x27;),
-                version = service.get(&#x27;version&#x27;),
-                content = service.get(&#x27;content&#x27;),
-                that = this;
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_alloyeditor_toolbars_config_heading.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;toolbars&#x2F;config&#x2F;heading.js:74</code></a>
+        </p>
 
-            version.save({
-                api: service.get(&#x27;capi&#x27;),
-                fields: fields,
-                contentId: content.get(&#x27;id&#x27;),
-                languageCode: service.get(&#x27;languageCode&#x27;),
-                publish: true,
-            }, Y.bind(that._publishDraftCallback, that));
-        },
 
-        /**
-         * Notifies the editor about a publishing error
-         *
-         * @method _notifyError
-         * @protected
-         * @param {String} contentId
-         */
-        _notifyError: function (contentId) {
-            this.get(&#x27;host&#x27;).fire(&#x27;notify&#x27;, {
-                notification: {
-                    identifier: this._buildNotificationIdentifier(contentId),
-                    text: Y.eZ.trans(&#x27;error.publishing.draft&#x27;, {}, &#x27;contentedit&#x27;),
-                    state: &#x27;error&#x27;,
-                    timeout: 0,
-                },
-            });
-        },
 
-        /**
-         * Builds the notification identifier for the publish notification
-         *
-         * @method _buildNotificationIdentifier
-         * @param {Boolean} isNew
-         * @param {eZ.Content} content
-         * @protected
-         */
-        _buildNotificationIdentifier: function (contentId) {
+    </div>
 
-            if (contentId) {
-                return &#x27;publish-&#x27; + contentId + &#x27;-&#x27; + this.get(&#x27;host&#x27;).get(&#x27;languageCode&#x27;);
-            } else {
-                return &#x27;publish-&#x27; + this.get(&#x27;host&#x27;).get(&#x27;languageCode&#x27;);
-            }
-        },
-    }, {
-        NS: &#x27;publishDraft&#x27;,
+    <div class="description">
+        
+    </div>
 
-        ATTRS: {
-            /**
-             * Hold the flag to see if the published content already exists
-             *
-             * @attribute isNewContent
-             * @type Boolean
-             * @default false
-             */
-            isNewContent: {
-                value: false
-            }
-        },
-    });
 
-    Y.eZ.PluginRegistry.registerPlugin(
-        Y.eZ.Plugin.PublishDraft, [&#x27;contentEditViewService&#x27;, &#x27;contentCreateViewService&#x27;]
-    );
-});
 
-    </pre>
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                            <li class="index-item method">
+                                <a href="#method_test">test</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_test" class="method item">
+    <h3 class="name"><code>test</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>payload</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_alloyeditor_toolbars_config_heading.js.html#l47"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;toolbars&#x2F;config&#x2F;heading.js:47</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Tests whether the <code>heading</code> toolbar should be visible. It is visible
+when the selection is empty and when the caret is inside a heading.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">payload</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">editor</code>
+                                    <span class="type">AlloyEditor.Core</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">data</code>
+                                    <span class="type">Object</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                                    <ul class="params-list">
+                                        <li class="param">
+                                                <code class="param-name">selectionData</code>
+                                                <span class="type">Object</span>
+
+                                            <div class="param-description">
+                                                
+                                            </div>
+                                        </li>
+                                        <li class="param">
+                                                <code class="param-name">nativeEvent</code>
+                                                <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Event.html" class="crosslink external" target="_blank">Event</a></span>
+
+                                            <div class="param-description">
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
+            </div>
+
+
+
+    </div>
 </div>
                     </div>
                 </div>

@@ -36,6 +36,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
         "eZ.AlloyEditorToolbarConfig.Embed",
         "eZ.AlloyEditorToolbarConfig.Heading",
+        "eZ.AlloyEditorToolbarConfig.HeadingConfig",
         "eZ.AlloyEditorToolbarConfig.Image",
         "eZ.AlloyEditorToolbarConfig.Link",
         "eZ.AlloyEditorToolbarConfig.Paragraph",

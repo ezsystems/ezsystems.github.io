@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -572,9 +573,11 @@ YUI.add(&#x27;ez-alloyeditor-button-mixin-embeddiscovercontent&#x27;, function (
             editor: React.PropTypes.object.isRequired,
 
             /**
-             * The title of the UDW
+             * The title of the UDW. This property is deprecated, please
+             * implement a _getUDWTitle method instead.
              *
              * @property {String} udwTitle
+             * @deprecated
              */
             udwTitle: React.PropTypes.string,
 
@@ -603,6 +606,7 @@ YUI.add(&#x27;ez-alloyeditor-button-mixin-embeddiscovercontent&#x27;, function (
              * The label of the button
              *
              * @property {String} label
+             * @deprecated
              */
             label: React.PropTypes.string,
         },
@@ -614,11 +618,21 @@ YUI.add(&#x27;ez-alloyeditor-button-mixin-embeddiscovercontent&#x27;, function (
          * @protected
          */
         _chooseContent: function () {
-            var selectable = this.props.udwIsSelectableMethod;
+            var selectable = this.props.udwIsSelectableMethod,
+                title;
+
+            if ( !this._getUDWTitle ) {
+                console.log(&#x27;[DEPRECATED] using deprecated &#x60;udwTitle&#x60; property&#x27;);
+                console.log(&#x27;[DEPRECATED] when using ButtonEmbedDiscoverContent please implement _getUDWTitle instead&#x27;);
+                title = this.props.udwTitle;
+            } else {
+                title = this._getUDWTitle();
+            }
+
 
             this.props.editor.get(&#x27;nativeEditor&#x27;).fire(&#x27;contentDiscover&#x27;, {
                 config: {
-                    title: this.props.udwTitle,
+                    title: title,
                     multiple: false,
                     contentDiscoveredHandler: this[this.props.udwContentDiscoveredMethod],
                     isSelectable: selectable ? this[selectable] : undefined,

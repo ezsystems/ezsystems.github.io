@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -581,10 +582,21 @@ YUI.add(&#x27;ez-alloyeditor-button-embedhref&#x27;, function (Y) {
 
         getDefaultProps: function () {
             return {
-                udwTitle: Y.eZ.trans(&#x27;select.a.content.to.embed&#x27;, {}, &#x27;onlineeditor&#x27;),
+                udwTitle: &#x27;Select a content to embed&#x27;,
                 udwContentDiscoveredMethod: &quot;_updateEmbed&quot;,
-                label: Y.eZ.trans(&#x27;select.another.content.item&#x27;, {}, &#x27;onlineeditor&#x27;),
+                label: &#x27;Select antoher content item&#x27;,
             };
+        },
+
+        /**
+         * Returns the UDW title to pick a Content to embed.
+         *
+         * @method _getUDWTitle
+         * @protected
+         * @return {String}
+         */
+        _getUDWTitle: function () {
+            return Y.eZ.trans(&#x27;select.a.content.to.embed&#x27;, {}, &#x27;onlineeditor&#x27;);
         },
 
         /**
@@ -605,7 +617,7 @@ YUI.add(&#x27;ez-alloyeditor-button-embedhref&#x27;, function (Y) {
         render: function () {
             return (
                 React.createElement(&quot;button&quot;, {className: &quot;ae-button&quot;, onClick: this._chooseContent, 
-                    tabIndex: this.props.tabIndex, title: this.props.label}, 
+                    tabIndex: this.props.tabIndex, title: Y.eZ.trans(&#x27;select.another.content.item&#x27;, {}, &#x27;onlineeditor&#x27;)}, 
                     React.createElement(&quot;span&quot;, {className: &quot;ez-font-icon ae-icon-udw ez-ae-icon-udw&quot;})
                 )
             );

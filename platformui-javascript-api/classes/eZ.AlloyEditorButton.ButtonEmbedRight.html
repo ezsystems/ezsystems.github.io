@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -576,6 +577,10 @@ element to the right</p>
                     <h3>Methods</h3>
 
                     <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method__getLabel">_getLabel</a>
+
+                            </li>
                             <li class="index-item method inherited">
                                 <a href="#method_applyStyle">applyStyle</a>
 
@@ -599,9 +604,10 @@ element to the right</p>
                                 <a href="#property_classIcon">classIcon</a>
 
                             </li>
-                            <li class="index-item property inherited">
+                            <li class="index-item property deprecated inherited">
                                 <a href="#property_label">label</a>
 
+                                    <span class="flag deprecated">deprecated</span>
                             </li>
                             <li class="index-item property inherited">
                                 <a href="#property_tabIndex">tabIndex</a>
@@ -616,6 +622,47 @@ element to the right</p>
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
+<div id="method__getLabel" class="method item">
+    <h3 class="name"><code>_getLabel</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_alloyeditor_buttons_embedright.js.html#l49"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;embedright.js:49</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the translated label for the button</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method_applyStyle" class="method item inherited">
     <h3 class="name"><code>applyStyle</code></h3>
 
@@ -631,7 +678,7 @@ element to the right</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AlloyEditorButton.ButtonEmbedAlign.html#method_applyStyle">eZ.AlloyEditorButton.ButtonEmbedAlign</a>:
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l76"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:76</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l79"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:79</code></a>
         </p>
 
 
@@ -666,7 +713,7 @@ element.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AlloyEditorButton.ButtonEmbedAlign.html#method_isActive">eZ.AlloyEditorButton.ButtonEmbedAlign</a>:
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l65"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:65</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l68"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:68</code></a>
         </p>
 
 
@@ -706,7 +753,7 @@ element.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AlloyEditorButton.ButtonEmbedAlign.html#property_alignment">eZ.AlloyEditorButton.ButtonEmbedAlign</a>:
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l49"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:49</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l52"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:52</code></a>
         </p>
 
 
@@ -731,7 +778,7 @@ element.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AlloyEditorButton.ButtonEmbedAlign.html#property_classIcon">eZ.AlloyEditorButton.ButtonEmbedAlign</a>:
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l57"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:57</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:60</code></a>
         </p>
 
 
@@ -745,10 +792,11 @@ element.</p>
 
 
 </div>
-<div id="property_label" class="property item inherited">
+<div id="property_label" class="property item deprecated inherited">
     <h3 class="name"><code>label</code></h3>
     <span class="type">String</span>
 
+        <span class="flag deprecated">deprecated</span>
 
 
 
@@ -763,7 +811,9 @@ element.</p>
     </div>
 
     <div class="description">
-        <p>The label that should be used for accessibility purposes.</p>
+        <p>The label that should be used for accessibility purposes. This
+property is deprecated, while using ButtonEmbedAlign, you should
+implement a <code>_getLabel</code> method instead.</p>
 
     </div>
 
@@ -781,7 +831,7 @@ element.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AlloyEditorButton.ButtonEmbedAlign.html#property_tabIndex">eZ.AlloyEditorButton.ButtonEmbedAlign</a>:
-        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l41"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:41</code></a>
+        <a href="../files/Resources_public_js_alloyeditor_buttons_mixins_embedalign.js.html#l44"><code>Resources&#x2F;public&#x2F;js&#x2F;alloyeditor&#x2F;buttons&#x2F;mixins&#x2F;embedalign.js:44</code></a>
         </p>
 
 

@@ -3081,6 +3081,7 @@
                 "ez-alloyeditor-toolbar-config-heading": 1
             },
             "classes": {
+                "eZ.AlloyEditorToolbarConfig.HeadingConfig": 1,
                 "eZ.AlloyEditorToolbarConfig.Heading": 1
             },
             "fors": {},
@@ -6510,6 +6511,7 @@
             "submodules": {},
             "elements": {},
             "classes": {
+                "eZ.AlloyEditorToolbarConfig.HeadingConfig": 1,
                 "eZ.AlloyEditorToolbarConfig.Heading": 1
             },
             "fors": {},
@@ -6518,7 +6520,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 29,
+            "line": 86,
             "description": "Provides the AlloyEditor `styles` toolbar configuration for headings."
         },
         "ez-alloyeditor-toolbar-config-image": {
@@ -10468,6 +10470,22 @@
             "description": "`styles` toolbar configuration for embed. The `embed` toolbar is\nsupposed to be shown when the user gives the focus to an ezembed widget",
             "extends": "BlockBase"
         },
+        "eZ.AlloyEditorToolbarConfig.HeadingConfig": {
+            "name": "eZ.AlloyEditorToolbarConfig.HeadingConfig",
+            "shortname": "eZ.AlloyEditorToolbarConfig.HeadingConfig",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-toolbar-config-heading",
+            "namespace": "eZ.AlloyEditorToolbarConfig",
+            "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
+            "line": 74,
+            "description": "`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
+            "is_constructor": 1,
+            "extends": "BlockBase"
+        },
         "eZ.AlloyEditorToolbarConfig.Heading": {
             "name": "eZ.AlloyEditorToolbarConfig.Heading",
             "shortname": "eZ.AlloyEditorToolbarConfig.Heading",
@@ -10479,8 +10497,9 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 29,
-            "description": "`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
+            "line": 86,
+            "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.HeadingConfig constructor instead.\n`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
+            "deprecated": true,
             "extends": "BlockBase"
         },
         "eZ.AlloyEditorToolbarConfig.Image": {
@@ -10523,8 +10542,9 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 16,
-            "description": "`styles` toolbar configuration for paragraph. The `paragraph` toolbar is\nsupposed to be shown when the user puts the caret inside a paragraph\nelement and when the selection is empty.",
+            "line": 86,
+            "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.ParagraphConfig instead.\n`styles` toolbar configuration for paragraph. The `paragraph` toolbar is\nsupposed to be shown when the user puts the caret inside a paragraph\nelement and when the selection is empty.",
+            "deprecated": true,
             "extends": "BlockBase"
         },
         "eZ.AlloyEditorToolbarConfig.Table": {
@@ -17365,7 +17385,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 445,
+            "line": 447,
             "description": "The path to use to load the CKEditor plugins",
             "itemtype": "attribute",
             "name": "ckeditorPluginPath",
@@ -17378,7 +17398,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 458,
+            "line": 460,
             "description": "Editor events to forward to the YUI stack",
             "itemtype": "attribute",
             "name": "forwardEvents",
@@ -17391,7 +17411,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-editview.js",
-            "line": 471,
+            "line": 473,
             "description": "Hold the list of editor content processors. Those components\nshould have a `process` method and are there to clean up the\neditor content before using it through REST.",
             "itemtype": "attribute",
             "name": "editorContentProcessors",
@@ -41207,17 +41227,18 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
             "line": 37,
-            "description": "The label that should be used for accessibility purposes.",
+            "description": "The label that should be used for accessibility purposes. This\nproperty is deprecated, component using this mixin should\nimplement a _getLabel method instead.",
             "itemtype": "property",
             "name": "label",
             "type": "String",
+            "deprecated": true,
             "class": "eZ.AlloyEditorButton.ButtonBlockTextAlign",
             "module": "ez-alloyeditor-button-mixin-blocktextalign",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
-            "line": 44,
+            "line": 47,
             "description": "The tabIndex of the button in its toolbar current state. A value other than -1\nmeans that the button has focus and is the active element.",
             "itemtype": "property",
             "name": "tabIndex",
@@ -41228,7 +41249,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
-            "line": 52,
+            "line": 55,
             "description": "The text-align style value to check and apply",
             "required": 1,
             "itemtype": "property",
@@ -41240,7 +41261,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
-            "line": 60,
+            "line": 63,
             "description": "The suffix of the class to use icon to set the button icon",
             "itemtype": "property",
             "name": "classIcon",
@@ -41251,7 +41272,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
-            "line": 72,
+            "line": 75,
             "description": "Checks whether the element holding the caret already has the current\ntext align style",
             "itemtype": "method",
             "name": "isActive",
@@ -41265,7 +41286,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
-            "line": 83,
+            "line": 86,
             "description": "Applies or removes the text align style",
             "itemtype": "method",
             "name": "applyStyle",
@@ -41275,7 +41296,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/blocktextalign.js",
-            "line": 100,
+            "line": 103,
             "description": "Lifecycle. Renders the UI of the button.",
             "itemtype": "method",
             "name": "render",
@@ -41290,17 +41311,18 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
             "line": 34,
-            "description": "The label that should be used for accessibility purposes.",
+            "description": "The label that should be used for accessibility purposes. This\nproperty is deprecated, while using ButtonEmbedAlign, you should\nimplement a `_getLabel` method instead.",
             "itemtype": "property",
             "name": "label",
             "type": "String",
+            "deprecated": true,
             "class": "eZ.AlloyEditorButton.ButtonEmbedAlign",
             "module": "ez-alloyeditor-button-mixin-embedalign",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
-            "line": 41,
+            "line": 44,
             "description": "The tabIndex of the button in its toolbar current state. A value other than -1\nmeans that the button has focus and is the active element.",
             "itemtype": "property",
             "name": "tabIndex",
@@ -41311,7 +41333,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
-            "line": 49,
+            "line": 52,
             "description": "The alignment to apply ('center', 'left' or 'right')",
             "required": 1,
             "itemtype": "property",
@@ -41323,7 +41345,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
-            "line": 57,
+            "line": 60,
             "description": "The suffix of the class to use icon to set the button icon",
             "itemtype": "property",
             "name": "classIcon",
@@ -41334,7 +41356,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
-            "line": 65,
+            "line": 68,
             "description": "Checks if the configured alignment is active on the focused embed\nelement.",
             "itemtype": "method",
             "name": "isActive",
@@ -41348,7 +41370,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embedalign.js",
-            "line": 76,
+            "line": 79,
             "description": "Applies or un-applies the alignment on the currently focused embed\nelement.",
             "itemtype": "method",
             "name": "applyStyle",
@@ -41370,17 +41392,18 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
             "line": 34,
-            "description": "The title of the UDW",
+            "description": "The title of the UDW. This property is deprecated, please\nimplement a _getUDWTitle method instead.",
             "itemtype": "property",
             "name": "udwTitle",
             "type": "String",
+            "deprecated": true,
             "class": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
             "module": "ez-alloyeditor-button-mixin-embeddiscovercontent",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 41,
+            "line": 43,
             "description": "The method to use as the contentDiscoveredHandler in the UDW",
             "itemtype": "property",
             "name": "udwContentDiscoveredMethod",
@@ -41391,7 +41414,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 48,
+            "line": 50,
             "description": "The method to use as the isSelectable function in the UDW",
             "itemtype": "property",
             "name": "udwIsSelectableMethod",
@@ -41402,7 +41425,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 55,
+            "line": 57,
             "description": "The loadContent flag to pass to the UDW",
             "itemtype": "property",
             "name": "udwLoadContent",
@@ -41413,18 +41436,19 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 62,
+            "line": 64,
             "description": "The label of the button",
             "itemtype": "property",
             "name": "label",
             "type": "String",
+            "deprecated": true,
             "class": "eZ.AlloyEditorButton.ButtonEmbedDiscoverContent",
             "module": "ez-alloyeditor-button-mixin-embeddiscovercontent",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 70,
+            "line": 73,
             "description": "Triggers the UDW to choose the content to embed.",
             "itemtype": "method",
             "name": "_chooseContent",
@@ -41436,7 +41460,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 90,
+            "line": 103,
             "description": "Sets the href of the ezembed widget based on the given content info",
             "itemtype": "method",
             "name": "_setContentInfo",
@@ -41455,7 +41479,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 104,
+            "line": 117,
             "description": "Fires the `updatedEmbed` event. This should be called right after the\nembed element is updated.",
             "itemtype": "method",
             "name": "_fireUpdatedEmbed",
@@ -41474,7 +41498,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/mixins/embeddiscovercontent.js",
-            "line": 113,
+            "line": 126,
             "description": "Fired when the embed widget is updated in the editor. This event\ncan be listened to render the embed widget that has been updated.",
             "itemtype": "event",
             "name": "updatedEmbed",
@@ -41571,13 +41595,86 @@
             "itemtype": "property",
             "name": "label",
             "type": "String",
+            "deprecated": true,
             "class": "eZ.AlloyEditorButton.ButtonBlockRemove",
             "module": "ez-alloyeditor-button-remove",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/blocktextaligncenter.js",
+            "line": 47,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonBlockTextAlignCenter",
+            "module": "ez-alloyeditor-button-blocktextaligncenter",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/blocktextalignjustify.js",
+            "line": 47,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonBlockTextAlignJustify",
+            "module": "ez-alloyeditor-button-blocktextalignjustify",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/blocktextalignleft.js",
+            "line": 47,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonBlockTextAlignLeft",
+            "module": "ez-alloyeditor-button-blocktextalignleft",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/blocktextalignright.js",
+            "line": 47,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonBlockTextAlignRight",
+            "module": "ez-alloyeditor-button-blocktextalignright",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/embed.js",
             "line": 47,
+            "description": "Returns the UDW title to pick a Content to embed.",
+            "itemtype": "method",
+            "name": "_getUDWTitle",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed",
+            "module": "ez-alloyeditor-button-blocktextalignright",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/embed.js",
+            "line": 58,
             "description": "Executes the command generated by the ezembed plugin and set the\ncorrect value based on the choosen content.",
             "itemtype": "method",
             "name": "_addEmbed",
@@ -41595,8 +41692,38 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/embedcenter.js",
+            "line": 49,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonEmbedCenter",
+            "module": "ez-alloyeditor-button-embedcenter",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/embedhref.js",
             "line": 50,
+            "description": "Returns the UDW title to pick a Content to embed.",
+            "itemtype": "method",
+            "name": "_getUDWTitle",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonEmbedHref",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/embedhref.js",
+            "line": 61,
             "description": "Updates the emebed element with the selected content in UDW.",
             "itemtype": "method",
             "name": "_updateEmbed",
@@ -41614,6 +41741,34 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/embedleft.js",
+            "line": 49,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonEmbedLeft",
+            "module": "ez-alloyeditor-button-embedleft",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/embedright.js",
+            "line": 49,
+            "description": "Returns the translated label for the button",
+            "itemtype": "method",
+            "name": "_getLabel",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonEmbedRight",
+            "module": "ez-alloyeditor-button-embedcenter",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/heading.js",
             "line": 42,
             "description": "Executes the eZAppendContent to add a heading element in the editor.",
@@ -41628,6 +41783,22 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/image.js",
             "line": 51,
+            "description": "Returns the UDW title to pick a Content to embed.",
+            "itemtype": "method",
+            "name": "_getUDWTitle",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage",
+            "module": "ez-alloyeditor-button-embedcenter",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/image.js",
+            "line": 62,
             "description": "Executes the command generated by the ezembed plugin and set the\ncorrect value based on the choosen image.",
             "itemtype": "method",
             "name": "_addImage",
@@ -41647,6 +41818,22 @@
         {
             "file": "Resources/public/js/alloyeditor/buttons/imagehref.js",
             "line": 54,
+            "description": "Returns the UDW title to pick a Content to embed.",
+            "itemtype": "method",
+            "name": "_getUDWTitle",
+            "access": "protected",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonImageHref",
+            "module": "ez-alloyeditor-button-imagehref",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/imagehref.js",
+            "line": 66,
             "description": "Updates the image element with the selected content in UDW.",
             "itemtype": "method",
             "name": "_updateEmbed",
@@ -42444,10 +42631,55 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 49,
+            "line": 47,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
+            "params": [
+                {
+                    "name": "payload",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "editor",
+                            "description": "",
+                            "type": "AlloyEditor.Core"
+                        },
+                        {
+                            "name": "data",
+                            "description": "",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "selectionData",
+                                    "description": "",
+                                    "type": "Object"
+                                },
+                                {
+                                    "name": "nativeEvent",
+                                    "description": "",
+                                    "type": "Event"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.AlloyEditorToolbarConfig.HeadingConfig",
+            "module": "ez-alloyeditor-toolbar-config-heading"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
+            "line": 109,
+            "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
+            "itemtype": "method",
+            "name": "test",
+            "deprecated": true,
             "params": [
                 {
                     "name": "payload",
@@ -42534,10 +42766,55 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 35,
+            "line": 46,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",
+            "params": [
+                {
+                    "name": "payload",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "editor",
+                            "description": "",
+                            "type": "AlloyEditor.Core"
+                        },
+                        {
+                            "name": "data",
+                            "description": "",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "selectionData",
+                                    "description": "",
+                                    "type": "Object"
+                                },
+                                {
+                                    "name": "nativeEvent",
+                                    "description": "",
+                                    "type": "Event"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.AlloyEditorToolbarConfig.Paragraph",
+            "module": "ez-alloyeditor-toolbar-config-paragraph"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
+            "line": 109,
+            "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
+            "itemtype": "method",
+            "name": "test",
+            "deprecated": true,
             "params": [
                 {
                     "name": "payload",
