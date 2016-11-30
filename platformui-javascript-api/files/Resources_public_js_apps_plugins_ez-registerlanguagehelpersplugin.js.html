@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -546,10 +554,17 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
 
     /**
      * Register Language Helpers plugin for the Platform UI application. It registers
-     * handlebars helper allowing to get language name based on language code:
+     * handlebars helpers:
      *
-     *   * &#x60;language_name&#x60; is for returning language name based on given language code. It takes the
-     *   language code as an argument
+     *    * &#x60;language_name&#x60; is for returning language name based on given language code. It takes the
+     *    language code as an argument
+     *
+     *    * &#x60;translate_property&#x60; returns the translation of a property. It takes as an argument the property to
+     *    translate as a hash indexed by eZ Locale for example:
+     *    {&#x27;eng-GB&#x27;: &#x27;potatoes&#x27;, &#x27;fre-FR&#x27;: &#x27;pomme de terre&#x27;}
+     *
+     *    * &#x60;translate&#x60; returns a translated message. It takes as an argument the message to translate, the domain
+     *    where the message can be found and the parameters to be applied to the message.
      *
      * @namespace eZ.Plugin
      * @class RegisterLanguageHelpers
@@ -560,6 +575,7 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
         initializer: function () {
             this._registerLanguageName();
             this._registerTranslatedProperty();
+            this._registerTranslate();
         },
 
         /**
@@ -590,6 +606,34 @@ YUI.add(&#x27;ez-registerlanguagehelpersplugin&#x27;, function (Y) {
             var app = this.get(&#x27;host&#x27;);
 
             Y.Handlebars.registerHelper(&#x27;translate_property&#x27;, Y.bind(app.translateProperty, app, app.get(&#x27;localesMap&#x27;)));
+        },
+
+        /**
+         * Registers the &#x60;translate&#x60; handlebars helper.  The &#x60;translate&#x60; helper
+         * expects a message that can be found in a domain (See Symfony
+         * translation documentation).
+         *
+         * The parameters of the translated message can be provided as named
+         * parameters, for example:
+         *
+         *     {# string.id could be &quot;My Name is %name% and I&#x27;m %age% #}
+         *     {{ translation &#x27;string.id&#x27; &#x27;domain&#x27; name=&quot;John&quot; age=42 }}
+         *
+         * @method _registerTranslate
+         * @protected
+         */
+        _registerTranslate: function () {
+            Y.Handlebars.registerHelper(&#x27;translate&#x27;, function (message, domain, handlebarsData) {
+                var params = {};
+
+                Y.Object.each(handlebarsData.hash, function (value, key) {
+                    params[key] = Y.Handlebars.Utils.escapeExpression(value);
+                });
+
+                return new Y.Handlebars.SafeString(
+                    Y.eZ.Translator.trans(message, params, domain)
+                );
+            });
         },
     }, {
         NS: &#x27;registerLanguageHelpers&#x27;,
