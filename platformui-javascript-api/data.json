@@ -27253,14 +27253,19 @@
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
             "line": 130,
-            "description": "Fired when object relations are going to be loaded",
+            "description": "Fired to load the object relations",
             "itemtype": "event",
             "name": "loadObjectRelations",
             "params": [
                 {
                     "name": "loadLocationPath",
                     "description": "flag indicating whether the locations' paths should be loaded",
-                    "type": "Bool"
+                    "type": "Boolean"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "eZ.Content"
                 }
             ],
             "class": "eZ.LocationViewRelationsTabView",
@@ -27269,7 +27274,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 140,
+            "line": 144,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -27282,7 +27287,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 153,
+            "line": 157,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -27295,7 +27300,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 166,
+            "line": 170,
             "description": "The related content structs of the content",
             "itemtype": "attribute",
             "name": "relatedContents",
@@ -27306,7 +27311,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 176,
+            "line": 180,
             "description": "The content type of the content being displayed",
             "itemtype": "attribute",
             "name": "contentType",
@@ -27318,7 +27323,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 187,
+            "line": 191,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -27330,7 +27335,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewrelationstabview.js",
-            "line": 198,
+            "line": 202,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
