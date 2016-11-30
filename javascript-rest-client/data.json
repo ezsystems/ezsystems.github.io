@@ -3143,13 +3143,13 @@
                 }
             ],
             "example": [
-                "\n    var viewCreateStruct = contentService.newViewCreateStruct('some-test-id');\n    viewCreateStruct.body.ViewInput.Query.Criteria = {\n        FullTextCriterion : \"title\"\n    };\n    contentService.createView(\n        viewCreateStruct,\n        callback\n    );"
+                "\n    var viewCreateStruct = contentService.newViewCreateStruct('some-test-id', 'LocationQuery');\n    viewCreateStruct.body.ViewInput.LocationQuery.Query = {\n        FullTextCriterion : \"title\"\n    };\n    contentService.createView(\n        viewCreateStruct,\n        callback\n    );"
             ],
             "class": "ContentService"
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1127,
+            "line": 1130,
             "description": "Loads the relations of the target version.",
             "itemtype": "method",
             "name": "loadRelations",
@@ -3186,7 +3186,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1181,
+            "line": 1184,
             "description": "Loads the relations of the target content's current version",
             "itemtype": "method",
             "name": "loadCurrentRelations",
@@ -3223,7 +3223,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1234,
+            "line": 1237,
             "description": "Loads target relation",
             "itemtype": "method",
             "name": "loadRelation",
@@ -3243,7 +3243,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1252,
+            "line": 1255,
             "description": "Creates a new relation of type COMMON for the given draft.",
             "itemtype": "method",
             "name": "addRelation",
@@ -3271,7 +3271,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1293,
+            "line": 1296,
             "description": "Delete target relation",
             "itemtype": "method",
             "name": "deleteRelation",
@@ -3291,7 +3291,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1315,
+            "line": 1318,
             "description": "Loads all the trash can items",
             "itemtype": "method",
             "name": "loadTrashItems",
@@ -3323,7 +3323,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1365,
+            "line": 1368,
             "description": "Loads target trash can item",
             "itemtype": "method",
             "name": "loadTrashItem",
@@ -3343,7 +3343,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1383,
+            "line": 1386,
             "description": "Restores target trashItem",
             "itemtype": "method",
             "name": "recover",
@@ -3369,7 +3369,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1411,
+            "line": 1414,
             "description": "Delete target trashItem",
             "itemtype": "method",
             "name": "deleteTrashItem",
@@ -3389,7 +3389,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1429,
+            "line": 1432,
             "description": "Empty the trash can",
             "itemtype": "method",
             "name": "emptyThrash",
@@ -3406,7 +3406,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1446,
+            "line": 1449,
             "description": "Empty the trash can",
             "itemtype": "method",
             "name": "emptyTrash",
@@ -3421,7 +3421,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1479,
+            "line": 1482,
             "description": "Loads all the ObjectState groups",
             "itemtype": "method",
             "name": "loadObjectStateGroups",
@@ -3441,7 +3441,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1497,
+            "line": 1500,
             "description": "Loads target ObjectState group",
             "itemtype": "method",
             "name": "loadObjectStateGroup",
@@ -3461,7 +3461,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1515,
+            "line": 1518,
             "description": "Create a new ObjectState group",
             "itemtype": "method",
             "name": "createObjectStateGroup",
@@ -3486,7 +3486,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1534,
+            "line": 1537,
             "description": "Update target ObjectState group",
             "itemtype": "method",
             "name": "updateObjectStateGroup",
@@ -3511,7 +3511,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1553,
+            "line": 1556,
             "description": "Delete target ObjectState group",
             "itemtype": "method",
             "name": "deleteObjectStateGroup",
@@ -3531,7 +3531,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1571,
+            "line": 1574,
             "description": "Creates a new ObjectState in target group",
             "itemtype": "method",
             "name": "createObjectState",
@@ -3556,7 +3556,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1590,
+            "line": 1593,
             "description": "Load target ObjectState",
             "itemtype": "method",
             "name": "loadObjectState",
@@ -3576,7 +3576,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1608,
+            "line": 1611,
             "description": "Update target ObjectState",
             "itemtype": "method",
             "name": "updateObjectState",
@@ -3601,7 +3601,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1627,
+            "line": 1630,
             "description": "Delete target ObjectState",
             "itemtype": "method",
             "name": "deleteObjectState",
@@ -3621,7 +3621,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1645,
+            "line": 1648,
             "description": "Get ObjectStates of target content",
             "itemtype": "method",
             "name": "getContentState",
@@ -3641,7 +3641,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1663,
+            "line": 1666,
             "description": "Set ObjectStates of a content",
             "itemtype": "method",
             "name": "setContentState",
@@ -3669,7 +3669,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1708,
+            "line": 1711,
             "description": "Creates a new UrlAlias",
             "itemtype": "method",
             "name": "createUrlAlias",
@@ -3694,7 +3694,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1727,
+            "line": 1730,
             "description": "Loads all the global UrlAliases",
             "itemtype": "method",
             "name": "loadUrlAliases",
@@ -3714,7 +3714,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1745,
+            "line": 1748,
             "description": "Loads all the UrlAliases for a location",
             "itemtype": "method",
             "name": "listLocationAliases",
@@ -3741,7 +3741,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1775,
+            "line": 1778,
             "description": "Load target URL Alias",
             "itemtype": "method",
             "name": "loadUrlAlias",
@@ -3761,7 +3761,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1793,
+            "line": 1796,
             "description": "Delete target URL Alias",
             "itemtype": "method",
             "name": "deleteUrlAlias",
@@ -3781,7 +3781,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1815,
+            "line": 1818,
             "description": "Creates a new UrlWildcard",
             "itemtype": "method",
             "name": "createUrlWildcard",
@@ -3806,7 +3806,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1834,
+            "line": 1837,
             "description": "Loads all UrlWildcards",
             "itemtype": "method",
             "name": "loadUrlWildcards",
@@ -3826,7 +3826,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1852,
+            "line": 1855,
             "description": "Loads target UrlWildcard",
             "itemtype": "method",
             "name": "loadUrlWildcard",
@@ -3846,7 +3846,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1870,
+            "line": 1873,
             "description": "Deletes target UrlWildcard",
             "itemtype": "method",
             "name": "deleteUrlWildcard",
@@ -3866,7 +3866,7 @@
         },
         {
             "file": "src/services/ContentService.js",
-            "line": 1888,
+            "line": 1891,
             "description": "Loads an image variation",
             "itemtype": "method",
             "name": "loadImageVariation",
@@ -5999,6 +5999,17 @@
         {
             "file": "src/structures/ViewCreateStruct.js",
             "line": 25,
+            "description": "Holds the view type",
+            "itemtype": "property",
+            "name": "_type",
+            "access": "protected",
+            "tagname": "",
+            "type": "{String}",
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 33,
             "description": "Holds the body of the view create structs",
             "itemtype": "property",
             "name": "body",
@@ -6008,12 +6019,98 @@
         },
         {
             "file": "src/structures/ViewCreateStruct.js",
-            "line": 45,
+            "line": 53,
             "description": "Holds the headers sent when creating a view",
             "itemtype": "property",
             "name": "headers",
             "type": "{Object}",
             "default": "{\n \"Accept\": \"application/vnd.ez.api.View+json; version=1.1\",\n \"Content-Type\": \"application/vnd.ez.api.ViewInput+json; version=1.1\"\n}",
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 69,
+            "description": "Gets the Criteria property",
+            "itemtype": "method",
+            "name": "getCriteria",
+            "return": {
+                "description": "the criteria property.",
+                "type": "Object"
+            },
+            "deprecated": true,
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 80,
+            "description": "Gets the Query property",
+            "itemtype": "method",
+            "name": "getQuery",
+            "return": {
+                "description": "the query property.",
+                "type": "Object"
+            },
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 90,
+            "description": "Gets the Filter property",
+            "itemtype": "method",
+            "name": "getFilter",
+            "return": {
+                "description": "the Filter property.",
+                "type": "Object"
+            },
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 100,
+            "description": "Sets the Criteria property",
+            "itemtype": "method",
+            "name": "setCriteria",
+            "deprecated": true,
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 110,
+            "description": "Sets the Query property",
+            "itemtype": "method",
+            "name": "setQuery",
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 119,
+            "description": "Sets the Filter property",
+            "itemtype": "method",
+            "name": "setFilter",
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 128,
+            "description": "Sets the SortClauses property",
+            "itemtype": "method",
+            "name": "setSortClauses",
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 137,
+            "description": "Sets the FacetBuilders property",
+            "itemtype": "method",
+            "name": "setFacetBuilders",
+            "class": "ViewCreateStruct"
+        },
+        {
+            "file": "src/structures/ViewCreateStruct.js",
+            "line": 146,
+            "description": "Sets the limit and offset properties",
+            "itemtype": "method",
+            "name": "setLimitAndOffset",
             "class": "ViewCreateStruct"
         },
         {
