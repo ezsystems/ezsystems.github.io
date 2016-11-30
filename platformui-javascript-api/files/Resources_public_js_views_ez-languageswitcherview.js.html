@@ -72,7 +72,6 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -100,8 +99,6 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
-                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
-                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -183,7 +180,6 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
-                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -257,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -300,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -333,8 +327,6 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
-                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
-                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -552,10 +544,8 @@ YUI.add(&#x27;ez-languageswitcherview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var NAVIGATE_MODE = &#x27;navigate&#x27;;
-
     /**
-     * The Language Switcher View
+     * The raw content view
      *
      * @namespace eZ
      * @class LanguageSwitcherView
@@ -571,44 +561,6 @@ YUI.add(&#x27;ez-languageswitcherview&#x27;, function (Y) {
 
         initializer: function () {
             this.after(&#x27;expandedChange&#x27;, this._setClickOutsideEventHandler);
-            if ( this.get(&#x27;switchMode&#x27;) !== NAVIGATE_MODE ) {
-                this._addDOMEventHandlers({
-                    &#x27;.ez-language-switch-link&#x27;: {
-                        &#x27;tap&#x27;: &#x27;_switchLanguage&#x27;,
-                    },
-                });
-                this.after(&#x27;languageCodeChange&#x27;, this.render);
-            }
-        },
-
-        /**
-         * &#x60;tap&#x60; event handler on the language switch links.
-         *
-         * @method _switchLanguage
-         * @protected
-         * @param {EventFacade} e
-         */
-        _switchLanguage: function (e) {
-            var newLanguageCode = e.target.getData(&#x27;language-code&#x27;),
-                oldLanguageCode = this.get(&#x27;languageCode&#x27;);
-
-            e.preventDefault();
-
-            this._hideLanguageList();
-            this.set(&#x27;languageCode&#x27;, newLanguageCode);
-            /**
-             * Fired to indicate that the user wants to switch to a new
-             * language. It is fired only when &#x60;switchMode&#x60; attribute is set to
-             * &#x27;event&#x27;.
-             *
-             * @event switchLanguage
-             * @param {String} languageCode
-             * @param {String} oldLanguageCode
-             */
-            this.fire(&#x27;switchLanguage&#x27;, {
-                languageCode: newLanguageCode,
-                oldLanguageCode: oldLanguageCode,
-            });
         },
 
         /**
@@ -659,7 +611,7 @@ YUI.add(&#x27;ez-languageswitcherview&#x27;, function (Y) {
         _setClickOutsideEventHandler: function (e) {
             if ( e.newVal ) {
                 this._clickOutsideSubscription = this.get(&#x27;container&#x27;).on(
-                    &#x27;clickoutside&#x27;, Y.bind(this._hideLanguageList, this)
+                    &#x27;clickoutside&#x27;, Y.bind(this._hideView, this)
                 );
             } else {
                 this._clickOutsideSubscription.detach();
@@ -671,21 +623,8 @@ YUI.add(&#x27;ez-languageswitcherview&#x27;, function (Y) {
          *
          * @method _hideView
          * @protected
-         * @deprecated
          */
         _hideView: function () {
-            console.log(&#x27;[DEPRECATED] _hideView is deprecated, use _hideLanguageList instead&#x27;);
-            console.log(&#x27;[DEPRECATED] it will be removed from PlatformUI 2.0&#x27;);
-            this._hideLanguageList();
-        },
-
-        /**
-         * Hides the language list (if any)
-         *
-         * @method _hideLanguageList
-         * @protected
-         */
-        _hideLanguageList: function () {
             this.set(&#x27;expanded&#x27;, false);
         },
 
@@ -706,39 +645,33 @@ YUI.add(&#x27;ez-languageswitcherview&#x27;, function (Y) {
              *
              * @attribute content
              * @type Y.eZ.Content
+             * @writeOnce
              */
-            content: {},
+            content: {
+                writeOnce: &quot;initOnly&quot;,
+            },
 
             /**
              * The current location
              *
              * @attribute location
              * @type Y.eZ.Location
+             * @writeOnce
              */
-            location: {},
+            location: {
+                writeOnce: &quot;initOnly&quot;,
+            },
 
             /**
              * Language code of language currently active for the current location
              *
              * @attribute languageCode
              * @type String
-             */
-            languageCode: {},
-
-            /**
-             * The way the language switch will be done. When set to &#x27;event&#x27;,
-             * the view will fire a &#x27;switchLanguage&#x27; event while if it is set to
-             * &#x27;navigate&#x27;, the browser will just follow the link generated by
-             * the template.
-             *
-             * @attribute switchMode
-             * @default &#x27;navigate&#x27;
              * @writeOnce
              */
-            switchMode: {
-                writeOnce: &#x27;initOnly&#x27;,
-                value: NAVIGATE_MODE,
-            },
+            languageCode: {
+                writeOnce: &quot;initOnly&quot;
+            }
         }
     });
 });
