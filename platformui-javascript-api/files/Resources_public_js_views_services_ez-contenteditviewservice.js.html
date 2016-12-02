@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -630,8 +638,10 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                         // available and the user manipulated with URI to pass
                         // any language code.
                         service._error(
-                            &quot;Could not load the content with id &#x27;&quot; + request.params.id
-                            + &quot;&#x27; and languageCode &#x27;&quot; + baseLanguageCode + &quot;&#x27;&quot;
+                            Y.eZ.trans(&#x27;failed.loading.content.id.language&#x27;, {
+                                contentId: request.params.id,
+                                languageCode: baseLanguageCode,
+                            }, &#x27;contentedit&#x27;)
                         );
                         return;
                     }
@@ -660,19 +670,19 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                 contentId = this.get(&#x27;contentInfo&#x27;).get(&#x27;id&#x27;);
 
             if ( !version.isDraft() ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; is not a draft.&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.a.draft&#x27;, {versionId: versionId}, &#x27;contentedit&#x27;));
                 return false;
             }
             if ( version.get(&#x27;resources&#x27;).Content !== contentId ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; is not a version of the content &#x27;&quot; + contentId  + &quot;&#x27;&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.a.draft.of.content&#x27;, {versionId: versionId, contentId: contentId}, &#x27;contentedit&#x27;));
                 return false;
             }
             if ( !version.hasTranslation(this.get(&#x27;languageCode&#x27;)) ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; does not exist in &#x27;&quot; + this.get(&#x27;languageCode&#x27;) + &quot;&#x27;&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.exist.in&#x27;, {versionId: versionId, languageCode: this.get(&#x27;languageCode&#x27;)}, &#x27;contentedit&#x27;));
                 return false;
             }
             if ( !version.createdBy(this.get(&#x27;app&#x27;).get(&#x27;user&#x27;)) ) {
-                this._error(&quot;The version &#x27;&quot; + versionId + &quot;&#x27; does not belong to you&quot;);
+                this._error(Y.eZ.trans(&#x27;version.not.belong.to.you&#x27;, {versionId: versionId}, &#x27;contentedit&#x27;));
                 return false;
             }
             return true;
@@ -685,7 +695,7 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @private
          */
         _setVersionFields: function () {
-            this.get(&#x27;version&#x27;).set(&#x27;fields&#x27;, this._getFieldsForEdit());
+            this.get(&#x27;version&#x27;).setFieldsIn(this._getFieldsForEdit(), this.get(&#x27;languageCode&#x27;));
         },
 
         /**
@@ -698,14 +708,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @return {Object}
          */
         _getFieldsForEdit: function () {
-            var languageCode = this.get(&#x27;languageCode&#x27;),
-                content = this.get(&#x27;content&#x27;),
+            var languageCode = this.get(&#x27;baseLanguageCode&#x27;) || this.get(&#x27;languageCode&#x27;),
+                languageFields = this.get(&#x27;content&#x27;).getFieldsIn(languageCode),
                 fields;
 
-            if ( Y.Object.isEmpty(content.get(&#x27;fields&#x27;)) ) {
+            if ( Y.Object.isEmpty(languageFields) ) {
                 fields = this._getDefaultFields(languageCode);
             } else {
-                fields = Y.clone(content.get(&#x27;fields&#x27;));
+                fields = Y.clone(languageFields);
             }
 
             return fields;
@@ -749,7 +759,10 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                 &#x27;content&#x27;,
                 id,
                 {languageCode: languageCode},
-                &quot;Could not load the content with id &#x27;&quot; + id + &quot;&#x27; and languageCode &#x27;&quot; + languageCode + &quot;&#x27;&quot;,
+                Y.eZ.trans(
+                    &#x27;failed.loading.content.in&#x27;,
+                    {contentId: id, languageCode: languageCode}, &#x27;contentedit&#x27;
+                ),
                 callback
             );
          },
@@ -768,7 +781,10 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
                 &#x27;version&#x27;,
                 id,
                 {languageCode: languageCode},
-                &quot;Could not load the version with id &#x27;&quot; + id + &quot;&#x27; and languageCode &#x27;&quot; + languageCode + &quot;&#x27;&quot;,
+                Y.eZ.trans(
+                    &#x27;failed.loading.version.in&#x27;,
+                    {versionId: id, languageCode: languageCode}, &#x27;contentedit&#x27;
+                ),
                 callback
             );
         },
@@ -782,7 +798,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadContentInfo: function (id, callback) {
-            this._loadModel(&#x27;contentInfo&#x27;, id, {}, &quot;Could not find the content id &#x27;&quot; + id + &quot;&#x27;&quot;, callback);
+            this._loadModel(
+                &#x27;contentInfo&#x27;, id, {},
+                Y.eZ.trans(
+                    &#x27;failed.finding.content&#x27;,
+                    {id: id}, &#x27;contentedit&#x27;
+                ),
+                callback
+            );
         },
 
 
@@ -795,7 +818,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadContentType: function (id, callback) {
-            this._loadModel(&#x27;contentType&#x27;, id, {}, &quot;Could not load the content type with id &#x27;&quot; + id + &quot;&#x27;&quot;, callback);
+            this._loadModel(
+                &#x27;contentType&#x27;, id, {},
+                Y.eZ.trans(
+                    &#x27;failed.loading.content.type&#x27;,
+                    {id: id}, &#x27;contentedit&#x27;
+                ),
+                callback
+            );
         },
 
         /**
@@ -807,7 +837,14 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
          * @param {Function} callback
          */
         _loadLocation: function (id, callback) {
-            this._loadModel(&#x27;location&#x27;, id, {}, &quot;Could not load the location with id &#x27;&quot; + id + &quot;&#x27;&quot;, callback);
+            this._loadModel(
+                &#x27;location&#x27;, id, {},
+                Y.eZ.trans(
+                    &#x27;failed.loading.location&#x27;,
+                    {id: id}, &#x27;contentedit&#x27;
+                ),
+                callback
+            );
         },
 
         /**
@@ -1019,7 +1056,7 @@ YUI.add(&#x27;ez-contenteditviewservice&#x27;, function (Y) {
             e.preventDefault();
             this.fire(&#x27;languageSelect&#x27;, {
                 config: {
-                    title: &quot;Change language to:&quot;,
+                    title: Y.eZ.trans(&#x27;change.language.to&#x27;, {}, &#x27;contentedit&#x27;),
                     languageSelectedHandler: Y.bind(this._changeContentLanguage, this),
                     cancelLanguageSelectionHandler: null,
                     canBaseTranslation: false,
