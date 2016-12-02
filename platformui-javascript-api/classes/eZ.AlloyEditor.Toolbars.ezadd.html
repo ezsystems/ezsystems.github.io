@@ -646,8 +646,11 @@ CKEditor widget (ie embed or image).</p>
 
     <div class="description">
         <p>Renders the <code>ezadd</code> toolbar. It overrides the AlloyEditor <code>add</code> toolbar
-implementation to render the toolbar even if the focused element is not
-contenteditable.</p>
+implementation to:</p>
+<ul>
+<li>render the toolbar even if the focused element is not contenteditable</li>
+<li>not render the toolbar if there's a text selection</li>
+</ul>
 
     </div>
 

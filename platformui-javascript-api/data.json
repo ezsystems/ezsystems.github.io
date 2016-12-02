@@ -42862,7 +42862,7 @@
         {
             "file": "Resources/public/js/alloyeditor/toolbars/ezadd.js",
             "line": 40,
-            "description": "Renders the `ezadd` toolbar. It overrides the AlloyEditor `add` toolbar\nimplementation to render the toolbar even if the focused element is not\ncontenteditable.",
+            "description": "Renders the `ezadd` toolbar. It overrides the AlloyEditor `add` toolbar\nimplementation to:\n * render the toolbar even if the focused element is not contenteditable\n * not render the toolbar if there's a text selection",
             "itemtype": "method",
             "name": "render",
             "class": "eZ.AlloyEditor.Toolbars.ezadd",

@@ -580,15 +580,21 @@ YUI.add(&#x27;ez-alloyeditor-toolbar-ezadd&#x27;, function (Y) {
 
     /**
      * Renders the &#x60;ezadd&#x60; toolbar. It overrides the AlloyEditor &#x60;add&#x60; toolbar
-     * implementation to render the toolbar even if the focused element is not
-     * contenteditable.
+     * implementation to:
+     *  * render the toolbar even if the focused element is not contenteditable
+     *  * not render the toolbar if there&#x27;s a text selection
      *
      * @method render
      */
     ToolbarAdd.prototype.render = function () {
-        var buttons = this._getButtons(),
-            className = this._getToolbarClassName();
+        var buttons, className,
+            selectionData = this.props.selectionData;
 
+        if ( selectionData &amp;&amp; selectionData.text ) {
+            return null;
+        }
+        buttons = this._getButtons();
+        className = this._getToolbarClassName();
         return (
             React.createElement(&quot;div&quot;, {
                 &quot;aria-label&quot;: AlloyEditor.Strings.add, className: className, 
