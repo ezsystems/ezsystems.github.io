@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -616,7 +624,11 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                     var end = tasks.add(function (err, response) {
                             if (err) {
                                 service._notify(
-                                    &#x27;Role has not been assigned to &quot;&#x27; + struct.contentInfo.get(&#x27;name&#x27;) + &#x27;&quot;: &#x27; + err.message,
+                                    Y.eZ.trans(
+                                        &#x27;failed.assigned.role&#x27;,
+                                        {name: struct.contentInfo.get(&#x27;name&#x27;), message: err.message},
+                                        &#x27;role&#x27;
+                                    ),
                                     &#x27;assign-role-failed-&#x27; + struct.contentInfo.get(&#x27;id&#x27;),
                                     &#x27;error&#x27;,
                                     0
@@ -729,7 +741,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             } else if (contentTypeIdentifier === &#x27;user_group&#x27;) {
                 this._assignRoleToUserGroup(role, limitation, struct.contentInfo, struct.location, callback);
             } else {
-                callback({message:&#x27;Selected content is not a user or group.&#x27;});
+                callback({message: Y.eZ.trans(&#x27;selected.content.not.user.group&#x27;, {}, &#x27;role&#x27;)});
             }
         },
 
@@ -815,18 +827,24 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
                     &#x27;assign-role&#x27;, assignActionData, contents
                 ),
-                notificationSucessText =
-                    &#x27;&quot;&#x27;
-                    + assignActionData.roleName
-                    + &#x27;&quot; role has been assigned to &#x27;
-                    + countAssigned
-                    + &#x27; users/groups&#x27;;
+                notificationSucessText = Y.eZ.trans(&#x27;role.assigned.to.user&#x27;, {
+                    name: assignActionData.roleName,
+                    count: countAssigned,
+                }, &#x27;role&#x27;);
 
             if (countAssigned&gt;0) {
                 if (this._hasSectionLimitation(assignActionData)) {
-                    notificationSucessText += &#x27; limited to &#x27; + assignActionData.section.sectionName + &#x27; section&#x27;;
+                    notificationSucessText = Y.eZ.trans(&#x27;role.assigned.to.user.section.limited&#x27;, {
+                        name: assignActionData.roleName,
+                        count: countAssigned,
+                        sectionName: assignActionData.section.sectionName
+                    }, &#x27;role&#x27;);
                 } else if (this._hasSubtreeLimitation(assignActionData)) {
-                    notificationSucessText += &#x27; with a subtree limitation&#x27;;
+                    notificationSucessText = Y.eZ.trans(&#x27;role.assigned.to.user.subtree.limited&#x27;, {
+                        name: assignActionData.roleName,
+                        count: countAssigned,
+                    }, &#x27;role&#x27;);
+
                 }
                 this._notify(
                     notificationSucessText ,
@@ -836,7 +854,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                 );
             } else {
                 this._notify(
-                    &#x27;Role has not been assigned to any users/groups&#x27;,
+                    Y.eZ.trans(&#x27;failed.assigned.role.user&#x27;, {}, &#x27;role&#x27;),
                     notificationIdentifier,
                     &#x27;error&#x27;,
                     0
@@ -858,12 +876,23 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
             var notificationIdentifier = this._getAssignRoleNotificationIdentifier(
                     &#x27;assign-role&#x27;, assignActionData, contents
                 ),
-                notificationText = &#x27;Assigning the role &quot;&#x27; + assignActionData.roleName + &#x27;&quot; to &#x27; + contents.length + &#x27; users/groups&#x27;;
+                notificationText = Y.eZ.trans(&#x27;assigning.role.to.users&#x27;, {
+                    roleName: assignActionData.roleName,
+                    count: contents.length,
+                }, &#x27;role&#x27;);
+                
 
             if (this._hasSectionLimitation(assignActionData)) {
-                notificationText += &#x27; limited to &#x27; + assignActionData.section.sectionName + &#x27; section&#x27;;
+                notificationText = Y.eZ.trans(&#x27;assigning.role.to.users.section.limited&#x27;, {
+                    roleName: assignActionData.roleName,
+                    count: contents.length,
+                    sectionName: assignActionData.section.sectionName,
+                }, &#x27;role&#x27;);
             } else if (this._hasSubtreeLimitation(assignActionData)) {
-                notificationText += &#x27; with a subtree limitation&#x27;;
+                notificationText = Y.eZ.trans(&#x27;assigning.role.to.users.subtree.limited&#x27;, {
+                    roleName: assignActionData.roleName,
+                    count: contents.length,
+                }, &#x27;role&#x27;);
             }
             this._notify(
                 notificationText,
@@ -887,7 +916,7 @@ YUI.add(&#x27;ez-roleserversideviewservice&#x27;, function (Y) {
                 );
 
             this._notify(
-                &#x27;The role &quot;&#x27; + assignActionData.roleName + &#x27;&quot; could not be loaded&#x27;,
+                Y.eZ.trans(&#x27;failed.loading.role&#x27;, {roleName: assignActionData.roleName}, &#x27;role&#x27;),
                 notificationIdentifier,
                 &#x27;error&#x27;,
                 0
