@@ -72,7 +72,6 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -100,8 +99,6 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
-                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
-                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -183,7 +180,6 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
-                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -257,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -300,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -333,8 +327,6 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
-                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
-                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -661,11 +653,7 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
 
                 if (error) {
                     this._notify(
-                        Y.eZ.trans(
-                            &#x27;failed.creating.draft.for.based.on&#x27;,
-                            {name: content.get(&#x27;name&#x27;), version: e.versionNo},
-                            &#x27;locationview&#x27;
-                        ),
+                        &quot;Creating new draft for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; based on version &quot; + e.versionNo + &quot; failed.&quot;,
                         &quot;create-draft-from-archived-&quot; + content.get(&#x27;id&#x27;),
                         &#x27;error&#x27;,
                         0
@@ -722,7 +710,7 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
 
             service.fire(&#x27;confirmBoxOpen&#x27;, {
                 config: {
-                    title: Y.eZ.trans(&#x27;confirmed.remove.versions&#x27;, {}, &#x27;locationview&#x27;),
+                    title: &quot;Are you sure you want to remove selected version(s)?&quot;,
                     confirmHandler: Y.bind(function () {
                         this._deleteVersion(e.versions, e.afterDeleteVersionsCallback);
                     }, this),
@@ -748,7 +736,7 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
                 tasks = new Y.Parallel();
 
             this._notify(
-                Y.eZ.trans(&#x27;removing.versions.for&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;locationview&#x27;),
+                &quot;Removing versions for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -773,11 +761,8 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
 
                 if (versionsRemoved) {
                     this._notify(
-                        Y.eZ.trans(
-                            &#x27;removed.versions.of&#x27;,
-                            {count: countRemovedVersions, name: content.get(&#x27;name&#x27;)},
-                            &#x27;locationview&#x27;
-                        ),
+                        countRemovedVersions + &quot; version(s) of &#x27;&quot; + content.get(&#x27;name&#x27;) +
+                         &quot;&#x27; have been removed&quot;,
                         notificationIdentifier,
                         &#x27;done&#x27;,
                         5
@@ -790,11 +775,7 @@ YUI.add(&#x27;ez-versionsplugin&#x27;, function (Y) {
                 if (countRemovedVersionsFails &gt; 0) {
                     this._notify(
                         &quot;Removing of &quot; + countRemovedVersionsFails + &quot; version(s) of &#x27;&quot; +
-                        Y.eZ.trans(
-                            &#x27;failed.removing.versions.of&#x27;,
-                            {count: countRemovedVersionsFails, name: content.get(&#x27;name&#x27;)},
-                            &#x27;locationview&#x27;
-                        ),
+                         content.get(&#x27;name&#x27;) + &quot;&#x27; has failed&quot;,
                         errorNotificationIdentifier,
                         &#x27;error&#x27;,
                         0
