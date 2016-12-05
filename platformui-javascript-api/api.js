@@ -36,7 +36,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
         "eZ.AlloyEditorToolbarConfig.Embed",
         "eZ.AlloyEditorToolbarConfig.Heading",
-        "eZ.AlloyEditorToolbarConfig.HeadingConfig",
         "eZ.AlloyEditorToolbarConfig.Image",
         "eZ.AlloyEditorToolbarConfig.Link",
         "eZ.AlloyEditorToolbarConfig.Paragraph",
@@ -64,8 +63,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.ContentEditViewService",
         "eZ.ContentInfo",
         "eZ.ContentInfoBase",
-        "eZ.ContentPeekView",
-        "eZ.ContentPeekViewService",
         "eZ.ContentTree",
         "eZ.ContentType",
         "eZ.ContentTypeEditServerSideView",
@@ -146,7 +143,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.ConfirmBox",
         "eZ.Plugin.ContentCreate",
         "eZ.Plugin.ContentEdit",
-        "eZ.Plugin.ContentPeek",
         "eZ.Plugin.ContentSetMainLocation",
         "eZ.Plugin.ContentTree",
         "eZ.Plugin.CopyContent",
@@ -219,7 +215,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TextBlockEditView",
         "eZ.TextLineEditView",
         "eZ.TranslateActionView",
-        "eZ.Translator",
         "eZ.TrashBarView",
         "eZ.TrashItem",
         "eZ.TrashView",
@@ -261,7 +256,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-embedcenter",
         "ez-alloyeditor-button-embedleft",
         "ez-alloyeditor-button-imagehref",
-        "ez-alloyeditor-button-imagevariation",
         "ez-alloyeditor-button-mixin-blocktextalign",
         "ez-alloyeditor-button-mixin-embedalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
@@ -294,8 +288,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-contentinfo-base",
         "ez-contentinfomodel",
         "ez-contentmodel",
-        "ez-contentpeekplugin",
-        "ez-contentpeekview",
         "ez-contentsetmainlocationplugin",
         "ez-contenttree",
         "ez-contenttreeplugin",
@@ -511,11 +503,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the ezimagehref button"
         },
         {
-            "displayName": "ez-alloyeditor-button-imagevariation",
-            "name": "ez-alloyeditor-button-imagevariation",
-            "description": "Provides the image variation drop down"
-        },
-        {
             "displayName": "ez-alloyeditor-button-mixin-blocktextalign",
             "name": "ez-alloyeditor-button-mixin-blocktextalign",
             "description": "Provides the BlockTextAlign mixin"
@@ -543,7 +530,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ez-alloyeditor-button-remove",
             "name": "ez-alloyeditor-button-remove",
-            "description": "Provides the embedhref href button"
+            "description": "Provides the image variation drop down"
         },
         {
             "displayName": "ez-alloyeditor-toolbar-config-block-base",
@@ -674,16 +661,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-contentmodel",
             "name": "ez-contentmodel",
             "description": "Provides the Content model class"
-        },
-        {
-            "displayName": "ez-contentpeekplugin",
-            "name": "ez-contentpeekplugin",
-            "description": "Provides the content peek plugin"
-        },
-        {
-            "displayName": "ez-contentpeekview",
-            "name": "ez-contentpeekview",
-            "description": "Provide the content peek view"
         },
         {
             "displayName": "ez-contentsetmainlocationplugin",
