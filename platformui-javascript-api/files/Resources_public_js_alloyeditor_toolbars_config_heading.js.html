@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -545,39 +553,37 @@ YUI.add(&#x27;ez-alloyeditor-toolbar-config-heading&#x27;, function (Y) {
     Y.namespace(&#x27;eZ.AlloyEditorToolbarConfig&#x27;);
 
     var BlockBase = Y.eZ.AlloyEditorToolbarConfig.BlockBase,
-        styles = {
-            name: &#x27;styles&#x27;,
-            cfg: {
-                styles: [
-                    {name: &#x27;Heading 1&#x27;, style: {element: &#x27;h1&#x27;}},
-                    {name: &#x27;Heading 2&#x27;, style: {element: &#x27;h2&#x27;}},
-                    {name: &#x27;Heading 3&#x27;, style: {element: &#x27;h3&#x27;}},
-                    {name: &#x27;Heading 4&#x27;, style: {element: &#x27;h4&#x27;}},
-                    {name: &#x27;Heading 5&#x27;, style: {element: &#x27;h5&#x27;}},
-                    {name: &#x27;Heading 6&#x27;, style: {element: &#x27;h6&#x27;}},
-                ]
-            }
+        HeadingConfig,
+        name = &#x27;heading&#x27;,
+        getStyles = function () {
+            return {
+                name: &#x27;styles&#x27;,
+                cfg: {
+                    showRemoveStylesItem: false,
+                    styles: [
+                        {name: Y.eZ.trans(&#x27;heading.1&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;h1&#x27;}},
+                        {name: Y.eZ.trans(&#x27;heading.2&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;h2&#x27;}},
+                        {name: Y.eZ.trans(&#x27;heading.3&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;h3&#x27;}},
+                        {name: Y.eZ.trans(&#x27;heading.4&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;h4&#x27;}},
+                        {name: Y.eZ.trans(&#x27;heading.5&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;h5&#x27;}},
+                        {name: Y.eZ.trans(&#x27;heading.6&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;h6&#x27;}},
+                        {name: Y.eZ.trans(&#x27;paragraph&#x27;, {}, &#x27;onlineeditor&#x27;), style: {element: &#x27;p&#x27;}},
+                    ]
+                }
+            };
         };
 
-    /**
-     * &#x60;styles&#x60; toolbar configuration for heading. The &#x60;heading&#x60; toolbar is
-     * supposed to be shown when the user puts the caret inside an heading
-     * element and when the selection is empty.
-     *
-     * @namespace eZ.AlloyEditorToolbarConfig
-     * @class Heading
-     * @extends BlockBase
-     */
-    Y.eZ.AlloyEditorToolbarConfig.Heading = {
-        name: &#x27;heading&#x27;,
-        buttons: [
-            styles,
+
+    HeadingConfig = function () {
+        this.name = name;
+        this.buttons = [
+            getStyles(),
             &#x27;ezblocktextalignleft&#x27;,
             &#x27;ezblocktextaligncenter&#x27;,
             &#x27;ezblocktextalignright&#x27;,
             &#x27;ezblocktextalignjustify&#x27;,
             &#x27;ezblockremove&#x27;,
-        ],
+        ];
 
         /**
          * Tests whether the &#x60;heading&#x60; toolbar should be visible. It is visible
@@ -591,10 +597,75 @@ YUI.add(&#x27;ez-alloyeditor-toolbar-config-heading&#x27;, function (Y) {
          * @param {Event} payload.data.nativeEvent
          * @return {Boolean}
          */
+        this.test = function (payload) {
+            var nativeEditor = payload.editor.get(&#x27;nativeEditor&#x27;),
+                path = nativeEditor.elementPath();
+
+            return (
+                nativeEditor.isSelectionEmpty() &amp;&amp;
+                path.contains([&#x27;h1&#x27;, &#x27;h2&#x27;, &#x27;h3&#x27;, &#x27;h4&#x27;, &#x27;h5&#x27;, &#x27;h6&#x27;])
+            );
+        };
+
+        this.getArrowBoxClasses = BlockBase.getArrowBoxClasses;
+
+        this.setPosition = BlockBase.setPosition;
+    };
+
+    /**
+     * &#x60;styles&#x60; toolbar configuration for heading. The &#x60;heading&#x60; toolbar is
+     * supposed to be shown when the user puts the caret inside an heading
+     * element and when the selection is empty.
+     *
+     * @namespace eZ.AlloyEditorToolbarConfig
+     * @class HeadingConfig
+     * @constructor
+     * @extends BlockBase
+     */
+    Y.eZ.AlloyEditorToolbarConfig.HeadingConfig = HeadingConfig;
+
+    /**
+     * Deprecated &#x60;styles&#x60; toolbar configuration, use
+     * eZ.AlloyEditorToolbarConfig.HeadingConfig constructor instead.
+     * &#x60;styles&#x60; toolbar configuration for heading. The &#x60;heading&#x60; toolbar is
+     * supposed to be shown when the user puts the caret inside an heading
+     * element and when the selection is empty.
+     *
+     * @namespace eZ.AlloyEditorToolbarConfig
+     * @class Heading
+     * @deprecated
+     * @extends BlockBase
+     */
+    Y.eZ.AlloyEditorToolbarConfig.Heading = {
+        name: name,
+        buttons: [
+            getStyles(),
+            &#x27;ezblocktextalignleft&#x27;,
+            &#x27;ezblocktextaligncenter&#x27;,
+            &#x27;ezblocktextalignright&#x27;,
+            &#x27;ezblocktextalignjustify&#x27;,
+            &#x27;ezblockremove&#x27;,
+        ],
+
+        /**
+         * Tests whether the &#x60;heading&#x60; toolbar should be visible. It is visible
+         * when the selection is empty and when the caret is inside a heading.
+         *
+         * @method test
+         * @deprecated
+         * @param {Object} payload
+         * @param {AlloyEditor.Core} payload.editor
+         * @param {Object} payload.data
+         * @param {Object} payload.data.selectionData
+         * @param {Event} payload.data.nativeEvent
+         * @return {Boolean}
+         */
         test: function (payload) {
             var nativeEditor = payload.editor.get(&#x27;nativeEditor&#x27;),
                 path = nativeEditor.elementPath();
 
+            console.log(&#x27;[DEPRECATED] eZ.AlloyEditorToolbarConfig.Heading is deprecated&#x27;);
+            console.log(&#x27;[DEPRECATED] build a config object with eZ.AlloyEditorToolbarConfig.HeadingConfig instead&#x27;);
             return (
                 nativeEditor.isSelectionEmpty() &amp;&amp;
                 path.contains([&#x27;h1&#x27;, &#x27;h2&#x27;, &#x27;h3&#x27;, &#x27;h4&#x27;, &#x27;h5&#x27;, &#x27;h6&#x27;])
