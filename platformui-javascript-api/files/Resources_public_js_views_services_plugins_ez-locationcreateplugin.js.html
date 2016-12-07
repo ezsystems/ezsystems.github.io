@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -575,7 +583,7 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
 
             service.fire(&#x27;contentDiscover&#x27;, {
                 config: {
-                    title: &quot;Select the location where you want to create new location&quot;,
+                    title: Y.eZ.trans(&#x27;select.location.to.create.new.location&#x27;, {}, &#x27;bar&#x27;),
                     contentDiscoveredHandler: Y.bind(this._createLocation, this),
                     multiple: true,
                     isSelectable: function (contentStruct) {
@@ -606,7 +614,7 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
                 that = this;
 
             this._notify(
-                &quot;Creating new location for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27;&quot;,
+                Y.eZ.trans(&#x27;creating.new.location.for&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;bar&#x27;),
                 notificationIdentifier,
                 &#x27;started&#x27;,
                 5
@@ -619,7 +627,11 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
                     end = stack.add(function (error) {
                         if (error) {
                             that._notify(
-                                &quot;Creating new location for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; under &#x27;&quot; + parentContentInfo.get(&#x27;name&#x27;) + &quot;&#x27; failed&quot;,
+                                Y.eZ.trans(
+                                    &#x27;failed.creating.new.location.for&#x27;,
+                                    {name: content.get(&#x27;name&#x27;), parentName: parentContentInfo.get(&#x27;name&#x27;)},
+                                    &#x27;bar&#x27;
+                                ),
                                 errNotificationIdentifier,
                                 &#x27;error&#x27;,
                                 0
@@ -635,10 +647,14 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
 
             stack.done(function () {
                 if (locationsCreatedCounter &gt; 0) {
-                    var msg = &quot;New location for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; has been successfully created&quot;;
+                    var msg = Y.eZ.trans(&#x27;location.created&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;bar&#x27;);
 
                     if (locationsCreatedCounter &gt; 1) {
-                        msg = locationsCreatedCounter + &quot; new locations for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; have been successfully created&quot;;
+                        msg = Y.eZ.trans(
+                            &#x27;locations.created&#x27;,
+                            {count: locationsCreatedCounter, name: content.get(&#x27;name&#x27;)},
+                            &#x27;bar&#x27;
+                        );
                     }
                     that._notify(
                         msg,
@@ -650,7 +666,7 @@ YUI.add(&#x27;ez-locationcreateplugin&#x27;, function (Y) {
                     data.afterCreateCallback();
                 } else {
                     that._notify(
-                        &quot;Creating new location(s) for &#x27;&quot; + content.get(&#x27;name&#x27;) + &quot;&#x27; failed&quot;,
+                        Y.eZ.trans(&#x27;creating.new.location.for.failed&#x27;, {name: content.get(&#x27;name&#x27;)}, &#x27;bar&#x27;),
                         notificationIdentifier,
                         &#x27;error&#x27;,
                         0
