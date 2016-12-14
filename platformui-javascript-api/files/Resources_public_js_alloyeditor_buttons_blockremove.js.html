@@ -564,17 +564,14 @@ YUI.add(&#x27;ez-alloyeditor-button-blockremove&#x27;, function (Y) {
     /**
      * The ButtonBlockRemove component represents a button to remove the block
      * element holding the caret in the editor.
-     *
-     * @uses AlloyEditor.ButtonCommand
+     * Note: this component does not use AlloyEditorButton.ButtonCommand mixin
+     * because after executing the eZRemoveBlock command we don&#x27;t want the
+     * &#x60;actionPerformed&#x60; event to be fired.
      *
      * @class ButtonBlockRemove
      * @namespace eZ.AlloyEditorButton
      */
     ButtonBlockRemove = React.createClass({displayName: &quot;ButtonBlockRemove&quot;,
-        mixins: [
-            AlloyEditor.ButtonCommand,
-        ],
-
         statics: {
             key: &#x27;ezblockremove&#x27;
         },
@@ -587,14 +584,41 @@ YUI.add(&#x27;ez-alloyeditor-button-blockremove&#x27;, function (Y) {
              * @deprecated
              */
             label: React.PropTypes.string,
+
+            /**
+             * The command that should be executed.
+             *
+             * @property {String} command
+             */
+            command: React.PropTypes.string.isRequired,
+
+            /**
+             * Indicates that the command may cause the editor to have a different.
+             *
+             * @property {boolean} modifiesSelection
+             * @deprecated
+             */
+            modifiesSelection: React.PropTypes.bool
         },
 
         getDefaultProps: function () {
             return {
                 command: &#x27;eZRemoveBlock&#x27;,
-                modifiesSelection: true,
                 label: &quot;Remove this block&quot;,
             };
+        },
+
+        /**
+         * Executes the configured command.
+         *
+         * @method execCommand
+         * @param {Mixed} data command parameters
+         */
+        execCommand: function(data) {
+            var editor = this.props.editor.get(&#x27;nativeEditor&#x27;);
+
+            editor.execCommand(this.props.command, data);
+            editor.selectionChange(true);
         },
 
         render: function () {

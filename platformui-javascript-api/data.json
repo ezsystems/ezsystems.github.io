@@ -10018,10 +10018,7 @@
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/blockremove.js",
             "line": 23,
-            "description": "The ButtonBlockRemove component represents a button to remove the block\nelement holding the caret in the editor.",
-            "uses": [
-                "AlloyEditor.ButtonCommand"
-            ]
+            "description": "The ButtonBlockRemove component represents a button to remove the block\nelement holding the caret in the editor.\nNote: this component does not use AlloyEditorButton.ButtonCommand mixin\nbecause after executing the eZRemoveBlock command we don't want the\n`actionPerformed` event to be fired."
         },
         "eZ.AlloyEditorButton.ButtonBlockTextAlignCenter": {
             "name": "eZ.AlloyEditorButton.ButtonBlockTextAlignCenter",
@@ -10357,7 +10354,7 @@
             "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 94,
+            "line": 120,
             "description": "CKEditor plugin providing the eZRemoveBlock command. This command\nallows to remove the block element holding the caret or the focused\nwidget",
             "is_constructor": 1
         },
@@ -41670,12 +41667,52 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/blockremove.js",
-            "line": 42,
+            "line": 39,
             "description": "The label of the button",
             "itemtype": "property",
             "name": "label",
             "type": "String",
             "deprecated": true,
+            "class": "eZ.AlloyEditorButton.ButtonBlockRemove",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/blockremove.js",
+            "line": 47,
+            "description": "The command that should be executed.",
+            "itemtype": "property",
+            "name": "command",
+            "type": "String",
+            "class": "eZ.AlloyEditorButton.ButtonBlockRemove",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/blockremove.js",
+            "line": 54,
+            "description": "Indicates that the command may cause the editor to have a different.",
+            "itemtype": "property",
+            "name": "modifiesSelection",
+            "type": "Boolean",
+            "deprecated": true,
+            "class": "eZ.AlloyEditorButton.ButtonBlockRemove",
+            "module": "ez-alloyeditor-button-remove",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/blockremove.js",
+            "line": 70,
+            "description": "Executes the configured command.",
+            "itemtype": "method",
+            "name": "execCommand",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "command parameters",
+                    "type": "Mixed"
+                }
+            ],
             "class": "eZ.AlloyEditorButton.ButtonBlockRemove",
             "module": "ez-alloyeditor-button-remove",
             "namespace": "eZ.AlloyEditorButton"
@@ -42416,7 +42453,30 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 31,
+            "line": 33,
+            "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
+            "itemtype": "method",
+            "name": "_findCaretElement",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "CKEDITOR.dom.element"
+            },
+            "class": "CKEDITOR.plugins.ezremoveblock",
+            "module": "ez-alloyeditor-button-imagevariation",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
+            "line": 52,
             "description": "Fires the editorInteraction event so that AlloyEditor's UI is updated\nfor the newly focused element",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -42445,7 +42505,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 55,
+            "line": 76,
             "description": "Changes the focused element in the editor to the given newFocus\nelement",
             "params": [
                 {
