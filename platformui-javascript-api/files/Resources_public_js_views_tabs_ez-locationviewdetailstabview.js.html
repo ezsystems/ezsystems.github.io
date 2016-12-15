@@ -72,7 +72,6 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -100,8 +99,6 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
-                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
-                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -183,7 +180,6 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
-                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -257,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -300,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -333,8 +327,6 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
-                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
-                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -552,7 +544,17 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
-    var SORTFIELD_NAME_DICTIONARY = {},
+    var SORTFIELD_NAME_DICTIONARY = {
+            &#x27;PUBLISHED&#x27;: &#x27;Publication date&#x27;,
+            &#x27;PATH&#x27;: &#x27;Location path&#x27;,
+            &#x27;CLASS_IDENTIFIER&#x27;: &#x27;Content type identifier&#x27;,
+            &#x27;MODIFIED&#x27;: &#x27;Modification date&#x27;,
+            &#x27;SECTION&#x27;: &#x27;Section&#x27;,
+            &#x27;DEPTH&#x27;: &#x27;Location depth&#x27;,
+            &#x27;CLASS_NAME&#x27;: &#x27;Content type name&#x27;,
+            &#x27;PRIORITY&#x27;: &#x27;Priority&#x27;,
+            &#x27;NAME&#x27;: &#x27;Content name&#x27;,
+        },
         events = {
             &#x27;.ez-subitems-ordering-sort-type&#x27;: {
                 &#x27;change&#x27;: &#x27;_setSortType&#x27;,
@@ -572,18 +574,6 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
      */
     Y.eZ.LocationViewDetailsTabView = Y.Base.create(&#x27;locationViewDetailsTabView&#x27;, Y.eZ.LocationViewTabView, [Y.eZ.AsynchronousView], {
         initializer: function () {
-            SORTFIELD_NAME_DICTIONARY = {
-                &#x27;PUBLISHED&#x27;: Y.eZ.trans(&#x27;sort.published&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;PATH&#x27;: Y.eZ.trans(&#x27;sort.path&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;CLASS_IDENTIFIER&#x27;: Y.eZ.trans(&#x27;sort.content.type.identifier&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;MODIFIED&#x27;: Y.eZ.trans(&#x27;sort.modified&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;SECTION&#x27;: Y.eZ.trans(&#x27;sort.section&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;DEPTH&#x27;: Y.eZ.trans(&#x27;sort.depth&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;CLASS_NAME&#x27;: Y.eZ.trans(&#x27;sort.content.type.name&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;PRIORITY&#x27;: Y.eZ.trans(&#x27;sort.priority&#x27;, {}, &#x27;locationview&#x27;),
-                &#x27;NAME&#x27;: Y.eZ.trans(&#x27;sort.name&#x27;, {}, &#x27;locationview&#x27;),
-            };
-
             this._fireMethod = this._fireLoadUser;
 
             this.after([&#x27;creatorChange&#x27;, &#x27;ownerChange&#x27;], function (e) {

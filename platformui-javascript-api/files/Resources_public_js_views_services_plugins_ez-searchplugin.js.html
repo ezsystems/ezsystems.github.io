@@ -72,7 +72,6 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -100,8 +99,6 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
-                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
-                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -183,7 +180,6 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
-                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -257,7 +253,6 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
-                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -300,7 +295,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -333,8 +327,6 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
-                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
-                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -587,7 +579,9 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
          * @param {String} name
          * @param {String} type
          * @param {Object} search
-         * @param {Object} search.criteria
+         * @param {Object} [search.criteria]
+         * @param {Object} [search.query]
+         * @param {Object} [search.filter]
          * @param {Object} search.sortClauses
          * @param {Number} [search.limit]
          * @param {Number} [search.offset]
@@ -600,13 +594,24 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
             query = contentService.newViewCreateStruct(name, type);
             // TODO ViewCreateStruct should expose an API
             // see https://jira.ez.no/browse/EZP-24808
-            query.body.ViewInput[type].Criteria = search.criteria;
-            query.body.ViewInput[type].offset = search.offset;
-            query.body.ViewInput[type].limit = search.limit;
+            if (search.query) {
+                query.setQuery(search.query);
+            }
+            if (search.filter) {
+                query.setFilter(search.filter);
+            }
+            if (search.criteria) {
+                query.setCriteria(search.criteria);
+                console.log(&#x27;[DEPRECATED] Criteria property is deprecated&#x27;);
+                console.log(&#x27;[DEPRECATED] it will be removed from PlatformUI 2.0&#x27;);
+                console.log(&#x27;[DEPRECATED] Please use Query or Filter instead&#x27;);
+            }
+
+            query.setLimitAndOffset(search.limit, search.offset);
             if ( search.sortClauses ) {
-                query.body.ViewInput[type].SortClauses = search.sortClauses;
+                query.setSortClauses(search.sortClauses);
             } else if ( search.sortLocation ) {
-                query.body.ViewInput[type].SortClauses = search.sortLocation.getSortClause();
+                query.setSortClauses(search.sortLocation.getSortClause());
             }
 
             return query;
@@ -635,27 +640,61 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
          * @param {Number} e.callback.count the total number of search result
          */
         _doContentSearch: function (e) {
-            var query = this._createNewCreateViewStruct(e.viewName, &#x27;ContentQuery&#x27;, e.search),
+            var search = Y.merge(e.search);
+
+            search.viewName = e.viewName;
+            search.loadContentType = e.loadContentType;
+            search.loadLocation = e.loadLocation;
+            delete search.callback;
+            this.findContent(search, e.callback);
+        },
+
+        /**
+         * Executes a Content search based on the provided &#x60;search&#x60; object.
+         *
+         * @method findContent
+         * @param {Object} search
+         * @param {String} search.viewName the name of the REST view to use
+         * @param {Object} search.criteria (deprecated) the search criteria used as Criteria in ContentQuery
+         * @param {Object} search.query  the search query used as Query in ContentQuery
+         * @param {Object} search.filter the search filter used as Filter in ContentQuery
+         * @param {Object} [search.sortClauses] the sort clauses
+         * @param {Number} [search.offset]
+         * @param {Number} [search.limit]
+         * @param {Boolean} [search.loadContentType] flag indicating whether the
+         * Content Type of each result has to be loaded in addition
+         * @param {Function} callback
+         * @param {Error|null} callback.error
+         * @param {Response|Array} callback.result the Response object in case
+         * of error or an array of Content struct. A Content struct is object
+         * containing the Content item and the Content
+         * Type depending on the &#x60;loadContentType&#x60; flag.
+         * @param {Number} callback.resultCount the total result number of the
+         * search
+         */
+        findContent: function (search, callback) {
+            var query = this._createNewCreateViewStruct(search.viewName, &#x27;ContentQuery&#x27;, search),
                 contentService = this._getContentService();
 
             contentService.createView(query, Y.bind(function (error, result) {
-                var parsedResult,
-                    endContentTypeLoad;
+                var parsedResult;
 
                 if ( error ) {
-                    return e.callback(error);
+                    return callback(error);
                 }
                 parsedResult = this._parseSearchResult(result, &#x27;content&#x27;, &#x27;_createContent&#x27;);
-                if ( e.loadContentType ) {
-                    endContentTypeLoad = function (error, response) {
-                        e.callback(error, parsedResult, result.document.View.Result.count);
-                    };
-
-                    this._loadContentTypeForStruct(parsedResult, function (struct) {
-                        return struct.content.get(&#x27;resources&#x27;).ContentType;
-                    }, endContentTypeLoad);
+                if (parsedResult.length &amp;&amp; (search.loadLocation || search.loadContentType)) {
+                    this._loadContentResources(
+                        search.viewName,
+                        search.loadContentType,
+                        search.loadLocation,
+                        parsedResult,
+                        function (error, structs) {
+                            callback(error, structs, result.document.View.Result.count);
+                        }
+                    );
                 } else {
-                    e.callback(error, parsedResult, result.document.View.Result.count);
+                    callback(error, parsedResult, result.document.View.Result.count);
                 }
             }, this));
         },
@@ -666,7 +705,9 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
          * @method findLocations
          * @param {Object} search
          * @param {String} search.viewName the name of the REST view to use
-         * @param {Object} search.criteria the search criteria used as Criteria in LocationQuery
+         * @param {Object} search.criteria (deprecated) the search criteria used as Criteria in LocationQuery
+         * @param {Object} search.query  the search query used as Query in LocationQuery
+         * @param {Object} search.filter the search filter used as Filter in LocationQuery
          * @param {Object} [search.sortClauses] the sort clauses
          * @param {eZ.Location} [search.sortLocation] the Location to use to
          * generate the sort clauses
@@ -698,7 +739,7 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
                 }
                 parsedResult = this._parseSearchResult(result, &#x27;location&#x27;, &#x27;_createLocation&#x27;);
                 if (parsedResult.length &amp;&amp; (search.loadContentType || search.loadContent)) {
-                    this._loadResources(
+                    this._loadLocationResources(
                         search.viewName,
                         search.loadContentType,
                         search.loadContent,
@@ -721,7 +762,9 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
          * @protected
          * @param {EventFacade} e
          * @param {Object} e.search
-         * @param {Object} e.search.criteria the search criteria used as Criteria in LocationQuery
+         * @param {Object} e.search.criteria (deprecated) the search criteria used as Criteria in LocationQuery
+         * @param {Object} e.search.query  the search query used as Query in LocationQuery
+         * @param {Object} e.search.filter the search filter used as Filter in LocationQuery
          * @param {Object} [e.search.sortClauses] the search sort clauses
          * @param {eZ.Location} [search.sortLocation] the Location to use to
          * generate the sort clauses
@@ -815,7 +858,6 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
             return content;
         },
 
-
         /**
          * Loads resources for the given array of location structs. Depending on given
          * &#x60;loadContentType&#x60; and &#x60;loadContent&#x60; bool parameters it loads Content and ContentType
@@ -823,12 +865,31 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
          *
          * @method _loadResources
          * @protected
+         * @deprecated
          * @param {Bool|undefined} loadContentType
          * @param {Bool|undefined} loadContent
          * @param {Array} locationStructArr
          * @param {Function} callback
          */
         _loadResources: function (viewName, loadContentType, loadContent, locationStructArr, callback) {
+            console.log(&#x27;[DEPRECATED] _loadResources is deprecated, it will be removed from PlatformUI 2.0&#x27;);
+            console.log(&#x27;[DEPRECATED] Use _loadLocationResources instead&#x27;);
+            this._loadLocationResources(viewName, loadContentType, loadContentType, locationStructArr, callback);
+        },
+
+        /**
+         * Loads resources for the given array of location structs. Depending on
+         * given &#x60;loadContentType&#x60; and &#x60;loadContent&#x60; bool parameters it loads
+         * Content and ContentType and includes them into the location structs.
+         *
+         * @method _loadLocationResources
+         * @protected
+         * @param {Bool|undefined} loadContentType
+         * @param {Bool|undefined} loadContent
+         * @param {Array} locationStructArr
+         * @param {Function} callback
+         */
+        _loadLocationResources: function (viewName, loadContentType, loadContent, locationStructArr, callback) {
             var tasks = new Y.Parallel(),
                 loadResourcesError = false;
 
@@ -858,6 +919,51 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
 
             tasks.done(function () {
                 callback(loadResourcesError, locationStructArr);
+            });
+        },
+
+        /**
+         * Loads resources for the given array of content structs. Depending on
+         * given &#x60;loadContentType&#x60; and &#x60;loadLocation&#x60; bool parameters it loads
+         * ContentType and Location and includes them into the content structs.
+         *
+         * @method _loadContentResources
+         * @protected
+         * @param {Bool|undefined} loadContentType
+         * @param {Bool|undefined} loadLocation
+         * @param {Array} contentStructArr
+         * @param {Function} callback
+         */
+        _loadContentResources: function (viewName, loadContentType, loadLocation, contentStructArr, callback) {
+            var tasks = new Y.Parallel(),
+                loadResourcesError = false;
+
+            if (loadContentType) {
+                var endContentTypeLoad = tasks.add(function (error) {
+                        if (error) {
+                            loadResourcesError = error;
+                            return;
+                        }
+                    });
+
+                this._loadContentTypeForStruct(contentStructArr, function (struct) {
+                    return struct.content.get(&#x27;resources&#x27;).ContentType;
+                }, endContentTypeLoad);
+            }
+
+            if (loadLocation) {
+                var endContentLoad = tasks.add(function (error) {
+                        if (error) {
+                            loadResourcesError = error;
+                            return;
+                        }
+                    });
+
+                this._loadLocationForContent(viewName, contentStructArr, endContentLoad);
+            }
+
+            tasks.done(function () {
+                callback(loadResourcesError, contentStructArr);
             });
         },
 
@@ -943,7 +1049,7 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
             });
 
             query = this._createNewCreateViewStruct(&#x27;contents-loading-&#x27; + viewName, &#x27;ContentQuery&#x27;, {
-                criteria: {
+                filter: {
                     &quot;ContentIdCriterion&quot;: contentIds
                 },
                 // In case we are asking for more then 25 items which is default limit, specify limit
@@ -955,7 +1061,7 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
                     callback(err, locationStructArr);
                     return;
                 }
-                Y.Array.each(response.document.View.Result.searchHits.searchHit, function (hit, i) {
+                Y.Array.each(response.document.View.Result.searchHits.searchHit, function (hit) {
                     var content = this._createContent(hit),
                         locationIndexes = contentIdsLocationIndexMap[content.get(&#x27;contentId&#x27;)];
 
@@ -965,6 +1071,63 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
                 }, this);
                 callback(err, locationStructArr);
             }, this));
+        },
+
+        /**
+         * Loads Location for each content struct in given array and puts it in the new &#x60;location&#x60;
+         * field for the content struct.
+         *
+         * @method _loadLocationForContent
+         * @protected
+         * @param {Array|Null} contentStructArr
+         * @param {Function} callback
+         */
+        _loadLocationForContent: function (viewName, contentStructArr, callback) {
+            var contentService = this._getContentService(),
+                locationsIds,
+                query;
+
+            locationsIds = Y.Array.reduce(contentStructArr, &#x27;&#x27;, function (previousId, struct) {
+                var locationId;
+
+                if (struct.content.get(&#x27;resources&#x27;).MainLocation) {
+                    locationId = struct.content.get(&#x27;resources&#x27;).MainLocation.split(&#x27;/&#x27;).pop();
+
+                    previousId = previousId ? previousId + &#x27;,&#x27; : previousId;
+                    return previousId + locationId;
+                }
+                return;
+            });
+
+            if (locationsIds) {
+                query = this._createNewCreateViewStruct(&#x27;locations-loading-&#x27; + viewName, &#x27;LocationQuery&#x27;, {
+                    filter: {
+                        &quot;LocationIdCriterion&quot;: locationsIds,
+                    },
+                    limit: contentStructArr.length
+                });
+
+                contentService.createView(query, Y.bind(function (err, response) {
+                    if (err) {
+                        callback(err, contentStructArr);
+                        return;
+                    }
+                    Y.Array.each(response.document.View.Result.searchHits.searchHit, function (hit) {
+                        var location = this._createLocation(hit);
+
+                        Y.Array.some(contentStructArr, function (struct) {
+                            if ( struct.content.get(&#x27;resources&#x27;).MainLocation === location.get(&#x27;id&#x27;) ) {
+                                struct.location = location;
+                                return true;
+                            }
+                            return false;
+                        });
+                    }, this);
+                    callback(err, contentStructArr);
+                }, this));
+            } else {
+                callback(false, contentStructArr);
+            }
         },
     }, {
         NS: &#x27;search&#x27;,
@@ -998,7 +1161,7 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
         Y.eZ.Plugin.Search, [
             &#x27;locationViewViewService&#x27;, &#x27;universalDiscoveryViewService&#x27;,
             &#x27;contentEditViewService&#x27;, &#x27;contentCreateViewService&#x27;,
-            &#x27;dashboardBlocksViewService&#x27;, &#x27;contentPeekViewService&#x27;,
+            &#x27;dashboardBlocksViewService&#x27;
         ]
     );
 });
