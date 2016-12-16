@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -898,6 +906,10 @@
 
                             </li>
                             <li class="index-item method">
+                                <a href="#method_getFieldsIn">getFieldsIn</a>
+
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_getFieldsOfType">getFieldsOfType</a>
 
                             </li>
@@ -1039,6 +1051,10 @@
                                 <a href="#property__allowAdHocAttrs">_allowAdHocAttrs</a>
 
                             </li>
+                            <li class="index-item property protected">
+                                <a href="#property__currentVersion">_currentVersion</a>
+
+                            </li>
                             <li class="index-item property protected inherited">
                                 <a href="#property__isYUIModel">_isYUIModel</a>
 
@@ -1080,7 +1096,7 @@
                             <li class="index-item attr inherited">
                                 <a href="#attr_destroyed">destroyed</a>
                             </li>
-                            <li class="index-item attr">
+                            <li class="index-item attr deprecated">
                                 <a href="#attr_fields">fields</a>
                             </li>
                             <li class="index-item attr inherited">
@@ -1612,7 +1628,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:101</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l108"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:108</code></a>
         </p>
 
 
@@ -1732,7 +1748,7 @@ literal object for each fields in the content with the properties
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:130</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l137"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:137</code></a>
         </p>
 
 
@@ -2714,7 +2730,7 @@ for passing through to <code>addAttrs</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l228"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:228</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l263"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:263</code></a>
         </p>
 
 
@@ -3595,7 +3611,10 @@ before calling the <code>parse()</code> method.
 
     <div class="description">
         <p>Override of the eZ.RestModel _parseStruct method to also read the
-fields of the current version</p>
+fields of the current version and the relations. The fields parsing
+is deprecated and will be removed from PlatformUI 2.0. Also, this
+parsing is broken in case of a Content translated in several
+languages.</p>
 
     </div>
 
@@ -4886,7 +4905,7 @@ See <a href="#method_addAttr">addAttr</a>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l325"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:325</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l360"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:360</code></a>
         </p>
 
 
@@ -5321,7 +5340,7 @@ callback, object (method host), methodName, context, 0-n arguments
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l255"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:255</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l290"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:290</code></a>
         </p>
 
 
@@ -5415,7 +5434,7 @@ callback, object (method host), methodName, context, 0-n arguments
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l342"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:342</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l377"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:377</code></a>
         </p>
 
 
@@ -5507,7 +5526,7 @@ be used. Ex: 42</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l396"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:396</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l431"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:431</code></a>
         </p>
 
 
@@ -6332,6 +6351,9 @@ falsy value otherwise
                 <li class="arg">
                         <code>identifier</code>
                 </li>
+                <li class="arg">
+                        <code>languageCode</code>
+                </li>
             </ul><span class="paren">)</span>
         </div>
 
@@ -6348,7 +6370,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l156"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:156</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l163"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:163</code></a>
         </p>
 
 
@@ -6356,7 +6378,10 @@ falsy value otherwise
     </div>
 
     <div class="description">
-        <p>Returns the field which identifier is in parameter</p>
+        <p>Returns the field which identifier is in parameter. For BC,
+<code>languageCode</code> can be omitted but such case, <code>getField</code> falls back to
+a deprecated and buggy behaviour with a content available in
+several languages.</p>
 
     </div>
 
@@ -6371,6 +6396,17 @@ falsy value otherwise
 
                     <div class="param-description">
                         <p>the field definition identifier</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">languageCode</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>the language code in which the field</p>
 
                     </div>
 
@@ -6390,6 +6426,69 @@ falsy value otherwise
 
 
 </div>
+<div id="method_getFieldsIn" class="method item">
+    <h3 class="name"><code>getFieldsIn</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>languageCode</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l184"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:184</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the fields in the given language code.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">languageCode</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method_getFieldsOfType" class="method item">
     <h3 class="name"><code>getFieldsOfType</code></h3>
 
@@ -6400,6 +6499,9 @@ falsy value otherwise
                 </li>
                 <li class="arg">
                         <code>fieldTypeIdentifier</code>
+                </li>
+                <li class="arg">
+                        <code>languageCode</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -6417,7 +6519,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l168"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:168</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l197"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:197</code></a>
         </p>
 
 
@@ -6425,7 +6527,8 @@ falsy value otherwise
     </div>
 
     <div class="description">
-        <p>Returns the fields which field type has the given identifier.</p>
+        <p>Returns the fields which field type has the given identifier. For BC,
+<code>languageCode</code> can be omitted.</p>
 
     </div>
 
@@ -6445,6 +6548,16 @@ falsy value otherwise
                 </li>
                 <li class="param">
                         <code class="param-name">fieldTypeIdentifier</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">languageCode</code>
                         <span class="type">String</span>
 
 
@@ -6530,7 +6643,7 @@ falsy value otherwise
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l184"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:184</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l219"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:219</code></a>
         </p>
 
 
@@ -6913,7 +7026,7 @@ the mapping described by the ATTRS_REST_MAP and LINKS_MAP.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l268"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:268</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l303"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:303</code></a>
         </p>
 
 
@@ -7840,7 +7953,7 @@ when the event has been attached, detached, or published.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l195"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:195</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l230"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:230</code></a>
         </p>
 
 
@@ -8098,7 +8211,7 @@ omitted, all attributes are reset.
                 Model
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l56"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:56</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l63"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:63</code></a>
         </p>
 
 
@@ -8430,7 +8543,7 @@ be fired.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l371"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:371</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l406"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:406</code></a>
         </p>
 
 
@@ -8557,7 +8670,7 @@ be fired.</p>
                 Model
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:74</code></a>
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l81"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:81</code></a>
         </p>
 
 
@@ -9045,6 +9158,33 @@ instantiate a model and set a bunch of attributes without having to subclass
 
 
 </div>
+<div id="property__currentVersion" class="property item protected">
+    <h3 class="name"><code>_currentVersion</code></h3>
+    <span class="type"><a href="../classes/eZ.Version.html" class="crosslink">eZ.Version</a></span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l505"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:505</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Holds the current version to avoid creating a new object
+again and again</p>
+
+    </div>
+
+
+
+</div>
 <div id="property__isYUIModel" class="property item protected inherited">
     <h3 class="name"><code>_isYUIModel</code></h3>
     <span class="type">Boolean</span>
@@ -9293,7 +9433,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l450"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:450</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l492"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:492</code></a>
                             </p>
                     
                     
@@ -9338,11 +9478,12 @@ list.on('*:change', function (e) {
                     
                     
                     </div>
-                    <div id="attr_fields" class="attr item">
+                    <div id="attr_fields" class="attr item deprecated">
                         <a name="config_fields"></a> 
                         <h3 class="name"><code>fields</code></h3>
                         <span class="type">Object</span>
                     
+                            <span class="flag deprecated">deprecated</span>
                     
                     
                     
@@ -9353,7 +9494,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l427"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:427</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l462"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:462</code></a>
                             </p>
                     
                     
@@ -9361,7 +9502,8 @@ list.on('*:change', function (e) {
                     
                         <div class="description">
                             <p>Fields in the current version of the content indexed by field
-                    definition identifier</p>
+                    definition identifier. This is just shortcut to the fields in the
+                    current version.</p>
                     
                         </div>
                     
@@ -9454,7 +9596,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l439"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:439</code></a>
+                            <a href="../files/Resources_public_js_models_ez-contentmodel.js.html#l481"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-contentmodel.js:481</code></a>
                             </p>
                     
                     
