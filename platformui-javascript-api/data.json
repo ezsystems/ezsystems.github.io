@@ -33244,7 +33244,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 160,
+            "line": 159,
             "description": "Sets the active navigation in the UI",
             "itemtype": "method",
             "name": "_uiSetActiveNavigation",
@@ -33263,7 +33263,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 173,
+            "line": 172,
             "description": "Handles the fixed navigation in the UI",
             "itemtype": "method",
             "name": "_uiHandleFixedNavigation",
@@ -33282,7 +33282,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 199,
+            "line": 198,
             "description": "event fired when the navigation mode change so that the rest of\nthe application can also change if needed. For the navigation\nhub, the navigation mode is either true or false. True when the\nnavigation is fixed and false otherwise.",
             "itemtype": "event",
             "name": "navigationModeChange",
@@ -33308,7 +33308,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 218,
+            "line": 217,
             "description": "Marks the zone associated with the activeNavigation as active",
             "access": "protected",
             "tagname": "",
@@ -33320,7 +33320,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 236,
+            "line": 235,
             "description": "Renders the navigation hub view",
             "itemtype": "method",
             "name": "render",
@@ -33334,7 +33334,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 254,
+            "line": 253,
             "description": "Sets user data to the view",
             "itemtype": "method",
             "name": "_setUserData",
@@ -33346,7 +33346,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 264,
+            "line": 263,
             "description": "Sets user avatar to the view",
             "itemtype": "method",
             "name": "_setUserAvatar",
@@ -33358,7 +33358,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 274,
+            "line": 273,
             "description": "Renders user profile to the view",
             "itemtype": "method",
             "name": "_renderUserProfile",
@@ -33370,7 +33370,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 284,
+            "line": 283,
             "description": "Builds the zone list for the template. Each zone is represented by an\nobject with a `name` and a `hasNavigation` properties.",
             "itemtype": "method",
             "name": "_buildZones",
@@ -33386,7 +33386,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 304,
+            "line": 303,
             "description": "Returns whether the zone associated with the given key has a\nnavigation ie it has more than one navigation item view.",
             "itemtype": "method",
             "name": "_hasNavigation",
@@ -33409,7 +33409,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 319,
+            "line": 318,
             "description": "Returns the navigation item views instances associated with the given\nzone key.",
             "itemtype": "method",
             "name": "_getNavigationItemViews",
@@ -33432,7 +33432,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 332,
+            "line": 331,
             "description": "Renders the navigation items in the corresponding navigation zone",
             "itemtype": "method",
             "name": "_renderNavigationItems",
@@ -33444,7 +33444,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 371,
+            "line": 370,
             "description": "Sets the active flag on the navigation item views",
             "access": "protected",
             "tagname": "",
@@ -33463,7 +33463,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 386,
+            "line": 385,
             "description": "Makes sure the navigation corresponding to the activeNavigation value\nis shown if needed",
             "access": "protected",
             "tagname": "",
@@ -33482,7 +33482,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 403,
+            "line": 402,
             "description": "tap/mouseover handler on the navigation zones. It sets the\nactiveNavigation attribute to the corresponding value",
             "access": "protected",
             "tagname": "",
@@ -33501,7 +33501,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 415,
+            "line": 414,
             "description": "Handles the user scroll to make the navigation fixed or not",
             "access": "protected",
             "tagname": "",
@@ -33520,7 +33520,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 432,
+            "line": 431,
             "description": "Makes sure all the active navigation items are available in the menu.\nIf there's too much items, the overflowed elements are put in the\n*more* sub menu",
             "itemtype": "method",
             "name": "_uiNavigationSize",
@@ -33532,7 +33532,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 467,
+            "line": 466,
             "description": "Checks whether there are too much items in the navigation for the\ncurrent viewport size",
             "access": "protected",
             "tagname": "",
@@ -33547,7 +33547,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 479,
+            "line": 478,
             "description": "Checks whether the navigation is not completely filled up",
             "access": "protected",
             "tagname": "",
@@ -33562,7 +33562,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 490,
+            "line": 489,
             "description": "Returns all navigation items except the *More* item",
             "itemtype": "method",
             "name": "_getNavigationItems",
@@ -33577,7 +33577,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 501,
+            "line": 500,
             "description": "mouseover event handler for the sub menu links to show and place\nthe corresponding sub menu",
             "itemtype": "method",
             "name": "_uiShowSubMenu",
@@ -33596,7 +33596,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 526,
+            "line": 525,
             "description": "mouseout/clickoutside event handler for the sub menu links to hide\nthe corresponding sub menu",
             "itemtype": "method",
             "name": "_uiHideSubMenu",
@@ -33615,7 +33615,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 539,
+            "line": 538,
             "description": "Toggles the sub menu visibility",
             "access": "protected",
             "tagname": "",
@@ -33634,7 +33634,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 554,
+            "line": 553,
             "description": "Sets the _navigationMenu property depending on the val parameter.",
             "itemtype": "method",
             "name": "_setNavigationMenu",
@@ -33657,7 +33657,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 571,
+            "line": 570,
             "description": "Returns the navigation node corresponding to the identifier",
             "params": [
                 {
@@ -33680,7 +33680,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 583,
+            "line": 582,
             "description": "Builds the list of navigation item views based on the value. This\nmethod is a setter for the *NavigationItems.",
             "itemtype": "method",
             "name": "_buildNavigationViews",
@@ -33703,7 +33703,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 613,
+            "line": 612,
             "description": "Object describing the available zones (Platform, Studio), the\nkey is the zone identifier, the value is the zone name.",
             "itemtype": "attribute",
             "name": "zones",
@@ -33715,7 +33715,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 633,
+            "line": 632,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the platform zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -33727,7 +33727,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 649,
+            "line": 648,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studio zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -33739,7 +33739,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 665,
+            "line": 664,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the admin zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -33751,7 +33751,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 681,
+            "line": 680,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studioplus zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -33763,7 +33763,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 697,
+            "line": 696,
             "description": "Contains the identifier ('platform', 'studio', ...) of the\ncurrently active navigation. When set, this attribute updates the\n`_navigationMenu` property with the corresponding Node",
             "itemtype": "attribute",
             "name": "activeNavigation",
@@ -33776,7 +33776,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 712,
+            "line": 711,
             "description": "Whether the navigation is in fixed more or not",
             "itemtype": "attribute",
             "name": "navigationFixed",
@@ -33788,7 +33788,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 723,
+            "line": 722,
             "description": "The currently authenticated user",
             "itemtype": "attribute",
             "name": "user",
@@ -33800,7 +33800,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 732,
+            "line": 731,
             "description": "The matched route provided by the navigation hub view service. It\nused to detect which navigaiton item should be selected and it is\nupdated after each page change.",
             "itemtype": "attribute",
             "name": "matchedRoute",
@@ -33811,7 +33811,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 742,
+            "line": 741,
             "description": "The user profile view",
             "itemtype": "attribute",
             "name": "userProfileView",
@@ -33822,7 +33822,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 756,
+            "line": 755,
             "description": "Stores the user's avatar image",
             "itemtype": "attribute",
             "name": "userAvatar",
