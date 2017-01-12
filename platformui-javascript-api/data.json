@@ -14965,6 +14965,28 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/fields/ez-date-view.js",
+            "line": 52,
+            "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
+            "itemtype": "method",
+            "name": "_formatDate",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "String"
+            },
+            "class": "eZ.CheckboxView",
+            "module": "ez-checkbox-view",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
             "line": 64,
             "description": "Validates the current input of date and time field",
@@ -15191,6 +15213,8 @@
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
             "line": 41,
             "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
+            "deprecated": true,
+            "deprecationMessage": "Since 1.7.1",
             "itemtype": "method",
             "name": "_formatDate",
             "access": "protected",
@@ -15211,10 +15235,35 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 54,
+            "line": 57,
+            "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
+            "since": "1.7.1",
+            "itemtype": "method",
+            "name": "_formatDateTime",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "String"
+            },
+            "class": "eZ.DateAndTimeView",
+            "module": "ez-dateandtime-view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
+            "line": 76,
             "description": "Formats the time part of the date object according to the locale\nsettings of the browser and to the `useSeconds` field definition\nsettings.",
+            "deprecated": true,
+            "deprecationMessage": "Since 1.7.1",
             "itemtype": "method",
-            "name": "_formatDate",
+            "name": "_formatTime",
             "access": "protected",
             "tagname": "",
             "params": [
@@ -15233,7 +15282,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 73,
+            "line": 98,
             "description": "Returns a Date object from the field value",
             "itemtype": "method",
             "name": "_getDateObject",
@@ -18270,6 +18319,8 @@
             "file": "Resources/public/js/views/fields/ez-time-view.js",
             "line": 34,
             "description": "Returns a timestamps in UTC",
+            "deprecated": true,
+            "deprecationMessage": "Since 1.7.1",
             "access": "protected",
             "tagname": "",
             "itemtype": "method",
@@ -18291,7 +18342,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 47,
+            "line": 48,
             "description": "Formats the time in a human readable format. Locale is not taken into account.",
             "itemtype": "method",
             "name": "_formatDate",
@@ -18313,7 +18364,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 67,
+            "line": 65,
             "description": "Returns the actual value of the time field as a formatted string\nsuitable to be displayed to the user. If the field is not filled, it\nreturns an empty string.",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -18328,7 +18379,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 85,
+            "line": 83,
             "description": "Returns a Date object from the field value",
             "itemtype": "method",
             "name": "_getDateObject",
@@ -26181,7 +26232,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 216,
+            "line": 214,
             "description": "Formats the translations list to a string suitable for the template",
             "itemtype": "method",
             "name": "_formatTranslations",
@@ -26204,7 +26255,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 228,
+            "line": 226,
             "description": "Displays the edit icon to inform the user input can be edited.",
             "itemtype": "method",
             "name": "_displayEditIcon",
@@ -26216,7 +26267,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 240,
+            "line": 238,
             "description": "Hides the edit icon",
             "itemtype": "method",
             "name": "_hideEditIcon",
@@ -26228,7 +26279,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 250,
+            "line": 248,
             "description": "Starts the priority edit by setting the `editingPriority` to true (if\npossible).",
             "itemtype": "method",
             "name": "_startPriorityEdit",
@@ -26240,7 +26291,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 263,
+            "line": 261,
             "description": "Ends the priority edit by setting the `editingPriority` to false.",
             "access": "protected",
             "tagname": "",
@@ -26252,7 +26303,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 273,
+            "line": 271,
             "description": "Shows the error icon to inform the user input is not correctly filled.",
             "itemtype": "method",
             "name": "_displayErrorIcon",
@@ -26264,7 +26315,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 285,
+            "line": 283,
             "description": "Hides the error icon.",
             "itemtype": "method",
             "name": "_hideErrorIcon",
@@ -26276,7 +26327,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 297,
+            "line": 295,
             "description": "Displays the 'validate' & 'cancel' buttons",
             "itemtype": "method",
             "name": "_displayPriorityButtons",
@@ -26288,7 +26339,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 308,
+            "line": 306,
             "description": "`tap` event handler on the cancel button. It makes sure to restore\nthe state of the priority cell.",
             "itemtype": "method",
             "name": "_restorePriorityCell",
@@ -26307,7 +26358,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 322,
+            "line": 320,
             "description": "Restores the input value with the priority of the location",
             "itemtype": "method",
             "name": "_restorePriorityValue",
@@ -26319,7 +26370,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 335,
+            "line": 333,
             "description": "Hides the validate and cancel buttons displayed while editing priority",
             "itemtype": "method",
             "name": "_hidePriorityButtons",
@@ -26331,7 +26382,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 346,
+            "line": 344,
             "description": "`submit` event handler to change the priority of the Location",
             "itemtype": "method",
             "name": "_setPriority",
@@ -26350,7 +26401,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 362,
+            "line": 360,
             "description": "Validates the priority input",
             "itemtype": "method",
             "name": "_validatePriority",
@@ -26362,7 +26413,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 382,
+            "line": 380,
             "description": "Returns the priority cell",
             "itemtype": "method",
             "name": "_getPriorityCell",
@@ -26376,7 +26427,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 392,
+            "line": 390,
             "description": "Returns the priority input",
             "itemtype": "method",
             "name": "_getPriorityInput",
@@ -26390,7 +26441,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 403,
+            "line": 401,
             "description": "True is the priority of the Location is being edited",
             "itemtype": "attribute",
             "name": "editingPriority",
@@ -26402,7 +26453,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 414,
+            "line": 412,
             "description": "True is the priority of the Location can be edited",
             "itemtype": "attribute",
             "name": "canEditPriority",
@@ -26414,7 +26465,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 425,
+            "line": 423,
             "description": "The content type of the content item being displayed",
             "itemtype": "attribute",
             "name": "contentType",
@@ -26425,7 +26476,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 433,
+            "line": 431,
             "description": "The location of the content item being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -26436,7 +26487,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 441,
+            "line": 439,
             "description": "The content item being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -26447,7 +26498,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 449,
+            "line": 447,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -26458,7 +26509,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 457,
+            "line": 455,
             "description": "Lists the available porperties to display and the corresponding\nconfiguration for `_getProperty` to extract, format and\noptionnally render the property. The object keys are the property\nidentifiers. Each entry in this object is an object with:\n\n* `extractor`: a function or a method name to extract the value.\nThis function receives the property identifier as a parameter.\n* [optional] `formatter`: a function or a method name to format\nthe value. This function receives the property identifier as a\nparameter.\n* [optional] `template`: a template id to directly render the\nproperty. The template receives the corresponding property\nobject, the Location, the Content item and the Content type\nobjects.",
             "itemtype": "attribute",
             "name": "availableProperties",
