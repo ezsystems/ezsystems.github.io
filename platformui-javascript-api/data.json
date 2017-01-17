@@ -2913,6 +2913,32 @@
             "fors": {},
             "namespaces": {}
         },
+        "Resources/public/js/alloyeditor/buttons/movedown.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "modules": {
+                "ez-alloyeditor-button-movedown": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveDown": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/buttons/moveup.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/moveup.js",
+            "modules": {
+                "ez-alloyeditor-button-moveup": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveUp": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/paragraph.js": {
             "name": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "modules": {},
@@ -2927,6 +2953,17 @@
             "modules": {},
             "classes": {
                 "CKEDITOR.plugins.ezaddcontent": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "CKEDITOR.plugins": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/plugins/caret.js": {
+            "name": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "modules": {},
+            "classes": {
+                "CKEDITOR.plugins.ezcaret": 1
             },
             "fors": {},
             "namespaces": {
@@ -2949,6 +2986,17 @@
             "modules": {},
             "classes": {
                 "CKEDITOR.plugins.ezfocusblock": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "CKEDITOR.plugins": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/plugins/moveelement.js": {
+            "name": "Resources/public/js/alloyeditor/plugins/moveelement.js",
+            "modules": {},
+            "classes": {
+                "CKEDITOR.plugins.ezmoveelement": 1
             },
             "fors": {},
             "namespaces": {
@@ -6379,11 +6427,45 @@
             "elements": {},
             "classes": {
                 "eZ.AlloyEditorButton.ButtonImageVariation": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/list.js",
+            "line": 17,
+            "description": "Provides the image variation drop down"
+        },
+        "ez-alloyeditor-button-movedown": {
+            "name": "ez-alloyeditor-button-movedown",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveDown": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "line": 23,
+            "description": "Provides the move down button"
+        },
+        "ez-alloyeditor-button-moveup": {
+            "name": "ez-alloyeditor-button-moveup",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveUp": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
                 "CKEDITOR.plugins.ezaddcontent": 1,
+                "CKEDITOR.plugins.ezcaret": 1,
                 "CKEDITOR.plugins.ezembed": 1,
                 "CKEDITOR.plugins.ezfocusblock": 1,
+                "CKEDITOR.plugins.ezmoveelement": 1,
                 "CKEDITOR.plugins.ezpaste": 1,
                 "CKEDITOR.plugins.ezremoveblock": 1,
                 "CKEDITOR.plugins.yui3": 1
@@ -6396,7 +6478,7 @@
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
-            "description": "Provides the image variation drop down"
+            "description": "Provides the move up button"
         },
         "ez-editorcontentprocessorbase": {
             "name": "ez-editorcontentprocessorbase",
@@ -6520,7 +6602,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 86,
+            "line": 88,
             "description": "Provides the AlloyEditor `styles` toolbar configuration for headings."
         },
         "ez-alloyeditor-toolbar-config-image": {
@@ -10265,6 +10347,34 @@
                 "AlloyEditor.ButtonStateClasses"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonMoveDown": {
+            "name": "eZ.AlloyEditorButton.ButtonMoveDown",
+            "shortname": "eZ.AlloyEditorButton.ButtonMoveDown",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-movedown",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "line": 23,
+            "description": "The ButtonMoveDown component represents a button to move the currently\nfocused element in the editor after its following sibling element."
+        },
+        "eZ.AlloyEditorButton.ButtonMoveUp": {
+            "name": "eZ.AlloyEditorButton.ButtonMoveUp",
+            "shortname": "eZ.AlloyEditorButton.ButtonMoveUp",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/moveup.js",
+            "line": 23,
+            "description": "The ButtonMoveUp component represents a button to move the currently\nfocused element in the editor before its preceding sibling element."
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
             "shortname": "eZ.AlloyEditor.ButtonParagraph",
@@ -10273,7 +10383,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 17,
@@ -10291,11 +10401,26 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 97,
+            "line": 90,
             "description": "CKEditor plugin providing the eZAddContent command. This command\nallows to add content  to the editor content in the editable region\npointed by the selector available under `eZ.editableRegion` in the\nconfiguration.",
+            "is_constructor": 1
+        },
+        "CKEDITOR.plugins.ezcaret": {
+            "name": "CKEDITOR.plugins.ezcaret",
+            "shortname": "CKEDITOR.plugins.ezcaret",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins",
+            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "line": 29,
+            "description": "CKEDITOR plugin providing an API to handle the caret in the editor.",
             "is_constructor": 1
         },
         "CKEDITOR.plugins.ezembed": {
@@ -10306,7 +10431,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 16,
@@ -10321,11 +10446,26 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/focusblock.js",
             "line": 74,
             "description": "CKEditor plugin to add/remove the focused class on the block holding the\ncaret.",
+            "is_constructor": 1
+        },
+        "CKEDITOR.plugins.ezmoveelement": {
+            "name": "CKEDITOR.plugins.ezmoveelement",
+            "shortname": "CKEDITOR.plugins.ezmoveelement",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins",
+            "file": "Resources/public/js/alloyeditor/plugins/moveelement.js",
+            "line": 74,
+            "description": "CKEditor plugin providing the eZMoveUp and eZMoveDown commands. These\ncommands allow to move the element having the focus in the editor.",
             "is_constructor": 1
         },
         "CKEDITOR.plugins.ezpaste": {
@@ -10336,7 +10476,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/paste.js",
             "line": 63,
@@ -10351,10 +10491,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 120,
+            "line": 122,
             "description": "CKEditor plugin providing the eZRemoveBlock command. This command\nallows to remove the block element holding the caret or the focused\nwidget",
             "is_constructor": 1
         },
@@ -10366,7 +10506,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
@@ -10478,7 +10618,7 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 74,
+            "line": 76,
             "description": "`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
             "is_constructor": 1,
             "extends": "BlockBase"
@@ -10494,7 +10634,7 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 86,
+            "line": 88,
             "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.HeadingConfig constructor instead.\n`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
             "deprecated": true,
             "extends": "BlockBase"
@@ -10539,7 +10679,7 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 86,
+            "line": 88,
             "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.ParagraphConfig instead.\n`styles` toolbar configuration for paragraph. The `paragraph` toolbar is\nsupposed to be shown when the user puts the caret inside a paragraph\nelement and when the selection is empty.",
             "deprecated": true,
             "extends": "BlockBase"
@@ -42274,6 +42414,30 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "line": 35,
+            "description": "Executes the eZMoveDown command.",
+            "itemtype": "method",
+            "name": "_moveDown",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonMoveDown",
+            "module": "ez-alloyeditor-button-movedown",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/moveup.js",
+            "line": 35,
+            "description": "Executes the eZMoveUp command.",
+            "itemtype": "method",
+            "name": "_moveUp",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonMoveUp",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 42,
             "description": "Executes the eZAppendContent to add a paragraph element in the editor.",
@@ -42282,24 +42446,24 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 32,
+            "line": 25,
             "description": "Fires the `editorInteraction` event this is done to make sure the\nAlloyEditor's UI remains visible",
             "itemtype": "method",
             "name": "fireEditorInteractionEvent",
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 52,
+            "line": 45,
             "description": "Appends the element to the editor content. Depending on the editor's\nstate, the element is added at a different place:\n\n- if nothing is selected, editor.insertElement is called and the element\n  is added at the beginning of the editor\n- if a block element is selected (not a widget), the element is added\n  after the element or after the first block in the element path (after\n  the ul element if a li has the focus)\n- if a widget has the focus, the element is added right after it",
             "itemtype": "method",
             "name": "appendElement",
@@ -42316,8 +42480,53 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "line": 40,
+            "description": "Moves the caret in the editor to the given element",
+            "itemtype": "method",
+            "name": "eZ.moveCaretToElement",
+            "params": [
+                {
+                    "name": "editor",
+                    "description": "",
+                    "type": "CKEDITOR.editor"
+                },
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezcaret",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "line": 49,
+            "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
+            "itemtype": "method",
+            "name": "eZ.findCaretElement",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "CKEDITOR.dom.element"
+            },
+            "class": "CKEDITOR.plugins.ezcaret",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
@@ -42326,7 +42535,7 @@
             "itemtype": "method",
             "name": "insert",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42336,7 +42545,7 @@
             "itemtype": "method",
             "name": "edit",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42348,7 +42557,7 @@
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42360,7 +42569,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42379,7 +42588,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42396,7 +42605,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42408,7 +42617,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42418,7 +42627,7 @@
             "itemtype": "method",
             "name": "unsetAlignment",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42439,7 +42648,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42453,7 +42662,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42467,7 +42676,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42488,7 +42697,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42502,7 +42711,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42523,12 +42732,46 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 253,
+            "description": "Moves the widget after the given element. It also fires the\n`editorInteraction` event so that the UI can respond to that\nchange.",
+            "itemtype": "method",
+            "name": "moveAfter",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 266,
+            "description": "Moves the widget before the given element. It also fires the\n`editorInteraction` event so that the UI can respond to that\nchange.",
+            "itemtype": "method",
+            "name": "moveAfter",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 279,
             "description": "Sets a config value under the `key` for the embed.",
             "itemtype": "method",
             "name": "setConfig",
@@ -42549,12 +42792,12 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 274,
+            "line": 300,
             "description": "Returns the config value for the `key` or undefined if the\nconfig key is not found.",
             "itemtype": "method",
             "name": "getConfig",
@@ -42563,12 +42806,12 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 287,
+            "line": 313,
             "description": "Returns the Element holding the config under `key`",
             "itemtype": "method",
             "name": "_getValueElement",
@@ -42584,12 +42827,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 298,
+            "line": 324,
             "description": "Returns the element used as a container the config values. if\nit does not exist, it is created.",
             "itemtype": "method",
             "name": "_getEzConfigElement",
@@ -42600,12 +42843,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 317,
+            "line": 343,
             "description": "Fires the editorInteraction event so that AlloyEditor editor\nUI remains visible and is updated. This method also computes\n`selectionData.region` and the `pageX` and `pageY` properties\nso that the add toolbar is correctly positioned on the\nwidget.",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -42619,12 +42862,12 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 352,
+            "line": 378,
             "description": "Returns the wrapper element region.",
             "itemtype": "method",
             "name": "_getWrapperRegion",
@@ -42635,7 +42878,7 @@
                 "type": "Object"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42658,7 +42901,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42686,7 +42929,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42710,15 +42953,16 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 33,
+            "line": 31,
             "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
             "itemtype": "method",
             "name": "_findCaretElement",
+            "deprecated": true,
             "access": "protected",
             "tagname": "",
             "params": [
@@ -42733,12 +42977,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 52,
+            "line": 54,
             "description": "Fires the editorInteraction event so that AlloyEditor's UI is updated\nfor the newly focused element",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -42762,12 +43006,12 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 76,
+            "line": 78,
             "description": "Changes the focused element in the editor to the given newFocus\nelement",
             "params": [
                 {
@@ -42786,7 +43030,7 @@
             "itemtype": "method",
             "name": "_changeFocus",
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42988,7 +43232,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/embed.js",
-            "line": 35,
+            "line": 37,
             "description": "Tests whether the `embed` toolbar should be visible, it is visible\nwhen an ezembed widget gets the focus.",
             "itemtype": "method",
             "name": "test",
@@ -43033,7 +43277,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 47,
+            "line": 49,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
@@ -43077,7 +43321,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 109,
+            "line": 111,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
@@ -43123,7 +43367,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/image.js",
-            "line": 36,
+            "line": 38,
             "description": "Tests whether the `image` toolbar should be visible, it is visible\nwhen an ezembed widget containing an <img> is visible.",
             "itemtype": "method",
             "name": "test",
@@ -43168,7 +43412,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 46,
+            "line": 48,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",
@@ -43212,7 +43456,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 109,
+            "line": 111,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",
