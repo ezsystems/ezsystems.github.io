@@ -41,10 +41,8 @@
                                 <li><a href="../classes/Author.html">Author</a></li>
                                 <li><a href="../classes/AuthorList.html">AuthorList</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezaddcontent.html">CKEDITOR.plugins.ezaddcontent</a></li>
-                                <li><a href="../classes/CKEDITOR.plugins.ezcaret.html">CKEDITOR.plugins.ezcaret</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezembed.html">CKEDITOR.plugins.ezembed</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezfocusblock.html">CKEDITOR.plugins.ezfocusblock</a></li>
-                                <li><a href="../classes/CKEDITOR.plugins.ezmoveelement.html">CKEDITOR.plugins.ezmoveelement</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezpaste.html">CKEDITOR.plugins.ezpaste</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezremoveblock.html">CKEDITOR.plugins.ezremoveblock</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.yui3.html">CKEDITOR.plugins.yui3</a></li>
@@ -66,8 +64,6 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedRight.html">eZ.AlloyEditorButton.ButtonEmbedRight</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageVariation.html">eZ.AlloyEditorButton.ButtonImageVariation</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonMoveDown.html">eZ.AlloyEditorButton.ButtonMoveDown</a></li>
-                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonMoveUp.html">eZ.AlloyEditorButton.ButtonMoveUp</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
@@ -310,8 +306,6 @@
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-widgetbutton.html">ez-alloyeditor-button-mixin-widgetbutton</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-movedown.html">ez-alloyeditor-button-movedown</a></li>
-                                <li><a href="../modules/ez-alloyeditor-button-moveup.html">ez-alloyeditor-button-moveup</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-remove.html">ez-alloyeditor-button-remove</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-block-base.html">ez-alloyeditor-toolbar-config-block-base</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-embed.html">ez-alloyeditor-toolbar-config-embed</a></li>
@@ -678,19 +672,13 @@
                                 <a href="#method__fireAttrChange">_fireAttrChange</a>
 
                             </li>
-                            <li class="index-item method protected deprecated">
+                            <li class="index-item method protected">
                                 <a href="#method__formatDate">_formatDate</a>
 
-                                    <span class="flag deprecated">deprecated</span>
                             </li>
                             <li class="index-item method protected">
-                                <a href="#method__formatDateTime">_formatDateTime</a>
+                                <a href="#method__formatDate">_formatDate</a>
 
-                            </li>
-                            <li class="index-item method protected deprecated">
-                                <a href="#method__formatTime">_formatTime</a>
-
-                                    <span class="flag deprecated">deprecated</span>
                             </li>
                             <li class="index-item method protected inherited inherited">
                                 <a href="#method__generateViewClassName">_generateViewClassName</a>
@@ -1997,7 +1985,7 @@ if this is a sub-attribute value being change. Otherwise null.
 
 
 </div>
-<div id="method__formatDate" class="method item protected deprecated">
+<div id="method__formatDate" class="method item protected">
     <h3 class="name"><code>_formatDate</code></h3>
 
         <div class="args">
@@ -2012,7 +2000,6 @@ if this is a sub-attribute value being change. Otherwise null.
             <span class="type"></span>
         </span>
 
-        <span class="flag deprecated" title="Since 1.7.1">deprecated</span>
 
         <span class="flag protected">protected</span>
 
@@ -2027,7 +2014,6 @@ if this is a sub-attribute value being change. Otherwise null.
         </p>
 
 
-            <p>Deprecated: Since 1.7.1</p>
 
     </div>
 
@@ -2065,8 +2051,8 @@ settings of the browser</p>
 
 
 </div>
-<div id="method__formatDateTime" class="method item protected">
-    <h3 class="name"><code>_formatDateTime</code></h3>
+<div id="method__formatDate" class="method item protected">
+    <h3 class="name"><code>_formatDate</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
@@ -2090,79 +2076,10 @@ settings of the browser</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-dateandtime-view.js.html#l57"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-dateandtime-view.js:57</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-dateandtime-view.js.html#l54"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-dateandtime-view.js:54</code></a>
         </p>
 
 
-
-            <p>Available since 1.7.1</p>
-    </div>
-
-    <div class="description">
-        <p>Formats the date part of the date object according to the locale
-settings of the browser</p>
-
-    </div>
-
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-                <li class="param">
-                        <code class="param-name">date</code>
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Date.html" class="crosslink external" target="_blank">Date</a></span>
-
-
-                    <div class="param-description">
-                         
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                    <p>String</p>
-
-            </div>
-        </div>
-
-
-</div>
-<div id="method__formatTime" class="method item protected deprecated">
-    <h3 class="name"><code>_formatTime</code></h3>
-
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-                <li class="arg">
-                        <code>date</code>
-                </li>
-            </ul><span class="paren">)</span>
-        </div>
-
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-
-        <span class="flag deprecated" title="Since 1.7.1">deprecated</span>
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-dateandtime-view.js.html#l76"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-dateandtime-view.js:76</code></a>
-        </p>
-
-
-            <p>Deprecated: Since 1.7.1</p>
 
     </div>
 
@@ -2713,7 +2630,7 @@ cached value.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-dateandtime-view.js.html#l98"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-dateandtime-view.js:98</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-dateandtime-view.js.html#l73"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-dateandtime-view.js:73</code></a>
         </p>
 
 
