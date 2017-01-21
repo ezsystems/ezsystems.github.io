@@ -4,10 +4,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Author",
         "AuthorList",
         "CKEDITOR.plugins.ezaddcontent",
-        "CKEDITOR.plugins.ezcaret",
         "CKEDITOR.plugins.ezembed",
         "CKEDITOR.plugins.ezfocusblock",
-        "CKEDITOR.plugins.ezmoveelement",
         "CKEDITOR.plugins.ezpaste",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
@@ -30,8 +28,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonEmbedRight",
         "eZ.AlloyEditorButton.ButtonImageHref",
         "eZ.AlloyEditorButton.ButtonImageVariation",
-        "eZ.AlloyEditorButton.ButtonMoveDown",
-        "eZ.AlloyEditorButton.ButtonMoveUp",
         "eZ.AlloyEditorButton.WidgetButton",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
@@ -40,7 +36,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
         "eZ.AlloyEditorToolbarConfig.Embed",
         "eZ.AlloyEditorToolbarConfig.Heading",
-        "eZ.AlloyEditorToolbarConfig.HeadingConfig",
         "eZ.AlloyEditorToolbarConfig.Image",
         "eZ.AlloyEditorToolbarConfig.Link",
         "eZ.AlloyEditorToolbarConfig.Paragraph",
@@ -68,8 +63,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.ContentEditViewService",
         "eZ.ContentInfo",
         "eZ.ContentInfoBase",
-        "eZ.ContentPeekView",
-        "eZ.ContentPeekViewService",
         "eZ.ContentTree",
         "eZ.ContentType",
         "eZ.ContentTypeEditServerSideView",
@@ -150,7 +143,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.ConfirmBox",
         "eZ.Plugin.ContentCreate",
         "eZ.Plugin.ContentEdit",
-        "eZ.Plugin.ContentPeek",
         "eZ.Plugin.ContentSetMainLocation",
         "eZ.Plugin.ContentTree",
         "eZ.Plugin.CopyContent",
@@ -223,7 +215,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TextBlockEditView",
         "eZ.TextLineEditView",
         "eZ.TranslateActionView",
-        "eZ.Translator",
         "eZ.TrashBarView",
         "eZ.TrashItem",
         "eZ.TrashView",
@@ -265,14 +256,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-embedcenter",
         "ez-alloyeditor-button-embedleft",
         "ez-alloyeditor-button-imagehref",
-        "ez-alloyeditor-button-imagevariation",
         "ez-alloyeditor-button-mixin-blocktextalign",
         "ez-alloyeditor-button-mixin-embedalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
         "ez-alloyeditor-button-mixin-embedimage",
         "ez-alloyeditor-button-mixin-widgetbutton",
-        "ez-alloyeditor-button-movedown",
-        "ez-alloyeditor-button-moveup",
         "ez-alloyeditor-button-remove",
         "ez-alloyeditor-toolbar-config-block-base",
         "ez-alloyeditor-toolbar-config-embed",
@@ -300,8 +288,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-contentinfo-base",
         "ez-contentinfomodel",
         "ez-contentmodel",
-        "ez-contentpeekplugin",
-        "ez-contentpeekview",
         "ez-contentsetmainlocationplugin",
         "ez-contenttree",
         "ez-contenttreeplugin",
@@ -517,11 +503,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the ezimagehref button"
         },
         {
-            "displayName": "ez-alloyeditor-button-imagevariation",
-            "name": "ez-alloyeditor-button-imagevariation",
-            "description": "Provides the image variation drop down"
-        },
-        {
             "displayName": "ez-alloyeditor-button-mixin-blocktextalign",
             "name": "ez-alloyeditor-button-mixin-blocktextalign",
             "description": "Provides the BlockTextAlign mixin"
@@ -547,19 +528,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the WidgetButton mixin"
         },
         {
-            "displayName": "ez-alloyeditor-button-movedown",
-            "name": "ez-alloyeditor-button-movedown",
-            "description": "Provides the move down button"
-        },
-        {
-            "displayName": "ez-alloyeditor-button-moveup",
-            "name": "ez-alloyeditor-button-moveup",
-            "description": "Provides the move up button"
-        },
-        {
             "displayName": "ez-alloyeditor-button-remove",
             "name": "ez-alloyeditor-button-remove",
-            "description": "Provides the embedhref href button"
+            "description": "Provides the image variation drop down"
         },
         {
             "displayName": "ez-alloyeditor-toolbar-config-block-base",
@@ -690,16 +661,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-contentmodel",
             "name": "ez-contentmodel",
             "description": "Provides the Content model class"
-        },
-        {
-            "displayName": "ez-contentpeekplugin",
-            "name": "ez-contentpeekplugin",
-            "description": "Provides the content peek plugin"
-        },
-        {
-            "displayName": "ez-contentpeekview",
-            "name": "ez-contentpeekview",
-            "description": "Provide the content peek view"
         },
         {
             "displayName": "ez-contentsetmainlocationplugin",
