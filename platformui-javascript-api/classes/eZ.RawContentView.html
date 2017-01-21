@@ -72,6 +72,7 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.WidgetButton.html">eZ.AlloyEditorButton.WidgetButton</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Embed.html">eZ.AlloyEditorToolbarConfig.Embed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Heading.html">eZ.AlloyEditorToolbarConfig.Heading</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorToolbarConfig.HeadingConfig.html">eZ.AlloyEditorToolbarConfig.HeadingConfig</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Image.html">eZ.AlloyEditorToolbarConfig.Image</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Link.html">eZ.AlloyEditorToolbarConfig.Link</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorToolbarConfig.Paragraph.html">eZ.AlloyEditorToolbarConfig.Paragraph</a></li>
@@ -99,6 +100,8 @@
                                 <li><a href="../classes/eZ.ContentEditViewService.html">eZ.ContentEditViewService</a></li>
                                 <li><a href="../classes/eZ.ContentInfo.html">eZ.ContentInfo</a></li>
                                 <li><a href="../classes/eZ.ContentInfoBase.html">eZ.ContentInfoBase</a></li>
+                                <li><a href="../classes/eZ.ContentPeekView.html">eZ.ContentPeekView</a></li>
+                                <li><a href="../classes/eZ.ContentPeekViewService.html">eZ.ContentPeekViewService</a></li>
                                 <li><a href="../classes/eZ.ContentTree.html">eZ.ContentTree</a></li>
                                 <li><a href="../classes/eZ.ContentType.html">eZ.ContentType</a></li>
                                 <li><a href="../classes/eZ.ContentTypeEditServerSideView.html">eZ.ContentTypeEditServerSideView</a></li>
@@ -180,6 +183,7 @@
                                 <li><a href="../classes/eZ.Plugin.ConfirmBox.html">eZ.Plugin.ConfirmBox</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentCreate.html">eZ.Plugin.ContentCreate</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentEdit.html">eZ.Plugin.ContentEdit</a></li>
+                                <li><a href="../classes/eZ.Plugin.ContentPeek.html">eZ.Plugin.ContentPeek</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentSetMainLocation.html">eZ.Plugin.ContentSetMainLocation</a></li>
                                 <li><a href="../classes/eZ.Plugin.ContentTree.html">eZ.Plugin.ContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.CopyContent.html">eZ.Plugin.CopyContent</a></li>
@@ -253,6 +257,7 @@
                                 <li><a href="../classes/eZ.TextLineEditView.html">eZ.TextLineEditView</a></li>
                                 <li><a href="../classes/eZ.timeEditView.html">eZ.timeEditView</a></li>
                                 <li><a href="../classes/eZ.TranslateActionView.html">eZ.TranslateActionView</a></li>
+                                <li><a href="../classes/eZ.Translator.html">eZ.Translator</a></li>
                                 <li><a href="../classes/eZ.TrashBarView.html">eZ.TrashBarView</a></li>
                                 <li><a href="../classes/eZ.TrashItem.html">eZ.TrashItem</a></li>
                                 <li><a href="../classes/eZ.TrashView.html">eZ.TrashView</a></li>
@@ -295,6 +300,7 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedcenter.html">ez-alloyeditor-button-embedcenter</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
@@ -327,6 +333,8 @@
                                 <li><a href="../modules/ez-contentinfo-base.html">ez-contentinfo-base</a></li>
                                 <li><a href="../modules/ez-contentinfomodel.html">ez-contentinfomodel</a></li>
                                 <li><a href="../modules/ez-contentmodel.html">ez-contentmodel</a></li>
+                                <li><a href="../modules/ez-contentpeekplugin.html">ez-contentpeekplugin</a></li>
+                                <li><a href="../modules/ez-contentpeekview.html">ez-contentpeekview</a></li>
                                 <li><a href="../modules/ez-contentsetmainlocationplugin.html">ez-contentsetmainlocationplugin</a></li>
                                 <li><a href="../modules/ez-contenttree.html">ez-contenttree</a></li>
                                 <li><a href="../modules/ez-contenttreeplugin.html">ez-contenttreeplugin</a></li>
@@ -660,6 +668,10 @@
                                 <a href="#method__destroyContainer">_destroyContainer</a>
 
                             </li>
+                            <li class="index-item method private">
+                                <a href="#method__destroyFieldViews">_destroyFieldViews</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__destroyHierarchy">_destroyHierarchy</a>
 
@@ -670,6 +682,10 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__fireAttrChange">_fireAttrChange</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__forwardActive">_forwardActive</a>
 
                             </li>
                             <li class="index-item method protected inherited">
@@ -1023,6 +1039,9 @@
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_languageSwitcherView">languageSwitcherView</a>
+                            </li>
+                            <li class="index-item attr">
+                                <a href="#attr_languageSwitchMode">languageSwitchMode</a>
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_location">location</a>
@@ -1562,7 +1581,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l63"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:63</code></a>
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l92"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:92</code></a>
         </p>
 
 
@@ -1617,7 +1636,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l45"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:45</code></a>
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l74"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:74</code></a>
         </p>
 
 
@@ -1854,6 +1873,38 @@ refers to the configuration object passed to the constructor.
 
 
 </div>
+<div id="method__destroyFieldViews" class="method item private">
+    <h3 class="name"><code>_destroyFieldViews</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l186"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:186</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Destroys the field views</p>
+
+    </div>
+
+
+
+
+</div>
 <div id="method__destroyHierarchy" class="method item private inherited">
     <h3 class="name"><code>_destroyHierarchy</code></h3>
 
@@ -2082,6 +2133,38 @@ if this is a sub-attribute value being change. Otherwise null.
                 </li>
             </ul>
         </div>
+
+
+
+</div>
+<div id="method__forwardActive" class="method item protected">
+    <h3 class="name"><code>_forwardActive</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l62"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:62</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Forwards the active flag to the field views.</p>
+
+    </div>
+
 
 
 
@@ -3779,7 +3862,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l149"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:149</code></a>
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l168"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:168</code></a>
         </p>
 
 
@@ -4236,7 +4319,7 @@ where the calling method has already obtained the config from state.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l84"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:84</code></a>
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l113"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:113</code></a>
         </p>
 
 
@@ -6733,7 +6816,7 @@ but doesn't destroy it or any event listeners attached to it.
                 View
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l127"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:127</code></a>
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l146"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:146</code></a>
         </p>
 
 
@@ -7221,7 +7304,7 @@ instantiate a view and set a bunch of attributes without having to subclass
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l116"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:116</code></a>
+        <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l37"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:37</code></a>
         </p>
 
 
@@ -7454,14 +7537,14 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l185"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:185</code></a>
+                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l212"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:212</code></a>
                             </p>
                     
                     
                         </div>
                     
                         <div class="description">
-                            <p>The content associated the current location</p>
+                            <p>The rendered Content item</p>
                     
                         </div>
                     
@@ -7483,14 +7566,14 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l196"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:196</code></a>
+                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l220"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:220</code></a>
                             </p>
                     
                     
                         </div>
                     
                         <div class="description">
-                            <p>The content type of the content at the current location</p>
+                            <p>The Content Type of the Content item</p>
                     
                         </div>
                     
@@ -7574,7 +7657,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l207"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:207</code></a>
+                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l228"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:228</code></a>
                             </p>
                     
                     
@@ -7603,7 +7686,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l218"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:218</code></a>
+                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l250"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:250</code></a>
                             </p>
                     
                     
@@ -7614,6 +7697,38 @@ How this template gets used is entirely up to you and your custom
                     
                         </div>
                     
+                    
+                    
+                    </div>
+                    <div id="attr_languageSwitchMode" class="attr item">
+                        <a name="config_languageSwitchMode"></a> 
+                        <h3 class="name"><code>languageSwitchMode</code></h3>
+                        <span class="type">String</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l236"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:236</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Configure the language switcher view to fire an event when
+                    switching language ('event' value) or to let the browser follow
+                    the link to switch language ('navigate' value).</p>
+                    
+                        </div>
+                    
+                            <p><strong>Default:</strong> undefined</p>
                     
                     
                     </div>
@@ -7632,14 +7747,14 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l174"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:174</code></a>
+                            <a href="../files/Resources_public_js_views_ez-rawcontentview.js.html#l204"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-rawcontentview.js:204</code></a>
                             </p>
                     
                     
                         </div>
                     
                         <div class="description">
-                            <p>The location being rendered</p>
+                            <p>The location of the Content item being rendered</p>
                     
                         </div>
                     
