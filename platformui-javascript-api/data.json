@@ -2904,6 +2904,19 @@
                 "eZ.AlloyEditorButton": 1
             }
         },
+        "Resources/public/js/alloyeditor/buttons/linkedit.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "modules": {
+                "ez-alloyeditor-button-linkedit": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonLinkEdit": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/list.js": {
             "name": "Resources/public/js/alloyeditor/buttons/list.js",
             "modules": {},
@@ -6426,7 +6439,23 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.AlloyEditorButton.ButtonImageVariation": 1,
+                "eZ.AlloyEditorButton.ButtonImageVariation": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "line": 23,
+            "description": "Provides the image variation drop down"
+        },
+        "ez-alloyeditor-button-linkedit": {
+            "name": "ez-alloyeditor-button-linkedit",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonLinkEdit": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1
             },
             "fors": {},
@@ -6436,7 +6465,7 @@
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 17,
-            "description": "Provides the image variation drop down"
+            "description": "Provides the link edit button"
         },
         "ez-alloyeditor-button-movedown": {
             "name": "ez-alloyeditor-button-movedown",
@@ -10329,6 +10358,20 @@
                 "Y.eZ.AlloyEditorButton.WidgetButton"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonLinkEdit": {
+            "name": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "shortname": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 20,
+            "description": "The ButtonLinkEdit class provides functionality for creating and editing\na link in a document.\n\nNote: This component overrides the one provided by AlloyEditor by default\nto give more options and improve the UI."
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
             "shortname": "eZ.AlloyEditor.ButtonList",
@@ -10337,7 +10380,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-linkedit",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 17,
@@ -42402,6 +42445,166 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 32,
+            "description": "The editor instance where the component is being used.",
+            "itemtype": "property",
+            "name": "editor",
+            "type": "Object",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 41,
+            "description": "The name which will be used as an alias of the button in the\nconfiguration.",
+            "static": 1,
+            "itemtype": "property",
+            "name": "key",
+            "type": "String",
+            "default": "linkEdit",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 56,
+            "description": "Lifecycle. Invoked once before the component is mounted.\nThe return value will be used as the initial value of this.state.",
+            "itemtype": "method",
+            "name": "getInitialState",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 85,
+            "description": "Lifecycle. Renders the UI of the button.",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "The content which should be rendered.",
+                "type": "Object"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 158,
+            "description": "Clears the link input. This only changes the component internal\nstate, but does not affect the link element of the editor. Only the\n_removeLink and _updateLink methods are translated to the editor\nelement.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_clearLink",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 173,
+            "description": "Monitors key interaction inside the input element to respond to the\nkeys:\n- Enter: Creates/updates the link.\n- Escape: Discards the changes.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_handleKeyDown",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The keyboard event.",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 199,
+            "description": "Updates the component state when the link input changes on user\ninteraction.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_setHref",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The change event.",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 213,
+            "description": "Sets the link title",
+            "itemtype": "method",
+            "name": "_setTitle",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 226,
+            "description": "Sets the target of the link",
+            "itemtype": "method",
+            "name": "_setTarget",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 239,
+            "description": "Removes the link in the editor element.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_removeLink",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 260,
+            "description": "Updates the link in the editor element. If the element didn't exist\npreviously, it will create a new <a> element with the href specified\nin the link input.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_updateLink",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 42,
             "description": "Executes the eZAppendContent command to add an unordered list containing\nan empty list item.",
@@ -42410,7 +42613,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-linkedit",
             "namespace": "eZ.AlloyEditorButton"
         },
         {

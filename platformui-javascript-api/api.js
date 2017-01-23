@@ -30,6 +30,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonEmbedRight",
         "eZ.AlloyEditorButton.ButtonImageHref",
         "eZ.AlloyEditorButton.ButtonImageVariation",
+        "eZ.AlloyEditorButton.ButtonLinkEdit",
         "eZ.AlloyEditorButton.ButtonMoveDown",
         "eZ.AlloyEditorButton.ButtonMoveUp",
         "eZ.AlloyEditorButton.WidgetButton",
@@ -266,6 +267,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-embedleft",
         "ez-alloyeditor-button-imagehref",
         "ez-alloyeditor-button-imagevariation",
+        "ez-alloyeditor-button-linkedit",
         "ez-alloyeditor-button-mixin-blocktextalign",
         "ez-alloyeditor-button-mixin-embedalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
@@ -520,6 +522,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-button-imagevariation",
             "name": "ez-alloyeditor-button-imagevariation",
             "description": "Provides the image variation drop down"
+        },
+        {
+            "displayName": "ez-alloyeditor-button-linkedit",
+            "name": "ez-alloyeditor-button-linkedit",
+            "description": "Provides the link edit button"
         },
         {
             "displayName": "ez-alloyeditor-button-mixin-blocktextalign",
