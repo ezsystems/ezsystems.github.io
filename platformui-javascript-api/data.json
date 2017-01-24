@@ -4962,7 +4962,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 14,
+            "line": 22,
             "description": "Provides the subitem list view paginated with a *Load More* button"
         },
         "ez-subitembaseview": {
@@ -8712,7 +8712,7 @@
             "module": "ez-subitemlistmoreview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 14,
+            "line": 22,
             "description": "The subitem list view paginated with a *Load More* button",
             "is_constructor": 1,
             "extends": "eZ.AsynchronousSubitemView"
@@ -21461,7 +21461,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 87,
+            "line": 95,
             "description": "`contentSearch` event handler. It executes a content search and calls\nthe callback provided in the event parameters when done.",
             "itemtype": "method",
             "name": "_doContentSearch",
@@ -21536,7 +21536,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 119,
+            "line": 127,
             "description": "Executes a Content search based on the provided `search` object.",
             "itemtype": "method",
             "name": "findContent",
@@ -21621,7 +21621,78 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 169,
+            "line": 177,
+            "description": "Returns the REST API sort order based on the sortOrder attribute",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getSortDirection",
+            "params": [
+                {
+                    "name": "sortOrder",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "'ascending' or 'descending'"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 189,
+            "description": "Returns the REST API sort clause identifier based on the sortField\nattribute.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getSortClauseIdentifier",
+            "params": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String|Null"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 224,
+            "description": "Returns the sort clause suitable for the Search Plugin based on the\nLocation's sortOrder and sortField attribute.",
+            "itemtype": "method",
+            "name": "getSortClause",
+            "params": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "sortOrder",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 243,
             "description": "Executes a location search based on the provide `search` object.",
             "itemtype": "method",
             "name": "findLocations",
@@ -21718,7 +21789,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 224,
+            "line": 298,
             "description": "`locationSearch` event handler. It executes the location search and\nset the result on the target of the event.",
             "itemtype": "method",
             "name": "_doLocationSearch",
@@ -21806,7 +21877,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 270,
+            "line": 344,
             "description": "Parses the search result to create a model and return the array of struct",
             "itemtype": "method",
             "name": "_parseSearchResult",
@@ -21839,7 +21910,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 293,
+            "line": 367,
             "description": "Creates a Location for the searchHit",
             "itemtype": "method",
             "name": "_createLocation",
@@ -21862,7 +21933,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 311,
+            "line": 385,
             "itemtype": "method",
             "name": "_createContent",
             "params": [
@@ -21884,7 +21955,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 328,
+            "line": 402,
             "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadResources",
@@ -21919,7 +21990,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 347,
+            "line": 421,
             "description": "Loads resources for the given array of location structs. Depending on\ngiven `loadContentType` and `loadContent` bool parameters it loads\nContent and ContentType and includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadLocationResources",
@@ -21953,7 +22024,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 392,
+            "line": 466,
             "description": "Loads resources for the given array of content structs. Depending on\ngiven `loadContentType` and `loadLocation` bool parameters it loads\nContentType and Location and includes them into the content structs.",
             "itemtype": "method",
             "name": "_loadContentResources",
@@ -21987,7 +22058,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 437,
+            "line": 511,
             "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentTypeForLocations",
@@ -22016,7 +22087,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 490,
+            "line": 564,
             "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentForLocations",
@@ -22040,7 +22111,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 543,
+            "line": 617,
             "description": "Loads Location for each content struct in given array and puts it in the new `location`\nfield for the content struct.",
             "itemtype": "method",
             "name": "_loadLocationForContent",
@@ -22064,7 +22135,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 603,
+            "line": 677,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -22076,7 +22147,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 614,
+            "line": 688,
             "description": "Holds the eZ.Content constructor function",
             "itemtype": "attribute",
             "name": "contentModelConstructor",
@@ -25894,7 +25965,19 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 46,
+            "line": 50,
+            "description": "Fills `sortConditon` attribute with the location sortField and sortOrder",
+            "itemtype": "method",
+            "name": "_fillSortConditionWithLocation",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AsynchronousSubitemView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
+            "line": 63,
             "description": "Sets for the `offset` attribute to launch the initial loading of the\nsubitems. This method is supposed to be called when the view becomes\nactive.",
             "itemtype": "method",
             "name": "_prepareInitialLoad",
@@ -25906,7 +25989,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 60,
+            "line": 77,
             "description": "Refreshes the view if it's active. The subitems are reloaded and then\nrerendered.",
             "itemtype": "method",
             "name": "_refresh",
@@ -25918,7 +26001,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 84,
+            "line": 101,
             "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
             "itemtype": "method",
             "name": "_handleError",
@@ -25930,7 +26013,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 105,
+            "line": 122,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -25943,6 +26026,17 @@
             ],
             "access": "protected",
             "tagname": "",
+            "class": "eZ.AsynchronousSubitemView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
+            "line": 153,
+            "description": "How the subitems should be sorted.",
+            "itemtype": "attribute",
+            "name": "sortCondition",
+            "type": "Object",
             "class": "eZ.AsynchronousSubitemView",
             "module": "ez-subitemlistmoreview",
             "namespace": "eZ"
@@ -26704,7 +26798,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 49,
+            "line": 61,
             "description": "Returns whether the subitems should be sorted by priority.",
             "itemtype": "method",
             "name": "_isSortedByPriority",
@@ -26720,7 +26814,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 60,
+            "line": 72,
             "description": "Restores the `canEditPriority` attribute so that the priority can be\nediting in all views",
             "itemtype": "method",
             "name": "_unlockPriorityEdit",
@@ -26732,7 +26826,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 73,
+            "line": 85,
             "description": "Makes sure only one priority can be edited at a time.",
             "access": "protected",
             "tagname": "",
@@ -26751,7 +26845,73 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 96,
+            "line": 98,
+            "description": "Resets the selected status from columns",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_resetSortOrderClass",
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 113,
+            "description": "Adds the sort class according to the `sortCondition` attribute",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_addSortOrderClass",
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 133,
+            "description": "Toggles the sorting of columns\nFirst click is asc, second click is desc.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_toggleSorting",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 156,
+            "description": "Retrives the property for a given sortField",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getPropertyBySortField",
+            "params": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "property",
+                "type": "String"
+            },
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 187,
             "description": "Returns an array of objects describing the columns to add to the\nlist. Each object contains an `identifier` and a `name`.",
             "itemtype": "method",
             "name": "_getColumns",
@@ -26766,7 +26926,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 114,
+            "line": 206,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -26777,7 +26937,19 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 124,
+            "line": 216,
+            "description": "Lists the available properties to display.\nEach entry in this object is an object with:\n\n* `sortable`: a boolean stating if the property can be sorted.\n* `sortField`: a string with the sortField corresponding to the property",
+            "itemtype": "attribute",
+            "name": "availableProperties",
+            "type": "Object",
+            "readonly": "",
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 251,
             "description": "A key value object to store the human readable names of the\ncolumns.",
             "itemtype": "attribute",
             "name": "propertyNames",
@@ -26788,7 +26960,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 143,
+            "line": 270,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "itemViewConstructor",
@@ -39049,6 +39221,8 @@
             "name": "_getSortDirection",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
+            "deprecationMessage": "Use `getSortClauseIdentifier` in the search plugin",
             "return": {
                 "description": "'ascending' or 'descending'"
             },
@@ -39058,12 +39232,14 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 363,
+            "line": 364,
             "description": "Returns the REST API sort clause identifier based on the sortField\nattribute.",
             "itemtype": "method",
             "name": "_getSortClauseIdentifier",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
+            "deprecationMessage": "Use `_getSortClauseIdentifier` in the search plugin",
             "return": {
                 "description": "",
                 "type": "String|Null"
@@ -39074,10 +39250,12 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 399,
+            "line": 401,
             "description": "Returns the sort clause suitable for the Search Plugin based on the\nLocation's sortOrder and sortField attribute.",
             "itemtype": "method",
             "name": "getSortClause",
+            "deprecated": true,
+            "deprecationMessage": "Use `getSortClause` in the search plugin",
             "return": {
                 "description": "",
                 "type": "Object"
@@ -39088,7 +39266,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 424,
+            "line": 430,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -39100,7 +39278,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 435,
+            "line": 441,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -39112,7 +39290,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 446,
+            "line": 452,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -39124,7 +39302,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 457,
+            "line": 463,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -39136,7 +39314,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 468,
+            "line": 474,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -39148,7 +39326,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 479,
+            "line": 485,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -39160,7 +39338,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 490,
+            "line": 496,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -39172,7 +39350,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 501,
+            "line": 507,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -39184,7 +39362,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 512,
+            "line": 518,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -39196,7 +39374,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 523,
+            "line": 529,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -39208,7 +39386,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 534,
+            "line": 540,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -39219,7 +39397,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 551,
+            "line": 557,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",

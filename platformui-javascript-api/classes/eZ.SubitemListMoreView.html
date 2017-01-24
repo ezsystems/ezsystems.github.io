@@ -551,7 +551,7 @@
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l14"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:14</code></a>
+            Defined in: <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l22"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:22</code></a>
         </div>
 
             Module: <a href="../modules/ez-subitemlistmoreview.html">ez-subitemlistmoreview</a>
@@ -581,7 +581,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l14"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:14</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l22"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:22</code></a>
         </p>
 
 
@@ -628,6 +628,10 @@
                                 <a href="#method__addOutOfOrder">_addOutOfOrder</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__addSortOrderClass">_addSortOrderClass</a>
+
+                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__afterContainerChange">_afterContainerChange</a>
 
@@ -670,6 +674,10 @@
                             </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__destroyHierarchy">_destroyHierarchy</a>
+
+                            </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__fillSortConditionWithLocation">_fillSortConditionWithLocation</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -734,6 +742,10 @@
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__getName">_getName</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getPropertyBySortField">_getPropertyBySortField</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -821,6 +833,10 @@
                                 <a href="#method__refresh">_refresh</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__resetSortOrderClass">_resetSortOrderClass</a>
+
+                            </li>
                             <li class="index-item method protected inherited inherited">
                                 <a href="#method__set">_set</a>
 
@@ -843,6 +859,10 @@
                             </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__setTemplate">_setTemplate</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__toggleSorting">_toggleSorting</a>
 
                             </li>
                             <li class="index-item method protected">
@@ -1035,6 +1055,9 @@
                     <h3>Attributes</h3>
 
                     <ul class="index-list attrs extends">
+                            <li class="index-item attr">
+                                <a href="#attr_availableProperties">availableProperties</a>
+                            </li>
                             <li class="index-item attr inherited">
                                 <a href="#attr_container">container</a>
                             </li>
@@ -1067,6 +1090,9 @@
                             </li>
                             <li class="index-item attr">
                                 <a href="#attr_propertyNames">propertyNames</a>
+                            </li>
+                            <li class="index-item attr inherited">
+                                <a href="#attr_sortCondition">sortCondition</a>
                             </li>
                     </ul>
                 </div>
@@ -1322,6 +1348,38 @@ For example, if:
                 </li>
             </ul>
         </div>
+
+
+
+</div>
+<div id="method__addSortOrderClass" class="method item protected">
+    <h3 class="name"><code>_addSortOrderClass</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l113"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:113</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Adds the sort class according to the <code>sortCondition</code> attribute</p>
+
+    </div>
+
 
 
 
@@ -1817,6 +1875,38 @@ the destructor method on the prototype of each class in the hierarchy.
 
 
 </div>
+<div id="method__fillSortConditionWithLocation" class="method item protected inherited">
+    <h3 class="name"><code>_fillSortConditionWithLocation</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.AsynchronousSubitemView.html#method__fillSortConditionWithLocation">eZ.AsynchronousSubitemView</a>:
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l50"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:50</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Fills <code>sortConditon</code> attribute with the location sortField and sortOrder</p>
+
+    </div>
+
+
+
+
+</div>
 <div id="method__filterAdHocAttrs" class="method item private inherited">
     <h3 class="name"><code>_filterAdHocAttrs</code></h3>
 
@@ -2039,7 +2129,7 @@ if this is a sub-attribute value being change. Otherwise null.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__fireLocationSearch">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l105"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:105</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l122"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:122</code></a>
         </p>
 
 
@@ -2581,7 +2671,7 @@ cached value.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l96"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:96</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l187"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:187</code></a>
         </p>
 
 
@@ -2851,6 +2941,72 @@ correct template
 
 
 </div>
+<div id="method__getPropertyBySortField" class="method item protected">
+    <h3 class="name"><code>_getPropertyBySortField</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sortField</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l156"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:156</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Retrives the property for a given sortField</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sortField</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>property</p>
+
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getStateVal" class="method item private inherited">
     <h3 class="name"><code>_getStateVal</code></h3>
 
@@ -2980,7 +3136,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__handleError">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l84"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:84</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:101</code></a>
         </p>
 
 
@@ -3485,7 +3641,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l49"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:49</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l61"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:61</code></a>
         </p>
 
 
@@ -3530,7 +3686,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l73"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:73</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l85"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:85</code></a>
         </p>
 
 
@@ -3821,7 +3977,7 @@ construction, prior to init.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__prepareInitialLoad">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l46"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:46</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l63"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:63</code></a>
         </p>
 
 
@@ -4018,7 +4174,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.AsynchronousSubitemView.html#method__refresh">eZ.AsynchronousSubitemView</a>:
-        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:60</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l77"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:77</code></a>
         </p>
 
 
@@ -4028,6 +4184,38 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="description">
         <p>Refreshes the view if it's active. The subitems are reloaded and then
 rerendered.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method__resetSortOrderClass" class="method item protected">
+    <h3 class="name"><code>_resetSortOrderClass</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l98"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:98</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Resets the selected status from columns</p>
 
     </div>
 
@@ -4561,6 +4749,61 @@ view in lowercase with the suffix <code>-ez-template</code>.
 
 
 </div>
+<div id="method__toggleSorting" class="method item protected">
+    <h3 class="name"><code>_toggleSorting</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l133"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:133</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Toggles the sorting of columns
+First click is asc, second click is desc.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
 <div id="method__unlockPriorityEdit" class="method item protected">
     <h3 class="name"><code>_unlockPriorityEdit</code></h3>
 
@@ -4577,7 +4820,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:60</code></a>
+        <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l72"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:72</code></a>
         </p>
 
 
@@ -7602,6 +7845,41 @@ How this template gets used is entirely up to you and your custom
             <div id="attrs" class="api-class-tabpanel">
                 <h2 class="off-left">Attributes</h2>
 
+                    <div id="attr_availableProperties" class="attr item">
+                        <a name="config_availableProperties"></a> 
+                        <h3 class="name"><code>availableProperties</code></h3>
+                        <span class="type">Object</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                            <span class="flag readonly">readonly</span>
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l216"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:216</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>Lists the available properties to display.
+                    Each entry in this object is an object with:</p>
+                    <ul>
+                    <li><code>sortable</code>: a boolean stating if the property can be sorted.</li>
+                    <li><code>sortField</code>: a string with the sortField corresponding to the property</li>
+                    </ul>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
                     <div id="attr_container" class="attr item inherited">
                         <a name="config_container"></a> 
                         <h3 class="name"><code>container</code></h3>
@@ -7759,7 +8037,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l114"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:114</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l206"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:206</code></a>
                             </p>
                     
                     
@@ -7849,7 +8127,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l143"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:143</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l270"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:270</code></a>
                             </p>
                     
                     
@@ -7940,7 +8218,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:124</code></a>
+                            <a href="../files/Resources_public_js_views_subitem_ez-subitemlistmoreview.js.html#l251"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-subitemlistmoreview.js:251</code></a>
                             </p>
                     
                     
@@ -7949,6 +8227,35 @@ How this template gets used is entirely up to you and your custom
                         <div class="description">
                             <p>A key value object to store the human readable names of the
                     columns.</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="attr_sortCondition" class="attr item inherited">
+                        <a name="config_sortCondition"></a> 
+                        <h3 class="name"><code>sortCondition</code></h3>
+                        <span class="type">Object</span>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>Inherited from
+                                    <a href="../classes/eZ.AsynchronousSubitemView.html#attr_sortCondition">eZ.AsynchronousSubitemView</a>:
+                            <a href="../files/Resources_public_js_views_subitem_ez-asynchronoussubitemview.js.html#l153"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;subitem&#x2F;ez-asynchronoussubitemview.js:153</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>How the subitems should be sorted.</p>
                     
                         </div>
                     

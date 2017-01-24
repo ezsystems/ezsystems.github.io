@@ -560,6 +560,14 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ&#x27;);
 
+    var COLUMN_SORT_ASC_CLASS = &#x27;ez-subitem-column-sortable-asc&#x27;,
+        COLUMN_SORT_DESC_CLASS = &#x27;ez-subitem-column-sortable-desc&#x27;,
+        events = {
+            &#x27;.ez-subitem-column-sortable&#x27;: {
+                &#x27;tap&#x27;: &#x27;_toggleSorting&#x27;,
+            },
+        };
+
     /**
      * The subitem list view paginated with a *Load More* button
      *
@@ -570,6 +578,7 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
      */
     Y.eZ.SubitemListMoreView = Y.Base.create(&#x27;subitemListMoreView&#x27;, Y.eZ.AsynchronousSubitemView, [], {
         initializer: function () {
+            this._addDOMEventHandlers(events);
             this._set(&#x27;identifier&#x27;, &#x27;listmore&#x27;);
             this._set(&#x27;name&#x27;, Y.eZ.trans(&#x27;list.view&#x27;, {}, &#x27;subitem&#x27;));
 
@@ -593,6 +602,9 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
                     e.location.onceAfter(&#x27;priorityChange&#x27;, Y.bind(this._refresh, this));
                 }
             });
+
+            this.after(&#x27;activeChange&#x27;, this._addSortOrderClass);
+            this.after(&#x27;sortConditionChange&#x27;, this._addSortOrderClass);
         },
 
         /**
@@ -632,6 +644,85 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
             });
         },
 
+        /**
+         * Resets the selected status from columns
+         *
+         * @protected
+         * @method _resetSortOrderClass
+         */
+        _resetSortOrderClass: function() {
+            var columns = this.get(&#x27;container&#x27;).all(&#x27;.ez-subitem-column-sortable&#x27;);
+
+            columns.each( function (column) {
+                column.removeClass(COLUMN_SORT_ASC_CLASS);
+                column.removeClass(COLUMN_SORT_DESC_CLASS);
+            });
+        },
+
+        /**
+         * Adds the sort class according to the &#x60;sortCondition&#x60; attribute
+         *
+         * @protected
+         * @method _addSortOrderClass
+         */
+        _addSortOrderClass: function () {
+            var sortCondition = this.get(&#x27;sortCondition&#x27;),
+                property = this._getPropertyBySortField(sortCondition.sortField),
+                column = this.get(&#x27;container&#x27;).one(&#x27;.ez-subitem-&#x27; + property + &#x27;-column&#x27;);
+
+            this._resetSortOrderClass();
+
+            if (sortCondition.sortOrder === &#x27;ASC&#x27;) {
+                column.addClass(COLUMN_SORT_ASC_CLASS);
+            } else {
+                column.addClass(COLUMN_SORT_DESC_CLASS);
+            }
+        },
+
+        /**
+         * Toggles the sorting of columns
+         * First click is asc, second click is desc.
+         *
+         * @protected
+         * @method _toggleSorting
+         * @param {EventFacade} e
+         */
+        _toggleSorting: function (e) {
+            var property = e.target.getAttribute(&quot;data-column-identifier&quot;),
+                sortField = this.get(&#x27;availableProperties&#x27;)[property].sortField,
+                sortOrder = &#x27;ASC&#x27;;
+
+            if (e.target.hasClass(COLUMN_SORT_ASC_CLASS)) {
+                sortOrder = &#x27;DESC&#x27;;
+            }
+
+            this.set(&#x27;sortCondition&#x27;, {
+                sortField: sortField,
+                sortOrder: sortOrder,
+            });
+        },
+
+        /**
+         * Retrives the property for a given sortField
+         *
+         * @protected
+         * @method _getPropertyBySortField
+         * @param {String} sortField
+         * @return {String} property
+         */
+        _getPropertyBySortField: function (sortField) {
+            var property;
+
+            Y.Object.some(this.get(&#x27;availableProperties&#x27;), function (propertyData, propertyName) {
+                if (propertyData.sortField == sortField) {
+                    property = propertyName;
+                    return true;
+                }
+            });
+
+            return property;
+        },
+
         render: function () {
             if ( !this.get(&#x27;items&#x27;) ) {
                 this.get(&#x27;container&#x27;).setHTML(this.template({
@@ -655,6 +746,7 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
                 return {
                     name: this.get(&#x27;propertyNames&#x27;)[identifier],
                     identifier: identifier,
+                    sortable: this.get(&#x27;availableProperties&#x27;)[identifier].sortable,
                 };
             }, this);
         },
@@ -668,6 +760,41 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
              */
             displayedProperties: {
                 value: [&#x27;name&#x27;, &#x27;lastModificationDate&#x27;, &#x27;contentType&#x27;, &#x27;priority&#x27;, &#x27;translations&#x27;],
+            },
+
+            /**
+             * Lists the available properties to display.
+             * Each entry in this object is an object with:
+             *
+             * * &#x60;sortable&#x60;: a boolean stating if the property can be sorted.
+             * * &#x60;sortField&#x60;: a string with the sortField corresponding to the property
+             *
+             * @attribute availableProperties
+             * @type Object
+             * @readOnly
+             */
+            availableProperties: {
+                readOnly: true,
+                value: {
+                    &#x27;name&#x27;: {
+                        &#x27;sortable&#x27;: true,
+                        &#x27;sortField&#x27;: &#x27;NAME&#x27;,
+                    },
+                    &#x27;lastModificationDate&#x27;: {
+                        &#x27;sortable&#x27;: true,
+                        &#x27;sortField&#x27;: &#x27;MODIFIED&#x27;,
+                    },
+                    &#x27;contentType&#x27;: {
+                        &#x27;sortable&#x27;: false,
+                    },
+                    &#x27;priority&#x27;: {
+                        &#x27;sortable&#x27;: true,
+                        &#x27;sortField&#x27;: &#x27;PRIORITY&#x27;,
+                    },
+                    &#x27;translations&#x27;: {
+                        &#x27;sortable&#x27;: false,
+                    },
+                },
             },
 
             /**

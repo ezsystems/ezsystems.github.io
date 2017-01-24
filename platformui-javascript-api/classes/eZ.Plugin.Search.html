@@ -731,6 +731,14 @@ and execute the corresponding search.</p>
                                 <a href="#method__getInstanceAttrCfgs">_getInstanceAttrCfgs</a>
 
                             </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getSortClauseIdentifier">_getSortClauseIdentifier</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__getSortDirection">_getSortDirection</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__getStateVal">_getStateVal</a>
 
@@ -935,6 +943,10 @@ and execute the corresponding search.</p>
                             </li>
                             <li class="index-item method inherited">
                                 <a href="#method_getEvent">getEvent</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getSortClause">getSortClause</a>
 
                             </li>
                             <li class="index-item method inherited">
@@ -1579,7 +1591,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l311"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:311</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l385"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:385</code></a>
         </p>
 
 
@@ -1642,7 +1654,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l293"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:293</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l367"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:367</code></a>
         </p>
 
 
@@ -2059,7 +2071,7 @@ the destructor method on the prototype of each class in the hierarchy.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l87"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:87</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l95"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:95</code></a>
         </p>
 
 
@@ -2212,7 +2224,7 @@ and optionally a <code>contentType</code> (depending on <code>loadContentType</c
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l224"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:224</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l298"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:298</code></a>
         </p>
 
 
@@ -3129,6 +3141,136 @@ for passing through to <code>addAttrs</code>.
 
 
 </div>
+<div id="method__getSortClauseIdentifier" class="method item protected">
+    <h3 class="name"><code>_getSortClauseIdentifier</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sortField</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String | Null</span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l189"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:189</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the REST API sort clause identifier based on the sortField
+attribute.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sortField</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String | Null</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method__getSortDirection" class="method item protected">
+    <h3 class="name"><code>_getSortDirection</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sortOrder</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l177"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:177</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the REST API sort order based on the sortOrder attribute</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sortOrder</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>'ascending' or 'descending'</p>
+
+            </div>
+        </div>
+
+
+</div>
 <div id="method__getStateVal" class="method item private inherited">
     <h3 class="name"><code>_getStateVal</code></h3>
 
@@ -3736,7 +3878,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l490"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:490</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l564"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:564</code></a>
         </p>
 
 
@@ -3810,7 +3952,7 @@ field for the location struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l392"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:392</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l466"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:466</code></a>
         </p>
 
 
@@ -3902,7 +4044,7 @@ ContentType and Location and includes them into the content structs.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l437"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:437</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l511"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:511</code></a>
         </p>
 
 
@@ -3980,7 +4122,7 @@ field for the location struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l543"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:543</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l617"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:617</code></a>
         </p>
 
 
@@ -4054,7 +4196,7 @@ field for the content struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l347"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:347</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l421"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:421</code></a>
         </p>
 
 
@@ -4150,7 +4292,7 @@ Content and ContentType and includes them into the location structs.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l328"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:328</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l402"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:402</code></a>
         </p>
 
 
@@ -4399,7 +4541,7 @@ by the top level attribute name, or null, if valueHash is falsey.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l270"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:270</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l344"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:344</code></a>
         </p>
 
 
@@ -6584,7 +6726,7 @@ or injects code "before" a given method on the host.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l119"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:119</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l127"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:127</code></a>
         </p>
 
 
@@ -6770,7 +6912,7 @@ search</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l169"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:169</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l243"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:243</code></a>
         </p>
 
 
@@ -7256,6 +7398,83 @@ falsy value otherwise
             <div class="returns-description">
                         <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/CustomEvent.html" class="crosslink external" target="_blank">CustomEvent</a></span>:
                     the custom event or null
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getSortClause" class="method item">
+    <h3 class="name"><code>getSortClause</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sortField</code>
+                </li>
+                <li class="arg">
+                        <code>sortOrder</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l224"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:224</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the sort clause suitable for the Search Plugin based on the
+Location's sortOrder and sortField attribute.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sortField</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sortOrder</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
             </div>
         </div>
 
@@ -9252,7 +9471,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l614"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:614</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l688"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:688</code></a>
                             </p>
                     
                     
@@ -9372,7 +9591,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l603"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:603</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l677"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:677</code></a>
                             </p>
                     
                     
