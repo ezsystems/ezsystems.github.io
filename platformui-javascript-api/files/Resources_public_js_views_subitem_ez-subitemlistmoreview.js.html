@@ -672,10 +672,12 @@ YUI.add(&#x27;ez-subitemlistmoreview&#x27;, function (Y) {
 
             this._resetSortOrderClass();
 
-            if (sortCondition.sortOrder === &#x27;ASC&#x27;) {
-                column.addClass(COLUMN_SORT_ASC_CLASS);
-            } else {
-                column.addClass(COLUMN_SORT_DESC_CLASS);
+            if (column) {
+                if (sortCondition.sortOrder === &#x27;ASC&#x27;) {
+                    column.addClass(COLUMN_SORT_ASC_CLASS);
+                } else {
+                    column.addClass(COLUMN_SORT_DESC_CLASS);
+                }
             }
         },
 

@@ -26869,7 +26869,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 133,
+            "line": 135,
             "description": "Toggles the sorting of columns\nFirst click is asc, second click is desc.",
             "access": "protected",
             "tagname": "",
@@ -26888,7 +26888,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 156,
+            "line": 158,
             "description": "Retrives the property for a given sortField",
             "access": "protected",
             "tagname": "",
@@ -26911,7 +26911,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 187,
+            "line": 189,
             "description": "Returns an array of objects describing the columns to add to the\nlist. Each object contains an `identifier` and a `name`.",
             "itemtype": "method",
             "name": "_getColumns",
@@ -26926,7 +26926,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 206,
+            "line": 208,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -26937,7 +26937,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 216,
+            "line": 218,
             "description": "Lists the available properties to display.\nEach entry in this object is an object with:\n\n* `sortable`: a boolean stating if the property can be sorted.\n* `sortField`: a string with the sortField corresponding to the property",
             "itemtype": "attribute",
             "name": "availableProperties",
@@ -26949,7 +26949,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 251,
+            "line": 253,
             "description": "A key value object to store the human readable names of the\ncolumns.",
             "itemtype": "attribute",
             "name": "propertyNames",
@@ -26960,7 +26960,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 270,
+            "line": 272,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "itemViewConstructor",
