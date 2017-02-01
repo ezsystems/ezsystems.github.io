@@ -602,6 +602,12 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
             this.replaceState(this.getInitialState());
         },
 
+        componentWillUnmount: function () {
+            if ( !this.state.discoveringContent &amp;&amp; this.state.isTemporary ) {
+                this._removeLink();
+            }
+        },
+
         /**
          * Lifecycle. Invoked once before the component is mounted.
          * The return value will be used as the initial value of this.state.
@@ -609,26 +615,71 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
          * @method getInitialState
          */
         getInitialState: function() {
-            var link = new CKEDITOR.Link(this.props.editor.get(&#x27;nativeEditor&#x27;)).getFromSelection(),
-                href = &#x27;&#x27;, target = &#x27;&#x27;, title = &#x27;&#x27;;
+            var linkUtils = new CKEDITOR.Link(this.props.editor.get(&#x27;nativeEditor&#x27;), {appendProtocol: false}),
+                link = linkUtils.getFromSelection(),
+                href = &#x27;&#x27;, target = &#x27;&#x27;, title = &#x27;&#x27;, isTemporary = false;
 
             if ( link ) {
                 href = link.getAttribute(&#x27;href&#x27;);
                 target = link.hasAttribute(&#x27;target&#x27;) ? link.getAttribute(&#x27;target&#x27;) : target;
                 title = link.getAttribute(&#x27;title&#x27;);
+                isTemporary = link.hasAttribute(&#x27;data-ez-temporary-link&#x27;);
+            } else {
+                linkUtils.create(href, {&quot;data-ez-temporary-link&quot;: true});
+                link = linkUtils.getFromSelection();
+                isTemporary = true;
             }
 
             return {
                 element: link,
-                initialLink: {
-                    href: href,
-                    target: target,
-                    title: title,
-                },
                 linkHref: href,
                 linkTarget: target,
                 linkTitle: title,
+                isTemporary: isTemporary,
             };
+        },
+
+        /**
+         * Runs the Universal Discovery Widget so that the user can pick a
+         * Content.
+         *
+         * @method _selectContent
+         * @protected
+         */
+        _selectContent: function () {
+            var editor = this.props.editor.get(&#x27;nativeEditor&#x27;);
+
+            this.setState({
+                discoveringContent: true,
+            }, function () {
+                editor.fire(&#x27;contentDiscover&#x27;, {
+                    config: {
+                        title: Y.eZ.trans(&#x27;select.a.content.to.link.to&#x27;, {}, &#x27;onlineeditor&#x27;),
+                        multiple: false,
+                        contentDiscoveredHandler: function (e) {
+                            this.state.element.setAttribute(
+                                &#x27;href&#x27;, &#x27;ezlocation://&#x27; + e.selection.location.get(&#x27;locationId&#x27;)
+                            );
+                            this._focusEditedLink();
+                        }.bind(this),
+                        cancelDiscoverHandler: this._focusEditedLink,
+                    }
+                });
+            });
+        },
+
+        /**
+         * Gives the focus to the edited link by moving the caret in it.
+         *
+         * @method _focusEditedLink
+         * @protected
+         */
+        _focusEditedLink: function () {
+            var editor = this.props.editor.get(&#x27;nativeEditor&#x27;);
+
+            editor.focus();
+            editor.eZ.moveCaretToElement(editor, this.state.element);
+            editor.fire(&#x27;actionPerformed&#x27;, this);
         },
 
         /**
@@ -647,6 +698,12 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
             return (
                 React.createElement(&quot;div&quot;, {className: containerClass}, 
                     React.createElement(&quot;div&quot;, {className: &quot;ez-ae-edit-link-row&quot;}, 
+                        React.createElement(&quot;div&quot;, {className: &quot;ez-ae-edit-link-block ez-ae-edit-link-block-discover&quot;}, 
+                            React.createElement(&quot;label&quot;, {className: &quot;ez-ae-edit-label&quot;}, &quot;.&quot;), 
+                            React.createElement(&quot;button&quot;, {className: &quot;ez-ae-button ez-ae-button-discover&quot;, onClick: this._selectContent}, 
+                                Y.eZ.trans(&#x27;select.content&#x27;, {}, &#x27;onlineeditor&#x27;)
+                            ), &quot; or&quot;
+                        ), 
                         React.createElement(&quot;div&quot;, {className: &quot;ez-ae-edit-link-block ez-ae-edit-link-block-url&quot;}, 
                             React.createElement(&quot;label&quot;, {className: &quot;ez-ae-edit-label&quot;}, Y.eZ.trans(&#x27;link.to&#x27;, {}, &#x27;onlineeditor&#x27;)), 
                             React.createElement(&quot;input&quot;, {className: &quot;ae-input ez-ae-link-href-input&quot;, 
@@ -692,11 +749,11 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
                     ), 
                     React.createElement(&quot;div&quot;, {className: &quot;ez-ae-edit-link-row ez-ae-edit-link-row-buttons&quot;}, 
                         React.createElement(&quot;button&quot;, {className: &quot;ez-ae-button ez-ae-remove-link&quot;, 
-                            disabled: !this.state.element, onClick: this._removeLink}, 
+                            disabled: this.state.isTemporary, onClick: this._removeLink}, 
                             Y.eZ.trans(&#x27;link.remove&#x27;, {}, &#x27;onlineeditor&#x27;)
                         ), 
                         React.createElement(&quot;button&quot;, {className: &quot;ez-ae-button ez-ae-save-link&quot;, 
-                            disabled: !this.state.linkHref, onClick: this._updateLink}, 
+                            disabled: !this.state.linkHref, onClick: this._saveLink}, 
                             Y.eZ.trans(&#x27;link.save&#x27;, {}, &#x27;onlineeditor&#x27;)
                         )
                     )
@@ -736,8 +793,8 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
                 event.preventDefault();
             }
 
-            if (event.keyCode === 13) {
-                this._updateLink();
+            if (event.keyCode === 13 &amp;&amp; event.target.value ) {
+                this._saveLink();
             } else if (event.keyCode === 27) {
                 editor = this.props.editor.get(&#x27;nativeEditor&#x27;);
                 new CKEDITOR.Link(editor).advanceSelection();
@@ -807,6 +864,20 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
         },
 
         /**
+         * Saves the link with the current href, title and target.
+         *
+         * @method _saveLink
+         * @protected
+         */
+        _saveLink: function () {
+            this.setState({
+                isTemporary: false,
+            }, function () {
+                this._updateLink();
+            });
+        },
+
+        /**
          * Updates the link in the editor element. If the element didn&#x27;t exist
          * previously, it will create a new &lt;a&gt; element with the href specified
          * in the link input.
@@ -814,23 +885,19 @@ YUI.add(&#x27;ez-alloyeditor-button-linkedit&#x27;, function (Y) {
          * @protected
          * @method _updateLink
          */
-        _updateLink: function() {
+        _updateLink: function () {
             var editor = this.props.editor.get(&#x27;nativeEditor&#x27;),
                 linkUtils = new CKEDITOR.Link(editor),
                 linkAttrs = {
                     target: this.state.linkTarget,
                     title: this.state.linkTitle,
+                    &quot;data-ez-temporary-link&quot;: this.state.isTemporary ? true : null,
                 },
                 modifySelection = {advance: true};
 
             if (this.state.linkHref) {
-                if (this.state.element) {
-                    linkAttrs.href = this.state.linkHref;
-
-                    linkUtils.update(linkAttrs, this.state.element, modifySelection);
-                } else {
-                    linkUtils.create(this.state.linkHref, linkAttrs, modifySelection);
-                }
+                linkAttrs.href = this.state.linkHref;
+                linkUtils.update(linkAttrs, this.state.element, modifySelection);
 
                 editor.fire(&#x27;actionPerformed&#x27;, this);
             }

@@ -10708,7 +10708,7 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/link.js",
-            "line": 16,
+            "line": 18,
             "description": "`styles` toolbar configuration for links"
         },
         "eZ.AlloyEditorToolbarConfig.Paragraph": {
@@ -42648,7 +42648,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 56,
+            "line": 62,
             "description": "Lifecycle. Invoked once before the component is mounted.\nThe return value will be used as the initial value of this.state.",
             "itemtype": "method",
             "name": "getInitialState",
@@ -42658,7 +42658,31 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 85,
+            "line": 93,
+            "description": "Runs the Universal Discovery Widget so that the user can pick a\nContent.",
+            "itemtype": "method",
+            "name": "_selectContent",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 122,
+            "description": "Gives the focus to the edited link by moving the caret in it.",
+            "itemtype": "method",
+            "name": "_focusEditedLink",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 136,
             "description": "Lifecycle. Renders the UI of the button.",
             "itemtype": "method",
             "name": "render",
@@ -42672,7 +42696,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 158,
+            "line": 215,
             "description": "Clears the link input. This only changes the component internal\nstate, but does not affect the link element of the editor. Only the\n_removeLink and _updateLink methods are translated to the editor\nelement.",
             "access": "protected",
             "tagname": "",
@@ -42684,7 +42708,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 173,
+            "line": 230,
             "description": "Monitors key interaction inside the input element to respond to the\nkeys:\n- Enter: Creates/updates the link.\n- Escape: Discards the changes.",
             "access": "protected",
             "tagname": "",
@@ -42703,7 +42727,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 199,
+            "line": 256,
             "description": "Updates the component state when the link input changes on user\ninteraction.",
             "access": "protected",
             "tagname": "",
@@ -42722,7 +42746,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 213,
+            "line": 270,
             "description": "Sets the link title",
             "itemtype": "method",
             "name": "_setTitle",
@@ -42741,7 +42765,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 226,
+            "line": 283,
             "description": "Sets the target of the link",
             "itemtype": "method",
             "name": "_setTarget",
@@ -42760,7 +42784,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 239,
+            "line": 296,
             "description": "Removes the link in the editor element.",
             "access": "protected",
             "tagname": "",
@@ -42772,7 +42796,19 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 260,
+            "line": 317,
+            "description": "Saves the link with the current href, title and target.",
+            "itemtype": "method",
+            "name": "_saveLink",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 331,
             "description": "Updates the link in the editor element. If the element didn't exist\npreviously, it will create a new <a> element with the href specified\nin the link input.",
             "access": "protected",
             "tagname": "",

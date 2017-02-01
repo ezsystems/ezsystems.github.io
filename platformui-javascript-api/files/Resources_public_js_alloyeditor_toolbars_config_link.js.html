@@ -560,7 +560,9 @@ YUI.add(&#x27;ez-alloyeditor-toolbar-config-link&#x27;, function (Y) {
      */
     Y.namespace(&#x27;eZ.AlloyEditorToolbarConfig&#x27;);
 
-    var AlloyEditor = Y.eZ.AlloyEditor;
+    /* global CKEDITOR */
+    var AlloyEditor = Y.eZ.AlloyEditor,
+        ReactDOM = Y.eZ.ReactDOM;
 
     /**
      * &#x60;styles&#x60; toolbar configuration for links
@@ -571,7 +573,23 @@ YUI.add(&#x27;ez-alloyeditor-toolbar-config-link&#x27;, function (Y) {
     Y.eZ.AlloyEditorToolbarConfig.Link = {
         name: &#x27;link&#x27;,
         buttons: [&#x27;linkEdit&#x27;],
-        test: AlloyEditor.SelectionTest.link
+        test: AlloyEditor.SelectionTest.link,
+        getArrowBoxClasses: function () {
+            return &#x27;ae-arrow-box ae-arrow-box-bottom&#x27;;
+        },
+        setPosition: function (payload) {
+            var domElement = new CKEDITOR.dom.element(ReactDOM.findDOMNode(this)),
+                region = payload.selectionData.region,
+                xy = this.getWidgetXYPoint(
+                    region.left, region.top,
+                    CKEDITOR.SELECTION_BOTTOM_TO_TOP
+                );
+
+            domElement.addClass(&#x27;ae-toolbar-transition&#x27;);
+            domElement.setStyles({left: xy[0] + &#x27;px&#x27;, top: xy[1] + &#x27;px&#x27;});
+
+            return true;
+        },
     };
 });
 
