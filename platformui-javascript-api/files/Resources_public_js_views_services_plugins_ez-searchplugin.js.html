@@ -41,8 +41,10 @@
                                 <li><a href="../classes/Author.html">Author</a></li>
                                 <li><a href="../classes/AuthorList.html">AuthorList</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezaddcontent.html">CKEDITOR.plugins.ezaddcontent</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.ezcaret.html">CKEDITOR.plugins.ezcaret</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezembed.html">CKEDITOR.plugins.ezembed</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezfocusblock.html">CKEDITOR.plugins.ezfocusblock</a></li>
+                                <li><a href="../classes/CKEDITOR.plugins.ezmoveelement.html">CKEDITOR.plugins.ezmoveelement</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezpaste.html">CKEDITOR.plugins.ezpaste</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.ezremoveblock.html">CKEDITOR.plugins.ezremoveblock</a></li>
                                 <li><a href="../classes/CKEDITOR.plugins.yui3.html">CKEDITOR.plugins.yui3</a></li>
@@ -64,6 +66,9 @@
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonEmbedRight.html">eZ.AlloyEditorButton.ButtonEmbedRight</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageHref.html">eZ.AlloyEditorButton.ButtonImageHref</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.ButtonImageVariation.html">eZ.AlloyEditorButton.ButtonImageVariation</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonLinkEdit.html">eZ.AlloyEditorButton.ButtonLinkEdit</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonMoveDown.html">eZ.AlloyEditorButton.ButtonMoveDown</a></li>
+                                <li><a href="../classes/eZ.AlloyEditorButton.ButtonMoveUp.html">eZ.AlloyEditorButton.ButtonMoveUp</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading</a></li>
                                 <li><a href="../classes/eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage.html">eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonImage</a></li>
@@ -301,11 +306,14 @@
                                 <li><a href="../modules/ez-alloyeditor-button-embedleft.html">ez-alloyeditor-button-embedleft</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagehref.html">ez-alloyeditor-button-imagehref</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-imagevariation.html">ez-alloyeditor-button-imagevariation</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-linkedit.html">ez-alloyeditor-button-linkedit</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-blocktextalign.html">ez-alloyeditor-button-mixin-blocktextalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedalign.html">ez-alloyeditor-button-mixin-embedalign</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embeddiscovercontent.html">ez-alloyeditor-button-mixin-embeddiscovercontent</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-embedimage.html">ez-alloyeditor-button-mixin-embedimage</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-mixin-widgetbutton.html">ez-alloyeditor-button-mixin-widgetbutton</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-movedown.html">ez-alloyeditor-button-movedown</a></li>
+                                <li><a href="../modules/ez-alloyeditor-button-moveup.html">ez-alloyeditor-button-moveup</a></li>
                                 <li><a href="../modules/ez-alloyeditor-button-remove.html">ez-alloyeditor-button-remove</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-block-base.html">ez-alloyeditor-toolbar-config-block-base</a></li>
                                 <li><a href="../modules/ez-alloyeditor-toolbar-config-embed.html">ez-alloyeditor-toolbar-config-embed</a></li>
@@ -618,8 +626,16 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
             query.setLimitAndOffset(search.limit, search.offset);
             if ( search.sortClauses ) {
                 query.setSortClauses(search.sortClauses);
+            } else if (search.sortCondition) {
+                query.setSortClauses(this._getSortClause(
+                    search.sortCondition.sortField,
+                    search.sortCondition.sortOrder
+                ));
             } else if ( search.sortLocation ) {
-                query.setSortClauses(search.sortLocation.getSortClause());
+                query.setSortClauses(this._getSortClause(
+                    search.sortLocation.get(&#x27;sortField&#x27;),
+                    search.sortLocation.get(&#x27;sortOrder&#x27;)
+                ));
             }
 
             return query;
@@ -705,6 +721,72 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
                     callback(error, parsedResult, result.document.View.Result.count);
                 }
             }, this));
+        },
+
+        /**
+         * Returns the REST API sort order based on the sortOrder attribute
+         *
+         * @protected
+         * @method _getSortDirection
+         * @param {String} sortOrder
+         * @return &#x27;ascending&#x27; or &#x27;descending&#x27;
+         */
+        _getSortDirection: function (sortOrder) {
+            return sortOrder === &#x27;ASC&#x27; ? &#x27;ascending&#x27; : &#x27;descending&#x27;;
+        },
+
+        /**
+         * Returns the REST API sort clause identifier based on the sortField
+         * attribute.
+         *
+         * @protected
+         * @method _getSortClauseIdentifier
+         * @param {String} sortField
+         * @return {String|Null}
+         */
+        _getSortClauseIdentifier: function (sortField) {
+            switch(sortField) {
+                case &#x27;MODIFIED&#x27;:
+                    return &#x27;DateModified&#x27;;
+                case &#x27;PUBLISHED&#x27;:
+                    return &#x27;DatePublished&#x27;;
+                case &#x27;PATH&#x27;:
+                    return &#x27;LocationPath&#x27;;
+                case &#x27;SECTION&#x27;:
+                    return &#x27;SectionIdentifier&#x27;;
+                case &#x27;DEPTH&#x27;:
+                    return &#x27;LocationDepth&#x27;;
+                case &#x27;CLASS_IDENTIFIER&#x27;:
+                case &#x27;CLASS_NAME&#x27;:
+                    console.warn(sortField + &#x27; sort order is unsupported&#x27;);
+                    return null;
+                case &#x27;PRIORITY&#x27;:
+                    return &#x27;LocationPriority&#x27;;
+                case &#x27;NAME&#x27;:
+                    return &#x27;ContentName&#x27;;
+                default:
+                    console.warn(&quot;Unknow sortField &#x27;&quot; + this.get(&#x27;sortField&#x27;) + &quot;&#x27;&quot;);
+                    return &#x27;DateModified&#x27;;
+            }
+        },
+
+        /**
+         * Returns the sort clause suitable for the Search Plugin based on the
+         * Location&#x27;s sortOrder and sortField attribute.
+         *
+         * @method getSortClause
+         * @param {String} sortField
+         * @param {String} sortOrder
+         * @return {Object}
+         */
+        _getSortClause: function (sortField, sortOrder) {
+            var clause = {},
+                identifier = this._getSortClauseIdentifier(sortField);
+
+            if ( identifier ) {
+                clause[identifier] = this._getSortDirection(sortOrder);
+            }
+            return clause;
         },
 
         /**

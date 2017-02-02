@@ -2904,6 +2904,19 @@
                 "eZ.AlloyEditorButton": 1
             }
         },
+        "Resources/public/js/alloyeditor/buttons/linkedit.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "modules": {
+                "ez-alloyeditor-button-linkedit": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonLinkEdit": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
         "Resources/public/js/alloyeditor/buttons/list.js": {
             "name": "Resources/public/js/alloyeditor/buttons/list.js",
             "modules": {},
@@ -2912,6 +2925,32 @@
             },
             "fors": {},
             "namespaces": {}
+        },
+        "Resources/public/js/alloyeditor/buttons/movedown.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "modules": {
+                "ez-alloyeditor-button-movedown": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveDown": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/buttons/moveup.js": {
+            "name": "Resources/public/js/alloyeditor/buttons/moveup.js",
+            "modules": {
+                "ez-alloyeditor-button-moveup": 1
+            },
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveUp": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            }
         },
         "Resources/public/js/alloyeditor/buttons/paragraph.js": {
             "name": "Resources/public/js/alloyeditor/buttons/paragraph.js",
@@ -2927,6 +2966,17 @@
             "modules": {},
             "classes": {
                 "CKEDITOR.plugins.ezaddcontent": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "CKEDITOR.plugins": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/plugins/caret.js": {
+            "name": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "modules": {},
+            "classes": {
+                "CKEDITOR.plugins.ezcaret": 1
             },
             "fors": {},
             "namespaces": {
@@ -2949,6 +2999,17 @@
             "modules": {},
             "classes": {
                 "CKEDITOR.plugins.ezfocusblock": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "CKEDITOR.plugins": 1
+            }
+        },
+        "Resources/public/js/alloyeditor/plugins/moveelement.js": {
+            "name": "Resources/public/js/alloyeditor/plugins/moveelement.js",
+            "modules": {},
+            "classes": {
+                "CKEDITOR.plugins.ezmoveelement": 1
             },
             "fors": {},
             "namespaces": {
@@ -4901,7 +4962,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 14,
+            "line": 22,
             "description": "Provides the subitem list view paginated with a *Load More* button"
         },
         "ez-subitembaseview": {
@@ -6378,12 +6439,62 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.AlloyEditorButton.ButtonImageVariation": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
+                "eZ.AlloyEditorButton.ButtonImageVariation": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
+            "line": 23,
+            "description": "Provides the image variation drop down"
+        },
+        "ez-alloyeditor-button-linkedit": {
+            "name": "ez-alloyeditor-button-linkedit",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonLinkEdit": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/list.js",
+            "line": 17,
+            "description": "Provides the link edit button"
+        },
+        "ez-alloyeditor-button-movedown": {
+            "name": "ez-alloyeditor-button-movedown",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveDown": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.AlloyEditorButton": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "line": 23,
+            "description": "Provides the move down button"
+        },
+        "ez-alloyeditor-button-moveup": {
+            "name": "ez-alloyeditor-button-moveup",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.AlloyEditorButton.ButtonMoveUp": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
                 "CKEDITOR.plugins.ezaddcontent": 1,
+                "CKEDITOR.plugins.ezcaret": 1,
                 "CKEDITOR.plugins.ezembed": 1,
                 "CKEDITOR.plugins.ezfocusblock": 1,
+                "CKEDITOR.plugins.ezmoveelement": 1,
                 "CKEDITOR.plugins.ezpaste": 1,
                 "CKEDITOR.plugins.ezremoveblock": 1,
                 "CKEDITOR.plugins.yui3": 1
@@ -6396,7 +6507,7 @@
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
-            "description": "Provides the image variation drop down"
+            "description": "Provides the move up button"
         },
         "ez-editorcontentprocessorbase": {
             "name": "ez-editorcontentprocessorbase",
@@ -6520,7 +6631,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 86,
+            "line": 88,
             "description": "Provides the AlloyEditor `styles` toolbar configuration for headings."
         },
         "ez-alloyeditor-toolbar-config-image": {
@@ -8601,7 +8712,7 @@
             "module": "ez-subitemlistmoreview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 14,
+            "line": 22,
             "description": "The subitem list view paginated with a *Load More* button",
             "is_constructor": 1,
             "extends": "eZ.AsynchronousSubitemView"
@@ -10247,6 +10358,20 @@
                 "Y.eZ.AlloyEditorButton.WidgetButton"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonLinkEdit": {
+            "name": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "shortname": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 20,
+            "description": "The ButtonLinkEdit class provides functionality for creating and editing\na link in a document.\n\nNote: This component overrides the one provided by AlloyEditor by default\nto give more options and improve the UI."
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
             "shortname": "eZ.AlloyEditor.ButtonList",
@@ -10255,7 +10380,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-linkedit",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 17,
@@ -10265,6 +10390,34 @@
                 "AlloyEditor.ButtonStateClasses"
             ]
         },
+        "eZ.AlloyEditorButton.ButtonMoveDown": {
+            "name": "eZ.AlloyEditorButton.ButtonMoveDown",
+            "shortname": "eZ.AlloyEditorButton.ButtonMoveDown",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-movedown",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "line": 23,
+            "description": "The ButtonMoveDown component represents a button to move the currently\nfocused element in the editor after its following sibling element."
+        },
+        "eZ.AlloyEditorButton.ButtonMoveUp": {
+            "name": "eZ.AlloyEditorButton.ButtonMoveUp",
+            "shortname": "eZ.AlloyEditorButton.ButtonMoveUp",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "eZ.AlloyEditorButton",
+            "file": "Resources/public/js/alloyeditor/buttons/moveup.js",
+            "line": 23,
+            "description": "The ButtonMoveUp component represents a button to move the currently\nfocused element in the editor before its preceding sibling element."
+        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
             "shortname": "eZ.AlloyEditor.ButtonParagraph",
@@ -10273,7 +10426,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 17,
@@ -10291,11 +10444,26 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 97,
+            "line": 90,
             "description": "CKEditor plugin providing the eZAddContent command. This command\nallows to add content  to the editor content in the editable region\npointed by the selector available under `eZ.editableRegion` in the\nconfiguration.",
+            "is_constructor": 1
+        },
+        "CKEDITOR.plugins.ezcaret": {
+            "name": "CKEDITOR.plugins.ezcaret",
+            "shortname": "CKEDITOR.plugins.ezcaret",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins",
+            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "line": 29,
+            "description": "CKEDITOR plugin providing an API to handle the caret in the editor.",
             "is_constructor": 1
         },
         "CKEDITOR.plugins.ezembed": {
@@ -10306,7 +10474,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 16,
@@ -10321,11 +10489,26 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/focusblock.js",
             "line": 74,
             "description": "CKEditor plugin to add/remove the focused class on the block holding the\ncaret.",
+            "is_constructor": 1
+        },
+        "CKEDITOR.plugins.ezmoveelement": {
+            "name": "CKEDITOR.plugins.ezmoveelement",
+            "shortname": "CKEDITOR.plugins.ezmoveelement",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins",
+            "file": "Resources/public/js/alloyeditor/plugins/moveelement.js",
+            "line": 74,
+            "description": "CKEditor plugin providing the eZMoveUp and eZMoveDown commands. These\ncommands allow to move the element having the focus in the editor.",
             "is_constructor": 1
         },
         "CKEDITOR.plugins.ezpaste": {
@@ -10336,7 +10519,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/paste.js",
             "line": 63,
@@ -10351,10 +10534,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 120,
+            "line": 122,
             "description": "CKEditor plugin providing the eZRemoveBlock command. This command\nallows to remove the block element holding the caret or the focused\nwidget",
             "is_constructor": 1
         },
@@ -10366,7 +10549,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
@@ -10478,7 +10661,7 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 74,
+            "line": 76,
             "description": "`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
             "is_constructor": 1,
             "extends": "BlockBase"
@@ -10494,7 +10677,7 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 86,
+            "line": 88,
             "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.HeadingConfig constructor instead.\n`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
             "deprecated": true,
             "extends": "BlockBase"
@@ -10525,7 +10708,7 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/link.js",
-            "line": 16,
+            "line": 18,
             "description": "`styles` toolbar configuration for links"
         },
         "eZ.AlloyEditorToolbarConfig.Paragraph": {
@@ -10539,7 +10722,7 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 86,
+            "line": 88,
             "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.ParagraphConfig instead.\n`styles` toolbar configuration for paragraph. The `paragraph` toolbar is\nsupposed to be shown when the user puts the caret inside a paragraph\nelement and when the selection is empty.",
             "deprecated": true,
             "extends": "BlockBase"
@@ -14965,6 +15148,28 @@
             "namespace": "eZ"
         },
         {
+            "file": "Resources/public/js/views/fields/ez-date-view.js",
+            "line": 52,
+            "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
+            "itemtype": "method",
+            "name": "_formatDate",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "String"
+            },
+            "class": "eZ.CheckboxView",
+            "module": "ez-checkbox-view",
+            "namespace": "eZ"
+        },
+        {
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
             "line": 64,
             "description": "Validates the current input of date and time field",
@@ -15191,6 +15396,8 @@
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
             "line": 41,
             "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
+            "deprecated": true,
+            "deprecationMessage": "Since 1.7.1",
             "itemtype": "method",
             "name": "_formatDate",
             "access": "protected",
@@ -15211,10 +15418,35 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 54,
+            "line": 57,
+            "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
+            "since": "1.7.1",
+            "itemtype": "method",
+            "name": "_formatDateTime",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "date",
+                    "description": "",
+                    "type": "Date"
+                }
+            ],
+            "return": {
+                "description": "String"
+            },
+            "class": "eZ.DateAndTimeView",
+            "module": "ez-dateandtime-view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
+            "line": 76,
             "description": "Formats the time part of the date object according to the locale\nsettings of the browser and to the `useSeconds` field definition\nsettings.",
+            "deprecated": true,
+            "deprecationMessage": "Since 1.7.1",
             "itemtype": "method",
-            "name": "_formatDate",
+            "name": "_formatTime",
             "access": "protected",
             "tagname": "",
             "params": [
@@ -15233,7 +15465,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 73,
+            "line": 98,
             "description": "Returns a Date object from the field value",
             "itemtype": "method",
             "name": "_getDateObject",
@@ -18270,6 +18502,8 @@
             "file": "Resources/public/js/views/fields/ez-time-view.js",
             "line": 34,
             "description": "Returns a timestamps in UTC",
+            "deprecated": true,
+            "deprecationMessage": "Since 1.7.1",
             "access": "protected",
             "tagname": "",
             "itemtype": "method",
@@ -18291,7 +18525,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 47,
+            "line": 48,
             "description": "Formats the time in a human readable format. Locale is not taken into account.",
             "itemtype": "method",
             "name": "_formatDate",
@@ -18313,7 +18547,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 67,
+            "line": 65,
             "description": "Returns the actual value of the time field as a formatted string\nsuitable to be displayed to the user. If the field is not filled, it\nreturns an empty string.",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -18328,7 +18562,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 85,
+            "line": 83,
             "description": "Returns a Date object from the field value",
             "itemtype": "method",
             "name": "_getDateObject",
@@ -21227,7 +21461,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 87,
+            "line": 95,
             "description": "`contentSearch` event handler. It executes a content search and calls\nthe callback provided in the event parameters when done.",
             "itemtype": "method",
             "name": "_doContentSearch",
@@ -21302,7 +21536,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 119,
+            "line": 127,
             "description": "Executes a Content search based on the provided `search` object.",
             "itemtype": "method",
             "name": "findContent",
@@ -21387,7 +21621,78 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 169,
+            "line": 177,
+            "description": "Returns the REST API sort order based on the sortOrder attribute",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getSortDirection",
+            "params": [
+                {
+                    "name": "sortOrder",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "'ascending' or 'descending'"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 189,
+            "description": "Returns the REST API sort clause identifier based on the sortField\nattribute.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getSortClauseIdentifier",
+            "params": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String|Null"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 224,
+            "description": "Returns the sort clause suitable for the Search Plugin based on the\nLocation's sortOrder and sortField attribute.",
+            "itemtype": "method",
+            "name": "getSortClause",
+            "params": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "sortOrder",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.Plugin.Search",
+            "module": "ez-searchplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
+            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
+            "line": 243,
             "description": "Executes a location search based on the provide `search` object.",
             "itemtype": "method",
             "name": "findLocations",
@@ -21484,7 +21789,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 224,
+            "line": 298,
             "description": "`locationSearch` event handler. It executes the location search and\nset the result on the target of the event.",
             "itemtype": "method",
             "name": "_doLocationSearch",
@@ -21572,7 +21877,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 270,
+            "line": 344,
             "description": "Parses the search result to create a model and return the array of struct",
             "itemtype": "method",
             "name": "_parseSearchResult",
@@ -21605,7 +21910,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 293,
+            "line": 367,
             "description": "Creates a Location for the searchHit",
             "itemtype": "method",
             "name": "_createLocation",
@@ -21628,7 +21933,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 311,
+            "line": 385,
             "itemtype": "method",
             "name": "_createContent",
             "params": [
@@ -21650,7 +21955,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 328,
+            "line": 402,
             "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadResources",
@@ -21685,7 +21990,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 347,
+            "line": 421,
             "description": "Loads resources for the given array of location structs. Depending on\ngiven `loadContentType` and `loadContent` bool parameters it loads\nContent and ContentType and includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadLocationResources",
@@ -21719,7 +22024,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 392,
+            "line": 466,
             "description": "Loads resources for the given array of content structs. Depending on\ngiven `loadContentType` and `loadLocation` bool parameters it loads\nContentType and Location and includes them into the content structs.",
             "itemtype": "method",
             "name": "_loadContentResources",
@@ -21753,7 +22058,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 437,
+            "line": 511,
             "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentTypeForLocations",
@@ -21782,7 +22087,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 490,
+            "line": 564,
             "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentForLocations",
@@ -21806,7 +22111,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 543,
+            "line": 617,
             "description": "Loads Location for each content struct in given array and puts it in the new `location`\nfield for the content struct.",
             "itemtype": "method",
             "name": "_loadLocationForContent",
@@ -21830,7 +22135,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 603,
+            "line": 677,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -21842,7 +22147,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 614,
+            "line": 688,
             "description": "Holds the eZ.Content constructor function",
             "itemtype": "attribute",
             "name": "contentModelConstructor",
@@ -25660,7 +25965,19 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 46,
+            "line": 50,
+            "description": "Fills `sortConditon` attribute with the location sortField and sortOrder",
+            "itemtype": "method",
+            "name": "_fillSortConditionWithLocation",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AsynchronousSubitemView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
+            "line": 63,
             "description": "Sets for the `offset` attribute to launch the initial loading of the\nsubitems. This method is supposed to be called when the view becomes\nactive.",
             "itemtype": "method",
             "name": "_prepareInitialLoad",
@@ -25672,7 +25989,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 60,
+            "line": 77,
             "description": "Refreshes the view if it's active. The subitems are reloaded and then\nrerendered.",
             "itemtype": "method",
             "name": "_refresh",
@@ -25684,7 +26001,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 84,
+            "line": 101,
             "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
             "itemtype": "method",
             "name": "_handleError",
@@ -25696,7 +26013,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 105,
+            "line": 122,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -25709,6 +26026,17 @@
             ],
             "access": "protected",
             "tagname": "",
+            "class": "eZ.AsynchronousSubitemView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
+            "line": 153,
+            "description": "How the subitems should be sorted.",
+            "itemtype": "attribute",
+            "name": "sortCondition",
+            "type": "Object",
             "class": "eZ.AsynchronousSubitemView",
             "module": "ez-subitemlistmoreview",
             "namespace": "eZ"
@@ -26181,7 +26509,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 216,
+            "line": 214,
             "description": "Formats the translations list to a string suitable for the template",
             "itemtype": "method",
             "name": "_formatTranslations",
@@ -26204,7 +26532,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 228,
+            "line": 226,
             "description": "Displays the edit icon to inform the user input can be edited.",
             "itemtype": "method",
             "name": "_displayEditIcon",
@@ -26216,7 +26544,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 240,
+            "line": 238,
             "description": "Hides the edit icon",
             "itemtype": "method",
             "name": "_hideEditIcon",
@@ -26228,7 +26556,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 250,
+            "line": 248,
             "description": "Starts the priority edit by setting the `editingPriority` to true (if\npossible).",
             "itemtype": "method",
             "name": "_startPriorityEdit",
@@ -26240,7 +26568,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 263,
+            "line": 261,
             "description": "Ends the priority edit by setting the `editingPriority` to false.",
             "access": "protected",
             "tagname": "",
@@ -26252,7 +26580,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 273,
+            "line": 271,
             "description": "Shows the error icon to inform the user input is not correctly filled.",
             "itemtype": "method",
             "name": "_displayErrorIcon",
@@ -26264,7 +26592,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 285,
+            "line": 283,
             "description": "Hides the error icon.",
             "itemtype": "method",
             "name": "_hideErrorIcon",
@@ -26276,7 +26604,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 297,
+            "line": 295,
             "description": "Displays the 'validate' & 'cancel' buttons",
             "itemtype": "method",
             "name": "_displayPriorityButtons",
@@ -26288,7 +26616,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 308,
+            "line": 306,
             "description": "`tap` event handler on the cancel button. It makes sure to restore\nthe state of the priority cell.",
             "itemtype": "method",
             "name": "_restorePriorityCell",
@@ -26307,7 +26635,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 322,
+            "line": 320,
             "description": "Restores the input value with the priority of the location",
             "itemtype": "method",
             "name": "_restorePriorityValue",
@@ -26319,7 +26647,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 335,
+            "line": 333,
             "description": "Hides the validate and cancel buttons displayed while editing priority",
             "itemtype": "method",
             "name": "_hidePriorityButtons",
@@ -26331,7 +26659,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 346,
+            "line": 344,
             "description": "`submit` event handler to change the priority of the Location",
             "itemtype": "method",
             "name": "_setPriority",
@@ -26350,7 +26678,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 362,
+            "line": 360,
             "description": "Validates the priority input",
             "itemtype": "method",
             "name": "_validatePriority",
@@ -26362,7 +26690,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 382,
+            "line": 380,
             "description": "Returns the priority cell",
             "itemtype": "method",
             "name": "_getPriorityCell",
@@ -26376,7 +26704,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 392,
+            "line": 390,
             "description": "Returns the priority input",
             "itemtype": "method",
             "name": "_getPriorityInput",
@@ -26390,7 +26718,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 403,
+            "line": 401,
             "description": "True is the priority of the Location is being edited",
             "itemtype": "attribute",
             "name": "editingPriority",
@@ -26402,7 +26730,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 414,
+            "line": 412,
             "description": "True is the priority of the Location can be edited",
             "itemtype": "attribute",
             "name": "canEditPriority",
@@ -26414,7 +26742,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 425,
+            "line": 423,
             "description": "The content type of the content item being displayed",
             "itemtype": "attribute",
             "name": "contentType",
@@ -26425,7 +26753,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 433,
+            "line": 431,
             "description": "The location of the content item being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -26436,7 +26764,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 441,
+            "line": 439,
             "description": "The content item being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -26447,7 +26775,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 449,
+            "line": 447,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -26458,7 +26786,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 457,
+            "line": 455,
             "description": "Lists the available porperties to display and the corresponding\nconfiguration for `_getProperty` to extract, format and\noptionnally render the property. The object keys are the property\nidentifiers. Each entry in this object is an object with:\n\n* `extractor`: a function or a method name to extract the value.\nThis function receives the property identifier as a parameter.\n* [optional] `formatter`: a function or a method name to format\nthe value. This function receives the property identifier as a\nparameter.\n* [optional] `template`: a template id to directly render the\nproperty. The template receives the corresponding property\nobject, the Location, the Content item and the Content type\nobjects.",
             "itemtype": "attribute",
             "name": "availableProperties",
@@ -26470,7 +26798,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 49,
+            "line": 61,
             "description": "Returns whether the subitems should be sorted by priority.",
             "itemtype": "method",
             "name": "_isSortedByPriority",
@@ -26486,7 +26814,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 60,
+            "line": 72,
             "description": "Restores the `canEditPriority` attribute so that the priority can be\nediting in all views",
             "itemtype": "method",
             "name": "_unlockPriorityEdit",
@@ -26498,7 +26826,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 73,
+            "line": 85,
             "description": "Makes sure only one priority can be edited at a time.",
             "access": "protected",
             "tagname": "",
@@ -26517,7 +26845,73 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 96,
+            "line": 98,
+            "description": "Resets the selected status from columns",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_resetSortOrderClass",
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 113,
+            "description": "Adds the sort class according to the `sortCondition` attribute",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_addSortOrderClass",
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 135,
+            "description": "Toggles the sorting of columns\nFirst click is asc, second click is desc.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_toggleSorting",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 158,
+            "description": "Retrives the property for a given sortField",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_getPropertyBySortField",
+            "params": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "property",
+                "type": "String"
+            },
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 189,
             "description": "Returns an array of objects describing the columns to add to the\nlist. Each object contains an `identifier` and a `name`.",
             "itemtype": "method",
             "name": "_getColumns",
@@ -26532,7 +26926,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 114,
+            "line": 208,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -26543,7 +26937,19 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 124,
+            "line": 218,
+            "description": "Lists the available properties to display.\nEach entry in this object is an object with:\n\n* `sortable`: a boolean stating if the property can be sorted.\n* `sortField`: a string with the sortField corresponding to the property",
+            "itemtype": "attribute",
+            "name": "availableProperties",
+            "type": "Object",
+            "readonly": "",
+            "class": "eZ.SubitemListMoreView",
+            "module": "ez-subitemlistmoreview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
+            "line": 253,
             "description": "A key value object to store the human readable names of the\ncolumns.",
             "itemtype": "attribute",
             "name": "propertyNames",
@@ -26554,7 +26960,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 143,
+            "line": 272,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "itemViewConstructor",
@@ -38816,6 +39222,8 @@
             "name": "_getSortDirection",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
+            "deprecationMessage": "Use `getSortClauseIdentifier` in the search plugin",
             "return": {
                 "description": "'ascending' or 'descending'"
             },
@@ -38825,12 +39233,14 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 363,
+            "line": 364,
             "description": "Returns the REST API sort clause identifier based on the sortField\nattribute.",
             "itemtype": "method",
             "name": "_getSortClauseIdentifier",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
+            "deprecationMessage": "Use `_getSortClauseIdentifier` in the search plugin",
             "return": {
                 "description": "",
                 "type": "String|Null"
@@ -38841,10 +39251,12 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 399,
+            "line": 401,
             "description": "Returns the sort clause suitable for the Search Plugin based on the\nLocation's sortOrder and sortField attribute.",
             "itemtype": "method",
             "name": "getSortClause",
+            "deprecated": true,
+            "deprecationMessage": "Use `getSortClause` in the search plugin",
             "return": {
                 "description": "",
                 "type": "Object"
@@ -38855,7 +39267,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 424,
+            "line": 430,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -38867,7 +39279,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 435,
+            "line": 441,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -38879,7 +39291,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 446,
+            "line": 452,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -38891,7 +39303,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 457,
+            "line": 463,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -38903,7 +39315,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 468,
+            "line": 474,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -38915,7 +39327,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 479,
+            "line": 485,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -38927,7 +39339,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 490,
+            "line": 496,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -38939,7 +39351,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 501,
+            "line": 507,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -38951,7 +39363,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 512,
+            "line": 518,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -38963,7 +39375,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 523,
+            "line": 529,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -38975,7 +39387,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 534,
+            "line": 540,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -38986,7 +39398,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 551,
+            "line": 557,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",
@@ -42212,6 +42624,202 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 32,
+            "description": "The editor instance where the component is being used.",
+            "itemtype": "property",
+            "name": "editor",
+            "type": "Object",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 41,
+            "description": "The name which will be used as an alias of the button in the\nconfiguration.",
+            "static": 1,
+            "itemtype": "property",
+            "name": "key",
+            "type": "String",
+            "default": "linkEdit",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 62,
+            "description": "Lifecycle. Invoked once before the component is mounted.\nThe return value will be used as the initial value of this.state.",
+            "itemtype": "method",
+            "name": "getInitialState",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 93,
+            "description": "Runs the Universal Discovery Widget so that the user can pick a\nContent.",
+            "itemtype": "method",
+            "name": "_selectContent",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 122,
+            "description": "Gives the focus to the edited link by moving the caret in it.",
+            "itemtype": "method",
+            "name": "_focusEditedLink",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 136,
+            "description": "Lifecycle. Renders the UI of the button.",
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "The content which should be rendered.",
+                "type": "Object"
+            },
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 215,
+            "description": "Clears the link input. This only changes the component internal\nstate, but does not affect the link element of the editor. Only the\n_removeLink and _updateLink methods are translated to the editor\nelement.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_clearLink",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 230,
+            "description": "Monitors key interaction inside the input element to respond to the\nkeys:\n- Enter: Creates/updates the link.\n- Escape: Discards the changes.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_handleKeyDown",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The keyboard event.",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 256,
+            "description": "Updates the component state when the link input changes on user\ninteraction.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_setHref",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "The change event.",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 270,
+            "description": "Sets the link title",
+            "itemtype": "method",
+            "name": "_setTitle",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 283,
+            "description": "Sets the target of the link",
+            "itemtype": "method",
+            "name": "_setTarget",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "SyntheticEvent"
+                }
+            ],
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 296,
+            "description": "Removes the link in the editor element.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_removeLink",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 317,
+            "description": "Saves the link with the current href, title and target.",
+            "itemtype": "method",
+            "name": "_saveLink",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
+            "line": 331,
+            "description": "Updates the link in the editor element. If the element didn't exist\npreviously, it will create a new <a> element with the href specified\nin the link input.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_updateLink",
+            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 42,
             "description": "Executes the eZAppendContent command to add an unordered list containing\nan empty list item.",
@@ -42220,7 +42828,31 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-linkedit",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
+            "line": 35,
+            "description": "Executes the eZMoveDown command.",
+            "itemtype": "method",
+            "name": "_moveDown",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonMoveDown",
+            "module": "ez-alloyeditor-button-movedown",
+            "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/buttons/moveup.js",
+            "line": 35,
+            "description": "Executes the eZMoveUp command.",
+            "itemtype": "method",
+            "name": "_moveUp",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.AlloyEditorButton.ButtonMoveUp",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -42232,24 +42864,24 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 32,
+            "line": 25,
             "description": "Fires the `editorInteraction` event this is done to make sure the\nAlloyEditor's UI remains visible",
             "itemtype": "method",
             "name": "fireEditorInteractionEvent",
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 52,
+            "line": 45,
             "description": "Appends the element to the editor content. Depending on the editor's\nstate, the element is added at a different place:\n\n- if nothing is selected, editor.insertElement is called and the element\n  is added at the beginning of the editor\n- if a block element is selected (not a widget), the element is added\n  after the element or after the first block in the element path (after\n  the ul element if a li has the focus)\n- if a widget has the focus, the element is added right after it",
             "itemtype": "method",
             "name": "appendElement",
@@ -42266,8 +42898,53 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "eZ.AlloyEditorButton"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "line": 40,
+            "description": "Moves the caret in the editor to the given element",
+            "itemtype": "method",
+            "name": "eZ.moveCaretToElement",
+            "params": [
+                {
+                    "name": "editor",
+                    "description": "",
+                    "type": "CKEDITOR.editor"
+                },
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezcaret",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
+            "line": 49,
+            "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
+            "itemtype": "method",
+            "name": "eZ.findCaretElement",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "CKEDITOR.dom.element"
+            },
+            "class": "CKEDITOR.plugins.ezcaret",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
@@ -42276,7 +42953,7 @@
             "itemtype": "method",
             "name": "insert",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42286,7 +42963,7 @@
             "itemtype": "method",
             "name": "edit",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42298,7 +42975,7 @@
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42310,7 +42987,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42329,7 +43006,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42346,7 +43023,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42358,7 +43035,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42368,7 +43045,7 @@
             "itemtype": "method",
             "name": "unsetAlignment",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42389,7 +43066,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42403,7 +43080,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42417,7 +43094,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42438,7 +43115,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42452,7 +43129,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42473,12 +43150,46 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 253,
+            "description": "Moves the widget after the given element. It also fires the\n`editorInteraction` event so that the UI can respond to that\nchange.",
+            "itemtype": "method",
+            "name": "moveAfter",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 266,
+            "description": "Moves the widget before the given element. It also fires the\n`editorInteraction` event so that the UI can respond to that\nchange.",
+            "itemtype": "method",
+            "name": "moveAfter",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "CKEDITOR.dom.element"
+                }
+            ],
+            "class": "CKEDITOR.plugins.ezembed",
+            "module": "ez-alloyeditor-button-moveup",
+            "namespace": "CKEDITOR.plugins"
+        },
+        {
+            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
+            "line": 279,
             "description": "Sets a config value under the `key` for the embed.",
             "itemtype": "method",
             "name": "setConfig",
@@ -42499,12 +43210,12 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 274,
+            "line": 300,
             "description": "Returns the config value for the `key` or undefined if the\nconfig key is not found.",
             "itemtype": "method",
             "name": "getConfig",
@@ -42513,12 +43224,12 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 287,
+            "line": 313,
             "description": "Returns the Element holding the config under `key`",
             "itemtype": "method",
             "name": "_getValueElement",
@@ -42534,12 +43245,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 298,
+            "line": 324,
             "description": "Returns the element used as a container the config values. if\nit does not exist, it is created.",
             "itemtype": "method",
             "name": "_getEzConfigElement",
@@ -42550,12 +43261,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 317,
+            "line": 343,
             "description": "Fires the editorInteraction event so that AlloyEditor editor\nUI remains visible and is updated. This method also computes\n`selectionData.region` and the `pageX` and `pageY` properties\nso that the add toolbar is correctly positioned on the\nwidget.",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -42569,12 +43280,12 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 352,
+            "line": 378,
             "description": "Returns the wrapper element region.",
             "itemtype": "method",
             "name": "_getWrapperRegion",
@@ -42585,7 +43296,7 @@
                 "type": "Object"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42608,7 +43319,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42636,7 +43347,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42660,15 +43371,16 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 33,
+            "line": 31,
             "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
             "itemtype": "method",
             "name": "_findCaretElement",
+            "deprecated": true,
             "access": "protected",
             "tagname": "",
             "params": [
@@ -42683,12 +43395,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 52,
+            "line": 54,
             "description": "Fires the editorInteraction event so that AlloyEditor's UI is updated\nfor the newly focused element",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -42712,12 +43424,12 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 76,
+            "line": 78,
             "description": "Changes the focused element in the editor to the given newFocus\nelement",
             "params": [
                 {
@@ -42736,7 +43448,7 @@
             "itemtype": "method",
             "name": "_changeFocus",
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-imagevariation",
+            "module": "ez-alloyeditor-button-moveup",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -42938,7 +43650,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/embed.js",
-            "line": 35,
+            "line": 37,
             "description": "Tests whether the `embed` toolbar should be visible, it is visible\nwhen an ezembed widget gets the focus.",
             "itemtype": "method",
             "name": "test",
@@ -42983,7 +43695,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 47,
+            "line": 49,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
@@ -43027,7 +43739,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 109,
+            "line": 111,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
@@ -43073,7 +43785,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/image.js",
-            "line": 36,
+            "line": 38,
             "description": "Tests whether the `image` toolbar should be visible, it is visible\nwhen an ezembed widget containing an <img> is visible.",
             "itemtype": "method",
             "name": "test",
@@ -43118,7 +43830,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 46,
+            "line": 48,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",
@@ -43162,7 +43874,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 109,
+            "line": 111,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",

@@ -4,8 +4,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "Author",
         "AuthorList",
         "CKEDITOR.plugins.ezaddcontent",
+        "CKEDITOR.plugins.ezcaret",
         "CKEDITOR.plugins.ezembed",
         "CKEDITOR.plugins.ezfocusblock",
+        "CKEDITOR.plugins.ezmoveelement",
         "CKEDITOR.plugins.ezpaste",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
@@ -28,6 +30,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonEmbedRight",
         "eZ.AlloyEditorButton.ButtonImageHref",
         "eZ.AlloyEditorButton.ButtonImageVariation",
+        "eZ.AlloyEditorButton.ButtonLinkEdit",
+        "eZ.AlloyEditorButton.ButtonMoveDown",
+        "eZ.AlloyEditorButton.ButtonMoveUp",
         "eZ.AlloyEditorButton.WidgetButton",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
@@ -262,11 +267,14 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-embedleft",
         "ez-alloyeditor-button-imagehref",
         "ez-alloyeditor-button-imagevariation",
+        "ez-alloyeditor-button-linkedit",
         "ez-alloyeditor-button-mixin-blocktextalign",
         "ez-alloyeditor-button-mixin-embedalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
         "ez-alloyeditor-button-mixin-embedimage",
         "ez-alloyeditor-button-mixin-widgetbutton",
+        "ez-alloyeditor-button-movedown",
+        "ez-alloyeditor-button-moveup",
         "ez-alloyeditor-button-remove",
         "ez-alloyeditor-toolbar-config-block-base",
         "ez-alloyeditor-toolbar-config-embed",
@@ -516,6 +524,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the image variation drop down"
         },
         {
+            "displayName": "ez-alloyeditor-button-linkedit",
+            "name": "ez-alloyeditor-button-linkedit",
+            "description": "Provides the link edit button"
+        },
+        {
             "displayName": "ez-alloyeditor-button-mixin-blocktextalign",
             "name": "ez-alloyeditor-button-mixin-blocktextalign",
             "description": "Provides the BlockTextAlign mixin"
@@ -539,6 +552,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-button-mixin-widgetbutton",
             "name": "ez-alloyeditor-button-mixin-widgetbutton",
             "description": "Provides the WidgetButton mixin"
+        },
+        {
+            "displayName": "ez-alloyeditor-button-movedown",
+            "name": "ez-alloyeditor-button-movedown",
+            "description": "Provides the move down button"
+        },
+        {
+            "displayName": "ez-alloyeditor-button-moveup",
+            "name": "ez-alloyeditor-button-moveup",
+            "description": "Provides the move up button"
         },
         {
             "displayName": "ez-alloyeditor-button-remove",
