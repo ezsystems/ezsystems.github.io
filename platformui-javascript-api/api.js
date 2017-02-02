@@ -233,6 +233,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TreeView",
         "eZ.UniversalDiscoveryBrowseView",
         "eZ.UniversalDiscoveryConfirmedListView",
+        "eZ.UniversalDiscoveryFinderExplorerLevelView",
+        "eZ.UniversalDiscoveryFinderExplorerView",
+        "eZ.UniversalDiscoveryFinderView",
         "eZ.UniversalDiscoveryMethodBaseView",
         "eZ.UniversalDiscoverySearchView",
         "eZ.UniversalDiscoverySelectedView",
@@ -445,6 +448,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-universaldiscoverybrowseview",
         "ez-universaldiscoveryconfirmedlistview",
         "ez-universaldiscoverycontenttreeplugin",
+        "ez-universaldiscoveryfinderexplorerlevelview",
+        "ez-universaldiscoveryfinderexplorerview",
+        "ez-universaldiscoveryfinderview",
         "ez-universaldiscoverymethodbaseview",
         "ez-universaldiscoveryplugin",
         "ez-universaldiscoverysearchview",
@@ -1412,6 +1418,21 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-universaldiscoverycontenttreeplugin",
             "name": "ez-universaldiscoverycontenttreeplugin",
             "description": "Provides the content tree plugin for the universal discovery"
+        },
+        {
+            "displayName": "ez-universaldiscoveryfinderexplorerlevelview",
+            "name": "ez-universaldiscoveryfinderexplorerlevelview",
+            "description": "Provides the universal discovery finder explorer level view"
+        },
+        {
+            "displayName": "ez-universaldiscoveryfinderexplorerview",
+            "name": "ez-universaldiscoveryfinderexplorerview",
+            "description": "Provides the universal discovery finder explorer view"
+        },
+        {
+            "displayName": "ez-universaldiscoveryfinderview",
+            "name": "ez-universaldiscoveryfinderview",
+            "description": "Provides the universal discovery finder method"
         },
         {
             "displayName": "ez-universaldiscoverymethodbaseview",

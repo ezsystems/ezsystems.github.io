@@ -271,6 +271,9 @@
                                 <li><a href="../classes/eZ.TreeView.html">eZ.TreeView</a></li>
                                 <li><a href="../classes/eZ.UniversalDiscoveryBrowseView.html">eZ.UniversalDiscoveryBrowseView</a></li>
                                 <li><a href="../classes/eZ.UniversalDiscoveryConfirmedListView.html">eZ.UniversalDiscoveryConfirmedListView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryFinderExplorerLevelView.html">eZ.UniversalDiscoveryFinderExplorerLevelView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryFinderExplorerView.html">eZ.UniversalDiscoveryFinderExplorerView</a></li>
+                                <li><a href="../classes/eZ.UniversalDiscoveryFinderView.html">eZ.UniversalDiscoveryFinderView</a></li>
                                 <li><a href="../classes/eZ.UniversalDiscoveryMethodBaseView.html">eZ.UniversalDiscoveryMethodBaseView</a></li>
                                 <li><a href="../classes/eZ.UniversalDiscoverySearchView.html">eZ.UniversalDiscoverySearchView</a></li>
                                 <li><a href="../classes/eZ.UniversalDiscoverySelectedView.html">eZ.UniversalDiscoverySelectedView</a></li>
@@ -484,6 +487,9 @@
                                 <li><a href="../modules/ez-universaldiscoverybrowseview.html">ez-universaldiscoverybrowseview</a></li>
                                 <li><a href="../modules/ez-universaldiscoveryconfirmedlistview.html">ez-universaldiscoveryconfirmedlistview</a></li>
                                 <li><a href="../modules/ez-universaldiscoverycontenttreeplugin.html">ez-universaldiscoverycontenttreeplugin</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryfinderexplorerlevelview.html">ez-universaldiscoveryfinderexplorerlevelview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryfinderexplorerview.html">ez-universaldiscoveryfinderexplorerview</a></li>
+                                <li><a href="../modules/ez-universaldiscoveryfinderview.html">ez-universaldiscoveryfinderview</a></li>
                                 <li><a href="../modules/ez-universaldiscoverymethodbaseview.html">ez-universaldiscoverymethodbaseview</a></li>
                                 <li><a href="../modules/ez-universaldiscoveryplugin.html">ez-universaldiscoveryplugin</a></li>
                                 <li><a href="../modules/ez-universaldiscoverysearchview.html">ez-universaldiscoverysearchview</a></li>
@@ -671,7 +677,7 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
         },
 
         /**
-         * Notifies the browse method views that a content is removed from the
+         * Notifies method views that a content is removed from the
          * selection.
          *
          * @method _notifyMethodsUnselectContent
@@ -1106,7 +1112,7 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
             methods: {
                 valueFn: function () {
                     return [
-                        new Y.eZ.UniversalDiscoveryBrowseView({
+                        new Y.eZ.UniversalDiscoveryFinderView({
                             bubbleTargets: this,
                             priority: 100,
                             multiple: this.get(&#x27;multiple&#x27;),
@@ -1131,10 +1137,10 @@ YUI.add(&#x27;ez-universaldiscoveryview&#x27;, function (Y) {
              *
              * @attribute visibleMethod
              * @type String
-             * @default &#x27;browse&#x27;
+             * @default &#x27;finder&#x27;
              */
             visibleMethod: {
-                value: &#x27;browse&#x27;,
+                value: &#x27;finder&#x27;,
             },
 
             /**
