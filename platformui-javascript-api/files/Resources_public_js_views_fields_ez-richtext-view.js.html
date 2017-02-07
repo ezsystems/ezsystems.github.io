@@ -230,6 +230,7 @@
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
                                 <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextLocationLink.html">eZ.RichTextLocationLink</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
@@ -448,6 +449,7 @@
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
                                 <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-locationlink.html">ez-richtext-locationlink</a></li>
                                 <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
                                 <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
@@ -576,6 +578,12 @@ YUI.add(&#x27;ez-richtext-view&#x27;, function (Y) {
      * @uses eZ.Processable
      */
     Y.eZ.RichTextView = Y.Base.create(&#x27;richtextView&#x27;, Y.eZ.FieldView, [Y.eZ.Processable], {
+        events: {
+            &#x27;[href^=&quot;ezlocation://&quot;]&#x27;: {
+                &#x27;tap&#x27;: &#x27;_navigateTo&#x27;,
+            }
+        },
+
         initializer: function () {
             /**
              * Stores the parsed document from the xhtml5edit version of the
@@ -587,6 +595,49 @@ YUI.add(&#x27;ez-richtext-view&#x27;, function (Y) {
              */
             this._document =  this._getDOMDocument();
             this._processEvent = &#x27;activeChange&#x27;;
+        },
+
+
+        /**
+         * Checks if the internal link is valid ie it has the REST Location id
+         * and the main language code in data attributes.
+         *
+         * @method _isValidInternalLink
+         * @private
+         * @param {Node} link
+         * @return {Boolean}
+         */
+        _isValidInternalLink: function (link) {
+            return (
+                link.hasAttribute(&#x27;data-ez-rest-location-id&#x27;)
+                &amp;&amp; link.hasAttribute(&#x27;data-ez-main-language-code&#x27;)
+            );
+        },
+
+        /**
+         * tap event handler on internal link (&#x60;ezlocation://&#x60;). If the link is
+         * valid, it fires &#x60;navigateTo&#x60; event so that the application navigates
+         * to the corresponding Location.
+         *
+         * @method _navigateTo
+         * @protected
+         * @param {EventFacade} e
+         */
+        _navigateTo: function (e) {
+            var link = e.target;
+
+            e.preventDefault();
+            if ( this._isValidInternalLink(link) ) {
+                this.fire(&#x27;navigateTo&#x27;, {
+                    route: {
+                        name: &#x27;viewLocation&#x27;,
+                        params: {
+                            id: link.getAttribute(&#x27;data-ez-rest-location-id&#x27;),
+                            languageCode: link.getAttribute(&#x27;data-ez-main-language-code&#x27;),
+                        },
+                    },
+                });
+            }
         },
 
         _getFieldValue: function () {
@@ -664,6 +715,9 @@ YUI.add(&#x27;ez-richtext-view&#x27;, function (Y) {
                     }, {
                         processor: new Y.eZ.RichTextResolveEmbed(),
                         priority: 50,
+                    }, {
+                        processor: new Y.eZ.RichTextLocationLink(),
+                        priority: 10,
                     }];
                 },
             },

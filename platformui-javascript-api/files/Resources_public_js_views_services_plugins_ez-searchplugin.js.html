@@ -230,6 +230,7 @@
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
                                 <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextLocationLink.html">eZ.RichTextLocationLink</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
@@ -448,6 +449,7 @@
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
                                 <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-locationlink.html">ez-richtext-locationlink</a></li>
                                 <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
                                 <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
@@ -866,7 +868,8 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
          * generate the sort clauses
          * @param {Integer} e.search.offset the offset for the search result
          * @param {Integer} e.search.limit number of records returned
-         * @param {String} e.resultAttribute the name of attribute that will by updated with search results
+         * @param {Function} [e.callback] callback to call when search is done
+         * @param {String} [e.resultAttribute] the name of attribute that will by updated with search results
          * @param {String} [e.resultTotalCountAttribute] the name of attribute that will be updated with total
          * number of records matching search criteria
          * @param {Bool} [e.loadContent] the flag indicating whether the eZ.Content should be loaded for all
@@ -879,21 +882,26 @@ YUI.add(&#x27;ez-searchplugin&#x27;, function (Y) {
         _doLocationSearch: function (e) {
             var search = Y.merge(e.search),
                 listView = e.target,
-                attrs = {&#x27;loadingError&#x27;: false};
+                attrs = {&#x27;loadingError&#x27;: false},
+                callback = function (error, result, resultCount) {
+                    attrs.loadingError = error ? true : false;
+                    if ( !error ) {
+                        attrs[e.resultAttribute] = result;
+                        if ( e.resultTotalCountAttribute ) {
+                            attrs[e.resultTotalCountAttribute] = resultCount;
+                        }
+                    }
+                    listView.setAttrs(attrs);
+                };
+
+            if ( e.callback ) {
+                callback = e.callback;
+            }
 
             search.viewName = e.viewName;
             search.loadContent = e.loadContent;
             search.loadContentType = e.loadContentType;
-            this.findLocations(search, function (error, result, resultCount) {
-                attrs.loadingError = error ? true : false;
-                if ( !error ) {
-                    attrs[e.resultAttribute] = result;
-                    if ( e.resultTotalCountAttribute ) {
-                        attrs[e.resultTotalCountAttribute] = resultCount;
-                    }
-                }
-                listView.setAttrs(attrs);
-            });
+            this.findLocations(search, callback);
         },
 
         /**

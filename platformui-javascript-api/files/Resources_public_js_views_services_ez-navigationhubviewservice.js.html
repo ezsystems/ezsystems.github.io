@@ -230,6 +230,7 @@
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
                                 <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextLocationLink.html">eZ.RichTextLocationLink</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
@@ -448,6 +449,7 @@
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
                                 <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-locationlink.html">ez-richtext-locationlink</a></li>
                                 <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
                                 <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
@@ -577,7 +579,6 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
     Y.eZ.NavigationHubViewService = Y.Base.create(&#x27;navigationHubViewService&#x27;, Y.eZ.ViewService, [Y.eZ.SideViewService], {
         initializer: function () {
             this.on(&#x27;*:logOut&#x27;, this._logOut);
-            this.after(&#x27;*:navigateTo&#x27;, this._navigateTo);
             this.after(&#x27;*:activeNavigationChange&#x27;, this._navigateToFirstItemRoute);
         },
 
@@ -586,11 +587,14 @@ YUI.add(&#x27;ez-navigationhubviewservice&#x27;, function (Y) {
          *
          * @method _navigateTo
          * @protected
+         * @deprecated
          * @param {EventFacade} e
          */
         _navigateTo: function (e) {
             var route = e.route;
 
+            console.log(&#x27;[DEPRECATED] _navigateTo is deprecated&#x27;);
+            console.log(&#x27;[DEPRECATED] this method will be removed from PlatformUI 2.0&#x27;);
             this.get(&#x27;app&#x27;).navigateTo(route.name, route.params);
         },
 

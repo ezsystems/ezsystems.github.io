@@ -313,6 +313,19 @@
                 "eZ": 1
             }
         },
+        "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js": {
+            "name": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "modules": {
+                "ez-richtext-locationlink": 1
+            },
+            "classes": {
+                "eZ.RichTextLocationLink": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
         "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js": {
             "name": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
             "modules": {
@@ -3601,6 +3614,22 @@
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
             "line": 14,
             "description": "Provides the embedcontainer richtext processor"
+        },
+        "ez-richtext-locationlink": {
+            "name": "ez-richtext-locationlink",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.RichTextLocationLink": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 14,
+            "description": "Provides the Location link processor"
         },
         "ez-richtext-resolveembed": {
             "name": "ez-richtext-resolveembed",
@@ -7155,6 +7184,21 @@
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
             "line": 14,
             "description": "The Richtext embed container processor",
+            "is_constructor": 1
+        },
+        "eZ.RichTextLocationLink": {
+            "name": "eZ.RichTextLocationLink",
+            "shortname": "eZ.RichTextLocationLink",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-richtext-locationlink",
+            "namespace": "eZ",
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 14,
+            "description": "The Richtext Location Link processor.",
             "is_constructor": 1
         },
         "eZ.RichTextResolveEmbed": {
@@ -11167,7 +11211,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 203,
+            "line": 209,
             "description": "Prevent hash changes by setting the old hash on hashChange event",
             "itemtype": "method",
             "name": "_preventHashChange",
@@ -11179,7 +11223,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 220,
+            "line": 226,
             "description": "Allows hash changes by detaching hashChange subscription",
             "itemtype": "method",
             "name": "_allowHashChange",
@@ -11191,7 +11235,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 230,
+            "line": 236,
             "description": "Disable routing by deleting the callbacks of the routes",
             "itemtype": "method",
             "name": "_disableRouting",
@@ -11203,7 +11247,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 243,
+            "line": 249,
             "description": "Enables routing by setting back the callbacks to the routes",
             "itemtype": "method",
             "name": "_enableRouting",
@@ -11215,7 +11259,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 255,
+            "line": 261,
             "description": "Destroy properly every side view.",
             "itemtype": "method",
             "name": "_destroySideViews",
@@ -11227,7 +11271,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 274,
+            "line": 280,
             "description": "Refreshes the current view",
             "itemtype": "method",
             "name": "_refreshView",
@@ -11239,7 +11283,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 284,
+            "line": 290,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -11251,7 +11295,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 338,
+            "line": 344,
             "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
             "itemtype": "method",
             "name": "getLanguageName",
@@ -11273,7 +11317,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 357,
+            "line": 363,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -11300,7 +11344,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 389,
+            "line": 395,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -11323,7 +11367,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 400,
+            "line": 406,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -11357,7 +11401,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 440,
+            "line": 446,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -11386,7 +11430,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 451,
+            "line": 457,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -11396,7 +11440,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 464,
+            "line": 470,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -11426,7 +11470,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 494,
+            "line": 500,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -11453,7 +11497,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 511,
+            "line": 517,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitly\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -11480,7 +11524,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 538,
+            "line": 544,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -11507,7 +11551,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 560,
+            "line": 566,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -11524,7 +11568,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 570,
+            "line": 576,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -11563,7 +11607,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 635,
+            "line": 641,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -11582,7 +11626,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 653,
+            "line": 659,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -11606,7 +11650,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 675,
+            "line": 681,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -11633,7 +11677,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 711,
+            "line": 717,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -11660,7 +11704,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 780,
+            "line": 786,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -11679,7 +11723,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 796,
+            "line": 802,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -11698,7 +11742,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 837,
+            "line": 843,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -11717,7 +11761,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 855,
+            "line": 861,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -11727,7 +11771,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1042,
+            "line": 1048,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -11739,7 +11783,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1054,
+            "line": 1060,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -11752,7 +11796,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1067,
+            "line": 1073,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -11765,7 +11809,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1080,
+            "line": 1086,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -11777,7 +11821,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1093,
+            "line": 1099,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -11791,7 +11835,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1107,
+            "line": 1113,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -11803,7 +11847,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1121,
+            "line": 1127,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -11815,7 +11859,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1132,
+            "line": 1138,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -11827,7 +11871,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1144,
+            "line": 1150,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -11840,7 +11884,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1158,
+            "line": 1164,
             "description": "Default language code, as defined by the current siteaccess language config.",
             "itemtype": "attribute",
             "name": "contentCreationDefaultLanguageCode",
@@ -11853,7 +11897,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1171,
+            "line": 1177,
             "description": "Holds the Locales conversion map between eZ Locale codes and\nPOSIX ones. See locale.yml",
             "itemtype": "attribute",
             "name": "localesMap",
@@ -11866,7 +11910,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1185,
+            "line": 1191,
             "description": "List of preferred languages in which the interface should be\ntranslated.",
             "itemtype": "attribute",
             "name": "interfaceLanguages",
@@ -11879,7 +11923,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1199,
+            "line": 1205,
             "description": "Boolean that determine if the app routing is enabled",
             "itemtype": "attribute",
             "name": "routingEnabled",
@@ -13061,6 +13105,152 @@
             ],
             "class": "eZ.RichTextEmbedContainer",
             "module": "ez-richtext-embedcontainer",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 23,
+            "description": "Adds the REST Location id and the main language code to internal links.",
+            "itemtype": "method",
+            "name": "process",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                },
+                {
+                    "name": "event",
+                    "description": "the event parameters (if any) that triggered\nthe process",
+                    "type": "EventFacade",
+                    "optional": true
+                }
+            ],
+            "class": "eZ.RichTextLocationLink",
+            "module": "ez-richtext-locationlink",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 40,
+            "description": "Fires the locationSearch event to load the linked Locations.",
+            "itemtype": "method",
+            "name": "_loadLocations",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                },
+                {
+                    "name": "mapNode",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.RichTextLocationLink",
+            "module": "ez-richtext-locationlink",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 60,
+            "description": "Updates the links referenced in `mapNode` with the search result.",
+            "itemtype": "method",
+            "name": "_updateLinks",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "mapNode",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "error",
+                    "description": "",
+                    "type": "Error|false"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "class": "eZ.RichTextLocationLink",
+            "module": "ez-richtext-locationlink",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 83,
+            "description": "Returns a NodeList containing the internal links.",
+            "itemtype": "method",
+            "name": "_getInternalLinkList",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "view",
+                    "description": "",
+                    "type": "eZ.FieldView|eZ.FieldEditView"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Y.NodeList"
+            },
+            "class": "eZ.RichTextLocationLink",
+            "module": "ez-richtext-locationlink",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 95,
+            "description": "Builds a map between the Location ids and the corresponding links.",
+            "itemtype": "method",
+            "name": "_buildLinkMapNode",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "links",
+                    "description": "",
+                    "type": "NodeList"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "eZ.RichTextLocationLink",
+            "module": "ez-richtext-locationlink",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
+            "line": 115,
+            "description": "Returns the Location id for the given link.",
+            "itemtype": "method",
+            "name": "_getLocationId",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "link",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "class": "eZ.RichTextLocationLink",
+            "module": "ez-richtext-locationlink",
             "namespace": "eZ"
         },
         {
@@ -17861,7 +18051,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 25,
+            "line": 31,
             "description": "Stores the parsed document from the xhtml5edit version of the\nrich text field. `null` means the document is invalid.",
             "itemtype": "property",
             "name": "_document",
@@ -17874,7 +18064,49 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 54,
+            "line": 44,
+            "description": "Checks if the internal link is valid ie it has the REST Location id\nand the main language code in data attributes.",
+            "itemtype": "method",
+            "name": "_isValidInternalLink",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "link",
+                    "description": "",
+                    "type": "Node"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "eZ.RichTextView",
+            "module": "ez-richtext-view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-richtext-view.js",
+            "line": 60,
+            "description": "tap event handler on internal link (`ezlocation://`). If the link is\nvalid, it fires `navigateTo` event so that the application navigates\nto the corresponding Location.",
+            "itemtype": "method",
+            "name": "_navigateTo",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.RichTextView",
+            "module": "ez-richtext-view",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/fields/ez-richtext-view.js",
+            "line": 103,
             "description": "Checks whether the field value is empty. A RichText field is\nconsidered empty if its content was successfully parsed and if the\n*root* `section` element has no child.",
             "itemtype": "method",
             "name": "_isFieldEmpty",
@@ -17890,7 +18122,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 67,
+            "line": 116,
             "description": "Returns an additional `parseError` variable indicating whether the\nxhtml5edit version of the rich text field was successfully parsed.",
             "itemtype": "method",
             "name": "_variables",
@@ -17906,7 +18138,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 81,
+            "line": 130,
             "description": "Returns a Document object or null is the parser failed to load the\nxhtml5edit version of the rich text field.",
             "itemtype": "method",
             "name": "_getDOMDocument",
@@ -21975,9 +22207,16 @@
                             ]
                         },
                         {
+                            "name": "callback",
+                            "description": "callback to call when search is done",
+                            "type": "Function",
+                            "optional": true
+                        },
+                        {
                             "name": "resultAttribute",
                             "description": "the name of attribute that will by updated with search results",
-                            "type": "String"
+                            "type": "String",
+                            "optional": true
                         },
                         {
                             "name": "resultTotalCountAttribute",
@@ -22012,7 +22251,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 344,
+            "line": 350,
             "description": "Parses the search result to create a model and return the array of struct",
             "itemtype": "method",
             "name": "_parseSearchResult",
@@ -22045,7 +22284,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 367,
+            "line": 373,
             "description": "Creates a Location for the searchHit",
             "itemtype": "method",
             "name": "_createLocation",
@@ -22068,7 +22307,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 385,
+            "line": 391,
             "itemtype": "method",
             "name": "_createContent",
             "params": [
@@ -22090,7 +22329,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 402,
+            "line": 408,
             "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadResources",
@@ -22125,7 +22364,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 421,
+            "line": 427,
             "description": "Loads resources for the given array of location structs. Depending on\ngiven `loadContentType` and `loadContent` bool parameters it loads\nContent and ContentType and includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadLocationResources",
@@ -22159,7 +22398,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 466,
+            "line": 472,
             "description": "Loads resources for the given array of content structs. Depending on\ngiven `loadContentType` and `loadLocation` bool parameters it loads\nContentType and Location and includes them into the content structs.",
             "itemtype": "method",
             "name": "_loadContentResources",
@@ -22193,7 +22432,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 511,
+            "line": 517,
             "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentTypeForLocations",
@@ -22222,7 +22461,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 564,
+            "line": 570,
             "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentForLocations",
@@ -22246,7 +22485,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 617,
+            "line": 623,
             "description": "Loads Location for each content struct in given array and puts it in the new `location`\nfield for the content struct.",
             "itemtype": "method",
             "name": "_loadLocationForContent",
@@ -22270,7 +22509,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 677,
+            "line": 683,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -22282,7 +22521,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 688,
+            "line": 694,
             "description": "Holds the eZ.Content constructor function",
             "itemtype": "attribute",
             "name": "contentModelConstructor",
@@ -24139,12 +24378,13 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 29,
+            "line": 28,
             "description": "navigateTo event handler. it redirects the user to the given route.",
             "itemtype": "method",
             "name": "_navigateTo",
             "access": "protected",
             "tagname": "",
+            "deprecated": true,
             "params": [
                 {
                     "name": "e",
@@ -24158,7 +24398,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 42,
+            "line": 44,
             "description": "logOut event handler, it logs out the user and redirect to the login\nform.",
             "itemtype": "method",
             "name": "_logOut",
@@ -24168,7 +24408,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 57,
+            "line": 59,
             "description": "Returns true if a provided item is a NavigationItemView, false if item is a NavigationItemParameterView",
             "itemtype": "method",
             "name": "_isNavigationViewItem",
@@ -24191,7 +24431,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 69,
+            "line": 71,
             "description": "Redirects to the first item of the active zone",
             "itemtype": "method",
             "name": "_navigateToFirstItemRoute",
@@ -24217,7 +24457,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 182,
+            "line": 184,
             "description": "Loads the given `locationId`",
             "access": "protected",
             "tagname": "",
@@ -24258,7 +24498,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 204,
+            "line": 206,
             "description": "Returns a navigation item object. See the *NavigationItems attribute.",
             "access": "private",
             "tagname": "",
@@ -24286,7 +24526,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 220,
+            "line": 222,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemView\"}}eZ.NavigationItemView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -24324,7 +24564,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 245,
+            "line": 247,
             "description": "Returns the navigation item object describing a {{#crossLink\n\"eZ.NavigationItemSubtreeView\"}}eZ.NavigationItemSubtreeView{{/crossLink}}.",
             "itemtype": "method",
             "name": "_getSubtreeItem",
@@ -24362,7 +24602,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 271,
+            "line": 273,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemParameterView\"}}eZ.NavigationItemParameterView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -24405,7 +24645,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 298,
+            "line": 300,
             "description": "Returns the parameters for the navigation hub view",
             "itemtype": "method",
             "name": "getViewParameters",
@@ -24419,7 +24659,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 316,
+            "line": 318,
             "description": "A matched route object from the request. This object will be used by\nthe navigation hub view to check which navigation item view is\nselected. A matched route object is a clone of the application active\nroute without the service, serviceInstance and callbacks entries and\nwith an additional `parameters` property holding the route\nparameters and their values.",
             "itemtype": "method",
             "name": "_matchedRoute",
@@ -24435,7 +24675,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 341,
+            "line": 343,
             "description": "Adds a navigation item for the given zone.\nNote: adding a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "addNavigationItem",
@@ -24457,7 +24697,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 357,
+            "line": 359,
             "description": "Removes a navigation item for the given zone.\nNote: removing a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "removeNavigationItem",
@@ -24479,7 +24719,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 381,
+            "line": 383,
             "description": "Retrieves a navigation item",
             "itemtype": "method",
             "name": "getNavigationItem",
@@ -24500,7 +24740,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 407,
+            "line": 409,
             "description": "Stores the root `location`",
             "itemtype": "attribute",
             "name": "rootLocation",
@@ -24511,7 +24751,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 419,
+            "line": 421,
             "description": "Stores the root media `location`",
             "itemtype": "attribute",
             "name": "rootMediaLocation",
@@ -24522,7 +24762,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 431,
+            "line": 433,
             "description": "Stores the navigation item objects for the 'platform' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -24535,7 +24775,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 472,
+            "line": 474,
             "description": "Stores the navigation item objects for the 'studioplus' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -24548,7 +24788,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 504,
+            "line": 506,
             "description": "Stores the navigation item objects for the 'studio' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -24561,7 +24801,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 536,
+            "line": 538,
             "description": "Stores the navigation item objects for the 'admin' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "adminNavigationItems",
@@ -24574,7 +24814,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 595,
+            "line": 597,
             "description": "Stores the user's avatar image",
             "itemtype": "attribute",
             "name": "userAvatar",

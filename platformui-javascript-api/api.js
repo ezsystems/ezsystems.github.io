@@ -193,6 +193,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.RestModel",
         "eZ.RichTextEditView",
         "eZ.RichTextEmbedContainer",
+        "eZ.RichTextLocationLink",
         "eZ.RichTextResolveEmbed",
         "eZ.RichTextResolveImage",
         "eZ.RichTextView",
@@ -409,6 +410,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-restmodel",
         "ez-richtext-editview",
         "ez-richtext-embedcontainer",
+        "ez-richtext-locationlink",
         "ez-richtext-resolveembed",
         "ez-richtext-resolveimage",
         "ez-richtext-view",
@@ -1223,6 +1225,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-richtext-embedcontainer",
             "name": "ez-richtext-embedcontainer",
             "description": "Provides the embedcontainer richtext processor"
+        },
+        {
+            "displayName": "ez-richtext-locationlink",
+            "name": "ez-richtext-locationlink",
+            "description": "Provides the Location link processor"
         },
         {
             "displayName": "ez-richtext-resolveembed",

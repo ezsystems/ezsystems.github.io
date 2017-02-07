@@ -230,6 +230,7 @@
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
                                 <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextLocationLink.html">eZ.RichTextLocationLink</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
@@ -448,6 +449,7 @@
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
                                 <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-locationlink.html">ez-richtext-locationlink</a></li>
                                 <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
                                 <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
@@ -1597,7 +1599,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l385"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:385</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l391"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:391</code></a>
         </p>
 
 
@@ -1660,7 +1662,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l367"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:367</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l373"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:373</code></a>
         </p>
 
 
@@ -2318,8 +2320,20 @@ set the result on the target of the event.</p>
                                     </ul>
                             </li>
                             <li class="param">
-                                    <code class="param-name">resultAttribute</code>
+                                    <code class="param-name optional">[callback]</code>
+                                    <span class="type">Function</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>callback to call when search is done</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[resultAttribute]</code>
                                     <span class="type">String</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
 
                                 <div class="param-description">
                                     <p>the name of attribute that will by updated with search results</p>
@@ -3884,7 +3898,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l564"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:564</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l570"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:570</code></a>
         </p>
 
 
@@ -3958,7 +3972,7 @@ field for the location struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l466"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:466</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l472"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:472</code></a>
         </p>
 
 
@@ -4050,7 +4064,7 @@ ContentType and Location and includes them into the content structs.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l511"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:511</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l517"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:517</code></a>
         </p>
 
 
@@ -4128,7 +4142,7 @@ field for the location struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l617"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:617</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l623"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:623</code></a>
         </p>
 
 
@@ -4202,7 +4216,7 @@ field for the content struct.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l421"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:421</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l427"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:427</code></a>
         </p>
 
 
@@ -4298,7 +4312,7 @@ Content and ContentType and includes them into the location structs.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l402"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:402</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l408"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:408</code></a>
         </p>
 
 
@@ -4547,7 +4561,7 @@ by the top level attribute name, or null, if valueHash is falsey.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l344"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:344</code></a>
+        <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l350"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:350</code></a>
         </p>
 
 
@@ -9477,7 +9491,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l688"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:688</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l694"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:694</code></a>
                             </p>
                     
                     
@@ -9597,7 +9611,7 @@ applied by the plugin to the host object.
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l677"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:677</code></a>
+                            <a href="../files/Resources_public_js_views_services_plugins_ez-searchplugin.js.html#l683"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;services&#x2F;plugins&#x2F;ez-searchplugin.js:683</code></a>
                             </p>
                     
                     

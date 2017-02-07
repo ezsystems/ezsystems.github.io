@@ -230,6 +230,7 @@
                                 <li><a href="../classes/eZ.RestModel.html">eZ.RestModel</a></li>
                                 <li><a href="../classes/eZ.RichTextEditView.html">eZ.RichTextEditView</a></li>
                                 <li><a href="../classes/eZ.RichTextEmbedContainer.html">eZ.RichTextEmbedContainer</a></li>
+                                <li><a href="../classes/eZ.RichTextLocationLink.html">eZ.RichTextLocationLink</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveEmbed.html">eZ.RichTextResolveEmbed</a></li>
                                 <li><a href="../classes/eZ.RichTextResolveImage.html">eZ.RichTextResolveImage</a></li>
                                 <li><a href="../classes/eZ.RichTextView.html">eZ.RichTextView</a></li>
@@ -448,6 +449,7 @@
                                 <li><a href="../modules/ez-restmodel.html">ez-restmodel</a></li>
                                 <li><a href="../modules/ez-richtext-editview.html">ez-richtext-editview</a></li>
                                 <li><a href="../modules/ez-richtext-embedcontainer.html">ez-richtext-embedcontainer</a></li>
+                                <li><a href="../modules/ez-richtext-locationlink.html">ez-richtext-locationlink</a></li>
                                 <li><a href="../modules/ez-richtext-resolveembed.html">ez-richtext-resolveembed</a></li>
                                 <li><a href="../modules/ez-richtext-resolveimage.html">ez-richtext-resolveimage</a></li>
                                 <li><a href="../modules/ez-richtext-view.html">ez-richtext-view</a></li>
@@ -788,8 +790,16 @@
                                 <a href="#method__isLazyAttr">_isLazyAttr</a>
 
                             </li>
+                            <li class="index-item method private">
+                                <a href="#method__isValidInternalLink">_isValidInternalLink</a>
+
+                            </li>
                             <li class="index-item method private inherited">
                                 <a href="#method__monitor">_monitor</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method__navigateTo">_navigateTo</a>
 
                             </li>
                             <li class="index-item method private inherited">
@@ -2532,7 +2542,7 @@ cached value.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l81"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:81</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:130</code></a>
         </p>
 
 
@@ -3316,7 +3326,7 @@ across the class hierarchy for the instance.
                 eZ.FieldView
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l54"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:54</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l103"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:103</code></a>
         </p>
 
 
@@ -3406,6 +3416,71 @@ added lazily and still requires initialization.
 
 
 </div>
+<div id="method__isValidInternalLink" class="method item private">
+    <h3 class="name"><code>_isValidInternalLink</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>link</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l44"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:44</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Checks if the internal link is valid ie it has the REST Location id
+and the main language code in data attributes.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">link</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+            </div>
+        </div>
+
+
+</div>
 <div id="method__monitor" class="method item private inherited">
     <h3 class="name"><code>_monitor</code></h3>
 
@@ -3484,6 +3559,62 @@ it published) by setting the events 'monitor' config.
                     <div class="param-description">
                         Information about the event interaction, such as
                  fire() args, subscription category, publish config
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__navigateTo" class="method item protected">
+    <h3 class="name"><code>_navigateTo</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l60"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:60</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>tap event handler on internal link (<code>ezlocation://</code>). If the link is
+valid, it fires <code>navigateTo</code> event so that the application navigates
+to the corresponding Location.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
+
+
+                    <div class="param-description">
+                         
                     </div>
 
                 </li>
@@ -4414,7 +4545,7 @@ view in lowercase with the suffix <code>-ez-template</code>.
                 eZ.FieldView
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l67"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:67</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l116"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:116</code></a>
         </p>
 
 
@@ -7427,7 +7558,7 @@ instantiate a view and set a bunch of attributes without having to subclass
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l25"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:25</code></a>
+        <a href="../files/Resources_public_js_views_fields_ez-richtext-view.js.html#l31"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;fields&#x2F;ez-richtext-view.js:31</code></a>
         </p>
 
 
