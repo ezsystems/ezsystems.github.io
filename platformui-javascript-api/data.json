@@ -26128,49 +26128,6 @@
         {
             "file": "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js",
             "line": 24,
-            "description": "Loads the starting location of the UDW if there is a provided starting location id.\nElse starting location is set to false.",
-            "itemtype": "method",
-            "name": "_load",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryViewService",
-            "module": "ez-universaldiscoveryviewservice",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js",
-            "line": 54,
-            "description": "Loads the path of the UDW starting Location.",
-            "itemtype": "method",
-            "name": "_loadStartingLocationPath",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "startingLocation",
-                    "description": "",
-                    "type": "eZ.Location"
-                },
-                {
-                    "name": "callback",
-                    "description": "Executed after loading the path. Takes the\nlocation containing the path in parameter or false if loading error.",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryViewService",
-            "module": "ez-universaldiscoveryviewservice",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js",
-            "line": 81,
             "description": "Returns the value of the `parameters` attribute. This attribute is set\nwhen the app shows the universal discovery side view with the\nconfiguration provided in the `contentDiscover` event.",
             "itemtype": "method",
             "name": "_getViewParameters",
@@ -26179,29 +26136,6 @@
             "return": {
                 "description": "mixed"
             },
-            "class": "eZ.UniversalDiscoveryViewService",
-            "module": "ez-universaldiscoveryviewservice",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js",
-            "line": 100,
-            "description": "Holds the starting location where the UDW will start.\nFalse if no starting location defined",
-            "itemtype": "attribute",
-            "name": "startingLocation",
-            "default": "false",
-            "type": "{eZ.Location|False}",
-            "class": "eZ.UniversalDiscoveryViewService",
-            "module": "ez-universaldiscoveryviewservice",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/services/ez-universaldiscoveryviewservice.js",
-            "line": 112,
-            "description": "Holds the virtual root location",
-            "itemtype": "attribute",
-            "name": "virtualRootLocation",
-            "type": "{eZ.Location}",
             "class": "eZ.UniversalDiscoveryViewService",
             "module": "ez-universaldiscoveryviewservice",
             "namespace": "eZ"
@@ -29413,19 +29347,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 73,
-            "description": "Adds or removes the has selected item class on the container\ndepending on the `ownSelectedItem` attribute value.",
-            "itemtype": "method",
-            "name": "_uiOwnSelectedItem",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 108,
+            "line": 96,
             "description": "Custom reset implementation to explicitly reset the items.",
             "itemtype": "method",
             "name": "reset",
@@ -29435,7 +29357,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 121,
+            "line": 109,
             "description": "Scrolls to fully display the levelView.",
             "itemtype": "method",
             "name": "displayLevelView",
@@ -29445,7 +29367,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 130,
+            "line": 118,
             "description": "Handles user scrolling to determine if it needs to load more items.",
             "itemtype": "method",
             "name": "_handleScroll",
@@ -29457,7 +29379,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 145,
+            "line": 133,
             "description": "Determines if user has scrolled enough to try to load other items.",
             "itemtype": "method",
             "name": "_hasScrolledEnough",
@@ -29469,7 +29391,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 157,
+            "line": 145,
             "description": "Fires the `locationSearch` event to fetch the result list of the search.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -29481,7 +29403,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 181,
+            "line": 169,
             "description": "items attribute setter. It sets items attribute with the results.",
             "itemtype": "method",
             "name": "_setItems",
@@ -29500,7 +29422,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 211,
+            "line": 199,
             "description": "Finds location in item by a given locationId and returns the item.",
             "itemtype": "method",
             "name": "_findItemByLocationId",
@@ -29523,7 +29445,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 230,
+            "line": 218,
             "description": "Fires the `explorerNavigate` event to explore the chosen location.",
             "itemtype": "method",
             "name": "_fireExplorerNavigate",
@@ -29535,7 +29457,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 242,
+            "line": 230,
             "description": "Navigates to the given item's location in the explorer.",
             "itemtype": "event",
             "name": "explorerNavigate",
@@ -29562,7 +29484,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 260,
+            "line": 248,
             "description": "The items to display",
             "itemtype": "attribute",
             "name": "items",
@@ -29573,7 +29495,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 274,
+            "line": 262,
             "description": "Defines if the level view own the current selected item",
             "itemtype": "attribute",
             "name": "ownSelecteditem",
@@ -29584,7 +29506,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 284,
+            "line": 272,
             "description": "The location id of the selected item",
             "itemtype": "attribute",
             "name": "selectLocationId",
@@ -29596,7 +29518,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 295,
+            "line": 283,
             "description": "The depth of the level view (the first level view depth is 1)",
             "itemtype": "attribute",
             "name": "depth",
@@ -29607,7 +29529,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 303,
+            "line": 291,
             "description": "The offset to start the locationSearch to",
             "itemtype": "attribute",
             "name": "offset",
@@ -29618,7 +29540,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 313,
+            "line": 301,
             "description": "The limit of the results",
             "itemtype": "attribute",
             "name": "limit",
@@ -29629,7 +29551,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 323,
+            "line": 311,
             "description": "The number of total child the parent location has.",
             "itemtype": "attribute",
             "name": "childCount",
@@ -29640,23 +29562,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 55,
-            "description": "Returns a Location array representing the path to display. This path\nincludes the virtual root Location, the starting Location path and\nthe starting Location (if there's a starting Location).",
-            "itemtype": "method",
-            "name": "_getLevelViewPath",
-            "access": "protected",
-            "tagname": "",
-            "return": {
-                "description": "of Location.",
-                "type": "Array"
-            },
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 77,
+            "line": 35,
             "description": "Custom reset implementation to explicitly reset the explorer level views.",
             "itemtype": "method",
             "name": "reset",
@@ -29666,7 +29572,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 90,
+            "line": 53,
             "description": "Activates every level views",
             "itemtype": "method",
             "name": "wakeUp",
@@ -29676,7 +29582,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 101,
+            "line": 64,
             "description": "explorerNavigates event handler. Handles the levelViews by removing and/or adding levels if necessary",
             "itemtype": "method",
             "name": "_handleLevelViews",
@@ -29705,7 +29611,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 128,
+            "line": 91,
             "description": "Activates the given levelView",
             "itemtype": "method",
             "name": "_activateLevelView",
@@ -29724,7 +29630,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 139,
+            "line": 102,
             "description": "Renders the given levelView",
             "itemtype": "method",
             "name": "_renderLevelView",
@@ -29743,27 +29649,24 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 160,
-            "description": "Removes and destroy level views.",
+            "line": 123,
+            "description": "Removes and destroy the last level views from the levelViews attribute.",
             "itemtype": "method",
             "name": "_removeLevels",
             "params": [
                 {
                     "name": "count",
-                    "description": "the number of level views to remove. If\nomitted, the complete list is removed.",
-                    "type": "Number",
-                    "optional": true
+                    "description": "the number of levelviews to remove.",
+                    "type": "Number"
                 }
             ],
-            "access": "protected",
-            "tagname": "",
             "class": "eZ.UniversalDiscoveryFinderExplorerView",
             "module": "ez-universaldiscoveryfinderexplorerview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 175,
+            "line": 135,
             "description": "Creates and add an explorer level view to the levelViews.\nThen renders, activates and display it.",
             "itemtype": "method",
             "name": "_addLevel",
@@ -29772,22 +29675,15 @@
                     "name": "location",
                     "description": "the parent location",
                     "type": "Y.eZ.Location"
-                },
-                {
-                    "name": "selectedLocationId",
-                    "description": "the location id that should be\nselected in the level view",
-                    "type": "Number"
                 }
             ],
-            "access": "protected",
-            "tagname": "",
             "class": "eZ.UniversalDiscoveryFinderExplorerView",
             "module": "ez-universaldiscoveryfinderexplorerview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 202,
+            "line": 158,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "levelViewConstructor",
@@ -29799,31 +29695,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 216,
-            "description": "The starting Location if the UDW is configured with one.",
-            "itemtype": "attribute",
-            "name": "startingLocation",
-            "type": "{eZ.Location|false|Null}",
-            "default": "{Null}",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 227,
-            "description": "The virtual root Location object",
-            "itemtype": "attribute",
-            "name": "virtualRootLocation",
-            "type": "{eZ.Location}",
-            "required": 1,
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 236,
+            "line": 172,
             "description": "The tab containing the universalDiscoveryFinderExplorerLevelViews to explore.",
             "itemtype": "attribute",
             "name": "levelViews",
@@ -29974,29 +29846,17 @@
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
             "line": 152,
-            "description": "The starting Location if the UDW is configured with one. It is\ndirectly set on the finder explorer view.",
-            "itemtype": "attribute",
-            "name": "startingLocation",
-            "type": "{eZ.Location|false}",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 166,
-            "description": "The virtual root Location object. It is directly set on the\nfinder explorer view.",
+            "description": "Holds the virtual root location",
             "itemtype": "attribute",
             "name": "virtualRootLocation",
             "type": "{eZ.Location}",
-            "required": 1,
             "class": "eZ.UniversalDiscoveryFinderView",
             "module": "ez-universaldiscoveryfinderview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 181,
+            "line": 169,
             "description": "Holds the selected view that displays the currently selected\ncontent (if any)",
             "itemtype": "attribute",
             "name": "selectedView",
@@ -30007,7 +29867,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 198,
+            "line": 186,
             "description": "Holds the finder explorer view that allows the user to explore contents",
             "itemtype": "attribute",
             "name": "finderExplorerView",
@@ -30110,29 +29970,6 @@
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
             "line": 110,
-            "description": "The starting Location model if the UDW is configured with one.",
-            "itemtype": "attribute",
-            "name": "startingLocation",
-            "type": "{eZ.Location|false}",
-            "class": "eZ.UniversalDiscoveryMethodBaseView",
-            "module": "ez-universaldiscoverymethodbaseview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 118,
-            "description": "The virtual root Location object.",
-            "itemtype": "attribute",
-            "name": "virtualRootLocation",
-            "type": "{eZ.Location}",
-            "required": 1,
-            "class": "eZ.UniversalDiscoveryMethodBaseView",
-            "module": "ez-universaldiscoverymethodbaseview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 127,
             "description": "Flag indicating whether the Content should be provided in the\nselection.",
             "itemtype": "attribute",
             "name": "loadContent",
@@ -30144,7 +29981,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 139,
+            "line": 122,
             "description": "The visible flag. it is updated by the universal discovery view\ndepending on the tab state.",
             "itemtype": "attribute",
             "name": "visible",
@@ -30156,7 +29993,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 151,
+            "line": 134,
             "description": "Checks wether the content is already selected.",
             "itemtype": "attribute",
             "name": "isAlreadySelected",
@@ -30167,7 +30004,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
-            "line": 164,
+            "line": 147,
             "description": "Checks wether the content is selectable.",
             "itemtype": "attribute",
             "name": "isSelectable",
@@ -37686,7 +37523,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 275,
+            "line": 273,
             "description": "Stores a reference to the visible method view",
             "itemtype": "property",
             "name": "_visibleMethodView",
@@ -37699,7 +37536,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 302,
+            "line": 298,
             "description": "tabChange event handler to update the `visibleMethod` attribute.",
             "itemtype": "method",
             "name": "_updateVisibleMethod",
@@ -37718,7 +37555,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 319,
+            "line": 315,
             "description": "Publishes the cancelDiscover and contentDiscovered events",
             "itemtype": "method",
             "name": "_publishEvents",
@@ -37730,7 +37567,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 340,
+            "line": 336,
             "description": "cancelDiscoverHandlerChange and contentDiscoveredHandlerChange event\nhandler. It makes sure the potential previous event handler are\nremoved and it adds the new handlers if any.",
             "itemtype": "method",
             "name": "_syncEventHandler",
@@ -37759,7 +37596,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 360,
+            "line": 356,
             "description": "Resets the state of the view",
             "itemtype": "method",
             "name": "_resetState",
@@ -37771,7 +37608,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 374,
+            "line": 370,
             "description": "Custom reset implementation to make sure to reset the confirmed list\nsub view.",
             "itemtype": "method",
             "name": "reset",
@@ -37788,7 +37625,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 389,
+            "line": 385,
             "description": "Tap event handler on the cancel link(s).",
             "itemtype": "method",
             "name": "_cancel",
@@ -37807,7 +37644,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 398,
+            "line": 394,
             "description": "Fired when the user cancel the selection. By default, the\napplication will close the universal discovery view but this\nevent can be prevented or stopped to avoid that.",
             "itemtype": "event",
             "name": "cancelDiscover",
@@ -37818,7 +37655,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 409,
+            "line": 405,
             "description": "Tap event handler on the confirm button",
             "itemtype": "method",
             "name": "_confirmSelection",
@@ -37830,7 +37667,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 416,
+            "line": 412,
             "description": "Fired when the user confirms the selection. By default, the\napplication will close the universal discovery view but this\nevent can be prevented and stopped so that it does not bubble to\nthe app plugin responsible for that.",
             "itemtype": "event",
             "name": "contentDiscovered",
@@ -37848,7 +37685,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 448,
+            "line": 444,
             "description": "Renders the available methods in a DOM element which id is the\nHTML identifier of the method.",
             "itemtype": "method",
             "name": "_renderMethods",
@@ -37860,7 +37697,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 463,
+            "line": 459,
             "description": "Builds an array containing objects that describes the available\nmethods.",
             "access": "protected",
             "tagname": "",
@@ -37875,7 +37712,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 485,
+            "line": 481,
             "description": "Title of the universal discovery view",
             "itemtype": "attribute",
             "name": "title",
@@ -37887,7 +37724,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 496,
+            "line": 492,
             "description": "Flag indicating whether the user is able to select several\ncontents.",
             "itemtype": "attribute",
             "name": "multiple",
@@ -37899,8 +37736,8 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 508,
-            "description": "The id of a Location that should be considered as the starting\npoint when discovering Content.",
+            "line": 504,
+            "description": "The location id that the UDW tree will select on start",
             "itemtype": "attribute",
             "name": "startingLocationId",
             "type": "{String}",
@@ -37911,29 +37748,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 520,
-            "description": "The Location that should be considered as the starting point when\ndiscovering Content.",
-            "itemtype": "attribute",
-            "name": "startingLocation",
-            "type": "{eZ.Location|false}",
-            "class": "eZ.UniversalDiscoveryView",
-            "module": "ez-universaldiscoveryview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 531,
-            "description": "The virtual root Location object.",
-            "itemtype": "attribute",
-            "name": "virtualRootLocation",
-            "type": "{eZ.Location}",
-            "class": "eZ.UniversalDiscoveryView",
-            "module": "ez-universaldiscoveryview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 539,
+            "line": 515,
             "description": "Flag indicating whether the Content should be provided in the\nselection.",
             "itemtype": "attribute",
             "name": "loadContent",
@@ -37945,7 +37760,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 551,
+            "line": 527,
             "description": "An event handler function for the `contentDiscovered` event.",
             "itemtype": "attribute",
             "name": "contentDiscoveredHandler",
@@ -37957,7 +37772,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 562,
+            "line": 538,
             "description": "An event handler function for the `cancelDiscover` event.",
             "itemtype": "attribute",
             "name": "cancelDiscoverHandler",
@@ -37969,7 +37784,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 573,
+            "line": 549,
             "description": "The available methods to discover content. Each element in the\narray should be an instance of a class extending\nY.eZ.UniversalDiscoveryMethodBaseView.",
             "itemtype": "attribute",
             "name": "methods",
@@ -37980,7 +37795,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 608,
+            "line": 580,
             "description": "The identifier of the visible method",
             "itemtype": "attribute",
             "name": "visibleMethod",
@@ -37992,7 +37807,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 619,
+            "line": 591,
             "description": "The current selection of the discovery. This selection is\nprovided to the contentDiscovered event handler in the event\nfacade. Depending on the `multiple` flag and on the user action,\nthe selection is either null or an object (`multiple` set to\nfalse) or an array (`multiple` set to true)",
             "itemtype": "attribute",
             "name": "selection",
@@ -38005,7 +37820,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 636,
+            "line": 608,
             "description": "The confirmed list view. It displays the user's current confirmed\nlist content.",
             "itemtype": "attribute",
             "name": "@confirmedListView",
@@ -38016,7 +37831,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 651,
+            "line": 623,
             "description": "An arbitrary object the component triggering the universal\ndiscovery can set. It is useful to store some data the\ncontentDiscovered and cancelDiscover handlers need.",
             "itemtype": "attribute",
             "name": "data",
@@ -38028,7 +37843,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 664,
+            "line": 636,
             "description": "Checks wether the content is selectable. Function can be provided in the config\nwhen firing the `contentDiscover` event so it can check if content is selectable\ndepending on the context where UDW is triggered.",
             "itemtype": "attribute",
             "name": "isSelectable",
