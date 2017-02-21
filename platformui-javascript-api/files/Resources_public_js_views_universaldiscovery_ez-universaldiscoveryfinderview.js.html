@@ -707,20 +707,32 @@ YUI.add(&#x27;ez-universaldiscoveryfinderview&#x27;, function (Y) {
             },
 
             /**
-             * Holds the virtual root location
+             * The starting Location if the UDW is configured with one. It is
+             * directly set on the finder explorer view.
+             *
+             * @attribute startingLocation
+             * @type {eZ.Location|false}
+             */
+            startingLocation: {
+                setter: function (startingLocation) {
+                    this.get(&#x27;finderExplorerView&#x27;).set(&#x27;startingLocation&#x27;, startingLocation);
+                    return startingLocation;
+                }
+            },
+
+            /**
+             * The virtual root Location object. It is directly set on the
+             * finder explorer view.
              *
              * @attribute virtualRootLocation
              * @type {eZ.Location}
+             * @required
              */
             virtualRootLocation: {
-                valueFn: function () {
-                    return new Y.eZ.Location({
-                        id: &#x27;/api/ezp/v2/content/locations/1&#x27;,
-                        locationId: 1,
-                        sortField: &#x27;SECTION&#x27;,
-                        sortOrder: &#x27;ASC&#x27;,
-                    });
-                },
+                setter: function (virtualRootLocation) {
+                    this.get(&#x27;finderExplorerView&#x27;).set(&#x27;virtualRootLocation&#x27;, virtualRootLocation);
+                    return virtualRootLocation;
+                }
             },
 
             /**
@@ -750,7 +762,6 @@ YUI.add(&#x27;ez-universaldiscoveryfinderview&#x27;, function (Y) {
                 valueFn: function () {
                     return new Y.eZ.UniversalDiscoveryFinderExplorerView({
                         bubbleTargets: this,
-                        startingLocation: this.get(&#x27;virtualRootLocation&#x27;),
                     });
                 },
             },
