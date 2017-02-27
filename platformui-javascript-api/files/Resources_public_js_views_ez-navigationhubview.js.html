@@ -642,6 +642,7 @@ YUI.add(&#x27;ez-navigationhubview&#x27;, function (Y) {
                 var oldHeight;
 
                 if ( this.get(&#x27;active&#x27;) ) {
+                    this.set(&#x27;navigationFixed&#x27;, false);
                     oldHeight = this._getContainerHeight();
                     this._uiSetActiveNavigation(e.prevVal);
                     this._navigateToZone(e.newVal);
