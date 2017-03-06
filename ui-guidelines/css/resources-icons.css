@@ -16,7 +16,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
+    display: inline-block;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -57,8 +57,6 @@
 
 /*Spinners*/
 .ez-spin {
-    position: absolute;
-    margin-left: -1.8%;
     animation: spin 1.75s linear infinite;
 }
 
@@ -74,40 +72,26 @@
 .ez-spin-sq {
     font-size: 2rem;
     position: absolute;
-    margin-top: -1%;
-    margin-left: -1%;
+    margin-top: .6rem;
+    margin-left: .6rem;
     background-color: #ffffff;
     font-weight: bold;
-    
-    animation: clock 2s linear infinite;
+    animation: clock 1.5s linear infinite;
 }
 
 @keyframes clock {
     25% {
-        transform: translateX(2.75rem);
+        transform: translateX(1.5rem);
     }
     50% {
-        transform: translateX(2.75rem) translateY(2.75rem);
+        transform: translateX(1.5rem) translateY(1.5rem);
     }
     75% {
-        transform: translateX(0) translateY(2.75rem);
+        transform: translateX(0) translateY(1.5rem);
     }
     100% {
         transform: translateX(0) translateY(0);
     }
-}
-
-.spinner-label {
-    padding: 0 0.5rem;
-    font-size: 1.15rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    margin: -0.5rem;
-}
-
-.spinner-label-x {
-    margin-top: 5rem;
 }
 
 /*icons*/
