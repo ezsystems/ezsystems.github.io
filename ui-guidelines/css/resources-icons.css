@@ -55,6 +55,61 @@
     text-align: center;
 }
 
+/*Spinners*/
+.ez-spin {
+    position: absolute;
+    margin-left: -1.8%;
+    animation: spin 1.75s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ez-spin-sq {
+    font-size: 2rem;
+    position: absolute;
+    margin-top: -1%;
+    margin-left: -1%;
+    background-color: #ffffff;
+    font-weight: bold;
+    
+    animation: clock 2s linear infinite;
+}
+
+@keyframes clock {
+    25% {
+        transform: translateX(2.75rem);
+    }
+    50% {
+        transform: translateX(2.75rem) translateY(2.75rem);
+    }
+    75% {
+        transform: translateX(0) translateY(2.75rem);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.spinner-label {
+    padding: 0 0.5rem;
+    font-size: 1.15rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: -0.5rem;
+}
+
+.spinner-label-x {
+    margin-top: 5rem;
+}
+
 /*icons*/
 .ez-icon-about:before {
     content: "\e900";
