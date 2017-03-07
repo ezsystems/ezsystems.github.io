@@ -188,6 +188,10 @@ hr {
     margin-top: 1em;
 }
 
+.top-min {
+    margin-top: 0.5em;
+}
+
 .bottom-half-extra {
     margin-bottom: 1.5em;
 }

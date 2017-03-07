@@ -16,7 +16,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
+    display: inline-block;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -53,6 +53,45 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-align: center;
+}
+
+/*Spinners*/
+.ez-spin {
+    animation: spin 1.75s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ez-spin-sq {
+    font-size: 2rem;
+    position: absolute;
+    margin-top: .6rem;
+    margin-left: .6rem;
+    background-color: #ffffff;
+    font-weight: bold;
+    animation: clock 1.5s linear infinite;
+}
+
+@keyframes clock {
+    25% {
+        transform: translateX(1.5rem);
+    }
+    50% {
+        transform: translateX(1.5rem) translateY(1.5rem);
+    }
+    75% {
+        transform: translateX(0) translateY(1.5rem);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
 }
 
 /*icons*/
