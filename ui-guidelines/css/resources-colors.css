@@ -101,6 +101,10 @@
 }
 
 .c-focus-background {
+    background-color: #2b84b1;
+}
+
+.c-focus-background-alt {
     background-color: #fcb700;
 }
 
