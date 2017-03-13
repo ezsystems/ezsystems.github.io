@@ -36,35 +36,35 @@
 
 /*Primary colors*/
 .c-primary {
-    background-color: #ff7543;
-}
-
-.c-primary-hover {
     background-color: #f15a10;
 }
 
+.c-primary-hover {
+    background-color: #c3480b;
+}
+
 .c-secondary {
-    background-color: #2b84b1;
+    background-color: #0f6d95;
 }
 
 .c-secondary-hover {
-    background-color: #006094;
+    background-color: #0a4b67;
 }
 
 .c-neutral {
-    background-color: #9b9b9b;
+    background-color: #757575;
 }
 
 .c-neutral-hover {
-    background-color: #667076;
+    background-color: #5c5c5c;
 }
 
 .c-negative {
-    background-color: #e85365;
+    background-color: #cb2540;
 }
 
 .c-negative-hover {
-    background-color: #d92d42;
+    background-color: #a01d32;
 }
 
 /*Secondary colors*/
@@ -101,6 +101,10 @@
 }
 
 .c-focus-background {
+    background-color: #2b84b1;
+}
+
+.c-focus-background-alt {
     background-color: #fcb700;
 }
 
