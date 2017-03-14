@@ -6841,7 +6841,7 @@ the attribute is not readOnly, or writeOnce.
     </div>
 
     <div class="description">
-        <p>Restores the item to it's original location</p>
+        <p>Restores the item to it's original location or to a given one if specified</p>
 
     </div>
 
@@ -6866,6 +6866,17 @@ the attribute is not readOnly, or writeOnce.
 
                                 <div class="param-description">
                                     <p>(required) the JS REST client instance</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[destination]</code>
+                                    <span class="type">Object</span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>if provided, locationId under which the item will be restored.</p>
 
                                 </div>
 
@@ -8002,7 +8013,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:64</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l69"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:69</code></a>
                             </p>
                     
                     
@@ -8066,7 +8077,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l174"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:174</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l179"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:179</code></a>
                             </p>
                     
                     
@@ -8095,7 +8106,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l75"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:75</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l80"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:80</code></a>
                             </p>
                     
                     
@@ -8156,7 +8167,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l86"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:86</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l91"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:91</code></a>
                             </p>
                     
                     
@@ -8256,7 +8267,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l97"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:97</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l102"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:102</code></a>
                             </p>
                     
                     
@@ -8286,7 +8297,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l108"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:108</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l113"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:113</code></a>
                             </p>
                     
                     
@@ -8316,7 +8327,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l119"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:119</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l124"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:124</code></a>
                             </p>
                     
                     
@@ -8346,7 +8357,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l130"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:130</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l135"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:135</code></a>
                             </p>
                     
                     
@@ -8376,7 +8387,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l141"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:141</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l146"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:146</code></a>
                             </p>
                     
                     
@@ -8406,7 +8417,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l152"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:152</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l157"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:157</code></a>
                             </p>
                     
                     
@@ -8436,7 +8447,7 @@ list.on('*:change', function (e) {
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l163"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:163</code></a>
+                            <a href="../files/Resources_public_js_models_ez-trashitemmodel.js.html#l168"><code>Resources&#x2F;public&#x2F;js&#x2F;models&#x2F;ez-trashitemmodel.js:168</code></a>
                             </p>
                     
                     
