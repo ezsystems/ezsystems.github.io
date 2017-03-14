@@ -25991,6 +25991,11 @@
                             "name": "trashItems",
                             "description": "List of trashItems to be restored",
                             "type": "Array"
+                        },
+                        {
+                            "name": "destination",
+                            "description": "(Optional)  locationId where items need to be restored",
+                            "type": "String"
                         }
                     ]
                 }
@@ -26001,7 +26006,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 260,
+            "line": 261,
             "description": "Fired when a Location is restored.",
             "itemtype": "event",
             "name": "restoredLocation",
@@ -26018,7 +26023,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 283,
+            "line": 284,
             "description": "Fired once trash has just been emptied",
             "itemtype": "event",
             "name": "refreshView",
@@ -26028,7 +26033,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 292,
+            "line": 293,
             "description": "Fire 'notify' event",
             "itemtype": "method",
             "name": "_notify",
@@ -26062,7 +26067,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 313,
+            "line": 314,
             "description": "Returns the view parameters of the trash view",
             "itemtype": "method",
             "name": "_getViewParameters",
@@ -26078,7 +26083,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 328,
+            "line": 329,
             "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
             "itemtype": "attribute",
             "name": "trashItems",
@@ -26091,7 +26096,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 343,
+            "line": 344,
             "description": "Holds the eZ.ContentType constructor function",
             "itemtype": "attribute",
             "name": "contentTypeModelConstructor",
@@ -26103,7 +26108,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 354,
+            "line": 355,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -26115,7 +26120,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-trashviewservice.js",
-            "line": 365,
+            "line": 366,
             "description": "Holds the eZ.TrashItem constructor function",
             "itemtype": "attribute",
             "name": "trashItemModelConstructor",
@@ -37032,7 +37037,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 36,
+            "line": 39,
             "description": "Event handler for the minimizeTrashBarAction event",
             "access": "protected",
             "tagname": "",
@@ -37044,7 +37049,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 46,
+            "line": 49,
             "description": "Renders the trash view",
             "itemtype": "method",
             "name": "render",
@@ -37058,7 +37063,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 67,
+            "line": 70,
             "description": "Sets the minimum height of the view",
             "access": "private",
             "tagname": "",
@@ -37070,7 +37075,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 81,
+            "line": 84,
             "description": "Converts the content of the `trashItems` attribute into JSON",
             "access": "protected",
             "tagname": "",
@@ -37086,8 +37091,79 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 98,
-            "description": "Restores the selected trash items",
+            "line": 101,
+            "description": "Finds a trash item in the item list and returns it",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_findTrashItems",
+            "params": [
+                {
+                    "name": "trashItemId",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "of TrashItem",
+                "type": "Array"
+            },
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 121,
+            "description": "Fires the `restoreItems` event",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_fireRestoreItems",
+            "params": [
+                {
+                    "name": "trashItems",
+                    "description": "Trash items to be restored",
+                    "type": "Array"
+                },
+                {
+                    "name": "destination",
+                    "description": "if provided, Location Id where it will be restored",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 130,
+            "description": "Fired to restore the selected items",
+            "itemtype": "event",
+            "name": "restoreItems",
+            "params": [
+                {
+                    "name": "trashItems",
+                    "description": "Trash items to be restored",
+                    "type": "Array"
+                },
+                {
+                    "name": "destination",
+                    "description": "if provided, Location Id where it will be restored",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "class": "eZ.TrashView",
+            "module": "ez-trashview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-trashview.js",
+            "line": 142,
+            "description": "Restores selected trash items",
             "access": "private",
             "tagname": "",
             "itemtype": "method",
@@ -37098,17 +37174,26 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 117,
-            "description": "Fired to restore the selected items",
-            "itemtype": "event",
-            "name": "restoreItems",
+            "line": 159,
+            "description": "Restores the selected (using UDW) trash item",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_restoreSingleTrashItem",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
             "class": "eZ.TrashView",
             "module": "ez-trashview",
             "namespace": "eZ"
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 124,
+            "line": 184,
             "description": "Updates the TrashBar buttons",
             "access": "private",
             "tagname": "",
@@ -37120,7 +37205,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 137,
+            "line": 197,
             "description": "Update the disable status on a given button of the trashBar",
             "access": "private",
             "tagname": "",
@@ -37144,7 +37229,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 158,
+            "line": 218,
             "description": "List of Trash Items struct:\n - struct.item: Y.eZ.TrashItem\n - struct.parentLocation: Y.eZ.Location\n - struct.contentType: Y.eZ.ContentType",
             "itemtype": "attribute",
             "name": "trashItems",
@@ -37157,7 +37242,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-trashview.js",
-            "line": 173,
+            "line": 233,
             "description": "The trash bar instance, by default an instance {{#crossLink\n\"eZ.TrashBarView\"}}eZ.TrashBarView{{/crossLink}}",
             "itemtype": "attribute",
             "name": "trashBar",
@@ -40754,7 +40839,7 @@
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
             "line": 41,
-            "description": "Restores the item to it's original location",
+            "description": "Restores the item to it's original location or to a given one if specified",
             "itemtype": "method",
             "name": "restore",
             "params": [
@@ -40767,6 +40852,12 @@
                             "name": "api",
                             "description": "(required) the JS REST client instance",
                             "type": "Object"
+                        },
+                        {
+                            "name": "destination",
+                            "description": "if provided, locationId under which the item will be restored.",
+                            "type": "Object",
+                            "optional": true
                         }
                     ]
                 },
@@ -40782,7 +40873,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 64,
+            "line": 69,
             "description": "The trash item's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -40794,7 +40885,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 75,
+            "line": 80,
             "description": "The trash item's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -40806,7 +40897,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 86,
+            "line": 91,
             "description": "The trash item's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -40818,7 +40909,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 97,
+            "line": 102,
             "description": "The trash item's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -40830,7 +40921,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 108,
+            "line": 113,
             "description": "The trash item's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -40842,7 +40933,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 119,
+            "line": 124,
             "description": "The trash item's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -40854,7 +40945,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 130,
+            "line": 135,
             "description": "The trash item's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -40866,7 +40957,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 141,
+            "line": 146,
             "description": "The trash item's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -40878,7 +40969,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 152,
+            "line": 157,
             "description": "The trash item's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -40890,7 +40981,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 163,
+            "line": 168,
             "description": "The trash item's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -40902,7 +40993,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-trashitemmodel.js",
-            "line": 174,
+            "line": 179,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
