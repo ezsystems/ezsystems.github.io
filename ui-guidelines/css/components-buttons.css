@@ -1,0 +1,52 @@
+.buttons-card {
+    width: 75%;
+    height: 15rem;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+}
+
+.buttons-card-header {
+    padding: 1rem 1rem;
+    font-weight: bold;
+    font-style: 'Open Sans', Helvetica, Arial, Sans-serif;
+}
+
+.buttons-card-content {
+    padding: 0 4rem 2.5rem 4rem;
+}
+
+.buttons-card-code {
+    
+}
+
+/* Buttons */
+.ez-button {
+    padding: .75rem 2.25rem;
+    border-radius: 4px;
+    font-family: 'Open Sans', Helvetica, Arial, Sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ez-button[disabled] {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .3;
+}
+
+.ez-button-primary {
+    border: 1px solid #f15a10;
+    background-color: #f15a10;
+    color: #fff;
+    font-size: 1.133em;
+    font-weight: bold;
+}
+
+.ez-button-primary:hover {
+    border: 1px solid #c3480b;
+    background-color: #c3480b;
+}
+
+.ez-button-primary:focus:active {
+    box-shadow: 0px 0px 4px 2px #2b84b1;
+}
