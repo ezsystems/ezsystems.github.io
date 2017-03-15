@@ -32,15 +32,6 @@
     text-align: center;
     cursor: pointer;
     letter-spacing: 1px;
-}
-
-.ez-button[disabled] {
-    cursor: not-allowed;
-    box-shadow: none;
-    opacity: .3;
-}
-
-.ez-button-primary {
     border: 1px solid #f15a10;
     background-color: #f15a10;
     color: #fff;
@@ -48,14 +39,20 @@
     font-weight: bold;
 }
 
-.ez-button-primary:hover {
+.ez-button:hover {
     border: 1px solid #c3480b;
     background-color: #c3480b;
 }
 
-.ez-button-primary:focus,
-.ez-button-primary:active {
+.ez-button:focus,
+.ez-button:active {
     box-shadow: 0px 0px 4px 2px #2b84b1;
+}
+
+.ez-button[disabled] {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .3;
 }
 
 .ez-button-secondary {
