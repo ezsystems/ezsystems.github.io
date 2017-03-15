@@ -1,7 +1,15 @@
+.buttons-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-bottom: 2rem;
+}
+
 .buttons-card {
-    width: 100%;
+    width: 45%;
     height: 15rem;
-    margin-bottom: 5rem;
+    margin: 2rem 2rem 3rem 0rem;
     background-color: #edeced;
     border-radius: 4px;
 }
@@ -14,10 +22,6 @@
 
 .buttons-card-content {
     padding: 0 4rem 1.75rem 4rem;
-}
-
-.buttons-card-code {
-    
 }
 
 /* Buttons */
