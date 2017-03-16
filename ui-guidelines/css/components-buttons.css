@@ -1,30 +1,3 @@
-.buttons-row {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin-bottom: 2rem;
-}
-
-.buttons-card {
-    width: 45%;
-    height: 15rem;
-    margin: 2rem 2rem 3rem 0rem;
-    background-color: #edeced;
-    border-radius: 4px;
-}
-
-.buttons-card-header {
-    padding: 1rem 1rem;
-    font-weight: bold;
-    font-style: 'Open Sans', Helvetica, Arial, Sans-serif;
-}
-
-.buttons-card-content {
-    padding: 0 4rem 1.75rem 4rem;
-}
-
-/* Buttons */
 .ez-button {
     padding: .75rem 2.25rem;
     border-radius: 4px;
@@ -39,14 +12,14 @@
     font-weight: bold;
 }
 
-.ez-button:hover {
+.ez-button:hover:not([disabled]) {
     border: 1px solid #c3480b;
     background-color: #c3480b;
 }
 
 .ez-button:focus,
 .ez-button:active {
-    box-shadow: 0px 0px 4px 2px #2b84b1;
+    box-shadow: 0 0 4px 2px #2b84b1;
 }
 
 .ez-button[disabled] {
@@ -63,14 +36,14 @@
     font-weight: bold;
 }
 
-.ez-button-secondary:hover {
+.ez-button-secondary:hover:not([disabled]) {
     border: 1px solid #0a4b67;
     background-color: #0a4b67;
 }
 
 .ez-button-secondary:focus,
 .ez-button-secondary:active {
-    box-shadow: 0px 0px 4px 2px #fcb700;
+    box-shadow: 0 0 4px 2px #fcb700;
 }
 
 .ez-button-neutral {
@@ -81,14 +54,14 @@
     font-weight: normal;
 }
 
-.ez-button-neutral:hover {
+.ez-button-neutral:hover:not([disabled]) {
     border: 1px solid #5c5c5c;
     background-color: #5c5c5c;
 }
 
 .ez-button-neutral:focus,
 .ez-button-neutral:active {
-    box-shadow: 0px 0px 4px 2px #fcb700;
+    box-shadow: 0 0 4px 2px #fcb700;
 }
 
 .ez-button-negative {
@@ -99,22 +72,35 @@
     font-weight: bold;
 }
 
-.ez-button-negative:hover {
+.ez-button-negative:hover:not([disabled]) {
     border: 1px solid #a01d32;
     background-color: #a01d32;
 }
 
 .ez-button-negative:focus,
 .ez-button-negative:active {
-    box-shadow: 0px 0px 4px 2px #2b84b1;
+    box-shadow: 0 0 4px 2px #2b84b1;
 }
 
-/* prism.css overwrite */
-pre {
-    border: transparent;
-    font-size: 1.5rem;
+.ez-button-ghost {
+    border: 2px solid #0f6d95;
+    background-color: transparent;
+    color: #0f6d95;
 }
 
-.prism-show-language-label {
-    display: none;
+.ez-button-ghost:hover:not([disabled]) {
+    border: 2px solid #0a4b67;
+    background-color: #0a4b67;
+    color: #fff;
+}
+
+.ez-button-ghost:focus,
+.ez-button-ghost:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-button[class^="ez-icon-"] {
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 1.75rem;
 }

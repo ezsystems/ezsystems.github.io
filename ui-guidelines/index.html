@@ -113,56 +113,95 @@
 
 						<div id="components-buttons" class="modules">
 							<h3 class="module-header">Buttons</h3>
-							<h4 class="u-move-down-xlarge">Primary buttons</h4>
+							<h4 class="u-move-down-xlarge">Basic buttons</h4>
 							<hr>
 							<p>We use <code>button</code> as main element for click function. Use a disabled attribute <code>disabled="disabled"</code> when a button can’t be clicked.</p>
-							<div class="buttons-row">
-								<div class="buttons-card">
-									<div class="buttons-card-header">
+							<div class="flex-wrapper">
+								<div class="button-box">
+									<div class="button-card-header">
 										<p>eZ button</p>
 									</div>
-									<div class="buttons-card-content">
+									<div class="button-card-content">
 										<button type="button" class="ez-button">Confirm selection</button>
 									</div>
-									<div class="buttons-card-code">
+									<div class="button-card-code">
 										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">Confirm selection&lt;/button></code></pre>
 									</div>
 								</div>
-								<div class="buttons-card">
-									<div class="buttons-card-header">
+								<div class="button-box">
+									<div class="button-card-header">
 										<p>eZ button - Disabled</p>
 									</div>
-									<div class="buttons-card-content">
+									<div class="button-card-content">
 										<button type="button" class="ez-button" disabled="disabled">Confirm selection</button>
 									</div>
 									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button" disabled="disabled">Confirm selection&lt;/button></code></pre>
 								</div>
-								<div class="buttons-card">
-									<div class="buttons-card-header">
+								<div class="button-box">
+									<div class="button-card-header">
 										<p>Secondary button</p>
 									</div>
-									<div class="buttons-card-content">
+									<div class="button-card-content">
 										<button type="button" class="ez-button ez-button-secondary">Save</button>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">Confirm selection&lt;/button></code></pre>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">Save&lt;/button></code></pre>
 								</div>
-								<div class="buttons-card">
-									<div class="buttons-card-header">
+								<div class="button-box">
+									<div class="button-card-header">
 										<p>Neutral button</p>
 									</div>
-									<div class="buttons-card-content">
+									<div class="button-card-content">
 										<button type="button" class="ez-button ez-button-neutral">Cancel</button>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-neutral">Confirm selection&lt;/button></code></pre>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-neutral">Cancel&lt;/button></code></pre>
 								</div>
-								<div class="buttons-card">
-									<div class="buttons-card-header">
+								<div class="button-box">
+									<div class="button-card-header">
 										<p>Negative button</p>
 									</div>
-									<div class="buttons-card-content">
+									<div class="button-card-content">
 										<button type="button" class="ez-button ez-button-negative">Delete</button>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-negative">Confirm selection&lt;/button></code></pre>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-negative">Delete&lt;/button></code></pre>
+								</div>
+								<div class="button-box">
+									<div class="button-card-header">
+										<p>Ghost button</p>
+									</div>
+									<div class="button-card-content">
+										<button type="button" class="ez-button ez-button-ghost">Show 10 more results</button>
+									</div>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-ghost">Show 10 more results&lt;/button></code></pre>
+								</div>
+							</div>
+							<p>When adding icons to basic buttons just add the icon class name <code>span</code> tag before the text of the button.</p>
+							<div class="flex-wrapper">
+								<div class="button-box">
+									<div class="button-card-header">
+										<p>eZ button with icon</p>
+									</div>
+									<div class="button-card-content">
+										<button type="button" class="ez-button"><span class="ez-icon-relations"></span>Select content</button>
+									</div>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">&lt;span class="ez-icon-relations">&lt;/span>Select content&lt;/button></code></pre>
+								</div>
+								<div class="button-box">
+									<div class="button-card-header">
+										<p>Secondary button with icon</p>
+									</div>
+									<div class="button-card-content">
+										<button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add group</button>
+									</div>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">&lt;span class="ez-icon-create">&lt;/span>Add group&lt;/button></code></pre>
+								</div>
+								<div class="button-box">
+									<div class="button-card-header">
+										<p>Negative button with icon</p>
+									</div>
+									<div class="button-card-content">
+										<button type="button" class="ez-button ez-button-negative"><span class="ez-icon-trash"></span>Delete</button>
+									</div>
+									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">&lt;span class="ez-icon-relations">&lt;/span>Delete&lt;/button></code></pre>
 								</div>
 							</div>
 						</div>
