@@ -1,0 +1,106 @@
+.ez-button {
+    padding: .75rem 2.25rem;
+    border-radius: 4px;
+    font-family: 'Open Sans', Helvetica, Arial, Sans-serif;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border: 1px solid #f15a10;
+    background-color: #f15a10;
+    color: #fff;
+    font-size: 1.133em;
+    font-weight: bold;
+}
+
+.ez-button:hover:not([disabled]) {
+    border: 1px solid #c3480b;
+    background-color: #c3480b;
+}
+
+.ez-button:focus,
+.ez-button:active {
+    box-shadow: 0 0 4px 2px #2b84b1;
+}
+
+.ez-button[disabled] {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .3;
+}
+
+.ez-button-secondary {
+    border: 1px solid #0f6d95;
+    background-color: #0f6d95;
+    color: #fff;
+    font-size: 1.133em;
+    font-weight: bold;
+}
+
+.ez-button-secondary:hover:not([disabled]) {
+    border: 1px solid #0a4b67;
+    background-color: #0a4b67;
+}
+
+.ez-button-secondary:focus,
+.ez-button-secondary:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-button-neutral {
+    border: 1px solid #757575;
+    background-color: #757575;
+    color: #fff;
+    font-size: 1.133em;
+    font-weight: normal;
+}
+
+.ez-button-neutral:hover:not([disabled]) {
+    border: 1px solid #5c5c5c;
+    background-color: #5c5c5c;
+}
+
+.ez-button-neutral:focus,
+.ez-button-neutral:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-button-negative {
+    border: 1px solid #cb2540;
+    background-color: #cb2540;
+    color: #fff;
+    font-size: 1.133em;
+    font-weight: bold;
+}
+
+.ez-button-negative:hover:not([disabled]) {
+    border: 1px solid #a01d32;
+    background-color: #a01d32;
+}
+
+.ez-button-negative:focus,
+.ez-button-negative:active {
+    box-shadow: 0 0 4px 2px #2b84b1;
+}
+
+.ez-button-ghost {
+    border: 2px solid #0f6d95;
+    background-color: transparent;
+    color: #0f6d95;
+}
+
+.ez-button-ghost:hover:not([disabled]) {
+    border: 2px solid #0a4b67;
+    background-color: #0a4b67;
+    color: #fff;
+}
+
+.ez-button-ghost:focus,
+.ez-button-ghost:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-button[class^="ez-icon-"] {
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
