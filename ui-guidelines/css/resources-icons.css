@@ -21,45 +21,6 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-row {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin-bottom: 2rem;
-}
-
-.icon-group {
-    margin: .5rem .5rem 0 0;
-}
-
-.icon-box {
-    height: 10rem;
-    width: 10rem;
-    background-color: #f3f3f3;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    text-align: center;
-}
-
-.icon-size {
-    font-size: 32px;
-}
-
-.icon-label {
-    margin-top: -1rem;
-    padding: 0 .5rem;
-    font-size: 1.15rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
-
-.icon-label-line {
-    line-height: 13px;
-    margin-top: .75rem;
-}
-
 /*Spinners*/
 .ez-spin {
     animation: spin 1.75s linear infinite;
