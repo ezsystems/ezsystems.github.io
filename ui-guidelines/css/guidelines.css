@@ -259,6 +259,36 @@ hr {
     margin-top: .75rem;
 }
 
+/* Components - coding strip */
+/* prism.css overwrite */
+pre {
+    border: transparent;
+    font-size: 1.5rem;
+}
+
+.prism-show-language-label {
+    display: none;
+}
+
+/* Components - buttons */
+.button-box {
+    width: 45%;
+    height: 15rem;
+    margin: 2rem 2rem 3rem 0;
+    background-color: #edeced;
+    border-radius: 4px;
+}
+
+.button-card-header {
+    padding: 1rem 1rem;
+    font-weight: bold;
+    font-style: 'Open Sans', Helvetica, Arial, Sans-serif;
+}
+
+.button-card-content {
+    padding: 0 4rem 1.75rem 4rem;
+}
+
 /*==== UTILITIES/HELPERS ====*/
 .top-half-extra {
     margin-top: 2em;
