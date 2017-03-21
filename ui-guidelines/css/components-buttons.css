@@ -99,7 +99,7 @@
     box-shadow: 0 0 4px 2px #fcb700;
 }
 
-.ez-button[class^="ez-icon-"] {
+.ez-button [class^="ez-icon-"] {
     padding-right: 10px;
     font-weight: bold;
     font-size: 1.75rem;
