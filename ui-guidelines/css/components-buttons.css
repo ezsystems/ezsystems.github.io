@@ -101,6 +101,7 @@
 
 .ez-button [class^="ez-icon-"] {
     padding-right: 10px;
-    font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.5em;
+    line-height: .5em;
+    vertical-align: -40%;
 }
