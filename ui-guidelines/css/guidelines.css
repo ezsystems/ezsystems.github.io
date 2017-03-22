@@ -233,16 +233,12 @@ hr {
 }
 
 .icon-frame {
-    height: 10rem;
-    width: 10rem;
+    height: 11rem;
+    width: 11rem;
     background-color: #f3f3f3;
     border: 1px solid transparent;
     border-radius: 4px;
     text-align: center;
-}
-
-.icon-size {
-    font-size: 32px;
 }
 
 .icon-label {

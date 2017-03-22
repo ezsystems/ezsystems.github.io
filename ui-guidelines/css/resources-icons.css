@@ -21,75 +21,25 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-/*Spinners*/
-.ez-spin {
-    animation: spin 1.75s linear infinite;
+/* Icons sizes */
+.ez-icon-x1 {
+    font-size: 1em;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.ez-icon-x2 {
+    font-size: 2em;
 }
 
-.ez-spin-sq-fill {
-    font-size: 2.5rem;
-    position: absolute;
-    margin-top: 1.75rem;
-    margin-left: 1.75rem;
-    background-color: #fff;
-    font-weight: bold;
-    animation: loader 3s infinite ease;
+.ez-icon-x3 {
+    font-size: 2.5em;
 }
 
-@keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(180deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.ez-icon-x4 {
+    font-size: 3em;
 }
 
-.sq-loader-inner {
-    vertical-align: top;
-    position: absolute;
-    margin-left: -2.35rem;
-    margin-top: 2%;
-    max-height: 87%;
-    width: 87%;
-    background-color: #f05a22;
-    animation: loader-inner 3s infinite ease-in;
-}
-
-@keyframes loader-inner {
-    0% {
-        height: 0%;
-    }
-    25% {
-        height: 0%;
-    }
-    50% {
-        height: 100%;
-    }
-    75% {
-        height: 100%;
-    }
-    100% {
-        height: 0%;
-    }
+.ez-icon-x5 {
+    font-size: 4em;
 }
 
 /*icons*/
@@ -607,4 +557,75 @@
 
 .ez-icon-wiki:before {
     content: "\e980";
+}
+
+/*Spinners*/
+.ez-spin {
+    animation: spin 1.75s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ez-spin-sq-fill {
+    font-size: 2.5rem;
+    position: absolute;
+    margin-top: 1.75rem;
+    margin-left: 1.75rem;
+    background-color: #fff;
+    font-weight: bold;
+    animation: loader 3s infinite ease;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sq-loader-inner {
+    vertical-align: top;
+    position: absolute;
+    margin-left: -2.35rem;
+    margin-top: 2%;
+    max-height: 87%;
+    width: 87%;
+    background-color: #f05a22;
+    animation: loader-inner 3s infinite ease-in;
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+    25% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
 }
