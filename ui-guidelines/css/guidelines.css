@@ -241,6 +241,11 @@ hr {
     text-align: center;
 }
 
+.icon-frame-spinner {
+    height: 13rem;
+    width: 13rem;
+}
+
 .icon-label {
     margin-top: -1rem;
     padding: 0 .5rem;
