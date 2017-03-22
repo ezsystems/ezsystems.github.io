@@ -443,7 +443,7 @@
     content: "\e963";
 }
 
-.ez-icon-spinner:before {
+.ez-icon-loading:before {
     content: "\e964";
 }
 
@@ -573,59 +573,42 @@
     }
 }
 
-.ez-spin-sq-fill {
-    font-size: 2.5rem;
-    position: absolute;
-    margin-top: 1.75rem;
-    margin-left: 1.75rem;
+.ez-icon-square {
     background-color: #fff;
-    font-weight: bold;
-    animation: loader 3s infinite ease;
 }
 
-@keyframes loader {
+.ez-square-clock {
+    position: absolute;
+    background-color: #f15922;
+    z-index: 10;
+    margin-top: .65em;
+    margin-left: .65em;
+    animation: clock 2s linear infinite;
+}
+
+@keyframes clock {
     0% {
         transform: rotate(0deg);
+        background-color: #fff;
     }
+
     25% {
         transform: rotate(180deg);
+        background: #fff;
     }
+
     50% {
         transform: rotate(180deg);
+        background: #f15922;
     }
+
     75% {
         transform: rotate(360deg);
+        background: #f15922;
     }
+
     100% {
         transform: rotate(360deg);
-    }
-}
-
-.sq-loader-inner {
-    vertical-align: top;
-    position: absolute;
-    margin-left: -2.35rem;
-    margin-top: 2%;
-    max-height: 87%;
-    width: 87%;
-    background-color: #f05a22;
-    animation: loader-inner 3s infinite ease-in;
-}
-
-@keyframes loader-inner {
-    0% {
-        height: 0%;
-    }
-    25% {
-        height: 0%;
-    }
-    50% {
-        height: 100%;
-    }
-    75% {
-        height: 100%;
-    }
-    100% {
-        height: 0%;
+        background: #fff;
     }
 }
