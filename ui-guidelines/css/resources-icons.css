@@ -169,83 +169,83 @@
     content: "\e912";
 }
 
-.ez-icon-circle-break:before {
+.ez-icon-circle-caret-back:before {
     content: "\e913";
 }
 
-.ez-icon-circle-caret-back:before {
+.ez-icon-circle-caret-close:before {
     content: "\e914";
 }
 
-.ez-icon-circle-caret-close:before {
+.ez-icon-circle-caret-down:before {
     content: "\e915";
 }
 
-.ez-icon-circle-caret-down:before {
+.ez-icon-circle-caret-next:before {
     content: "\e916";
 }
 
-.ez-icon-circle-caret-next:before {
+.ez-icon-circle-caret-up:before {
     content: "\e917";
 }
 
-.ez-icon-circle-caret-up:before {
+.ez-icon-circle-create:before {
     content: "\e918";
 }
 
-.ez-icon-circle-create:before {
+.ez-icon-clipboard:before {
     content: "\e919";
 }
 
-.ez-icon-clipboard:before {
+.ez-icon-comment:before {
     content: "\e91a";
 }
 
-.ez-icon-comment:before {
+.ez-icon-content-list:before {
     content: "\e91b";
 }
 
-.ez-icon-content-list:before {
+.ez-icon-content-types:before {
     content: "\e91c";
 }
 
-.ez-icon-content-types:before {
+.ez-icon-copy:before {
     content: "\e91d";
 }
 
-.ez-icon-copy:before {
+.ez-icon-create-content:before {
     content: "\e91e";
 }
 
-.ez-icon-create-content:before {
+.ez-icon-create-landingpage:before {
     content: "\e91f";
 }
 
-.ez-icon-create-landingpage:before {
+.ez-icon-create:before {
     content: "\e920";
 }
 
-.ez-icon-create:before {
+.ez-icon-dashboard:before {
     content: "\e921";
 }
 
-.ez-icon-dashboard:before {
+.ez-icon-discard:before {
     content: "\e922";
 }
 
-.ez-icon-discard:before {
+.ez-icon-download:before {
     content: "\e923";
 }
 
-.ez-icon-download:before {
+.ez-icon-drag:before {
     content: "\e924";
 }
 
-.ez-icon-drag:before {
+.ez-icon-edit:before {
     content: "\e925";
 }
 
-.ez-icon-edit:before {
+.ez-icon-embed:before {
     content: "\e926";
 }
 
@@ -397,198 +397,214 @@
     content: "\e94b";
 }
 
-.ez-icon-personalize:before {
+.ez-icon-personalize-block:before {
     content: "\e94c";
 }
 
-.ez-icon-place-list:before {
+.ez-icon-personalize-content:before {
     content: "\e94d";
 }
 
-.ez-icon-place:before {
+.ez-icon-pin-unpin:before {
     content: "\e94e";
 }
 
-.ez-icon-portfolio:before {
+.ez-icon-pin:before {
     content: "\e94f";
 }
 
-.ez-icon-product-list:before {
+.ez-icon-place-list:before {
     content: "\e950";
 }
 
-.ez-icon-product:before {
+.ez-icon-place:before {
     content: "\e951";
 }
 
-.ez-icon-publish-later-cancel:before {
+.ez-icon-portfolio:before {
     content: "\e952";
 }
 
-.ez-icon-publish-later:before {
+.ez-icon-product-list:before {
     content: "\e953";
 }
 
-.ez-icon-publish:before {
+.ez-icon-product:before {
     content: "\e954";
 }
 
-.ez-icon-recommended:before {
+.ez-icon-publish-later-cancel:before {
     content: "\e955";
 }
 
-.ez-icon-refresh:before {
+.ez-icon-publish-later:before {
     content: "\e956";
 }
 
-.ez-icon-relations:before {
+.ez-icon-publish:before {
     content: "\e957";
 }
 
-.ez-icon-review:before {
+.ez-icon-recommended:before {
     content: "\e958";
 }
 
-.ez-icon-roles:before {
+.ez-icon-refresh:before {
     content: "\e959";
 }
 
-.ez-icon-rss:before {
+.ez-icon-relations:before {
     content: "\e95a";
 }
 
-.ez-icon-save:before {
+.ez-icon-review:before {
     content: "\e95b";
 }
 
-.ez-icon-schedule:before {
+.ez-icon-roles:before {
     content: "\e95c";
 }
 
-.ez-icon-search:before {
+.ez-icon-rss:before {
     content: "\e95d";
 }
 
-.ez-icon-sections:before {
+.ez-icon-save:before {
     content: "\e95e";
 }
 
-.ez-icon-settings-block:before {
+.ez-icon-schedule:before {
     content: "\e95f";
 }
 
-.ez-icon-shuffle:before {
+.ez-icon-search:before {
     content: "\e960";
 }
 
-.ez-icon-square:before {
+.ez-icon-sections:before {
     content: "\e961";
 }
 
-.ez-icon-stats:before {
+.ez-icon-settings-block:before {
     content: "\e962";
 }
 
-.ez-icon-subscriber:before {
+.ez-icon-shuffle:before {
     content: "\e963";
 }
 
-.ez-icon-swap:before {
+.ez-icon-spinner:before {
     content: "\e964";
 }
 
-.ez-icon-system-information:before {
+.ez-icon-square:before {
     content: "\e965";
 }
 
-.ez-icon-tag:before {
+.ez-icon-stats:before {
     content: "\e966";
 }
 
-.ez-icon-tags:before {
+.ez-icon-subscriber:before {
     content: "\e967";
 }
 
-.ez-icon-translation:before {
+.ez-icon-swap:before {
     content: "\e968";
 }
 
-.ez-icon-trash-empty:before {
+.ez-icon-system-information:before {
     content: "\e969";
 }
 
-.ez-icon-trash-send:before {
+.ez-icon-tag:before {
     content: "\e96a";
 }
 
-.ez-icon-trash:before {
+.ez-icon-tags:before {
     content: "\e96b";
 }
 
-.ez-icon-upload:before {
+.ez-icon-translation:before {
     content: "\e96c";
 }
 
-.ez-icon-user:before {
+.ez-icon-trash-empty:before {
     content: "\e96d";
 }
 
-.ez-icon-users:before {
+.ez-icon-trash-send:before {
     content: "\e96e";
 }
 
-.ez-icon-versions:before {
+.ez-icon-trash:before {
     content: "\e96f";
 }
 
-.ez-icon-video:before {
+.ez-icon-upload:before {
     content: "\e970";
 }
 
-.ez-icon-view-custom:before {
+.ez-icon-user:before {
     content: "\e971";
 }
 
-.ez-icon-view-desktop:before {
+.ez-icon-users:before {
     content: "\e972";
 }
 
-.ez-icon-view-grid:before {
+.ez-icon-versions:before {
     content: "\e973";
 }
 
-.ez-icon-view-hide:before {
+.ez-icon-video:before {
     content: "\e974";
 }
 
-.ez-icon-view-list:before {
+.ez-icon-view-custom:before {
     content: "\e975";
 }
 
-.ez-icon-view-mobile:before {
+.ez-icon-view-desktop:before {
     content: "\e976";
 }
 
-.ez-icon-view-tablet:before {
+.ez-icon-view-grid:before {
     content: "\e977";
 }
 
-.ez-icon-view:before {
+.ez-icon-view-hide:before {
     content: "\e978";
 }
 
-.ez-icon-wand:before {
+.ez-icon-view-list:before {
     content: "\e979";
 }
 
-.ez-icon-warning:before {
+.ez-icon-view-mobile:before {
     content: "\e97a";
 }
 
-.ez-icon-wiki-file:before {
+.ez-icon-view-tablet:before {
     content: "\e97b";
 }
 
-.ez-icon-wiki:before {
+.ez-icon-view:before {
     content: "\e97c";
+}
+
+.ez-icon-wand:before {
+    content: "\e97d";
+}
+
+.ez-icon-warning:before {
+    content: "\e97e";
+}
+
+.ez-icon-wiki-file:before {
+    content: "\e97f";
+}
+
+.ez-icon-wiki:before {
+    content: "\e980";
 }
