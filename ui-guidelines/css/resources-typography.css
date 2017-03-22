@@ -1,21 +1,7 @@
-.typography {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
 
-.light {
-    font-weight: 300;
-}
-
-.normal {
-    font-weight: 500;
-}
-
-.medium {
-    font-weight: 600;
-}
-
-.bold {
-    font-weight: 700;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -36,4 +22,20 @@ h4 {
 
 h5 {
     font-size: 1.25em;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.normal {
+    font-weight: 500;
+}
+
+.medium {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
 }
