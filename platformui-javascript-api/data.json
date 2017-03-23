@@ -26766,7 +26766,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 67,
+            "line": 70,
             "description": "Returns the property object from its identifier. A property object\ndescribes the property of the content struct to display, it contains:\n\n* the `identifier`\n* the `class` to add to the cell\n* the formated `value`\n* optionnally the value already rendered in `rendered`",
             "itemtype": "method",
             "name": "_getProperty",
@@ -26789,7 +26789,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 99,
+            "line": 102,
             "description": "Returns the array of property object for the properties to display.",
             "itemtype": "method",
             "name": "_getProperties",
@@ -26805,7 +26805,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 112,
+            "line": 115,
             "description": "Renders the property with the template which id is `tplId`.",
             "itemtype": "method",
             "name": "_renderProperty",
@@ -26833,7 +26833,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 132,
+            "line": 135,
             "description": "Finds and returns a method by its name or `fn` if it's already a\nfunction",
             "itemtype": "method",
             "name": "_getFunction",
@@ -26856,7 +26856,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 148,
+            "line": 151,
             "description": "Returns an attribute value of the Content item",
             "itemtype": "method",
             "name": "_getContentAttribute",
@@ -26878,7 +26878,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 160,
+            "line": 163,
             "description": "Returns the name of the content type",
             "itemtype": "method",
             "name": "_getContentTypeName",
@@ -26894,7 +26894,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 174,
+            "line": 177,
             "description": "Returns an attribut value of the Location",
             "itemtype": "method",
             "name": "_getLocationAttribute",
@@ -26916,7 +26916,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 186,
+            "line": 189,
             "description": "Returns the translations list",
             "itemtype": "method",
             "name": "_getTranslations",
@@ -26932,7 +26932,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 198,
+            "line": 201,
             "description": "Formats a date to human readable string.",
             "itemtype": "method",
             "name": "_formatDate",
@@ -26955,7 +26955,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 214,
+            "line": 217,
             "description": "Formats the translations list to a string suitable for the template",
             "itemtype": "method",
             "name": "_formatTranslations",
@@ -26978,7 +26978,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 226,
+            "line": 229,
             "description": "Displays the edit icon to inform the user input can be edited.",
             "itemtype": "method",
             "name": "_displayEditIcon",
@@ -26990,7 +26990,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 238,
+            "line": 241,
             "description": "Hides the edit icon",
             "itemtype": "method",
             "name": "_hideEditIcon",
@@ -27002,7 +27002,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 248,
+            "line": 251,
             "description": "Starts the priority edit by setting the `editingPriority` to true (if\npossible).",
             "itemtype": "method",
             "name": "_startPriorityEdit",
@@ -27014,7 +27014,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 261,
+            "line": 264,
             "description": "Ends the priority edit by setting the `editingPriority` to false.",
             "access": "protected",
             "tagname": "",
@@ -27026,7 +27026,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 271,
+            "line": 274,
             "description": "Shows the error icon to inform the user input is not correctly filled.",
             "itemtype": "method",
             "name": "_displayErrorIcon",
@@ -27038,7 +27038,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 283,
+            "line": 286,
             "description": "Hides the error icon.",
             "itemtype": "method",
             "name": "_hideErrorIcon",
@@ -27050,7 +27050,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 295,
+            "line": 298,
             "description": "Displays the 'validate' & 'cancel' buttons",
             "itemtype": "method",
             "name": "_displayPriorityButtons",
@@ -27062,7 +27062,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 306,
+            "line": 309,
             "description": "`tap` event handler on the cancel button. It makes sure to restore\nthe state of the priority cell.",
             "itemtype": "method",
             "name": "_restorePriorityCell",
@@ -27081,7 +27081,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 320,
+            "line": 323,
             "description": "Restores the input value with the priority of the location",
             "itemtype": "method",
             "name": "_restorePriorityValue",
@@ -27093,7 +27093,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 333,
+            "line": 336,
             "description": "Hides the validate and cancel buttons displayed while editing priority",
             "itemtype": "method",
             "name": "_hidePriorityButtons",
@@ -27105,7 +27105,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 344,
+            "line": 347,
             "description": "`submit` event handler to change the priority of the Location",
             "itemtype": "method",
             "name": "_setPriority",
@@ -27124,7 +27124,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 360,
+            "line": 363,
             "description": "Validates the priority input",
             "itemtype": "method",
             "name": "_validatePriority",
@@ -27136,7 +27136,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 380,
+            "line": 383,
             "description": "Returns the priority cell",
             "itemtype": "method",
             "name": "_getPriorityCell",
@@ -27150,7 +27150,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 390,
+            "line": 393,
             "description": "Returns the priority input",
             "itemtype": "method",
             "name": "_getPriorityInput",
@@ -27164,7 +27164,17 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 401,
+            "line": 403,
+            "description": "Edits the content by sending an edit content request",
+            "itemtype": "method",
+            "name": "_editContent",
+            "class": "eZ.SubitemListItemView",
+            "module": "ez-subitemlistitemview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
+            "line": 416,
             "description": "True is the priority of the Location is being edited",
             "itemtype": "attribute",
             "name": "editingPriority",
@@ -27176,7 +27186,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 412,
+            "line": 427,
             "description": "True is the priority of the Location can be edited",
             "itemtype": "attribute",
             "name": "canEditPriority",
@@ -27188,7 +27198,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 423,
+            "line": 438,
             "description": "The content type of the content item being displayed",
             "itemtype": "attribute",
             "name": "contentType",
@@ -27199,7 +27209,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 431,
+            "line": 446,
             "description": "The location of the content item being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -27210,7 +27220,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 439,
+            "line": 454,
             "description": "The content item being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -27221,7 +27231,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 447,
+            "line": 462,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -27232,7 +27242,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 455,
+            "line": 470,
             "description": "Lists the available porperties to display and the corresponding\nconfiguration for `_getProperty` to extract, format and\noptionnally render the property. The object keys are the property\nidentifiers. Each entry in this object is an object with:\n\n* `extractor`: a function or a method name to extract the value.\nThis function receives the property identifier as a parameter.\n* [optional] `formatter`: a function or a method name to format\nthe value. This function receives the property identifier as a\nparameter.\n* [optional] `template`: a template id to directly render the\nproperty. The template receives the corresponding property\nobject, the Location, the Content item and the Content type\nobjects.",
             "itemtype": "attribute",
             "name": "availableProperties",

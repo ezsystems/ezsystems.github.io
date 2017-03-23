@@ -580,7 +580,7 @@ YUI.add(&#x27;ez-subitemlistitemview&#x27;, function (Y) {
      * @constructor
      * @extends eZ.TemplateBasedView
      */
-    Y.eZ.SubitemListItemView = Y.Base.create(&#x27;subitemListItemView&#x27;, Y.eZ.TemplateBasedView, [Y.eZ.TranslateProperty], {
+    Y.eZ.SubitemListItemView = Y.Base.create(&#x27;subitemListItemView&#x27;, Y.eZ.TemplateBasedView, [Y.eZ.TranslateProperty, Y.eZ.DraftConflict], {
         events: {
             &#x27;.ez-subitemlistitem-priority&#x27;: {
                 &#x27;mouseover&#x27;: &#x27;_displayEditIcon&#x27;,
@@ -596,6 +596,9 @@ YUI.add(&#x27;ez-subitemlistitemview&#x27;, function (Y) {
             },
             &#x27;.ez-subitem-priority-form&#x27;: {
                 &#x27;submit&#x27;: &#x27;_setPriority&#x27;
+            },
+            &#x27;.ez-subitemlistitem-edit&#x27;: {
+                &#x27;tap&#x27;: &#x27;_editContent&#x27;,
             },
         },
 
@@ -922,7 +925,7 @@ YUI.add(&#x27;ez-subitemlistitemview&#x27;, function (Y) {
          */
         _validatePriority: function () {
             var validity;
-            
+
             if ( this.get(&#x27;editingPriority&#x27;) ) {
                 validity = this._getPriorityInput().get(&#x27;validity&#x27;);
 
@@ -952,6 +955,18 @@ YUI.add(&#x27;ez-subitemlistitemview&#x27;, function (Y) {
          */
         _getPriorityInput: function (inputId) {
             return this.get(&#x27;container&#x27;).one(&#x27;.ez-subitem-priority-input&#x27;);
+        },
+
+        /**
+         * Edits the content by sending an edit content request
+         *
+         * @method _editContent
+         */
+        _editContent: function () {
+            this._fireEditContentRequest(
+                this.get(&#x27;location&#x27;).get(&#x27;contentInfo&#x27;),
+                this.get(&#x27;contentType&#x27;)
+            );
         },
     }, {
          ATTRS: {
