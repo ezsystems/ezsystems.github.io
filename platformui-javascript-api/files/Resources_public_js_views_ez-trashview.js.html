@@ -583,6 +583,9 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
             &#x27;.ez-trashitem-box&#x27;: {
                 &#x27;change&#x27;: &#x27;_updateTrashBarButtons&#x27;
             },
+            &#x27;.ez-trashitem-restore&#x27;: {
+                &#x27;tap&#x27;: &#x27;_restoreSingleTrashItem&#x27;
+            },
         },
 
         initializer: function () {
@@ -653,7 +656,48 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
         },
 
         /**
-         * Restores the selected trash items
+         * Finds a trash item in the item list and returns it
+         *
+         * @private
+         * @method _findTrashItems
+         * @param {String} trashItemId
+         * @return {Array} of TrashItem
+         */
+        _findTrashItems: function (trashItemId) {
+            var resultArray = [];
+            Y.Array.some(this.get(&#x27;trashItems&#x27;), function (trashItem) {
+                if (trashItemId === trashItem.item.get(&#x27;id&#x27;)) {
+                    resultArray.push(trashItem.item);
+                    return true;
+                }
+            });
+
+            return resultArray;
+        },
+
+        /**
+         * Fires the &#x60;restoreItems&#x60; event
+         *
+         * @private
+         * @method _fireRestoreItems
+         * @param {Array} trashItems Trash items to be restored
+         * @param {String} [destination] if provided, Location Id where it will be restored
+         */
+        _fireRestoreItems: function (trashItems, destination) {
+            /**
+            * Fired to restore the selected items
+            * @event restoreItems
+            * @param {Array} trashItems Trash items to be restored
+            * @param {String} [destination] if provided, Location Id where it will be restored
+            */
+            this.fire(&#x27;restoreItems&#x27;, {
+                trashItems: trashItems,
+                destination: destination,
+            });
+        },
+
+        /**
+         * Restores selected trash items
          *
          * @private
          * @method _restoreTrashItems
@@ -663,19 +707,35 @@ YUI.add(&#x27;ez-trashview&#x27;, function (Y) {
                 trashItems = [];
 
             selectedTrashItems.each(function (selectedTrashItem) {
-                Y.Array.some(this.get(&#x27;trashItems&#x27;), function (trashItem) {
-                    if (selectedTrashItem.getAttribute(&#x27;value&#x27;) === trashItem.item.get(&#x27;id&#x27;)) {
-                        trashItems.push(trashItem.item);
-                        return true;
-                    }
-                });
+                trashItems = trashItems.concat(this._findTrashItems(selectedTrashItem.getAttribute(&#x27;value&#x27;)));
             }, this);
 
-            /**
-             * Fired to restore the selected items
-             * @event restoreItems
-             */
-            this.fire(&#x27;restoreItems&#x27;, {trashItems: trashItems});
+            this._fireRestoreItems(trashItems);
+        },
+
+        /**
+         * Restores the selected (using UDW) trash item
+         *
+         * @protected
+         * @method _restoreSingleTrashItem
+         * @param {EventFacade} e
+         */
+        _restoreSingleTrashItem: function (e) {
+            var trashItemId = e.target.getAttribute(&#x27;data-trash-item-id&#x27;);
+
+            e.preventDefault();
+            this.fire(&#x27;contentDiscover&#x27;, {
+                config: {
+                    title: Y.eZ.trans(&#x27;trash.ancestor.to.select&#x27;, {}, &#x27;trash&#x27;),
+                    multiple: false,
+                    contentDiscoveredHandler: Y.bind(function (e) {
+                        this._fireRestoreItems(this._findTrashItems(trashItemId), e.selection.location.get(&#x27;id&#x27;));
+                    }, this),
+                    isSelectable: function (contentStruct) {
+                        return contentStruct.contentType.get(&#x27;isContainer&#x27;);
+                    },
+                },
+            });
         },
 
         /**

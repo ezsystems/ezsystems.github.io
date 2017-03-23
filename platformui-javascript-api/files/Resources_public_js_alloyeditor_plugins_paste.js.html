@@ -629,7 +629,7 @@ YUI.add(&#x27;ez-alloyeditor-plugin-paste&#x27;, function (Y) {
         requires: &#x27;clipboard&#x27;,
         init: function (editor) {
             editor.pasteFilter = new CKEDITOR.filter({
-                &#x27;p h1 h2 h3 h4 h5 h6 ul li ol thead th tbody tr&#x27;: true,
+                &#x27;p h1 h2 h3 h4 h5 h6 ul li ol thead th tbody tfoot tr&#x27;: true,
                 &#x27;td th&#x27;: {
                     attributes: [&#x27;colspan&#x27;, &#x27;rowspan&#x27;],
                 },
