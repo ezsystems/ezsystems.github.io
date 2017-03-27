@@ -1,5 +1,5 @@
 .ez-button {
-    padding: .75rem 2.25rem;
+    padding: .85rem 1.75rem;
     border-radius: 4px;
     font-family: 'Open Sans', Helvetica, Arial, Sans-serif;
     text-align: center;
@@ -103,5 +103,5 @@
     padding-right: 10px;
     font-size: 1.5em;
     line-height: .5em;
-    vertical-align: -40%;
+    vertical-align: -37%;
 }
