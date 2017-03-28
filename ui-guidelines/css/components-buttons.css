@@ -105,3 +105,117 @@
     line-height: .5em;
     vertical-align: -37%;
 }
+
+/* ez action buttons */
+.ez-action {
+    width: 105px;
+    height: 5.5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.ez-action-negative {
+    border-top: 1px solid #0d6e96;
+    border-bottom: 1px solid #0d6e96;
+}
+
+.ez-action[disabled] {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .3;
+}
+
+.ez-action-iconwrapper {
+    margin: 0;
+    text-align: center;
+}
+
+.ez-action-icon {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5em;
+    padding: .5em 1em .25em 1em;
+    text-align: center;
+}
+
+.ez-action-label {
+    margin: -.2em .2em 0 .2em;
+    color: #fff;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.ez-action-label-translation {
+    margin: -.2em .2em 0 .2em;
+    font-size: 0.6em;
+    color: #e2db6e;
+}
+
+.ez-action-discoverybar {
+    background-color: #565E63;
+}
+
+.ez-action-discoverybar:hover:not([disabled]) {
+    background-color: #3e4448;
+}
+
+.ez-action-discoverybar:focus,
+.ez-action-discoverybar:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-action-actionbar {
+    background-color: #0a5574;
+}
+
+.ez-action-actionbar:hover:not([disabled]) {
+    background-color: #063345;
+}
+
+.ez-action-actionbar:focus,
+.ez-action-actionbar:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-action-preview {
+    height: 6.5em;
+    cursor: auto;
+    background-color: #0a5574;
+}
+
+.preview-box {
+    margin-left: 25%;
+}
+
+.ez-action-iconwrapper-preview {
+    margin: .35em 0;
+    padding: .3em .1em;
+    width: 65%;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #0e77a3;
+    cursor: pointer;
+}
+
+.ez-action-iconwrapper-preview:hover {
+    background-color: #fff;
+}
+
+.ez-action-iconwrapper-preview:hover .ez-action-icon-preview {
+    color: #0A5574;
+}
+
+.ez-action-iconwrapper-preview:focus,
+.ez-action-iconwrapper-preview:active {
+    box-shadow: 0 0 4px 2px #fcb700;
+}
+
+.ez-action-icon-preview {
+    padding: .075em 0;
+    font-size: 1.65em;
+}
+
+.ez-action-label-preview {
+    margin: -.2em .2em;
+}
