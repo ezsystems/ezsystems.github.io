@@ -270,13 +270,19 @@ pre {
     display: none;
 }
 
+:not(pre) > code[class*="language-"], 
+pre[class*="language-"] {
+    border-radius: 0 0 4px 4px;
+}
+
 /* Components - buttons */
+.button-wrapper {
+    margin: 0 1rem 2rem 0;
+}
 .button-box {
-    width: 45%;
-    height: 15rem;
-    margin: 2rem 2rem 3rem 0;
+    width: 100%;
     background-color: #edeced;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
 }
 
 .button-card-header {
@@ -286,7 +292,12 @@ pre {
 }
 
 .button-card-content {
-    padding: 0 4rem 1.75rem 4rem;
+    padding: 0 4rem 1.75rem 1rem;
+}
+
+.button-code {
+    width: 100%;
+   margin-top: -1rem;
 }
 
 /*==== UTILITIES/HELPERS ====*/
@@ -308,6 +319,10 @@ pre {
 
 .top-min {
     margin-top: 0.5em;
+}
+
+.bottom-extra {
+    margin-bottom: 2em;
 }
 
 .bottom-half-extra {

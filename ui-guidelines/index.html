@@ -116,175 +116,201 @@
 							<h4 class="u-move-down-xlarge">Basic buttons</h4>
 							<hr>
 							<p>We use <code>button</code> as main element for click function. Use a disabled attribute <code>disabled="disabled"</code> when a button can’t be clicked.</p>
-							<div class="flex-wrapper">
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>eZ button</p>
+							<div class="top-low bottom-extra">
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ button</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button">Confirm selection</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button">Confirm selection</button>
-									</div>
-									<div class="button-card-code">
+									<div class="button-code">
 										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">Confirm selection&lt;/button></code></pre>
 									</div>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>eZ button - Disabled</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ button - Disabled</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button" disabled="disabled">Confirm selection</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button" disabled="disabled">Confirm selection</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button" disabled="disabled">Confirm selection&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button" disabled="disabled">Confirm selection&lt;/button></code></pre>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>Secondary button</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Secondary button</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-secondary">Save</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button ez-button-secondary">Save</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">Save&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">Save&lt;/button></code></pre>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>Neutral button</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Neutral button</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-neutral">Cancel</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button ez-button-neutral">Cancel</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-neutral">Cancel&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-neutral">Cancel&lt;/button></code></pre>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>Negative button</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Negative button</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-negative">Delete</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button ez-button-negative">Delete</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-negative">Delete&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-negative">Delete&lt;/button></code></pre>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>Ghost button</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Ghost button</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-ghost">Show 10 more results</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button ez-button-ghost">Show 10 more results</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-ghost">Show 10 more results&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-ghost">Show 10 more results&lt;/button></code></pre>
 								</div>
 							</div>
 							<p>When adding icons to basic buttons just add the icon class name <code>span</code> tag before the text of the button.</p>
-							<div class="flex-wrapper">
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>eZ button with icon</p>
+							<div class="top-low bottom-extra">
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ button with icon</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button"><span class="ez-icon-relations"></span>Select content</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button"><span class="ez-icon-relations"></span>Select content</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">&lt;span class="ez-icon-relations">&lt;/span>Select content&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">&lt;span class="ez-icon-relations">&lt;/span>Select content&lt;/button></code></pre>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>Secondary button with icon</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Secondary button with icon</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add group</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add group</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">&lt;span class="ez-icon-create">&lt;/span>Add group&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button ez-button-secondary">&lt;span class="ez-icon-create">&lt;/span>Add group&lt;/button></code></pre>
 								</div>
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>Negative button with icon</p>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Negative button with icon</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-negative"><span class="ez-icon-trash"></span>Delete</button>
+										</div>
 									</div>
-									<div class="button-card-content">
-										<button type="button" class="ez-button ez-button-negative"><span class="ez-icon-trash"></span>Delete</button>
+									<div class="button-code">
+										<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">&lt;span class="ez-icon-relations">&lt;/span>Delete&lt;/button></code></pre>
 									</div>
-									<pre class="line-numbers language-markup"><code>&lt;button type="button" class="ez-button">&lt;span class="ez-icon-relations">&lt;/span>Delete&lt;/button></code></pre>
 								</div>
 							</div>
 							<h4 class="u-move-down-xlarge">Action buttons</h4>
 							<hr>
 							<p>We use <code>.ez-action</code> as main element for buttons contained within action bars (discovery &#38; action bars). Use a disabled attribute <code>disabled="disabled"</code> when a button can’t be clicked.</p>
-							<div class="flex-wrapper">
-								<div class="button-box">
-									<div class="button-card-header">
-										<p>eZ action button - Discovery bar</p>
-									</div>
-									<div class="button-card-content">
-										<button class="ez-action ez-action-discoverybar">  
-						                    <p class="ez-action-iconwrapper"><span class="ez-icon-search ez-action-icon"></span></p>
-						                    <p class="ez-action-label">Search</p>
-						                </button>
-						            </div>
-						            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-discoverybar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-search ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Search&lt;/p>&lt;/button></code></pre>
-						        </div>
-					        </div>
-					        <div class="flex-wrapper">
-					        	<div class="button-box">
-					        		<div class="button-card-header">
-					        			<p>eZ action button - Action bar</p>
-					        		</div>
-						        	<div class="button-card-content">
-						        		<button class="ez-action ez-action-actionbar">
-						                    <p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
-						                    <p class="ez-action-label">Edit</p>
-						                </button>
-						            </div>
-						            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-actionbar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-edit ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Edit&lt;/p>&lt;/button></code></pre>
-						        </div>
-						        <div class="button-box">
-					        		<div class="button-card-header">
-					        			<p>eZ action button - Action bar disabled</p>
-					        		</div>
-						        	<div class="button-card-content">
-						        		<button class="ez-action ez-action-actionbar" disabled="disabled">
-						                    <p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
-						                    <p class="ez-action-label">Edit</p>
-						                </button>
-						            </div>
-						            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-actionbar" disabled="disabled">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-edit ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Edit&lt;/p>&lt;/button></code></pre>
-						        </div>
-						        <div class="button-box">
-					        		<div class="button-card-header">
-					        			<p>eZ action button - Action bar Translations</p>
-					        		</div>
-						        	<div class="button-card-content">
-						        		<button class="ez-action ez-action-actionbar">
-						                    <p class="ez-action-iconwrapper"><span class="ez-icon-translation ez-action-icon"></span></p>
-						                    <p class="ez-action-label">Translations</p>
-						                    <p class="ez-action-label-translation">English (EN-GB)</p>
-						                </button>
-						            </div>
-						            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-actionbar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-translation ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Translations&lt;/p>&lt;p class="ez-action-label-translation">English (EN-GB)&lt;/p>&lt;/button></code></pre>
-						        </div>
-						        <div class="button-box">
-					        		<div class="button-card-header">
-					        			<p>eZ action button - Action bar negative</p>
-					        		</div>
-						        	<div class="button-card-content">
-						        		<button class="ez-action ez-action-negative ez-action-actionbar">
-						                    <p class="ez-action-iconwrapper"><span class="ez-icon-trash-send ez-action-icon"></span></p>
-						                    <p class="ez-action-label">Send to trash</p>
-						                </button>
-						            </div>
-						            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-negative ez-action-actionbar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-trash-send ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Send to trash&lt;/p>&lt;/button></code></pre>
-						        </div>
-						        <div class="button-box">
-					        		<div class="button-card-header">
-					        			<p>eZ action button - Action bar preview</p>
-					        		</div>
-						        	<div class="button-card-content">
-						        		<button class="ez-action ez-action-preview">
-						                    <div class="preview-box">
-						                        <p class="ez-action-iconwrapper ez-action-iconwrapper-preview"><span class="ez-icon-view-desktop ez-action-icon ez-action-icon-preview"></span></p>
-						                    </div>
-						                    <p class="ez-action-label ez-action-label-preview">Preview</p>
-						                </button>
-						            </div>
-						            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-preview">&lt;div class="preview-box">&lt;p class="ez-action-iconwrapper ez-action-iconwrapper-preview">&lt;span class="ez-icon-view-desktop ez-action-icon ez-action-icon-preview">&lt;/span>&lt;/p>&lt;/div>&lt;p class="ez-action-label ez-action-label-preview">Preview&lt;/p>&lt;/button></code></pre>
-						        </div>
+							<div class="top-low bottom-extra">
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ action button - Discovery bar</p>
+										<div class="button-card-content">
+											<button class="ez-action ez-action-discoverybar">  
+							                    <p class="ez-action-iconwrapper"><span class="ez-icon-search ez-action-icon"></span></p>
+							                    <p class="ez-action-label">Search</p>
+							                </button>
+							            </div>
+							        </div>
+							        <div class="button-code">
+							            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-discoverybar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-search ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Search&lt;/p>&lt;/button></code></pre>
+							        </div>
+							    </div>
+							    <div class="button-wrapper">
+						        	<div class="button-box">
+						        		<p class="button-card-header">eZ action button - Action bar</p>
+							        	<div class="button-card-content">
+							        		<button class="ez-action ez-action-actionbar">
+							                    <p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
+							                    <p class="ez-action-label">Edit</p>
+							                </button>
+							            </div>
+							        </div>
+							        <div class="button-code">
+							            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-actionbar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-edit ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Edit&lt;/p>&lt;/button></code></pre>
+							        </div>
+							    </div>
+							    <div class="button-wrapper">
+							        <div class="button-box">
+						        		<p class="button-card-header">eZ action button - Action bar disabled</p>
+							        	<div class="button-card-content">
+							        		<button class="ez-action ez-action-actionbar" disabled="disabled">
+							                    <p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
+							                    <p class="ez-action-label">Edit</p>
+							                </button>
+							            </div>
+							        </div>
+							        <div class="button-code">
+							            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-actionbar" disabled="disabled">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-edit ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Edit&lt;/p>&lt;/button></code></pre>
+							        </div>
+							    </div>
+							    <div class="button-wrapper">
+							        <div class="button-box">
+						        		<p class="button-card-header">eZ action button - Action bar Translations</p>
+							        	<div class="button-card-content">
+							        		<button class="ez-action ez-action-actionbar">
+							                    <p class="ez-action-iconwrapper"><span class="ez-icon-translation ez-action-icon"></span></p>
+							                    <p class="ez-action-label">Translations</p>
+							                    <p class="ez-action-label-translation">English (EN-GB)</p>
+							                </button>
+							            </div>
+							        </div>
+							        <div class="button-code">
+							            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-actionbar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-translation ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Translations&lt;/p>&lt;p class="ez-action-label-translation">English (EN-GB)&lt;/p>&lt;/button></code></pre>
+							        </div>
+							    </div>
+							    <div class="button-wrapper">
+							        <div class="button-box">
+						        		<p class="button-card-header">eZ action button - Action bar negative</p>
+							        	<div class="button-card-content">
+							        		<button class="ez-action ez-action-negative ez-action-actionbar">
+							                    <p class="ez-action-iconwrapper"><span class="ez-icon-trash-send ez-action-icon"></span></p>
+							                    <p class="ez-action-label">Send to trash</p>
+							                </button>
+							            </div>
+							        </div>
+							        <div class="button-code">
+							            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-negative ez-action-actionbar">&lt;p class="ez-action-iconwrapper">&lt;span class="ez-icon-trash-send ez-action-icon">&lt;/span>&lt;/p>&lt;p class="ez-action-label">Send to trash&lt;/p>&lt;/button></code></pre>
+							        </div>
+							    </div>
+							    <div class="button-wrapper">
+							        <div class="button-box">
+						        		<p class="button-card-header">eZ action button - Action bar preview</p>
+							        	<div class="button-card-content">
+							        		<button class="ez-action ez-action-preview">
+							                    <div class="preview-box">
+							                        <p class="ez-action-iconwrapper ez-action-iconwrapper-preview"><span class="ez-icon-view-desktop ez-action-icon ez-action-icon-preview"></span></p>
+							                    </div>
+							                    <p class="ez-action-label ez-action-label-preview">Preview</p>
+							                </button>
+							            </div>
+							        </div>
+							        <div class="button-code">
+							            <pre class="line-numbers language-markup"><code>&lt;button class="ez-action ez-action-preview">&lt;div class="preview-box">&lt;p class="ez-action-iconwrapper ez-action-iconwrapper-preview">&lt;span class="ez-icon-view-desktop ez-action-icon ez-action-icon-preview">&lt;/span>&lt;/p>&lt;/div>&lt;p class="ez-action-label ez-action-label-preview">Preview&lt;/p>&lt;/button></code></pre>
+							        </div>
+							    </div>
 						    </div>
 						</div>
 					</div>
