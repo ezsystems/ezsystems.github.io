@@ -36,32 +36,8 @@
     background-color: #106d95;
 }
 
-.c-action-bar-line {
-    background-color: #7aaabe;
-}
-
-.c-general-bar {
+.c-discovery-bar {
     background-color: #667076;
-}
-
-.c-general-bar-line {
-    background-color: #bbb;
-}
-
-.c-action-bar-preview {
-    background-color: #185068;
-}
-
-.c-form-border {
-    background-color: #b1d2e0;
-}
-
-.c-form-data {
-    background-color: #3b6d86;
-}
-
-.c-form-dropdown {
-    background-color: #747474;
 }
 
 .c-focus-background {
@@ -90,39 +66,19 @@
 }
 
 .c-hyperlink {
-    background-color: #f15922;
+    background-color: #0645ad;
 }
 
 .c-breadcrumb {
+    background-color: #0a4b67;
+}
+
+.c-breadcrumb-disabled {
     background-color: #6b6b6b;
 }
 
 .c-text-translation {
     background-color: #4b4b4b;
-}
-
-.c-text-section {
-    background-color: #2b84b1;
-}
-
-.c-text-tab-nonactive {
-    background-color: #909090;
-}
-
-.c-text-translation-actionbar {
-    background-color: #e2db6e;
-}
-
-.c-text-generalbar {
-    background-color: #fdfdfd; 
-}
-
-.c-text-actionbar {
-    background-color: #e1f5ff;
-}
-
-.c-text-stu-blockelements {
-    background-color: #7e7e7e;
 }
 
 /*Background colors*/
@@ -172,13 +128,13 @@
 
 /*Notification colors*/
 .c-feedback-positive {
-    background-color: #17a98d;
+    background-color: #00825c;
 }
 
 .c-feedback-processing {
-    background-color: #ffc035;
+    background-color: #f7d000;
 }
 
 .c-feedback-negative {
-    background-color: #e85365;
+    background-color: #d6194a;
 }
