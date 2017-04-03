@@ -212,6 +212,7 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
                                 <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
+                                <li><a href="../classes/eZ.Plugin.SectionLoad.html">eZ.Plugin.SectionLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
@@ -239,6 +240,7 @@
                                 <li><a href="../classes/eZ.SearchListView.html">eZ.SearchListView</a></li>
                                 <li><a href="../classes/eZ.SearchView.html">eZ.SearchView</a></li>
                                 <li><a href="../classes/eZ.SearchViewService.html">eZ.SearchViewService</a></li>
+                                <li><a href="../classes/eZ.Section.html">eZ.Section</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
                                 <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
@@ -459,6 +461,8 @@
                                 <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-searchview.html">ez-searchview</a></li>
                                 <li><a href="../modules/ez-searchviewservice&#x27;.html">ez-searchviewservice&#x27;</a></li>
+                                <li><a href="../modules/ez-sectionloadplugin.html">ez-sectionloadplugin</a></li>
+                                <li><a href="../modules/ez-sectionmodel.html">ez-sectionmodel</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -600,9 +604,12 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
                 &#x27;NAME&#x27;: Y.eZ.trans(&#x27;sort.name&#x27;, {}, &#x27;locationview&#x27;),
             };
 
-            this._fireMethod = this._fireLoadUser;
+            this._fireMethod = function() {
+                this._fireLoadSection();
+                this._fireLoadUser();
+            };
 
-            this.after([&#x27;creatorChange&#x27;, &#x27;ownerChange&#x27;], function (e) {
+            this.after([&#x27;creatorChange&#x27;, &#x27;ownerChange&#x27;, &#x27;sectionChange&#x27;], function (e) {
                 this.render();
             });
             this._addDOMEventHandlers(events);
@@ -619,7 +626,8 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
                 currentVersion = content.get(&#x27;currentVersion&#x27;),
                 translationsList = currentVersion.getTranslationsList(),
                 creator = null,
-                owner = null;
+                owner = null,
+                section = null;
 
             if (this.get(&#x27;creator&#x27;)) {
                 creator=this.get(&#x27;creator&#x27;).toJSON();
@@ -629,6 +637,10 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
                 owner=this.get(&#x27;owner&#x27;).toJSON();
             }
 
+            if (this.get(&#x27;section&#x27;)) {
+                section = this.get(&#x27;section&#x27;).toJSON();
+            }
+            
             container.setHTML(this.template({
                 &quot;content&quot;: content.toJSON(),
                 &quot;location&quot;: this.get(&#x27;location&#x27;).toJSON(),
@@ -639,7 +651,8 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
                 &quot;languageCount&quot;: translationsList.length,
                 &quot;loadingError&quot;: this.get(&#x27;loadingError&#x27;),
                 &quot;sortFields&quot;: this._getSortFields(),
-                &quot;isAscendingOrder&quot;: (this.get(&#x27;sortOrder&#x27;) === &#x27;ASC&#x27;)
+                &quot;isAscendingOrder&quot;: (this.get(&#x27;sortOrder&#x27;) === &#x27;ASC&#x27;),
+                &quot;section&quot;: section,
             }));
 
             return this;
@@ -739,6 +752,31 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
                 });
             }
         },
+
+        /**
+         * Fire the &#x60;loadSection&#x60; event
+         * @method _fireLoadSection
+         * @protected
+         */
+        _fireLoadSection: function () {
+            var callback = Y.bind(function (error, section) {
+                    if (error) {
+                        this.fire(&#x27;error&#x27;, Y.eZ.trans(&#x27;failed.to.load.section&#x27;, {}, &#x27;locationview&#x27;));    
+                    } else {
+                        this.set(&#x27;section&#x27;, section);
+                    }
+                }, this);
+            /**
+             * Fired when the details view needs section
+             * @event loadSection
+             * @param {eZ.Content} content the content
+             * @param {Function} callback
+             */
+            this.fire(&#x27;loadSection&#x27;, {
+                content: this.get(&#x27;content&#x27;),
+                callback: callback
+            });
+        },
     }, {
         ATTRS: {
             /**
@@ -836,6 +874,14 @@ YUI.add(&#x27;ez-locationviewdetailstabview&#x27;, function (Y) {
             sortOrder: {
                 value: &#x27;&#x27;
             },
+
+            /**
+             * The section
+             *
+             * @attribute section
+             * @type {eZ.Section}
+             */
+            section: {},
         }
     });
 });

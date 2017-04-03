@@ -175,6 +175,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.Plugin.RegisterUrlHelpers",
         "eZ.Plugin.SaveDraft",
         "eZ.Plugin.Search",
+        "eZ.Plugin.SectionLoad",
         "eZ.Plugin.UniversalDiscoveryContentTree",
         "eZ.Plugin.UpdateTree",
         "eZ.Plugin.UserDrafts",
@@ -202,6 +203,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.SearchListView",
         "eZ.SearchView",
         "eZ.SearchViewService",
+        "eZ.Section",
         "eZ.SectionServerSideView",
         "eZ.SectionServerSideViewService",
         "eZ.SelectionEditView",
@@ -420,6 +422,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-searchplugin",
         "ez-searchview",
         "ez-searchviewservice'",
+        "ez-sectionloadplugin",
+        "ez-sectionmodel",
         "ez-sectionserversideview",
         "ez-selection-editview",
         "ez-selection-table",
@@ -1275,6 +1279,16 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-searchviewservice'",
             "name": "ez-searchviewservice'",
             "description": "Provides the search view service class"
+        },
+        {
+            "displayName": "ez-sectionloadplugin",
+            "name": "ez-sectionloadplugin",
+            "description": "Provides the section load plugin"
+        },
+        {
+            "displayName": "ez-sectionmodel",
+            "name": "ez-sectionmodel",
+            "description": "Provides the Section model class"
         },
         {
             "displayName": "ez-sectionserversideview",

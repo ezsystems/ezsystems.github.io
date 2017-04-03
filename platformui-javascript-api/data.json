@@ -1264,6 +1264,19 @@
                 "eZ.Plugin": 1
             }
         },
+        "Resources/public/js/views/services/plugins/ez-sectionloadplugin.js": {
+            "name": "Resources/public/js/views/services/plugins/ez-sectionloadplugin.js",
+            "modules": {
+                "ez-sectionloadplugin": 1
+            },
+            "classes": {
+                "eZ.Plugin.SectionLoad": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            }
+        },
         "Resources/public/js/views/services/plugins/ez-universaldiscoverycontenttreeplugin.js": {
             "name": "Resources/public/js/views/services/plugins/ez-universaldiscoverycontenttreeplugin.js",
             "modules": {
@@ -2466,6 +2479,19 @@
             },
             "classes": {
                 "eZ.RestModel": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            }
+        },
+        "Resources/public/js/models/ez-sectionmodel.js": {
+            "name": "Resources/public/js/models/ez-sectionmodel.js",
+            "modules": {
+                "ez-sectionmodel": 1
+            },
+            "classes": {
+                "eZ.Section": 1
             },
             "fors": {},
             "namespaces": {
@@ -4766,6 +4792,22 @@
             "line": 14,
             "description": "Provides the search plugin"
         },
+        "ez-sectionloadplugin": {
+            "name": "ez-sectionloadplugin",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Plugin.SectionLoad": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ.Plugin": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/views/services/plugins/ez-sectionloadplugin.js",
+            "line": 14,
+            "description": "Provides the section load plugin"
+        },
         "ez-universaldiscoverycontenttreeplugin": {
             "name": "ez-universaldiscoverycontenttreeplugin",
             "submodules": {},
@@ -6046,6 +6088,22 @@
             "file": "Resources/public/js/models/ez-restmodel.js",
             "line": 18,
             "description": "Provides the RestModel abstract class"
+        },
+        "ez-sectionmodel": {
+            "name": "ez-sectionmodel",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "eZ.Section": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "eZ": 1
+            },
+            "tag": "module",
+            "file": "Resources/public/js/models/ez-sectionmodel.js",
+            "line": 15,
+            "description": "Provides the Section model class"
         },
         "ez-trashitemmodel": {
             "name": "ez-trashitemmodel",
@@ -8365,6 +8423,22 @@
             "extends": "eZ.Plugin.ViewServiceBase",
             "since": "1.2"
         },
+        "eZ.Plugin.SectionLoad": {
+            "name": "eZ.Plugin.SectionLoad",
+            "shortname": "eZ.Plugin.SectionLoad",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-sectionloadplugin",
+            "namespace": "eZ.Plugin",
+            "file": "Resources/public/js/views/services/plugins/ez-sectionloadplugin.js",
+            "line": 14,
+            "description": "Object section load plugin.\n\nIn order to use it you need to fire the `loadSection` event with two parameters:\n - `content` the content containing the section to be loaded\n - `callback` the callback",
+            "is_constructor": 1,
+            "extends": "eZ.Plugin.ViewServiceBase"
+        },
         "eZ.Plugin.UniversalDiscoveryContentTree": {
             "name": "eZ.Plugin.UniversalDiscoveryContentTree",
             "shortname": "eZ.Plugin.UniversalDiscoveryContentTree",
@@ -9884,6 +9958,22 @@
             "description": "Abstract class for the model objects loaded from the\neZ Publish REST API. It provides some helper methods to deal with type\nconversions and generic mapping system to map the JSON structure the\nattributes.",
             "is_constructor": 1,
             "extends": "Model"
+        },
+        "eZ.Section": {
+            "name": "eZ.Section",
+            "shortname": "eZ.Section",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ez-sectionmodel",
+            "namespace": "eZ",
+            "file": "Resources/public/js/models/ez-sectionmodel.js",
+            "line": 15,
+            "description": "Section model",
+            "is_constructor": 1,
+            "extends": "eZ.RestModel"
         },
         "eZ.TrashItem": {
             "name": "eZ.TrashItem",
@@ -22532,6 +22622,25 @@
             "namespace": "eZ.Plugin"
         },
         {
+            "file": "Resources/public/js/views/services/plugins/ez-sectionloadplugin.js",
+            "line": 32,
+            "description": "Loads a Section. Once this is done, it sets the section in\nthe attribute defined in the event parameter of the event target.",
+            "access": "protected",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "_loadSection",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "loadSection event facade",
+                    "type": "Object"
+                }
+            ],
+            "class": "eZ.Plugin.SectionLoad",
+            "module": "ez-sectionloadplugin",
+            "namespace": "eZ.Plugin"
+        },
+        {
             "file": "Resources/public/js/views/services/plugins/ez-universaldiscoverycontenttreeplugin.js",
             "line": 34,
             "description": "Builds the tree for the universal discovery browse view. The tree is\nalso initialize with the true flag so the Content items are\nalso loaded because they are needed for browse and search UDW methods.",
@@ -27795,7 +27904,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 91,
+            "line": 100,
             "description": "Map the sortFields identifiers in objects.\nThese objects contain the identifier, the name of the sort field and a boolean to see if it's the current selected sortField.",
             "itemtype": "method",
             "name": "_getSortFields",
@@ -27811,7 +27920,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 108,
+            "line": 117,
             "description": "Check if the default sortField is 'standard', then get the available ordering methods.\n'Standard' sort fields are: Content name, Priority, Modification date, Publication date",
             "itemtype": "method",
             "name": "_getOrderingMethods",
@@ -27827,7 +27936,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 126,
+            "line": 135,
             "description": "Set the selected sort type attribute",
             "itemtype": "method",
             "name": "_setSortType",
@@ -27839,7 +27948,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 140,
+            "line": 149,
             "description": "Set the selected sort order attribute",
             "itemtype": "method",
             "name": "_setSortingOrder",
@@ -27851,7 +27960,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 154,
+            "line": 163,
             "description": "Fire the `loadUser` event",
             "itemtype": "method",
             "name": "_fireLoadUser",
@@ -27863,7 +27972,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 163,
+            "line": 172,
             "description": "Fired when the details view needs authors",
             "itemtype": "event",
             "name": "loadUser",
@@ -27885,7 +27994,41 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 187,
+            "line": 195,
+            "description": "Fire the `loadSection` event",
+            "itemtype": "method",
+            "name": "_fireLoadSection",
+            "access": "protected",
+            "tagname": "",
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 208,
+            "description": "Fired when the details view needs section",
+            "itemtype": "event",
+            "name": "loadSection",
+            "params": [
+                {
+                    "name": "content",
+                    "description": "the content",
+                    "type": "eZ.Content"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 221,
             "description": "The title of the tab",
             "itemtype": "attribute",
             "name": "title",
@@ -27897,7 +28040,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 201,
+            "line": 235,
             "description": "The identifier of the tab",
             "itemtype": "attribute",
             "name": "identifier",
@@ -27910,7 +28053,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 214,
+            "line": 248,
             "description": "The creator of the content",
             "itemtype": "attribute",
             "name": "creator",
@@ -27921,7 +28064,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 222,
+            "line": 256,
             "description": "The owner of the content",
             "itemtype": "attribute",
             "name": "owner",
@@ -27932,7 +28075,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 230,
+            "line": 264,
             "description": "The content being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -27944,7 +28087,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 241,
+            "line": 275,
             "description": "The location being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -27956,7 +28099,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 252,
+            "line": 286,
             "description": "The config",
             "itemtype": "attribute",
             "name": "config",
@@ -27968,7 +28111,7 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 263,
+            "line": 297,
             "description": "The selected sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -27979,11 +28122,22 @@
         },
         {
             "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
-            "line": 273,
+            "line": 307,
             "description": "The selected sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
             "type": "{String}",
+            "class": "eZ.LocationViewDetailsTabView",
+            "module": "ez-locationviewdetailstabview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/tabs/ez-locationviewdetailstabview.js",
+            "line": 317,
+            "description": "The section",
+            "itemtype": "attribute",
+            "name": "section",
+            "type": "{eZ.Section}",
             "class": "eZ.LocationViewDetailsTabView",
             "module": "ez-locationviewdetailstabview",
             "namespace": "eZ"
@@ -39315,7 +39469,36 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 360,
+            "line": 358,
+            "description": "Loads content's section",
+            "itemtype": "method",
+            "name": "loadSection",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Content",
+            "module": "ez-contentmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-contentmodel.js",
+            "line": 379,
             "description": "Adds new location for content",
             "itemtype": "method",
             "name": "addLocation",
@@ -39349,7 +39532,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 377,
+            "line": 396,
             "description": "Creates a new draft for the content",
             "itemtype": "method",
             "name": "createDraft",
@@ -39383,7 +39566,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 406,
+            "line": 425,
             "description": "Sets main location for content",
             "itemtype": "method",
             "name": "setMainLocation",
@@ -39417,7 +39600,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 431,
+            "line": 450,
             "description": "Deletes the content",
             "itemtype": "method",
             "name": "delete",
@@ -39446,7 +39629,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 462,
+            "line": 481,
             "description": "Fields in the current version of the content indexed by field\ndefinition identifier. This is just shortcut to the fields in the\ncurrent version.",
             "itemtype": "attribute",
             "name": "fields",
@@ -39459,7 +39642,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 481,
+            "line": 500,
             "description": "The relations set by this content",
             "itemtype": "attribute",
             "name": "relations",
@@ -39471,7 +39654,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 492,
+            "line": 511,
             "description": "The current version of the content",
             "itemtype": "attribute",
             "name": "currentVersion",
@@ -39482,7 +39665,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-contentmodel.js",
-            "line": 505,
+            "line": 524,
             "description": "Holds the current version to avoid creating a new object\nagain and again",
             "itemtype": "property",
             "name": "_currentVersion",
@@ -40846,6 +41029,76 @@
             "default": "{}",
             "class": "eZ.RestModel",
             "module": "ez-restmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-sectionmodel.js",
+            "line": 24,
+            "description": "sync implementation that relies on the JS REST client.\nIt only supports the 'read' action. The callback is\ndirectly passed to the corresponding ContentService methods.",
+            "itemtype": "method",
+            "name": "sync",
+            "params": [
+                {
+                    "name": "action",
+                    "description": "the action, currently only 'read' is supported",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "the options for the sync.",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "api",
+                            "description": "(required) the JS REST client instance",
+                            "type": "Object"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "a callback executed when the operation is finished",
+                    "type": "Function"
+                }
+            ],
+            "class": "eZ.Section",
+            "module": "ez-sectionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-sectionmodel.js",
+            "line": 52,
+            "description": "The section's identifier",
+            "itemtype": "attribute",
+            "name": "identifier",
+            "default": "''",
+            "type": "string",
+            "class": "eZ.Section",
+            "module": "ez-sectionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-sectionmodel.js",
+            "line": 63,
+            "description": "The section's name",
+            "itemtype": "attribute",
+            "name": "name",
+            "default": "''",
+            "type": "string",
+            "class": "eZ.Section",
+            "module": "ez-sectionmodel",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/models/ez-sectionmodel.js",
+            "line": 74,
+            "description": "The section's id",
+            "itemtype": "attribute",
+            "name": "id",
+            "default": "null",
+            "type": "number",
+            "class": "eZ.Section",
+            "module": "ez-sectionmodel",
             "namespace": "eZ"
         },
         {
