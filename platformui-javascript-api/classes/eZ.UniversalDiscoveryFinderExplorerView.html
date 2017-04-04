@@ -212,7 +212,6 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
                                 <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
-                                <li><a href="../classes/eZ.Plugin.SectionLoad.html">eZ.Plugin.SectionLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
@@ -240,7 +239,6 @@
                                 <li><a href="../classes/eZ.SearchListView.html">eZ.SearchListView</a></li>
                                 <li><a href="../classes/eZ.SearchView.html">eZ.SearchView</a></li>
                                 <li><a href="../classes/eZ.SearchViewService.html">eZ.SearchViewService</a></li>
-                                <li><a href="../classes/eZ.Section.html">eZ.Section</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
                                 <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
@@ -461,8 +459,6 @@
                                 <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-searchview.html">ez-searchview</a></li>
                                 <li><a href="../modules/ez-searchviewservice&#x27;.html">ez-searchviewservice&#x27;</a></li>
-                                <li><a href="../modules/ez-sectionloadplugin.html">ez-sectionloadplugin</a></li>
-                                <li><a href="../modules/ez-sectionmodel.html">ez-sectionmodel</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -641,7 +637,7 @@ content in the repository with the explorer.</p>
                                 <a href="#method__addLazyAttr">_addLazyAttr</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method">
                                 <a href="#method__addLevel">_addLevel</a>
 
                             </li>
@@ -741,10 +737,6 @@ content in the repository with the explorer.</p>
                                 <a href="#method__getInstanceAttrCfgs">_getInstanceAttrCfgs</a>
 
                             </li>
-                            <li class="index-item method protected">
-                                <a href="#method__getLevelViewPath">_getLevelViewPath</a>
-
-                            </li>
                             <li class="index-item method protected inherited">
                                 <a href="#method__getName">_getName</a>
 
@@ -818,7 +810,7 @@ content in the repository with the explorer.</p>
                                 <a href="#method__publish">_publish</a>
 
                             </li>
-                            <li class="index-item method protected">
+                            <li class="index-item method">
                                 <a href="#method__removeLevels">_removeLevels</a>
 
                             </li>
@@ -1055,12 +1047,6 @@ content in the repository with the explorer.</p>
                             <li class="index-item attr">
                                 <a href="#attr_levelViews">levelViews</a>
                             </li>
-                            <li class="index-item attr">
-                                <a href="#attr_startingLocation">startingLocation</a>
-                            </li>
-                            <li class="index-item attr">
-                                <a href="#attr_virtualRootLocation">virtualRootLocation</a>
-                            </li>
                     </ul>
                 </div>
 
@@ -1105,7 +1091,7 @@ content in the repository with the explorer.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l128"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:128</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l91"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:91</code></a>
         </p>
 
 
@@ -1292,7 +1278,7 @@ along the critical path, where the calling method has already obtained lazy conf
 
 
 </div>
-<div id="method__addLevel" class="method item protected">
+<div id="method__addLevel" class="method item">
     <h3 class="name"><code>_addLevel</code></h3>
 
         <div class="args">
@@ -1300,15 +1286,11 @@ along the critical path, where the calling method has already obtained lazy conf
                 <li class="arg">
                         <code>location</code>
                 </li>
-                <li class="arg">
-                        <code>selectedLocationId</code>
-                </li>
             </ul><span class="paren">)</span>
         </div>
 
 
 
-        <span class="flag protected">protected</span>
 
 
 
@@ -1317,7 +1299,7 @@ along the critical path, where the calling method has already obtained lazy conf
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l175"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:175</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l135"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:135</code></a>
         </p>
 
 
@@ -1341,18 +1323,6 @@ Then renders, activates and display it.</p>
 
                     <div class="param-description">
                         <p>the parent location</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">selectedLocationId</code>
-                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
-
-
-                    <div class="param-description">
-                        <p>the location id that should be
-selected in the level view</p>
 
                     </div>
 
@@ -2782,52 +2752,6 @@ for passing through to <code>addAttrs</code>.
 
 
 </div>
-<div id="method__getLevelViewPath" class="method item protected">
-    <h3 class="name"><code>_getLevelViewPath</code></h3>
-
-        <span class="paren">()</span>
-
-        <span class="returns-inline">
-            <span class="type">Array</span>
-        </span>
-
-
-        <span class="flag protected">protected</span>
-
-
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l55"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:55</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>Returns a Location array representing the path to display. This path
-includes the virtual root Location, the starting Location path and
-the starting Location (if there's a starting Location).</p>
-
-    </div>
-
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Array</span>:
-                    <p>of Location.</p>
-
-            </div>
-        </div>
-
-
-</div>
 <div id="method__getName" class="method item protected inherited">
     <h3 class="name"><code>_getName</code></h3>
 
@@ -3012,7 +2936,7 @@ applied to the supplied type.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l101"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:101</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l64"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:64</code></a>
         </p>
 
 
@@ -3938,20 +3862,19 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
 
 
 </div>
-<div id="method__removeLevels" class="method item protected">
+<div id="method__removeLevels" class="method item">
     <h3 class="name"><code>_removeLevels</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code class="optional">[count]</code>
+                        <code>count</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
 
 
 
-        <span class="flag protected">protected</span>
 
 
 
@@ -3960,7 +3883,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l160"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:160</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l123"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:123</code></a>
         </p>
 
 
@@ -3968,7 +3891,7 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
     </div>
 
     <div class="description">
-        <p>Removes and destroy level views.</p>
+        <p>Removes and destroy the last level views from the levelViews attribute.</p>
 
     </div>
 
@@ -3977,14 +3900,12 @@ be the default <code>CustomEvent</code> instance, and can be configured independ
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name optional">[count]</code>
+                        <code class="param-name">count</code>
                         <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Number.html" class="crosslink external" target="_blank">Number</a></span>
-                        <span class="flag optional" title="This parameter is optional.">optional</span>
 
 
                     <div class="param-description">
-                        <p>the number of level views to remove. If
-omitted, the complete list is removed.</p>
+                        <p>the number of levelviews to remove.</p>
 
                     </div>
 
@@ -4017,7 +3938,7 @@ omitted, the complete list is removed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l139"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:139</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l102"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:102</code></a>
         </p>
 
 
@@ -6998,7 +6919,7 @@ to the DOM if it's not there already.
                 AttributeExtras
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l77"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:77</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l35"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:35</code></a>
         </p>
 
 
@@ -7375,7 +7296,7 @@ be removed.
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l90"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:90</code></a>
+        <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l53"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:53</code></a>
         </p>
 
 
@@ -7709,7 +7630,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l202"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:202</code></a>
+                            <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l158"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:158</code></a>
                             </p>
                     
                     
@@ -7740,7 +7661,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>
                                     Defined in
-                            <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l236"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:236</code></a>
+                            <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l172"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:172</code></a>
                             </p>
                     
                     
@@ -7748,66 +7669,6 @@ How this template gets used is entirely up to you and your custom
                     
                         <div class="description">
                             <p>The tab containing the universalDiscoveryFinderExplorerLevelViews to explore.</p>
-                    
-                        </div>
-                    
-                    
-                    
-                    </div>
-                    <div id="attr_startingLocation" class="attr item">
-                        <a name="config_startingLocation"></a> 
-                        <h3 class="name"><code>startingLocation</code></h3>
-                        <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a> | False | Null</span>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                        <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l216"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:216</code></a>
-                            </p>
-                    
-                    
-                        </div>
-                    
-                        <div class="description">
-                            <p>The starting Location if the UDW is configured with one.</p>
-                    
-                        </div>
-                    
-                            <p><strong>Default:</strong> {Null}</p>
-                    
-                    
-                    </div>
-                    <div id="attr_virtualRootLocation" class="attr item">
-                        <a name="config_virtualRootLocation"></a> 
-                        <h3 class="name"><code>virtualRootLocation</code></h3>
-                        <span class="type"><a href="../classes/eZ.Location.html" class="crosslink">eZ.Location</a></span>
-                    
-                    
-                    
-                    
-                    
-                    
-                            <span class="flag required">required</span>
-                    
-                    
-                        <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/Resources_public_js_views_universaldiscovery_ez-universaldiscoveryfinderexplorerview.js.html#l227"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;universaldiscovery&#x2F;ez-universaldiscoveryfinderexplorerview.js:227</code></a>
-                            </p>
-                    
-                    
-                        </div>
-                    
-                        <div class="description">
-                            <p>The virtual root Location object</p>
                     
                         </div>
                     

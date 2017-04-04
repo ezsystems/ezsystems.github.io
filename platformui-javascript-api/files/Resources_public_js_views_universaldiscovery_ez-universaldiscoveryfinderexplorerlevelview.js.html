@@ -212,7 +212,6 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
                                 <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
-                                <li><a href="../classes/eZ.Plugin.SectionLoad.html">eZ.Plugin.SectionLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
@@ -240,7 +239,6 @@
                                 <li><a href="../classes/eZ.SearchListView.html">eZ.SearchListView</a></li>
                                 <li><a href="../classes/eZ.SearchView.html">eZ.SearchView</a></li>
                                 <li><a href="../classes/eZ.SearchViewService.html">eZ.SearchViewService</a></li>
-                                <li><a href="../classes/eZ.Section.html">eZ.Section</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
                                 <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
@@ -461,8 +459,6 @@
                                 <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-searchview.html">ez-searchview</a></li>
                                 <li><a href="../modules/ez-searchviewservice&#x27;.html">ez-searchviewservice&#x27;</a></li>
-                                <li><a href="../modules/ez-sectionloadplugin.html">ez-sectionloadplugin</a></li>
-                                <li><a href="../modules/ez-sectionmodel.html">ez-sectionmodel</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -622,26 +618,14 @@ YUI.add(&#x27;ez-universaldiscoveryfinderexplorerlevelview&#x27;, function (Y) {
             container.plug(Y.Plugin.ScrollInfo);
             container.scrollInfo.on(&#x27;scrollDown&#x27;, this._handleScroll, this);
 
-            this.after(&#x27;ownSelectedItemChange&#x27;, this._uiOwnSelectedItem);
-            this._uiOwnSelectedItem();
+            this.after(&#x27;ownSelectedItemChange&#x27;, function () {
+                if (!this.get(&#x27;ownSelectedItem&#x27;)) {
+                    container.removeClass(HAS_SELECTED_ITEM);
+                } else {
+                    container.addClass(HAS_SELECTED_ITEM);
+                }
+            });
             this._addDOMEventHandlers(events);
-        },
-
-        /**
-         * Adds or removes the has selected item class on the container
-         * depending on the &#x60;ownSelectedItem&#x60; attribute value.
-         *
-         * @method _uiOwnSelectedItem
-         * @protected
-         */
-        _uiOwnSelectedItem: function () {
-            var container = this.get(&#x27;container&#x27;);
-
-            if (!this.get(&#x27;ownSelectedItem&#x27;)) {
-                container.removeClass(HAS_SELECTED_ITEM);
-            } else {
-                container.addClass(HAS_SELECTED_ITEM);
-            }
         },
 
         render: function () {
