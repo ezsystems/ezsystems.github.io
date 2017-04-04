@@ -517,11 +517,45 @@ define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpda
      *
      * @method createContent
      * @param contentCreateStruct {ContentCreateStruct} object describing content to be created
+     * @param [requestEventHandlers] {Object} a set of callbacks to apply on a specific XHR event like onload, onerror, onprogress, etc.
      * @param callback {Function} callback executed after performing the request (see
      *  {{#crossLink &quot;ContentService&quot;}}Note on the callbacks usage{{/crossLink}} for more info)
+     * @example
+     *      var contentService = jsCAPI.getContentService();
+     *
+     *      contentService.createContent(
+     *          {
+     *              body: &#x27;&#x27;,
+     *              headers: {}
+     *          },
+     *          {
+     *              upload: {
+     *                  onloadstart: someUploadCallback,
+     *                  onload: someUploadCallback,
+     *                  onloadend: someUploadCallback,
+     *                  onprogress: someUploadCallback,
+     *                  onabort: someUploadCallback,
+     *                  onerror: someUploadCallback,
+     *                  ontimeout: someUploadCallback,
+     *              },
+     *              onloadstart: someCallback,
+     *              onload: someCallback,
+     *              onloadend: someCallback,
+     *              onprogress: someCallback,
+     *              onabort: someCallback,
+     *              onerror: someCallback,
+     *              ontimeout: someCallback,
+     *          },
+     *          callback
+     *      );
      */
-    ContentService.prototype.createContent = function (contentCreateStruct, callback) {
+    ContentService.prototype.createContent = function (contentCreateStruct, requestEventHandlers, callback) {
         var that = this;
+
+        if (typeof requestEventHandlers === &#x27;function&#x27;) {
+            callback = requestEventHandlers;
+            requestEventHandlers = {};
+        }
 
         this._discoveryService.getInfoObject(
             &quot;content&quot;,
@@ -536,6 +570,7 @@ define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpda
                     contentObjects._href,
                     JSON.stringify(contentCreateStruct.body),
                     contentCreateStruct.headers,
+                    requestEventHandlers,
                     callback
                 );
             }
@@ -1240,7 +1275,7 @@ define([&quot;structures/ContentCreateStruct&quot;, &quot;structures/ContentUpda
                 if ( viewCreateStruct.getCriteria() &amp;&amp; Object.keys(viewCreateStruct.getCriteria()).length !== 0 ) {
                     console.warn(&#x27;[DEPRECATED] virtual property Criteria is deprecated&#x27;);
                 }
-                
+
                 that._connectionManager.request(
                     &quot;POST&quot;,
                     views._href,

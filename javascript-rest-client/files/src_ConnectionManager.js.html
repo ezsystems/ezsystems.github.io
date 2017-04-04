@@ -162,41 +162,80 @@ define([&quot;structures/Response&quot;, &quot;structures/Request&quot;, &quot;s
      * @param [url=&quot;/&quot;] {String} requested REST resource
      * @param [body=&quot;&quot;] {String} a string which should be passed in request body to the REST service
      * @param [headers={}] {object} object literal describing request headers
+     * @param [requestEventHandlers] {Object} a set of callbacks to apply on a specific XHR event like onload, onerror, onprogress, etc.
      * @param callback {Function} function, which will be executed on request success
+     * @example
+     *      var connectionManager = jsCAPI.getConnectionManager();
+     *
+     *      connectionManager.request(
+     *          &#x27;GET&#x27;,
+     *          &#x27;/endpoint&#x27;,
+     *          &#x27;&#x27;,
+     *          {Accept: &#x27;application/json&#x27;},
+     *          {
+     *              upload: {
+     *                  onloadstart: someUploadCallback,
+     *                  onload: someUploadCallback,
+     *                  onloadend: someUploadCallback,
+     *                  onprogress: someUploadCallback,
+     *                  onabort: someUploadCallback,
+     *                  onerror: someUploadCallback,
+     *                  ontimeout: someUploadCallback,
+     *              },
+     *              onloadstart: someCallback,
+     *              onload: someCallback,
+     *              onloadend: someCallback,
+     *              onprogress: someCallback,
+     *              onabort: someCallback,
+     *              onerror: someCallback,
+     *              ontimeout: someCallback,
+     *          },
+     *          callback
+     *      );
      */
-    ConnectionManager.prototype.request = function (method, url, body, headers, callback) {
+    ConnectionManager.prototype.request = function (method, url, body, headers, requestEventHandlers, callback) {
         var that = this,
             request,
             nextRequest,
             defaultMethod = &quot;GET&quot;,
             defaultUrl = &quot;/&quot;,
             defaultBody = &quot;&quot;,
-            defaultHeaders = {};
+            defaultHeaders = {},
+            defaultRequestEventHandlers = {};
 
         // default values for omitted parameters (if any)
-        if (arguments.length &lt; 5) {
-            if (typeof method == &quot;function&quot;) {
-                //no optional parameteres are passed
+        if (arguments.length &lt; 6) {
+            if (typeof method === &#x27;function&#x27;) {
+                // no optional parameteres are passed
                 callback = method;
                 method = defaultMethod;
                 url = defaultUrl;
                 body = defaultBody;
                 headers = defaultHeaders;
-            } else if (typeof url == &quot;function&quot;) {
+                requestEventHandlers = defaultRequestEventHandlers;
+            } else if (typeof url === &#x27;function&#x27;) {
                 // only first 1 optional parameter is passed
+                requestEventHandlers = body;
                 callback = url;
                 url = defaultUrl;
                 body = defaultBody;
                 headers = defaultHeaders;
-            } else if (typeof body == &quot;function&quot;) {
+                requestEventHandlers = defaultRequestEventHandlers;
+            } else if (typeof body === &#x27;function&#x27;) {
                 // only first 2 optional parameters are passed
                 callback = body;
                 body = defaultBody;
                 headers = defaultHeaders;
-            } else {
+                requestEventHandlers = defaultRequestEventHandlers;
+            } else if (typeof headers === &#x27;function&#x27;) {
                 // only first 3 optional parameters are passed
                 callback = headers;
                 headers = defaultHeaders;
+                requestEventHandlers = defaultRequestEventHandlers;
+            } else if (typeof requestEventHandlers === &#x27;function&#x27;) {
+                // only first 4 optional parameters are passed
+                callback = requestEventHandlers;
+                requestEventHandlers = defaultRequestEventHandlers;
             }
         }
 
@@ -253,7 +292,7 @@ define([&quot;structures/Response&quot;, &quot;structures/Request&quot;, &quot;s
                                     console.dir(request);
                                 }
                                 // Main goal
-                                that._connectionFactory.createConnection().execute(authenticatedRequest, callback);
+                                that._connectionFactory.createConnection().execute(authenticatedRequest, requestEventHandlers, callback);
                             }
                         );
                     } // while

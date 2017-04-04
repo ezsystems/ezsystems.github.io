@@ -306,7 +306,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_ConnectionManager.js.html#l138"><code>src&#x2F;ConnectionManager.js:138</code></a>
+        <a href="../files/src_ConnectionManager.js.html#l177"><code>src&#x2F;ConnectionManager.js:177</code></a>
         </p>
 
 
@@ -406,6 +406,9 @@ Used mainly for initial requests (e.g. createSession)</p>
                         <code class="optional">[headers]</code>
                 </li>
                 <li class="arg">
+                        <code class="optional">[requestEventHandlers]</code>
+                </li>
+                <li class="arg">
                         <code>callback</code>
                 </li>
             </ul><span class="paren">)</span>
@@ -486,6 +489,18 @@ Used mainly for initial requests (e.g. createSession)</p>
 
                 </li>
                 <li class="param">
+                        <code class="param-name optional">[requestEventHandlers]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>a set of callbacks to apply on a specific XHR event like onload, onerror, onprogress, etc.</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
                         <code class="param-name">callback</code>
                         <span class="type">Function</span>
 
@@ -501,6 +516,40 @@ Used mainly for initial requests (e.g. createSession)</p>
 
 
 
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code> var connectionManager = jsCAPI.getConnectionManager();
+
+ connectionManager.request(
+     'GET',
+     '/endpoint',
+     '',
+     {Accept: 'application/json'},
+     {
+         upload: {
+             onloadstart: someUploadCallback,
+             onload: someUploadCallback,
+             onloadend: someUploadCallback,
+             onprogress: someUploadCallback,
+             onabort: someUploadCallback,
+             onerror: someUploadCallback,
+             ontimeout: someUploadCallback,
+         },
+         onloadstart: someCallback,
+         onload: someCallback,
+         onloadend: someCallback,
+         onprogress: someCallback,
+         onabort: someCallback,
+         onerror: someCallback,
+         ontimeout: someCallback,
+     },
+     callback
+ );</code></pre>
+
+            </div>
+        </div>
 </div>
             </div>
 

@@ -618,7 +618,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1255"><code>src&#x2F;services&#x2F;ContentService.js:1255</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1290"><code>src&#x2F;services&#x2F;ContentService.js:1290</code></a>
         </p>
 
 
@@ -714,7 +714,7 @@ contentService.addRelation(
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l540"><code>src&#x2F;services&#x2F;ContentService.js:540</code></a>
+        <a href="../files/src_services_ContentService.js.html#l575"><code>src&#x2F;services&#x2F;ContentService.js:575</code></a>
         </p>
 
 
@@ -797,7 +797,7 @@ contentService.addRelation(
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1001"><code>src&#x2F;services&#x2F;ContentService.js:1001</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1036"><code>src&#x2F;services&#x2F;ContentService.js:1036</code></a>
         </p>
 
 
@@ -862,6 +862,9 @@ contentService.addRelation(
                         <code>contentCreateStruct</code>
                 </li>
                 <li class="arg">
+                        <code class="optional">[requestEventHandlers]</code>
+                </li>
+                <li class="arg">
                         <code>callback</code>
                 </li>
             </ul><span class="paren">)</span>
@@ -905,6 +908,18 @@ contentService.addRelation(
 
                 </li>
                 <li class="param">
+                        <code class="param-name optional">[requestEventHandlers]</code>
+                        <span class="type">Object</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <p>a set of callbacks to apply on a specific XHR event like onload, onerror, onprogress, etc.</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
                         <code class="param-name">callback</code>
                         <span class="type">Function</span>
 
@@ -921,6 +936,40 @@ contentService.addRelation(
 
 
 
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code> var contentService = jsCAPI.getContentService();
+
+ contentService.createContent(
+     {
+         body: '',
+         headers: {}
+     },
+     {
+         upload: {
+             onloadstart: someUploadCallback,
+             onload: someUploadCallback,
+             onloadend: someUploadCallback,
+             onprogress: someUploadCallback,
+             onabort: someUploadCallback,
+             onerror: someUploadCallback,
+             ontimeout: someUploadCallback,
+         },
+         onloadstart: someCallback,
+         onload: someCallback,
+         onloadend: someCallback,
+         onprogress: someCallback,
+         onabort: someCallback,
+         onerror: someCallback,
+         ontimeout: someCallback,
+     },
+     callback
+ );</code></pre>
+
+            </div>
+        </div>
 </div>
 <div id="method_createContentDraft" class="method item">
     <h3 class="name"><code>createContentDraft</code></h3>
@@ -949,7 +998,7 @@ contentService.addRelation(
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l717"><code>src&#x2F;services&#x2F;ContentService.js:717</code></a>
+        <a href="../files/src_services_ContentService.js.html#l752"><code>src&#x2F;services&#x2F;ContentService.js:752</code></a>
         </p>
 
 
@@ -1054,7 +1103,7 @@ If not provided the current version of the content will be used.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l813"><code>src&#x2F;services&#x2F;ContentService.js:813</code></a>
+        <a href="../files/src_services_ContentService.js.html#l848"><code>src&#x2F;services&#x2F;ContentService.js:848</code></a>
         </p>
 
 
@@ -1137,7 +1186,7 @@ If not provided the current version of the content will be used.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1574"><code>src&#x2F;services&#x2F;ContentService.js:1574</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1609"><code>src&#x2F;services&#x2F;ContentService.js:1609</code></a>
         </p>
 
 
@@ -1220,7 +1269,7 @@ If not provided the current version of the content will be used.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1518"><code>src&#x2F;services&#x2F;ContentService.js:1518</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1553"><code>src&#x2F;services&#x2F;ContentService.js:1553</code></a>
         </p>
 
 
@@ -1372,7 +1421,7 @@ If not provided the current version of the content will be used.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1711"><code>src&#x2F;services&#x2F;ContentService.js:1711</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1746"><code>src&#x2F;services&#x2F;ContentService.js:1746</code></a>
         </p>
 
 
@@ -1455,7 +1504,7 @@ If not provided the current version of the content will be used.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1818"><code>src&#x2F;services&#x2F;ContentService.js:1818</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1853"><code>src&#x2F;services&#x2F;ContentService.js:1853</code></a>
         </p>
 
 
@@ -1535,7 +1584,7 @@ If not provided the current version of the content will be used.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1084"><code>src&#x2F;services&#x2F;ContentService.js:1084</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1119"><code>src&#x2F;services&#x2F;ContentService.js:1119</code></a>
         </p>
 
 
@@ -1619,7 +1668,7 @@ contentService.createView(
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l517"><code>src&#x2F;services&#x2F;ContentService.js:517</code></a>
+        <a href="../files/src_services_ContentService.js.html#l552"><code>src&#x2F;services&#x2F;ContentService.js:552</code></a>
         </p>
 
 
@@ -1699,7 +1748,7 @@ contentService.createView(
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1059"><code>src&#x2F;services&#x2F;ContentService.js:1059</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1094"><code>src&#x2F;services&#x2F;ContentService.js:1094</code></a>
         </p>
 
 
@@ -1771,7 +1820,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1630"><code>src&#x2F;services&#x2F;ContentService.js:1630</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1665"><code>src&#x2F;services&#x2F;ContentService.js:1665</code></a>
         </p>
 
 
@@ -1840,7 +1889,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1556"><code>src&#x2F;services&#x2F;ContentService.js:1556</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1591"><code>src&#x2F;services&#x2F;ContentService.js:1591</code></a>
         </p>
 
 
@@ -1909,7 +1958,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1296"><code>src&#x2F;services&#x2F;ContentService.js:1296</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1331"><code>src&#x2F;services&#x2F;ContentService.js:1331</code></a>
         </p>
 
 
@@ -2047,7 +2096,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1414"><code>src&#x2F;services&#x2F;ContentService.js:1414</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1449"><code>src&#x2F;services&#x2F;ContentService.js:1449</code></a>
         </p>
 
 
@@ -2116,7 +2165,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1796"><code>src&#x2F;services&#x2F;ContentService.js:1796</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1831"><code>src&#x2F;services&#x2F;ContentService.js:1831</code></a>
         </p>
 
 
@@ -2185,7 +2234,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1873"><code>src&#x2F;services&#x2F;ContentService.js:1873</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1908"><code>src&#x2F;services&#x2F;ContentService.js:1908</code></a>
         </p>
 
 
@@ -2254,7 +2303,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l773"><code>src&#x2F;services&#x2F;ContentService.js:773</code></a>
+        <a href="../files/src_services_ContentService.js.html#l808"><code>src&#x2F;services&#x2F;ContentService.js:808</code></a>
         </p>
 
 
@@ -2321,7 +2370,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1432"><code>src&#x2F;services&#x2F;ContentService.js:1432</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1467"><code>src&#x2F;services&#x2F;ContentService.js:1467</code></a>
         </p>
 
 
@@ -2377,7 +2426,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1449"><code>src&#x2F;services&#x2F;ContentService.js:1449</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1484"><code>src&#x2F;services&#x2F;ContentService.js:1484</code></a>
         </p>
 
 
@@ -2435,7 +2484,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1648"><code>src&#x2F;services&#x2F;ContentService.js:1648</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1683"><code>src&#x2F;services&#x2F;ContentService.js:1683</code></a>
         </p>
 
 
@@ -2507,7 +2556,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1748"><code>src&#x2F;services&#x2F;ContentService.js:1748</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1783"><code>src&#x2F;services&#x2F;ContentService.js:1783</code></a>
         </p>
 
 
@@ -2597,7 +2646,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l613"><code>src&#x2F;services&#x2F;ContentService.js:613</code></a>
+        <a href="../files/src_services_ContentService.js.html#l648"><code>src&#x2F;services&#x2F;ContentService.js:648</code></a>
         </p>
 
 
@@ -2716,7 +2765,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l446"><code>src&#x2F;services&#x2F;ContentService.js:446</code></a>
+        <a href="../files/src_services_ContentService.js.html#l481"><code>src&#x2F;services&#x2F;ContentService.js:481</code></a>
         </p>
 
 
@@ -2785,7 +2834,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l475"><code>src&#x2F;services&#x2F;ContentService.js:475</code></a>
+        <a href="../files/src_services_ContentService.js.html#l510"><code>src&#x2F;services&#x2F;ContentService.js:510</code></a>
         </p>
 
 
@@ -2857,7 +2906,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l493"><code>src&#x2F;services&#x2F;ContentService.js:493</code></a>
+        <a href="../files/src_services_ContentService.js.html#l528"><code>src&#x2F;services&#x2F;ContentService.js:528</code></a>
         </p>
 
 
@@ -2945,7 +2994,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1184"><code>src&#x2F;services&#x2F;ContentService.js:1184</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1219"><code>src&#x2F;services&#x2F;ContentService.js:1219</code></a>
         </p>
 
 
@@ -3046,7 +3095,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l581"><code>src&#x2F;services&#x2F;ContentService.js:581</code></a>
+        <a href="../files/src_services_ContentService.js.html#l616"><code>src&#x2F;services&#x2F;ContentService.js:616</code></a>
         </p>
 
 
@@ -3115,7 +3164,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1891"><code>src&#x2F;services&#x2F;ContentService.js:1891</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1926"><code>src&#x2F;services&#x2F;ContentService.js:1926</code></a>
         </p>
 
 
@@ -3184,7 +3233,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l878"><code>src&#x2F;services&#x2F;ContentService.js:878</code></a>
+        <a href="../files/src_services_ContentService.js.html#l913"><code>src&#x2F;services&#x2F;ContentService.js:913</code></a>
         </p>
 
 
@@ -3253,7 +3302,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l896"><code>src&#x2F;services&#x2F;ContentService.js:896</code></a>
+        <a href="../files/src_services_ContentService.js.html#l931"><code>src&#x2F;services&#x2F;ContentService.js:931</code></a>
         </p>
 
 
@@ -3328,7 +3377,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l943"><code>src&#x2F;services&#x2F;ContentService.js:943</code></a>
+        <a href="../files/src_services_ContentService.js.html#l978"><code>src&#x2F;services&#x2F;ContentService.js:978</code></a>
         </p>
 
 
@@ -3434,7 +3483,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l846"><code>src&#x2F;services&#x2F;ContentService.js:846</code></a>
+        <a href="../files/src_services_ContentService.js.html#l881"><code>src&#x2F;services&#x2F;ContentService.js:881</code></a>
         </p>
 
 
@@ -3503,7 +3552,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1593"><code>src&#x2F;services&#x2F;ContentService.js:1593</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1628"><code>src&#x2F;services&#x2F;ContentService.js:1628</code></a>
         </p>
 
 
@@ -3572,7 +3621,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1500"><code>src&#x2F;services&#x2F;ContentService.js:1500</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1535"><code>src&#x2F;services&#x2F;ContentService.js:1535</code></a>
         </p>
 
 
@@ -3641,7 +3690,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1482"><code>src&#x2F;services&#x2F;ContentService.js:1482</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1517"><code>src&#x2F;services&#x2F;ContentService.js:1517</code></a>
         </p>
 
 
@@ -3710,7 +3759,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1237"><code>src&#x2F;services&#x2F;ContentService.js:1237</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1272"><code>src&#x2F;services&#x2F;ContentService.js:1272</code></a>
         </p>
 
 
@@ -3785,7 +3834,7 @@ The children are recursively deleted.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1130"><code>src&#x2F;services&#x2F;ContentService.js:1130</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1165"><code>src&#x2F;services&#x2F;ContentService.js:1165</code></a>
         </p>
 
 
@@ -4066,7 +4115,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1368"><code>src&#x2F;services&#x2F;ContentService.js:1368</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1403"><code>src&#x2F;services&#x2F;ContentService.js:1403</code></a>
         </p>
 
 
@@ -4138,7 +4187,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1318"><code>src&#x2F;services&#x2F;ContentService.js:1318</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1353"><code>src&#x2F;services&#x2F;ContentService.js:1353</code></a>
         </p>
 
 
@@ -4228,7 +4277,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1778"><code>src&#x2F;services&#x2F;ContentService.js:1778</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1813"><code>src&#x2F;services&#x2F;ContentService.js:1813</code></a>
         </p>
 
 
@@ -4297,7 +4346,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1730"><code>src&#x2F;services&#x2F;ContentService.js:1730</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1765"><code>src&#x2F;services&#x2F;ContentService.js:1765</code></a>
         </p>
 
 
@@ -4366,7 +4415,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1855"><code>src&#x2F;services&#x2F;ContentService.js:1855</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1890"><code>src&#x2F;services&#x2F;ContentService.js:1890</code></a>
         </p>
 
 
@@ -4435,7 +4484,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1837"><code>src&#x2F;services&#x2F;ContentService.js:1837</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1872"><code>src&#x2F;services&#x2F;ContentService.js:1872</code></a>
         </p>
 
 
@@ -4504,7 +4553,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l563"><code>src&#x2F;services&#x2F;ContentService.js:563</code></a>
+        <a href="../files/src_services_ContentService.js.html#l598"><code>src&#x2F;services&#x2F;ContentService.js:598</code></a>
         </p>
 
 
@@ -4573,7 +4622,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l666"><code>src&#x2F;services&#x2F;ContentService.js:666</code></a>
+        <a href="../files/src_services_ContentService.js.html#l701"><code>src&#x2F;services&#x2F;ContentService.js:701</code></a>
         </p>
 
 
@@ -4645,7 +4694,7 @@ This call is used by DiscoveryService automatically, whenever needed.</p>
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1020"><code>src&#x2F;services&#x2F;ContentService.js:1020</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1055"><code>src&#x2F;services&#x2F;ContentService.js:1055</code></a>
         </p>
 
 
@@ -5771,7 +5820,7 @@ The targetLocation can also be /content/trash, in that case the location is put 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l791"><code>src&#x2F;services&#x2F;ContentService.js:791</code></a>
+        <a href="../files/src_services_ContentService.js.html#l826"><code>src&#x2F;services&#x2F;ContentService.js:826</code></a>
         </p>
 
 
@@ -5843,7 +5892,7 @@ The targetLocation can also be /content/trash, in that case the location is put 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1386"><code>src&#x2F;services&#x2F;ContentService.js:1386</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1421"><code>src&#x2F;services&#x2F;ContentService.js:1421</code></a>
         </p>
 
 
@@ -5927,7 +5976,7 @@ The targetLocation can also be /content/trash, in that case the location is put 
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1666"><code>src&#x2F;services&#x2F;ContentService.js:1666</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1701"><code>src&#x2F;services&#x2F;ContentService.js:1701</code></a>
         </p>
 
 
@@ -6034,7 +6083,7 @@ function (error, objectStateResponse) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1040"><code>src&#x2F;services&#x2F;ContentService.js:1040</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1075"><code>src&#x2F;services&#x2F;ContentService.js:1075</code></a>
         </p>
 
 
@@ -6117,7 +6166,7 @@ function (error, objectStateResponse) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l698"><code>src&#x2F;services&#x2F;ContentService.js:698</code></a>
+        <a href="../files/src_services_ContentService.js.html#l733"><code>src&#x2F;services&#x2F;ContentService.js:733</code></a>
         </p>
 
 
@@ -6200,7 +6249,7 @@ function (error, objectStateResponse) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l416"><code>src&#x2F;services&#x2F;ContentService.js:416</code></a>
+        <a href="../files/src_services_ContentService.js.html#l451"><code>src&#x2F;services&#x2F;ContentService.js:451</code></a>
         </p>
 
 
@@ -6300,7 +6349,7 @@ function (error, objectStateResponse) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l924"><code>src&#x2F;services&#x2F;ContentService.js:924</code></a>
+        <a href="../files/src_services_ContentService.js.html#l959"><code>src&#x2F;services&#x2F;ContentService.js:959</code></a>
         </p>
 
 
@@ -6383,7 +6432,7 @@ function (error, objectStateResponse) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1611"><code>src&#x2F;services&#x2F;ContentService.js:1611</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1646"><code>src&#x2F;services&#x2F;ContentService.js:1646</code></a>
         </p>
 
 
@@ -6466,7 +6515,7 @@ function (error, objectStateResponse) {
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_services_ContentService.js.html#l1537"><code>src&#x2F;services&#x2F;ContentService.js:1537</code></a>
+        <a href="../files/src_services_ContentService.js.html#l1572"><code>src&#x2F;services&#x2F;ContentService.js:1572</code></a>
         </p>
 
 

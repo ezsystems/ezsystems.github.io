@@ -139,21 +139,36 @@ define([&quot;structures/Response&quot;, &quot;structures/CAPIError&quot;], func
      * @constructor
      */
     var XmlHttpRequestConnection = function () {
-        this._xhr = new XMLHttpRequest();
-    };
+            this._xhr = new XMLHttpRequest();
+        },
+        _assignCallback = function(xhr, eventName, callback) {
+            if (typeof callback !== &#x27;function&#x27;) {
+                return xhr;
+            }
+
+            xhr[eventName] = callback;
+
+            return xhr;
+        };
 
     /**
      * Basic request implemented via XHR technique
      *
      * @method execute
      * @param request {Request} structure containing all needed params and data
+     * @param [requestEventHandlers] {Object} a set of callbacks to apply on a specific XHR event like onload, onerror, onprogress, etc.
      * @param callback {Function} function, which will be executed on request success
      */
-    XmlHttpRequestConnection.prototype.execute = function (request, callback) {
+    XmlHttpRequestConnection.prototype.execute = function (request, requestEventHandlers, callback) {
         var XHR = this._xhr,
             headerType,
             method = request.method,
             standardMethods = {&quot;OPTIONS&quot;: 1, &quot;GET&quot;: 1, &quot;HEAD&quot;: 1, &quot;POST&quot;: 1, &quot;PUT&quot;: 1, &quot;DELETE&quot;: 1, &quot;TRACE&quot;: 1};
+
+        if (typeof requestEventHandlers === &#x27;function&#x27;) {
+            callback = requestEventHandlers;
+            requestEventHandlers = {};
+        }
 
         // Create the state change handler:
         XHR.onreadystatechange = function () {
@@ -181,6 +196,26 @@ define([&quot;structures/Response&quot;, &quot;structures/CAPIError&quot;], func
         // Avoids problems with conservative proxies, HTTP security tools and limited web servers.
         if (standardMethods[method.toUpperCase()] !== 1) {
             method = &quot;POST&quot;;
+        }
+
+        if (requestEventHandlers &amp;&amp; Object.keys(requestEventHandlers).length) {
+            if (requestEventHandlers.upload &amp;&amp; Object.keys(requestEventHandlers.upload).length) {
+                _assignCallback(XHR.upload, &#x27;onloadstart&#x27;, requestEventHandlers.upload.onloadstart);
+                _assignCallback(XHR.upload, &#x27;onload&#x27;, requestEventHandlers.upload.onload);
+                _assignCallback(XHR.upload, &#x27;onloadend&#x27;, requestEventHandlers.upload.onloadend);
+                _assignCallback(XHR.upload, &#x27;onprogress&#x27;, requestEventHandlers.upload.onprogress);
+                _assignCallback(XHR.upload, &#x27;onabort&#x27;, requestEventHandlers.upload.onabort);
+                _assignCallback(XHR.upload, &#x27;onerror&#x27;, requestEventHandlers.upload.onerror);
+                _assignCallback(XHR.upload, &#x27;ontimeout&#x27;, requestEventHandlers.upload.ontimeout);
+            }
+
+            _assignCallback(XHR, &#x27;onloadstart&#x27;, requestEventHandlers.onloadstart);
+            _assignCallback(XHR, &#x27;onload&#x27;, requestEventHandlers.onload);
+            _assignCallback(XHR, &#x27;onloadend&#x27;, requestEventHandlers.onloadend);
+            _assignCallback(XHR, &#x27;onprogress&#x27;, requestEventHandlers.onprogress);
+            _assignCallback(XHR, &#x27;onabort&#x27;, requestEventHandlers.onabort);
+            _assignCallback(XHR, &#x27;onerror&#x27;, requestEventHandlers.onerror);
+            _assignCallback(XHR, &#x27;ontimeout&#x27;, requestEventHandlers.ontimeout);
         }
 
         if (request.httpBasicAuth) {
