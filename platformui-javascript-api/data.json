@@ -36411,7 +36411,26 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 29,
+            "line": 32,
+            "description": "Click handler on the buttons in form element. It is used to keep\nwhich button was used to submit the form. This was introduced to fix\nhttps://jira.ez.no/browse/EZP-25393 because under MacOS, Safari and\nFirefox do not correctly update document.activeElement, as a result,\nwhen handling the form submit, the button was lost.",
+            "itemtype": "method",
+            "name": "_trackUsedButton",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "",
+                    "type": "EventFacade"
+                }
+            ],
+            "class": "eZ.ServerSideView",
+            "module": "ez-serversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-serversideview.js",
+            "line": 47,
             "description": "Check if the submit action requires a confirm box,",
             "itemtype": "method",
             "name": "_confirmSubmit",
@@ -36430,7 +36449,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 61,
+            "line": 80,
             "description": "Form handling. The DOM submit is transformed into an application\nlevel event `submitForm` so that the server side view service can\nhandle it.",
             "itemtype": "method",
             "name": "_submitForm",
@@ -36443,7 +36462,7 @@
                     "type": "EventFacade"
                 },
                 {
-                    "name": "focusedNode",
+                    "name": "button",
                     "description": "",
                     "type": "Node"
                 }
@@ -36454,7 +36473,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 72,
+            "line": 91,
             "description": "Fired when a form is submitted in the browser",
             "itemtype": "event",
             "name": "submitForm",
@@ -36481,7 +36500,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 88,
+            "line": 108,
             "description": "Serializes the form data so that it can be sent with an AJAX request.\nIt also checks which button was used (if any) to include it in the\ndata.",
             "itemtype": "method",
             "name": "_serializeForm",
@@ -36492,7 +36511,7 @@
                     "type": "Node"
                 },
                 {
-                    "name": "focusedNode",
+                    "name": "button",
                     "description": "",
                     "type": "Node"
                 }
@@ -36507,7 +36526,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 145,
+            "line": 165,
             "description": "Checks whether the given node is a valid submit button for the given\nform.",
             "itemtype": "method",
             "name": "_isSubmitButton",
@@ -36535,7 +36554,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 173,
+            "line": 193,
             "description": "Initializes the view to make sure the container will get the\nez-view-serversideview class",
             "itemtype": "method",
             "name": "initializer",
@@ -36545,7 +36564,18 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 187,
+            "line": 200,
+            "description": "References the button used to submit a form, it is updated by\n`_trackUsedButton` as a replacement for `document.activeElement`\nwhich is not correctly updated by Firefox for OSX or Safari.\nsee https://jira.ez.no/browse/EZP-25393",
+            "itemtype": "property",
+            "name": "_formButton",
+            "type": "{Node|null}",
+            "class": "eZ.ServerSideView",
+            "module": "ez-serversideview",
+            "namespace": "eZ"
+        },
+        {
+            "file": "Resources/public/js/views/ez-serversideview.js",
+            "line": 217,
             "description": "Renders the view in its container. It just puts the html attibute\ncontent as the content of the view container",
             "itemtype": "method",
             "name": "render",
@@ -36559,7 +36589,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 199,
+            "line": 229,
             "description": "Returns the string to use as the page title",
             "itemtype": "method",
             "name": "getTitle",
@@ -36573,7 +36603,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 210,
+            "line": 240,
             "description": "The title of the view",
             "itemtype": "attribute",
             "name": "title",
@@ -36585,7 +36615,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-serversideview.js",
-            "line": 221,
+            "line": 251,
             "description": "The HTML content of the view",
             "itemtype": "attribute",
             "name": "html",

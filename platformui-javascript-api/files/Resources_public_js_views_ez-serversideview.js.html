@@ -578,9 +578,27 @@ YUI.add(&#x27;ez-serversideview&#x27;, function (Y) {
      */
     Y.eZ.ServerSideView = Y.Base.create(&#x27;serverSideView&#x27;, Y.eZ.View, [Y.eZ.Tabs, Y.eZ.SelectionTable], {
         events: {
+            &#x27;form input[type=&quot;submit&quot;], form button, form input[type=&quot;image&quot;]&#x27;: {
+                &#x27;click&#x27;: &#x27;_trackUsedButton&#x27;,
+            },
             &#x27;form&#x27;: {
                 &#x27;submit&#x27;: &#x27;_confirmSubmit&#x27;
             },
+        },
+
+        /**
+         * Click handler on the buttons in form element. It is used to keep
+         * which button was used to submit the form. This was introduced to fix
+         * https://jira.ez.no/browse/EZP-25393 because under MacOS, Safari and
+         * Firefox do not correctly update document.activeElement, as a result,
+         * when handling the form submit, the button was lost.
+         *
+         * @method _trackUsedButton
+         * @protected
+         * @param {EventFacade} e
+         */
+        _trackUsedButton: function (e) {
+            this._formButton = e.target;
         },
 
         /**
@@ -591,27 +609,28 @@ YUI.add(&#x27;ez-serversideview&#x27;, function (Y) {
          * @param {EventFacade} e
          */
         _confirmSubmit: function (e) {
-            var focusedNode = e.target.get(&#x27;ownerDocument&#x27;).get(&#x27;activeElement&#x27;),
+            var button = this._formButton,
                 details = &#x27;&#x27;,
                 container = this.get(&#x27;container&#x27;),
-                detailsAttr = focusedNode.getAttribute(&#x27;data-confirmbox-details-selector&#x27;);
+                detailsAttr;
 
-            if (focusedNode.hasClass(&#x27;ez-confirm-action&#x27;)) {
+            if (button &amp;&amp; button.hasClass(&#x27;ez-confirm-action&#x27;)) {
+                detailsAttr = button.getAttribute(&#x27;data-confirmbox-details-selector&#x27;);
                 if (container.one(detailsAttr)) {
                     details = container.one(detailsAttr).get(&#x27;innerHTML&#x27;);
                 }
                 e.preventDefault();
                 this.fire(&#x27;confirmBoxOpen&#x27;, {
                     config: {
-                        title: focusedNode.getAttribute(&#x27;data-confirmbox-title&#x27;),
+                        title: button.getAttribute(&#x27;data-confirmbox-title&#x27;),
                         details: details,
                         confirmHandler: Y.bind(function () {
-                            this._submitForm(e, focusedNode);
+                            this._submitForm(e, button);
                         }, this)
                     },
                 });
             } else {
-                this._submitForm(e, focusedNode);
+                this._submitForm(e, button);
             }
         },
 
@@ -623,9 +642,9 @@ YUI.add(&#x27;ez-serversideview&#x27;, function (Y) {
          * @method _submitForm
          * @protected
          * @param {EventFacade} e
-         * @param {Node} focusedNode
+         * @param {Node} button
          */
-        _submitForm: function (e, focusedNode) {
+        _submitForm: function (e, button) {
             /**
              * Fired when a form is submitted in the browser
              *
@@ -637,9 +656,10 @@ YUI.add(&#x27;ez-serversideview&#x27;, function (Y) {
              */
             this.fire(&#x27;submitForm&#x27;, {
                 form: e.target,
-                formData: this._serializeForm(e.target, focusedNode),
+                formData: this._serializeForm(e.target, button),
                 originalEvent: e,
             });
+            this._formButton = null;
         },
 
         /**
@@ -649,14 +669,14 @@ YUI.add(&#x27;ez-serversideview&#x27;, function (Y) {
          *
          * @method _serializeForm
          * @param {Node} form
-         * @param {Node} focusedNode
+         * @param {Node} button
          * @return {Object} key/value data of the form
          */
-        _serializeForm: function (form, focusedNode) {
+        _serializeForm: function (form, button) {
             var data = {};
 
-            if ( this._isSubmitButton(focusedNode, form) ) {
-                data[focusedNode.getAttribute(&#x27;name&#x27;)] = &quot;&quot;;
+            if ( this._isSubmitButton(button, form) ) {
+                data[button.getAttribute(&#x27;name&#x27;)] = &quot;&quot;;
             }
 
             form.get(&#x27;elements&#x27;).each(function (field) {
@@ -734,6 +754,16 @@ YUI.add(&#x27;ez-serversideview&#x27;, function (Y) {
          * @method initializer
          */
         initializer: function () {
+            /**
+             * References the button used to submit a form, it is updated by
+             * &#x60;_trackUsedButton&#x60; as a replacement for &#x60;document.activeElement&#x60;
+             * which is not correctly updated by Firefox for OSX or Safari.
+             * see https://jira.ez.no/browse/EZP-25393
+             *
+             * @property _formButton
+             * @type {Node|null}
+             */
+            this._formButton = null;
             this.containerTemplate = &#x27;&lt;div class=&quot;ez-view-serversideview&quot;/&gt;&#x27;;
 
             this.on(&#x27;activeChange&#x27;, function () {

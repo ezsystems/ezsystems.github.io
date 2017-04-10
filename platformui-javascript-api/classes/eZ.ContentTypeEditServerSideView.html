@@ -877,6 +877,10 @@
                                 <a href="#method__submitForm">_submitForm</a>
 
                             </li>
+                            <li class="index-item method protected inherited">
+                                <a href="#method__trackUsedButton">_trackUsedButton</a>
+
+                            </li>
                             <li class="index-item method inherited">
                                 <a href="#method_addAttr">addAttr</a>
 
@@ -1041,6 +1045,10 @@
                     <ul class="index-list properties extends">
                             <li class="index-item property protected inherited inherited">
                                 <a href="#property__allowAdHocAttrs">_allowAdHocAttrs</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property__formButton">_formButton</a>
 
                             </li>
                             <li class="index-item property inherited">
@@ -1739,7 +1747,7 @@ Since it's on a critical path, we don't want to re-do the check.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.ServerSideView.html#method__confirmSubmit">eZ.ServerSideView</a>:
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l29"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:29</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l47"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:47</code></a>
         </p>
 
 
@@ -3655,7 +3663,7 @@ added lazily and still requires initialization.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.ServerSideView.html#method__isSubmitButton">eZ.ServerSideView</a>:
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l145"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:145</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l165"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:165</code></a>
         </p>
 
 
@@ -4349,7 +4357,7 @@ settings. It removes the checked options from the DOM.</p>
                         <code>form</code>
                 </li>
                 <li class="arg">
-                        <code>focusedNode</code>
+                        <code>button</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -4367,7 +4375,7 @@ settings. It removes the checked options from the DOM.</p>
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.ServerSideView.html#method__serializeForm">eZ.ServerSideView</a>:
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l88"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:88</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l108"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:108</code></a>
         </p>
 
 
@@ -4395,7 +4403,7 @@ data.
 
                 </li>
                 <li class="param">
-                        <code class="param-name">focusedNode</code>
+                        <code class="param-name">button</code>
                         <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
 
 
@@ -5020,7 +5028,7 @@ the same value as the current view
                         <code>e</code>
                 </li>
                 <li class="arg">
-                        <code>focusedNode</code>
+                        <code>button</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -5036,7 +5044,7 @@ the same value as the current view
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.ServerSideView.html#method__submitForm">eZ.ServerSideView</a>:
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l61"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:61</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l80"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:80</code></a>
         </p>
 
 
@@ -5064,8 +5072,65 @@ handle it.
 
                 </li>
                 <li class="param">
-                        <code class="param-name">focusedNode</code>
+                        <code class="param-name">button</code>
                         <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method__trackUsedButton" class="method item protected inherited">
+    <h3 class="name"><code>_trackUsedButton</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.ServerSideView.html#method__trackUsedButton">eZ.ServerSideView</a>:
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l32"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:32</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Click handler on the buttons in form element. It is used to keep
+which button was used to submit the form. This was introduced to fix
+https://jira.ez.no/browse/EZP-25393 because under MacOS, Safari and
+Firefox do not correctly update document.activeElement, as a result,
+when handling the form submit, the button was lost.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/EventFacade.html" class="crosslink external" target="_blank">EventFacade</a></span>
 
 
                     <div class="param-description">
@@ -6449,7 +6514,7 @@ falsy value otherwise
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.ServerSideView.html#method_getTitle">eZ.ServerSideView</a>:
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l199"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:199</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l229"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:229</code></a>
         </p>
 
 
@@ -6554,7 +6619,7 @@ and invokes initializers for the class hierarchy.
     <div class="meta">
                 <p>Inherited from
                 <a href="../classes/eZ.ServerSideView.html#method_initializer">eZ.ServerSideView</a>:
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l173"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:173</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l193"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:193</code></a>
         </p>
 
 
@@ -7495,7 +7560,7 @@ but doesn't destroy it or any event listeners attached to it.
                 View
             </a>
             but overwritten in
-        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l187"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:187</code></a>
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l217"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:217</code></a>
         </p>
 
 
@@ -7970,6 +8035,33 @@ instantiate a view and set a bunch of attributes without having to subclass
 
 
 </div>
+<div id="property__formButton" class="property item inherited">
+    <h3 class="name"><code>_formButton</code></h3>
+    <span class="type"><a href="http://yuilibrary.com/yui/docs/api/classes/Node.html" class="crosslink external" target="_blank">Node</a> | Null</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/eZ.ServerSideView.html#property__formButton">eZ.ServerSideView</a>:
+        <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l200"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:200</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        References the button used to submit a form, it is updated by
+<code>_trackUsedButton</code> as a replacement for <code>document.activeElement</code>
+which is not correctly updated by Firefox for OSX or Safari.
+see https://jira.ez.no/browse/EZP-25393
+    </div>
+
+
+
+</div>
 <div id="property_containerTemplate" class="property item inherited">
     <h3 class="name"><code>containerTemplate</code></h3>
     <span class="type">String</span>
@@ -8278,7 +8370,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.ServerSideView.html#attr_html">eZ.ServerSideView</a>:
-                            <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l221"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:221</code></a>
+                            <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l251"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:251</code></a>
                             </p>
                     
                     
@@ -8338,7 +8430,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.ServerSideView.html#attr_title">eZ.ServerSideView</a>:
-                            <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l210"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:210</code></a>
+                            <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l240"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:240</code></a>
                             </p>
                     
                     
@@ -8468,7 +8560,7 @@ How this template gets used is entirely up to you and your custom
                         <div class="meta">
                                     <p>Inherited from
                                     <a href="../classes/eZ.ServerSideView.html#event_submitForm">eZ.ServerSideView</a>:
-                            <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l72"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:72</code></a>
+                            <a href="../files/Resources_public_js_views_ez-serversideview.js.html#l91"><code>Resources&#x2F;public&#x2F;js&#x2F;views&#x2F;ez-serversideview.js:91</code></a>
                             </p>
                     
                     
