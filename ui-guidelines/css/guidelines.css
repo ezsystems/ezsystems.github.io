@@ -300,6 +300,28 @@ pre[class*="language-"] {
    margin-top: -1rem;
 }
 
+/* Components - Form */
+.list-form {
+    float: left;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+}
+
+.list-form li {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.ez-form-box {
+    display: block;
+    height: 5em;
+    width: 100%;
+    margin-left: 2em;
+    margin-bottom: 1.5em;
+}
+
 /*==== UTILITIES/HELPERS ====*/
 .top-half-extra {
     margin-top: 2em;
