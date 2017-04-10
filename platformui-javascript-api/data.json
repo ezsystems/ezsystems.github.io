@@ -12485,7 +12485,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 35,
+            "line": 41,
             "description": "Stores the click outside event handler",
             "itemtype": "property",
             "name": "_clickOutsideHandler",
@@ -12498,7 +12498,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 75,
+            "line": 87,
             "description": "Shows the row options",
             "itemtype": "method",
             "name": "_uiShowOptions",
@@ -12517,7 +12517,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 90,
+            "line": 102,
             "description": "Clears the click outside handler",
             "itemtype": "method",
             "name": "_clearClickOutsideHandler",
@@ -12529,7 +12529,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 102,
+            "line": 114,
             "description": "Hides the row options",
             "itemtype": "method",
             "name": "_uiHideOptions",
@@ -12541,7 +12541,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 114,
+            "line": 126,
             "description": "Removes the loading class to reflect the non loading state",
             "itemtype": "method",
             "name": "_uiEndLoading",
@@ -12553,7 +12553,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 124,
+            "line": 136,
             "description": "Adds the loading class to reflect the loading state",
             "itemtype": "method",
             "name": "_uiStartLoading",
@@ -12565,7 +12565,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 134,
+            "line": 146,
             "description": "Fires an event to request the data to display.  This method must be\nreimplemented when extending eZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
             "name": "_fireLoadDataEvent",
@@ -12577,7 +12577,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 144,
+            "line": 156,
             "description": "Returns a representation of an item suitable for the template. This\nmethod must be reimplemented when extending\neZ.DashboardBlockAsynchronousView.",
             "itemtype": "method",
             "name": "_getTemplateItem",
@@ -12600,7 +12600,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 158,
+            "line": 170,
             "description": "Gets a single item from the `items` attribute.",
             "itemtype": "method",
             "name": "_getItem",
@@ -12623,7 +12623,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 179,
+            "line": 191,
             "description": "Hold the items to display in the block",
             "itemtype": "attribute",
             "name": "items",
@@ -12635,7 +12635,7 @@
         },
         {
             "file": "Resources/public/js/views/dashboard/ez-dashboardblockasynchronousview.js",
-            "line": 190,
+            "line": 202,
             "description": "Flag indicating if the block is currently waiting for data.",
             "itemtype": "attribute",
             "name": "loading",

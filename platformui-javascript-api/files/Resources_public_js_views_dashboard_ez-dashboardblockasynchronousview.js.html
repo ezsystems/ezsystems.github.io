@@ -573,6 +573,12 @@ YUI.add(&#x27;ez-dashboardblockasynchronousview&#x27;, function (Y) {
         initializer: function () {
             this._fireMethod = this._fireLoadDataEvent;
             this._watchAttribute = &#x27;items&#x27;;
+            this._errorHandlingMethod = function () {
+                if (this.get(&#x27;loadingError&#x27;)) {
+                    this._set(&#x27;loading&#x27;, false);
+                    this.render();
+                }
+            };
             /**
              * Stores the click outside event handler
              *
@@ -588,8 +594,14 @@ YUI.add(&#x27;ez-dashboardblockasynchronousview&#x27;, function (Y) {
                 .addClass(this._generateViewClassName(Y.eZ.DashboardBlockBaseView.NAME))
                 .addClass(this._generateViewClassName(Y.eZ.DashboardBlockAsynchronousView.NAME));
 
-            this.after(&#x27;itemsChange&#x27;, function () {
-                this._set(&#x27;loading&#x27;, false);
+            this.on(&#x27;itemsChange&#x27;, function (e) {
+                if ( e.newVal === null ) {
+                    // null is set when retrying with the Retry button
+                    e.newVal = Y.eZ.DashboardBlockAsynchronousView.ATTRS.items.value;
+                    this._set(&#x27;loading&#x27;, true);
+                } else {
+                    this._set(&#x27;loading&#x27;, false);
+                }
             });
             this.after(&#x27;loadingChange&#x27;, function () {
                 if ( this.get(&#x27;loading&#x27;) ) {
