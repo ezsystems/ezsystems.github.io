@@ -4,10 +4,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Author",
         "AuthorList",
         "CKEDITOR.plugins.ezaddcontent",
-        "CKEDITOR.plugins.ezcaret",
         "CKEDITOR.plugins.ezembed",
         "CKEDITOR.plugins.ezfocusblock",
-        "CKEDITOR.plugins.ezmoveelement",
         "CKEDITOR.plugins.ezpaste",
         "CKEDITOR.plugins.ezremoveblock",
         "CKEDITOR.plugins.yui3",
@@ -30,9 +28,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.AlloyEditorButton.ButtonEmbedRight",
         "eZ.AlloyEditorButton.ButtonImageHref",
         "eZ.AlloyEditorButton.ButtonImageVariation",
-        "eZ.AlloyEditorButton.ButtonLinkEdit",
-        "eZ.AlloyEditorButton.ButtonMoveDown",
-        "eZ.AlloyEditorButton.ButtonMoveUp",
         "eZ.AlloyEditorButton.WidgetButton",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonEmbed",
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonHeading",
@@ -193,7 +188,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.RestModel",
         "eZ.RichTextEditView",
         "eZ.RichTextEmbedContainer",
-        "eZ.RichTextLocationLink",
         "eZ.RichTextResolveEmbed",
         "eZ.RichTextResolveImage",
         "eZ.RichTextView",
@@ -234,9 +228,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "eZ.TreeView",
         "eZ.UniversalDiscoveryBrowseView",
         "eZ.UniversalDiscoveryConfirmedListView",
-        "eZ.UniversalDiscoveryFinderExplorerLevelView",
-        "eZ.UniversalDiscoveryFinderExplorerView",
-        "eZ.UniversalDiscoveryFinderView",
         "eZ.UniversalDiscoveryMethodBaseView",
         "eZ.UniversalDiscoverySearchView",
         "eZ.UniversalDiscoverySelectedView",
@@ -271,14 +262,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-alloyeditor-button-embedleft",
         "ez-alloyeditor-button-imagehref",
         "ez-alloyeditor-button-imagevariation",
-        "ez-alloyeditor-button-linkedit",
         "ez-alloyeditor-button-mixin-blocktextalign",
         "ez-alloyeditor-button-mixin-embedalign",
         "ez-alloyeditor-button-mixin-embeddiscovercontent",
         "ez-alloyeditor-button-mixin-embedimage",
         "ez-alloyeditor-button-mixin-widgetbutton",
-        "ez-alloyeditor-button-movedown",
-        "ez-alloyeditor-button-moveup",
         "ez-alloyeditor-button-remove",
         "ez-alloyeditor-toolbar-config-block-base",
         "ez-alloyeditor-toolbar-config-embed",
@@ -410,7 +398,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-restmodel",
         "ez-richtext-editview",
         "ez-richtext-embedcontainer",
-        "ez-richtext-locationlink",
         "ez-richtext-resolveembed",
         "ez-richtext-resolveimage",
         "ez-richtext-view",
@@ -450,9 +437,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "ez-universaldiscoverybrowseview",
         "ez-universaldiscoveryconfirmedlistview",
         "ez-universaldiscoverycontenttreeplugin",
-        "ez-universaldiscoveryfinderexplorerlevelview",
-        "ez-universaldiscoveryfinderexplorerview",
-        "ez-universaldiscoveryfinderview",
         "ez-universaldiscoverymethodbaseview",
         "ez-universaldiscoveryplugin",
         "ez-universaldiscoverysearchview",
@@ -532,11 +516,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the image variation drop down"
         },
         {
-            "displayName": "ez-alloyeditor-button-linkedit",
-            "name": "ez-alloyeditor-button-linkedit",
-            "description": "Provides the link edit button"
-        },
-        {
             "displayName": "ez-alloyeditor-button-mixin-blocktextalign",
             "name": "ez-alloyeditor-button-mixin-blocktextalign",
             "description": "Provides the BlockTextAlign mixin"
@@ -560,16 +539,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-alloyeditor-button-mixin-widgetbutton",
             "name": "ez-alloyeditor-button-mixin-widgetbutton",
             "description": "Provides the WidgetButton mixin"
-        },
-        {
-            "displayName": "ez-alloyeditor-button-movedown",
-            "name": "ez-alloyeditor-button-movedown",
-            "description": "Provides the move down button"
-        },
-        {
-            "displayName": "ez-alloyeditor-button-moveup",
-            "name": "ez-alloyeditor-button-moveup",
-            "description": "Provides the move up button"
         },
         {
             "displayName": "ez-alloyeditor-button-remove",
@@ -1227,11 +1196,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Provides the embedcontainer richtext processor"
         },
         {
-            "displayName": "ez-richtext-locationlink",
-            "name": "ez-richtext-locationlink",
-            "description": "Provides the Location link processor"
-        },
-        {
             "displayName": "ez-richtext-resolveembed",
             "name": "ez-richtext-resolveembed",
             "description": "Provides the resolve embed richtext processor"
@@ -1425,21 +1389,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "ez-universaldiscoverycontenttreeplugin",
             "name": "ez-universaldiscoverycontenttreeplugin",
             "description": "Provides the content tree plugin for the universal discovery"
-        },
-        {
-            "displayName": "ez-universaldiscoveryfinderexplorerlevelview",
-            "name": "ez-universaldiscoveryfinderexplorerlevelview",
-            "description": "Provides the universal discovery finder explorer level view"
-        },
-        {
-            "displayName": "ez-universaldiscoveryfinderexplorerview",
-            "name": "ez-universaldiscoveryfinderexplorerview",
-            "description": "Provides the universal discovery finder explorer view"
-        },
-        {
-            "displayName": "ez-universaldiscoveryfinderview",
-            "name": "ez-universaldiscoveryfinderview",
-            "description": "Provides the universal discovery finder method"
         },
         {
             "displayName": "ez-universaldiscoverymethodbaseview",
