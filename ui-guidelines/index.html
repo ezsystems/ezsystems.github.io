@@ -26,6 +26,7 @@
 		<!-- Custom css & js-->
 		<link rel="stylesheet" href="css/guidelines.css">
 		<link rel="stylesheet" href="css/components-buttons.css">
+		<link rel="stylesheet" href="css/components-form.css">
 		<link rel="stylesheet" href="css/resources-typography.css">
 		<link rel="stylesheet" href="css/resources-colors.css">
 		<link rel="stylesheet" href="css/resources-icons.css">
@@ -313,6 +314,127 @@
 							        </div>
 							    </div>
 						    </div>
+						</div>
+						<div id="components-form" class="modules">
+							<h3 class="module-header">Form components</h3>
+							<h4 class="u-move-down-xlarge">Checkboxes</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<ul class="list-form">
+									<li>
+										<div class="ez-form-clickable">
+											<input id="cb1" type="checkbox" name="checkbox" checked="checked">
+										 	<label for="cb1" class="">Item 1</label>
+										</div>
+									</li>
+									<li>
+										<div class="ez-form-clickable">
+										 	<input id="cb2" type="checkbox" name="checkbox">
+										 	<label for="cb2" class="">Item 2</label>
+										</div>
+									</li>
+									<li>
+										<div class="ez-form-clickable">
+										 	<input id="cb3" type="checkbox" name="checkbox">
+										 	<label for="cb3" class="">Item 3</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<h4 class="u-move-down-xlarge">Radio buttons</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<ul class="list-form">
+									<li>
+										<div class="ez-form-clickable">
+											<input id="rb1" type="radio" name="radiobutton" checked="checked">
+										 	<label for="rb1" class="">Item 1</label>
+										</div>
+									</li>
+									<li>
+										<div class="ez-form-clickable">
+										 	<input id="rb2" type="radio" name="radiobutton">
+										 	<label for="rb2" class="">Item 2</label>
+										</div>
+									</li>
+									<li>
+										<div class="ez-form-clickable">
+										 	<input id="rb3" type="radio" name="radiobutton">
+										 	<label for="rb3" class="">Item 3</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<h4 class="u-move-down-xlarge">Input text</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<div class="ez-form-box">
+									<div class="ez-form-inputtext">
+										<label for="text">Label:</label>
+										<input type="text" maxlength="255">
+										<p class="help-block">Will be shown at the top of article pages</p>
+									</div>
+								</div>
+								<p class="bottom-half-extra">Suggested style for validation messages.</p>
+								<div class="ez-form-box">
+									<div class="ez-form-inputtext ez-form-inputtext-errorstyle">
+										<label for="text">Label*:</label>
+										<div class="error-show">
+											<input type="text" required>
+											<p class="error-style"><span class="ez-icon-error"></span></p>
+										</div>
+										<p class="help-block">Will be shown at the top of article pages</p>
+									</div>
+								</div>
+							</div>
+							<h4 class="u-move-down-xlarge">Input text small</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<div class="ez-form-box">
+									<div class="ez-form-inputtext ez-form-inputtext-small">
+										<label for="text">Label:</label>
+										<input type="text">
+										<p class="help-block">Will be shown at the top of article pages</p>
+									</div>
+								</div>
+							</div>
+							<h4 class="u-move-down-xlarge">Input text large</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<div class="ez-form-box">
+									<div class="ez-form-inputtext ez-form-inputtext-large">
+										<label for="text">Label:</label>
+										<input type="text">
+										<p class="help-block">Will be shown at the top of article pages</p>
+									</div>
+								</div>
+							</div>
+							<h4 class="u-move-down-xlarge">Date and time</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<div class="ez-form-box">
+									<div class="ez-form-datetime">
+										<div class="ez-form-inputtext ez-form-inputtext-xsmall">
+											<label for"date">Publish date:</label>
+											<input type="date" placeholder="mm/dd/yyyy">
+											<p class="help-block">Will be shown at the top of the article.</p>
+										</div>
+										<div class="ez-form-inputtext ez-form-inputtext-xsmall ez-form-timestyle">
+											<input type="time" placeholder="--:-- --">
+										</div>
+									</div>
+								</div>
+							</div>
+							<h4 class="u-move-down-xlarge">Search</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<div class="ez-form-box">
+									<div class="ez-form-inputtext ez-form-inputtext-search">
+										<input type="text" placeholder="Search place...">
+										<button class="ez-button-secondary"><span class="ez-icon-search"></span></button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div id="resources" class="content-section">
@@ -1743,6 +1865,11 @@
 								<li>
 									<a href="#components-buttons">
 										<span class="fa fa-angle-right"></span>Buttons
+									</a>
+								</li>
+								<li>
+									<a href="#components-form">
+										<span class="fa fa-angle-right"></span>Forms
 									</a>
 								</li>
 							</ul>

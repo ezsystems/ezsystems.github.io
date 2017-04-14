@@ -1,0 +1,194 @@
+.ez-form-clickable {
+    display: block;
+    margin: .75rem 0;
+}
+
+.ez-form-clickable label {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+input[type=checkbox], 
+input[type=radio] {
+    display: none; 
+}
+
+input[type=checkbox] + label:before,
+input[type=radio] + label:before { 
+    display: inline-block;  
+    margin: 0 5px 0 0;
+    width: 20px;  
+    height: 20px;  
+    vertical-align: text-top;
+    background-color: #fafafa;  
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 2px 2px rgba(204, 204, 204, .75);
+    content: ""; 
+}
+
+input[type=checkbox] + label:before {
+    border-radius: 4px;  
+}
+
+input[type=radio] + label:before { 
+    border-radius: 50px;
+}
+
+input[type=checkbox]:checked + label:before,
+input[type=radio]:checked + label:before {
+    background-color: #196fec; 
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+}
+
+input[type=checkbox]:checked + label:before {
+    width: 20px;  
+    height: 20px;  
+    border-radius: 4px; 
+    box-shadow: none;
+    content: "\2713";
+    font-size: 18px;
+}
+
+input[type=radio]:checked + label:before {
+    box-shadow: none;
+    content: "\2022";
+    font-size: 29px;
+    font-weight: bold;
+}
+
+input[type=text], 
+input[type=date],
+input[type=datetime],
+input[type=number],
+input[type=search],
+input[type=time],
+input[type=url],
+input[type=email],
+textarea, 
+select {
+    display: block;
+    margin-top: -4px;
+    height: 2em;
+    width: 100%;
+    padding: 0px 10px;
+    line-height: 2em;
+    box-sizing: border-box;
+    border: 1px solid #b1d2e0;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.30s ease-in-out;  
+}
+
+input[type=text]:focus, 
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=email]:focus,
+textarea:focus, 
+select:focus {
+    box-shadow: inset 0 0 8px rgba(177, 210, 224, 1);
+    border: 1px solid #b1d2e0;
+}
+
+.ez-form-inputtext {
+    width: 75%;
+}
+
+.ez-form-inputtext input:hover + .help-block,
+.error-show:hover + .help-block {
+   display: block;
+}
+
+.help-block {
+    display: none;
+    margin-top: -1px;
+    margin-left: 10px;
+    color: #878787;
+    font-weight: lighter;
+    font-size: .75em;
+    letter-spacing: 0px;
+}
+
+.ez-form-inputtext-errorstyle label {
+    color: #d92d42;
+}
+
+.ez-form-inputtext-errorstyle label:after {
+    display: inline;
+    content: ' This field is required';
+    color: #d92d42;
+    font-style: italic;
+    font-size: .85em;
+    font-weight: normal;
+}
+
+.error-show {
+    width: 100%;
+}
+
+.error-show input {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.error-style {
+    position: absolute;
+    width: 1.4em;
+    height: 1.6em;
+    margin-left: -1.4em;
+    margin-top: -1.6em;
+    border: 1px solid #d92d42;
+    border-left: none;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    line-height: 1.7em;
+    color: #fff;
+    background-color: #d92d42;
+}
+
+.ez-form-inputtext input:required {
+    border: 1px solid #d92d42;
+    background-color: #fceaec;
+    box-shadow: inset 0 0 8px rgba(217, 45, 66, .25);
+}
+
+.ez-form-inputtext-small {
+    max-width: 330px;
+}
+
+.ez-form-inputtext-large input {
+    min-height: 5em;
+}
+
+.ez-form-inputtext-xsmall {
+    max-width: 160px;
+    display: inline-block;
+    float: left;
+}
+
+.ez-form-timestyle {
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 120px;
+}
+
+.ez-form-inputtext-search {
+    width: 475px;
+}
+
+.ez-form-inputtext-search input {
+    border-radius: 4px 0 0 4px;
+}
+
+.ez-form-inputtext-search button {
+    position: absolute;
+    margin-left: 475px;
+    margin-top: -28px;
+    border-radius: 0 4px 4px 0;
+    padding: 2px 15px;
+}
