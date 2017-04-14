@@ -67,7 +67,7 @@ input[type=time],
 input[type=url],
 input[type=email],
 textarea, 
-select{
+select {
     display: block;
     margin-top: -4px;
     height: 2em;
@@ -90,7 +90,7 @@ input[type=time]:focus,
 input[type=url]:focus,
 input[type=email]:focus,
 textarea:focus, 
-select:focus{
+select:focus {
     box-shadow: inset 0 0 8px rgba(177, 210, 224, 1);
     border: 1px solid #b1d2e0;
 }
