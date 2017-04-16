@@ -192,3 +192,150 @@ select:focus {
     border-radius: 0 4px 4px 0;
     padding: 2px 15px;
 }
+
+.ez-form-select {
+    position: relative;
+    display: inline-block;
+    height: 2em;
+    cursor: pointer;
+}
+
+.ez-form-select select {
+    width: auto;
+    background-color: #fff;
+}
+
+.ez-form-onoffswitcher {
+    position: relative;
+    display: block;
+    margin: -4px 0 0 -2px;
+}
+
+.ez-form-onoffswitcher input[type="checkbox"] + label:before {
+    display: none;
+}
+
+.ez-form-onoffswitcher label {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 35px;
+    border-radius: 46px;
+    background: #d3d3d3;
+    transition: 0.25s;
+}
+
+.ez-form-onoffswitcher label:after, 
+.ez-form-onoffswitcher label:before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50px;
+    border: 1px solid rgba(136,136,136,.2);
+    background: #fff;
+    transition: 0.25s;
+}
+
+.ez-form-onoffswitcher input + label:before,
+.ez-form-onoffswitcher input + label:after {
+    content: 'Off';
+    padding-left: 5px;
+    z-index: 1;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 30px;
+    color: #aaa;
+    letter-spacing: -1px;
+    text-align: left;
+    overflow: hidden;
+    -webkit-animation: 0.25s forwards;
+            animation: 0.25s forwards;
+}
+
+.ez-form-onoffswitcher input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.ez-form-onoffswitcher input:checked + label {
+    background: #188fc1;
+}
+
+.ez-form-onoffswitcher input:checked + label:after, 
+.ez-form-onoffswitcher input:checked + label:before {
+    content: "On";
+    left: 32px;
+    background: #fff;
+    border: 1px solid rgba(136,136,136,.2);
+    color: #0f6d95;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    -webkit-animation: 0.25s forwards;
+            animation: 0.25s forwards;
+}
+
+.ez-form-visibilityswitcher input[type="radio"] + label:before,
+.ez-form-visibilityswitcher input[type="radio"]:checked + label:after { 
+    display: none;
+}
+
+.ez-form-visibilityswitcher {
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 130px;
+    border-radius: 50px;
+    border: 1px solid #0f6d95;
+    background: transparent;
+    text-align: center;
+}
+
+.ez-form-visibilityswitcher label {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 64px;
+    height: 20px;
+    margin-left: 0px;
+    padding-left: 1px;
+    z-index: 1;
+    cursor: pointer;
+    color: #0f6d95;
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 33px;
+}
+
+.ez-form-visibilityswitcher input[type="radio"]:checked + label {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ez-form-visibilityswitcher .switch {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 29px;
+    width: 61px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #0f6d95;
+    transition: transform 0.25s;
+}
+
+.ez-form-visibilityswitcher input[type="radio"]:checked + label + .switch {
+    -webkit-transform: translateX(63px);
+        -ms-transform: translateX(63px);
+            transform: translateX(63px);
+}
