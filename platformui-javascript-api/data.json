@@ -313,19 +313,6 @@
                 "eZ": 1
             }
         },
-        "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js": {
-            "name": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "modules": {
-                "ez-richtext-locationlink": 1
-            },
-            "classes": {
-                "eZ.RichTextLocationLink": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
         "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js": {
             "name": "Resources/public/js/views/fields/richtext/ez-richtext-resolveembed.js",
             "modules": {
@@ -1736,45 +1723,6 @@
                 "eZ": 1
             }
         },
-        "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js": {
-            "name": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "modules": {
-                "ez-universaldiscoveryfinderexplorerlevelview": 1
-            },
-            "classes": {
-                "eZ.UniversalDiscoveryFinderExplorerLevelView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
-        "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js": {
-            "name": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "modules": {
-                "ez-universaldiscoveryfinderexplorerview": 1
-            },
-            "classes": {
-                "eZ.UniversalDiscoveryFinderExplorerView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
-        "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js": {
-            "name": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "modules": {
-                "ez-universaldiscoveryfinderview": 1
-            },
-            "classes": {
-                "eZ.UniversalDiscoveryFinderView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            }
-        },
         "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js": {
             "name": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverymethodbaseview.js",
             "modules": {
@@ -2956,19 +2904,6 @@
                 "eZ.AlloyEditorButton": 1
             }
         },
-        "Resources/public/js/alloyeditor/buttons/linkedit.js": {
-            "name": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "modules": {
-                "ez-alloyeditor-button-linkedit": 1
-            },
-            "classes": {
-                "eZ.AlloyEditorButton.ButtonLinkEdit": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ.AlloyEditorButton": 1
-            }
-        },
         "Resources/public/js/alloyeditor/buttons/list.js": {
             "name": "Resources/public/js/alloyeditor/buttons/list.js",
             "modules": {},
@@ -2977,32 +2912,6 @@
             },
             "fors": {},
             "namespaces": {}
-        },
-        "Resources/public/js/alloyeditor/buttons/movedown.js": {
-            "name": "Resources/public/js/alloyeditor/buttons/movedown.js",
-            "modules": {
-                "ez-alloyeditor-button-movedown": 1
-            },
-            "classes": {
-                "eZ.AlloyEditorButton.ButtonMoveDown": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ.AlloyEditorButton": 1
-            }
-        },
-        "Resources/public/js/alloyeditor/buttons/moveup.js": {
-            "name": "Resources/public/js/alloyeditor/buttons/moveup.js",
-            "modules": {
-                "ez-alloyeditor-button-moveup": 1
-            },
-            "classes": {
-                "eZ.AlloyEditorButton.ButtonMoveUp": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ.AlloyEditorButton": 1
-            }
         },
         "Resources/public/js/alloyeditor/buttons/paragraph.js": {
             "name": "Resources/public/js/alloyeditor/buttons/paragraph.js",
@@ -3018,17 +2927,6 @@
             "modules": {},
             "classes": {
                 "CKEDITOR.plugins.ezaddcontent": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "CKEDITOR.plugins": 1
-            }
-        },
-        "Resources/public/js/alloyeditor/plugins/caret.js": {
-            "name": "Resources/public/js/alloyeditor/plugins/caret.js",
-            "modules": {},
-            "classes": {
-                "CKEDITOR.plugins.ezcaret": 1
             },
             "fors": {},
             "namespaces": {
@@ -3051,17 +2949,6 @@
             "modules": {},
             "classes": {
                 "CKEDITOR.plugins.ezfocusblock": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "CKEDITOR.plugins": 1
-            }
-        },
-        "Resources/public/js/alloyeditor/plugins/moveelement.js": {
-            "name": "Resources/public/js/alloyeditor/plugins/moveelement.js",
-            "modules": {},
-            "classes": {
-                "CKEDITOR.plugins.ezmoveelement": 1
             },
             "fors": {},
             "namespaces": {
@@ -3614,22 +3501,6 @@
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
             "line": 14,
             "description": "Provides the embedcontainer richtext processor"
-        },
-        "ez-richtext-locationlink": {
-            "name": "ez-richtext-locationlink",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.RichTextLocationLink": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 14,
-            "description": "Provides the Location link processor"
         },
         "ez-richtext-resolveembed": {
             "name": "ez-richtext-resolveembed",
@@ -5030,7 +4901,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 22,
+            "line": 14,
             "description": "Provides the subitem list view paginated with a *Load More* button"
         },
         "ez-subitembaseview": {
@@ -5205,7 +5076,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 18,
+            "line": 14,
             "description": "Provides the universal discovery browse method"
         },
         "ez-universaldiscoveryconfirmedlistview": {
@@ -5223,54 +5094,6 @@
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryconfirmedlistview.js",
             "line": 18,
             "description": "Provides the universal discovery confirmed list view."
-        },
-        "ez-universaldiscoveryfinderexplorerlevelview": {
-            "name": "ez-universaldiscoveryfinderexplorerlevelview",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.UniversalDiscoveryFinderExplorerLevelView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 23,
-            "description": "Provides the universal discovery finder explorer level view"
-        },
-        "ez-universaldiscoveryfinderexplorerview": {
-            "name": "ez-universaldiscoveryfinderexplorerview",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.UniversalDiscoveryFinderExplorerView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 14,
-            "description": "Provides the universal discovery finder explorer view"
-        },
-        "ez-universaldiscoveryfinderview": {
-            "name": "ez-universaldiscoveryfinderview",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.UniversalDiscoveryFinderView": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 14,
-            "description": "Provides the universal discovery finder method"
         },
         "ez-universaldiscoverymethodbaseview": {
             "name": "ez-universaldiscoverymethodbaseview",
@@ -6555,62 +6378,12 @@
             "submodules": {},
             "elements": {},
             "classes": {
-                "eZ.AlloyEditorButton.ButtonImageVariation": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ.AlloyEditorButton": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/alloyeditor/buttons/imagevariation.js",
-            "line": 23,
-            "description": "Provides the image variation drop down"
-        },
-        "ez-alloyeditor-button-linkedit": {
-            "name": "ez-alloyeditor-button-linkedit",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.AlloyEditorButton.ButtonLinkEdit": 1,
-                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ.AlloyEditorButton": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/alloyeditor/buttons/list.js",
-            "line": 17,
-            "description": "Provides the link edit button"
-        },
-        "ez-alloyeditor-button-movedown": {
-            "name": "ez-alloyeditor-button-movedown",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.AlloyEditorButton.ButtonMoveDown": 1
-            },
-            "fors": {},
-            "namespaces": {
-                "eZ.AlloyEditorButton": 1
-            },
-            "tag": "module",
-            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
-            "line": 23,
-            "description": "Provides the move down button"
-        },
-        "ez-alloyeditor-button-moveup": {
-            "name": "ez-alloyeditor-button-moveup",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "eZ.AlloyEditorButton.ButtonMoveUp": 1,
+                "eZ.AlloyEditorButton.ButtonImageVariation": 1,
+                "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": 1,
                 "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": 1,
                 "CKEDITOR.plugins.ezaddcontent": 1,
-                "CKEDITOR.plugins.ezcaret": 1,
                 "CKEDITOR.plugins.ezembed": 1,
                 "CKEDITOR.plugins.ezfocusblock": 1,
-                "CKEDITOR.plugins.ezmoveelement": 1,
                 "CKEDITOR.plugins.ezpaste": 1,
                 "CKEDITOR.plugins.ezremoveblock": 1,
                 "CKEDITOR.plugins.yui3": 1
@@ -6623,7 +6396,7 @@
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
-            "description": "Provides the move up button"
+            "description": "Provides the image variation drop down"
         },
         "ez-editorcontentprocessorbase": {
             "name": "ez-editorcontentprocessorbase",
@@ -6747,7 +6520,7 @@
             },
             "tag": "module",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 88,
+            "line": 86,
             "description": "Provides the AlloyEditor `styles` toolbar configuration for headings."
         },
         "ez-alloyeditor-toolbar-config-image": {
@@ -7184,21 +6957,6 @@
             "file": "Resources/public/js/views/fields/richtext/ez-richtext-embedcontainer.js",
             "line": 14,
             "description": "The Richtext embed container processor",
-            "is_constructor": 1
-        },
-        "eZ.RichTextLocationLink": {
-            "name": "eZ.RichTextLocationLink",
-            "shortname": "eZ.RichTextLocationLink",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-richtext-locationlink",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 14,
-            "description": "The Richtext Location Link processor.",
             "is_constructor": 1
         },
         "eZ.RichTextResolveEmbed": {
@@ -8843,7 +8601,7 @@
             "module": "ez-subitemlistmoreview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 22,
+            "line": 14,
             "description": "The subitem list view paginated with a *Load More* button",
             "is_constructor": 1,
             "extends": "eZ.AsynchronousSubitemView"
@@ -8956,7 +8714,7 @@
             "module": "ez-universaldiscoverybrowseview",
             "namespace": "eZ",
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 18,
+            "line": 14,
             "description": "The universal discovery browse method view. It allows the user to pick a\ncontent in the repository by browsing using a tree.",
             "is_constructor": 1,
             "extends": "eZ.UniversalDiscoveryMethodBaseView"
@@ -8976,54 +8734,6 @@
             "description": "The universal discovery confirmed list view. It displays the contents\nchoosen by the user in the universal discovery widget. By default, only\nthe last 3 contents are really displayed.",
             "is_constructor": 1,
             "extends": "eZ.TemplateBasedView"
-        },
-        "eZ.UniversalDiscoveryFinderExplorerLevelView": {
-            "name": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "shortname": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 23,
-            "description": "The universal discovery finder explorer level. It shows content of a given depth",
-            "is_constructor": 1,
-            "extends": "eZ.TemplateBasedView"
-        },
-        "eZ.UniversalDiscoveryFinderExplorerView": {
-            "name": "eZ.UniversalDiscoveryFinderExplorerView",
-            "shortname": "eZ.UniversalDiscoveryFinderExplorerView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 14,
-            "description": "The universal discovery finder method view. It allows the user to pick a\ncontent in the repository with the explorer.",
-            "is_constructor": 1,
-            "extends": "eZ.TemplateBasedView"
-        },
-        "eZ.UniversalDiscoveryFinderView": {
-            "name": "eZ.UniversalDiscoveryFinderView",
-            "shortname": "eZ.UniversalDiscoveryFinderView",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ",
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 14,
-            "description": "The universal discovery finder method view. It allows the user to pick a\ncontent in the repository with the explorer.",
-            "is_constructor": 1,
-            "extends": "eZ.UniversalDiscoveryMethodBaseView"
         },
         "eZ.UniversalDiscoveryMethodBaseView": {
             "name": "eZ.UniversalDiscoveryMethodBaseView",
@@ -10537,20 +10247,6 @@
                 "Y.eZ.AlloyEditorButton.WidgetButton"
             ]
         },
-        "eZ.AlloyEditorButton.ButtonLinkEdit": {
-            "name": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "shortname": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton",
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 20,
-            "description": "The ButtonLinkEdit class provides functionality for creating and editing\na link in a document.\n\nNote: This component overrides the one provided by AlloyEditor by default\nto give more options and improve the UI."
-        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
             "shortname": "eZ.AlloyEditor.ButtonList",
@@ -10559,7 +10255,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-linkedit",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 17,
@@ -10569,34 +10265,6 @@
                 "AlloyEditor.ButtonStateClasses"
             ]
         },
-        "eZ.AlloyEditorButton.ButtonMoveDown": {
-            "name": "eZ.AlloyEditorButton.ButtonMoveDown",
-            "shortname": "eZ.AlloyEditorButton.ButtonMoveDown",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-alloyeditor-button-movedown",
-            "namespace": "eZ.AlloyEditorButton",
-            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
-            "line": 23,
-            "description": "The ButtonMoveDown component represents a button to move the currently\nfocused element in the editor after its following sibling element."
-        },
-        "eZ.AlloyEditorButton.ButtonMoveUp": {
-            "name": "eZ.AlloyEditorButton.ButtonMoveUp",
-            "shortname": "eZ.AlloyEditorButton.ButtonMoveUp",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "eZ.AlloyEditorButton",
-            "file": "Resources/public/js/alloyeditor/buttons/moveup.js",
-            "line": 23,
-            "description": "The ButtonMoveUp component represents a button to move the currently\nfocused element in the editor before its preceding sibling element."
-        },
         "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph": {
             "name": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
             "shortname": "eZ.AlloyEditor.ButtonParagraph",
@@ -10605,7 +10273,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton",
             "file": "Resources/public/js/alloyeditor/buttons/paragraph.js",
             "line": 17,
@@ -10623,26 +10291,11 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 90,
+            "line": 97,
             "description": "CKEditor plugin providing the eZAddContent command. This command\nallows to add content  to the editor content in the editable region\npointed by the selector available under `eZ.editableRegion` in the\nconfiguration.",
-            "is_constructor": 1
-        },
-        "CKEDITOR.plugins.ezcaret": {
-            "name": "CKEDITOR.plugins.ezcaret",
-            "shortname": "CKEDITOR.plugins.ezcaret",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "CKEDITOR.plugins",
-            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
-            "line": 29,
-            "description": "CKEDITOR plugin providing an API to handle the caret in the editor.",
             "is_constructor": 1
         },
         "CKEDITOR.plugins.ezembed": {
@@ -10653,7 +10306,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 16,
@@ -10668,26 +10321,11 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/focusblock.js",
             "line": 74,
             "description": "CKEditor plugin to add/remove the focused class on the block holding the\ncaret.",
-            "is_constructor": 1
-        },
-        "CKEDITOR.plugins.ezmoveelement": {
-            "name": "CKEDITOR.plugins.ezmoveelement",
-            "shortname": "CKEDITOR.plugins.ezmoveelement",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "CKEDITOR.plugins",
-            "file": "Resources/public/js/alloyeditor/plugins/moveelement.js",
-            "line": 74,
-            "description": "CKEditor plugin providing the eZMoveUp and eZMoveDown commands. These\ncommands allow to move the element having the focus in the editor.",
             "is_constructor": 1
         },
         "CKEDITOR.plugins.ezpaste": {
@@ -10698,7 +10336,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/paste.js",
             "line": 63,
@@ -10713,10 +10351,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 122,
+            "line": 120,
             "description": "CKEditor plugin providing the eZRemoveBlock command. This command\nallows to remove the block element holding the caret or the focused\nwidget",
             "is_constructor": 1
         },
@@ -10728,7 +10366,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins",
             "file": "Resources/public/js/alloyeditor/plugins/yui3.js",
             "line": 24,
@@ -10840,7 +10478,7 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 76,
+            "line": 74,
             "description": "`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
             "is_constructor": 1,
             "extends": "BlockBase"
@@ -10856,7 +10494,7 @@
             "module": "ez-alloyeditor-toolbar-config-heading",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 88,
+            "line": 86,
             "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.HeadingConfig constructor instead.\n`styles` toolbar configuration for heading. The `heading` toolbar is\nsupposed to be shown when the user puts the caret inside an heading\nelement and when the selection is empty.",
             "deprecated": true,
             "extends": "BlockBase"
@@ -10887,7 +10525,7 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/link.js",
-            "line": 18,
+            "line": 16,
             "description": "`styles` toolbar configuration for links"
         },
         "eZ.AlloyEditorToolbarConfig.Paragraph": {
@@ -10901,7 +10539,7 @@
             "module": "ez-alloyeditor-toolbar-config-paragraph",
             "namespace": "eZ.AlloyEditorToolbarConfig",
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 88,
+            "line": 86,
             "description": "Deprecated `styles` toolbar configuration, use\neZ.AlloyEditorToolbarConfig.ParagraphConfig instead.\n`styles` toolbar configuration for paragraph. The `paragraph` toolbar is\nsupposed to be shown when the user puts the caret inside a paragraph\nelement and when the selection is empty.",
             "deprecated": true,
             "extends": "BlockBase"
@@ -11211,7 +10849,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 209,
+            "line": 203,
             "description": "Prevent hash changes by setting the old hash on hashChange event",
             "itemtype": "method",
             "name": "_preventHashChange",
@@ -11223,7 +10861,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 226,
+            "line": 220,
             "description": "Allows hash changes by detaching hashChange subscription",
             "itemtype": "method",
             "name": "_allowHashChange",
@@ -11235,7 +10873,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 236,
+            "line": 230,
             "description": "Disable routing by deleting the callbacks of the routes",
             "itemtype": "method",
             "name": "_disableRouting",
@@ -11247,7 +10885,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 249,
+            "line": 243,
             "description": "Enables routing by setting back the callbacks to the routes",
             "itemtype": "method",
             "name": "_enableRouting",
@@ -11259,7 +10897,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 261,
+            "line": 255,
             "description": "Destroy properly every side view.",
             "itemtype": "method",
             "name": "_destroySideViews",
@@ -11271,7 +10909,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 280,
+            "line": 274,
             "description": "Refreshes the current view",
             "itemtype": "method",
             "name": "_refreshView",
@@ -11283,7 +10921,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 290,
+            "line": 284,
             "description": "Dispatches the `config` attribute value so that the app is configured\naccordingly. The values consumed by the app are removed from the\nconfiguration.",
             "itemtype": "method",
             "name": "_dispatchConfig",
@@ -11295,7 +10933,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 344,
+            "line": 338,
             "description": "Returns the language name of the language with the given\n`languageCode`. If no language is found with this code, the language\ncode is returned.",
             "itemtype": "method",
             "name": "getLanguageName",
@@ -11317,7 +10955,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 363,
+            "line": 357,
             "description": "Generates the URI for a route identified by its name. All\nplaceholders are replaced by the value found in the `params`\nparameters, if a value is not found in this object, the placeholder\nis replaced by an empty string.",
             "itemtype": "method",
             "name": "routeUri",
@@ -11344,7 +10982,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 395,
+            "line": 389,
             "description": "Navigates to the given route build with the given parameters",
             "itemtype": "method",
             "name": "navigateTo",
@@ -11367,7 +11005,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 406,
+            "line": 400,
             "description": "Logs in a user using the provided credentials. If the credentials\nare wrong, the callback is called with the error and response from\nCAPI.logIn. If the credentials are correct, the error and response\narguments are set with the ones from eZ.UserModel.load method. If the\nuser loading fails, the user is automatically logged out.",
             "itemtype": "method",
             "name": "logIn",
@@ -11401,7 +11039,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 446,
+            "line": 440,
             "description": "Logs out the current user and resets it",
             "itemtype": "method",
             "name": "logOut",
@@ -11430,7 +11068,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 457,
+            "line": 451,
             "description": "Fired when the user logs out.",
             "itemtype": "event",
             "name": "logOut",
@@ -11440,7 +11078,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 470,
+            "line": 464,
             "description": "Checks whether the user is logged in. From the application point of\nview, being logged in means the user has a session and this session\nis associated with a user which is not the anonymous user.",
             "itemtype": "method",
             "name": "isLoggedIn",
@@ -11470,7 +11108,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 500,
+            "line": 494,
             "description": "Changes the application state to be open",
             "itemtype": "method",
             "name": "open",
@@ -11497,7 +11135,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 517,
+            "line": 511,
             "description": "Middleware to handle the *side views* configured for the given route.\nDepending on the configuration, it will apply the CSS class to\nshow/hide the side views. If a side view is not explicitly\nconfigured to be displayed, it is hidden.",
             "itemtype": "method",
             "name": "handleSideViews",
@@ -11524,7 +11162,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 544,
+            "line": 538,
             "description": "Shows a side view based on its identifier in the sideViews hash.\nThis method also allows to pass a parameters hash that can be used to\nset some params to view service/view while showing it.",
             "itemtype": "method",
             "name": "showSideView",
@@ -11551,7 +11189,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 566,
+            "line": 560,
             "description": "Hides a side view based on its identifier in the sideViews hash",
             "itemtype": "method",
             "name": "hideSideView",
@@ -11568,7 +11206,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 576,
+            "line": 570,
             "description": "Shows the side view",
             "itemtype": "method",
             "name": "_showSideView",
@@ -11607,7 +11245,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 641,
+            "line": 635,
             "description": "Hides the side view",
             "itemtype": "method",
             "name": "_hideSideView",
@@ -11626,7 +11264,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 659,
+            "line": 653,
             "description": "Overrides the default implementation to set the view service as a\nbubble target of the view and the app as a bubble target of the view\nservice.",
             "access": "protected",
             "tagname": "",
@@ -11650,7 +11288,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 681,
+            "line": 675,
             "description": "Middleware to check whether the user is logged in. When not logged\nin, it redirects the user to the login form.",
             "itemtype": "method",
             "name": "checkUser",
@@ -11677,7 +11315,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 717,
+            "line": 711,
             "description": "Middleware to display the main view which identifier is in the route\nmetadata",
             "itemtype": "method",
             "name": "handleMainView",
@@ -11704,7 +11342,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 796,
+            "line": 780,
             "description": "`loadingChange` event handler. Adds or removes the `is-app-loading`\nclass on the application container.",
             "itemtype": "method",
             "name": "_loading",
@@ -11723,7 +11361,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 812,
+            "line": 796,
             "description": "Overrides the default implementation to make sure the view `active`\nattribute is set to true  after the view is attached to the\nDOM. It also sets the loading flag to false and make sure the title\nof the page is correct after changing the active view.",
             "itemtype": "method",
             "name": "_afterActiveViewChange",
@@ -11742,7 +11380,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 853,
+            "line": 837,
             "description": "Sets the title of the page using the new active view `getTitle`\nmethod if it exists, otherwise, it just restores the initial page\ntitle.",
             "itemtype": "method",
             "name": "_setTitle",
@@ -11761,7 +11399,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 871,
+            "line": 855,
             "description": "Stores the available routes for the application.\n\nIn addition to what is described in the {{#crossLink \"App\"}}YUI\nApp documentation{{/crossLink}}, each route can have several\nmetadata (all optional):\n\n  * `service`: contains a reference to a constructor function that\n    extends {{#crossLink \"eZ.ViewService\"}}eZ.ViewService{{/crossLink}}.\n    The {{#crossLink \"eZ.PlatformUIApp/handleMainView:method\"}}`handleMainView`{{/crossLink}}\n    middleware is responsible for using this function to build the\n    view service which can be used to inject custom variables in the\n    top level view triggered by the route. This view service is\n    also made a bubble target of the view so that it can react to\n    any custom event fired by the view.\n  * `name`: name of the route which is useful to generate an URI\n    with {{#crossLink\n    \"eZ.PlatformUIApp/routeUri:method\"}}Y.eZ.PlatformUIApp.routeUri{{/crossLink}}\n  * `view`: the identifier of the view in the `views` hash to\n    display. This is handled by the `handleMainView` middleware.\n  * `sideViews`: a hash which keys are the side view keys in the\n    sideViews property. A truthy value means that the\n    corresponding side view should be visible, false means that\n    the side view should be explicitely hidden. If a side view is\n    not mentionned it means it should remain as it is.\n\nIf a route provides both a `regex` and a `path` properties, the\n`regex` is used in the route matching process, while the `path`\ncan be used in the reverse routing process (generation of a\nlink). If no `path` is provided, no reverse routing is possible.",
             "itemtype": "attribute",
             "name": "routes",
@@ -11771,7 +11409,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1058,
+            "line": 1042,
             "description": "The application configuration. It is dispatched to the others\napplication attributes/properties at build time.",
             "itemtype": "attribute",
             "name": "config",
@@ -11783,7 +11421,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1070,
+            "line": 1054,
             "description": "The base URI to build the URI of the ajax request",
             "itemtype": "attribute",
             "name": "apiRoot",
@@ -11796,7 +11434,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1083,
+            "line": 1067,
             "description": "The root directory where to find the assets.",
             "itemtype": "attribute",
             "name": "assetRoot",
@@ -11809,7 +11447,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1096,
+            "line": 1080,
             "description": "Loading state. Tells whether the application is waiting for\nsomething to be loaded",
             "itemtype": "attribute",
             "name": "loading",
@@ -11821,7 +11459,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1109,
+            "line": 1093,
             "description": "eZ Platform REST client",
             "itemtype": "attribute",
             "name": "capi",
@@ -11835,7 +11473,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1123,
+            "line": 1107,
             "description": "The logged in user",
             "itemtype": "attribute",
             "name": "user",
@@ -11847,7 +11485,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1137,
+            "line": 1121,
             "description": "Active view service instance",
             "itemtype": "attribute",
             "name": "activeViewService",
@@ -11859,7 +11497,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1148,
+            "line": 1132,
             "description": "Stores the REST id of the configured anonymous user",
             "itemtype": "attribute",
             "name": "anonymousUserId",
@@ -11871,7 +11509,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1160,
+            "line": 1144,
             "description": "System language list provided with config. The list is hash\ncontaining language objects and is indexed by languageCode.",
             "itemtype": "attribute",
             "name": "systemLanguageList",
@@ -11884,7 +11522,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1174,
+            "line": 1158,
             "description": "Default language code, as defined by the current siteaccess language config.",
             "itemtype": "attribute",
             "name": "contentCreationDefaultLanguageCode",
@@ -11897,7 +11535,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1187,
+            "line": 1171,
             "description": "Holds the Locales conversion map between eZ Locale codes and\nPOSIX ones. See locale.yml",
             "itemtype": "attribute",
             "name": "localesMap",
@@ -11910,7 +11548,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1201,
+            "line": 1185,
             "description": "List of preferred languages in which the interface should be\ntranslated.",
             "itemtype": "attribute",
             "name": "interfaceLanguages",
@@ -11923,7 +11561,7 @@
         },
         {
             "file": "Resources/public/js/apps/ez-platformuiapp.js",
-            "line": 1215,
+            "line": 1199,
             "description": "Boolean that determine if the app routing is enabled",
             "itemtype": "attribute",
             "name": "routingEnabled",
@@ -13105,152 +12743,6 @@
             ],
             "class": "eZ.RichTextEmbedContainer",
             "module": "ez-richtext-embedcontainer",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 23,
-            "description": "Adds the REST Location id and the main language code to internal links.",
-            "itemtype": "method",
-            "name": "process",
-            "params": [
-                {
-                    "name": "view",
-                    "description": "",
-                    "type": "eZ.FieldView|eZ.FieldEditView"
-                },
-                {
-                    "name": "event",
-                    "description": "the event parameters (if any) that triggered\nthe process",
-                    "type": "EventFacade",
-                    "optional": true
-                }
-            ],
-            "class": "eZ.RichTextLocationLink",
-            "module": "ez-richtext-locationlink",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 40,
-            "description": "Fires the locationSearch event to load the linked Locations.",
-            "itemtype": "method",
-            "name": "_loadLocations",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "view",
-                    "description": "",
-                    "type": "eZ.FieldView|eZ.FieldEditView"
-                },
-                {
-                    "name": "mapNode",
-                    "description": "",
-                    "type": "Object"
-                },
-                {
-                    "name": "callback",
-                    "description": "",
-                    "type": "Function"
-                }
-            ],
-            "class": "eZ.RichTextLocationLink",
-            "module": "ez-richtext-locationlink",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 60,
-            "description": "Updates the links referenced in `mapNode` with the search result.",
-            "itemtype": "method",
-            "name": "_updateLinks",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "mapNode",
-                    "description": "",
-                    "type": "Object"
-                },
-                {
-                    "name": "error",
-                    "description": "",
-                    "type": "Error|false"
-                },
-                {
-                    "name": "results",
-                    "description": "",
-                    "type": "Array"
-                }
-            ],
-            "class": "eZ.RichTextLocationLink",
-            "module": "ez-richtext-locationlink",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 83,
-            "description": "Returns a NodeList containing the internal links.",
-            "itemtype": "method",
-            "name": "_getInternalLinkList",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "view",
-                    "description": "",
-                    "type": "eZ.FieldView|eZ.FieldEditView"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Y.NodeList"
-            },
-            "class": "eZ.RichTextLocationLink",
-            "module": "ez-richtext-locationlink",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 95,
-            "description": "Builds a map between the Location ids and the corresponding links.",
-            "itemtype": "method",
-            "name": "_buildLinkMapNode",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "links",
-                    "description": "",
-                    "type": "NodeList"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Object"
-            },
-            "class": "eZ.RichTextLocationLink",
-            "module": "ez-richtext-locationlink",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/richtext/ez-richtext-locationlink.js",
-            "line": 115,
-            "description": "Returns the Location id for the given link.",
-            "itemtype": "method",
-            "name": "_getLocationId",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "link",
-                    "description": "",
-                    "type": "Node"
-                }
-            ],
-            "class": "eZ.RichTextLocationLink",
-            "module": "ez-richtext-locationlink",
             "namespace": "eZ"
         },
         {
@@ -15473,28 +14965,6 @@
             "namespace": "eZ"
         },
         {
-            "file": "Resources/public/js/views/fields/ez-date-view.js",
-            "line": 52,
-            "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
-            "itemtype": "method",
-            "name": "_formatDate",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "date",
-                    "description": "",
-                    "type": "Date"
-                }
-            ],
-            "return": {
-                "description": "String"
-            },
-            "class": "eZ.CheckboxView",
-            "module": "ez-checkbox-view",
-            "namespace": "eZ"
-        },
-        {
             "file": "Resources/public/js/views/fields/ez-dateandtime-editview.js",
             "line": 64,
             "description": "Validates the current input of date and time field",
@@ -15721,8 +15191,6 @@
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
             "line": 41,
             "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
-            "deprecated": true,
-            "deprecationMessage": "Since 1.7.1",
             "itemtype": "method",
             "name": "_formatDate",
             "access": "protected",
@@ -15743,35 +15211,10 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 57,
-            "description": "Formats the date part of the date object according to the locale\nsettings of the browser",
-            "since": "1.7.1",
-            "itemtype": "method",
-            "name": "_formatDateTime",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "date",
-                    "description": "",
-                    "type": "Date"
-                }
-            ],
-            "return": {
-                "description": "String"
-            },
-            "class": "eZ.DateAndTimeView",
-            "module": "ez-dateandtime-view",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 76,
+            "line": 54,
             "description": "Formats the time part of the date object according to the locale\nsettings of the browser and to the `useSeconds` field definition\nsettings.",
-            "deprecated": true,
-            "deprecationMessage": "Since 1.7.1",
             "itemtype": "method",
-            "name": "_formatTime",
+            "name": "_formatDate",
             "access": "protected",
             "tagname": "",
             "params": [
@@ -15790,7 +15233,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-dateandtime-view.js",
-            "line": 98,
+            "line": 73,
             "description": "Returns a Date object from the field value",
             "itemtype": "method",
             "name": "_getDateObject",
@@ -18051,7 +17494,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 31,
+            "line": 25,
             "description": "Stores the parsed document from the xhtml5edit version of the\nrich text field. `null` means the document is invalid.",
             "itemtype": "property",
             "name": "_document",
@@ -18064,49 +17507,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 44,
-            "description": "Checks if the internal link is valid ie it has the REST Location id\nand the main language code in data attributes.",
-            "itemtype": "method",
-            "name": "_isValidInternalLink",
-            "access": "private",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "link",
-                    "description": "",
-                    "type": "Node"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "eZ.RichTextView",
-            "module": "ez-richtext-view",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 60,
-            "description": "tap event handler on internal link (`ezlocation://`). If the link is\nvalid, it fires `navigateTo` event so that the application navigates\nto the corresponding Location.",
-            "itemtype": "method",
-            "name": "_navigateTo",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "EventFacade"
-                }
-            ],
-            "class": "eZ.RichTextView",
-            "module": "ez-richtext-view",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 103,
+            "line": 54,
             "description": "Checks whether the field value is empty. A RichText field is\nconsidered empty if its content was successfully parsed and if the\n*root* `section` element has no child.",
             "itemtype": "method",
             "name": "_isFieldEmpty",
@@ -18122,7 +17523,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 116,
+            "line": 67,
             "description": "Returns an additional `parseError` variable indicating whether the\nxhtml5edit version of the rich text field was successfully parsed.",
             "itemtype": "method",
             "name": "_variables",
@@ -18138,7 +17539,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-richtext-view.js",
-            "line": 130,
+            "line": 81,
             "description": "Returns a Document object or null is the parser failed to load the\nxhtml5edit version of the rich text field.",
             "itemtype": "method",
             "name": "_getDOMDocument",
@@ -18869,8 +18270,6 @@
             "file": "Resources/public/js/views/fields/ez-time-view.js",
             "line": 34,
             "description": "Returns a timestamps in UTC",
-            "deprecated": true,
-            "deprecationMessage": "Since 1.7.1",
             "access": "protected",
             "tagname": "",
             "itemtype": "method",
@@ -18892,7 +18291,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 48,
+            "line": 47,
             "description": "Formats the time in a human readable format. Locale is not taken into account.",
             "itemtype": "method",
             "name": "_formatDate",
@@ -18914,7 +18313,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 65,
+            "line": 67,
             "description": "Returns the actual value of the time field as a formatted string\nsuitable to be displayed to the user. If the field is not filled, it\nreturns an empty string.",
             "itemtype": "method",
             "name": "_getFieldValue",
@@ -18929,7 +18328,7 @@
         },
         {
             "file": "Resources/public/js/views/fields/ez-time-view.js",
-            "line": 83,
+            "line": 85,
             "description": "Returns a Date object from the field value",
             "itemtype": "method",
             "name": "_getDateObject",
@@ -21989,7 +21388,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 95,
+            "line": 87,
             "description": "`contentSearch` event handler. It executes a content search and calls\nthe callback provided in the event parameters when done.",
             "itemtype": "method",
             "name": "_doContentSearch",
@@ -22064,7 +21463,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 127,
+            "line": 119,
             "description": "Executes a Content search based on the provided `search` object.",
             "itemtype": "method",
             "name": "findContent",
@@ -22149,78 +21548,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 177,
-            "description": "Returns the REST API sort order based on the sortOrder attribute",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_getSortDirection",
-            "params": [
-                {
-                    "name": "sortOrder",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "'ascending' or 'descending'"
-            },
-            "class": "eZ.Plugin.Search",
-            "module": "ez-searchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 189,
-            "description": "Returns the REST API sort clause identifier based on the sortField\nattribute.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_getSortClauseIdentifier",
-            "params": [
-                {
-                    "name": "sortField",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "String|Null"
-            },
-            "class": "eZ.Plugin.Search",
-            "module": "ez-searchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 224,
-            "description": "Returns the sort clause suitable for the Search Plugin based on the\nLocation's sortOrder and sortField attribute.",
-            "itemtype": "method",
-            "name": "getSortClause",
-            "params": [
-                {
-                    "name": "sortField",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "sortOrder",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Object"
-            },
-            "class": "eZ.Plugin.Search",
-            "module": "ez-searchplugin",
-            "namespace": "eZ.Plugin"
-        },
-        {
-            "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 243,
+            "line": 169,
             "description": "Executes a location search based on the provide `search` object.",
             "itemtype": "method",
             "name": "findLocations",
@@ -22317,7 +21645,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 298,
+            "line": 224,
             "description": "`locationSearch` event handler. It executes the location search and\nset the result on the target of the event.",
             "itemtype": "method",
             "name": "_doLocationSearch",
@@ -22368,16 +21696,9 @@
                             ]
                         },
                         {
-                            "name": "callback",
-                            "description": "callback to call when search is done",
-                            "type": "Function",
-                            "optional": true
-                        },
-                        {
                             "name": "resultAttribute",
                             "description": "the name of attribute that will by updated with search results",
-                            "type": "String",
-                            "optional": true
+                            "type": "String"
                         },
                         {
                             "name": "resultTotalCountAttribute",
@@ -22412,7 +21733,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 350,
+            "line": 270,
             "description": "Parses the search result to create a model and return the array of struct",
             "itemtype": "method",
             "name": "_parseSearchResult",
@@ -22445,7 +21766,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 373,
+            "line": 293,
             "description": "Creates a Location for the searchHit",
             "itemtype": "method",
             "name": "_createLocation",
@@ -22468,7 +21789,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 391,
+            "line": 311,
             "itemtype": "method",
             "name": "_createContent",
             "params": [
@@ -22490,7 +21811,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 408,
+            "line": 328,
             "description": "Loads resources for the given array of location structs. Depending on given\n`loadContentType` and `loadContent` bool parameters it loads Content and ContentType\nand includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadResources",
@@ -22525,7 +21846,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 427,
+            "line": 347,
             "description": "Loads resources for the given array of location structs. Depending on\ngiven `loadContentType` and `loadContent` bool parameters it loads\nContent and ContentType and includes them into the location structs.",
             "itemtype": "method",
             "name": "_loadLocationResources",
@@ -22559,7 +21880,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 472,
+            "line": 392,
             "description": "Loads resources for the given array of content structs. Depending on\ngiven `loadContentType` and `loadLocation` bool parameters it loads\nContentType and Location and includes them into the content structs.",
             "itemtype": "method",
             "name": "_loadContentResources",
@@ -22593,7 +21914,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 517,
+            "line": 437,
             "description": "Loads ContentType for each location struct in given array and puts it in the new `contentType`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentTypeForLocations",
@@ -22622,7 +21943,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 570,
+            "line": 490,
             "description": "Loads Content for each location struct in given array and puts it in the new `content`\nfield for the location struct.",
             "itemtype": "method",
             "name": "_loadContentForLocations",
@@ -22646,7 +21967,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 623,
+            "line": 543,
             "description": "Loads Location for each content struct in given array and puts it in the new `location`\nfield for the content struct.",
             "itemtype": "method",
             "name": "_loadLocationForContent",
@@ -22670,7 +21991,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 683,
+            "line": 603,
             "description": "Holds the eZ.Location constructor function",
             "itemtype": "attribute",
             "name": "locationModelConstructor",
@@ -22682,7 +22003,7 @@
         },
         {
             "file": "Resources/public/js/views/services/plugins/ez-searchplugin.js",
-            "line": 694,
+            "line": 614,
             "description": "Holds the eZ.Content constructor function",
             "itemtype": "attribute",
             "name": "contentModelConstructor",
@@ -24539,13 +23860,12 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 28,
+            "line": 29,
             "description": "navigateTo event handler. it redirects the user to the given route.",
             "itemtype": "method",
             "name": "_navigateTo",
             "access": "protected",
             "tagname": "",
-            "deprecated": true,
             "params": [
                 {
                     "name": "e",
@@ -24559,7 +23879,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 44,
+            "line": 42,
             "description": "logOut event handler, it logs out the user and redirect to the login\nform.",
             "itemtype": "method",
             "name": "_logOut",
@@ -24569,7 +23889,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 59,
+            "line": 57,
             "description": "Returns true if a provided item is a NavigationItemView, false if item is a NavigationItemParameterView",
             "itemtype": "method",
             "name": "_isNavigationViewItem",
@@ -24592,7 +23912,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 71,
+            "line": 69,
             "description": "Redirects to the first item of the active zone",
             "itemtype": "method",
             "name": "_navigateToFirstItemRoute",
@@ -24618,7 +23938,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 184,
+            "line": 182,
             "description": "Loads the given `locationId`",
             "access": "protected",
             "tagname": "",
@@ -24659,7 +23979,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 206,
+            "line": 204,
             "description": "Returns a navigation item object. See the *NavigationItems attribute.",
             "access": "private",
             "tagname": "",
@@ -24687,7 +24007,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 222,
+            "line": 220,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemView\"}}eZ.NavigationItemView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -24725,7 +24045,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 247,
+            "line": 245,
             "description": "Returns the navigation item object describing a {{#crossLink\n\"eZ.NavigationItemSubtreeView\"}}eZ.NavigationItemSubtreeView{{/crossLink}}.",
             "itemtype": "method",
             "name": "_getSubtreeItem",
@@ -24763,7 +24083,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 273,
+            "line": 271,
             "description": "Returns a navigation item object describing a {{#crossLink\n\"eZ.NavigationItemParameterView\"}}eZ.NavigationItemParameterView{{/crossLink}}",
             "access": "private",
             "tagname": "",
@@ -24806,7 +24126,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 300,
+            "line": 298,
             "description": "Returns the parameters for the navigation hub view",
             "itemtype": "method",
             "name": "getViewParameters",
@@ -24820,7 +24140,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 318,
+            "line": 316,
             "description": "A matched route object from the request. This object will be used by\nthe navigation hub view to check which navigation item view is\nselected. A matched route object is a clone of the application active\nroute without the service, serviceInstance and callbacks entries and\nwith an additional `parameters` property holding the route\nparameters and their values.",
             "itemtype": "method",
             "name": "_matchedRoute",
@@ -24836,7 +24156,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 343,
+            "line": 341,
             "description": "Adds a navigation item for the given zone.\nNote: adding a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "addNavigationItem",
@@ -24858,7 +24178,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 359,
+            "line": 357,
             "description": "Removes a navigation item for the given zone.\nNote: removing a navigation item will only work before the first\ninitialization of the navigation hub. As a result, in a navigation\nhub view service plugin, this method should be called only in or from\nthe initializer method.",
             "itemtype": "method",
             "name": "removeNavigationItem",
@@ -24880,7 +24200,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 383,
+            "line": 381,
             "description": "Retrieves a navigation item",
             "itemtype": "method",
             "name": "getNavigationItem",
@@ -24901,7 +24221,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 409,
+            "line": 407,
             "description": "Stores the root `location`",
             "itemtype": "attribute",
             "name": "rootLocation",
@@ -24912,7 +24232,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 421,
+            "line": 419,
             "description": "Stores the root media `location`",
             "itemtype": "attribute",
             "name": "rootMediaLocation",
@@ -24923,7 +24243,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 433,
+            "line": 431,
             "description": "Stores the navigation item objects for the 'platform' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -24936,7 +24256,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 474,
+            "line": 472,
             "description": "Stores the navigation item objects for the 'studioplus' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -24949,7 +24269,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 506,
+            "line": 504,
             "description": "Stores the navigation item objects for the 'studio' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -24962,7 +24282,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 538,
+            "line": 536,
             "description": "Stores the navigation item objects for the 'admin' zone. Each\nobject must contain a `Constructor` property referencing\nthe constructor function to use to build the navigation item\nview and a `config` property will be used as a configuration\nobject for the navigation item view. This configuration must\ncontain a `title` and an `identifier` properties.",
             "itemtype": "attribute",
             "name": "adminNavigationItems",
@@ -24975,7 +24295,7 @@
         },
         {
             "file": "Resources/public/js/views/services/ez-navigationhubviewservice.js",
-            "line": 597,
+            "line": 595,
             "description": "Stores the user's avatar image",
             "itemtype": "attribute",
             "name": "userAvatar",
@@ -26501,19 +25821,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 50,
-            "description": "Fills `sortConditon` attribute with the location sortField and sortOrder",
-            "itemtype": "method",
-            "name": "_fillSortConditionWithLocation",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.AsynchronousSubitemView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 63,
+            "line": 46,
             "description": "Sets for the `offset` attribute to launch the initial loading of the\nsubitems. This method is supposed to be called when the view becomes\nactive.",
             "itemtype": "method",
             "name": "_prepareInitialLoad",
@@ -26525,7 +25833,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 77,
+            "line": 60,
             "description": "Refreshes the view if it's active. The subitems are reloaded and then\nrerendered.",
             "itemtype": "method",
             "name": "_refresh",
@@ -26537,7 +25845,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 101,
+            "line": 84,
             "description": "Handles the loading error. It fires a notification and makes sure the\nstate of the view is consistent with what is actually loaded.",
             "itemtype": "method",
             "name": "_handleError",
@@ -26549,7 +25857,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 122,
+            "line": 105,
             "description": "Fires the `locationSearch` event to fetch the subitems of the\ncurrently displayed Location.",
             "itemtype": "method",
             "name": "_fireLocationSearch",
@@ -26562,17 +25870,6 @@
             ],
             "access": "protected",
             "tagname": "",
-            "class": "eZ.AsynchronousSubitemView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-asynchronoussubitemview.js",
-            "line": 153,
-            "description": "How the subitems should be sorted.",
-            "itemtype": "attribute",
-            "name": "sortCondition",
-            "type": "Object",
             "class": "eZ.AsynchronousSubitemView",
             "module": "ez-subitemlistmoreview",
             "namespace": "eZ"
@@ -27045,7 +26342,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 214,
+            "line": 216,
             "description": "Formats the translations list to a string suitable for the template",
             "itemtype": "method",
             "name": "_formatTranslations",
@@ -27068,7 +26365,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 226,
+            "line": 228,
             "description": "Displays the edit icon to inform the user input can be edited.",
             "itemtype": "method",
             "name": "_displayEditIcon",
@@ -27080,7 +26377,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 238,
+            "line": 240,
             "description": "Hides the edit icon",
             "itemtype": "method",
             "name": "_hideEditIcon",
@@ -27092,7 +26389,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 248,
+            "line": 250,
             "description": "Starts the priority edit by setting the `editingPriority` to true (if\npossible).",
             "itemtype": "method",
             "name": "_startPriorityEdit",
@@ -27104,7 +26401,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 261,
+            "line": 263,
             "description": "Ends the priority edit by setting the `editingPriority` to false.",
             "access": "protected",
             "tagname": "",
@@ -27116,7 +26413,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 271,
+            "line": 273,
             "description": "Shows the error icon to inform the user input is not correctly filled.",
             "itemtype": "method",
             "name": "_displayErrorIcon",
@@ -27128,7 +26425,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 283,
+            "line": 285,
             "description": "Hides the error icon.",
             "itemtype": "method",
             "name": "_hideErrorIcon",
@@ -27140,7 +26437,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 295,
+            "line": 297,
             "description": "Displays the 'validate' & 'cancel' buttons",
             "itemtype": "method",
             "name": "_displayPriorityButtons",
@@ -27152,7 +26449,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 306,
+            "line": 308,
             "description": "`tap` event handler on the cancel button. It makes sure to restore\nthe state of the priority cell.",
             "itemtype": "method",
             "name": "_restorePriorityCell",
@@ -27171,7 +26468,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 320,
+            "line": 322,
             "description": "Restores the input value with the priority of the location",
             "itemtype": "method",
             "name": "_restorePriorityValue",
@@ -27183,7 +26480,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 333,
+            "line": 335,
             "description": "Hides the validate and cancel buttons displayed while editing priority",
             "itemtype": "method",
             "name": "_hidePriorityButtons",
@@ -27195,7 +26492,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 344,
+            "line": 346,
             "description": "`submit` event handler to change the priority of the Location",
             "itemtype": "method",
             "name": "_setPriority",
@@ -27214,7 +26511,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 360,
+            "line": 362,
             "description": "Validates the priority input",
             "itemtype": "method",
             "name": "_validatePriority",
@@ -27226,7 +26523,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 380,
+            "line": 382,
             "description": "Returns the priority cell",
             "itemtype": "method",
             "name": "_getPriorityCell",
@@ -27240,7 +26537,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 390,
+            "line": 392,
             "description": "Returns the priority input",
             "itemtype": "method",
             "name": "_getPriorityInput",
@@ -27254,7 +26551,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 401,
+            "line": 403,
             "description": "True is the priority of the Location is being edited",
             "itemtype": "attribute",
             "name": "editingPriority",
@@ -27266,7 +26563,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 412,
+            "line": 414,
             "description": "True is the priority of the Location can be edited",
             "itemtype": "attribute",
             "name": "canEditPriority",
@@ -27278,7 +26575,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 423,
+            "line": 425,
             "description": "The content type of the content item being displayed",
             "itemtype": "attribute",
             "name": "contentType",
@@ -27289,7 +26586,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 431,
+            "line": 433,
             "description": "The location of the content item being displayed",
             "itemtype": "attribute",
             "name": "location",
@@ -27300,7 +26597,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 439,
+            "line": 441,
             "description": "The content item being displayed",
             "itemtype": "attribute",
             "name": "content",
@@ -27311,7 +26608,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 447,
+            "line": 449,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -27322,7 +26619,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistitemview.js",
-            "line": 455,
+            "line": 457,
             "description": "Lists the available porperties to display and the corresponding\nconfiguration for `_getProperty` to extract, format and\noptionnally render the property. The object keys are the property\nidentifiers. Each entry in this object is an object with:\n\n* `extractor`: a function or a method name to extract the value.\nThis function receives the property identifier as a parameter.\n* [optional] `formatter`: a function or a method name to format\nthe value. This function receives the property identifier as a\nparameter.\n* [optional] `template`: a template id to directly render the\nproperty. The template receives the corresponding property\nobject, the Location, the Content item and the Content type\nobjects.",
             "itemtype": "attribute",
             "name": "availableProperties",
@@ -27334,7 +26631,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 61,
+            "line": 49,
             "description": "Returns whether the subitems should be sorted by priority.",
             "itemtype": "method",
             "name": "_isSortedByPriority",
@@ -27350,7 +26647,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 72,
+            "line": 60,
             "description": "Restores the `canEditPriority` attribute so that the priority can be\nediting in all views",
             "itemtype": "method",
             "name": "_unlockPriorityEdit",
@@ -27362,7 +26659,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 85,
+            "line": 73,
             "description": "Makes sure only one priority can be edited at a time.",
             "access": "protected",
             "tagname": "",
@@ -27381,73 +26678,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 98,
-            "description": "Resets the selected status from columns",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_resetSortOrderClass",
-            "class": "eZ.SubitemListMoreView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 113,
-            "description": "Adds the sort class according to the `sortCondition` attribute",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_addSortOrderClass",
-            "class": "eZ.SubitemListMoreView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 135,
-            "description": "Toggles the sorting of columns\nFirst click is asc, second click is desc.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_toggleSorting",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "EventFacade"
-                }
-            ],
-            "class": "eZ.SubitemListMoreView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 158,
-            "description": "Retrives the property for a given sortField",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_getPropertyBySortField",
-            "params": [
-                {
-                    "name": "sortField",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "property",
-                "type": "String"
-            },
-            "class": "eZ.SubitemListMoreView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 189,
+            "line": 96,
             "description": "Returns an array of objects describing the columns to add to the\nlist. Each object contains an `identifier` and a `name`.",
             "itemtype": "method",
             "name": "_getColumns",
@@ -27462,7 +26693,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 208,
+            "line": 114,
             "description": "The properties to display",
             "itemtype": "attribute",
             "name": "displayedProperties",
@@ -27473,19 +26704,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 218,
-            "description": "Lists the available properties to display.\nEach entry in this object is an object with:\n\n* `sortable`: a boolean stating if the property can be sorted.\n* `sortField`: a string with the sortField corresponding to the property",
-            "itemtype": "attribute",
-            "name": "availableProperties",
-            "type": "Object",
-            "readonly": "",
-            "class": "eZ.SubitemListMoreView",
-            "module": "ez-subitemlistmoreview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 253,
+            "line": 124,
             "description": "A key value object to store the human readable names of the\ncolumns.",
             "itemtype": "attribute",
             "name": "propertyNames",
@@ -27496,7 +26715,7 @@
         },
         {
             "file": "Resources/public/js/views/subitem/ez-subitemlistmoreview.js",
-            "line": 272,
+            "line": 143,
             "description": "The constructor function to use to instance the item view\ninstances.",
             "itemtype": "attribute",
             "name": "itemViewConstructor",
@@ -29046,7 +28265,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 34,
+            "line": 30,
             "description": "Custom reset implementation to explicitely reset the sub views.",
             "itemtype": "method",
             "name": "reset",
@@ -29064,7 +28283,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 73,
+            "line": 69,
             "description": "`multipleChange` and `isSelectableChange` events handler. It sets the selected view\n`addConfirmButton` flag according to the new `multiple` attribute value and passes\nnew `isSelectable` function to the selected view.",
             "itemtype": "method",
             "name": "_setSelectedViewAttrs",
@@ -29076,7 +28295,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 88,
+            "line": 84,
             "description": "`treeNavigate` event handler. It will select the node in the tree\nand call _selectContent that will set the content structure in the selected view",
             "itemtype": "method",
             "name": "_selectContent",
@@ -29095,7 +28314,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 103,
+            "line": 99,
             "description": "Public method to select a content",
             "itemtype": "method",
             "name": "selectContent",
@@ -29112,7 +28331,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 113,
+            "line": 109,
             "description": "Fire the selectcontent event and set the content structure on the selected view so that it is\ndisplayed.",
             "itemtype": "method",
             "name": "_selectContent",
@@ -29131,7 +28350,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 126,
+            "line": 122,
             "description": "`visibleChange` event handler. It makes to reset the current\nselection when the browse method is hidden/showed",
             "itemtype": "method",
             "name": "_unselectContent",
@@ -29143,7 +28362,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 138,
+            "line": 134,
             "description": "Fires the `selectContent` event for the given `selection`",
             "itemtype": "method",
             "name": "_fireSelectContent",
@@ -29162,7 +28381,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 146,
+            "line": 142,
             "description": "Fired when a content is selected or unselected. The event facade\nprovides the content structure (the contentInfo, location and content\ntype models) if a selection was made.",
             "itemtype": "event",
             "name": "selectContent",
@@ -29196,7 +28415,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 163,
+            "line": 159,
             "itemtype": "attribute",
             "name": "title",
             "default": "'Browse'",
@@ -29206,7 +28425,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 174,
+            "line": 170,
             "itemtype": "attribute",
             "name": "identifier",
             "default": "'browse'",
@@ -29216,7 +28435,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 183,
+            "line": 179,
             "description": "Holds the tree view",
             "itemtype": "attribute",
             "name": "treeView",
@@ -29227,7 +28446,7 @@
         },
         {
             "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoverybrowseview.js",
-            "line": 197,
+            "line": 193,
             "description": "Holds the selected view that displays the currently selected\ncontent (if any)",
             "itemtype": "attribute",
             "name": "selectedView",
@@ -29491,550 +28710,6 @@
             "readonly": "",
             "class": "eZ.UniversalDiscoveryConfirmedListView",
             "module": "ez-universaldiscoveryconfirmedlistview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 35,
-            "description": "FLag to indicate if we are currently watching the scroll and trying to load items.",
-            "itemtype": "property",
-            "name": "_watchingScroll",
-            "type": "Boolean",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 92,
-            "description": "Custom reset implementation to explicitly reset the items.",
-            "itemtype": "method",
-            "name": "reset",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 105,
-            "description": "Scrolls to fully display the levelView.",
-            "itemtype": "method",
-            "name": "displayLevelView",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 114,
-            "description": "Handles user scrolling to determine if it needs to load more items.",
-            "itemtype": "method",
-            "name": "_handleScroll",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 129,
-            "description": "Determines if user has scrolled enough to try to load other items.",
-            "itemtype": "method",
-            "name": "_hasScrolledEnough",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 141,
-            "description": "Fires the `locationSearch` event to fetch the result list of the search.",
-            "itemtype": "method",
-            "name": "_fireLocationSearch",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 165,
-            "description": "items attribute setter. It sets items attribute with the results.",
-            "itemtype": "method",
-            "name": "_setItems",
-            "params": [
-                {
-                    "name": "newItems",
-                    "description": "",
-                    "type": "Array"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 195,
-            "description": "Finds location in item by a given locationId and returns the item.",
-            "itemtype": "method",
-            "name": "_findItemByLocationId",
-            "params": [
-                {
-                    "name": "locationId",
-                    "description": "",
-                    "type": "Number"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "return": {
-                "description": "Returns an item containing a location.",
-                "type": "Object"
-            },
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 214,
-            "description": "Fires the `explorerNavigate` event to explore the chosen location.",
-            "itemtype": "method",
-            "name": "_fireExplorerNavigate",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 226,
-            "description": "Navigates to the given item's location in the explorer.",
-            "itemtype": "event",
-            "name": "explorerNavigate",
-            "params": [
-                {
-                    "name": "data",
-                    "description": "",
-                    "type": "Object"
-                },
-                {
-                    "name": "location",
-                    "description": "",
-                    "type": "eZ.Location"
-                },
-                {
-                    "name": "depth",
-                    "description": "",
-                    "type": "Number"
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 244,
-            "description": "The items to display",
-            "itemtype": "attribute",
-            "name": "items",
-            "type": "Array",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 258,
-            "description": "Defines if the level view own the current selected item",
-            "itemtype": "attribute",
-            "name": "ownSelecteditem",
-            "type": "Boolean",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 268,
-            "description": "The location id of the selected item",
-            "itemtype": "attribute",
-            "name": "selectLocationId",
-            "default": "0",
-            "type": "Number",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 279,
-            "description": "The depth of the level view (the first level view depth is 1)",
-            "itemtype": "attribute",
-            "name": "depth",
-            "type": "Number",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 287,
-            "description": "The offset to start the locationSearch to",
-            "itemtype": "attribute",
-            "name": "offset",
-            "type": "Number",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 297,
-            "description": "The limit of the results",
-            "itemtype": "attribute",
-            "name": "limit",
-            "type": "Number",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerlevelview.js",
-            "line": 307,
-            "description": "The number of total child the parent location has.",
-            "itemtype": "attribute",
-            "name": "childCount",
-            "type": "Number",
-            "class": "eZ.UniversalDiscoveryFinderExplorerLevelView",
-            "module": "ez-universaldiscoveryfinderexplorerlevelview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 35,
-            "description": "Custom reset implementation to explicitly reset the explorer level views.",
-            "itemtype": "method",
-            "name": "reset",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 53,
-            "description": "Activates every level views",
-            "itemtype": "method",
-            "name": "wakeUp",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 64,
-            "description": "explorerNavigates event handler. Handles the levelViews by removing and/or adding levels if necessary",
-            "itemtype": "method",
-            "name": "_handleLevelViews",
-            "params": [
-                {
-                    "name": "levelView",
-                    "description": "",
-                    "type": "Y.eZ.UniversalDiscoveryFinderExplorerLevelView"
-                },
-                {
-                    "name": "depth",
-                    "description": "",
-                    "type": "Number"
-                },
-                {
-                    "name": "location",
-                    "description": "",
-                    "type": "eZ.Location"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 91,
-            "description": "Activates the given levelView",
-            "itemtype": "method",
-            "name": "_activateLevelView",
-            "params": [
-                {
-                    "name": "levelView",
-                    "description": "",
-                    "type": "Y.eZ.UniversalDiscoveryFinderExplorerLevelView"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 102,
-            "description": "Renders the given levelView",
-            "itemtype": "method",
-            "name": "_renderLevelView",
-            "params": [
-                {
-                    "name": "levelView",
-                    "description": "",
-                    "type": "Y.eZ.UniversalDiscoveryFinderExplorerLevelView"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 123,
-            "description": "Removes and destroy the last level views from the levelViews attribute.",
-            "itemtype": "method",
-            "name": "_removeLevels",
-            "params": [
-                {
-                    "name": "count",
-                    "description": "the number of levelviews to remove.",
-                    "type": "Number"
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 135,
-            "description": "Creates and add an explorer level view to the levelViews.\nThen renders, activates and display it.",
-            "itemtype": "method",
-            "name": "_addLevel",
-            "params": [
-                {
-                    "name": "location",
-                    "description": "the parent location",
-                    "type": "Y.eZ.Location"
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 158,
-            "description": "The constructor function to use to instance the item view\ninstances.",
-            "itemtype": "attribute",
-            "name": "levelViewConstructor",
-            "type": "{Function}",
-            "default": "{Y.eZ.UniversalDiscoveryFinderExplorerLevelView}",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderexplorerview.js",
-            "line": 172,
-            "description": "The tab containing the universalDiscoveryFinderExplorerLevelViews to explore.",
-            "itemtype": "attribute",
-            "name": "levelViews",
-            "type": "Array",
-            "class": "eZ.UniversalDiscoveryFinderExplorerView",
-            "module": "ez-universaldiscoveryfinderexplorerview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 30,
-            "description": "Custom reset implementation to explicitely reset the sub views.",
-            "itemtype": "method",
-            "name": "reset",
-            "params": [
-                {
-                    "name": "name",
-                    "description": "",
-                    "type": "String",
-                    "optional": true
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 69,
-            "description": "`multipleChange` and `isSelectableChange` events handler. It sets the selected view\n`addConfirmButton` flag according to the new `multiple` attribute value and passes\nnew `isSelectable` function to the selected view.",
-            "itemtype": "method",
-            "name": "_setSelectedViewAttrs",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 84,
-            "description": "Public method to select a content",
-            "itemtype": "method",
-            "name": "selectContent",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "EventFacade",
-                    "props": [
-                        {
-                            "name": "data",
-                            "description": "the node data",
-                            "type": "EventFacade"
-                        }
-                    ]
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 96,
-            "description": "`visibleChange` event handler. It makes to reset the current\nselection when the explorer method is hidden/showed",
-            "itemtype": "method",
-            "name": "_unselectContent",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 109,
-            "description": "Fires the `selectContent` event for the given `selection`",
-            "itemtype": "method",
-            "name": "_fireSelectContent",
-            "params": [
-                {
-                    "name": "selection",
-                    "description": "",
-                    "type": "Object|Null"
-                }
-            ],
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 117,
-            "description": "Fired when a content is selected or unselected. The event facade\nprovides the content structure (the contentInfo, location and content\ntype models) if a selection was made.",
-            "itemtype": "event",
-            "name": "selectContent",
-            "params": [
-                {
-                    "name": "selection",
-                    "description": "",
-                    "type": "Object|Null",
-                    "props": [
-                        {
-                            "name": "contentInfo",
-                            "description": "",
-                            "type": "eZ.ContentInfo"
-                        },
-                        {
-                            "name": "location",
-                            "description": "",
-                            "type": "eZ.Location"
-                        },
-                        {
-                            "name": "contentType",
-                            "description": "",
-                            "type": "eZ.ContentType"
-                        }
-                    ]
-                }
-            ],
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 134,
-            "itemtype": "attribute",
-            "name": "title",
-            "default": "'Browse'",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 143,
-            "itemtype": "attribute",
-            "name": "identifier",
-            "default": "'finder'",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 152,
-            "description": "Holds the virtual root location",
-            "itemtype": "attribute",
-            "name": "virtualRootLocation",
-            "type": "{eZ.Location}",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 169,
-            "description": "Holds the selected view that displays the currently selected\ncontent (if any)",
-            "itemtype": "attribute",
-            "name": "selectedView",
-            "type": "{eZ.UniversalDiscoverySelectedView}",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
-            "namespace": "eZ"
-        },
-        {
-            "file": "Resources/public/js/views/universaldiscovery/ez-universaldiscoveryfinderview.js",
-            "line": 186,
-            "description": "Holds the finder explorer view that allows the user to explore contents",
-            "itemtype": "attribute",
-            "name": "finderExplorerView",
-            "type": "{eZ.UniversalDiscoveryFinderExplorerView}",
-            "class": "eZ.UniversalDiscoveryFinderView",
-            "module": "ez-universaldiscoveryfinderview",
             "namespace": "eZ"
         },
         {
@@ -34704,7 +33379,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 102,
+            "line": 101,
             "description": "Returns the height of the navigation menu",
             "access": "protected",
             "tagname": "",
@@ -34720,7 +33395,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 113,
+            "line": 112,
             "description": "matchedRouteChange event handler. It makes sure the corresponding\nnavigation item is selected and the zone in which it is, is active.",
             "itemtype": "method",
             "name": "_handleSelectedItem",
@@ -34732,7 +33407,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 137,
+            "line": 136,
             "description": "Fires the event to navigate to the given zone. The navigation happens\nonly if the zone has exactly one navigation items.",
             "itemtype": "method",
             "name": "_navigateToZone",
@@ -34751,7 +33426,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 160,
+            "line": 159,
             "description": "Sets the active navigation in the UI",
             "itemtype": "method",
             "name": "_uiSetActiveNavigation",
@@ -34770,7 +33445,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 173,
+            "line": 172,
             "description": "Handles the fixed navigation in the UI",
             "itemtype": "method",
             "name": "_uiHandleFixedNavigation",
@@ -34789,7 +33464,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 199,
+            "line": 198,
             "description": "event fired when the navigation mode change so that the rest of\nthe application can also change if needed. For the navigation\nhub, the navigation mode is either true or false. True when the\nnavigation is fixed and false otherwise.",
             "itemtype": "event",
             "name": "navigationModeChange",
@@ -34815,7 +33490,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 218,
+            "line": 217,
             "description": "Marks the zone associated with the activeNavigation as active",
             "access": "protected",
             "tagname": "",
@@ -34827,7 +33502,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 236,
+            "line": 235,
             "description": "Renders the navigation hub view",
             "itemtype": "method",
             "name": "render",
@@ -34841,7 +33516,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 254,
+            "line": 253,
             "description": "Sets user data to the view",
             "itemtype": "method",
             "name": "_setUserData",
@@ -34853,7 +33528,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 264,
+            "line": 263,
             "description": "Sets user avatar to the view",
             "itemtype": "method",
             "name": "_setUserAvatar",
@@ -34865,7 +33540,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 274,
+            "line": 273,
             "description": "Renders user profile to the view",
             "itemtype": "method",
             "name": "_renderUserProfile",
@@ -34877,7 +33552,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 284,
+            "line": 283,
             "description": "Builds the zone list for the template. Each zone is represented by an\nobject with a `name` and a `hasNavigation` properties.",
             "itemtype": "method",
             "name": "_buildZones",
@@ -34893,7 +33568,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 304,
+            "line": 303,
             "description": "Returns whether the zone associated with the given key has a\nnavigation ie it has more than one navigation item view.",
             "itemtype": "method",
             "name": "_hasNavigation",
@@ -34916,7 +33591,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 319,
+            "line": 318,
             "description": "Returns the navigation item views instances associated with the given\nzone key.",
             "itemtype": "method",
             "name": "_getNavigationItemViews",
@@ -34939,7 +33614,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 332,
+            "line": 331,
             "description": "Renders the navigation items in the corresponding navigation zone",
             "itemtype": "method",
             "name": "_renderNavigationItems",
@@ -34951,7 +33626,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 371,
+            "line": 370,
             "description": "Sets the active flag on the navigation item views",
             "access": "protected",
             "tagname": "",
@@ -34970,7 +33645,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 386,
+            "line": 385,
             "description": "Makes sure the navigation corresponding to the activeNavigation value\nis shown if needed",
             "access": "protected",
             "tagname": "",
@@ -34989,7 +33664,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 403,
+            "line": 402,
             "description": "tap/mouseover handler on the navigation zones. It sets the\nactiveNavigation attribute to the corresponding value",
             "access": "protected",
             "tagname": "",
@@ -35008,7 +33683,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 415,
+            "line": 414,
             "description": "Handles the user scroll to make the navigation fixed or not",
             "access": "protected",
             "tagname": "",
@@ -35027,7 +33702,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 432,
+            "line": 431,
             "description": "Makes sure all the active navigation items are available in the menu.\nIf there's too much items, the overflowed elements are put in the\n*more* sub menu",
             "itemtype": "method",
             "name": "_uiNavigationSize",
@@ -35039,7 +33714,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 467,
+            "line": 466,
             "description": "Checks whether there are too much items in the navigation for the\ncurrent viewport size",
             "access": "protected",
             "tagname": "",
@@ -35054,7 +33729,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 479,
+            "line": 478,
             "description": "Checks whether the navigation is not completely filled up",
             "access": "protected",
             "tagname": "",
@@ -35069,7 +33744,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 490,
+            "line": 489,
             "description": "Returns all navigation items except the *More* item",
             "itemtype": "method",
             "name": "_getNavigationItems",
@@ -35084,7 +33759,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 501,
+            "line": 500,
             "description": "mouseover event handler for the sub menu links to show and place\nthe corresponding sub menu",
             "itemtype": "method",
             "name": "_uiShowSubMenu",
@@ -35103,7 +33778,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 526,
+            "line": 525,
             "description": "mouseout/clickoutside event handler for the sub menu links to hide\nthe corresponding sub menu",
             "itemtype": "method",
             "name": "_uiHideSubMenu",
@@ -35122,7 +33797,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 539,
+            "line": 538,
             "description": "Toggles the sub menu visibility",
             "access": "protected",
             "tagname": "",
@@ -35141,7 +33816,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 554,
+            "line": 553,
             "description": "Sets the _navigationMenu property depending on the val parameter.",
             "itemtype": "method",
             "name": "_setNavigationMenu",
@@ -35164,7 +33839,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 571,
+            "line": 570,
             "description": "Returns the navigation node corresponding to the identifier",
             "params": [
                 {
@@ -35187,7 +33862,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 583,
+            "line": 582,
             "description": "Builds the list of navigation item views based on the value. This\nmethod is a setter for the *NavigationItems.",
             "itemtype": "method",
             "name": "_buildNavigationViews",
@@ -35210,7 +33885,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 613,
+            "line": 612,
             "description": "Object describing the available zones (Platform, Studio), the\nkey is the zone identifier, the value is the zone name.",
             "itemtype": "attribute",
             "name": "zones",
@@ -35222,7 +33897,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 633,
+            "line": 632,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the platform zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "platformNavigationItems",
@@ -35234,7 +33909,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 649,
+            "line": 648,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studio zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioNavigationItems",
@@ -35246,7 +33921,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 665,
+            "line": 664,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the admin zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -35258,7 +33933,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 681,
+            "line": 680,
             "description": "Stores the navigation view item views instance for each item in\nthe navigation for the studioplus zone. This attribute accepts either\nan array of already build views or an array of object with at a\n`Constructor` property and optionally a `config` property holding\nan object to pass to the constructor function.",
             "itemtype": "attribute",
             "name": "studioplusNavigationItems",
@@ -35270,7 +33945,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 697,
+            "line": 696,
             "description": "Contains the identifier ('platform', 'studio', ...) of the\ncurrently active navigation. When set, this attribute updates the\n`_navigationMenu` property with the corresponding Node",
             "itemtype": "attribute",
             "name": "activeNavigation",
@@ -35283,7 +33958,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 712,
+            "line": 711,
             "description": "Whether the navigation is in fixed more or not",
             "itemtype": "attribute",
             "name": "navigationFixed",
@@ -35295,7 +33970,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 723,
+            "line": 722,
             "description": "The currently authenticated user",
             "itemtype": "attribute",
             "name": "user",
@@ -35307,7 +33982,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 732,
+            "line": 731,
             "description": "The matched route provided by the navigation hub view service. It\nused to detect which navigaiton item should be selected and it is\nupdated after each page change.",
             "itemtype": "attribute",
             "name": "matchedRoute",
@@ -35318,7 +33993,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 742,
+            "line": 741,
             "description": "The user profile view",
             "itemtype": "attribute",
             "name": "userProfileView",
@@ -35329,7 +34004,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-navigationhubview.js",
-            "line": 756,
+            "line": 755,
             "description": "Stores the user's avatar image",
             "itemtype": "attribute",
             "name": "userAvatar",
@@ -37588,7 +36263,7 @@
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
             "line": 124,
-            "description": "Notifies method views that a content is removed from the\nselection.",
+            "description": "Notifies the browse method views that a content is removed from the\nselection.",
             "itemtype": "method",
             "name": "_notifyMethodsUnselectContent",
             "access": "protected",
@@ -38016,7 +36691,7 @@
             "itemtype": "attribute",
             "name": "visibleMethod",
             "type": "String",
-            "default": "'finder'",
+            "default": "'browse'",
             "class": "eZ.UniversalDiscoveryView",
             "module": "ez-universaldiscoveryview",
             "namespace": "eZ"
@@ -40352,8 +39027,6 @@
             "name": "_getSortDirection",
             "access": "protected",
             "tagname": "",
-            "deprecated": true,
-            "deprecationMessage": "Use `getSortClauseIdentifier` in the search plugin",
             "return": {
                 "description": "'ascending' or 'descending'"
             },
@@ -40363,14 +39036,12 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 364,
+            "line": 363,
             "description": "Returns the REST API sort clause identifier based on the sortField\nattribute.",
             "itemtype": "method",
             "name": "_getSortClauseIdentifier",
             "access": "protected",
             "tagname": "",
-            "deprecated": true,
-            "deprecationMessage": "Use `_getSortClauseIdentifier` in the search plugin",
             "return": {
                 "description": "",
                 "type": "String|Null"
@@ -40381,12 +39052,10 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 401,
+            "line": 399,
             "description": "Returns the sort clause suitable for the Search Plugin based on the\nLocation's sortOrder and sortField attribute.",
             "itemtype": "method",
             "name": "getSortClause",
-            "deprecated": true,
-            "deprecationMessage": "Use `getSortClause` in the search plugin",
             "return": {
                 "description": "",
                 "type": "Object"
@@ -40397,7 +39066,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 430,
+            "line": 424,
             "description": "The location's number of child",
             "itemtype": "attribute",
             "name": "childCount",
@@ -40409,7 +39078,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 441,
+            "line": 435,
             "description": "The location's depth",
             "itemtype": "attribute",
             "name": "depth",
@@ -40421,7 +39090,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 452,
+            "line": 446,
             "description": "The location's hidden flag",
             "itemtype": "attribute",
             "name": "hidden",
@@ -40433,7 +39102,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 463,
+            "line": 457,
             "description": "The location's invisible flag",
             "itemtype": "attribute",
             "name": "invisible",
@@ -40445,7 +39114,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 474,
+            "line": 468,
             "description": "The location's id in the eZ Publish content repository",
             "itemtype": "attribute",
             "name": "locationId",
@@ -40457,7 +39126,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 485,
+            "line": 479,
             "description": "The location's path string",
             "itemtype": "attribute",
             "name": "pathString",
@@ -40469,7 +39138,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 496,
+            "line": 490,
             "description": "The location's priority",
             "itemtype": "attribute",
             "name": "priority",
@@ -40481,7 +39150,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 507,
+            "line": 501,
             "description": "The location's remote id",
             "itemtype": "attribute",
             "name": "remoteId",
@@ -40493,7 +39162,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 518,
+            "line": 512,
             "description": "The location's sort field",
             "itemtype": "attribute",
             "name": "sortField",
@@ -40505,7 +39174,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 529,
+            "line": 523,
             "description": "The location's sort order",
             "itemtype": "attribute",
             "name": "sortOrder",
@@ -40517,7 +39186,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 540,
+            "line": 534,
             "description": "The content info",
             "itemtype": "attribute",
             "name": "contentInfo",
@@ -40528,7 +39197,7 @@
         },
         {
             "file": "Resources/public/js/models/ez-locationmodel.js",
-            "line": 557,
+            "line": 551,
             "description": "The location's path. By default it is empty. You need to call the loadPath method to set this attribute.",
             "itemtype": "attribute",
             "name": "path",
@@ -43754,202 +42423,6 @@
             "namespace": "eZ.AlloyEditorButton"
         },
         {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 32,
-            "description": "The editor instance where the component is being used.",
-            "itemtype": "property",
-            "name": "editor",
-            "type": "Object",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 41,
-            "description": "The name which will be used as an alias of the button in the\nconfiguration.",
-            "static": 1,
-            "itemtype": "property",
-            "name": "key",
-            "type": "String",
-            "default": "linkEdit",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 62,
-            "description": "Lifecycle. Invoked once before the component is mounted.\nThe return value will be used as the initial value of this.state.",
-            "itemtype": "method",
-            "name": "getInitialState",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 93,
-            "description": "Runs the Universal Discovery Widget so that the user can pick a\nContent.",
-            "itemtype": "method",
-            "name": "_selectContent",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 122,
-            "description": "Gives the focus to the edited link by moving the caret in it.",
-            "itemtype": "method",
-            "name": "_focusEditedLink",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 136,
-            "description": "Lifecycle. Renders the UI of the button.",
-            "itemtype": "method",
-            "name": "render",
-            "return": {
-                "description": "The content which should be rendered.",
-                "type": "Object"
-            },
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 215,
-            "description": "Clears the link input. This only changes the component internal\nstate, but does not affect the link element of the editor. Only the\n_removeLink and _updateLink methods are translated to the editor\nelement.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_clearLink",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 230,
-            "description": "Monitors key interaction inside the input element to respond to the\nkeys:\n- Enter: Creates/updates the link.\n- Escape: Discards the changes.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_handleKeyDown",
-            "params": [
-                {
-                    "name": "event",
-                    "description": "The keyboard event.",
-                    "type": "SyntheticEvent"
-                }
-            ],
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 256,
-            "description": "Updates the component state when the link input changes on user\ninteraction.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_setHref",
-            "params": [
-                {
-                    "name": "event",
-                    "description": "The change event.",
-                    "type": "SyntheticEvent"
-                }
-            ],
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 270,
-            "description": "Sets the link title",
-            "itemtype": "method",
-            "name": "_setTitle",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "SyntheticEvent"
-                }
-            ],
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 283,
-            "description": "Sets the target of the link",
-            "itemtype": "method",
-            "name": "_setTarget",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "e",
-                    "description": "",
-                    "type": "SyntheticEvent"
-                }
-            ],
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 296,
-            "description": "Removes the link in the editor element.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_removeLink",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 317,
-            "description": "Saves the link with the current href, title and target.",
-            "itemtype": "method",
-            "name": "_saveLink",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/linkedit.js",
-            "line": 331,
-            "description": "Updates the link in the editor element. If the element didn't exist\npreviously, it will create a new <a> element with the href specified\nin the link input.",
-            "access": "protected",
-            "tagname": "",
-            "itemtype": "method",
-            "name": "_updateLink",
-            "class": "eZ.AlloyEditorButton.ButtonLinkEdit",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
             "file": "Resources/public/js/alloyeditor/buttons/list.js",
             "line": 42,
             "description": "Executes the eZAppendContent command to add an unordered list containing\nan empty list item.",
@@ -43958,31 +42431,7 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonList",
-            "module": "ez-alloyeditor-button-linkedit",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/movedown.js",
-            "line": 35,
-            "description": "Executes the eZMoveDown command.",
-            "itemtype": "method",
-            "name": "_moveDown",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.AlloyEditorButton.ButtonMoveDown",
-            "module": "ez-alloyeditor-button-movedown",
-            "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/buttons/moveup.js",
-            "line": 35,
-            "description": "Executes the eZMoveUp command.",
-            "itemtype": "method",
-            "name": "_moveUp",
-            "access": "protected",
-            "tagname": "",
-            "class": "eZ.AlloyEditorButton.ButtonMoveUp",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
@@ -43994,24 +42443,24 @@
             "access": "protected",
             "tagname": "",
             "class": "eZ.AlloyEditorButton.eZ.AlloyEditor.ButtonParagraph",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 25,
+            "line": 32,
             "description": "Fires the `editorInteraction` event this is done to make sure the\nAlloyEditor's UI remains visible",
             "itemtype": "method",
             "name": "fireEditorInteractionEvent",
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/addcontent.js",
-            "line": 45,
+            "line": 52,
             "description": "Appends the element to the editor content. Depending on the editor's\nstate, the element is added at a different place:\n\n- if nothing is selected, editor.insertElement is called and the element\n  is added at the beginning of the editor\n- if a block element is selected (not a widget), the element is added\n  after the element or after the first block in the element path (after\n  the ul element if a li has the focus)\n- if a widget has the focus, the element is added right after it",
             "itemtype": "method",
             "name": "appendElement",
@@ -44028,53 +42477,8 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezaddcontent",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "eZ.AlloyEditorButton"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
-            "line": 40,
-            "description": "Moves the caret in the editor to the given element",
-            "itemtype": "method",
-            "name": "eZ.moveCaretToElement",
-            "params": [
-                {
-                    "name": "editor",
-                    "description": "",
-                    "type": "CKEDITOR.editor"
-                },
-                {
-                    "name": "element",
-                    "description": "",
-                    "type": "CKEDITOR.dom.element"
-                }
-            ],
-            "class": "CKEDITOR.plugins.ezcaret",
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "CKEDITOR.plugins"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/plugins/caret.js",
-            "line": 49,
-            "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
-            "itemtype": "method",
-            "name": "eZ.findCaretElement",
-            "access": "protected",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "element",
-                    "description": "",
-                    "type": "CKEDITOR.dom.element"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "CKEDITOR.dom.element"
-            },
-            "class": "CKEDITOR.plugins.ezcaret",
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
@@ -44083,7 +42487,7 @@
             "itemtype": "method",
             "name": "insert",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44093,7 +42497,7 @@
             "itemtype": "method",
             "name": "edit",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44105,7 +42509,7 @@
             "access": "private",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44117,7 +42521,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44136,7 +42540,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44153,7 +42557,7 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44165,7 +42569,7 @@
             "access": "protected",
             "tagname": "",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44175,7 +42579,7 @@
             "itemtype": "method",
             "name": "unsetAlignment",
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44196,7 +42600,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44210,7 +42614,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44224,7 +42628,7 @@
                 "type": "Boolean"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44245,7 +42649,7 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44259,7 +42663,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44280,46 +42684,12 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
             "line": 253,
-            "description": "Moves the widget after the given element. It also fires the\n`editorInteraction` event so that the UI can respond to that\nchange.",
-            "itemtype": "method",
-            "name": "moveAfter",
-            "params": [
-                {
-                    "name": "element",
-                    "description": "",
-                    "type": "CKEDITOR.dom.element"
-                }
-            ],
-            "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "CKEDITOR.plugins"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 266,
-            "description": "Moves the widget before the given element. It also fires the\n`editorInteraction` event so that the UI can respond to that\nchange.",
-            "itemtype": "method",
-            "name": "moveAfter",
-            "params": [
-                {
-                    "name": "element",
-                    "description": "",
-                    "type": "CKEDITOR.dom.element"
-                }
-            ],
-            "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
-            "namespace": "CKEDITOR.plugins"
-        },
-        {
-            "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 279,
             "description": "Sets a config value under the `key` for the embed.",
             "itemtype": "method",
             "name": "setConfig",
@@ -44340,12 +42710,12 @@
                 "type": "CKEDITOR.plugins.widget"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 300,
+            "line": 274,
             "description": "Returns the config value for the `key` or undefined if the\nconfig key is not found.",
             "itemtype": "method",
             "name": "getConfig",
@@ -44354,12 +42724,12 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 313,
+            "line": 287,
             "description": "Returns the Element holding the config under `key`",
             "itemtype": "method",
             "name": "_getValueElement",
@@ -44375,12 +42745,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 324,
+            "line": 298,
             "description": "Returns the element used as a container the config values. if\nit does not exist, it is created.",
             "itemtype": "method",
             "name": "_getEzConfigElement",
@@ -44391,12 +42761,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 343,
+            "line": 317,
             "description": "Fires the editorInteraction event so that AlloyEditor editor\nUI remains visible and is updated. This method also computes\n`selectionData.region` and the `pageX` and `pageY` properties\nso that the add toolbar is correctly positioned on the\nwidget.",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -44410,12 +42780,12 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/embed.js",
-            "line": 378,
+            "line": 352,
             "description": "Returns the wrapper element region.",
             "itemtype": "method",
             "name": "_getWrapperRegion",
@@ -44426,7 +42796,7 @@
                 "type": "Object"
             },
             "class": "CKEDITOR.plugins.ezembed",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44449,7 +42819,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44477,7 +42847,7 @@
                 "type": "String"
             },
             "class": "CKEDITOR.plugins.ezpaste",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44501,16 +42871,15 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 31,
+            "line": 33,
             "description": "Finds the \"caret element\" for the given element. For some elements,\nlike ul or table, moving the caret inside them actually means finding\nthe first element that can be filled by the user.",
             "itemtype": "method",
             "name": "_findCaretElement",
-            "deprecated": true,
             "access": "protected",
             "tagname": "",
             "params": [
@@ -44525,12 +42894,12 @@
                 "type": "CKEDITOR.dom.element"
             },
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 54,
+            "line": 52,
             "description": "Fires the editorInteraction event so that AlloyEditor's UI is updated\nfor the newly focused element",
             "itemtype": "method",
             "name": "_fireEditorInteraction",
@@ -44554,12 +42923,12 @@
                 }
             ],
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
             "file": "Resources/public/js/alloyeditor/plugins/removeblock.js",
-            "line": 78,
+            "line": 76,
             "description": "Changes the focused element in the editor to the given newFocus\nelement",
             "params": [
                 {
@@ -44578,7 +42947,7 @@
             "itemtype": "method",
             "name": "_changeFocus",
             "class": "CKEDITOR.plugins.ezremoveblock",
-            "module": "ez-alloyeditor-button-moveup",
+            "module": "ez-alloyeditor-button-imagevariation",
             "namespace": "CKEDITOR.plugins"
         },
         {
@@ -44780,7 +43149,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/embed.js",
-            "line": 37,
+            "line": 35,
             "description": "Tests whether the `embed` toolbar should be visible, it is visible\nwhen an ezembed widget gets the focus.",
             "itemtype": "method",
             "name": "test",
@@ -44825,7 +43194,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 49,
+            "line": 47,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
@@ -44869,7 +43238,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/heading.js",
-            "line": 111,
+            "line": 109,
             "description": "Tests whether the `heading` toolbar should be visible. It is visible\nwhen the selection is empty and when the caret is inside a heading.",
             "itemtype": "method",
             "name": "test",
@@ -44915,7 +43284,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/image.js",
-            "line": 38,
+            "line": 36,
             "description": "Tests whether the `image` toolbar should be visible, it is visible\nwhen an ezembed widget containing an <img> is visible.",
             "itemtype": "method",
             "name": "test",
@@ -44960,7 +43329,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 48,
+            "line": 46,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",
@@ -45004,7 +43373,7 @@
         },
         {
             "file": "Resources/public/js/alloyeditor/toolbars/config/paragraph.js",
-            "line": 111,
+            "line": 109,
             "description": "Tests whether the `paragraph` toolbar should be visible. It is\nvisible when the selection is empty and when the caret is inside a\nparagraph.",
             "itemtype": "method",
             "name": "test",
