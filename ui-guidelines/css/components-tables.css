@@ -1,5 +1,6 @@
 .ez-table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 .ez-table .table-title {
@@ -136,9 +137,9 @@
 }
 
 .ez-table-subitems .container-buttons-switcher .switch-field {
-    height: 34px;
-    width: 72px;
-    margin-top: 4px;
+    height: 44px;
+    width: 74px;
+    margin-top: 3px;
     border: 3px solid #0e77a3;
     border-radius: 6px;
 }
@@ -159,14 +160,14 @@
     overflow: hidden;
 }
 
-.ez-table-subitems .container-buttons-switcher .switch-field label {
+.ez-table-subitems .container-buttons-switcher .switch-field label,
+.ez-table-subitems .container-buttons-switcher .switch-field input:checked + label {
     display: inline-block;
     float: left;
-    height: 30px;
-    width: 10px;
+    height: auto;
+    width: auto;
     border: 2px solid #fff;
-    padding-left: 6px;
-    padding-right: 16px;
+    padding: 2px 6px 0 6px;
     background-color: #fff;
     color: #0e77a3;
     font-size: 1.2em;
@@ -179,15 +180,8 @@
 }
 
 .ez-table-subitems .container-buttons-switcher .switch-field input:checked + label {
-    height: 30px;
-    width: 10px;
-    border: 2px solid #fff;
-    padding-left: 6px;
-    padding-right: 16px;
     background-color: #0e77a3;
     color: #fff;
-    font-size: 1.2em;
-    line-height: 32px;
 }
 
 .ez-table-subitems .container-buttons-switcher .switch-field label:first-of-type {
