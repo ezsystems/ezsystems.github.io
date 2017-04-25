@@ -730,7 +730,7 @@ YUI.add(&#x27;ez-date-editview&#x27;, function (Y) {
             if ( validity.valueMissing ) {
                 this.set(&#x27;errorStatus&#x27;, Y.eZ.trans(&#x27;this.field.is.required&#x27;, {}, &#x27;fieldedit&#x27;));
             } else if ( validity.badInput ) {
-                this.set(&#x27;errorStatus&#x27;, Y.eZ.trans(&#x27;input.not.valid&#x27;, {}, &#x27;fieldedit&#x27;));
+                this.set(&#x27;errorStatus&#x27;, Y.eZ.trans(&#x27;invalid.input&#x27;, {}, &#x27;fieldedit&#x27;));
             } else {
                 this.set(&#x27;errorStatus&#x27;, false);
             }
