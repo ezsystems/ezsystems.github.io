@@ -36414,7 +36414,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 273,
+            "line": 277,
             "description": "Stores a reference to the visible method view",
             "itemtype": "property",
             "name": "_visibleMethodView",
@@ -36427,7 +36427,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 298,
+            "line": 311,
             "description": "tabChange event handler to update the `visibleMethod` attribute.",
             "itemtype": "method",
             "name": "_updateVisibleMethod",
@@ -36446,7 +36446,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 315,
+            "line": 328,
             "description": "Publishes the cancelDiscover and contentDiscovered events",
             "itemtype": "method",
             "name": "_publishEvents",
@@ -36458,7 +36458,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 336,
+            "line": 349,
             "description": "cancelDiscoverHandlerChange and contentDiscoveredHandlerChange event\nhandler. It makes sure the potential previous event handler are\nremoved and it adds the new handlers if any.",
             "itemtype": "method",
             "name": "_syncEventHandler",
@@ -36487,7 +36487,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 356,
+            "line": 369,
             "description": "Resets the state of the view",
             "itemtype": "method",
             "name": "_resetState",
@@ -36499,7 +36499,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 370,
+            "line": 383,
             "description": "Custom reset implementation to make sure to reset the confirmed list\nsub view.",
             "itemtype": "method",
             "name": "reset",
@@ -36516,7 +36516,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 385,
+            "line": 398,
             "description": "Tap event handler on the cancel link(s).",
             "itemtype": "method",
             "name": "_cancel",
@@ -36535,7 +36535,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 394,
+            "line": 407,
             "description": "Fired when the user cancel the selection. By default, the\napplication will close the universal discovery view but this\nevent can be prevented or stopped to avoid that.",
             "itemtype": "event",
             "name": "cancelDiscover",
@@ -36546,7 +36546,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 405,
+            "line": 418,
             "description": "Tap event handler on the confirm button",
             "itemtype": "method",
             "name": "_confirmSelection",
@@ -36558,7 +36558,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 412,
+            "line": 425,
             "description": "Fired when the user confirms the selection. By default, the\napplication will close the universal discovery view but this\nevent can be prevented and stopped so that it does not bubble to\nthe app plugin responsible for that.",
             "itemtype": "event",
             "name": "contentDiscovered",
@@ -36576,7 +36576,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 444,
+            "line": 457,
             "description": "Renders the available methods in a DOM element which id is the\nHTML identifier of the method.",
             "itemtype": "method",
             "name": "_renderMethods",
@@ -36588,7 +36588,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 459,
+            "line": 472,
             "description": "Builds an array containing objects that describes the available\nmethods.",
             "access": "protected",
             "tagname": "",
@@ -36603,7 +36603,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 481,
+            "line": 494,
             "description": "Title of the universal discovery view",
             "itemtype": "attribute",
             "name": "title",
@@ -36615,7 +36615,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 492,
+            "line": 505,
             "description": "Flag indicating whether the user is able to select several\ncontents.",
             "itemtype": "attribute",
             "name": "multiple",
@@ -36627,7 +36627,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 504,
+            "line": 517,
             "description": "The location id that the UDW tree will select on start",
             "itemtype": "attribute",
             "name": "startingLocationId",
@@ -36639,7 +36639,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 515,
+            "line": 528,
             "description": "Flag indicating whether the Content should be provided in the\nselection.",
             "itemtype": "attribute",
             "name": "loadContent",
@@ -36651,7 +36651,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 527,
+            "line": 540,
             "description": "An event handler function for the `contentDiscovered` event.",
             "itemtype": "attribute",
             "name": "contentDiscoveredHandler",
@@ -36663,7 +36663,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 538,
+            "line": 551,
             "description": "An event handler function for the `cancelDiscover` event.",
             "itemtype": "attribute",
             "name": "cancelDiscoverHandler",
@@ -36675,7 +36675,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 549,
+            "line": 562,
             "description": "The available methods to discover content. Each element in the\narray should be an instance of a class extending\nY.eZ.UniversalDiscoveryMethodBaseView.",
             "itemtype": "attribute",
             "name": "methods",
@@ -36686,7 +36686,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 580,
+            "line": 593,
             "description": "The identifier of the visible method",
             "itemtype": "attribute",
             "name": "visibleMethod",
@@ -36698,7 +36698,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 591,
+            "line": 604,
             "description": "The current selection of the discovery. This selection is\nprovided to the contentDiscovered event handler in the event\nfacade. Depending on the `multiple` flag and on the user action,\nthe selection is either null or an object (`multiple` set to\nfalse) or an array (`multiple` set to true)",
             "itemtype": "attribute",
             "name": "selection",
@@ -36711,7 +36711,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 608,
+            "line": 621,
             "description": "The confirmed list view. It displays the user's current confirmed\nlist content.",
             "itemtype": "attribute",
             "name": "@confirmedListView",
@@ -36722,7 +36722,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 623,
+            "line": 636,
             "description": "An arbitrary object the component triggering the universal\ndiscovery can set. It is useful to store some data the\ncontentDiscovered and cancelDiscover handlers need.",
             "itemtype": "attribute",
             "name": "data",
@@ -36734,7 +36734,7 @@
         },
         {
             "file": "Resources/public/js/views/ez-universaldiscoveryview.js",
-            "line": 636,
+            "line": 649,
             "description": "Checks wether the content is selectable. Function can be provided in the config\nwhen firing the `contentDiscover` event so it can check if content is selectable\ndepending on the context where UDW is triggered.",
             "itemtype": "attribute",
             "name": "isSelectable",
