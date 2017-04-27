@@ -99,8 +99,8 @@
 
 /* ez action buttons */
 .ez-action {
-    width: 105px;
-    height: 5.5em;
+    width: 115px;
+    height: 4.5em;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -126,19 +126,23 @@
     margin: 0;
     color: #fff;
     font-size: 1.5em;
-    padding: .5em 1em .25em 1em;
+    padding: .25em 1em .25em 1em;
     text-align: center;
 }
 
 .ez-action-label {
-    margin: -.2em .2em 0 .2em;
+    margin: -.2em .2em .25em -.1em;
     color: #fff;
     font-weight: 300;
     font-size: 13px;
 }
 
+.ez-action-translations {
+    height: 5.5em;
+}
+
 .ez-action-label-translation {
-    margin: -.2em .2em 0 .2em;
+    margin: -.2em .2em .15em .2em;
     font-size: 0.6em;
     color: #e2db6e;
 }
@@ -170,7 +174,7 @@
 }
 
 .ez-action-preview {
-    height: 6.5em;
+    height: 5em;
     cursor: auto;
     background-color: #0a5574;
 }
@@ -180,8 +184,8 @@
 }
 
 .ez-action-iconwrapper-preview {
-    margin: .35em 0;
-    padding: .3em .1em;
+    margin: .25em 0;
+    padding: .2em .1em;
     width: 65%;
     height: 40px;
     border-radius: 4px;
