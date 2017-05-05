@@ -212,7 +212,9 @@
                                 <li><a href="../classes/eZ.Plugin.RegisterUrlHelpers.html">eZ.Plugin.RegisterUrlHelpers</a></li>
                                 <li><a href="../classes/eZ.Plugin.SaveDraft.html">eZ.Plugin.SaveDraft</a></li>
                                 <li><a href="../classes/eZ.Plugin.Search.html">eZ.Plugin.Search</a></li>
+                                <li><a href="../classes/eZ.Plugin.SectionLoad.html">eZ.Plugin.SectionLoad</a></li>
                                 <li><a href="../classes/eZ.Plugin.UniversalDiscoveryContentTree.html">eZ.Plugin.UniversalDiscoveryContentTree</a></li>
+                                <li><a href="../classes/eZ.Plugin.UpdatePriority.html">eZ.Plugin.UpdatePriority</a></li>
                                 <li><a href="../classes/eZ.Plugin.UpdateTree.html">eZ.Plugin.UpdateTree</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserDrafts.html">eZ.Plugin.UserDrafts</a></li>
                                 <li><a href="../classes/eZ.Plugin.UserLoad.html">eZ.Plugin.UserLoad</a></li>
@@ -239,6 +241,7 @@
                                 <li><a href="../classes/eZ.SearchListView.html">eZ.SearchListView</a></li>
                                 <li><a href="../classes/eZ.SearchView.html">eZ.SearchView</a></li>
                                 <li><a href="../classes/eZ.SearchViewService.html">eZ.SearchViewService</a></li>
+                                <li><a href="../classes/eZ.Section.html">eZ.Section</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideView.html">eZ.SectionServerSideView</a></li>
                                 <li><a href="../classes/eZ.SectionServerSideViewService.html">eZ.SectionServerSideViewService</a></li>
                                 <li><a href="../classes/eZ.SelectionEditView.html">eZ.SelectionEditView</a></li>
@@ -253,6 +256,7 @@
                                 <li><a href="../classes/eZ.StudioPresentationView.html">eZ.StudioPresentationView</a></li>
                                 <li><a href="../classes/eZ.SubitemBaseView.html">eZ.SubitemBaseView</a></li>
                                 <li><a href="../classes/eZ.SubitemBoxView.html">eZ.SubitemBoxView</a></li>
+                                <li><a href="../classes/eZ.subitemBoxViewService.html">eZ.subitemBoxViewService</a></li>
                                 <li><a href="../classes/eZ.SubitemGridView.html">eZ.SubitemGridView</a></li>
                                 <li><a href="../classes/eZ.SubitemListItemView.html">eZ.SubitemListItemView</a></li>
                                 <li><a href="../classes/eZ.SubitemListMoreView.html">eZ.SubitemListMoreView</a></li>
@@ -459,6 +463,8 @@
                                 <li><a href="../modules/ez-searchplugin.html">ez-searchplugin</a></li>
                                 <li><a href="../modules/ez-searchview.html">ez-searchview</a></li>
                                 <li><a href="../modules/ez-searchviewservice&#x27;.html">ez-searchviewservice&#x27;</a></li>
+                                <li><a href="../modules/ez-sectionloadplugin.html">ez-sectionloadplugin</a></li>
+                                <li><a href="../modules/ez-sectionmodel.html">ez-sectionmodel</a></li>
                                 <li><a href="../modules/ez-sectionserversideview.html">ez-sectionserversideview</a></li>
                                 <li><a href="../modules/ez-selection-editview.html">ez-selection-editview</a></li>
                                 <li><a href="../modules/ez-selection-table.html">ez-selection-table</a></li>
@@ -470,6 +476,7 @@
                                 <li><a href="../modules/ez-studiopresentationview.html">ez-studiopresentationview</a></li>
                                 <li><a href="../modules/ez-subitembaseview.html">ez-subitembaseview</a></li>
                                 <li><a href="../modules/ez-subitemboxview.html">ez-subitemboxview</a></li>
+                                <li><a href="../modules/ez-subitemboxviewservice.html">ez-subitemboxviewservice</a></li>
                                 <li><a href="../modules/ez-subitemgriditemview.html">ez-subitemgriditemview</a></li>
                                 <li><a href="../modules/ez-subitemgridview.html">ez-subitemgridview</a></li>
                                 <li><a href="../modules/ez-subitemlistitemview.html">ez-subitemlistitemview</a></li>
@@ -498,6 +505,7 @@
                                 <li><a href="../modules/ez-universaldiscoveryselectedview.html">ez-universaldiscoveryselectedview</a></li>
                                 <li><a href="../modules/ez-universaldiscoveryview.html">ez-universaldiscoveryview</a></li>
                                 <li><a href="../modules/ez-universaldiscoveryviewservice.html">ez-universaldiscoveryviewservice</a></li>
+                                <li><a href="../modules/ez-updatepriorityplugin.html">ez-updatepriorityplugin</a></li>
                                 <li><a href="../modules/ez-updatetreeplugin.html">ez-updatetreeplugin</a></li>
                                 <li><a href="../modules/ez-url-editview.html">ez-url-editview</a></li>
                                 <li><a href="../modules/ez-url-view.html">ez-url-view</a></li>
@@ -658,6 +666,8 @@ YUI.add(&#x27;ez-universaldiscoveryfinderview&#x27;, function (Y) {
          * @protected
          */
         _unselectContent: function () {
+            this._fireSelectContent(null);
+            this.get(&#x27;selectedView&#x27;).set(&#x27;contentStruct&#x27;, null);
             if (this.get(&#x27;visible&#x27;)) {
                 this.get(&#x27;finderExplorerView&#x27;).wakeUp();
             }
@@ -707,20 +717,46 @@ YUI.add(&#x27;ez-universaldiscoveryfinderview&#x27;, function (Y) {
             },
 
             /**
-             * Holds the virtual root location
+             * The starting Location if the UDW is configured with one. It is
+             * directly set on the finder explorer view.
+             *
+             * @attribute startingLocation
+             * @type {eZ.Location|false}
+             */
+            startingLocation: {
+                setter: function (startingLocation) {
+                    this.get(&#x27;finderExplorerView&#x27;).set(&#x27;startingLocation&#x27;, startingLocation);
+                    return startingLocation;
+                }
+            },
+
+            /**
+             * The discover root depth if the UDW is configured with one. It is 
+             * directly set on the finder explorer view.
+             *
+             * @attribute minDiscoverDepth
+             * @type {Number|false}
+             */
+            minDiscoverDepth: {
+                setter: function (minDiscoverDepth) {
+                    this.get(&#x27;finderExplorerView&#x27;).set(&#x27;minDiscoverDepth&#x27;, minDiscoverDepth);
+                    return minDiscoverDepth;
+                }
+            },
+            
+            /**
+             * The virtual root Location object. It is directly set on the
+             * finder explorer view.
              *
              * @attribute virtualRootLocation
              * @type {eZ.Location}
+             * @required
              */
             virtualRootLocation: {
-                valueFn: function () {
-                    return new Y.eZ.Location({
-                        id: &#x27;/api/ezp/v2/content/locations/1&#x27;,
-                        locationId: 1,
-                        sortField: &#x27;SECTION&#x27;,
-                        sortOrder: &#x27;ASC&#x27;,
-                    });
-                },
+                setter: function (virtualRootLocation) {
+                    this.get(&#x27;finderExplorerView&#x27;).set(&#x27;virtualRootLocation&#x27;, virtualRootLocation);
+                    return virtualRootLocation;
+                }
             },
 
             /**
@@ -750,7 +786,6 @@ YUI.add(&#x27;ez-universaldiscoveryfinderview&#x27;, function (Y) {
                 valueFn: function () {
                     return new Y.eZ.UniversalDiscoveryFinderExplorerView({
                         bubbleTargets: this,
-                        startingLocation: this.get(&#x27;virtualRootLocation&#x27;),
                     });
                 },
             },
