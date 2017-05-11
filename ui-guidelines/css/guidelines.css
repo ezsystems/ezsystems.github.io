@@ -322,6 +322,21 @@ pre[class*="language-"] {
     margin-bottom: 1.5em;
 }
 
+/* Components - Modals */
+.modal-button {
+    margin-top: 1.5em;
+    padding: 1em 2em;
+    border-radius: 4px;
+    background-color: #f15a10;
+    color: #fff;
+}
+
+.modal-button:hover {
+    color: #fff;
+    background-color: #c3480b;
+    text-decoration: none;
+}
+
 /*==== UTILITIES/HELPERS ====*/
 .top-half-extra {
     margin-top: 2em;

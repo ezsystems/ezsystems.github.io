@@ -27,6 +27,7 @@
 		<link rel="stylesheet" href="css/guidelines.css">
 		<link rel="stylesheet" href="css/components-buttons.css">
 		<link rel="stylesheet" href="css/components-form.css">
+		<link rel="stylesheet" href="css/components-modals.css">
 		<link rel="stylesheet" href="css/components-tables.css">
 		<link rel="stylesheet" href="css/resources-typography.css">
 		<link rel="stylesheet" href="css/resources-colors.css">
@@ -781,6 +782,192 @@
 					                    </table>
 					                </div>
 					            </div>
+							</div>
+						</div>
+						<div id="components-modals" class="modules">
+							<h3 class="module-header">Modals</h3>
+							<h4 class="u-move-down-xlarge">Modal without header</h4>
+							<hr>
+							<div class="flex-wrapper">
+<pre>
+<code class="line-numbers language-markup"><script type="prism-html-markup"><div id="modal1" class="ez-modal" role="dialog" aria-labelledby="ez-modal">
+    <div class="modal-container">
+        <div class="modal-content">
+            <div class="body" aria-labelledby="ez-modal_body">
+                Your content here
+            </div>
+            <div class="footer" aria-labelledby="ez-modal_buttons">
+                Include interaction buttons here
+            </div>
+        </div>
+    </div>
+</div></script></code>
+</pre>					
+								<div id="modal1" class="ez-modal" role="dialog" aria-labelledby="ez-modal">
+					                <div class="modal-container">
+					                    <div class="modal-content">
+					                        <div class="body" aria-labelledby="ez-modal_body">
+					                            <p>Are you sure you want to send this content to trash?</p>
+					                        </div>
+					                        <div class="footer" aria-labelledby="ez-modal_buttons">
+					                            <a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-neutral">Cancel</button></a>
+					                            <a href="#"><button type="button" class="ez-button ez-button-negative">Send to trash</button></a>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>	
+					            <a href="#modal1" data-target="#modal1" class="modal-button">Launch modal without header</a>
+							</div>
+							<h4 class="u-move-down-xlarge">Modal with header, but without footer</h4>
+							<hr>
+							<div class="flex-wrapper">
+<pre>
+<code class="line-numbers language-markup"><script type="prism-html-markup"><div id="modal2" class="ez-modal ez-modal-header-nofooter" role="dialog" aria-labelledby="ez-modal">
+    <div class="modal-container">
+        <div class="modal-content">
+        	<div class="header" aria-labelledby="ez-modal_header">
+                <h2>Header here</h2>
+                <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+            </div>
+            <div class="body" aria-labelledby="ez-modal_body">
+                Your content here
+            </div>
+        </div>
+    </div>
+</div></script></code>
+</pre>	
+								<div id="modal2" class="ez-modal ez-modal-header-nofooter" role="dialog" aria-labelledby="ez-modal">
+					                <div class="modal-container">
+					                    <div class="modal-content">
+					                        <div class="header" aria-labelledby="ez-modal_header">
+					                            <h2>Header here</h2>
+					                            <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+					                        </div>
+					                        <div class="body" aria-labelledby="ez-modal_body">
+					                            <div class="ez-table ez-table-checkboxes">
+					                                <div class="table-title">
+					                                    <p>Drafts</p>
+					                                    <div class="container-buttons">
+					                                        <button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add draft</button> 
+					                                    </div>
+					                                </div>
+					                                <div class="table-container">
+					                                    <table>
+					                                        <tr>
+					                                            <th>Language</th>
+					                                            <th>Owner</th>
+					                                            <th>Last modified</th>
+					                                            <th></th>
+					                                        </tr>
+					                                        <tr>
+					                                            <td>eng-GB</td>
+					                                            <td>Admin user</td>
+					                                            <td>17 Sep 2015, 12:53 PM</td>
+					                                            <td></td>
+					                                        </tr>
+					                                        <tr>
+					                                            <td>eng-GB</td>
+					                                            <td>Alexandra Lewis</td>
+					                                            <td>17 Sep 2015, 2:53 PM</td>
+					                                            <td>
+					                                                <a href="#" class="table-iconbutton">
+					                                                    <div class="table-iconbutton-edit">
+					                                                        <span class="ez-icon-edit"></span>
+					                                                    </div>
+					                                                </a>
+					                                            </td>
+					                                        </tr>
+					                                        <tr>
+					                                            <td>eng-GB</td>
+					                                            <td>Alexandra Lewis</td>
+					                                            <td>20 Sep 2015, 4:53 PM</td>
+					                                            <td>
+					                                                <a href="#" class="table-iconbutton">
+					                                                    <div class="table-iconbutton-edit">
+					                                                        <span class="ez-icon-edit"></span>
+					                                                    </div>
+					                                                </a>
+					                                            </td>
+					                                        </tr>
+					                                    </table>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+					            <a href="#modal2" data-target="#modal2" class="modal-button">Modal with header, but no footer</a> 
+							</div>
+							<h4 class="u-move-down-xlarge">Modal with header and footer</h4>
+							<hr>
+							<div class="flex-wrapper">
+<pre>
+<code class="line-numbers language-markup"><script type="prism-html-markup"><div id="modal3" class="ez-modal ez-modal-header" role="dialog" aria-labelledby="ez-modal">
+    <div class="modal-container">
+        <div class="modal-content">
+        	<div class="header" aria-labelledby="ez-modal_header">
+                <h2>Header here</h2>
+                <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+            </div>
+            <div class="body" aria-labelledby="ez-modal_body">
+                Your content here
+            </div>
+            <div class="footer" aria-labelledby="ez-modal_buttons">
+                Include interaction buttons here
+            </div>
+        </div>
+    </div>
+</div></script></code>
+</pre>
+								<div id="modal3" class="ez-modal ez-modal-header" role="dialog" aria-labelledby="ez-modal">
+					                <div class="modal-container">
+					                    <div class="modal-content">
+					                        <div class="header" aria-labelledby="ez-modal_header">
+					                            <h2>Header here</h2>
+					                            <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+					                        </div>
+					                        <div class="body" aria-labelledby="ez-modal_body">
+					                            <div class="ez-table">
+					                                <div class="table-title">
+					                                    <p>Published version</p>
+					                                </div>
+					                                <div class="table-container">
+					                                    <table>
+					                                        <tr>
+					                                            <th>Version</th>
+					                                            <th>Language</th>
+					                                            <th>Author</th>
+					                                            <th>Created</th>
+					                                            <th>Last saved</th>
+					                                        </tr>
+					                                        <tr>
+					                                            <td>2</td>
+					                                            <td>eng-GB</td>
+					                                            <td>Administrator user</td>
+					                                            <td>17 Sep 2015 12:53 PM</td>
+					                                            <td>17 Sep 2015 12:55 PM</td>
+					                                        </tr>
+					                                        <tr>
+					                                            <td>1</td>
+					                                            <td>eng-GB</td>
+					                                            <td>Administrator user</td>
+					                                            <td>15 Sep 2015 08:33 AM</td>
+					                                            <td>15 Sep 2015 11:45 AM</td>
+					                                        </tr>
+					                                    </table>
+					                                </div>
+					                            </div>
+					                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					                        </div>
+					                        <div class="footer" aria-labelledby="ez-modal_buttons">
+					                            <a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-neutral">Cancel</button></a>
+					                            <a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-negative">Send to trash</button></a>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+					            <a href="#modal3" data-target="#modal3" class="modal-button">Modal with header and footer </a> 
 							</div>
 						</div>
 					</div>
@@ -2223,6 +2410,11 @@
 								<li>
 									<a href="#components-tables">
 										<span class="fa fa-angle-right"></span>Tables
+									</a>
+								</li>
+								<li>
+									<a href="#components-modals">
+										<span class="fa fa-angle-right"></span>Modals
 									</a>
 								</li>
 							</ul>
