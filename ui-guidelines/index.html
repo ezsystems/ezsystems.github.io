@@ -28,6 +28,7 @@
 		<link rel="stylesheet" href="css/components-buttons.css">
 		<link rel="stylesheet" href="css/components-form.css">
 		<link rel="stylesheet" href="css/components-modals.css">
+		<link rel="stylesheet" href="css/components-tabs.css">
 		<link rel="stylesheet" href="css/components-tables.css">
 		<link rel="stylesheet" href="css/resources-typography.css">
 		<link rel="stylesheet" href="css/resources-colors.css">
@@ -43,7 +44,7 @@
 
 		<!-- Google Analytics -->
 		<script>
-		 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
@@ -58,14 +59,14 @@
 		<nav id="top" class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
-		    		<a class="navbar-brand" href="#">
-		        		<img alt="Brand" src="img/eZ-Logo.svg">
-		      		</a>
-		    	</div>
-		    	<div>
-			  		<h2>UI Guidelines</h2>
-			  	</div>
-		  	</div>
+					<a class="navbar-brand" href="#">
+						<img alt="Brand" src="img/eZ-Logo.svg">
+					</a>
+				</div>
+				<div>
+					<h2>UI Guidelines</h2>
+				</div>
+			</div>
 		</nav>
 
 		<div class="ui-header">
@@ -264,70 +265,70 @@
 										<p class="button-card-header">eZ action button - Discovery bar</p>
 										<div class="button-card-content">
 											<button class="ez-action ez-action-discoverybar">  
-							                    <p class="ez-action-iconwrapper"><span class="ez-icon-search ez-action-icon"></span></p>
-							                    <p class="ez-action-label">Search</p>
-							                </button>
-							            </div>
-							        </div>
-							        <div class="button-code">
+												<p class="ez-action-iconwrapper"><span class="ez-icon-search ez-action-icon"></span></p>
+												<p class="ez-action-label">Search</p>
+											</button>
+										</div>
+									</div>
+									<div class="button-code">
 <pre>
 <code class="line-numbers language-markup"><script type="text/plain"><button class="ez-action ez-action-discoverybar">
 	<p class="ez-action-iconwrapper"><span class="ez-icon-search ez-action-icon"></span></p>
 	<p class="ez-action-label">Search</p>
 </button></script></code>
 </pre>
-							        </div>
-							    </div>
-							    <div class="button-wrapper">
-						        	<div class="button-box">
-						        		<p class="button-card-header">eZ action button - Action bar</p>
-							        	<div class="button-card-content">
-							        		<button class="ez-action ez-action-actionbar">
-							                    <p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
-							                    <p class="ez-action-label">Edit</p>
-							                </button>
-							            </div>
-							        </div>
-							        <div class="button-code">
+									</div>
+								</div>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ action button - Action bar</p>
+										<div class="button-card-content">
+											<button class="ez-action ez-action-actionbar">
+												<p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
+												<p class="ez-action-label">Edit</p>
+											</button>
+										</div>
+									</div>
+									<div class="button-code">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><button class="ez-action ez-action-actionbar">
 	<p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
 	<p class="ez-action-label">Edit</p>
 </button></script></code>
 </pre>
-							        </div>
-							    </div>
-							    <div class="button-wrapper">
-							        <div class="button-box">
-						        		<p class="button-card-header">eZ action button - Action bar disabled</p>
-							        	<div class="button-card-content">
-							        		<button class="ez-action ez-action-actionbar" disabled="disabled">
-							                    <p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
-							                    <p class="ez-action-label">Edit</p>
-							                </button>
-							            </div>
-							        </div>
-							        <div class="button-code">
+									</div>
+								</div>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ action button - Action bar disabled</p>
+										<div class="button-card-content">
+											<button class="ez-action ez-action-actionbar" disabled="disabled">
+												<p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
+												<p class="ez-action-label">Edit</p>
+											</button>
+										</div>
+									</div>
+									<div class="button-code">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><button class="ez-action ez-action-actionbar" disabled="disabled">
 	<p class="ez-action-iconwrapper"><span class="ez-icon-edit ez-action-icon"></span></p>
 	<p class="ez-action-label">Edit</p>
 </button></script></code>
 </pre>
-							        </div>
-							    </div>
-							    <div class="button-wrapper">
-							        <div class="button-box">
-						        		<p class="button-card-header">eZ action button - Action bar Translations</p>
-							        	<div class="button-card-content">
-							        		<button class="ez-action ez-action-actionbar ez-action-translations">
-							                    <p class="ez-action-iconwrapper"><span class="ez-icon-translation ez-action-icon"></span></p>
-							                    <p class="ez-action-label">Translations</p>
-							                    <p class="ez-action-label-translation">English (EN-GB)</p>
-							                </button>
-							            </div>
-							        </div>
-							        <div class="button-code">
+									</div>
+								</div>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ action button - Action bar Translations</p>
+										<div class="button-card-content">
+											<button class="ez-action ez-action-actionbar ez-action-translations">
+												<p class="ez-action-iconwrapper"><span class="ez-icon-translation ez-action-icon"></span></p>
+												<p class="ez-action-label">Translations</p>
+												<p class="ez-action-label-translation">English (EN-GB)</p>
+											</button>
+										</div>
+									</div>
+									<div class="button-code">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><button class="ez-action ez-action-actionbar">
 	<p class="ez-action-iconwrapper"><span class="ez-icon-translation ez-action-icon"></span></p>
@@ -335,40 +336,40 @@
 	<p class="ez-action-label-translation">English (EN-GB)</p>
 </button></script></code>
 </pre>
-							        </div>
-							    </div>
-							    <div class="button-wrapper">
-							        <div class="button-box">
-						        		<p class="button-card-header">eZ action button - Action bar negative</p>
-							        	<div class="button-card-content">
-							        		<button class="ez-action ez-action-negative ez-action-actionbar">
-							                    <p class="ez-action-iconwrapper"><span class="ez-icon-trash-send ez-action-icon"></span></p>
-							                    <p class="ez-action-label">Send to trash</p>
-							                </button>
-							            </div>
-							        </div>
-							        <div class="button-code">
+									</div>
+								</div>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ action button - Action bar negative</p>
+										<div class="button-card-content">
+											<button class="ez-action ez-action-negative ez-action-actionbar">
+												<p class="ez-action-iconwrapper"><span class="ez-icon-trash-send ez-action-icon"></span></p>
+												<p class="ez-action-label">Send to trash</p>
+											</button>
+										</div>
+									</div>
+									<div class="button-code">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><button class="ez-action ez-action-negative ez-action-actionbar">
 	<p class="ez-action-iconwrapper"><span class="ez-icon-trash-send ez-action-icon"></span></p>
 	<p class="ez-action-label">Send to trash</p>
 </button></script></code>
 </pre>
-							        </div>
-							    </div>
-							    <div class="button-wrapper">
-							        <div class="button-box">
-						        		<p class="button-card-header">eZ action button - Action bar preview</p>
-							        	<div class="button-card-content">
-							        		<button class="ez-action ez-action-preview">
-							                    <div class="preview-box">
-							                        <p class="ez-action-iconwrapper ez-action-iconwrapper-preview"><span class="ez-icon-view-desktop ez-action-icon ez-action-icon-preview"></span></p>
-							                    </div>
-							                    <p class="ez-action-label ez-action-label-preview">Preview</p>
-							                </button>
-							            </div>
-							        </div>
-							        <div class="button-code">
+									</div>
+								</div>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">eZ action button - Action bar preview</p>
+										<div class="button-card-content">
+											<button class="ez-action ez-action-preview">
+												<div class="preview-box">
+													<p class="ez-action-iconwrapper ez-action-iconwrapper-preview"><span class="ez-icon-view-desktop ez-action-icon ez-action-icon-preview"></span></p>
+												</div>
+												<p class="ez-action-label ez-action-label-preview">Preview</p>
+											</button>
+										</div>
+									</div>
+									<div class="button-code">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><button class="ez-action ez-action-preview">
 	<div class="preview-box">
@@ -377,9 +378,9 @@
 	<p class="ez-action-label ez-action-label-preview">Preview</p>
 </button></script></code>
 </pre>
-							        </div>
-							    </div>
-						    </div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div id="components-form" class="modules">
 							<h3 class="module-header">Form components</h3>
@@ -390,19 +391,19 @@
 									<li>
 										<div class="ez-form-clickable">
 											<input id="cb1" type="checkbox" name="checkbox" checked="checked">
-										 	<label for="cb1" class="">Item 1</label>
+											<label for="cb1" class="">Item 1</label>
 										</div>
 									</li>
 									<li>
 										<div class="ez-form-clickable">
-										 	<input id="cb2" type="checkbox" name="checkbox">
-										 	<label for="cb2" class="">Item 2</label>
+											<input id="cb2" type="checkbox" name="checkbox">
+											<label for="cb2" class="">Item 2</label>
 										</div>
 									</li>
 									<li>
 										<div class="ez-form-clickable">
-										 	<input id="cb3" type="checkbox" name="checkbox">
-										 	<label for="cb3" class="">Item 3</label>
+											<input id="cb3" type="checkbox" name="checkbox">
+											<label for="cb3" class="">Item 3</label>
 										</div>
 									</li>
 								</ul>
@@ -414,19 +415,19 @@
 									<li>
 										<div class="ez-form-clickable">
 											<input id="rb1" type="radio" name="radiobutton" checked="checked">
-										 	<label for="rb1" class="">Item 1</label>
+											<label for="rb1" class="">Item 1</label>
 										</div>
 									</li>
 									<li>
 										<div class="ez-form-clickable">
-										 	<input id="rb2" type="radio" name="radiobutton">
-										 	<label for="rb2" class="">Item 2</label>
+											<input id="rb2" type="radio" name="radiobutton">
+											<label for="rb2" class="">Item 2</label>
 										</div>
 									</li>
 									<li>
 										<div class="ez-form-clickable">
-										 	<input id="rb3" type="radio" name="radiobutton">
-										 	<label for="rb3" class="">Item 3</label>
+											<input id="rb3" type="radio" name="radiobutton">
+											<label for="rb3" class="">Item 3</label>
 										</div>
 									</li>
 								</ul>
@@ -525,18 +526,18 @@
 									<p>On/Off switcher</p>
 									<label>Label:</label>
 									<div class="ez-form-onoffswitcher">
-								  		<input type="checkbox" id="check_1">
-								  		<label for="check_1"></label>
+										<input type="checkbox" id="check_1">
+										<label for="check_1"></label>
 									</div>
 								</div>
 								<div class="ez-form-box top-extra">
 									<p>Visibility switcher</p>
 									<div class="ez-form-visibilityswitcher">
-								      	<input type="radio" name="group-a" id="view-1" checked>
-								      	<label for="view-1">Show</label>
-								      	<input type="radio" name="group-a" id="edit-1">
-								      	<label for="edit-1">Hide</label>
-								      	<span class="switch"></span>
+										<input type="radio" name="group-a" id="view-1" checked>
+										<label for="view-1">Show</label>
+										<input type="radio" name="group-a" id="edit-1">
+										<label for="edit-1">Hide</label>
+										<span class="switch"></span>
 									</div>
 								</div>
 							</div>
@@ -547,253 +548,253 @@
 							<hr>
 							<div class="flex-wrapper">
 								<div class="ez-table">
-					                <div class="table-title">
-					                    <p>Published version</p>
-					                </div>
-					                <div class="table-container">
-					                    <table>
-					                        <tr>
-					                            <th>Version</th>
-					                            <th>Language</th>
-					                            <th>Author</th>
-					                            <th>Created</th>
-					                            <th>Last saved</th>
-					                        </tr>
-					                        <tr>
-					                            <td>2</td>
-					                            <td>eng-GB</td>
-					                            <td>Administrator user</td>
-					                            <td>17 Sep 2015 12:53 PM</td>
-					                            <td>17 Sep 2015 12:55 PM</td>
-					                        </tr>
-					                        <tr>
-					                            <td>1</td>
-					                            <td>eng-GB</td>
-					                            <td>Administrator user</td>
-					                            <td>15 Sep 2015 08:33 AM</td>
-					                            <td>15 Sep 2015 11:45 AM</td>
-					                        </tr>
-					                    </table>
-					                </div>
-					            </div>
+									<div class="table-title">
+										<p>Published version</p>
+									</div>
+									<div class="table-container">
+										<table>
+											<tr>
+												<th>Version</th>
+												<th>Language</th>
+												<th>Author</th>
+												<th>Created</th>
+												<th>Last saved</th>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>eng-GB</td>
+												<td>Administrator user</td>
+												<td>17 Sep 2015 12:53 PM</td>
+												<td>17 Sep 2015 12:55 PM</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>eng-GB</td>
+												<td>Administrator user</td>
+												<td>15 Sep 2015 08:33 AM</td>
+												<td>15 Sep 2015 11:45 AM</td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
 							<h4 class="u-move-down-xlarge">Default table with checkboxes</h4>
 							<hr>
 							<div class="flex-wrapper">
 								<div class="ez-table ez-table-checkboxes">
-					                <div class="table-title">
-					                    <p>Content type groups</p>
-					                    <div class="container-buttons">
-					                        <button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add group</button> 
-					                        <button type="button" class="ez-button ez-button-negative" disabled="disabled"><span class="ez-icon-trash"></span>Delete</button>
-					                    </div>
-					                </div>
-					                <div class="table-container">
-					                    <table>
-					                        <tr>
-					                            <th></th>
-					                            <th>Name</th>
-					                            <th>Id</th>
-					                            <th></th>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cba" type="checkbox" name="checkbox">
-					                                    <label for="cba" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">Content</a></td>
-					                            <td>1</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cbb" type="checkbox" name="checkbox">
-					                                    <label for="cbb" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">Users</a></td>
-					                            <td>2</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cbc" type="checkbox" name="checkbox">
-					                                    <label for="cbc" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">Media</a></td>
-					                            <td>3</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cb4" type="checkbox" name="checkbox">
-					                                    <label for="cb4" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">More content</a></td>
-					                            <td>4</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cb5" type="checkbox" name="checkbox">
-					                                    <label for="cb5" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">More users</a></td>
-					                            <td>5</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cb6" type="checkbox" name="checkbox">
-					                                    <label for="cb6" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">More media</a></td>
-					                            <td>6</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cb7" type="checkbox" name="checkbox">
-					                                    <label for="cb7" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">More content 2</a></td>
-					                            <td>7</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cb8" type="checkbox" name="checkbox">
-					                                    <label for="cb8" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">More users 2</a></td>
-					                            <td>8</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                        <tr>
-					                            <td>
-					                                <div class="ez-form-clickable">
-					                                    <input id="cb9" type="checkbox" name="checkbox">
-					                                    <label for="cb9" class=""></label>
-					                                </div>
-					                            </td>
-					                            <td><a href="#">More media 2</a></td>
-					                            <td>9</td>
-					                            <td>
-					                                <a href="#" class="table-iconbutton">
-					                                    <div class="table-iconbutton-edit">
-					                                        <span class="ez-icon-edit"></span>
-					                                    </div>
-					                                </a>
-					                            </td>
-					                        </tr>
-					                    </table>
-					                </div>
-					            </div>
+									<div class="table-title">
+										<p>Content type groups</p>
+										<div class="container-buttons">
+											<button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add group</button> 
+											<button type="button" class="ez-button ez-button-negative" disabled="disabled"><span class="ez-icon-trash"></span>Delete</button>
+										</div>
+									</div>
+									<div class="table-container">
+										<table>
+											<tr>
+												<th></th>
+												<th>Name</th>
+												<th>Id</th>
+												<th></th>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cba" type="checkbox" name="checkbox">
+														<label for="cba" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">Content</a></td>
+												<td>1</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cbb" type="checkbox" name="checkbox">
+														<label for="cbb" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">Users</a></td>
+												<td>2</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cbc" type="checkbox" name="checkbox">
+														<label for="cbc" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">Media</a></td>
+												<td>3</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cb4" type="checkbox" name="checkbox">
+														<label for="cb4" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">More content</a></td>
+												<td>4</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cb5" type="checkbox" name="checkbox">
+														<label for="cb5" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">More users</a></td>
+												<td>5</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cb6" type="checkbox" name="checkbox">
+														<label for="cb6" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">More media</a></td>
+												<td>6</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cb7" type="checkbox" name="checkbox">
+														<label for="cb7" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">More content 2</a></td>
+												<td>7</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cb8" type="checkbox" name="checkbox">
+														<label for="cb8" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">More users 2</a></td>
+												<td>8</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="ez-form-clickable">
+														<input id="cb9" type="checkbox" name="checkbox">
+														<label for="cb9" class=""></label>
+													</div>
+												</td>
+												<td><a href="#">More media 2</a></td>
+												<td>9</td>
+												<td>
+													<a href="#" class="table-iconbutton">
+														<div class="table-iconbutton-edit">
+															<span class="ez-icon-edit"></span>
+														</div>
+													</a>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
 							<h4 class="u-move-down-xlarge">Sub-items table</h4>
 							<hr>
 							<div class="flex-wrapper">
 								<div class="ez-table ez-table-subitems">
-					                <div class="table-title table-title-subitems">
-					                    <p>Sub-items table</p>
-					                    <div class="container-buttons container-buttons-switcher">
-					                        <div class="switch-field">
-					                            <input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
-					                            <label for="switch_left"><span class="ez-icon-view-list" aria-hidden="true"></span></label>
-					                            <input type="radio" id="switch_center" name="switch_2" value="no" />
-					                            <label for="switch_center"><span class="ez-icon-view-grid" aria-hidden="true"></span></label>
-					                        </div>
-					                    </div>
-					                </div>
-					                <div class="table-container">
-					                    <table>
-					                        <tr>
-					                            <th>Version</th>
-					                            <th>Language</th>
-					                            <th>Author</th>
-					                            <th>Created</th>
-					                            <th>Last saved</th>
-					                        </tr>
-					                        <tr>
-					                            <td>2</td>
-					                            <td>eng-GB</td>
-					                            <td>Administrator user</td>
-					                            <td>17 Sep 2015 12:53 PM</td>
-					                            <td>17 Sep 2015 12:55 PM</td>
-					                        </tr>
-					                        <tr>
-					                            <td>1</td>
-					                            <td>eng-GB</td>
-					                            <td>Administrator user</td>
-					                            <td>15 Sep 2015 08:33 AM</td>
-					                            <td>15 Sep 2015 11:45 AM</td>
-					                        </tr>
-					                    </table>
-					                </div>
-					            </div>
+									<div class="table-title table-title-subitems">
+										<p>Sub-items table</p>
+										<div class="container-buttons container-buttons-switcher">
+											<div class="switch-field">
+												<input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+												<label for="switch_left"><span class="ez-icon-view-list" aria-hidden="true"></span></label>
+												<input type="radio" id="switch_center" name="switch_2" value="no" />
+												<label for="switch_center"><span class="ez-icon-view-grid" aria-hidden="true"></span></label>
+											</div>
+										</div>
+									</div>
+									<div class="table-container">
+										<table>
+											<tr>
+												<th>Version</th>
+												<th>Language</th>
+												<th>Author</th>
+												<th>Created</th>
+												<th>Last saved</th>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>eng-GB</td>
+												<td>Administrator user</td>
+												<td>17 Sep 2015 12:53 PM</td>
+												<td>17 Sep 2015 12:55 PM</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>eng-GB</td>
+												<td>Administrator user</td>
+												<td>15 Sep 2015 08:33 AM</td>
+												<td>15 Sep 2015 11:45 AM</td>
+											</tr>
+										</table>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div id="components-modals" class="modules">
@@ -803,183 +804,234 @@
 							<div class="flex-wrapper">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><div id="modal1" class="ez-modal" role="dialog" aria-labelledby="ez-modal">
-    <div class="modal-container">
-        <div class="modal-content">
-            <div class="body" aria-labelledby="ez-modal_body">
-                Your content here
-            </div>
-            <div class="footer" aria-labelledby="ez-modal_buttons">
-                Include interaction buttons here
-            </div>
-        </div>
-    </div>
+	<div class="modal-container">
+		<div class="modal-content">
+			<div class="body" aria-labelledby="ez-modal_body">
+				Your content here
+			</div>
+			<div class="footer" aria-labelledby="ez-modal_buttons">
+				Include interaction buttons here
+			</div>
+		</div>
+	</div>
 </div></script></code>
 </pre>					
 								<div id="modal1" class="ez-modal" role="dialog" aria-labelledby="ez-modal">
-					                <div class="modal-container">
-					                    <div class="modal-content">
-					                        <div class="body" aria-labelledby="ez-modal_body">
-					                            <p>Are you sure you want to send this content to trash?</p>
-					                        </div>
-					                        <div class="footer" aria-labelledby="ez-modal_buttons">
-					                            <a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-neutral">Cancel</button></a>
-					                            <a href="#"><button type="button" class="ez-button ez-button-negative">Send to trash</button></a>
-					                        </div>
-					                    </div>
-					                </div>
-					            </div>	
-					            <a href="#modal1" data-target="#modal1" class="modal-button">Launch modal without header</a>
+									<div class="modal-container">
+										<div class="modal-content">
+											<div class="body" aria-labelledby="ez-modal_body">
+												<p>Are you sure you want to send this content to trash?</p>
+											</div>
+											<div class="footer" aria-labelledby="ez-modal_buttons">
+												<a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-neutral">Cancel</button></a>
+												<a href="#"><button type="button" class="ez-button ez-button-negative">Send to trash</button></a>
+											</div>
+										</div>
+									</div>
+								</div>	
+								<a href="#modal1" data-target="#modal1" class="modal-button">Launch modal without header</a>
 							</div>
 							<h4 class="u-move-down-xlarge">Modal with header, but without footer</h4>
 							<hr>
 							<div class="flex-wrapper">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><div id="modal2" class="ez-modal ez-modal-header-nofooter" role="dialog" aria-labelledby="ez-modal">
-    <div class="modal-container">
-        <div class="modal-content">
-        	<div class="header" aria-labelledby="ez-modal_header">
-                <h2>Header here</h2>
-                <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
-            </div>
-            <div class="body" aria-labelledby="ez-modal_body">
-                Your content here
-            </div>
-        </div>
-    </div>
+	<div class="modal-container">
+		<div class="modal-content">
+			<div class="header" aria-labelledby="ez-modal_header">
+				<h2>Header here</h2>
+				<a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+			</div>
+			<div class="body" aria-labelledby="ez-modal_body">
+				Your content here
+			</div>
+		</div>
+	</div>
 </div></script></code>
 </pre>	
 								<div id="modal2" class="ez-modal ez-modal-header-nofooter" role="dialog" aria-labelledby="ez-modal">
-					                <div class="modal-container">
-					                    <div class="modal-content">
-					                        <div class="header" aria-labelledby="ez-modal_header">
-					                            <h2>Header here</h2>
-					                            <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
-					                        </div>
-					                        <div class="body" aria-labelledby="ez-modal_body">
-					                            <div class="ez-table ez-table-checkboxes">
-					                                <div class="table-title">
-					                                    <p>Drafts</p>
-					                                    <div class="container-buttons">
-					                                        <button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add draft</button> 
-					                                    </div>
-					                                </div>
-					                                <div class="table-container">
-					                                    <table>
-					                                        <tr>
-					                                            <th>Language</th>
-					                                            <th>Owner</th>
-					                                            <th>Last modified</th>
-					                                            <th></th>
-					                                        </tr>
-					                                        <tr>
-					                                            <td>eng-GB</td>
-					                                            <td>Admin user</td>
-					                                            <td>17 Sep 2015, 12:53 PM</td>
-					                                            <td></td>
-					                                        </tr>
-					                                        <tr>
-					                                            <td>eng-GB</td>
-					                                            <td>Alexandra Lewis</td>
-					                                            <td>17 Sep 2015, 2:53 PM</td>
-					                                            <td>
-					                                                <a href="#" class="table-iconbutton">
-					                                                    <div class="table-iconbutton-edit">
-					                                                        <span class="ez-icon-edit"></span>
-					                                                    </div>
-					                                                </a>
-					                                            </td>
-					                                        </tr>
-					                                        <tr>
-					                                            <td>eng-GB</td>
-					                                            <td>Alexandra Lewis</td>
-					                                            <td>20 Sep 2015, 4:53 PM</td>
-					                                            <td>
-					                                                <a href="#" class="table-iconbutton">
-					                                                    <div class="table-iconbutton-edit">
-					                                                        <span class="ez-icon-edit"></span>
-					                                                    </div>
-					                                                </a>
-					                                            </td>
-					                                        </tr>
-					                                    </table>
-					                                </div>
-					                            </div>
-					                        </div>
-					                    </div>
-					                </div>
-					            </div>
-					            <a href="#modal2" data-target="#modal2" class="modal-button">Modal with header, but no footer</a> 
+									<div class="modal-container">
+										<div class="modal-content">
+											<div class="header" aria-labelledby="ez-modal_header">
+												<h2>Header here</h2>
+												<a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+											</div>
+											<div class="body" aria-labelledby="ez-modal_body">
+												<div class="ez-table ez-table-checkboxes">
+													<div class="table-title">
+														<p>Drafts</p>
+														<div class="container-buttons">
+															<button type="button" class="ez-button ez-button-secondary"><span class="ez-icon-create"></span>Add draft</button> 
+														</div>
+													</div>
+													<div class="table-container">
+														<table>
+															<tr>
+																<th>Language</th>
+																<th>Owner</th>
+																<th>Last modified</th>
+																<th></th>
+															</tr>
+															<tr>
+																<td>eng-GB</td>
+																<td>Admin user</td>
+																<td>17 Sep 2015, 12:53 PM</td>
+																<td></td>
+															</tr>
+															<tr>
+																<td>eng-GB</td>
+																<td>Alexandra Lewis</td>
+																<td>17 Sep 2015, 2:53 PM</td>
+																<td>
+																	<a href="#" class="table-iconbutton">
+																		<div class="table-iconbutton-edit">
+																			<span class="ez-icon-edit"></span>
+																		</div>
+																	</a>
+																</td>
+															</tr>
+															<tr>
+																<td>eng-GB</td>
+																<td>Alexandra Lewis</td>
+																<td>20 Sep 2015, 4:53 PM</td>
+																<td>
+																	<a href="#" class="table-iconbutton">
+																		<div class="table-iconbutton-edit">
+																			<span class="ez-icon-edit"></span>
+																		</div>
+																	</a>
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#modal2" data-target="#modal2" class="modal-button">Modal with header, but no footer</a> 
 							</div>
 							<h4 class="u-move-down-xlarge">Modal with header and footer</h4>
 							<hr>
 							<div class="flex-wrapper">
 <pre>
 <code class="line-numbers language-markup"><script type="prism-html-markup"><div id="modal3" class="ez-modal ez-modal-header" role="dialog" aria-labelledby="ez-modal">
-    <div class="modal-container">
-        <div class="modal-content">
-        	<div class="header" aria-labelledby="ez-modal_header">
-                <h2>Header here</h2>
-                <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
-            </div>
-            <div class="body" aria-labelledby="ez-modal_body">
-                Your content here
-            </div>
-            <div class="footer" aria-labelledby="ez-modal_buttons">
-                Include interaction buttons here
-            </div>
-        </div>
-    </div>
+	<div class="modal-container">
+		<div class="modal-content">
+			<div class="header" aria-labelledby="ez-modal_header">
+				<h2>Header here</h2>
+				<a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+			</div>
+			<div class="body" aria-labelledby="ez-modal_body">
+				Your content here
+			</div>
+			<div class="footer" aria-labelledby="ez-modal_buttons">
+				Include interaction buttons here
+			</div>
+		</div>
+	</div>
 </div></script></code>
 </pre>
 								<div id="modal3" class="ez-modal ez-modal-header" role="dialog" aria-labelledby="ez-modal">
-					                <div class="modal-container">
-					                    <div class="modal-content">
-					                        <div class="header" aria-labelledby="ez-modal_header">
-					                            <h2>Header here</h2>
-					                            <a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
-					                        </div>
-					                        <div class="body" aria-labelledby="ez-modal_body">
-					                            <div class="ez-table">
-					                                <div class="table-title">
-					                                    <p>Published version</p>
-					                                </div>
-					                                <div class="table-container">
-					                                    <table>
-					                                        <tr>
-					                                            <th>Version</th>
-					                                            <th>Language</th>
-					                                            <th>Author</th>
-					                                            <th>Created</th>
-					                                            <th>Last saved</th>
-					                                        </tr>
-					                                        <tr>
-					                                            <td>2</td>
-					                                            <td>eng-GB</td>
-					                                            <td>Administrator user</td>
-					                                            <td>17 Sep 2015 12:53 PM</td>
-					                                            <td>17 Sep 2015 12:55 PM</td>
-					                                        </tr>
-					                                        <tr>
-					                                            <td>1</td>
-					                                            <td>eng-GB</td>
-					                                            <td>Administrator user</td>
-					                                            <td>15 Sep 2015 08:33 AM</td>
-					                                            <td>15 Sep 2015 11:45 AM</td>
-					                                        </tr>
-					                                    </table>
-					                                </div>
-					                            </div>
-					                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					                        </div>
-					                        <div class="footer" aria-labelledby="ez-modal_buttons">
-					                            <a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-neutral">Cancel</button></a>
-					                            <a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-negative">Send to trash</button></a>
-					                        </div>
-					                    </div>
-					                </div>
-					            </div>
-					            <a href="#modal3" data-target="#modal3" class="modal-button">Modal with header and footer </a> 
+									<div class="modal-container">
+										<div class="modal-content">
+											<div class="header" aria-labelledby="ez-modal_header">
+												<h2>Header here</h2>
+												<a href="#" data-dismiss="modal"><span class="ez-icon-discard"></span></a>
+											</div>
+											<div class="body" aria-labelledby="ez-modal_body">
+												<div class="ez-table">
+													<div class="table-title">
+														<p>Published version</p>
+													</div>
+													<div class="table-container">
+														<table>
+															<tr>
+																<th>Version</th>
+																<th>Language</th>
+																<th>Author</th>
+																<th>Created</th>
+																<th>Last saved</th>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>eng-GB</td>
+																<td>Administrator user</td>
+																<td>17 Sep 2015 12:53 PM</td>
+																<td>17 Sep 2015 12:55 PM</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>eng-GB</td>
+																<td>Administrator user</td>
+																<td>15 Sep 2015 08:33 AM</td>
+																<td>15 Sep 2015 11:45 AM</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											</div>
+											<div class="footer" aria-labelledby="ez-modal_buttons">
+												<a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-neutral">Cancel</button></a>
+												<a href="#" data-dismiss="modal"><button type="button" class="ez-button ez-button-negative">Send to trash</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#modal3" data-target="#modal3" class="modal-button">Modal with header and footer </a> 
+							</div>
+						</div>
+						<div id="components-tabs" class="modules">
+							<h3 class="module-header">Tabs</h3>
+							<h4 class="u-move-down-xlarge">Tabs system</h4>
+							<hr>
+							<div class="flex-wrapper">
+								<div class="container-tabs">
+									<div class="ez-tabs">
+										<ul class="tabs" role="tablist">
+											<li class="active">
+												<a href="#view" role="tab" data-toggle="tab" title="View">View</a>
+											</li>
+											<li>
+												<a href="#details" role="tab" data-toggle="tab" title="Details">Details</a>
+											</li>
+											<li>
+												<a href="#versions" role="tab" data-toggle="tab" title="Versions">Versions</a>
+											</li>
+											<li>
+												<a href="#locations" role="tab" data-toggle="tab" title="Locations">Locations</a>
+											</li>
+											<li>
+												<a href="#related_content" role="tab" data-toggle="tab" title="Related content">Related content</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="flex-wrapper">
+<pre>
+<code class="line-numbers language-markup"><script type="prism-html-markup"><div class="ez-tabs">
+	<ul class="tabs" role="tablist">
+		<li class="active">
+			<a href="#view" role="tab" data-toggle="tab" title="View">View</a>
+		</li>
+		<li>
+			<a href="#details" role="tab" data-toggle="tab" title="Details">Details</a>
+		</li>
+		<li>
+			<a href="#versions" role="tab" data-toggle="tab" title="Versions">Versions</a>
+		</li>
+		<li>
+			<a href="#locations" role="tab" data-toggle="tab" title="Locations">Locations</a>
+		</li>
+		<li>
+			<a href="#related_content" role="tab" data-toggle="tab" title="Related content">Related content</a>
+		</li>
+	</ul>
+</div></script></code>
+</pre>
 							</div>
 						</div>
 					</div>
@@ -2327,62 +2379,62 @@
 							<hr>
 							<p>Use the <code>.ez-spin</code> class to get any icon to rotate.</p>
 							<div class="flex-wrapper">
-							    <div class="icon-box">
-							        <div class="icon-frame">
-							            <p class="top-min">
-							                <span class="ez-icon-x2 ez-spin ez-icon-settings-block"></span>
-							            </p>
-							            <p class="icon-label">.ez-spin</br><span>.ez-icon-settings-block</span></p>
-							        </div>
-							    </div>
-							    <div class="icon-box">
-							        <div class="icon-frame">
-							            <p class="top-min">
-							                <span class="ez-icon-x2 ez-spin ez-icon-review"></span>
-							            </p>
-							            <p class="icon-label">.ez-spin</br><span>.ez-icon-review</span></p>
-							        </div>
-							    </div>
-							    <div class="icon-box">
-							        <div class="icon-frame">
-							            <p class="top-min">
-							                <span class="ez-icon-x2 ez-spin ez-icon-refresh"></span>
-							            </p>
-							            <p class="icon-label">.ez-spin</br><span>.ez-icon-refresh</span></p>
-							        </div>
-							    </div>
+								<div class="icon-box">
+									<div class="icon-frame">
+										<p class="top-min">
+											<span class="ez-icon-x2 ez-spin ez-icon-settings-block"></span>
+										</p>
+										<p class="icon-label">.ez-spin</br><span>.ez-icon-settings-block</span></p>
+									</div>
+								</div>
+								<div class="icon-box">
+									<div class="icon-frame">
+										<p class="top-min">
+											<span class="ez-icon-x2 ez-spin ez-icon-review"></span>
+										</p>
+										<p class="icon-label">.ez-spin</br><span>.ez-icon-review</span></p>
+									</div>
+								</div>
+								<div class="icon-box">
+									<div class="icon-frame">
+										<p class="top-min">
+											<span class="ez-icon-x2 ez-spin ez-icon-refresh"></span>
+										</p>
+										<p class="icon-label">.ez-spin</br><span>.ez-icon-refresh</span></p>
+									</div>
+								</div>
 							</div>
 							<h4>Loading icons</h4>
 							<hr>
 							<p>We use <code>.ez-spin</code> &#38; <code>.ez-icon-loading</code> for when content is loading within a specific view.</p>
 							<div class="flex-wrapper">
 								<div class="icon-box">
-							        <div class="icon-frame">
-							            <p class="top-min">
-							                <span class="ez-icon-x1 ez-spin ez-icon-loading"></span>
-							            </p>
-							            <p class="icon-label">.ez-spin</br>.ez-icon-x1</br><span>.ez-icon-loading</span></p>
-							        </div>
-							    </div>
-							    <div class="icon-box">
-							        <div class="icon-frame">
-							            <p class="top-min">
-							                <span class="ez-icon-x2 ez-spin ez-icon-loading"></span>
-							            </p>
-							            <p class="icon-label">.ez-spin</br>.ez-icon-x2</br><span>.ez-icon-loading</span></p>
-							        </div>
-							    </div>
+									<div class="icon-frame">
+										<p class="top-min">
+											<span class="ez-icon-x1 ez-spin ez-icon-loading"></span>
+										</p>
+										<p class="icon-label">.ez-spin</br>.ez-icon-x1</br><span>.ez-icon-loading</span></p>
+									</div>
+								</div>
+								<div class="icon-box">
+									<div class="icon-frame">
+										<p class="top-min">
+											<span class="ez-icon-x2 ez-spin ez-icon-loading"></span>
+										</p>
+										<p class="icon-label">.ez-spin</br>.ez-icon-x2</br><span>.ez-icon-loading</span></p>
+									</div>
+								</div>
 							</div>
 							<p>We also use <code>.ez-square-clock</code> to animate our logo when transitioning from one view to another one.</p>
 							<div class="flex-wrapper">
-							    <div class="icon-box">
-								    <div class="icon-frame icon-frame-spinner">
-								        <p class="top-min">
-								            <span class="ez-square-clock ez-icon-square ez-icon-x3"></span>
-								            <span class="ez-icon-x4 ez-icon-square"></span>
-								        </p>
-								        <p class="icon-label top-half-extra">.ez-square-clock</br><span>.ez-icon-square</span></p>
-								    </div>
+								<div class="icon-box">
+									<div class="icon-frame icon-frame-spinner">
+										<p class="top-min">
+											<span class="ez-square-clock ez-icon-square ez-icon-x3"></span>
+											<span class="ez-icon-x4 ez-icon-square"></span>
+										</p>
+										<p class="icon-label top-half-extra">.ez-square-clock</br><span>.ez-icon-square</span></p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2427,6 +2479,11 @@
 								<li>
 									<a href="#components-modals">
 										<span class="fa fa-angle-right"></span>Modals
+									</a>
+								</li>
+								<li>
+									<a href="#components-tabs">
+										<span class="fa fa-angle-right"></span>Tabs
 									</a>
 								</li>
 							</ul>

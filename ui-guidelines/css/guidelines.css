@@ -337,6 +337,13 @@ pre[class*="language-"] {
     text-decoration: none;
 }
 
+/* Components - tabs */
+.container-tabs {
+    width: 100%;
+    padding: 1.5em 1em;
+    background-color: #e5e3e3;
+}
+
 /*==== UTILITIES/HELPERS ====*/
 .top-half-extra {
     margin-top: 2em;
