@@ -4,21 +4,20 @@
     text-align: center;
     cursor: pointer;
     letter-spacing: .5px;
-    border: 1px solid #f15a10;
-    background-color: #f15a10;
+    border: 1px solid #757575;
+    background-color: #757575;
     color: #fff;
     font-size: 1em;
-    font-weight: bold;
 }
 
 .ez-button:hover:not([disabled]) {
-    border: 1px solid #c3480b;
-    background-color: #c3480b;
+    border: 1px solid #5c5c5c;
+    background-color: #5c5c5c;
 }
 
 .ez-button:focus,
 .ez-button:active {
-    box-shadow: 0 0 4px 2px #2b84b1;
+    box-shadow: 0 0 4px 2px #fcb700;
 }
 
 .ez-button[disabled] {
@@ -27,7 +26,24 @@
     opacity: .3;
 }
 
+.ez-button-primary {
+    font-weight: bold;
+    border: 1px solid #f15a10;
+    background-color: #f15a10;
+}
+
+.ez-button-primary:hover:not([disabled]) {
+    border: 1px solid #c3480b;
+    background-color: #c3480b;
+}
+
+.ez-button-primary:focus,
+.ez-button-primary:active {
+    box-shadow: 0 0 4px 2px #2b84b1;
+}
+
 .ez-button-secondary {
+    font-weight: bold;
     border: 1px solid #0f6d95;
     background-color: #0f6d95;
 }
@@ -59,6 +75,7 @@
 }
 
 .ez-button-negative {
+    font-weight: bold;
     border: 1px solid #cb2540;
     background-color: #cb2540;
 }
@@ -74,6 +91,7 @@
 }
 
 .ez-button-ghost {
+    font-weight: bold;
     border: 2px solid #0f6d95;
     background-color: transparent;
     color: #0f6d95;
