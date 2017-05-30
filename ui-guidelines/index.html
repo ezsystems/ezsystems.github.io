@@ -139,12 +139,12 @@
 									<div class="button-box">
 										<p class="button-card-header">eZ button</p>
 										<div class="button-card-content">
-											<button type="button" class="ez-button">Confirm selection</button>
+											<button type="button" class="ez-button">Cancel</button>
 										</div>
 									</div>
 									<div class="button-code">
 <pre>
-<code class="language-markup"><script type="text/plain"><button type="button" class="ez-button">Confirm selection</button></script></code>
+<code class="language-markup"><script type="text/plain"><button type="button" class="ez-button">Cancel</button></script></code>
 </pre>
 									</div>
 								</div>
@@ -152,12 +152,25 @@
 									<div class="button-box">
 										<p class="button-card-header">eZ button - Disabled</p>
 										<div class="button-card-content">
-											<button type="button" class="ez-button" disabled="disabled">Confirm selection</button>
+											<button type="button" class="ez-button" disabled="disabled">Cancel</button>
 										</div>
 									</div>
 									<div class="button-code">
 <pre>
-<code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button" disabled="disabled">Confirm selection<button></script></code>
+<code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button" disabled="disabled">Cancel<button></script></code>
+</pre>
+									</div>
+								</div>
+								<div class="button-wrapper">
+									<div class="button-box">
+										<p class="button-card-header">Primary button</p>
+										<div class="button-card-content">
+											<button type="button" class="ez-button ez-button-primary">Confirm selection</button>
+										</div>
+									</div>
+									<div class="button-code">
+<pre>
+<code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button ez-button-primary">Confirm selection</button></script></code>
 </pre>
 									</div>
 								</div>
@@ -171,19 +184,6 @@
 									<div class="button-code">
 <pre>
 <code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button ez-button-secondary">Save</button></script></code>
-</pre>
-									</div>
-								</div>
-								<div class="button-wrapper">
-									<div class="button-box">
-										<p class="button-card-header">Neutral button</p>
-										<div class="button-card-content">
-											<button type="button" class="ez-button ez-button-neutral">Cancel</button>
-										</div>
-									</div>
-									<div class="button-code">
-<pre>
-<code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button ez-button-neutral">Cancel</button></script></code>
 </pre>
 									</div>
 								</div>
@@ -218,14 +218,14 @@
 							<div class="top-low bottom-extra">
 								<div class="button-wrapper">
 									<div class="button-box">
-										<p class="button-card-header">eZ button with icon</p>
+										<p class="button-card-header">Primary button with icon</p>
 										<div class="button-card-content">
-											<button type="button" class="ez-button"><span class="ez-icon-relations"></span>Select content</button>
+											<button type="button" class="ez-button ez-button-primary"><span class="ez-icon-relations"></span>Select content</button>
 										</div>
 									</div>
 									<div class="button-code">
 <pre>
-<code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button"><span class="ez-icon-relations"></span>Select content</button></script></code>
+<code class="language-markup"><script type="prism-html-markup"><button type="button" class="ez-button ez-button-primary"><span class="ez-icon-relations"></span>Select content</button></script></code>
 </pre>
 									</div>
 								</div>
@@ -1082,6 +1082,8 @@
 						<div id="resources-colors" class="modules">
 							<h3 class="module-header">Colors</h3>
 							<p><strong>Visual hierarchy and differentiation. </strong>We prioritize Create and Edit content as main functions in our CMS with orange color. Because most of the application has soft colors, color stands out and catches user's attention. We also define secondary, neutral and negative colors. Despite of this, it is also important to remind to not always rely on color to provide visual differentiation. If too many colors are employed, colors might lose their meaning.</p>
+							<p>All color combinations have been previously tested to meet at least one or more of the minimum ratios that the <a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0</a> specifies for text and background color combinations. This compliance will help users who are colorblind or have low vision to better interact with our app, as well as it will benefit usability and readability for all users.</p>
+							<p>When planning a new color combination, check beforehand compliance with these standards. We suggest <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> app.
 							<h4 class="u-move-down-xlarge">Primary colors</h4>
 							<hr>
 							<div class="flex-wrapper">
@@ -1134,154 +1136,78 @@
 									<p class="color-label">Negative<br>hover</p>
 								</div>
 							</div>
-							<h4>Secondary colors</h4>
-							<hr>
-							<div class="flex-wrapper">
-								<div class="color-box">
-									<div class="color-frame c-action-bar">
-										<p class="text-center"><code class="label-code">#106d95</code></p>
-									</div>
-									<p class="color-label">Action bar</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-discovery-bar">
-										<p class="text-center"><code class="label-code">#667076</code></p>
-									</div>
-									<p class="color-label">Discovery bar</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-focus-background">
-										<p class="text-center"><code class="label-code">#2b84b1</code></p>
-									</div>
-									<p class="color-label">Button focus<br>background</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-focus-background-alt">
-										<p class="text-center"><code class="label-code">#fcb700</code></p>
-									</div>
-									<p class="color-label">Button focus<br>background<br>alt</p>
-								</div>
-							</div>
 							<h4>Text colors</h4>
 							<hr>
 							<div class="flex-wrapper">
 								<div class="color-box">
-									<div class="color-frame c-text">
+									<div class="color-frame c-text-base">
 										<p class="text-center"><code class="label-code">#333</code></p>
 									</div>
 									<p class="color-label">Text base</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-text-white color-frame-light">
+									<div class="color-frame c-text-base-inverted color-frame-light">
 										<p class="text-center"><code class="label-code">#fff</code></p>
 									</div>
-									<p class="color-label">Text white</p>
+									<p class="color-label">Text base inverted</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-text-ctype">
-										<p class="text-center"><code class="label-code">#878787</code></p>
-									</div>
-									<p class="color-label">Text CType</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-text-validation">
-										<p class="text-center"><code class="label-code">#d92d42</code></p>
-									</div>
-									<p class="color-label">Text validation</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-hyperlink">
+									<div class="color-frame c-text-hyperlink">
 										<p class="text-center"><code class="label-code">#0645ad</code></p>
 									</div>
-									<p class="color-label">Hyperlink</p>
+									<p class="color-label">Text hyperlink</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-breadcrumb">
-										<p class="text-center"><code class="label-code">#0a4b67</code></p>
+									<div class="color-frame c-text-error">
+										<p class="text-center"><code class="label-code">#d92d42</code></p>
 									</div>
-									<p class="color-label">Breadcrumb</p>
+									<p class="color-label">Text error</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-breadcrumb-disabled">
+									<div class="color-frame c-text-base-pale">
+										<p class="text-center"><code class="label-code">#878787</code></p>
+									</div>
+									<p class="color-label">Text base pale</p>
+								</div>
+								<div class="color-box">
+									<div class="color-frame c-text-base-light">
 										<p class="text-center"><code class="label-code">#6b6b6b</code></p>
 									</div>
-									<p class="color-label">Breadcrumb disabled</p>
+									<p class="color-label">Text base light</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-text-translation">
+									<div class="color-frame c-text-base-medium">
 										<p class="text-center"><code class="label-code">#4b4b4b</code></p>
 									</div>
-									<p class="color-label">Text translation</p>
+									<p class="color-label">Text base medium</p>
+								</div>
+								<div class="color-box">
+									<div class="color-frame c-text-base-deep">
+										<p class="text-center"><code class="label-code">#0a4b67</code></p>
+									</div>
+									<p class="color-label">Text base deep</p>
 								</div>
 							</div>
-							<h4>Background colors</h4>
+							<h4>Secondary colors</h4>
 							<hr>
 							<div class="flex-wrapper">
 								<div class="color-box">
-									<div class="color-frame c-background color-frame-light">
+									<div class="color-frame c-ground-base color-frame-light">
 										<p class="text-center"><code class="label-code">#fafafa</code></p>
 									</div>
-									<p class="color-label">Background</p>
+									<p class="color-label">Ground base</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-background-header color-frame-light">
-										<p class="text-center"><code class="label-code">#e7e7e7</code></p>
-									</div>
-									<p class="color-label">Background<br>header</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-content color-frame-light">
+									<div class="color-frame c-ground-base-light color-frame-light">
 										<p class="text-center"><code class="label-code">#f3f3f3</code></p>
 									</div>
-									<p class="color-label">Background<br>content</p>
+									<p class="color-label">Ground base light</p>
 								</div>
 								<div class="color-box">
-									<div class="color-frame c-background-section-main color-frame-light">
-										<p class="text-center"><code class="label-code">#e3e3e3</code></p>
+									<div class="color-frame c-ground-base-medium color-frame-light">
+										<p class="text-center"><code class="label-code">#e5e3e3</code></p>
 									</div>
-									<p class="color-label">Background<br>section main</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-section color-frame-light">
-										<p class="text-center"><code class="label-code">#dbdbdb</code></p>
-									</div>
-									<p class="color-label">Background<br>section &#38; label</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-fieldtype">
-										<p class="text-center"><code class="label-code">#bbb</code></p>
-									</div>
-									<p class="color-label">Background<br>field type</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-stu-actionbar color-frame-light">
-										<p class="text-center"><code class="label-code">#ebebeb</code></p>
-									</div>
-									<p class="color-label">Background<br>Studio Action<br>bar</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-stu-landing">
-										<p class="text-center"><code class="label-code">#969696</code></p>
-									</div>
-									<p class="color-label">Background<br>Studio Landing<br>page</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-stu-timeline">
-										<p class="text-center"><code class="label-code">#ccc</code></p>
-									</div>
-									<p class="color-label">Background<br>Studio<br>timeline</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-stu-timeline-line color-frame-light">
-										<p class="text-center"><code class="label-code">#dedede</code></p>
-									</div>
-									<p class="color-label">Background<br>Studio<br>timeline line</p>
-								</div>
-								<div class="color-box">
-									<div class="color-frame c-background-table">
-										<p class="text-center"><code class="label-code">#c2c2c2</code></p>
-									</div>
-									<p class="color-label">Background<br>table</p>
+									<p class="color-label">Ground base medium</p>
 								</div>
 							</div>
 							<h4>Notification colors</h4>
