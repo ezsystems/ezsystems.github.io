@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'ez-icons';
     src:
-        url('../fonts/ez-icons.ttf?nclra3') format('truetype'),
-        url('../fonts/ez-icons.woff?nclra3') format('woff'),
-        url('../fonts/ez-icons.svg?nclra3#ez-icons') format('svg');
+        url('../../fonts/ez-icons.ttf?nclra3') format('truetype'),
+        url('../../fonts/ez-icons.woff?nclra3') format('woff'),
+        url('../../fonts/ez-icons.svg?nclra3#ez-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
