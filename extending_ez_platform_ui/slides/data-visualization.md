@@ -41,10 +41,19 @@ ez_systems_poll_show:
 ```
 
 
+<<<<<<< HEAD
 ### Pagination
 #### To handle pagination we are using `WhiteOctoberPagerfantaBundle`, which is a great library for pagination.
+=======
+### The pagination 
+#### To handle pagination we using WhiteOctoberPagerfantaBundle, which is a great library for pagination
+>>>>>>> New version
 
 [white-october/pagerfanta-bundle](https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle)
 
 
+<<<<<<< HEAD
 ### In the same way we can add detail view for the poll.
+=======
+### In the same way we can add detail view for the poll
+>>>>>>> New version

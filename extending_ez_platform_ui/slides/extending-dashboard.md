@@ -56,5 +56,4 @@ We can copy one of the existing Dashboard templates and change it to display pol
 
 ```twig
 {# Resources/views/dashboard/tab/all_poll.html.twig #}
-
 ```
