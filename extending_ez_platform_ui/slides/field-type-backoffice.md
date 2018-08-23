@@ -3,8 +3,7 @@
 
 
 ### The Value class
-represents an instance of the Field Type  
-within a Content item
+represents an instance of the Field Type within a Content item
 ```php
 // AppBundle/eZ/Publish/FieldType/Poll/Value.php
 
@@ -196,8 +195,7 @@ system:
             - { template: 'AppBundle:platformui/field:ezpoll_view.html.twig', priority: 0 }
 ```
 
->we do not need to provide the `ezpublish` YAML block here because we already import the configuration under the `ezpublish` namespace in the `prepend` method
-
+we do 
 
 ### Adding and editing the Field in Back Office
 
@@ -308,7 +306,7 @@ public function validate(FieldDefinition $fieldDefinition, SPIValue $fieldValue)
         ...
         $validationErrors[] = new ValidationError(
         ...
-
+        
     return $validationErrors;
 }
 ```
@@ -341,7 +339,6 @@ services:
         tags:
             ...
             - {name: ez.fieldFormMapper.definition, fieldType: ezpoll}
-
 ```
 
 
