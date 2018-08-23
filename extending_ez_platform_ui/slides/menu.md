@@ -1,19 +1,19 @@
 ## Menus
-### Build on top of KnpMenuBundle and easily extensible
+### Built on top of KnpMenuBundle and easily extensible
 
 
 ### Event subscribers and listeners
-You can hook into the following events
+You can hook into the following events:
 
 - `ConfigureMenuEvent::MAIN_MENU`
 - `ConfigureMenuEvent::USER_MENU`
 - `ConfigureMenuEvent::CONTENT_SIDEBAR_RIGHT`
 - `ConfigureMenuEvent::USER_MENU`
 
-and a lot more..
+and a lot more...
 
 
-### An event must implements `EventSubscriberInterface`
+### An event must implement `EventSubscriberInterface`
 #### `Symfony\Component\EventDispatcher\EventSubscriberInterface`
 
 

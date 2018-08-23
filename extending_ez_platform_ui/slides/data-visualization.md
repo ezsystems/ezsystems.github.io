@@ -19,11 +19,11 @@ ez_systems_poll_show:
 
 
 ### Create a controller
-#### It will be extending `EzPlatformAdminUiBundle` controller
+#### It will extend the `EzPlatformAdminUiBundle` controller
 
 
 ### Add a template
-#### To easily customize the list view to the appearance of the admin panel it should extend
+#### To easily customize the list view to the appearance of the Admin Panel it should extend:
 ```twig
 {% extends '@ezdesign/layout.html.twig' %}
 ```
@@ -41,10 +41,10 @@ ez_systems_poll_show:
 ```
 
 
-### The pagination 
-#### To handle pagination we using WhiteOctoberPagerfantaBundle, which is a great library for pagination
+### Pagination
+#### To handle pagination we are using `WhiteOctoberPagerfantaBundle`, which is a great library for pagination.
 
 [white-october/pagerfanta-bundle](https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle)
 
 
-### In the same way we can add detail view for the poll
+### In the same way we can add detail view for the poll.
