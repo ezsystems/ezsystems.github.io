@@ -1,14 +1,152 @@
-<!doctype html>
-<meta charset="utf-8">
-<title>eZ Platform API docs and more</title>
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="eZ Systems" content="eZ Platform API docs and more">
+    <meta name="author" content="eZ Systems">
+    <meta name="copyright" content="eZ Systems">
+    <meta
+        name="description"
+        content="eZ Platform is an open source content management system (CMS) provider that helps enterprises deliver digital experiences.">
+    <meta
+        name="keywords"
+        content="eZ Platform developer documentation, eZ Platform API docs, eZ Platform UI API docs, eZ Platform API Client docs, UI Guidlines, Presentations, User Experience Management Platform, Enterprise content management system, open source cms, Web content management, content management software, website content management, php, php content management">
 
-<h1>eZ Platform and eZ Studio documentation sources</h1>
+    <title>eZ Platform API docs and more</title>
+    <link rel="Shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
-<ul>
-<li><a href="http://doc.ezplatform.com/">eZ Platform and eZ Studio developer documentation</a></li>
-<li><a href="http://pubsvn.ez.no/sami/trunk/NS/html/index.html">eZ Platform API docs</a></li>
-<li><a href="http://ezsystems.github.io/platformui-javascript-api/">eZ Platform UI API docs</a></li>
-<li><a href="http://ezsystems.github.io/javascript-rest-client/">eZ Platform API Client docs</a></li>
-<li><a href="https://ezsystems.github.io/ui-guidelines/">UI Guidlines</a></li>
-</ul>
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/vendors/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/vendors/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/guidelines.js"></script>
+
+    <link rel="stylesheet" href="css/vendors/normalize.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/vendors/bootstrap.css">
+    <link rel="stylesheet" href="css/vendors/bootstrap-theme.css">
+
+    <!-- Custom css & js-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resources/typography.css">
+    <link rel="stylesheet" href="css/resources/colors.css">
+    <link rel="stylesheet" href="css/resources/icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+
+<body data-spy="scroll" data-target=".scrollspy">
+<nav id="top" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="img/eZ-Logo.svg">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="ui-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 header">
+                <h1>eZ Systems</h1>
+                <p class="header top-low">
+                    They are resources for developers, designers, product managers. Here you will find links to
+                    eZ&nbsp;Platform and eZ Platform Enterprise Edition documentation sources, UI and Development Guidelines and various
+                    teaching materials.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row ui-content-style">
+        <div class="col-md-10">
+            <div id="documentation" class="content-section">
+                <h2 class="font-header">Documentation</h2>
+                <p>eZ Platform and eZ Platform Enterprise Edition documentation sources</p>
+                <ul class="list-unstyled">
+                    <li><a href="http://doc.ezplatform.com/">eZ Platform developer documentation</a></li>
+                    <li><a href="http://pubsvn.ez.no/sami/trunk/NS/html/index.html">eZ Platform API docs</a></li>
+                    <li><a href="http://ezsystems.github.io/platformui-javascript-api/">eZ Platform UI API docs</a></li>
+                    <li><a href="http://ezsystems.github.io/javascript-rest-client/">eZ Platform API Client docs</a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div id="guidelines" class="content-section">
+                <h2 class="font-header">Guidelines</h2>
+                <p>eZ Platform's User Interface Guidelines and Development guidelines for eZ Platform</p>
+                <ul class="list-unstyled">
+                    <li><a href="https://ezsystems.github.io/ui-guidelines/">UI Guidlines</a></li>
+                    <li><a href="https://doc.ezplatform.com/en/latest/community_resources/development_guidelines/">Development
+                        guideline</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="presentations" class="content-section">
+                <h2 class="font-header">Presentations</h2>
+                <ul class="list-unstyled">
+                    <li><a target="_blank" href="https://alongosz.github.io/ezconf2018-api/">
+                        Using eZ Platform in an API Era
+                    </a></li>
+                    <li><a
+                        target="_blank"
+                        href="https://www.slideshare.net/sunpietro/extending-ez-platform-2x-with-symfony-and-react">
+                        Extending eZ Platform 2.x with Symfony and React
+                    </a></li>
+                    <li><a target="_blank" href="extending_ez_platform_ui/">
+                        Extending eZ Platform UI
+                    </a></li>
+                    <li><a target="_blank" href="https://www.slideshare.net/sunpietro/extending-studio/">
+                        Extending eZ Studio
+                    </a></li>
+                    <li><a
+                        target="_blank"
+                        href="https://www.slideshare.net/sunpietro/developing-nativelike-windows-application-using-javascript-sse-ez-platform-and-electron">
+                        Developing native-like Windows application using JavaScript, SSE, eZ
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-2 scrollspy">
+            <ul id="navigation" class="nav hidden-xs hidden-sm" data-spy="affix">
+                <li>
+                    <a href="#documentation">Documentation</a>
+                </li>
+                <li>
+                    <a href="#guidlines">Guidelines</a>
+                </li>
+                <li>
+                    <a href="#presentations">Presentations</a>
+                </li>
+
+                <div class="final">
+                    <a class="back-top" href="#top">Back to top</a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <div class="copyright-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="ezxmltext-field"><p>Copyright © 2018 eZ Systems AS (except where otherwise noted). All
+                        rights reserved. <a href="https://ez.no/Privacy-policy" target="_self">Privacy policy</a><br>&nbsp;<br>Powered
+                        by <a href="//ez.no/ezpublish" target="_self" title="eZ Publish Platform">the eZ Publish Platform</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
 

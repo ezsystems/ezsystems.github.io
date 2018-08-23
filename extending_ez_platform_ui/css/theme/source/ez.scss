@@ -1,0 +1,77 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/maven-pro/maven-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: "Maven Pro", Arial, Helvetica, sans-serif;
+$mainColor: #000;
+$headingFont: 'Maven Pro', Arial, Helvetica, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #00008B;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+#intro {
+	a {
+		color: #000;
+		font-weight: bold;
+	}
+}
+
+#logo {
+	height: 45px;
+	position: fixed;
+	z-index: 1000;
+	top: 1em;
+	left: 1em;
+}
+
+#intro_authors {
+	position: absolute;
+	width: 100%;
+	font-size: 0.7em;
+	clear: both;
+	.left, .right {
+		position: relative;
+		bottom: -5em;
+	}
+	.left {
+		left: -2em;
+		float: left;
+		text-align: left;
+	}
+	.right {
+		right: -4em;
+		float: right;
+		text-align: right;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
