@@ -375,4 +375,4 @@ to make sure that validation data is properly saved into and retrieved from the 
 `toFieldDefinition()` converts a stored legacy Field definition to an API Field definition (which means converting it back to an array according to validation schema).
 
 
-![GitHub Logo](/assets/img/we-get-it-done.jpeg)
+![We get it done](assets/img/we-get-it-done.jpeg)
