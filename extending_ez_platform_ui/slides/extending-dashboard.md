@@ -1,9 +1,9 @@
-## Extending dashboard
+## Extending Dashboard
 ### Creating a Dashboard tab
 
 
 ### We will fetch all polls added to Content Types
-#### and add them to Everyone tab in the Dashboard
+#### and add them to the `Everyone` tab in the Dashboard
 
 
 #### Register `EveryonePollTab` as a tab
@@ -28,7 +28,7 @@ class EveryoneArticleTab extends AbstractTab implements OrderedTabInterface
 ```
 
 
-Create Content To Poll Data Mapper for ease of use we create mapper which extracts polls from content
+Create `ContentToPollDataMapper`: for ease of use we create a mapper which extracts polls from content.
 
 ```php
 // Tab/Dashboard/ContentToPollDataMapper.php
@@ -52,7 +52,7 @@ foreach ($pager as $content) {
 
 
 ### Create a template
-We can copy one of existing dashboard template and change it to display polls data
+We can copy one of the existing Dashboard templates and change it to display poll data.
 
 ```twig
 {# Resources/views/dashboard/tab/all_poll.html.twig #}

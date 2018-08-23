@@ -2,7 +2,7 @@
 ### site
 
 
-### Creating an `PollVote` Entity Class
+### Creating a `PollVote` Entity Class
 
 - question
 - answer
@@ -14,7 +14,7 @@ bin/console doctrine:schema:update --dump-sq
 ```
 
 
-### final class PollVoteRepository
+### Final class `PollVoteRepository`
 
 
 ### `PollType` class
@@ -27,7 +27,7 @@ public function buildForm(FormBuilderInterface $builder, array $options)
     });
     ...
 }
-``` 
+```
 
 ```php
 public function configureOptions(OptionsResolver $resolver)
@@ -38,7 +38,7 @@ public function configureOptions(OptionsResolver $resolver)
 ```
 
 
-### FormFactory
+### `FormFactory`
 
 ```php
     public function createPollForm(
@@ -60,11 +60,11 @@ public function configureOptions(OptionsResolver $resolver)
 
 
 #### `PollController::voteAction()`
-We need a new method to handle voting
+We need a new method to handle voting.
 
 
 ### `ParameterProvider`
-provides additional parameters to a fieldtype's view template
+provides additional parameters to a Field Type's view template.
 
 ```php
 class ParameterProvider implements ParameterProviderInterface
@@ -93,7 +93,7 @@ services:
 ```
 
 
-#### Create Field Type template for the site siteaccess
+#### Create Field Type template for the site SiteAccess
 
 ```twig
 {# Resources/views/ezpoll_view.html.twig #}
@@ -111,7 +111,7 @@ services:
 ```
 
 
-#### Register Field Type template for the site siteaccess
+#### Register Field Type template for the site SiteAccess
 ```yml
 system:
     site:

@@ -3,7 +3,7 @@
 
 
 ### The Value class
-represent an instance of the Field Type  
+represents an instance of the Field Type  
 within a Content item
 ```php
 // AppBundle/eZ/Publish/FieldType/Poll/Value.php
@@ -19,12 +19,12 @@ class Value extends BaseValue
 #### The Value class will contain at least:
 
 - public properties: used to store the actual data
-- an implementation of the `__toString()`
+- an implementation of `__toString()`
 
 
 ### The Type class
 contains the logic of the Field Type  
-ex. validating and transforming data
+e.g. validating and transforming data
 ```php
 // AppBundle/eZ/Publish/FieldType/Poll/Type.php
 
@@ -70,7 +70,7 @@ class Type extends FieldType implements Nameable
 
 This is a simple value object with three properties:
 - data
-- externalData 
+- externalData
 - sortKey
 
 
@@ -85,7 +85,7 @@ This is a simple value object with three properties:
 
 ### Field Type as a service
 
-> to be closer to the kernel best practices, you should declare the Field Type services in a custom fieldtypes.yml file
+> to be closer to kernel best practices, you should declare the Field Type services in a custom fieldtypes.yml file
 
 ```php
 // AppBundle/DependencyInjection/AppExtension
@@ -131,7 +131,7 @@ class LegacyConverter implements Converter
 ### Converter interface
 
 - `toStorageValue()` and `toFieldValue()` used to convert between an API field value and legacy storage value
-- `toStorageFieldDefinition()` and `toFieldDefinition()` used to convert between a field definition and a legacy one
+- `toStorageFieldDefinition()` and `toFieldDefinition()` used to convert between a Field definition and a legacy one
 - `getIndexColumn()` tells the API which legacy database field should be used to sort and filter content
 
 
@@ -149,22 +149,22 @@ services:
 
 
 ### Introduce a template
-#### template must: 
+#### template must:
 - extend `EzPublishCoreBundle::content_fields.html.twig`
 - define a dedicated Twig block for the type, named by convention <TypeIdentifier_field>
 - be registered in parameters
 
 
-### ezpoll.html.twig template
-- Each Field Type template receives a set of variables e.x. `field`, `content`.
+### `ezpoll.html.twig` template
+- Each Field Type template receives a set of variables e.g. `field`, `content`.
 - `field` is an instance of `eZ\Publish\API\Repository\Values\Content\Field`.
-- Field Value is available through the `value` property
+- Field Value is available through the `value` property.
 
 
 ### Registering the template
 #### Field Type template needs to be registered in the eZ Platform semantic configuration.
 
-`PrependExtensionInterface` from `Symfony\Component\DependencyInjection\Extension\` will let us prepend bundle configuration
+`PrependExtensionInterface` from `Symfony\Component\DependencyInjection\Extension\` will let us prepend bundle configuration.
 
 
 ```php
@@ -186,7 +186,7 @@ class AppExtension extends Extension implements PrependExtensionInterface
 ```
 
 
-### template mapping
+### Template mapping
 
 ```yml
 # AppBundle/Resources/config/ez_field_templates.yml
@@ -196,7 +196,7 @@ system:
             - { template: 'AppBundle:platformui/field:ezpoll_view.html.twig', priority: 0 }
 ```
 
->we not need to provide the `ezpublish` YAML block here because we already import the configuration under the `ezpublish` namespace in the `prepend` method
+>we do not need to provide the `ezpublish` YAML block here because we already import the configuration under the `ezpublish` namespace in the `prepend` method
 
 
 ### Adding and editing the Field in Back Office
@@ -224,7 +224,7 @@ public function mapFieldValueForm(FormInterface $fieldForm, FieldData $data) {
 ```
 
 
-### register the FormMapper as a service
+### Register the FormMapper as a service
 ```yml
 # AppBundle/Resources/config/fieldtypes.yml
 services:
@@ -261,16 +261,16 @@ $formConfig->addModelTransformer(
 
 #### Add a validation
 
-- add `validateValidatorConfiguration()` and `validate()` methods in the Type class 
-- implement an additional interface in the FormMapper 
-- add field definition edit view 
-- implement `toStorageFieldDefinition()` and `toFieldDefinition()` methods in LegacyConverter 
+- add `validateValidatorConfiguration()` and `validate()` methods in the Type class
+- implement an additional interface in the FormMapper
+- add Field definition edit view
+- implement `toStorageFieldDefinition()` and `toFieldDefinition()` methods in LegacyConverter
 
 
-`validateValidatorConfiguration()` is called when an instance of the Field Type is added to a Content Type, to ensure that the validator configuration is valid
+`validateValidatorConfiguration()` is called when an instance of the Field Type is added to a Content Type, to ensure that the validator configuration is valid.
 
 
-### validator schema configuration
+### Validator schema configuration
 
 ```php
 // AppBundle/eZ/Publish/FieldType/Poll/Type.php
@@ -308,14 +308,14 @@ public function validate(FieldDefinition $fieldDefinition, SPIValue $fieldValue)
         ...
         $validationErrors[] = new ValidationError(
         ...
-        
+
     return $validationErrors;
 }
 ```
 
 
 Implement `FieldDefinitionFormMapperInterface` in FormMapper
-that allows us to define the necessary input field
+that allows us to define the necessary input field.
 ```php
 // AppBundle/eZ/Publish/FieldType/Poll/FormMapper.php
 
@@ -332,7 +332,7 @@ public function mapFieldDefinitionForm(FormInterface $fieldDefinitionForm, Field
 ```
 
 
-Add an extra tag definition in `fieldtypes.yml` to tell the system that the `FormMapper` right now works also as `FieldDefinitionFormMapper`. 
+Add an extra tag definition in `fieldtypes.yml` to tell the system that the `FormMapper` right now works also as `FieldDefinitionFormMapper`.
 ```yml
 # AppBundle/Resources/config/fieldtypes.yml
 services:
@@ -341,11 +341,11 @@ services:
         tags:
             ...
             - {name: ez.fieldFormMapper.definition, fieldType: ezpoll}
-            
+
 ```
 
 
-### Add field definition edit view
+### Add Field definition edit view
 ```twig
 {# AppBundle/Resources/views/platformui/content_type/edit/ezpoll.html.twig #}
 
@@ -372,10 +372,10 @@ system:
 to make sure that validation data is properly saved into and retrieved from the database
 
 
-`toStorageFieldDefinition()` converts a Field definition to a legacy one using the proper field, e.x. `dataText1`, `dataInt1`. 
+`toStorageFieldDefinition()` converts a Field definition to a legacy one using the proper field, e.g. `dataText1`, `dataInt1`.
 
 
-`toFieldDefinition()` converts a stored legacy field definition to an API Field definition (which means converting it back to an array according to validation schema).
+`toFieldDefinition()` converts a stored legacy Field definition to an API Field definition (which means converting it back to an array according to validation schema).
 
 
 ![GitHub Logo](/assets/img/we-get-it-done.jpeg)
