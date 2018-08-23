@@ -2,7 +2,7 @@
 ### Roles, Policies and Limitations
 
 
-Bundle can expose Policies via a `PolicyProvider` which can be added to `EzPublishCoreBundle's` DIC extension.
+A bundle can expose Policies via a `PolicyProvider` which can be added to `EzPublishCoreBundle`'s DIC extension.
 
 
 ### PollPolicyProvider
